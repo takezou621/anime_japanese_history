@@ -2,9 +2,11 @@
 """asr_check.py — mix.wav を faster-whisper で転写し、script.json の beats と正規化突合する QA ツール
 
 使い方:
-    uv run --with faster-whisper --with pykakasi python tools/qa/asr_check.py --episode ep01
-    uv run --with faster-whisper --with pykakasi python tools/qa/asr_check.py --all
+    uv run --with faster-whisper --with pykakasi --with numpy python tools/qa/asr_check.py --episode ep01
+    uv run --with faster-whisper --with pykakasi --with numpy python tools/qa/asr_check.py --all
     # オプション: --model small --threshold 0.95 --device cpu --compute-type int8 --force
+    # 依存: ffmpeg (mix.wav の 16kHz mono float32 デコードに使用。PyAV は使わない —
+    #       av>=15 では faster-whisper の decode_audio が非互換のため)
 
 出力:
     reports/asr_check_epNN.json  (全体一致率 + ビート別の不一致リスト)
@@ -133,12 +135,33 @@ def ratio(a: str, b: str) -> float | None:
 
 
 # ---------------------------------------------------------------- 転写
+def decode_ffmpeg(mix: Path, sr: int = 16000) -> "np.ndarray":
+    """mix.wav を ffmpeg で 16kHz mono float32 (Whisper 入力形式) にデコードする。
+
+    faster-whisper 内蔵の decode_audio は PyAV を経由するが av>=15 で非互換のため
+    ffmpeg 直デコードとする (リポジトリ標準の外部ツール)。
+    """
+    import numpy as np
+
+    cmd = ["ffmpeg", "-v", "error", "-i", str(mix), "-ar", str(sr), "-ac", "1",
+           "-f", "f32le", "-"]
+    p = subprocess.run(cmd, capture_output=True)
+    if p.returncode != 0:
+        raise SystemExit(f"ffmpeg デコード失敗 ({mix}): {p.stderr.decode(errors='replace')[-400:]}")
+    audio = np.frombuffer(p.stdout, dtype=np.float32)
+    if audio.size == 0:
+        raise SystemExit(f"ffmpeg デコード結果が空です: {mix}")
+    return audio
+
+
 def transcribe(mix: Path, model_size: str, device: str, compute_type: str) -> tuple[list[dict], float]:
     """mix.wav を全文転写し [{start, end, text}] と音声尺 (秒) を返す。"""
+    import numpy as np
     from faster_whisper import WhisperModel
 
+    audio = decode_ffmpeg(mix)
     model = WhisperModel(model_size, device=device, compute_type=compute_type)
-    seg_iter, info = model.transcribe(str(mix), language="ja", vad_filter=True,
+    seg_iter, info = model.transcribe(np.asarray(audio), language="ja", vad_filter=True,
                                       vad_parameters={"min_silence_duration_ms": 300},
                                       condition_on_previous_text=False)
     segments = [{"start": float(s.start), "end": float(s.end), "text": s.text.strip()}
