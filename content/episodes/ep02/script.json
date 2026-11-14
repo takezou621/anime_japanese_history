@@ -1,0 +1,881 @@
+{
+  "episode": "ep02",
+  "series": "日本史はじめて物語",
+  "title": "大化の改新はなぜ起きた?〜飛鳥・奈良〜",
+  "youtube": {
+    "description": "中学受験・高校受験対策アニメ『アニメ日本史ラボ』第2話!\n飛鳥時代から奈良時代。日本が「国家」になっていく大ドラマを、ヒスト先生とマナブの対話で楽しく学びます。\n蘇我氏・聖徳太子(冠位十二階/十七条憲法/法隆寺)・遣隋使「日出づる処」・乙巳の変・大化の改新(645年)・公地公民・班田収授・租庸調・壬申の乱・大宝律令(701年)・二官八省一台・遣唐使・平城京遷都(710年)まで、テスト頻出をぎゅっと整理。クイズ3問つき!\n\n▼タイムスタンプ(目安)\n0:00 オープニング\n0:15 蘇我氏と飛鳥時代の始まり\n0:40 聖徳太子の政治(冠位十二階・十七条憲法)\n1:05 遣隋使「日出づる処」と法隆寺\n1:30 乙巳の変(645年)\n1:55 大化の改新(公地公民・班田収授・租庸調)\n2:20 壬申の乱と天武天皇\n2:40 律令国家と大宝律令(701年)\n3:00 律令国家のしくみ(二官八省一台)\n3:20 遣唐使\n3:40 平城京遷都(710年)\n4:00 奈良の文化\n4:20 受験ポイントまとめ\n4:50 クイズ3問\n5:20 エンディング・次回予告\n\n※時間は目安です。シリーズ: 日本史はじめて物語(全10話)\n次回 第3話「平安貴族の華やかな暮らし〜摂関政治と国風文化〜」もお楽しみに!\n\n音声: VOICEVOX(四国めたん・ずんだもん)/キャラクターデザインはオリジナル\n#日本史 #中学受験",
+    "tags": [
+      "日本史",
+      "中学受験",
+      "中学歴史",
+      "高校受験",
+      "聖徳太子",
+      "大化の改新",
+      "飛鳥時代",
+      "奈良時代",
+      "平城京",
+      "大宝律令",
+      "律令国家",
+      "遣唐使",
+      "歴史アニメ",
+      "アニメ日本史ラボ",
+      "勉強動画"
+    ],
+    "thumbnail": { "headline": "大化の改新はなぜ?", "sub": "飛鳥・奈良 受験必須" }
+  },
+  "characters": [
+    {
+      "id": "sensei",
+      "name": "ヒスト先生",
+      "voice_style": "四国めたん/ノーマル",
+      "speed_scale": 1.18,
+      "pitch": 0.0,
+      "subtitle_color": "#7ec8e3"
+    },
+    {
+      "id": "manabu",
+      "name": "マナブ",
+      "voice_style": "ずんだもん/ノーマル",
+      "speed_scale": 1.22,
+      "pitch": 0.0,
+      "subtitle_color": "#8be27e"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "section": "opening",
+      "duration_hint_sec": 20,
+      "visual": {
+        "background": "bg_school_lab",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "こんにちは!ヒスト先生です。第2話の今日は、飛鳥と奈良。日本が「国家」になっていく大ドラマを見ていきますよ。",
+          "overlay_text": [ { "text": "アニメ日本史ラボ 第2話", "style": "title_main", "motion": "fade_up" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "マナブなのだ!大化の改新って、なんで起きたのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "いいところに目をつけましたね。その答えこそ、今日いちばん大事なテーマです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "はやく知りたいなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "聖徳太子の政治から、じっくりたどっていきましょう。",
+          "overlay_text": [ { "text": "第2話 大化の改新のなぞ", "style": "keyword_card", "motion": "pop_in" } ]
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s02",
+      "section": "story",
+      "duration_hint_sec": 24,
+      "visual": {
+        "background": "bg_asuka_palace",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "じゃあ、まずなにから変わったのだ?",
+          "overlay_text": [ { "text": "飛鳥時代 592年〜", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "6世紀ごろの大和では、豪族の蘇我氏が大きな力を持っていました。仏教をめぐって物部氏と戦って勝ち、力はますます増します。",
+          "reading": "6世紀ごろの大和では、ごうぞくの、そがしが大きな力を持っていました。仏教をめぐって、ものべうじと戦って勝ち、力はますます増します。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そして592年、推古天皇が即位して、飛鳥で政治が始まります。ここからが飛鳥時代です。",
+          "reading": "そして592年、すいこてんのうがそいびして、あすかで政治が始まります。ここからが飛鳥時代です。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "蘇我氏は、天皇より強かったのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "それくらい強大でした。馬子の子の蝦夷、その子の入鹿は、好き勝手に政治を動かしたと伝わります。",
+          "reading": "それくらい強大でした。うまこのこの、えびつ、そのこの、いるかは、好き勝手に政治を動かしたと伝わります。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "「好き勝手」は、だめなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s03",
+      "section": "story",
+      "duration_hint_sec": 27,
+      "visual": {
+        "background": "bg_asuka_court",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "そこで登場なのだ!?",
+          "overlay_text": [ { "text": "飛鳥時代 聖徳太子の政治", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ。推古天皇の摂政として政治をリードしたのが、聖徳太子です。593年の就任です。",
+          "reading": "ええ。すいこてんのうの、せっしょうとして、政治をリードしたのが、しょうとくたいしです。593年の就任です。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "603年には能力で決める冠位十二階、604年には政治の心がけを示す十七条憲法を作りました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "冠位十二階・十七条憲法", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "603年には、のうりょくできめる、かんいじゅうにかい。604年には、政治の心がけをしめす、じゅうしちじょうけんぽうを作りました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "位は、色でわかるのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、冠の色で位がわかります。冠位十二階=603年、十七条憲法=604年。年号とセットで覚えましょう。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "有力な一族だけの政治から、才能ある人を登用する方向へ。大きな一歩だったんです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "年号ペアもセットで、覚えたのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s04",
+      "section": "story",
+      "duration_hint_sec": 26,
+      "visual": {
+        "background": "bg_asuka_ship",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_r", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "外国とは、どうしてたのだ?",
+          "overlay_text": [ { "text": "飛鳥時代 遣隋使と法隆寺", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "607年、小野妹子を使者に、隋へ遣隋使を送ります。",
+          "reading": "607年、おののいめこを、ししゃに、すいへ、けんずいしをおくります。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "その国書に「日出づる処の天子、書を日没する処の天子に寄す」とあり、中国の史書に残っています。",
+          "reading": "その国書に、「ひいづるところのてんし、しょを、ひぼつするところのてんしによす」とあり、中国の史書に残っています。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "「日出づる処」って、日本のことなのだ!?対等な感じなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そう、まさに日本の自立を示す一文なんです。また太子は仏教を深く学び、法隆寺を建てました。現存する世界最古の木造建築として知られています。",
+          "overlay_text": [
+            { "text": "遣隋使 607年", "style": "keyword_card", "motion": "pop_in" },
+            { "text": "法隆寺", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "木の建物が1300年以上、現役なのだ!?すごいのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s05",
+      "section": "story",
+      "duration_hint_sec": 25,
+      "visual": {
+        "background": "bg_asuka_gate",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "太子が亡くなったあとは?",
+          "overlay_text": [ { "text": "645年 乙巳の変", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "また蘇我氏が力を持ち、入鹿が専横を極めました。そこで中大兄皇子と中臣鎌足が、討つ計画を進めます。",
+          "reading": "また、そがしが力を持ち、そがのいるかが専横を極めました。そこで、なかのおおえのおうじと、なかとみのかまたりが、討つ計画を進めます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "ここからが、タイトルの話なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そう、645年、宮中で蘇我入鹿を討ちました。これが乙巳の変です。",
+          "overlay_text": [
+            { "text": "645年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "乙巳の変", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "そう、645年、宮中で、そがのいるかをうちました。これが、きのとみのへんです。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "二人は、蹴鞠で出会って以来の、信頼の仲だったと伝わります。",
+          "reading": "ふたりは、けまりで出会って、いこうの、しんらいの仲だったと伝わります。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "ついに蘇我氏、おわってしまったのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ。一族の力勝負だった政治を、天皇を中心に立て直す、大きな転換点になりました。",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s06",
+      "section": "story",
+      "duration_hint_sec": 25,
+      "visual": {
+        "background": "bg_asuka_field",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_l", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "で、改新ではなにが変わったのだ?",
+          "overlay_text": [ { "text": "大化の改新 645年〜", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "まず、豪族たちの私の土地と民を、すべて天皇のものにしました。これが公地公民の考え方です。",
+          "reading": "まず、ごうぞくたちの、私の土地と民を、すべててんのうのものにしました。これが、こうちこうみんのかんがえかたです。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "土地は、戸籍をもとに六年ごとに農民へ貸す班田収授法。税は租・庸・調の三つに決まりました。",
+          "reading": "土地は、戸籍をもとに、六年ごとに、のうみんへかす、はんでんしゅうじゅほう。ぜいは、そ・よう・ちょうのみっつに決まりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "租庸調?授業で聞いたことある言葉なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ずばり頻出です。米や布を納める租、労働の庸、地域の特産品を納める調。公地公民・班田収授・租庸調は、必ずワンセットで!",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "公地公民・班田収授・租庸調", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ずばり、ひんしゅつです。米や布をおさめる、そ。ろうどうの、よう。ちほうの、とくさんひんを、おさめる、ちょう。こうちこうみん・はんでんしゅうじゅ・そようちょうは、かならず、ワンセットで!"
+        },
+        {
+          "speaker": "manabu",
+          "text": "ワンセット、丸暗記完了なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s07",
+      "section": "story",
+      "duration_hint_sec": 23,
+      "visual": {
+        "background": "bg_asuka_battle",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "そのあとは、すんなり進んだのだ?",
+          "overlay_text": [ { "text": "672年 壬申の乱", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "いいえ。672年、天智天皇の死後、兄弟で争う壬申の乱が起きました。勝った大海人皇子が、天武天皇になります。",
+          "reading": "いいえ。672年、てんちてんのうの死後、きょうだいで、あらそう、じんしんのらんが、おきました。勝った、あまのおおえのおうじが、てんむてんのうになります。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "兄弟でのけんか、かなしいのだ…"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ。ただ、この乱をへて、天武天皇は、力を中心に集める国づくりを、いっそう強力に進めたんです。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "中心に力を集める政治を、中央集権と言います。受験用語ですよ。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "中央集権", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "強い国づくり、つづきが気になるのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s08",
+      "section": "story",
+      "duration_hint_sec": 22,
+      "visual": {
+        "background": "bg_asuka_court",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "律令国家って、なんなのだ?",
+          "overlay_text": [ { "text": "701年 大宝律令", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "律は刑罰のきまり、令は政治のしくみ。この二つで国を動かす、中国式の国家のことです。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "701年、文武天皇のときに大宝律令が整い、日本版のしくみが完成しました。藤原不比等らが編集に深くかかわっています。",
+          "overlay_text": [
+            { "text": "701年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "大宝律令", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "701年、ぶんむてんのうのときに、たいほうりつりょうが、ととのい、日本版のしくみが、かんせいしました。ふじわらの、ふひとらが、編集に、ふかく、かかわっています。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "701年、バリバリ覚えるのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "後に養老律令という改訂版もできますが、まずは大宝律令=701年で固めましょう。",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "あとに、ようろうりつりょうという、かいていばんも、できますが、まずは、たいほうりつりょう=701年で、かためましょう。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "国のルールブック、完成なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s09",
+      "section": "story",
+      "duration_hint_sec": 24,
+      "visual": {
+        "background": "bg_nara_map",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "国の中は、どう動いてたのだ?",
+          "overlay_text": [ { "text": "律令国家のしくみ", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "中央には二官八省一台。神祇官と太政官の下に、八つの省が実務を担います。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "二官八省一台", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "中央には、にかんはっしょういちだい。じんぎかんと、だいじょうかんの、したに、はっつの、しょうが、じつむを、にないます。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "地方は国・郡・里に分かれ、都から派遣される国司と、地元の郡司が管理しました。",
+          "reading": "地方は、くに・こおり・さとに、わかれ、都から、はけんされる、こくしと、じもとの、ぐんじが、管理しました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "日本中が、一列に管理なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そんなイメージでぴったりです。戸籍で人を把握し、六年ごとの班田、租庸調の納税。全部つながった、当時の最先端システムなんです。",
+          "reading": "そんなイメージで、ぴったりです。戸籍で人を、はあくし、六年ごとの、はんでん、そようちょうの、のうぜい。全部、つながった、とうじの、さいせんたんシステムなんです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "中央と地方が、まるごとつながってるのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s10",
+      "section": "story",
+      "duration_hint_sec": 21,
+      "visual": {
+        "background": "bg_nara_ship",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_r", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "中国とは、その後もお付き合いなのだ?",
+          "overlay_text": [ { "text": "遣唐使 630年〜", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "隋が滅んだあとは唐。630年から遣唐使を送り、制度や技術、文化を次々に持ち帰りました。",
+          "reading": "すいが、たおんだ、あとは、とう。630年から、けんとうしを、おくり、せいどや、ぎじゅつ、ぶんかを、つぎつぎに、もちかえりました。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "吉備真備や阿倍仲麻呂など、唐で学んだ人が大活躍します。",
+          "reading": "きびの、まきびや、あべの、なかまろなど、とうで、まなんだ、ひとが、だいかつやくします。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "命がけの海外留学なのだ!えらいのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、船の航海は大変でした。この交流があったから、日本の制度と文化が一気に進んだんです。",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "留学生、日本のヒーローなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s11",
+      "section": "story",
+      "duration_hint_sec": 22,
+      "visual": {
+        "background": "bg_nara_capital",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "ついに、都のお引っ越しの時代なのだ!?",
+          "overlay_text": [ { "text": "710年 平城京遷都", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "710年、都が平城京に移って、ここから奈良時代です。中国の都・長安をモデルにした大都市でした。",
+          "overlay_text": [
+            { "text": "710年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "平城京", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "710年、都が、へいじょうきょうに、うつって、ここから、ならじだいです。中国の都、ちょうあんを、モデルにした、だいとしでした。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "まっすぐな大通りの朱雀大路を中心に、碁盤の目のように町が整然と並びます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "碁盤の目の都なのだ!迷子にならなそうなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "その整然とした町並みこそ、律令国家の力を見せる顔だったんですよ。",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "都まで整然、さすが国家なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s12",
+      "section": "story",
+      "duration_hint_sec": 22,
+      "visual": {
+        "background": "bg_nara_temple",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "奈良では、なにが生まれたのだ?",
+          "overlay_text": [ { "text": "奈良の文化", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "歴史の記録では古事記と日本書紀、和歌の集まりは万葉集。国の力を示す仏教では、東大寺の大仏が作られました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "古事記・日本書紀・万葉集", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "歴史の記録では、こじきと、にほんしょき。和歌のあつまりは、まんようしゅう。国の力を、しめす、仏教では、とうだいじの、だいぶつが、つくられました。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "大仏の開眼供養は752年。国をあげての大プロジェクトでした。",
+          "reading": "だいぶつの、かいげんくようは、752年。国をあげての、だいプロジェクトでした。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "大仏、でっかいのだ!?作るの、ものすごく大変なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "宝物を集めた正倉院も有名です。文化と政治が、奈良で大きく花開いた時代ですね。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "奈良、すごい時代なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s13",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_nara_field",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_l", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "でも、うまくいき続けた…わけじゃないのだ?",
+          "overlay_text": [ { "text": "奈良時代後期 ゆがみの芽", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "さすが、いい着眼点です。班田もうまくいかなくなり、貴族や寺社が私有地を広げ始めます。",
+          "reading": "さすが、いい、ちゃくがんです。はんだも、うまく、いかなくなり、きぞくや、じしゃが、私の土地を、ひろげ、はじめます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "そこから、また大変化が来るのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、その種が平安時代に大きく育ちます。詳しくは第3話!まずはポイントまとめです!",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "まとめ、お願いなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s14",
+      "section": "points",
+      "duration_hint_sec": 15,
+      "visual": {
+        "background": "bg_timeline",
+        "assets": [
+          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "ここから受験ポイントまとめ!まずは飛鳥時代です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "飛鳥時代", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "聖徳太子=冠位十二階603年・十七条憲法604年・遣隋使607年「日出づる処」。そして645年、乙巳の変から大化の改新スタート。",
+          "reading": "しょうとくたいし=かんいじゅうにかい、603年。じゅうしちじょうけんぽう、604年。けんずいし、607年、ひいづるところ。そして645年、きのとみのへんから、たいかのかいしん、スタート。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "公地公民・班田収授・租庸調のワンセット、忘れないでくださいね。",
+          "reading": "こうちこうみん・はんでんしゅうじゅ・そようちょうの、ワンセット、わすれないでくださいね。"
+        }
+      ],
+      "exam_points": [
+        { "keyword": "聖徳太子の政治", "detail": "摂政593年/冠位十二階603年/十七条憲法604年。" },
+        { "keyword": "遣隋使 607年", "detail": "小野妹子。「日出づる処の天子…」の国書。" },
+        { "keyword": "乙巳の変 645年", "detail": "中大兄皇子・中臣鎌足が蘇我入鹿を討つ。" },
+        { "keyword": "大化の改新", "detail": "645年開始。公地公民へ転換。" },
+        { "keyword": "班田収授・租庸調", "detail": "6年ごとに口分田/租=米布・庸=労働・調=特産品。" }
+      ]
+    },
+    {
+      "id": "s15",
+      "section": "points",
+      "duration_hint_sec": 16,
+      "visual": {
+        "background": "bg_timeline",
+        "assets": [
+          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "後半は、律令と奈良です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "律令〜奈良", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "壬申の乱672年→天武天皇。大宝律令701年で律令国家が完成。二官八省一台、国司郡司、戸籍と班田。遣唐使で唐の文化を導入。",
+          "reading": "じんしんのらん、672年で、てんむてんのう。たいほうりつりょう、701年で、りつりょうこっかが、かんせい。にかんはっしょういちだい、こくし・ぐんじ、戸籍と、はんでん。けんとうしで、とうの、ぶんかを、どうにゅう。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そして710年、平城京遷都で奈良時代スタート。年号は603・604・607・645・672・701・710。これで完璧です!",
+          "overlay_text": [ { "text": "710年", "style": "year_number", "motion": "zoom_in" } ],
+          "reading": "そして710年、へいじょうきょう、せんとで、ならじだい、スタート。年号は、603・604・607・645・672・701・710。これで、かんぺきです!"
+        }
+      ],
+      "exam_points": [
+        { "keyword": "壬申の乱 672年", "detail": "天武天皇が勝利し、中央集権を強化。" },
+        { "keyword": "大宝律令 701年", "detail": "律令国家の完成。藤原不比等らが編纂。" },
+        { "keyword": "二官八省一台", "detail": "神祇官・太政官+八省。地方は国司・郡司。" },
+        { "keyword": "遣唐使 630年〜", "detail": "唐から制度・技術・文化を導入。" },
+        { "keyword": "平城京遷都 710年", "detail": "長安をモデルに朱雀大路・碁盤の目の都市。" }
+      ]
+    },
+    {
+      "id": "s16",
+      "section": "quiz",
+      "duration_hint_sec": 15,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "それでは仕上げのクイズタイム!第一問!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "603年、聖徳太子が作った、能力で位を決める制度は?ア、冠位十二階。イ、十七条憲法。ウ、大宝律令。",
+          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "603年、しょうとくたいしが、つくった、のうりょくで、くらいを、決める、制度は?ア、かんいじゅうにかい。イ、じゅうしちじょうけんぽう。ウ、たいほうりつりょう。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "能力で決める…アなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!冠位十二階です。憲法は604年、律令は701年と整理しましょう。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s17",
+      "section": "quiz",
+      "duration_hint_sec": 13,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "第二問!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "645年、中大兄皇子と中臣鎌足が蘇我入鹿を討った事件は?ア、壬申の乱。イ、乙巳の変。ウ、応仁の乱。",
+          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "645年、なかのおおえのおうじと、なかとみのかまたりが、そがのいるかを、うった、事件は?ア、じんしんのらん。イ、きのとみのへん。ウ、おうにんのらん。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "645年といえば…イなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!乙巳の変です。このあと大化の改新が始まる、流れで覚えましょう。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s18",
+      "section": "quiz",
+      "duration_hint_sec": 11,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "ラスト問題!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "710年に都が移された、奈良の都は?ア、平安京。イ、長岡京。ウ、平城京。",
+          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "710年に、都が、うつされた、ならの都は?ア、へいあんきょう。イ、ながおかきょう。ウ、へいじょうきょう。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "なら、なら…ウなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!平城京です。794年に平安京へ移るまで、日本の中心でした。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s19",
+      "section": "ending",
+      "duration_hint_sec": 19,
+      "visual": {
+        "background": "bg_school_lab_evening",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "今日は聖徳太子から平城京まで、日本が「国家」になっていく道のりを見ました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "冠位十二階、大化の改新、公地公民、大宝律令、平城京…年号がいっぱいなのだ!",
+          "reading": "かんいじゅうにかい、たいかのかいしん、こうちこうみん、たいほうりつりょう、へいじょうきょう…年号が、いっぱいなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "その年号こそ、得点の入り口です。次回第3話は、平安貴族の華やかな暮らし〜摂関政治と国風文化〜。お楽しみに!",
+          "overlay_text": [ { "text": "次回 第3話 平安", "style": "keyword_card", "motion": "pop_in" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "つぎは貴族なのだ!チャンネル登録も、よろしくなのだ!"
+        }
+      ],
+      "exam_points": []
+    }
+  ],
+  "quiz": [
+    {
+      "q": "603年、聖徳太子が作った、能力で位を決める制度は何でしょう?",
+      "choices": ["冠位十二階", "十七条憲法", "大宝律令"],
+      "answer": 0,
+      "explain": "能力で位を決める冠位十二階は603年、十七条憲法は604年に作られました。"
+    },
+    {
+      "q": "645年、中大兄皇子と中臣鎌足が蘇我入鹿を討った事件は何でしょう?",
+      "choices": ["壬申の乱", "乙巳の変", "応仁の乱"],
+      "answer": 1,
+      "explain": "645年の乙巳の変で蘇我入鹿が討たれ、大化の改新が始まりました。"
+    },
+    {
+      "q": "710年に都が移された、奈良の都の名前は何でしょう?",
+      "choices": ["平安京", "長岡京", "平城京"],
+      "answer": 2,
+      "explain": "710年に平城京へ遷都して奈良時代が始まり、794年に平安京へ移ります。"
+    }
+  ]
+}
