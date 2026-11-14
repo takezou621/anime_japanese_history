@@ -7,7 +7,7 @@
     "section": 0.9,
     "tail": 0.7
   },
-  "total_duration": 552.738,
+  "total_duration": 552.621,
   "scenes": [
     {
       "id": "s01",
@@ -144,34 +144,34 @@
           "speaker": "sensei",
           "wav": "narration/s04_b01.wav",
           "start": 84.031,
-          "duration": 13.333,
+          "duration": 13.227,
           "text": "いいえ、幕府は大名を三つに分けて、力のバランスを管理しました。家康の一族の親藩、古くからの家臣の譜代、後から従った外様です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s04_b02.wav",
-          "start": 97.814,
+          "start": 97.707,
           "duration": 3.509,
           "text": "「いつからの仲間か」で分ける、合理主義なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b03.wav",
-          "start": 101.773,
-          "duration": 9.387,
+          "start": 101.667,
+          "duration": 9.376,
           "text": "そのとおり。幕府の重要な役職は譜代が占め、外様は国境や遠方に配置して、力を分散しました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b04.wav",
-          "start": 111.61,
+          "start": 111.493,
           "duration": 7.264,
           "text": "親藩の御三家は、将軍の家系が絶えたときの後継ぎ役も兼ねる、特別な一族です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s04_b05.wav",
-          "start": 119.324,
+          "start": 119.207,
           "duration": 3.147,
           "text": "分けて、管理なのだ!頭が上がらないのだ!"
         }
@@ -180,47 +180,47 @@
     {
       "id": "s05",
       "section": "story",
-      "start": 123.171,
+      "start": 123.053,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s05_b00.wav",
-          "start": 123.171,
+          "start": 123.053,
           "duration": 2.411,
           "text": "大名は、ずっと国にいるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b01.wav",
-          "start": 126.031,
+          "start": 125.914,
           "duration": 10.592,
           "text": "いいえ、大名は1年おきに江戸と領国を往復するルール、参勤交代が設けられます。1635年に制度化しました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s05_b02.wav",
-          "start": 137.073,
+          "start": 136.956,
           "duration": 3.051,
           "text": "1年ごとに、引っ越すなんて大変なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b03.wav",
-          "start": 140.574,
+          "start": 140.457,
           "duration": 9.568,
           "text": "しかも妻子は江戸に住まわせて、人質のような形です。費用もかさみ、大名はどんどん経済的に弱ります。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b04.wav",
-          "start": 150.592,
+          "start": 150.475,
           "duration": 6.037,
           "text": "江戸と領国を行き来する、大名行列の風景が日本中に広がります。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s05_b05.wav",
-          "start": 157.079,
+          "start": 156.962,
           "duration": 2.88,
           "text": "戦わずして、大名を弱らせるのだ!?"
         }
@@ -229,40 +229,40 @@
     {
       "id": "s06",
       "section": "story",
-      "start": 160.659,
+      "start": 160.542,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s06_b00.wav",
-          "start": 160.659,
+          "start": 160.542,
           "duration": 2.368,
           "text": "外国人は、まだ来てるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b01.wav",
-          "start": 163.477,
+          "start": 163.36,
           "duration": 7.669,
           "text": "ええ、スペインやポルトガルが南蛮貿易をしていて、キリスト教も日本じゅうに広がっていました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s06_b02.wav",
-          "start": 171.597,
+          "start": 171.479,
           "duration": 2.699,
           "text": "信じる自由も、だめになっちゃうのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b03.wav",
-          "start": 174.745,
+          "start": 174.628,
           "duration": 9.781,
           "text": "1612年、幕府はキリスト教を禁止します。外国と組んだ大名が強くなるのを、幕府はとても恐れたんです。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s06_b04.wav",
-          "start": 184.977,
+          "start": 184.859,
           "duration": 2.293,
           "text": "ルールは、幕府だけのものなのだ!"
         }
@@ -271,47 +271,47 @@
     {
       "id": "s07",
       "section": "story",
-      "start": 187.97,
+      "start": 187.853,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s07_b00.wav",
-          "start": 187.97,
+          "start": 187.853,
           "duration": 2.155,
           "text": "禁止されて、どうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b01.wav",
-          "start": 190.575,
+          "start": 190.457,
           "duration": 10.443,
           "text": "1637年、九州の島原で、キリシタンの農民たちが一揆を起こします。指導者は、17歳の天草四郎時貞でした。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s07_b02.wav",
-          "start": 201.467,
+          "start": 201.35,
           "duration": 2.453,
           "text": "一揆って、反乱のことなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b03.wav",
-          "start": 204.371,
+          "start": 204.253,
           "duration": 9.483,
           "text": "そう、重い年貢と宗教の弾圧が重なった大反乱です。幕府は大軍を送り、ようやく鎮圧しました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b04.wav",
-          "start": 214.303,
+          "start": 214.186,
           "duration": 8.853,
           "text": "この乱で幕府は、民の不満を恐れるようになります。鎖国の理由にもつながる大事な事件です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s07_b05.wav",
-          "start": 223.607,
+          "start": 223.489,
           "duration": 2.955,
           "text": "世の中の仕組みに、不満がカチカチなのだ…"
         }
@@ -320,40 +320,40 @@
     {
       "id": "s08",
       "section": "story",
-      "start": 227.261,
+      "start": 227.144,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s08_b00.wav",
-          "start": 227.261,
+          "start": 227.144,
           "duration": 2.251,
           "text": "これが、鎖国への道なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b01.wav",
-          "start": 229.962,
+          "start": 229.845,
           "duration": 11.339,
           "text": "ええ、キリスト教や外国との結びつきを、少しずつ切ります。1639年、ポルトガル船の来航を禁止して、鎖国が完成しました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s08_b02.wav",
-          "start": 241.751,
+          "start": 241.633,
           "duration": 2.304,
           "text": "国に、大きな鍵をかけたのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b03.wav",
-          "start": 244.505,
+          "start": 244.387,
           "duration": 8.949,
           "text": "ええ、これで大名の勝手な貿易も、外国人の布教もできなくなりました。窓口を持つのは、幕府だけです。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s08_b04.wav",
-          "start": 253.904,
+          "start": 253.787,
           "duration": 2.112,
           "text": "「鍵」は幕府が持つのだ!"
         }
@@ -362,40 +362,40 @@
     {
       "id": "s09",
       "section": "story",
-      "start": 256.716,
+      "start": 256.599,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s09_b00.wav",
-          "start": 256.716,
+          "start": 256.599,
           "duration": 1.963,
           "text": "完全に、閉じたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b01.wav",
-          "start": 259.129,
+          "start": 259.011,
           "duration": 9.451,
           "text": "いいえ、長崎の出島だけは、オランダとの貿易を続けました。扇形の人工島が、外国の唯一の拠点です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s09_b02.wav",
-          "start": 269.029,
+          "start": 268.912,
           "duration": 2.165,
           "text": "窓口は、そこだけなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b03.wav",
-          "start": 271.645,
+          "start": 271.527,
           "duration": 9.205,
           "text": "ええ、オランダは布教をしないので、幕府も貿易を許しました。新しい知識も、この窓口から入ってきます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s09_b04.wav",
-          "start": 281.3,
+          "start": 281.183,
           "duration": 2.336,
           "text": "知識の窓口、だいじなのだ!"
         }
@@ -404,40 +404,40 @@
     {
       "id": "s10",
       "section": "story",
-      "start": 284.336,
+      "start": 284.219,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s10_b00.wav",
-          "start": 284.336,
+          "start": 284.219,
           "duration": 2.293,
           "text": "窓口は、出島だけなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b01.wav",
-          "start": 287.079,
+          "start": 286.962,
           "duration": 9.515,
           "text": "ええ、ほかにも窓口があります。対馬藩は朝鮮、薩摩藩は琉球、松前藩はアイヌと、交易を続けました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s10_b02.wav",
-          "start": 297.044,
+          "start": 296.927,
           "duration": 2.741,
           "text": "鎖国なのに、四つの窓口なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b03.wav",
-          "start": 300.235,
+          "start": 300.118,
           "duration": 8.981,
           "text": "そう、完全な閉じ方ではなく、幕府が管理する窓口だけが開いています。物も、情報も、ここから入りました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s10_b04.wav",
-          "start": 309.667,
+          "start": 309.549,
           "duration": 2.624,
           "text": "四つの窓口、ちゃんとメモしたのだ!"
         }
@@ -446,47 +446,47 @@
     {
       "id": "s11",
       "section": "story",
-      "start": 312.991,
+      "start": 312.873,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s11_b00.wav",
-          "start": 312.991,
+          "start": 312.873,
           "duration": 3.467,
           "text": "260年の平和って、どんな平和なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b01.wav",
-          "start": 316.907,
+          "start": 316.79,
           "duration": 10.069,
           "text": "戦のない世の中で、人や物が動き、町が大きくなります。江戸は今の東京のように、大都市へ成長しました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s11_b02.wav",
-          "start": 327.427,
+          "start": 327.309,
           "duration": 1.653,
           "text": "人口ドカドカなのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b03.wav",
-          "start": 329.53,
+          "start": 329.413,
           "duration": 7.968,
           "text": "ええ、武家と町人で江戸はあふれ、商人たちが、どんどん経済の力を持ち始めます。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b04.wav",
-          "start": 337.948,
+          "start": 337.831,
           "duration": 6.219,
           "text": "武家の町・商人の町が混ざり、江戸独自の文化も育ち始めます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s11_b05.wav",
-          "start": 344.617,
+          "start": 344.499,
           "duration": 2.304,
           "text": "町人パワー、台頭なのだ!"
         }
@@ -495,40 +495,40 @@
     {
       "id": "s12",
       "section": "story",
-      "start": 347.621,
+      "start": 347.503,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s12_b00.wav",
-          "start": 347.621,
+          "start": 347.503,
           "duration": 2.976,
           "text": "平和な世の中で、文化は生まれるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b01.wav",
-          "start": 351.047,
+          "start": 350.929,
           "duration": 10.933,
           "text": "ええ、大坂や京都を中心に、お金持になった町人が文化を作ります。のちに「元禄文化」と呼ばれる花の芽です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s12_b02.wav",
-          "start": 362.43,
+          "start": 362.313,
           "duration": 2.443,
           "text": "町人が、文化の主役なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b03.wav",
-          "start": 365.323,
+          "start": 365.205,
           "duration": 11.467,
           "text": "ええ、松尾芭蕉の俳諧、近松門左衛門の人形浄瑠璃、菱川師宣の浮世絵が生まれます。町人の文化が、本格的に花開いたんです。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s12_b04.wav",
-          "start": 377.239,
+          "start": 377.122,
           "duration": 2.432,
           "text": "平和は、文化の肥料になるのだ!"
         }
@@ -537,40 +537,40 @@
     {
       "id": "s13",
       "section": "story",
-      "start": 380.371,
+      "start": 380.254,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s13_b00.wav",
-          "start": 380.371,
+          "start": 380.254,
           "duration": 2.4,
           "text": "この平和は、ずっと続くのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b01.wav",
-          "start": 383.221,
+          "start": 383.104,
           "duration": 11.445,
           "text": "江戸幕府は260年以上続き、日本の土台をしっかり固めます。でも、鎖国と身分の固定化が、後の大きな課題になります。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s13_b02.wav",
-          "start": 395.117,
+          "start": 394.999,
           "duration": 2.891,
           "text": "固定化って、身動きできないことなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b03.wav",
-          "start": 398.457,
+          "start": 398.34,
           "duration": 5.824,
           "text": "そのとおり、歪みが開くのはずっと後の幕末です。詳しくは第8話で!"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s13_b04.wav",
-          "start": 404.731,
+          "start": 404.614,
           "duration": 3.605,
           "text": "江戸の260年、まずはポイントまとめなのだ!"
         }
@@ -579,26 +579,26 @@
     {
       "id": "s14",
       "section": "points",
-      "start": 409.237,
+      "start": 409.119,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s14_b00.wav",
-          "start": 409.237,
+          "start": 409.119,
           "duration": 3.221,
           "text": "ここから受験ポイントのまとめ!まずは、幕府の土台。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b01.wav",
-          "start": 412.908,
+          "start": 412.791,
           "duration": 13.813,
           "text": "1603年家康が征夷大将軍で江戸幕府、体制は老中と三奉行、大名は親藩・譜代・外様、そして参勤交代は1635年に制度化。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b02.wav",
-          "start": 427.171,
+          "start": 427.054,
           "duration": 4.064,
           "text": "「鎖国への道」の流れは、後半でやりますね。"
         }
@@ -607,26 +607,26 @@
     {
       "id": "s15",
       "section": "points",
-      "start": 431.935,
+      "start": 431.818,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s15_b00.wav",
-          "start": 431.935,
+          "start": 431.818,
           "duration": 2.133,
           "text": "後半は、鎖国への道のりです。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b01.wav",
-          "start": 434.519,
+          "start": 434.401,
           "duration": 15.797,
           "text": "キリスト教禁止1612年、島原の乱1637年、そして1639年鎖国。窓口は出島(オランダ)のほか、対馬=朝鮮、薩摩=琉球、松前=アイヌ。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b02.wav",
-          "start": 450.766,
+          "start": 450.649,
           "duration": 5.728,
           "text": "平和が町人を育て、元禄文化の芽になる。これで完璧です!"
         }
@@ -635,33 +635,33 @@
     {
       "id": "s16",
       "section": "quiz",
-      "start": 457.394,
+      "start": 457.277,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s16_b00.wav",
-          "start": 457.394,
+          "start": 457.277,
           "duration": 2.091,
           "text": "それではクイズタイム!第一問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b01.wav",
-          "start": 459.935,
+          "start": 459.817,
           "duration": 13.493,
           "text": "1603年、徳川家康が就任して、江戸幕府を開いた役職は何でしょう?ア、征夷大将軍。イ、太政大臣。ウ、摂政。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s16_b02.wav",
-          "start": 473.878,
+          "start": 473.761,
           "duration": 1.803,
           "text": "幕府のボス…アなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b03.wav",
-          "start": 476.131,
+          "start": 476.013,
           "duration": 6.24,
           "text": "正解!征夷大将軍です。坂上田村麻呂のあの役名を、家康が受け継いだ形ですね。"
         }
@@ -670,33 +670,33 @@
     {
       "id": "s17",
       "section": "quiz",
-      "start": 483.071,
+      "start": 482.953,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s17_b00.wav",
-          "start": 483.071,
+          "start": 482.953,
           "duration": 0.661,
           "text": "第二問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b01.wav",
-          "start": 484.182,
+          "start": 484.065,
           "duration": 11.339,
           "text": "関ヶ原の戦いの後、徳川氏に従った大名は何というでしょう?ア、親藩。イ、譜代。ウ、外様。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s17_b02.wav",
-          "start": 495.971,
+          "start": 495.853,
           "duration": 1.856,
           "text": "あとから仲間…ウなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b03.wav",
-          "start": 498.277,
+          "start": 498.159,
           "duration": 5.76,
           "text": "正解!外様です。古い家臣が譜代、一族が親藩、三つで大名の分類です。"
         }
@@ -705,33 +705,33 @@
     {
       "id": "s18",
       "section": "quiz",
-      "start": 504.737,
+      "start": 504.619,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s18_b00.wav",
-          "start": 504.737,
+          "start": 504.619,
           "duration": 0.843,
           "text": "ラスト問題!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b01.wav",
-          "start": 506.029,
+          "start": 505.912,
           "duration": 12.704,
           "text": "1637年、キリシタンの農民たちが九州で起こした一揆は何でしょう?ア、島原の乱。イ、応仁の乱。ウ、承久の乱。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s18_b02.wav",
-          "start": 519.183,
+          "start": 519.066,
           "duration": 2.155,
           "text": "キリシタンの一揆…アなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b03.wav",
-          "start": 521.788,
+          "start": 521.671,
           "duration": 6.805,
           "text": "正解!島原の乱です。1637年、幕府が大軍を送って鎮圧した、大反乱でした。"
         }
@@ -740,33 +740,33 @@
     {
       "id": "s19",
       "section": "ending",
-      "start": 529.493,
+      "start": 529.376,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s19_b00.wav",
-          "start": 529.493,
+          "start": 529.376,
           "duration": 3.84,
           "text": "今日は江戸幕府の始まりと、鎖国の仕組みを、たっぷり見ました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b01.wav",
-          "start": 533.783,
+          "start": 533.666,
           "duration": 7.531,
           "text": "関ヶ原、参勤交代、島原の乱、鎖国、出島…家康、計算づくの天才なのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s19_b02.wav",
-          "start": 541.764,
+          "start": 541.647,
           "duration": 6.027,
           "text": "次回第8話は、ペリー来航の幕末編。鎖国の鍵が、いよいよ開く話、お楽しみに!"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b03.wav",
-          "start": 548.241,
+          "start": 548.123,
           "duration": 3.797,
           "text": "鍵が開くのだ!?チャンネル登録も、よろしくなのだ!"
         }
@@ -780,19 +780,19 @@
     },
     "story": {
       "start": 13.629,
-      "end": 409.237
+      "end": 409.119
     },
     "points": {
-      "start": 409.237,
-      "end": 457.394
+      "start": 409.119,
+      "end": 457.277
     },
     "quiz": {
-      "start": 457.394,
-      "end": 529.493
+      "start": 457.277,
+      "end": 529.376
     },
     "ending": {
-      "start": 529.493,
-      "end": 552.738
+      "start": 529.376,
+      "end": 552.621
     }
   }
 }

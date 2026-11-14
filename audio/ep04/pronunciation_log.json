@@ -1,9 +1,9 @@
 {
   "episode": "ep04",
-  "generated_at": "2026-11-15T04:14:14",
+  "generated_at": "2026-11-15T07:33:56",
   "dict_path": "/Users/kawai/dev/anime_japanese_history/tools/audio/pronunciation_dict.json",
-  "dict_entries": 585,
-  "dict_sha256": "71ee64e108b5",
+  "dict_entries": 587,
+  "dict_sha256": "068183c8b3f1",
   "voice_sha256": "4a55213461bf",
   "voice_params": {
     "sensei": {
@@ -462,8 +462,8 @@
     {
       "wav": "narration/s10_b04.wav",
       "text": "蒙古襲来絵詞って、この絵なのだ!?",
-      "reading": "もうこうしゅうらいえましって、このえなのだ!?",
-      "tts_text": "もうこうしゅうらいえましって、このえなのだ!?",
+      "reading": "もうこうしゅうらいえことばって、このえなのだ!?",
+      "tts_text": "もうこうしゅうらいえことばって、このえなのだ!?",
       "replacements": []
     },
     {
