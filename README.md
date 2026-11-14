@@ -24,6 +24,7 @@
 - [docs/02_DESIGN.md](docs/02_DESIGN.md) — 技術設計 (script.json契約/ツール仕様/分担)
 - [docs/03_STYLE_GUIDE.md](docs/03_STYLE_GUIDE.md) — アート&サウンド スタイルガイド
 - [docs/04_WORKFLOW.md](docs/04_WORKFLOW.md) — 制作フロー & チェックリスト
+- [docs/05_CUBIC_REVIEW.md](docs/05_CUBIC_REVIEW.md) — cubic AI自動レビューの運用ガイド
 
 ## パイプライン
 
@@ -49,4 +50,3 @@ content/episodes/epNN/script.json   (writer: 脚本)
 
 - 音声: [VOICEVOX](https://voicevox.hiroshiba.jp/) (四国めたん / ずんだもん)
 - イラスト・脚本・編集: 本プロジェクトのAIエージェントチーム
-- [docs/05_CUBIC_REVIEW.md](docs/05_CUBIC_REVIEW.md) — cubic AI自動レビューの運用ガイド
