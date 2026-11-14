@@ -1,0 +1,371 @@
+{
+  "beats": {
+    "narration/s01_b00.wav": {
+      "tts_text": "ねえ先生、武士は最初から強かったの？",
+      "speaker": "manabu"
+    },
+    "narration/s01_b01.wav": {
+      "tts_text": "実は、長い下積みから天下を取ったんです!源平の合戦から、順番に見ていきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b02.wav": {
+      "tts_text": "よし、源平からスタートなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s01_b03.wav": {
+      "tts_text": "ええ、でも勝ち残るのは、思ったより長い下積みの武家です。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b04.wav": {
+      "tts_text": "では、レッツゴーなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s02_b00.wav": {
+      "tts_text": "武士って、平安でも登場したのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b01.wav": {
+      "tts_text": "ええ、平安の終わりに武力を持ち始めた武士。ついに、皇室と貴族の争いに召し出されます。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b02.wav": {
+      "tts_text": "1156ねんの、ほうげんのらん、よくねんの、へいじのらん。ここで、みなもとの、よしともと、たいらの、きよもりたちが、ぶりょくで、せいじに、かいにゅうしました。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b03.wav": {
+      "tts_text": "「戦えば政治が変わる」ってことなのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b04.wav": {
+      "tts_text": "そのとおり。これからは、刀を持つ者が時代を動かす、武力社会のはじまりです。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b00.wav": {
+      "tts_text": "へいじのらんに勝ったのは、どっちなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s03_b01.wav": {
+      "tts_text": "へいじで、げんしが、まけて、へいしが、とうとうします。たいらの、きよもりは、じょうこうの、いんせい、つまり、ちてんのきみと、むすんで、ちからを、のばし、1167ねんには、ぶしはつの、だじょうだいじんに。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b02.wav": {
+      "tts_text": "だいじょうだいじんって、貴族のナンバーワンの官なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s03_b03.wav": {
+      "tts_text": "ええ。しかも、そうとの、ぼうえきで、ざいりょくを、たくわえ、せっとないかいを、どくせんして、ぶしはつの、せいけんを、つくりました。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b04.wav": {
+      "tts_text": "武力とお金、最強コンボなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b00.wav": {
+      "tts_text": "でも、げんじは復活できるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b01.wav": {
+      "tts_text": "1180ねん、いちにんおうの、りょうじを、たよりに、みなもとの、よりともが、きょへいします。かんとうの、ぶしたちが、つづ々と、あつまり、かまくらを、きょてんにしました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b02.wav": {
+      "tts_text": "よりともなのだ!まけず嫌いなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b03.wav": {
+      "tts_text": "ええ。そして、おとうとの、ぎけいが、ぶしょうとして、だいかつやくします。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b04.wav": {
+      "tts_text": "兄弟タッグ、最強なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s05_b00.wav": {
+      "tts_text": "へいしは、どうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b01.wav": {
+      "tts_text": "1185ねん、しものせきの、だんのうらの、かいせんで、ぎけいが、へいしを、ほろぼしました。やくにじゅうねんぶりに、げんしが、てんかを、とりもどします。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b02.wav": {
+      "tts_text": "海の大決戦なのだ!船で戦うのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b03.wav": {
+      "tts_text": "ええ、潮の流れまで読んだ名勝負と伝わります。これで武士の天下は、げんじに決まりました。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b04.wav": {
+      "tts_text": "よしつね、海でも強いのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s06_b00.wav": {
+      "tts_text": "じゃ、ついにかまくらばくふなのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b01.wav": {
+      "tts_text": "1185ねん、よりとは、ぜんこくに、しゅごと、じとうを、おきます。ちあんを、まもる、しゅご。しょうえんや、くにの、りょうちを、かんりして、ねんぐを、あつめる、じとうです。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b02.wav": {
+      "tts_text": "日本中に、武士のネットワークなのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b03.wav": {
+      "tts_text": "その、あみを、もとに、1192ねん、よりとは、せいいたいしょうぐんに、しゅうにんして、かまくらばくふが、せいりつします。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b04.wav": {
+      "tts_text": "守護・じとうを置いた1185年が幕府成立という説も、新教科書には載っていますよ。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b05.wav": {
+      "tts_text": "「1192年、かまくらばくふ」丸暗記なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b00.wav": {
+      "tts_text": "幕府の中身って、どうなってるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s07_b01.wav": {
+      "tts_text": "しょうぐんと、ごけにんの、ごおんとほうこうの、かんけいです。しょうぐんは、りょうちを、まもる、ごおんを、あたえ、ごけにんは、たたかいで、ほうこうする、やくそくです。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b02.wav": {
+      "tts_text": "「あなたにお恩、私が働く」契約なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b03.wav": {
+      "tts_text": "ええ、主従が実利で結ばれる、武士らしい関係です。この仕組みが、幕府の土台になりました。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b04.wav": {
+      "tts_text": "恩をあげて、奉公をもらう、ウィンウィンなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b00.wav": {
+      "tts_text": "天皇は、この間、何をしてたのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s08_b01.wav": {
+      "tts_text": "ちからを、とりもどしたい、ごとばじょうこうが、ばくふとうばつの、へいを、あげます。1221ねんの、じょうきゅうのらんです。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b02.wav": {
+      "tts_text": "天皇vs幕府、大勝負なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s08_b03.wav": {
+      "tts_text": "ええ、でもごけにんたちはよりともの恩を覚えていて、幕府側が圧勝しました。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b04.wav": {
+      "tts_text": "この後、朝廷の力は下がり、幕府が天下をコントロールします。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b05.wav": {
+      "tts_text": "天皇でも勝てないのだ…時代が変わったなのだ。",
+      "speaker": "manabu"
+    },
+    "narration/s09_b00.wav": {
+      "tts_text": "よりともの後は、だれがリーダーなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b01.wav": {
+      "tts_text": "よりとの、つまの、じっか、ほうじょうしです。しっけんという、やくが、政治を、うごかす、しっけんせいじが、はじまります。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b02.wav": {
+      "tts_text": "ほうじょうさん、じわじわ来たのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s09_b03.wav": {
+      "tts_text": "だいさんだい、しっけんの、ほうじょう、やすときは、1232ねんに、ごせいばいしきもくを、つくります。ぶしの、ルールを、かいた、にほんはつの、ぶけほうです。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b04.wav": {
+      "tts_text": "ルールブックで政治、堅実なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s10_b00.wav": {
+      "tts_text": "でも、敵は中国だけじゃないのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b01.wav": {
+      "tts_text": "もんごるていこくが、日本に、きます。1274ねんの、ぶんえいのえき、1281ねんの、こうあんのえき、にどの、だいしゅうらいです。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b02.wav": {
+      "tts_text": "台風で敵が負けた…って話なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b03.wav": {
+      "tts_text": "ええ、かみかぜと、よばれます。しゅご・じとうの、なのもとに、ぜんこくの、ぶしが、日本を、まもりました。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b04.wav": {
+      "tts_text": "もうこうしゅうらいえましって、このえなのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b05.wav": {
+      "tts_text": "そうです。でも、戦ったごけにんには恩賞が届きにくく、幕府への不満がたまっていきます。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b00.wav": {
+      "tts_text": "幕府の中で、不満はどうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s11_b01.wav": {
+      "tts_text": "あらそいを、おさめるため、ほうじょうしの、とうしゅ、とくそうが、すべてを、にぎる、とくそうせんせいへ、すすみます。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b02.wav": {
+      "tts_text": "ますます、かたくなな政治なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s11_b03.wav": {
+      "tts_text": "ええ、ごけにんとの絆が薄れ、幕府は少しずつ弱体化していきます。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b04.wav": {
+      "tts_text": "中央のごけにんは恩賞をめぐる争いが絶えず、地方の武士の力も増していきました。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b05.wav": {
+      "tts_text": "このすきまが、次の話の種なのだ。",
+      "speaker": "manabu"
+    },
+    "narration/s12_b00.wav": {
+      "tts_text": "戦の世で、心の支えはなんなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b01.wav": {
+      "tts_text": "ええ、今までの仏教は貴族のもの。ここで、庶民の救いを説くかまくらぶっきょうが広がります。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b02.wav": {
+      "tts_text": "ほうねんは、じょうどしゅうで、「いっこうにねんぶつせよ」。しんらんは、じょうどしんしゅうで、「あくにんしょうき」、つまり、だれでも、すくわれると、ときました。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b03.wav": {
+      "tts_text": "いっこうにねんぶつ…「ただ念じればいい」なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b04.wav": {
+      "tts_text": "ええ、身分や学問に関係なく救われる、庶民にぴったりの教えです。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b00.wav": {
+      "tts_text": "ほかの宗派もあるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s13_b01.wav": {
+      "tts_text": "にちれんは、ほっけしゅうで、「なむみょうほうれんげきょう」の、だいもくを、となえる、おしえを、ひろめました。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b02.wav": {
+      "tts_text": "そして、ぜん。えいさいが、りんざいしゅう、どうげんが、そうとうしゅうを、ひらき、すわって、こころを、しずめる、しゅようが、ぶしに、だいりゅうこうします。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b03.wav": {
+      "tts_text": "座禅なのだ!武士っぽいのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s13_b04.wav": {
+      "tts_text": "ええ、心を鍛える教えだからでしょう。宗教が庶民と武士の心の柱になった時代です。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b00.wav": {
+      "tts_text": "ここから受験ポイントのまとめ!まずは、武士の政権までの流れ。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b01.wav": {
+      "tts_text": "ほうげん・へいじのらんで、ぶしが、とうとう、へいしせいけんと、そうぼうえき、1180ねん、よりときょへい、1185ねん、だんのうら、1192ねん、かまくらばくふせいりつ。しゅごと、じとうも、わすれずに!",
+      "speaker": "sensei"
+    },
+    "narration/s14_b02.wav": {
+      "tts_text": "「ごおんとほうこう」の主従関係も、必ず押さえてください。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b00.wav": {
+      "tts_text": "後半は、幕府の運営と宗教です。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b01.wav": {
+      "tts_text": "じょうきゅうのらん、1221ねん、ほうじょうやすときの、ごせいばいしきもく、1232ねん、げんこうは、ぶんえい1274、こうあん1281。そのあとは、とくそうせんせいで、ばくふは、じゃくたいか。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b02.wav": {
+      "tts_text": "かまくらぶっきょうは、ほうねん・しんらん・にちれん・ぜん(えいさい・どうげん)。しょみんの、しゅうきょう、と、セットです!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b00.wav": {
+      "tts_text": "それではクイズタイム!第一問!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b01.wav": {
+      "tts_text": "1185ねん、みなもとの、ぎけいが、へいしを、ほろぼした、かいせんは、なんだろう?ア、だんのうら。イ、ながしの。ウ、せきがはら。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b02.wav": {
+      "tts_text": "海の決戦…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s16_b03.wav": {
+      "tts_text": "正解!だんのうらです。1185年とセットで丸暗記しましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b00.wav": {
+      "tts_text": "第二問!",
+      "speaker": "sensei"
+    },
+    "narration/s17_b01.wav": {
+      "tts_text": "しょうぐんが、ごおんを、あたえ、ごけにんが、ほうこうを、する、ぶしの、しゅじゅうかんけいを、なんという?ア、ごせいばいしきもく。イ、ごおんとほうこう。ウ、とくそうせんせい。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b02.wav": {
+      "tts_text": "恩と働きのペア…イなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s17_b03.wav": {
+      "tts_text": "正解!ごおんとほうこうです。幕府の土台になった、大事なキーワードですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b00.wav": {
+      "tts_text": "ラスト問題!",
+      "speaker": "sensei"
+    },
+    "narration/s18_b01.wav": {
+      "tts_text": "1232ねん、ほうじょう、やすときが、さだめた、ぶけの、ルールブックは?ア、たいほうりつりょう。イ、じゅうしちじょうけんぽう。ウ、ごせいばいしきもく。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b02.wav": {
+      "tts_text": "武家のルールブック…ウなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s18_b03.wav": {
+      "tts_text": "正解!ごせいばいしきもくです。たいほうりつりょう701年との年号ペアも、覚えておきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b00.wav": {
+      "tts_text": "今日は武士の登場からかまくらばくふの盛衰まで、激動の時代を見ました。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b01.wav": {
+      "tts_text": "だんのうら、ごおんとほうこう、じょうきゅうのらん、げんこう、かまくらぶっきょう…年号と人名、いっぱいなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s19_b02.wav": {
+      "tts_text": "次回第5話は、あしかがたかうじとなんぼくちょう、そして戦国へ。鎌倉のゆらぎが大きく咲きますよ!",
+      "speaker": "sensei"
+    },
+    "narration/s19_b03.wav": {
+      "tts_text": "つぎは合戦づくし!?チャンネル登録も、よろしくなのだ!",
+      "speaker": "manabu"
+    }
+  },
+  "dict_sha256": "068183c8b3f1",
+  "generated_at": "2026-11-15T04:14:14",
+  "voice_sha256": "4a55213461bf"
+}

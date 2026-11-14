@@ -1,0 +1,375 @@
+{
+  "beats": {
+    "narration/s01_b00.wav": {
+      "tts_text": "ねえ先生、どうして日本は260年も戦争しなかったの？",
+      "speaker": "manabu"
+    },
+    "narration/s01_b01.wav": {
+      "tts_text": "実は、いえやすの工夫とさこくがかぎなんです!その仕組みを、順番に見ていきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b02.wav": {
+      "tts_text": "よし、江戸からスタートなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s01_b03.wav": {
+      "tts_text": "ええ、でも鍵をかけた理由と仕組みは、受験のいちばん大事な部分なんです。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b04.wav": {
+      "tts_text": "わくわくの予感なのだ!レッツゴー!",
+      "speaker": "manabu"
+    },
+    "narration/s02_b00.wav": {
+      "tts_text": "いえやすって、どんな人なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b01.wav": {
+      "tts_text": "おだ・とよとみの、もとで、ちからを、ためつづけた、にんたいかです。1600ねんの、せきがはらの、たたかいで、さいだいの、てきたいせいりょくを、やぶり、てんかの、じっけんを、にぎります。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b02.wav": {
+      "tts_text": "忍耐の男、いえやすなのだ!じっくり型なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s02_b03.wav": {
+      "tts_text": "そして1603ねん、いえやすは、せいいたいしょうぐんに、しゅうにんして、えどに、ばくふを、ひらきます。えどとは、いまの、とうきょうの、ことです。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b04.wav": {
+      "tts_text": "260年史の、スタートなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s02_b05.wav": {
+      "tts_text": "まずは、幕府の力の秘密から、見ていきましょう!",
+      "speaker": "sensei"
+    },
+    "narration/s03_b00.wav": {
+      "tts_text": "幕府の中身は、どうなってるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s03_b01.wav": {
+      "tts_text": "しょうぐんを、ささえるのは、ろうじゅうで、いざというときの、たいろうも、おかれます。せいじの、じつむは、さんぶぎょうが、たんとうしました。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b02.wav": {
+      "tts_text": "三奉行って、なにをする人たちなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s03_b03.wav": {
+      "tts_text": "じしゃぶぎょう、まちぶぎょう、かんじょうぶぎょうの、さんにんです。てらや、じんじゃの、そうだん、えどの、ちあん、ばくふの、おさいふを、それぞれ、かんりしました。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b04.wav": {
+      "tts_text": "好きな奉行は、まちぶぎょうなのだ!江戸のヒーローなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b00.wav": {
+      "tts_text": "大名って、みんな仲良しなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b01.wav": {
+      "tts_text": "いいえ、ばくふは、だいみょうを、みっつに、わけて、ちからの、バランスを、かんりしました。いえやすの、いちぞくの、しんぱん、ふるくからの、かけしんの、ふだい、あとから、したがった、とざまです。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b02.wav": {
+      "tts_text": "「いつからの仲間か」で分ける、合理主義なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b03.wav": {
+      "tts_text": "そのとおり。ばくふの、じゅうような、やくしょくは、ふだいが、しめ、とざまは、こっかいや、えんぽうに、はいちして、ちからを、ぶんさんしました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b04.wav": {
+      "tts_text": "しんぱんの、ごさんけは、しょうぐんの、かけいが、たえたときの、あとつぎやくも、かねる、とくべつな、いちぞくです。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b05.wav": {
+      "tts_text": "分けて、管理なのだ!頭が上がらないのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s05_b00.wav": {
+      "tts_text": "大名は、ずっと国にいるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b01.wav": {
+      "tts_text": "いいえ、だいみょうは、ひととしおきに、えどと、りょうごくを、おうふくする、ルール、さんきんこうたいが、もうけられます。1635ねんに、せいどかしました。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b02.wav": {
+      "tts_text": "1年ごとに、引っ越すなんて大変なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b03.wav": {
+      "tts_text": "しかも、つまこは、えどに、すまわせて、ひとじちの、ような、かたちです。ひようも、かさみ、だいみょうは、どんどん、けいざいてきに、よわります。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b04.wav": {
+      "tts_text": "えどと、りょうごくを、いききする、だいみょうぎょうれつの、ふうけいが、にほんじゅうに、ひろがります。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b05.wav": {
+      "tts_text": "戦わずして、大名を弱らせるのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b00.wav": {
+      "tts_text": "外国人は、まだ来てるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b01.wav": {
+      "tts_text": "ええ、スペインや、ポルトガルが、なんばんぼうえきを、していて、キリストきょうも、にほんじゅうに、ひろがって、いました。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b02.wav": {
+      "tts_text": "信じる自由も、だめになっちゃうのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b03.wav": {
+      "tts_text": "1612ねん、ばくふは、キリストきょうを、きんしします。がいこくと、くんだ、だいみょうが、つよくなるのを、ばくふは、とても、おそれたん、です。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b04.wav": {
+      "tts_text": "ルールは、幕府だけのものなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b00.wav": {
+      "tts_text": "禁止されて、どうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s07_b01.wav": {
+      "tts_text": "1637ねん、きゅうしゅうの、しまばらで、キリシタンの、のうみんたちが、いっきを、おこします。しどうしゃは、じゅうななさいの、あまくさ、しろうときさだでした。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b02.wav": {
+      "tts_text": "一揆って、反乱のことなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s07_b03.wav": {
+      "tts_text": "そう、おもい、ねんぐと、しゅうきょうの、だんあつが、かさなった、だいはんらんです。ばくふは、たいぐんを、おくり、ようやく、ちんあつしました。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b04.wav": {
+      "tts_text": "この、らんで、ばくふは、たみの、ふまんを、おそれるように、なります。さこくの、りゆうにも、つながる、だいじな、じけんです。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b05.wav": {
+      "tts_text": "世の中の仕組みに、不満がカチカチなのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s08_b00.wav": {
+      "tts_text": "これが、さこくへの道なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s08_b01.wav": {
+      "tts_text": "ええ、キリストきょうや、がいこくとの、むすびつきを、すこしずつ、きります。1639ねん、ポルトガルせんの、らいこうを、きんしして、さこくが、かんせいしました。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b02.wav": {
+      "tts_text": "国に、大きな鍵をかけたのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b03.wav": {
+      "tts_text": "ええ、これで、だいみょうの、かってな、ぼうえきも、がいこくじんの、ふきょうも、できなくなりました。まどぐちを、もつのは、ばくふだけです。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b04.wav": {
+      "tts_text": "「鍵」は幕府が持つのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s09_b00.wav": {
+      "tts_text": "完全に、閉じたのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b01.wav": {
+      "tts_text": "いいえ、ながさきの、でじまだけは、オランダとの、ぼうえきを、つづけました。おうぎがたの、じんこうとうが、がいこくの、ゆいいつの、きょてんです。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b02.wav": {
+      "tts_text": "窓口は、そこだけなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b03.wav": {
+      "tts_text": "ええ、オランダは、ふきょうを、しないので、ばくふも、ぼうえきを、ゆるしました。あたらしい、ちしきも、この、まどぐちから、はいってきます。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b04.wav": {
+      "tts_text": "知識の窓口、だいじなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s10_b00.wav": {
+      "tts_text": "窓口は、でじまだけなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b01.wav": {
+      "tts_text": "ええ、ほかにも、まどぐちが、あります。つしまはんは、ちょうせん、さつまはんは、りゅうきゅう、まつまえばんは、アイヌと、こうえきを、つづけました。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b02.wav": {
+      "tts_text": "さこくなのに、四つの窓口なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b03.wav": {
+      "tts_text": "そう、かんぜんな、とじかたではなく、ばくふが、かんりする、まどぐちだけが、ひらいて、います。ものも、じょうほうも、ここから、はいりました。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b04.wav": {
+      "tts_text": "四つの窓口、ちゃんとメモしたのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s11_b00.wav": {
+      "tts_text": "260年の平和って、どんな平和なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s11_b01.wav": {
+      "tts_text": "たたかいのない、よのなかで、ひとや、ものが、うごき、まちが、おおきく、なります。えどは、いまの、とうきょうの、ように、だいとしへ、せいちょうしました。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b02.wav": {
+      "tts_text": "人口ドカドカなのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s11_b03.wav": {
+      "tts_text": "ええ、ぶけと、ちょうにんで、えどは、あふれ、しょうにんたちが、どんどん、けいざいの、ちからを、もち、はじめます。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b04.wav": {
+      "tts_text": "ぶけの、まち・しょうにんの、まちが、まざり、えどどくじの、ぶんかも、そだち、はじめます。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b05.wav": {
+      "tts_text": "町人パワー、台頭なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b00.wav": {
+      "tts_text": "平和な世の中で、文化は生まれるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b01.wav": {
+      "tts_text": "ええ、おおさかや、きょうとを、ちゅうしんに、おかねもちに、なった、ちょうにんが、ぶんかを、つくります。のちに、「げんろくぶんか」と、よばれる、はなの、めです。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b02.wav": {
+      "tts_text": "町人が、文化の主役なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b03.wav": {
+      "tts_text": "ええ、まつおばしょうの、はいかい、ちかまつもんざえもんの、にんぎょうじょうるり、ひかわもろのぶの、うきよえが、うまれます。ちょうにんの、ぶんかが、ほんかくてきに、はなひらいたん、です。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b04.wav": {
+      "tts_text": "平和は、文化の肥料になるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s13_b00.wav": {
+      "tts_text": "この平和は、ずっと続くのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s13_b01.wav": {
+      "tts_text": "えどばくふは、260ねんいじょう、つづき、にほんの、どだいを、しっかり、かためます。でも、さこくと、みぶんの、こていかが、あとの、おおきな、かだいに、なります。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b02.wav": {
+      "tts_text": "固定化って、身動きできないことなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s13_b03.wav": {
+      "tts_text": "そのとおり、ひずみが、ひらくのは、ずっとあとの、ばくまつです。くわしくは、だいはちわで!",
+      "speaker": "sensei"
+    },
+    "narration/s13_b04.wav": {
+      "tts_text": "江戸の260年、まずはポイントまとめなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s14_b00.wav": {
+      "tts_text": "ここから受験ポイントのまとめ!まずは、幕府の土台。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b01.wav": {
+      "tts_text": "1603ねん、いえやすが、せいいたいしょうぐんで、えどばくふ。たいせいは、ろうじゅうと、さんぶぎょう。だいみょうは、しんぱん・ふだい・とざま、そして、さんきんこうたいは、1635ねんに、せいどか。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b02.wav": {
+      "tts_text": "「さこくへのみち」の、ながれは、こうはんで、やりますね。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b00.wav": {
+      "tts_text": "後半は、さこくへの道のりです。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b01.wav": {
+      "tts_text": "キリストきょうきんし、1612ねん。しまばらのらん、1637ねん、そして、1639ねん、さこく。まどぐちは、でじま(オランダ)の、ほか、つしま=ちょうせん、さつま=りゅうきゅう、まつまえ=アイヌ。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b02.wav": {
+      "tts_text": "へいわが、ちょうにんを、そだて、げんろくぶんかの、めに、なる。これで、かんぺきです!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b00.wav": {
+      "tts_text": "それではクイズタイム!第一問!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b01.wav": {
+      "tts_text": "1603ねん、とくがわ、いえやすが、しゅうにんして、えどばくふを、ひらいた、やくしょくは、なんでしょう?ア、せいいたいしょうぐん。イ、だじょうだいじん。ウ、せっしょう。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b02.wav": {
+      "tts_text": "幕府のボス…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s16_b03.wav": {
+      "tts_text": "正解!せいいたいしょうぐんです。さかのうえのたむらまろのあの役名を、いえやすが受け継いだ形ですね。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b00.wav": {
+      "tts_text": "第二問!",
+      "speaker": "sensei"
+    },
+    "narration/s17_b01.wav": {
+      "tts_text": "せきがはらの、たたかいの、あと、とくがわしに、したがった、だいみょうは、なんというでしょう?ア、しんぱん。イ、ふだい。ウ、とざま。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b02.wav": {
+      "tts_text": "あとから仲間…ウなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s17_b03.wav": {
+      "tts_text": "正解!とざまです。古いかしんがふだい、一族がしんぱん、三つで大名の分類です。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b00.wav": {
+      "tts_text": "ラスト問題!",
+      "speaker": "sensei"
+    },
+    "narration/s18_b01.wav": {
+      "tts_text": "1637ねん、キリシタンの、のうみんたちが、きゅうしゅうで、おこした、いっきは、なんでしょう?ア、しまばらのらん。イ、おうにんのらん。ウ、じょうきゅうのらん。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b02.wav": {
+      "tts_text": "キリシタンの一揆…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s18_b03.wav": {
+      "tts_text": "正解!しまばらのらんです。1637年、幕府が大軍を送って鎮圧した、大反乱でした。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b00.wav": {
+      "tts_text": "今日はえどばくふの始まりと、さこくの仕組みを、たっぷり見ました。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b01.wav": {
+      "tts_text": "せきがはら、さんきんこうたい、しまばらのらん、さこく、でじま…いえやす、計算づくの天才なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s19_b02.wav": {
+      "tts_text": "次回第8話は、ペリー来航の幕末編。さこくの鍵が、いよいよ開く話、お楽しみに!",
+      "speaker": "sensei"
+    },
+    "narration/s19_b03.wav": {
+      "tts_text": "鍵が開くのだ!?チャンネル登録も、よろしくなのだ!",
+      "speaker": "manabu"
+    }
+  },
+  "dict_sha256": "068183c8b3f1",
+  "generated_at": "2026-11-15T04:45:05",
+  "voice_sha256": "4a55213461bf"
+}

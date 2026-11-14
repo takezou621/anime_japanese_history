@@ -1,0 +1,359 @@
+{
+  "beats": {
+    "narration/s01_b00.wav": {
+      "tts_text": "ねえ先生、どうして日本は戦争に負けて、こんなに豊かになったの？",
+      "speaker": "manabu"
+    },
+    "narration/s01_b01.wav": {
+      "tts_text": "実は、負けたあとに日本最大の転機があったんです!二つの大戦から現代まで、見ていきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b02.wav": {
+      "tts_text": "よし、ラストまで、走るのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s01_b03.wav": {
+      "tts_text": "ええ、栄光と悲劇、両方ある重い話です。真剣に、いきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b04.wav": {
+      "tts_text": "うん、お願いなのだ!レッツゴー!",
+      "speaker": "manabu"
+    },
+    "narration/s02_b00.wav": {
+      "tts_text": "民権って、なんなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b01.wav": {
+      "tts_text": "こくみんの、けんりの、ことです。1874ねんの、けんぱくしょから、はじまった、うんどうで、いたがき、たいすけらが、かくちに、しゃを、つくって、ひろめました。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b02.wav": {
+      "tts_text": "国会と、自由を求めるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s02_b03.wav": {
+      "tts_text": "ええ、「こっかいかいせつの、けんぱく」など、うんどうは、せいふに、とどき、こっかいかいせつを、やくそくします。1890ねんの、よていです。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b04.wav": {
+      "tts_text": "民の声、国会まで届いたのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b00.wav": {
+      "tts_text": "その国会で使うルールは?",
+      "speaker": "manabu"
+    },
+    "narration/s03_b01.wav": {
+      "tts_text": "1889ねん、だいにほんていこくけんぽうが、はっぷされます。てんのうが、あたえる、きんていけんぽうで、いとうひろぶみが、ヨーロッパを、しらべて、つくりました。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b02.wav": {
+      "tts_text": "1889年、きんていけんぽうなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b03.wav": {
+      "tts_text": "ええ、1890ねんには、だいいっかいの、ていこくぎかいが、ひらかれます。ただし、せんきょけんは、のうぜいがくで、せいげんされて、いました。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b04.wav": {
+      "tts_text": "まだ、一部の人だけの選挙なのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s04_b00.wav": {
+      "tts_text": "日本は、世界へ出たのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b01.wav": {
+      "tts_text": "ええ、ちょうせんを、めぐって、ちゅうごくと、たいりつし、1894ねんに、にっしんせんそうが、はじまります。よくねん、にほんが、かって、しものせきじょうやくを、むすびました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b02.wav": {
+      "tts_text": "台湾と賠償金が手に入る…って条約なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b03.wav": {
+      "tts_text": "ええ、ただ、ロシアなど、さんごくの、かんしょうで、りょうとうはんとうは、かえさされました。よわい、にほんに、りふじんな、あつりょくです。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b04.wav": {
+      "tts_text": "さんごくかんしょう、くやしいのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s05_b00.wav": {
+      "tts_text": "次は、ロシアなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b01.wav": {
+      "tts_text": "1904ねん、まんしゅうと、ちょうせんの、けんえきを、めぐって、にちろせんそうが、はじまります。りょじゅんの、こうぼうなど、はげしい、たたかいが、つづきました。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b02.wav": {
+      "tts_text": "大国ロシアに、勝ったのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b03.wav": {
+      "tts_text": "ええ、アメリカの、ちゅうかいで、ポーツマスじょうやくを、むすびます。からふと、なんぶや、みなみまんしゅうてつどうの、けんえきを、えましたが、ばいしょうきんは、ありませんでした。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b04.wav": {
+      "tts_text": "勝ったのに賠償なし、講和反対事件も起きたのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s06_b00.wav": {
+      "tts_text": "その後の朝鮮は、どうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b01.wav": {
+      "tts_text": "にほんは、えいきょうを、つよめ、1910ねん、かんこくを、へいごうします。かんこくの、ひとびとの、とちや、じゆうが、おおきく、うばわれました。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b02.wav": {
+      "tts_text": "許さずに、奪ったのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s06_b03.wav": {
+      "tts_text": "そう、いたみは、ながく、つづきました。れきしから、この、じじつを、まなびつづける、ことが、たいせつなん、です。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b04.wav": {
+      "tts_text": "うん、忘れないのだ。",
+      "speaker": "manabu"
+    },
+    "narration/s07_b00.wav": {
+      "tts_text": "次は大正なのだ?平和な時代なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s07_b01.wav": {
+      "tts_text": "たいしょうには、デモクラシーの、なみが、ひろがります。はらたかし、ないかくなど、せいとうないかくが、うまれ、たいしゅうしゃかいが、そだちました。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b02.wav": {
+      "tts_text": "みんなで政治を考える時代なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b03.wav": {
+      "tts_text": "ええ、こめそうどうの、ような、どうらんも、あり、しゃかいには、おおきな、ゆらぎも、ありました。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b04.wav": {
+      "tts_text": "豊かさと、ゆらぎが同居なのだ。",
+      "speaker": "manabu"
+    },
+    "narration/s08_b00.wav": {
+      "tts_text": "選挙は、広がったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s08_b01.wav": {
+      "tts_text": "1925ねん、ふつうせんきょほうが、せいりつします。のうぜいの、じょうけんを、なくして、はたちごじっさいいじょうの、だんしぜんいんに、せんきょけんが、あたえられました。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b02.wav": {
+      "tts_text": "25歳以上の男子だけ…まだ狭いなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s08_b03.wav": {
+      "tts_text": "そう、じょせいは、たいしょうがいでした。おなじ、ねんに、ちあんいじほうも、つくられ、ひはんの、じゆうは、きびしく、せいげんされました。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b04.wav": {
+      "tts_text": "広がりと、しめつけが同時なのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s09_b00.wav": {
+      "tts_text": "世界の経済は、どうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b01.wav": {
+      "tts_text": "1929ねん、アメリカから、はじまった、せかいこうきょうが、ひろがります。にほんの、ゆしゅつも、おちこみ、しつぎょうしゃが、あふれました。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b02.wav": {
+      "tts_text": "つらさが、日本にも来たのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s09_b03.wav": {
+      "tts_text": "ええ、くるしいなかで、ぐんや、うはの、ちからが、つよく、なって、いきます。ここから、きけんな、ほうこうへ、うごき、はじめます。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b04.wav": {
+      "tts_text": "暗い時代の、入り口なのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s10_b00.wav": {
+      "tts_text": "そして、戦争へ向かったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b01.wav": {
+      "tts_text": "1931ねん、かんとうぐんが、まんしゅうじへんを、おこします。せいふを、むしした、ぐんの、こうどうで、にほんは、こくさいてきな、ひはんを、うけました。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b02.wav": {
+      "tts_text": "こくさいれんめいも、脱退なのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s10_b03.wav": {
+      "tts_text": "ええ、1937ねんには、にっちゅうせんそうへ、かくだいし、せんそうは、ちょうきかしました。こくみんの、くらしも、どんどん、きゅうはくします。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b04.wav": {
+      "tts_text": "止められない、歯車なのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s11_b00.wav": {
+      "tts_text": "そして、世界中が戦争なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s11_b01.wav": {
+      "tts_text": "1940ねん、にほんは、ドイツや、イタリアと、にちどくい、さんごくどうめいを、むすびます。1941ねん、しんじゅわんを、こうげきして、たいへいようせんそうが、はじまりました。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b02.wav": {
+      "tts_text": "アジアじゅうまで、戦場になったのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s11_b03.wav": {
+      "tts_text": "そう、おきなわでは、ちじょうせん、とうきょうなど、だいとしでは、くうしゅうが、あり、おおくの、いのちが、うしなわれました。くにの、ちからも、たくさんの、いたみも、つかいはたしました。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b04.wav": {
+      "tts_text": "忘れてはいけない、痛みなのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s12_b00.wav": {
+      "tts_text": "戦争は、どう終わったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b01.wav": {
+      "tts_text": "ひろしまと、ながさきには、げんばくが、とうかされ、おおくの、いのちが、うしなわれました。これは、けっして、わすれては、いけない、れきしです。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b02.wav": {
+      "tts_text": "1945ねん、アメリカなどが、ポツダムせんげんを、だし、にほんは、これを、じゅだくして、こうふくします。はちがつ、じゅうごにち、せんそうが、おわりました。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b03.wav": {
+      "tts_text": "8月15日、忘れてはいけない日なのだ。",
+      "speaker": "manabu"
+    },
+    "narration/s12_b04.wav": {
+      "tts_text": "ええ、くには、やけのはらに、なりました。しかし、にほんは、ここから、あたらしい、くにを、もういちど、つくり、はじめます。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b00.wav": {
+      "tts_text": "新しい国の、ルールはなんなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s13_b01.wav": {
+      "tts_text": "1947ねん、にほんこくけんぽうが、せこうされます。こくみんしゅけん、きほんてきな、じんけんの、そんちょう、せんそうほうきの、きゅうじょうが、さんだいげんそくです。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b02.wav": {
+      "tts_text": "戦わない国、にほんこくけんぽうなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s13_b03.wav": {
+      "tts_text": "ええ、そのあとは、せんごふっこうを、へて、こうどけいざいせいちょうの、じだいへ、すすみます。しんかんせんなど、せいちょうの、シンボルが、うまれました。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b04.wav": {
+      "tts_text": "焼け野原から、大国までなのだ!すごいのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s14_b00.wav": {
+      "tts_text": "ここから受験ポイントのまとめ!まずは、憲法と戦争への道。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b01.wav": {
+      "tts_text": "じゆうみんけんうんどう、だいにほんていこくけんぽう、1889ねん。ていこくぎかい、1890ねん。にっしんせんそう、1894ねん。にちろせんそう、1904ねん。かんこくへいごう、1910ねん。この、ながれは、かんぺきに!",
+      "speaker": "sensei"
+    },
+    "narration/s14_b02.wav": {
+      "tts_text": "「89けんぽう・90ぎかい・94にっしん・04にちろ・10へいごう」の、ならびです。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b00.wav": {
+      "tts_text": "後半は、民主化と戦争、そして戦後です。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b01.wav": {
+      "tts_text": "たいしょうデモクラシー、ふつうせんきょほう、1925ねん。せかいこうきょう、1929ねん。まんしゅうじへん、1931ねん、にっちゅうせんそう、1937ねん。さんごくどうめい、たいへいようせんそう、1941ねん、ポツダムせんげんじゅだく、1945ねん。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b02.wav": {
+      "tts_text": "そして、にほんこくけんぽう、1947ねん、こうどけいざいせいちょう。これで、ぜんじゅっわの、ながれが、つながります!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b00.wav": {
+      "tts_text": "それでは最終クイズ!第一問!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b01.wav": {
+      "tts_text": "1889ねんに、はっぷされた、にほんで、さいしょの、きんだいけんぽうは、なんでしょう?ア、だいにほんていこくけんぽう。イ、にほんこくけんぽう。ウ、じゅうしちじょうけんぽう。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b02.wav": {
+      "tts_text": "明治の憲法…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s16_b03.wav": {
+      "tts_text": "正解!だいにほんていこくけんぽうです。にほんこくけんぽうは1947年、間違えないように!",
+      "speaker": "sensei"
+    },
+    "narration/s17_b00.wav": {
+      "tts_text": "第二問!",
+      "speaker": "sensei"
+    },
+    "narration/s17_b01.wav": {
+      "tts_text": "1941ねん、しんじゅわんこうげきから、はじまった、せんそうは、なんでしょう?ア、たいへいようせんそう。イ、にちろせんそう。ウ、にっしんせんそう。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b02.wav": {
+      "tts_text": "1941年…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s17_b03.wav": {
+      "tts_text": "正解!たいへいようせんそうです。多くの命が失われた戦争、忘れないでください。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b00.wav": {
+      "tts_text": "ラスト問題!",
+      "speaker": "sensei"
+    },
+    "narration/s18_b01.wav": {
+      "tts_text": "1947ねんに、せこうされた、くにの、さいこうほうきは、なんでしょう?ア、にほんこくけんぽう。イ、だいにほんていこくけんぽう。ウ、ごせいばいしきもく。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b02.wav": {
+      "tts_text": "戦後の憲法…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s18_b03.wav": {
+      "tts_text": "正解!にほんこくけんぽうです。三大原則とセットで覚えましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b00.wav": {
+      "tts_text": "全10話、おつきあいありがとうございました。じょうもんから現代まで、日本史を駆け抜けました!",
+      "speaker": "sensei"
+    },
+    "narration/s19_b01.wav": {
+      "tts_text": "黒船も、明治の改革も、二つの大戦も…なんでも記憶に残るアニメだったのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s19_b02.wav": {
+      "tts_text": "ええ、歴史は「なぜ」の連続です。この先も、好奇心でたどってみてください!",
+      "speaker": "sensei"
+    },
+    "narration/s19_b03.wav": {
+      "tts_text": "ヒスト先生、ありがとうなのだ!チャンネル登録も、ずっとよろしくなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b05.wav": {
+      "tts_text": "ゼロから、やり直すのだ。",
+      "speaker": "manabu"
+    }
+  },
+  "dict_sha256": "068183c8b3f1",
+  "generated_at": "2026-11-15T04:39:37",
+  "voice_sha256": "4a55213461bf"
+}

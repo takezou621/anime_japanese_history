@@ -7,7 +7,7 @@
     "section": 0.9,
     "tail": 0.7
   },
-  "total_duration": 592.171,
+  "total_duration": 582.386,
   "scenes": [
     {
       "id": "s01",
@@ -15,86 +15,72 @@
       "start": 0.0,
       "beats": [
         {
-          "speaker": "sensei",
+          "speaker": "manabu",
           "wav": "narration/s01_b00.wav",
           "start": 0.0,
-          "duration": 7.595,
-          "text": "こんにちは!ヒスト先生です。第2話の今日は、飛鳥と奈良。日本が「国家」になっていく大ドラマを見ていきますよ。"
+          "duration": 3.755,
+          "text": "ねえ先生、どうして蘇我氏は倒されなきゃいけなかったの？"
         },
         {
-          "speaker": "manabu",
+          "speaker": "sensei",
           "wav": "narration/s01_b01.wav",
-          "start": 8.045,
-          "duration": 3.861,
-          "text": "マナブなのだ!大化の改新って、なんで起きたのだ?"
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s01_b02.wav",
-          "start": 12.356,
-          "duration": 4.491,
-          "text": "いいところに目をつけましたね。その答えこそ、今日いちばん大事なテーマです。"
+          "start": 4.205,
+          "duration": 5.184,
+          "text": "実は、お米と権力がかぎだったんです!乙巳の変から、順番にたどりましょう。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s01_b03.wav",
-          "start": 17.297,
-          "duration": 1.419,
-          "text": "はやく知りたいなのだ!"
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s01_b04.wav",
-          "start": 19.165,
-          "duration": 3.136,
-          "text": "聖徳太子の政治から、じっくりたどっていきましょう。"
+          "wav": "narration/s01_b02.wav",
+          "start": 9.839,
+          "duration": 2.283,
+          "text": "よし、飛鳥からスタートなのだ!"
         }
       ]
     },
     {
       "id": "s02",
       "section": "story",
-      "start": 23.201,
+      "start": 13.021,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s02_b00.wav",
-          "start": 23.201,
+          "start": 13.021,
           "duration": 2.539,
           "text": "じゃあ、まずなにから変わったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s02_b01.wav",
-          "start": 26.19,
+          "start": 16.01,
           "duration": 8.885,
           "text": "6世紀ごろの大和では、豪族の蘇我氏が大きな力を持っていました。仏教をめぐって物部氏と戦って勝ち、力はますます増します。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s02_b02.wav",
-          "start": 35.525,
-          "duration": 6.56,
+          "start": 25.345,
+          "duration": 6.571,
           "text": "そして592年、推古天皇が即位して、飛鳥で政治が始まります。ここからが飛鳥時代です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s02_b03.wav",
-          "start": 42.535,
+          "start": 32.366,
           "duration": 2.688,
           "text": "蘇我氏は、天皇より強かったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s02_b04.wav",
-          "start": 45.673,
-          "duration": 6.912,
+          "start": 35.504,
+          "duration": 6.965,
           "text": "それくらい強大でした。馬子の子の蝦夷、その子の入鹿は、好き勝手に政治を動かしたと伝わります。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s02_b05.wav",
-          "start": 53.035,
+          "start": 42.919,
           "duration": 2.4,
           "text": "「好き勝手」は、だめなのだ!"
         }
@@ -103,54 +89,54 @@
     {
       "id": "s03",
       "section": "story",
-      "start": 56.135,
+      "start": 46.019,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s03_b00.wav",
-          "start": 56.135,
+          "start": 46.019,
           "duration": 1.536,
           "text": "そこで登場なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s03_b01.wav",
-          "start": 58.121,
+          "start": 48.005,
           "duration": 7.595,
           "text": "ええ。推古天皇の摂政として政治をリードしたのが、聖徳太子です。593年の就任です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s03_b02.wav",
-          "start": 66.166,
+          "start": 56.05,
           "duration": 8.565,
           "text": "603年には能力で決める冠位十二階、604年には政治の心がけを示す十七条憲法を作りました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s03_b03.wav",
-          "start": 75.181,
+          "start": 65.065,
           "duration": 2.069,
           "text": "位は、色でわかるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s03_b04.wav",
-          "start": 77.701,
-          "duration": 9.44,
+          "start": 67.585,
+          "duration": 9.429,
           "text": "ええ、冠の色で位がわかります。冠位十二階=603年、十七条憲法=604年。年号とセットで覚えましょう。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s03_b05.wav",
-          "start": 87.591,
+          "start": 77.464,
           "duration": 5.611,
           "text": "有力な一族だけの政治から、才能ある人を登用する方向へ。大きな一歩だったんです。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s03_b06.wav",
-          "start": 93.651,
+          "start": 83.525,
           "duration": 2.517,
           "text": "年号ペアもセットで、覚えたのだ!"
         }
@@ -159,47 +145,47 @@
     {
       "id": "s04",
       "section": "story",
-      "start": 96.869,
+      "start": 86.742,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s04_b00.wav",
-          "start": 96.869,
+          "start": 86.742,
           "duration": 2.123,
           "text": "外国とは、どうしてたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b01.wav",
-          "start": 99.441,
-          "duration": 5.131,
+          "start": 89.315,
+          "duration": 5.109,
           "text": "607年、小野妹子を使者に、隋へ遣隋使を送ります。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b02.wav",
-          "start": 105.022,
+          "start": 94.874,
           "duration": 7.445,
           "text": "その国書に「日出づる処の天子、書を日没する処の天子に寄す」とあり、中国の史書に残っています。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s04_b03.wav",
-          "start": 112.917,
+          "start": 102.769,
           "duration": 4.843,
           "text": "「日出づる処」って、日本のことなのだ!?対等な感じなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b04.wav",
-          "start": 118.21,
+          "start": 108.062,
           "duration": 9.781,
           "text": "そう、まさに日本の自立を示す一文なんです。また太子は仏教を深く学び、法隆寺を建てました。現存する世界最古の木造建築として知られています。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s04_b05.wav",
-          "start": 128.441,
+          "start": 118.293,
           "duration": 4.48,
           "text": "木の建物が1300年以上、現役なのだ!?すごいのだ!"
         }
@@ -208,54 +194,54 @@
     {
       "id": "s05",
       "section": "story",
-      "start": 133.621,
+      "start": 123.473,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s05_b00.wav",
-          "start": 133.621,
+          "start": 123.473,
           "duration": 1.739,
           "text": "太子が亡くなったあとは?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b01.wav",
-          "start": 135.81,
+          "start": 125.662,
           "duration": 8.779,
           "text": "また蘇我氏が力を持ち、入鹿が専横を極めました。そこで中大兄皇子と中臣鎌足が、討つ計画を進めます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s05_b02.wav",
-          "start": 145.039,
+          "start": 134.891,
           "duration": 2.496,
           "text": "ここからが、タイトルの話なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b03.wav",
-          "start": 147.985,
+          "start": 137.837,
           "duration": 6.165,
           "text": "そう、645年、宮中で蘇我入鹿を討ちました。これが乙巳の変です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b04.wav",
-          "start": 154.6,
+          "start": 144.452,
           "duration": 4.341,
           "text": "二人は、蹴鞠で出会って以来の、信頼の仲だったと伝わります。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s05_b05.wav",
-          "start": 159.391,
+          "start": 149.243,
           "duration": 2.453,
           "text": "ついに蘇我氏、おわってしまったのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b06.wav",
-          "start": 162.295,
+          "start": 152.147,
           "duration": 6.677,
           "text": "ええ。一族の力勝負だった政治を、天皇を中心に立て直す、大きな転換点になりました。"
         }
@@ -264,47 +250,47 @@
     {
       "id": "s06",
       "section": "story",
-      "start": 169.672,
+      "start": 159.524,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s06_b00.wav",
-          "start": 169.672,
+          "start": 159.524,
           "duration": 2.635,
           "text": "で、改新ではなにが変わったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b01.wav",
-          "start": 172.757,
+          "start": 162.609,
           "duration": 7.019,
           "text": "まず、豪族たちの私の土地と民を、すべて天皇のものにしました。これが公地公民の考え方です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b02.wav",
-          "start": 180.225,
+          "start": 170.077,
           "duration": 8.576,
           "text": "土地は、戸籍をもとに六年ごとに農民へ貸す班田収授法。税は租・庸・調の三つに決まりました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s06_b03.wav",
-          "start": 189.251,
+          "start": 179.103,
           "duration": 3.179,
           "text": "租庸調?授業で聞いたことある言葉なのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b04.wav",
-          "start": 192.88,
-          "duration": 13.237,
-          "text": "ずばり頻出です。米や布を納める租、労働の庸、地域の特産品を納める調。公地公民・班田収授・租庸調は、必ずワンセットで!"
+          "start": 182.732,
+          "duration": 13.771,
+          "text": "ずばり頻出です。米を納める租、労働の庸、布や地域の特産品を納める調。公地公民・班田収授・租庸調は、必ずワンセットで!"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s06_b05.wav",
-          "start": 206.567,
+          "start": 196.953,
           "duration": 2.571,
           "text": "ワンセット、丸暗記完了なのだ!"
         }
@@ -313,47 +299,47 @@
     {
       "id": "s07",
       "section": "story",
-      "start": 209.838,
+      "start": 200.223,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s07_b00.wav",
-          "start": 209.838,
+          "start": 200.223,
           "duration": 2.389,
           "text": "そのあとは、すんなり進んだのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b01.wav",
-          "start": 212.677,
-          "duration": 10.336,
+          "start": 203.063,
+          "duration": 10.112,
           "text": "いいえ。672年、天智天皇の死後、兄弟で争う壬申の乱が起きました。勝った大海人皇子が、天武天皇になります。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s07_b02.wav",
-          "start": 223.463,
+          "start": 213.625,
           "duration": 2.432,
           "text": "兄弟でのけんか、かなしいのだ…"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b03.wav",
-          "start": 226.345,
+          "start": 216.507,
           "duration": 7.563,
           "text": "ええ。ただ、この乱をへて、天武天皇は、力を中心に集める国づくりを、いっそう強力に進めたんです。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b04.wav",
-          "start": 234.358,
+          "start": 224.519,
           "duration": 4.928,
           "text": "中心に力を集める政治を、中央集権と言います。受験用語ですよ。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s07_b05.wav",
-          "start": 239.736,
+          "start": 229.897,
           "duration": 2.731,
           "text": "強い国づくり、つづきが気になるのだ!"
         }
@@ -362,47 +348,47 @@
     {
       "id": "s08",
       "section": "story",
-      "start": 243.167,
+      "start": 233.328,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s08_b00.wav",
-          "start": 243.167,
+          "start": 233.328,
           "duration": 2.304,
           "text": "律令国家って、なんなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b01.wav",
-          "start": 245.921,
+          "start": 236.082,
           "duration": 6.315,
           "text": "律は刑罰のきまり、令は政治のしくみ。この二つで国を動かす、中国式の国家のことです。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b02.wav",
-          "start": 252.685,
+          "start": 242.847,
           "duration": 11.296,
           "text": "701年、文武天皇のときに大宝律令が整い、日本版のしくみが完成しました。藤原不比等らが編集に深くかかわっています。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s08_b03.wav",
-          "start": 264.431,
+          "start": 254.593,
           "duration": 2.784,
           "text": "701年、バリバリ覚えるのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b04.wav",
-          "start": 267.665,
+          "start": 257.827,
           "duration": 7.627,
           "text": "後に養老律令という改訂版もできますが、まずは大宝律令=701年で固めましょう。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s08_b05.wav",
-          "start": 275.742,
+          "start": 265.903,
           "duration": 2.517,
           "text": "国のルールブック、完成なのだ!"
         }
@@ -411,47 +397,47 @@
     {
       "id": "s09",
       "section": "story",
-      "start": 278.959,
+      "start": 269.121,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s09_b00.wav",
-          "start": 278.959,
+          "start": 269.121,
           "duration": 2.336,
           "text": "国の中は、どう動いてたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b01.wav",
-          "start": 281.745,
+          "start": 271.907,
           "duration": 7.883,
           "text": "中央には二官八省一台。神祇官と太政官の下に、八つの省が実務を担います。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b02.wav",
-          "start": 290.078,
+          "start": 280.239,
           "duration": 7.797,
           "text": "地方は国・郡・里に分かれ、都から派遣される国司と、地元の郡司が管理しました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s09_b03.wav",
-          "start": 298.325,
+          "start": 288.487,
           "duration": 2.795,
           "text": "日本中が、一列に管理なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b04.wav",
-          "start": 301.57,
+          "start": 291.731,
           "duration": 11.253,
           "text": "そんなイメージでぴったりです。戸籍で人を把握し、六年ごとの班田、租庸調の納税。全部つながった、当時の最先端システムなんです。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s09_b05.wav",
-          "start": 313.273,
+          "start": 303.435,
           "duration": 2.912,
           "text": "中央と地方が、まるごとつながってるのだ!"
         }
@@ -460,47 +446,47 @@
     {
       "id": "s10",
       "section": "story",
-      "start": 316.885,
+      "start": 307.047,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s10_b00.wav",
-          "start": 316.885,
+          "start": 307.047,
           "duration": 2.752,
           "text": "中国とは、その後もお付き合いなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b01.wav",
-          "start": 320.087,
+          "start": 310.249,
           "duration": 9.749,
           "text": "隋が滅んだあとは唐。630年から遣唐使を送り、制度や技術、文化を次々に持ち帰りました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b02.wav",
-          "start": 330.287,
+          "start": 320.448,
           "duration": 6.176,
           "text": "吉備真備や阿倍仲麻呂など、唐で学んだ人が大活躍します。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s10_b03.wav",
-          "start": 336.913,
+          "start": 327.074,
           "duration": 3.029,
           "text": "命がけの海外留学なのだ!えらいのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b04.wav",
-          "start": 340.392,
+          "start": 330.553,
           "duration": 6.613,
           "text": "ええ、船の航海は大変でした。この交流があったから、日本の制度と文化が一気に進んだんです。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s10_b05.wav",
-          "start": 347.455,
+          "start": 337.617,
           "duration": 2.624,
           "text": "留学生、日本のヒーローなのだ!"
         }
@@ -509,47 +495,47 @@
     {
       "id": "s11",
       "section": "story",
-      "start": 350.779,
+      "start": 340.941,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s11_b00.wav",
-          "start": 350.779,
+          "start": 340.941,
           "duration": 2.699,
           "text": "ついに、都のお引っ越しの時代なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b01.wav",
-          "start": 353.928,
+          "start": 344.089,
           "duration": 8.715,
           "text": "710年、都が平城京に移って、ここから奈良時代です。中国の都・長安をモデルにした大都市でした。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b02.wav",
-          "start": 363.093,
-          "duration": 5.003,
+          "start": 353.254,
+          "duration": 5.024,
           "text": "まっすぐな大通りの朱雀大路を中心に、碁盤の目のように町が整然と並びます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s11_b03.wav",
-          "start": 368.545,
+          "start": 358.728,
           "duration": 3.061,
           "text": "碁盤の目の都なのだ!迷子にならなそうなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b04.wav",
-          "start": 372.057,
+          "start": 362.239,
           "duration": 4.533,
           "text": "その整然とした町並みこそ、律令国家の力を見せる顔だったんですよ。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s11_b05.wav",
-          "start": 377.04,
+          "start": 367.223,
           "duration": 2.517,
           "text": "都まで整然、さすが国家なのだ!"
         }
@@ -558,47 +544,47 @@
     {
       "id": "s12",
       "section": "story",
-      "start": 380.257,
+      "start": 370.44,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s12_b00.wav",
-          "start": 380.257,
+          "start": 370.44,
           "duration": 2.219,
           "text": "奈良では、なにが生まれたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b01.wav",
-          "start": 382.926,
+          "start": 373.109,
           "duration": 10.251,
           "text": "歴史の記録では古事記と日本書紀、和歌の集まりは万葉集。国の力を示す仏教では、東大寺の大仏が作られました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b02.wav",
-          "start": 393.627,
+          "start": 383.809,
           "duration": 5.643,
           "text": "大仏の開眼供養は752年。国をあげての大プロジェクトでした。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s12_b03.wav",
-          "start": 399.719,
+          "start": 389.902,
           "duration": 4.437,
           "text": "大仏、でっかいのだ!?作るの、ものすごく大変なのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b04.wav",
-          "start": 404.607,
-          "duration": 5.653,
+          "start": 394.789,
+          "duration": 5.717,
           "text": "宝物を集めた正倉院も有名です。文化と政治が、奈良で大きく花開いた時代ですね。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s12_b05.wav",
-          "start": 410.71,
+          "start": 400.957,
           "duration": 1.877,
           "text": "奈良、すごい時代なのだ!"
         }
@@ -607,40 +593,40 @@
     {
       "id": "s13",
       "section": "story",
-      "start": 413.287,
+      "start": 403.534,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s13_b00.wav",
-          "start": 413.287,
+          "start": 403.534,
           "duration": 3.264,
           "text": "でも、うまくいき続けた…わけじゃないのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b01.wav",
-          "start": 417.001,
+          "start": 407.248,
           "duration": 8.416,
           "text": "さすが、いい着眼点です。班田もうまくいかなくなり、貴族や寺社が私有地を広げ始めます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s13_b02.wav",
-          "start": 425.867,
+          "start": 416.114,
           "duration": 2.517,
           "text": "そこから、また大変化が来るのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b03.wav",
-          "start": 428.835,
+          "start": 419.081,
           "duration": 6.133,
           "text": "ええ、その種が平安時代に大きく育ちます。詳しくは第3話!まずはポイントまとめです!"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s13_b04.wav",
-          "start": 435.418,
+          "start": 425.665,
           "duration": 1.771,
           "text": "まとめ、お願いなのだ!"
         }
@@ -649,26 +635,26 @@
     {
       "id": "s14",
       "section": "points",
-      "start": 438.089,
+      "start": 428.335,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s14_b00.wav",
-          "start": 438.089,
+          "start": 428.335,
           "duration": 3.051,
           "text": "ここから受験ポイントまとめ!まずは飛鳥時代です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b01.wav",
-          "start": 441.589,
+          "start": 431.836,
           "duration": 13.835,
           "text": "聖徳太子=冠位十二階603年・十七条憲法604年・遣隋使607年「日出づる処」。そして645年、乙巳の変から大化の改新スタート。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b02.wav",
-          "start": 455.874,
+          "start": 446.121,
           "duration": 5.376,
           "text": "公地公民・班田収授・租庸調のワンセット、忘れないでくださいね。"
         }
@@ -677,26 +663,26 @@
     {
       "id": "s15",
       "section": "points",
-      "start": 461.95,
+      "start": 452.197,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s15_b00.wav",
-          "start": 461.95,
+          "start": 452.197,
           "duration": 1.92,
           "text": "後半は、律令と奈良です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b01.wav",
-          "start": 464.32,
+          "start": 454.567,
           "duration": 14.987,
           "text": "壬申の乱672年→天武天皇。大宝律令701年で律令国家が完成。二官八省一台、国司郡司、戸籍と班田。遣唐使で唐の文化を導入。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b02.wav",
-          "start": 479.757,
+          "start": 470.003,
           "duration": 13.376,
           "text": "そして710年、平城京遷都で奈良時代スタート。年号は603・604・607・645・672・701・710。これで完璧です!"
         }
@@ -705,33 +691,33 @@
     {
       "id": "s16",
       "section": "quiz",
-      "start": 494.033,
+      "start": 484.279,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s16_b00.wav",
-          "start": 494.033,
+          "start": 484.279,
           "duration": 2.624,
           "text": "それでは仕上げのクイズタイム!第一問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b01.wav",
-          "start": 497.107,
+          "start": 487.353,
           "duration": 12.725,
           "text": "603年、聖徳太子が作った、能力で位を決める制度は?ア、冠位十二階。イ、十七条憲法。ウ、大宝律令。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s16_b02.wav",
-          "start": 510.282,
+          "start": 500.529,
           "duration": 2.005,
           "text": "能力で決める…アなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b03.wav",
-          "start": 512.737,
+          "start": 502.984,
           "duration": 6.24,
           "text": "正解!冠位十二階です。憲法は604年、律令は701年と整理しましょう。"
         }
@@ -740,34 +726,34 @@
     {
       "id": "s17",
       "section": "quiz",
-      "start": 519.677,
+      "start": 509.924,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s17_b00.wav",
-          "start": 519.677,
+          "start": 509.924,
           "duration": 0.693,
           "text": "第二問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b01.wav",
-          "start": 520.821,
+          "start": 511.067,
           "duration": 13.099,
           "text": "645年、中大兄皇子と中臣鎌足が蘇我入鹿を討った事件は?ア、壬申の乱。イ、乙巳の変。ウ、応仁の乱。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s17_b02.wav",
-          "start": 534.369,
+          "start": 524.616,
           "duration": 2.837,
           "text": "645年といえば…イなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b03.wav",
-          "start": 537.657,
-          "duration": 5.205,
+          "start": 527.903,
+          "duration": 5.269,
           "text": "正解!乙巳の変です。このあと大化の改新が始まる、流れで覚えましょう。"
         }
       ]
@@ -775,34 +761,34 @@
     {
       "id": "s18",
       "section": "quiz",
-      "start": 543.562,
+      "start": 533.873,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s18_b00.wav",
-          "start": 543.562,
+          "start": 533.873,
           "duration": 0.875,
           "text": "ラスト問題!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b01.wav",
-          "start": 544.887,
+          "start": 535.197,
           "duration": 9.493,
           "text": "710年に都が移された、奈良の都は?ア、平安京。イ、長岡京。ウ、平城京。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s18_b02.wav",
-          "start": 554.83,
+          "start": 545.141,
           "duration": 1.931,
           "text": "なら、なら…ウなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b03.wav",
-          "start": 557.211,
-          "duration": 6.197,
+          "start": 547.521,
+          "duration": 6.112,
           "text": "正解!平城京です。794年に平安京へ移るまで、日本の中心でした。"
         }
       ]
@@ -810,33 +796,33 @@
     {
       "id": "s19",
       "section": "ending",
-      "start": 564.308,
+      "start": 554.533,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s19_b00.wav",
-          "start": 564.308,
-          "duration": 5.6,
+          "start": 554.533,
+          "duration": 5.568,
           "text": "今日は聖徳太子から平城京まで、日本が「国家」になっていく道のりを見ました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b01.wav",
-          "start": 570.358,
+          "start": 560.551,
           "duration": 7.755,
           "text": "冠位十二階、大化の改新、公地公民、大宝律令、平城京…年号がいっぱいなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s19_b02.wav",
-          "start": 578.563,
-          "duration": 8.629,
+          "start": 568.756,
+          "duration": 8.651,
           "text": "その年号こそ、得点の入り口です。次回第3話は、平安貴族の華やかな暮らし〜摂関政治と国風文化〜。お楽しみに!"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b03.wav",
-          "start": 587.642,
+          "start": 577.857,
           "duration": 3.829,
           "text": "つぎは貴族なのだ!チャンネル登録も、よろしくなのだ!"
         }
@@ -846,23 +832,23 @@
   "sections": {
     "opening": {
       "start": 0.0,
-      "end": 23.201
+      "end": 13.021
     },
     "story": {
-      "start": 23.201,
-      "end": 438.089
+      "start": 13.021,
+      "end": 428.335
     },
     "points": {
-      "start": 438.089,
-      "end": 494.033
+      "start": 428.335,
+      "end": 484.279
     },
     "quiz": {
-      "start": 494.033,
-      "end": 564.308
+      "start": 484.279,
+      "end": 554.533
     },
     "ending": {
-      "start": 564.308,
-      "end": 592.171
+      "start": 554.533,
+      "end": 582.386
     }
   }
 }

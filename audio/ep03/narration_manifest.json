@@ -1,0 +1,399 @@
+{
+  "beats": {
+    "narration/s01_b00.wav": {
+      "tts_text": "ねえ先生、どうして天皇なのに政治ができない時期があったの？",
+      "speaker": "manabu"
+    },
+    "narration/s01_b01.wav": {
+      "tts_text": "実は、ふじわらしの工夫と、貴族の文化がかぎなんです!平安のしくみを、順番に見ていきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b02.wav": {
+      "tts_text": "よし、平安からスタートなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s01_b03.wav": {
+      "tts_text": "秘密、気になるなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s01_b04.wav": {
+      "tts_text": "都の引っ越しから始めて、じっくり見ていきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b00.wav": {
+      "tts_text": "まずは、なにから始まったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b01.wav": {
+      "tts_text": "8世紀のおわり、かんむてんのうは、政治を立てなおすため、都を移します。いったん、ながおかきょうへ、そして794年に、へいあんきょうへ、せんとしました。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b02.wav": {
+      "tts_text": "へいあんきょう…今の京都なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b03.wav": {
+      "tts_text": "ええ、ここから1000年以上、京都は日本の中心になります。「平安」の名には、穏やかな世の中への願いが込められています。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b04.wav": {
+      "tts_text": "穏やかな世の中…いい名前なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s02_b05.wav": {
+      "tts_text": "ただ、都の外では、東北でえみしとの戦いが続いていました。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b00.wav": {
+      "tts_text": "東北の戦いって、なんなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s03_b01.wav": {
+      "tts_text": "とうほくには、大和の国の、しはいを、うけない、えみしの、ひとたちがいました。ちょうていは、せいいたいしょうぐんを、たてて、とうばつに、むかいます。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b02.wav": {
+      "tts_text": "797年、さかのうえの、たむらまろが、せいいたいしょうぐんとなり、いざわじょうを、きずくなど、とうほくの、へいていに、せいこうします。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b03.wav": {
+      "tts_text": "強い将軍なのだ!かっこいいのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b04.wav": {
+      "tts_text": "そうなんです。せいいたいしょうぐんという名は、後の時代、武士のリーダーの役職として復活しますよ。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b05.wav": {
+      "tts_text": "後の武士につながるのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b00.wav": {
+      "tts_text": "へいあんきょうは、平和なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b01.wav": {
+      "tts_text": "じつは、こうしつの、なかでも、けんりょく、あらそいが、ありました。さがてんのうのとき、へいじょうじょうこう、がわの、ふじわらの、やくこが、政治を、もとに、もどそうとして、かけられます。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b02.wav": {
+      "tts_text": "それが、あのやくこなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b03.wav": {
+      "tts_text": "そう、810年の、やくしのへんです。これを、きっかけに、さがてんのうは、てんのうの、そばつかえの、やくしょ、くろうどどころを、しんせつしました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b04.wav": {
+      "tts_text": "くろうどどころ?かわいい名前なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b05.wav": {
+      "tts_text": "天皇のまちかどで機密を扱い、後に大きな力を持つようになりますよ。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b00.wav": {
+      "tts_text": "つぎに強くなったのは、だれなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b01.wav": {
+      "tts_text": "ふじわらしです。やりかたは、じぶんの、むすめを、てんのうの、こうに入れること。うまれた、こは、ふじわらしの、まごになる、というわけです。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b02.wav": {
+      "tts_text": "おかあさんが藤原さんなら、天皇は藤原さんの孫なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b03.wav": {
+      "tts_text": "そのとおり。そうして、ちからを、かためた、ふじわらの、よしふさは、おさない、せいわてんのうの、かわりに、政治を、おこなう、せっしょうに、つきます。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b04.wav": {
+      "tts_text": "さらに、おいの、もとつねは、おとなの、てんのうを、ささえる、かんぱくに。この、ふたつを、ふじわらしが、どくせんした、政治を、せっかんせいじと、いいます。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b05.wav": {
+      "tts_text": "「代わりに行く」と「そばで支える」なのだ!覚えたのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s06_b00.wav": {
+      "tts_text": "せっかんせいじが、いちばん盛り上がったのは?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b01.wav": {
+      "tts_text": "ふじわらの、みちながの、ときです。さんにんの、むすめを、さんにんの、てんのうに、にゅうないさせ、政治を、じゆうに、うごかしました。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b02.wav": {
+      "tts_text": "「望むこと、なしとなし」って言ったのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b03.wav": {
+      "tts_text": "ええ、天下を取った気分の一言と伝わります。でも、天皇や武士の不満も、少しずつ溜まっていきました。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b04.wav": {
+      "tts_text": "キラキラの裏は、ぐっすりの種なのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s06_b05.wav": {
+      "tts_text": "そのとおり。このひずみが、次の時代の扉を開けます。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b00.wav": {
+      "tts_text": "中国との交流は、その後どうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s07_b01.wav": {
+      "tts_text": "894年、すがわらの、みちざねの、けんげんで、けんとうしが、ていしされます。とうの、みだれと、あらゆる、ものを、まなびつくした、ことが、りゆうです。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b02.wav": {
+      "tts_text": "学び終わって、おしまいなのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s07_b03.wav": {
+      "tts_text": "そう、これを、きに、日本らしい、ぶんか、こくふうぶんかが、はなひらきます。もじも、えも、ものがたりも、にっぽんしょく、たっぷりにね。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b04.wav": {
+      "tts_text": "こくふうぶんか、この後楽しみなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b00.wav": {
+      "tts_text": "平安貴族の家って、どんな感じなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s08_b01.wav": {
+      "tts_text": "しんでんづくりです。ちゅうおうの、しんでんを、たいやと、かいろうで、かこみ、みなみに、いけと、にわを、くばした、かぜを、とおす、かいほうてきな、いえです。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b02.wav": {
+      "tts_text": "池つきで贅沢なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b03.wav": {
+      "tts_text": "きゅうちゅうに、つかえる、にょうぼうたちは、にょうぼうしょうぞく、いわゆる、じゅうにひとえを、きて、ふでや、わかで、しゃこうしました。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b04.wav": {
+      "tts_text": "じゅうにひとえ!12枚着るのだ?重くないのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s08_b05.wav": {
+      "tts_text": "名前のわりに、その枚数は流動的でした。公式は漢字で、日常の手紙はかなで。文字の使い分けも、貴族のたしなみなんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b06.wav": {
+      "tts_text": "漢字とかな、使いこなしなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s09_b00.wav": {
+      "tts_text": "ぐっすりの種…土地の話なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b01.wav": {
+      "tts_text": "743ねん、こんでんえいねんしざいほうが、でます。かいこんした、たんぼは、えいきゅうに、しゆうできる、という、ほうりつです。むげんの、かいこんブームの、はじまりです。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b02.wav": {
+      "tts_text": "すると、ちからの、ある、きぞくや、じしゃが、かいこんちを、あつめ、ぜいを、おさめない、しゆうち、しょうえんが、ひろがって、いきます。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b03.wav": {
+      "tts_text": "国の税金を、すり抜ける土地なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b04.wav": {
+      "tts_text": "そのとおり。班田はどんどんゆがみ、こうちこうみんのルールが崩れていきました。これが後の武士と戦の、長い物語の入り口です。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b05.wav": {
+      "tts_text": "743年、ここから全部が動くのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s10_b00.wav": {
+      "tts_text": "ついに、こくふうぶんかなのだ!文字の話なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b01.wav": {
+      "tts_text": "ええ。かんじから、うまれた、日本どくじの、かなもじが、ひろがります。こきんわかしゅうも、かなの、わかしゅうとして、へんさんされました。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b02.wav": {
+      "tts_text": "きの、つらゆきは、かなで、かいた、にっき、とさにっき。じょせいの、ふりを、して、かいた、かなにっきの、はじまりです。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b03.wav": {
+      "tts_text": "男が女性のふり…ずるいのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b04.wav": {
+      "tts_text": "さらに、せいしょうなごんの、ずいひつ、まくらのそうし。むらさきしきぶの、ものがたり、げんじものがたり。げんじものがたりは、せかいさいこの、ちょうへんしょうせつと、よばれます。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b05.wav": {
+      "tts_text": "まくらのそうしとげんじものがたり、セットで覚えるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s11_b00.wav": {
+      "tts_text": "絵も、日本風になるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s11_b01.wav": {
+      "tts_text": "ええ、よこながの、えまきものが、はったつします。ものがたりを、えと、もじで、すすめる、日本はつの、ひょうげんです。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b02.wav": {
+      "tts_text": "げんじものがたりえまきや、ちょうじゅうぎがは、いまでも、にんきの、めいひんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b03.wav": {
+      "tts_text": "うさぎとカエルが相撲してる絵なのだ!?大好きなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s11_b04.wav": {
+      "tts_text": "笑えますよね。文学と絵がそろって、こくふうぶんかは華やかの頂点でした。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b05.wav": {
+      "tts_text": "平安、文化のスーパーゴールデンタイムなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b00.wav": {
+      "tts_text": "でも、華やかだけじゃないのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b01.wav": {
+      "tts_text": "そう、この時代も世の中は荒れ、人々の心は疲れていきます。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b02.wav": {
+      "tts_text": "そこで、ひろまったのが、じょうどしそうです。あみだにょらいを、しんじて、しんだあと、らいせの、ごくらくじょうどに、うまれかわりたい、という、ねがいです。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b03.wav": {
+      "tts_text": "来世でリベンジなのだ…?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b04.wav": {
+      "tts_text": "げんしんが、おうじょうようしゅうを、かき、くうやのような、ゆぎょうひじりが、ねんぶつを、ひろめて、ひとびとの、こころを、ささえました。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b05.wav": {
+      "tts_text": "心の支え、大切なのだ。",
+      "speaker": "manabu"
+    },
+    "narration/s13_b00.wav": {
+      "tts_text": "世の中が荒れると、どうなるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s13_b01.wav": {
+      "tts_text": "しょうえんや、くにの、あらそいを、まもるため、ぶりょくの、プロ、ぶしが、とうじょうです。げんじや、へいしの、なは、ここで、そだちます。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b02.wav": {
+      "tts_text": "ついに武士が来るのだ!?次の回、これは見逃せないのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s13_b03.wav": {
+      "tts_text": "その前に、今日のポイントをきっちりまとめて、次回へ行きましょう!",
+      "speaker": "sensei"
+    },
+    "narration/s13_b04.wav": {
+      "tts_text": "まとめ、お願いなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s14_b00.wav": {
+      "tts_text": "ここから受験ポイントのまとめ!まずは政治の流れ。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b01.wav": {
+      "tts_text": "794ねん、へいあんきょうせんと。797ねん、さかのうえの、たむらまろが、せいいたいしょうぐん。810ねん、やくしのへんで、くろうどどころ。そして、ふじわらしの、せっかんせいじ。しょうえんの、はじまりは、743ねん。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b02.wav": {
+      "tts_text": "せっしょう=おさない、てんのうの、かわり。かんぱく=おとなの、てんのうの、ほさい。この、くべつも、だいじです。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b00.wav": {
+      "tts_text": "後半は、文化と心のまとめです。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b01.wav": {
+      "tts_text": "こくふうぶんか=かなで、とさにっき(きのつらゆき)・まくらのそうし(せいしょうなごん)・げんじものがたり(むらさきしきぶ)、えまきもの。じょうどしそう=あみだにょらいへの、しんこうと、らいせの、ねがい。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b02.wav": {
+      "tts_text": "894ねん、けんとうしていし、で、こくふうぶんか。らんせ、で、じょうどしそう。ながれで、おぼえれば、わすれません!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b00.wav": {
+      "tts_text": "それではクイズタイム!第一問!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b01.wav": {
+      "tts_text": "おさない、てんのうの、かわりに、政治を、おこなう、やくを、なんと、いう?ア、かんぱく。イ、せっしょう。ウ、せいいたいしょうぐん。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b02.wav": {
+      "tts_text": "こども天皇の代わり…イなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s16_b03.wav": {
+      "tts_text": "正解!せっしょうです。大人の天皇を支えるのはかんぱく、とセットで整理しましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b00.wav": {
+      "tts_text": "第二問!",
+      "speaker": "sensei"
+    },
+    "narration/s17_b01.wav": {
+      "tts_text": "せいしょうなごんが、かいた、「をかし」の、ずいひつは、なんだろう?ア、げんじものがたり。イ、とさにっき。ウ、まくらのそうし。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b02.wav": {
+      "tts_text": "をかし、をかし…ウなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s17_b03.wav": {
+      "tts_text": "正解!まくらのそうしです。げんじものがたりはむらさきしきぶ、とさにっきはきのつらゆき、ペアで覚えましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b00.wav": {
+      "tts_text": "ラスト問題!",
+      "speaker": "sensei"
+    },
+    "narration/s18_b01.wav": {
+      "tts_text": "810ねん、ふじわらの、やくこが、政治を、もとに、もどそうとして、しっぱいした、じけんは?ア、やくしのへん。イ、おうてんもんのへん。ウ、ほうげんのらん。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b02.wav": {
+      "tts_text": "やくこさんはやっぱり…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s18_b03.wav": {
+      "tts_text": "正解!やくこの変です。この直後にくろうどどころが新設された、セットでどうぞ。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b00.wav": {
+      "tts_text": "今日はへいあんきょうからこくふうぶんかまで、華やかで奥深い時代を見ました。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b01.wav": {
+      "tts_text": "せっかんせいじ、まくらのそうし、げんじものがたり、浄土思想…貴族の世界、ぜんぶ覚えたのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s19_b02.wav": {
+      "tts_text": "さすがです。次回第4話は、ついに武士の登場。げんぺいかっせんとかまくらばくふの話、お楽しみに!",
+      "speaker": "sensei"
+    },
+    "narration/s19_b03.wav": {
+      "tts_text": "つぎは刀なのだ!?チャンネル登録も、よろしくなのだ!",
+      "speaker": "manabu"
+    }
+  },
+  "dict_sha256": "068183c8b3f1",
+  "generated_at": "2026-11-15T04:09:38",
+  "voice_sha256": "4a55213461bf"
+}

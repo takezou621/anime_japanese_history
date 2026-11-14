@@ -1,0 +1,359 @@
+{
+  "beats": {
+    "narration/s01_b00.wav": {
+      "tts_text": "ねえ先生、農民あがりでも天下を取れるの？",
+      "speaker": "manabu"
+    },
+    "narration/s01_b01.wav": {
+      "tts_text": "実は、取れたんです!のぶながの革命とひでよしの大改革を、順番に見ていきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b02.wav": {
+      "tts_text": "よし、おけはざまからスタートなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s01_b03.wav": {
+      "tts_text": "ええ、常識をどんどん破る、破天荒な大将です。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b04.wav": {
+      "tts_text": "いっしょに見るのだ、レッツゴーなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s02_b00.wav": {
+      "tts_text": "のぶながは、最初から強かったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b01.wav": {
+      "tts_text": "いいえ、おわりの、なではない、わかむしゃでした。でも1560ねん、たいごく・いまがわよしもとが、じょうらくの、とじゅうにあり、おわりへ、せめこんできます。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b02.wav": {
+      "tts_text": "雨の日の、思いきった奇襲なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b03.wav": {
+      "tts_text": "ええ、おけはざまの、たたかいで、のぶながは、よしもとを、うちとり、いちやく、てんかに、そのなを、うりました。じゃくしょうと、おもわれた、おわりが、うごきはじめます。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b04.wav": {
+      "tts_text": "どうどうめぐり?いやいや、大出世なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b00.wav": {
+      "tts_text": "つぎの目標は、なんなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s03_b01.wav": {
+      "tts_text": "みのの、いなばやまじょうを、うばい、ちめいを、「ぎふ」へ、あらためます。ここで、「てんかふぶ」の、しゅいんを、つかいはじめ、てんかを、ぶりょくで、おさめる、せんげんです。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b02.wav": {
+      "tts_text": "「てんかぶぶ」、かっこよくて覚えやすい言葉なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b03.wav": {
+      "tts_text": "ええ、そして1568ねん、あしかが、よしあきを、ようりつして、きょうとへ、じょうらくします。のぶながの、もくひょうは、もう、あきらかでした。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b04.wav": {
+      "tts_text": "義昭様と、じょうらくスムーズなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b00.wav": {
+      "tts_text": "のぶながの城は、どんな城なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b01.wav": {
+      "tts_text": "1576ねん、びわこの、ほとりの、あづちじょうを、きずきます。たかく、そびえる、てんしゅは、いしがきと、しらかべの、とうじさいきょう・さいしんの、しろでした。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b02.wav": {
+      "tts_text": "お城のスーパースター、最強天主なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b03.wav": {
+      "tts_text": "しかも、じょうかまちでは、らくいちらくざ。せきしょを、はいし、ざの、とっけんを、なくして、しょうにんが、じゆうに、しょうばいできる、まちを、つくりました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b04.wav": {
+      "tts_text": "このころ、1549ねんに、ザビエルが、キリストきょうを、つたえ、なんばんぶんかも、ひろがります。てっぽうと、ともに、あたらしい、ものが、つぎつぎに、はいってきた、じだいです。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b00.wav": {
+      "tts_text": "敵も、ただでは済まないのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b01.wav": {
+      "tts_text": "たけだの、きばたいが、ながしのの、たたかいで、いどんできます。のぶながは、てっぽうを、たいりょうに、そろえ、てっぽうたいを、かつようして、これを、うちやぶりました。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b02.wav": {
+      "tts_text": "鉄砲の数と仕組みで勝つ、合理的なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s05_b03.wav": {
+      "tts_text": "ええ、「てっぽうさんだんうち」の、はなしは、ゆうめいですが、げんだいの、けんきゅうでは、しょせつあるん、です。だから、「てっぽうたいを、かつようした」と、おぼえれば、じゅうぶんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b04.wav": {
+      "tts_text": "真実はいつも、研究の中なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s06_b00.wav": {
+      "tts_text": "天下統一まで、あと少し…なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b01.wav": {
+      "tts_text": "1582ねん、ちゅうごくぜめの、のぶながに、かけいの、あけち、みつひでが、むほんを、おこします。「てきは、ほんのうじに、あり」と、おそわれ、のぶながは、ほんのうじで、はてました。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b02.wav": {
+      "tts_text": "まさかの、ここで退場なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b03.wav": {
+      "tts_text": "ええ、天下統一まで、あと一歩の場面でした。歴史は、そのどこで変わるかわかりません。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b04.wav": {
+      "tts_text": "どんでん返し、歴史の魅力なのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s07_b00.wav": {
+      "tts_text": "みつひでは、天下を取れたのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s07_b01.wav": {
+      "tts_text": "いいえ、ちゅうごくちほうから、ひでよしが、もうスピードで、ひきかえし、やまざきの、たたかいで、みつひでを、うちました。わずか、じゅうさんにちかんの、てんかと、つたわります。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b02.wav": {
+      "tts_text": "中国大返し、すごいスピードなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b03.wav": {
+      "tts_text": "ええ、この、しょうりで、ひでよしは、のぶながの、こうけいしゃの、ざを、つかみます。のうみんあがりの、えいゆうの、だいしゅっせです。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b04.wav": {
+      "tts_text": "ひでよし、一気に物語の主役なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b00.wav": {
+      "tts_text": "ひでよしの城も、すごいのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s08_b01.wav": {
+      "tts_text": "1583ねん、おおさかじょうを、きずきます。いしがきが、たかく、そびえる、にほんいちの、きょじょうで、てんかとういつの、きょてんでした。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b02.wav": {
+      "tts_text": "あづちと対になる、新しいお城なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b03.wav": {
+      "tts_text": "ええ、そして1590ねん、おだわらの、ほうじょうを、おろして、ひでよしは、てんかとういつを、はたします。せんごくらんせ、ついに、しゅうけつです。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b04.wav": {
+      "tts_text": "乱世、おわりなのだ!ついに平和なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s09_b00.wav": {
+      "tts_text": "平和になったら、なにをするのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b01.wav": {
+      "tts_text": "たいこうけんちです。ぜんこくの、たはたの、ひろさと、しゅうかくりょうを、はかり、こくだかで、くにの、ちからを、はかる、ルールを、つくりました。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b02.wav": {
+      "tts_text": "たいこうって、ひでよしのことなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b03.wav": {
+      "tts_text": "そう、たいこうは、ひでよしの、しょうごうです。さらに、かたながりで、のうみんから、ぶきを、とりあげ、へいと、のうみんを、わける、へいのうぶんりを、すすめました。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b04.wav": {
+      "tts_text": "国のシステムも、ぜんぶ新しくなるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s10_b00.wav": {
+      "tts_text": "外には、どんな手を打つのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b01.wav": {
+      "tts_text": "そうぶじれいです。だいみょうどうしの、しせんを、きんじて、ひでよしの、ルールで、くにを、まとめました。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b02.wav": {
+      "tts_text": "天下のボスの、お触れなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s10_b03.wav": {
+      "tts_text": "ええ、しかし、ひでよしは、にどの、ちょうせんしゅっぺいを、おこないます。1592ねんの、ぶんろくのえきと、1597ねんの、けいちょうのえきで、くには、ひへいしました。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b04.wav": {
+      "tts_text": "栄華の裏には、ひずみもあったのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s11_b00.wav": {
+      "tts_text": "この時代の文化は、どんな感じなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s11_b01.wav": {
+      "tts_text": "ごうがけんらんの、ももやまぶんかです。しろや、きんびょうぶに、どはでな、きんいろ、てんかとりの、パワー、そのものです。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b02.wav": {
+      "tts_text": "金色ドカン、パワフルなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s11_b03.wav": {
+      "tts_text": "ええ、ちゃのゆも、だいりゅうこうします。わびという、しずかで、しっそな、びを、たのしむ、ぶんかです。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b04.wav": {
+      "tts_text": "派手と地味、両方なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b00.wav": {
+      "tts_text": "茶の湯の先生は、だれなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b01.wav": {
+      "tts_text": "せんのりきゅうです。のぶなが・ひでよしに、つかえた、ちゃとうで、わびちゃを、きわめた、じんぶつです。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b02.wav": {
+      "tts_text": "お茶で、心を鍛える修行なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b03.wav": {
+      "tts_text": "ええ、ちいさな、ちゃしつで、うつくしさと、こころを、みがく、おしえです。あとの、にほんぶんかに、おおきな、えいきょうを、あたえます。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b04.wav": {
+      "tts_text": "ちいさな茶室に、大きな世界なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s13_b00.wav": {
+      "tts_text": "その後の天下は、どうなるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s13_b01.wav": {
+      "tts_text": "1598ねん、ひでよしが、なくなり、てんかは、ふたたび、ゆらぎます。じつりょくしゃ・とくがわいえやすの、とうとうが、つぎの、じだいの、ちゅうしんです。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b02.wav": {
+      "tts_text": "また、どんでん返しなのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s13_b03.wav": {
+      "tts_text": "ええ、その答えは、第7話のえどばくふで詳しくやります!まずは、今日のポイントまとめへ!",
+      "speaker": "sensei"
+    },
+    "narration/s13_b04.wav": {
+      "tts_text": "まとめ、お願いなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s14_b00.wav": {
+      "tts_text": "ここから受験ポイントのまとめ!まずは、のぶながの改革の流れ。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b01.wav": {
+      "tts_text": "おけはざま、1560ねん。ぎふと、てんかふぶ、1567ねん。あづちじょう、1576ねんと、らくいちらくざ。ながしの、1575ねんは、てっぽうたい。そして1582ねん、ほんのうじのへん。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b02.wav": {
+      "tts_text": "「てっぽうさんだんうち」は、しょせつあり、と、おぼえておきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b00.wav": {
+      "tts_text": "後半は、ひでよしの政治と文化です。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b01.wav": {
+      "tts_text": "やまざきの、たたかい、1582ねん。おおさかじょう、1583ねん、てんかとういつ、1590ねん。たいこうけんち・かたながり・そうぶじれいで、くにの、しくみを、いっしん。でも、ちょうせんしゅっぺいで、くには、ひへいします。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b02.wav": {
+      "tts_text": "ぶんかは、ごうがけんらんの、ももやまぶんかと、せんのりきゅうの、わびちゃの、たいひです!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b00.wav": {
+      "tts_text": "それではクイズタイム!第一問!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b01.wav": {
+      "tts_text": "1560ねん、のぶながが、いまがわよしもとを、うちとった、たたかいは、なんでしょう?ア、おけはざまの、たたかい。イ、かわなかじまの、たたかい。ウ、やまざきの、たたかい。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b02.wav": {
+      "tts_text": "雨の奇襲…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s16_b03.wav": {
+      "tts_text": "正解!おけはざまのたたかいです。1560年とセットで丸暗記しましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b00.wav": {
+      "tts_text": "第二問!",
+      "speaker": "sensei"
+    },
+    "narration/s17_b01.wav": {
+      "tts_text": "しょうにんの、しょうばいを、じゆうにした、のぶながの、けいざいせいさくは、なんでしょう?ア、らくいちらくざ。イ、たいこうけんち。ウ、かたながり。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b02.wav": {
+      "tts_text": "商売チャンス…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s17_b03.wav": {
+      "tts_text": "正解!らくいちらくざです。関所を廃して商人を集めた、経済政策ですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b00.wav": {
+      "tts_text": "ラスト問題!",
+      "speaker": "sensei"
+    },
+    "narration/s18_b01.wav": {
+      "tts_text": "ひでよしが、ぜんこくの、たはたを、はかり、こくだかで、くにを、はかるようにした、せいさくは?ア、かたながり。イ、たいこうけんち。ウ、そうぶじれい。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b02.wav": {
+      "tts_text": "国のパワー測定…イなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s18_b03.wav": {
+      "tts_text": "正解!たいこうけんちです。かたながりは武器を取り上げる政策、セットで覚えましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b00.wav": {
+      "tts_text": "今日はのぶながとひでよし、二人の英雄の力で乱世が終わりました。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b01.wav": {
+      "tts_text": "おけはざま、てんかぶぶ、あづちじょう、ほんのうじのへん、たいこうけんち、桃山文化…歴史がドカドカ動いた時代なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s19_b02.wav": {
+      "tts_text": "次回第7話は、とくがわいえやすのえどばくふとさこく。260年の平和の始まりです!",
+      "speaker": "sensei"
+    },
+    "narration/s19_b03.wav": {
+      "tts_text": "つぎは長い長い平和なのだ!チャンネル登録も、よろしくなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b05.wav": {
+      "tts_text": "商売チャンスなのだ!経済ののぶながなのだ!",
+      "speaker": "manabu"
+    }
+  },
+  "dict_sha256": "068183c8b3f1",
+  "generated_at": "2026-11-15T04:22:20",
+  "voice_sha256": "4a55213461bf"
+}

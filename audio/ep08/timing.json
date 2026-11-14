@@ -7,7 +7,7 @@
     "section": 0.9,
     "tail": 0.7
   },
-  "total_duration": 549.679,
+  "total_duration": 540.832,
   "scenes": [
     {
       "id": "s01",
@@ -15,86 +15,72 @@
       "start": 0.0,
       "beats": [
         {
-          "speaker": "sensei",
+          "speaker": "manabu",
           "wav": "narration/s01_b00.wav",
           "start": 0.0,
-          "duration": 1.888,
-          "text": "こんにちは!ヒスト先生です。"
+          "duration": 4.0,
+          "text": "ねえ先生、黒船が来たら、日本はどうなっちゃうの？"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s01_b01.wav",
-          "start": 2.338,
-          "duration": 6.528,
-          "text": "第8話は、幕末!ペリーの黒船が、260年の眠りを破る、大どんでん返しの時代です!"
+          "start": 4.45,
+          "duration": 6.229,
+          "text": "実は、ここから日本の大変革が始まるんです!ペリーから大政奉還まで、一気に見ていきましょう。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s01_b02.wav",
-          "start": 9.316,
-          "duration": 3.605,
-          "text": "マナブなのだ!黒船って、まっくろな船なのだ!?"
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s01_b03.wav",
-          "start": 13.371,
-          "duration": 4.992,
-          "text": "ええ、煙を上げて来た西洋の軍艦です。日本の鍵を、開けに来ました。"
-        },
-        {
-          "speaker": "manabu",
-          "wav": "narration/s01_b04.wav",
-          "start": 18.813,
-          "duration": 3.915,
-          "text": "260年の鍵、開くのだ!?レッツゴーなのだ!"
+          "start": 11.129,
+          "duration": 2.624,
+          "text": "よし、幕末、スタートなのだ!"
         }
       ]
     },
     {
       "id": "s02",
       "section": "story",
-      "start": 23.628,
+      "start": 14.653,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s02_b00.wav",
-          "start": 23.628,
+          "start": 14.653,
           "duration": 2.432,
           "text": "江戸の平和は、続いていたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s02_b01.wav",
-          "start": 26.51,
+          "start": 17.535,
           "duration": 11.307,
           "text": "ええ、しかし1853年、アメリカのペリーが浦賀に現れます。蒸気で煙を吐く黒い軍艦4隻、開国の要求でした。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s02_b02.wav",
-          "start": 38.267,
+          "start": 29.292,
           "duration": 2.997,
           "text": "それが黒船なのだ!?迫力がすごいのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s02_b03.wav",
-          "start": 41.714,
+          "start": 32.739,
           "duration": 10.485,
           "text": "幕府は答えを迷い、「来年また来る」と言って、ペリーは一時帰国します。答えを出す1年間が、与えられました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s02_b04.wav",
-          "start": 52.649,
+          "start": 43.675,
           "duration": 2.805,
           "text": "迷った末の答えは、開国なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s02_b05.wav",
-          "start": 55.905,
+          "start": 46.93,
           "duration": 5.28,
           "text": "江戸の町は大騒ぎ、相撲取りで応戦する案まで出たほどです。"
         }
@@ -103,47 +89,47 @@
     {
       "id": "s03",
       "section": "story",
-      "start": 61.885,
+      "start": 52.91,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s03_b00.wav",
-          "start": 61.885,
+          "start": 52.91,
           "duration": 2.272,
           "text": "翌年、ペリーは来たのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s03_b01.wav",
-          "start": 64.607,
+          "start": 55.632,
           "duration": 10.293,
           "text": "1854年、約束どおり来て、日米和親条約を結びます。下田と函館を開港して、ついに日本は開国しました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s03_b02.wav",
-          "start": 75.35,
+          "start": 66.375,
           "duration": 2.987,
           "text": "260年の鍵、ついに開いたのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s03_b03.wav",
-          "start": 78.787,
+          "start": 69.812,
           "duration": 7.008,
           "text": "ええ。まもなくアメリカの領事・ハリスが来日し、条約の話を進めてきます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s03_b04.wav",
-          "start": 86.245,
+          "start": 77.27,
           "duration": 2.997,
           "text": "ペリーで開いて、ハリスでじっくり話なのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s03_b05.wav",
-          "start": 89.692,
+          "start": 80.717,
           "duration": 4.032,
           "text": "開港場では、外国との商売がどんどん始まります。"
         }
@@ -152,47 +138,47 @@
     {
       "id": "s04",
       "section": "story",
-      "start": 94.424,
+      "start": 85.449,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s04_b00.wav",
-          "start": 94.424,
+          "start": 85.449,
           "duration": 2.336,
           "text": "その条約は、公平なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b01.wav",
-          "start": 97.21,
+          "start": 88.235,
           "duration": 11.051,
           "text": "1858年、ハリスとの日米修好通商条約は、残念ながら不平等条約でした。領事裁判権と税率の固定が、その二点です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s04_b02.wav",
-          "start": 108.711,
+          "start": 99.736,
           "duration": 2.944,
           "text": "領事裁判権って、なんの権利なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b03.wav",
-          "start": 112.105,
+          "start": 103.13,
           "duration": 10.848,
           "text": "外国人が日本で罪を犯しても、日本では裁けない仕組みです。税率の決め方も固定され、日本は損をする側になりました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b04.wav",
-          "start": 123.403,
+          "start": 114.428,
           "duration": 5.941,
           "text": "この条約は安政五カ国条約と呼ばれ、開港場も五カ所に広がりました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s04_b05.wav",
-          "start": 129.794,
+          "start": 120.819,
           "duration": 3.477,
           "text": "相手が得れば、自分が損、不公平なのだ!"
         }
@@ -201,40 +187,40 @@
     {
       "id": "s05",
       "section": "story",
-      "start": 133.971,
+      "start": 124.997,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s05_b00.wav",
-          "start": 133.971,
+          "start": 124.997,
           "duration": 2.453,
           "text": "国内の意見は、どうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b01.wav",
-          "start": 136.875,
+          "start": 127.9,
           "duration": 9.099,
           "text": "「外国を追い払う尊王攘夷派」と「開国して力を増やす開国派」に、意見が二つに分かれます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s05_b02.wav",
-          "start": 146.423,
+          "start": 137.449,
           "duration": 2.805,
           "text": "攘夷って、外人を追い出すことなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b03.wav",
-          "start": 149.679,
-          "duration": 7.819,
+          "start": 140.704,
+          "duration": 7.808,
           "text": "そのとおり。1858年、大老・井伊直弼が、天皇の勅許なしで条約を結んでしまいます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s05_b04.wav",
-          "start": 157.947,
+          "start": 148.962,
           "duration": 3.189,
           "text": "天皇を無視したのだ!?それは大問題なのだ!"
         }
@@ -243,40 +229,40 @@
     {
       "id": "s06",
       "section": "story",
-      "start": 161.837,
+      "start": 152.851,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s06_b00.wav",
-          "start": 161.837,
+          "start": 152.851,
           "duration": 2.443,
           "text": "直弼は、批判を許したのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b01.wav",
-          "start": 164.729,
-          "duration": 6.987,
+          "start": 155.744,
+          "duration": 6.976,
           "text": "いいえ、批判した公家や武士を次々に弾圧します。これが安政の大獄です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s06_b02.wav",
-          "start": 172.166,
+          "start": 163.17,
           "duration": 3.157,
           "text": "言った人は、みんな弾圧なのだ…怖いのだ"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b03.wav",
-          "start": 175.773,
+          "start": 166.777,
           "duration": 9.045,
           "text": "吉田松陰ら、若い才能も犠牲になりました。恐怖が広がり、幕府への敵意は、むしろ強まっていきます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s06_b04.wav",
-          "start": 185.269,
+          "start": 176.273,
           "duration": 2.144,
           "text": "弾圧は、逆効果なのだ…"
         }
@@ -285,40 +271,40 @@
     {
       "id": "s07",
       "section": "story",
-      "start": 188.113,
+      "start": 179.117,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s07_b00.wav",
-          "start": 188.113,
+          "start": 179.117,
           "duration": 2.219,
           "text": "井伊直弼は、どうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b01.wav",
-          "start": 190.781,
+          "start": 181.785,
           "duration": 8.917,
           "text": "1860年、江戸城の桜田門外で、水戸浪人たちに襲われ、殺されてしまいます。これが桜田門外の変です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s07_b02.wav",
-          "start": 200.149,
+          "start": 191.153,
           "duration": 2.421,
           "text": "大老が、道で襲われるのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b03.wav",
-          "start": 203.02,
+          "start": 194.024,
           "duration": 8.949,
           "text": "ええ、幕府の力が下がった、大きな出来事でした。ここから政治は、京都を中心に動き始めます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s07_b04.wav",
-          "start": 212.419,
+          "start": 203.423,
           "duration": 2.091,
           "text": "主役が、京都に移るのだ!"
         }
@@ -327,47 +313,47 @@
     {
       "id": "s08",
       "section": "story",
-      "start": 215.21,
+      "start": 206.214,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s08_b00.wav",
-          "start": 215.21,
+          "start": 206.214,
           "duration": 2.464,
           "text": "攘夷派の人は、どんな人なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b01.wav",
-          "start": 218.124,
+          "start": 209.128,
           "duration": 12.672,
           "text": "長州には吉田松陰の松下村塾から高杉晋作ら、薩摩には西郷隆盛や大久保利通が現れます。若い武士の力が集まってきました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s08_b02.wav",
-          "start": 231.246,
+          "start": 222.25,
           "duration": 2.293,
           "text": "若手スーパースターの集まりなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b03.wav",
-          "start": 233.989,
+          "start": 224.993,
           "duration": 10.517,
           "text": "ええ、彼らは朝廷の権威を使って、幕府を動かそうとします。政治の中心が、どんどん京都へ寄っていきました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b04.wav",
-          "start": 244.957,
+          "start": 235.961,
           "duration": 3.733,
           "text": "松下村塾からは、たくさんの改革者が育ちました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s08_b05.wav",
-          "start": 249.14,
+          "start": 240.144,
           "duration": 1.952,
           "text": "幕府、置いてけぼりなのだ…"
         }
@@ -376,40 +362,40 @@
     {
       "id": "s09",
       "section": "story",
-      "start": 251.792,
+      "start": 242.796,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s09_b00.wav",
-          "start": 251.792,
+          "start": 242.796,
           "duration": 2.112,
           "text": "攘夷は、うまくいったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b01.wav",
-          "start": 254.354,
+          "start": 245.358,
           "duration": 9.909,
           "text": "いいえ、薩英戦争や下関戦争で、西洋の軍艦の強さを身をもって味わいます。攘夷は不可能だと学びました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s09_b02.wav",
-          "start": 264.713,
+          "start": 255.717,
           "duration": 2.485,
           "text": "戦って、実力差を知ったのだ…"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b03.wav",
-          "start": 267.649,
+          "start": 258.653,
           "duration": 9.045,
           "text": "ええ、尊攘派は目的を「外国追放」から「幕府打倒」へ切り替えます。これが討幕の始まりです。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s09_b04.wav",
-          "start": 277.144,
+          "start": 268.148,
           "duration": 2.923,
           "text": "攘夷から討幕へ、目的変更なのだ!"
         }
@@ -418,40 +404,40 @@
     {
       "id": "s10",
       "section": "story",
-      "start": 280.767,
+      "start": 271.771,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s10_b00.wav",
-          "start": 280.767,
+          "start": 271.771,
           "duration": 2.485,
           "text": "京都では、けんかまで起きたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b01.wav",
-          "start": 283.702,
+          "start": 274.706,
           "duration": 10.741,
           "text": "1864年、京都の蛤御門で、長州軍と薩摩・会津軍が衝突します。これが禁門の変で、長州は敗北しました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s10_b02.wav",
-          "start": 294.893,
-          "duration": 2.891,
+          "start": 285.897,
+          "duration": 2.795,
           "text": "蛤御門、貝の名前の門なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b03.wav",
-          "start": 298.234,
+          "start": 289.142,
           "duration": 9.259,
           "text": "ええ、敗れた長州は、薩摩を敵ではなく仲間に思うようになります。幕末の運命が、ここで決まります。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s10_b04.wav",
-          "start": 307.943,
+          "start": 298.851,
           "duration": 2.869,
           "text": "敵から仲間へ、薩長の伏線なのだ!"
         }
@@ -460,40 +446,40 @@
     {
       "id": "s11",
       "section": "story",
-      "start": 311.512,
+      "start": 302.42,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s11_b00.wav",
-          "start": 311.512,
+          "start": 302.42,
           "duration": 3.179,
           "text": "その「仲間」は、実現したのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b01.wav",
-          "start": 315.141,
+          "start": 306.049,
           "duration": 10.133,
           "text": "1866年、坂本龍馬の仲介で、薩摩の西郷と長州の桂が結んで、薩長同盟が成立します。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s11_b02.wav",
-          "start": 325.724,
+          "start": 316.632,
           "duration": 2.827,
           "text": "龍馬、仲人なのだ!かっこいいのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b03.wav",
-          "start": 329.001,
+          "start": 319.909,
           "duration": 10.037,
           "text": "ええ、日本一の二大国が手を結べば、幕府より強い勢力になります。討幕の実力が、ここでそろいました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s11_b04.wav",
-          "start": 339.488,
+          "start": 330.396,
           "duration": 2.24,
           "text": "チーム編成、完成なのだ!"
         }
@@ -502,40 +488,40 @@
     {
       "id": "s12",
       "section": "story",
-      "start": 342.428,
+      "start": 333.336,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s12_b00.wav",
-          "start": 342.428,
+          "start": 333.336,
           "duration": 1.899,
           "text": "つぎに、どう動くのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b01.wav",
-          "start": 344.777,
-          "duration": 11.499,
+          "start": 335.685,
+          "duration": 11.605,
           "text": "龍馬が「政権を朝廷に返す」大政奉還の建白書を出し、1867年、将軍・慶喜が政権を朝廷へ返上します。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s12_b02.wav",
-          "start": 356.725,
+          "start": 347.74,
           "duration": 2.432,
           "text": "幕府が、自分から返したのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b03.wav",
-          "start": 359.607,
+          "start": 350.622,
           "duration": 9.867,
           "text": "ええ、武力で倒される前に、形だけ返す作戦でした。でも、これで260年の幕府は、ほぼおしまいです。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s12_b04.wav",
-          "start": 369.924,
+          "start": 360.939,
           "duration": 2.923,
           "text": "260年の歴史、閉幕なのだ…"
         }
@@ -544,40 +530,40 @@
     {
       "id": "s13",
       "section": "story",
-      "start": 373.547,
+      "start": 364.561,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s13_b00.wav",
-          "start": 373.547,
+          "start": 364.561,
           "duration": 2.4,
           "text": "その後の日本は、どうなるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b01.wav",
-          "start": 376.397,
-          "duration": 9.461,
+          "start": 367.411,
+          "duration": 9.568,
           "text": "慶喜の新しい政治がうまくいかず、ついに新しい政府が誕生します。それが「明治維新」の始まりです。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s13_b02.wav",
-          "start": 386.308,
+          "start": 377.429,
           "duration": 2.165,
           "text": "江戸が終わって、明治なのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b03.wav",
-          "start": 388.923,
+          "start": 380.045,
           "duration": 7.744,
           "text": "ええ、武士の時代から、みんなが参加する国へ。詳しくは、第9話でたっぷりやります!"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s13_b04.wav",
-          "start": 397.117,
+          "start": 388.239,
           "duration": 2.219,
           "text": "ポイントまとめ、お願いなのだ!"
         }
@@ -586,26 +572,26 @@
     {
       "id": "s14",
       "section": "points",
-      "start": 400.236,
+      "start": 391.357,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s14_b00.wav",
-          "start": 400.236,
+          "start": 391.357,
           "duration": 3.307,
           "text": "ここから受験ポイントのまとめ!まずは、開国の流れ。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b01.wav",
-          "start": 403.993,
+          "start": 395.114,
           "duration": 16.032,
           "text": "ペリー来航1853年、日米和親条約1854年(下田・函館開港)、そして1858年の日米修好通商条約は不平等条約。領事裁判権と税率固定を押さえましょう!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b02.wav",
-          "start": 420.475,
+          "start": 411.596,
           "duration": 5.323,
           "text": "年号は「53・54・58」の並びで暗記です。"
         }
@@ -614,26 +600,26 @@
     {
       "id": "s15",
       "section": "points",
-      "start": 426.497,
+      "start": 417.619,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s15_b00.wav",
-          "start": 426.497,
+          "start": 417.619,
           "duration": 2.411,
           "text": "後半は、政治の動きと薩長です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b01.wav",
-          "start": 429.358,
+          "start": 420.479,
           "duration": 19.349,
           "text": "安政の大獄1858年、桜田門外の変1860年、禁門の変1864年、薩長同盟1866年、大政奉還1867年。薩英・下関で攘夷不可能を知り、討幕へ転換です!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b02.wav",
-          "start": 449.157,
+          "start": 440.279,
           "duration": 5.195,
           "text": "佐幕対討幕、龍馬の仲介、全部つながっていますよ!"
         }
@@ -642,33 +628,33 @@
     {
       "id": "s16",
       "section": "quiz",
-      "start": 455.252,
+      "start": 446.373,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s16_b00.wav",
-          "start": 455.252,
+          "start": 446.373,
           "duration": 2.091,
           "text": "それではクイズタイム!第一問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b01.wav",
-          "start": 457.793,
-          "duration": 12.981,
+          "start": 448.914,
+          "duration": 12.992,
           "text": "1853年、浦賀に来航して開国を求めた、アメリカの提督はだれでしょう?ア、ペリー。イ、ハリス。ウ、井伊直弼。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s16_b02.wav",
-          "start": 471.224,
+          "start": 462.356,
           "duration": 2.091,
           "text": "黒船の大将…アなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b03.wav",
-          "start": 473.765,
+          "start": 464.897,
           "duration": 4.608,
           "text": "正解!ペリーです。ハリスは翌々年の領事、セットで覚えましょう。"
         }
@@ -677,33 +663,33 @@
     {
       "id": "s17",
       "section": "quiz",
-      "start": 479.073,
+      "start": 470.205,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s17_b00.wav",
-          "start": 479.073,
+          "start": 470.205,
           "duration": 0.661,
           "text": "第二問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b01.wav",
-          "start": 480.184,
+          "start": 471.316,
           "duration": 14.869,
           "text": "1858年の日米修好通商条約で、日本が不利になった点は何でしょう?ア、領事裁判権と税率固定。イ、参勤交代。ウ、鎖国。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s17_b02.wav",
-          "start": 495.503,
+          "start": 486.635,
           "duration": 2.133,
           "text": "不公平な二点…アなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b03.wav",
-          "start": 498.087,
+          "start": 489.219,
           "duration": 4.939,
           "text": "正解!この二つが、不平等条約の核心です。セットで丸暗記しましょう。"
         }
@@ -712,33 +698,33 @@
     {
       "id": "s18",
       "section": "quiz",
-      "start": 503.725,
+      "start": 494.857,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s18_b00.wav",
-          "start": 503.725,
+          "start": 494.857,
           "duration": 0.843,
           "text": "ラスト問題!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b01.wav",
-          "start": 505.018,
-          "duration": 12.981,
+          "start": 496.15,
+          "duration": 13.088,
           "text": "1866年、薩摩と長州を結んだ、仲介役の人物はだれでしょう?ア、西郷隆盛。イ、坂本龍馬。ウ、徳川慶喜。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s18_b02.wav",
-          "start": 518.449,
+          "start": 509.688,
           "duration": 1.92,
           "text": "仲人スター…イなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b03.wav",
-          "start": 520.819,
+          "start": 512.058,
           "duration": 4.981,
           "text": "正解!坂本龍馬です。この同盟が討幕への、大きな力になりました。"
         }
@@ -747,33 +733,33 @@
     {
       "id": "s19",
       "section": "ending",
-      "start": 526.701,
+      "start": 517.939,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s19_b00.wav",
-          "start": 526.701,
+          "start": 517.939,
           "duration": 4.107,
           "text": "今日は黒船から大政奉還まで、幕末の激動を一気に見ました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b01.wav",
-          "start": 531.257,
-          "duration": 7.861,
+          "start": 522.496,
+          "duration": 7.84,
           "text": "ペリー、ハリス、井伊直弼、高杉晋作、西郷、龍馬、慶喜…人名がドカドカ出たのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s19_b02.wav",
-          "start": 539.569,
-          "duration": 4.981,
+          "start": 530.786,
+          "duration": 4.917,
           "text": "その流れが明治維新へつながります。次回第9話は、明治維新と文明開化!"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b03.wav",
-          "start": 545.0,
+          "start": 536.153,
           "duration": 3.979,
           "text": "ついに新時代なのだ!チャンネル登録も、よろしくなのだ!"
         }
@@ -783,23 +769,23 @@
   "sections": {
     "opening": {
       "start": 0.0,
-      "end": 23.628
+      "end": 14.653
     },
     "story": {
-      "start": 23.628,
-      "end": 400.236
+      "start": 14.653,
+      "end": 391.357
     },
     "points": {
-      "start": 400.236,
-      "end": 455.252
+      "start": 391.357,
+      "end": 446.373
     },
     "quiz": {
-      "start": 455.252,
-      "end": 526.701
+      "start": 446.373,
+      "end": 517.939
     },
     "ending": {
-      "start": 526.701,
-      "end": 549.679
+      "start": 517.939,
+      "end": 540.832
     }
   }
 }

@@ -1,0 +1,411 @@
+{
+  "beats": {
+    "narration/s01_b00.wav": {
+      "tts_text": "ねえ先生、侍がいなくなったら、日本はどうなるの？",
+      "speaker": "manabu"
+    },
+    "narration/s01_b01.wav": {
+      "tts_text": "実は、ここから新しい日本が始まるんです!明治の大改革を、順番に見ていきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b02.wav": {
+      "tts_text": "よし、明治、スタートなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s01_b03.wav": {
+      "tts_text": "ええ、新しい日本の始まりは、改革と混乱の連続でした。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b04.wav": {
+      "tts_text": "明治の日本、見どころ満載なのだ!レッツゴー!",
+      "speaker": "manabu"
+    },
+    "narration/s02_b00.wav": {
+      "tts_text": "たいせいほうかんの後、すぐ平和なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b01.wav": {
+      "tts_text": "いいえ、1868ねんの、とばふしみの、たたかいで、きゅうばくふぐんと、しんせいふぐんが、しょうとつします。ここから、ぼしんせんそうが、はじまりました。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b02.wav": {
+      "tts_text": "戊辰って、辰の年の戦いなのだ…?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b03.wav": {
+      "tts_text": "ええ、ただ、えどは、さいごうと、かつかいしゅの、こうしょうで、かいじょうし、りゅうけつを、さけました。1869ねん、はこだての、たたかいで、しゅうけつします。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b04.wav": {
+      "tts_text": "話し合いで江戸を救ったのだ!えらいのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b00.wav": {
+      "tts_text": "新しい政府は、なにを目指すのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s03_b01.wav": {
+      "tts_text": "1868ねん、ごかじょうの、ごせいもんで、ほうしんを、しめします。「ひろく、かいぎを、おこし」、みんなで、はなしあう、くにづくりの、せんげんです。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b02.wav": {
+      "tts_text": "広く会議を興す、話し合い大事なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b03.wav": {
+      "tts_text": "ちゅうしんの、たいせいは、だじょうかんせいです。だじょうだいじんを、ちょうてんに、やくしょが、わかれて、にほんを、うごかします。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b04.wav": {
+      "tts_text": "新しい国のエンジンが、始動なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b00.wav": {
+      "tts_text": "藩は、どうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b01.wav": {
+      "tts_text": "1869ねんに、はんせきほうかんで、とちと、たみを、ちょうていに、かわせ、1871ねん、はいはんちけんで、はんを、やめて、けんを、おきます。ぜんこくが、ちゅうおうの、いちげんかんりに、なりました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b02.wav": {
+      "tts_text": "藩のボスたちが、いなくなるのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b03.wav": {
+      "tts_text": "ええ、だいみょうの、ちからを、なくして、ちからが、しゅうちゅうした、あたらしい、くにが、うまれます。えどばくふの、しくみは、ここで、かんぜんに、おわりです。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b04.wav": {
+      "tts_text": "ふけんの、かずも、せいりして、かんりしやすい、かたちに、しました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b05.wav": {
+      "tts_text": "中央集権、完成なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s05_b00.wav": {
+      "tts_text": "江戸の身分制度は、どうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b01.wav": {
+      "tts_text": "みぶんの、じょうげを、やめて、しみんびょうどうです。かぞく・しぞく・へいみんに、せいりし、しょくぎょうも、じゆうに、えらべるように、なりました。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b02.wav": {
+      "tts_text": "生まれで決めない、新しいルールなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s05_b03.wav": {
+      "tts_text": "ええ、ただ、ぶしには、きゅうよが、へり、ふまんも、たまりました。この、ふまんが、あとの、しぞくはんらんに、つながります。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b04.wav": {
+      "tts_text": "ただ、のうりょくで、はたらける、しゃかいの、だいいっぽでも、ありました。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b05.wav": {
+      "tts_text": "変わると、誰かがつらいのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s06_b00.wav": {
+      "tts_text": "学校は、どうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b01.wav": {
+      "tts_text": "1872ねんの、がくせいで、ぎむきょういくが、はじまります。みぶんに、かんけいなく、こどもは、みんな、しょうがっこうへ、かよう、ルールです。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b02.wav": {
+      "tts_text": "みんな、お勉強する義務なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b03.wav": {
+      "tts_text": "ええ、ちしきを、もつ、こくみんで、くにを、つよくする、だいじな、いっぽでした。ひようふたんで、ふまんも、ありましたが、きょういくは、ひろがります。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b04.wav": {
+      "tts_text": "つくえと、ともに、きんだいが、やってきた、じだいなんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b05.wav": {
+      "tts_text": "日本じゅう、学校なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b00.wav": {
+      "tts_text": "軍は、どうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s07_b01.wav": {
+      "tts_text": "1873ねん、ちょうへいれいが、でます。みぶんに、かんけいなく、まんはたちの、だんしが、へいえきに、つく、こくみんかいへいの、せいどです。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b02.wav": {
+      "tts_text": "武士だけじゃない、みんなの軍なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b03.wav": {
+      "tts_text": "ええ、さむらいと、かたなに、たよらない、あたらしい、ぐんたいです。げんだいてきな、くにの、かたちが、そろって、いきます。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b04.wav": {
+      "tts_text": "せいようの、ぐんたいの、しくみを、まねして、つくりました。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b05.wav": {
+      "tts_text": "国の形、どんどん新しくなるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b00.wav": {
+      "tts_text": "税の仕組みも、変わるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s08_b01.wav": {
+      "tts_text": "1873ねんの、ちそくかいせいで、とちの、かちの、さんぱーせんとを、げんきんで、おさめる、ルールに、します。こめの、ねだんに、さゆうされない、あんていした、ざいげんです。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b02.wav": {
+      "tts_text": "現金で納税、近代的なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b03.wav": {
+      "tts_text": "ええ、ただ、ふたんが、おもく、のうみんの、いっきが、かくちで、おきました。あたらしい、せいどは、いたみを、ともなう、ものでも、ありました。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b04.wav": {
+      "tts_text": "おおじぬしや、のうかの、せいかつも、おおきく、かわって、いきます。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b05.wav": {
+      "tts_text": "変革の影に、がまんなのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s09_b00.wav": {
+      "tts_text": "お金の仕組みは、どうするのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b01.wav": {
+      "tts_text": "しょくさんこうぎょうです。せいふが、かんえいの、こうじょうを、たてて、きんだいさんぎょうの、てほんを、しめしました。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b02.wav": {
+      "tts_text": "国が、お手本の工場を作るのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b03.wav": {
+      "tts_text": "ええ、1872ねんの、とみおかせいしじょうは、ようしきの、きかいで、いとを、つくる、ゆうめいな、モデルこうじょうです。そのあと、みんかんに、はらいさげられます。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b04.wav": {
+      "tts_text": "きんだいさんぎょうの、たねが、ここから、にほんじゅうに、ひろがって、いきます。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b05.wav": {
+      "tts_text": "とみおかせいしじょう、おぼえたのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s10_b00.wav": {
+      "tts_text": "くらしは、どう変わったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b01.wav": {
+      "tts_text": "ぶんめいかいかです。ようふくや、ようしょく、ガスとうや、てつどう、しんぶんや、ざっしまで、ひろがり、くらしが、ぐっと、かわりました。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b02.wav": {
+      "tts_text": "鉄道と牛鍋、近代の定番なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s10_b03.wav": {
+      "tts_text": "ええ、1883ねんに、ひらいた、ろくめいかんでは、ようそうの、ぶとうかいが、ひらかれました。せいようの、しゃかいに、にほんを、あわせようとしたん、です。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b04.wav": {
+      "tts_text": "散切り頭と牛鍋、そしてろくめいかんのダンス…ぶんめいかいかセットなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s11_b00.wav": {
+      "tts_text": "政治は、どうなってたのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s11_b01.wav": {
+      "tts_text": "1874ねん、いたがき、たいすけらが、「みんせんぎいんせつりつけんぱくしょ」を、ていしゅつします。こくみんが、えらぶ、ぎかいを、つくって、と、もとめる、うんどうの、はじまりです。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b02.wav": {
+      "tts_text": "民の声を、政治にのせるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s11_b03.wav": {
+      "tts_text": "ええ、これは、のちの、じゆうみんけんうんどうに、つながります。じかいの、いちばんの、テーマです。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b04.wav": {
+      "tts_text": "ふまんを、もつ、ぶしと、ぎかいを、もとめる、たみ。ふたつの、ながれに、ちゅうもくです。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b05.wav": {
+      "tts_text": "つづきが、楽しみなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b00.wav": {
+      "tts_text": "政府の中でも、もめ事があるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b01.wav": {
+      "tts_text": "1873ねん、さいごうたかもりらが、ちょうせんを、ぶりょくで、ひらこうとする、せいかんろんを、しゅちょうします。きこくした、いわくららは、こくないを、ゆうせんと、はんたいしました。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b02.wav": {
+      "tts_text": "政府が、われちゃうのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b03.wav": {
+      "tts_text": "ええ、さいごうや、いたがき、ごとうしょうじろうらが、せいふを、さります。この、ぶんれつが、しぞくの、はんらんと、みんけんうんどうの、ふたつの、ながれを、うみます。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b04.wav": {
+      "tts_text": "わかれ道が、二本に枝分かれなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s13_b00.wav": {
+      "tts_text": "武士のみなさんは、どうしたのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s13_b01.wav": {
+      "tts_text": "ちょうへいと、はいはんで、ぶしの、やくわりが、なくなり、きゅうよも、へって、ふまんが、たまりました。しぞくはんらんの、め、ここから、のびます。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b02.wav": {
+      "tts_text": "侍たち、つらいのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s13_b03.wav": {
+      "tts_text": "ええ、そして、この、ふまんと、みんけんの、こえが、つぎの、じだいの、にほんばしらです。まずは、ポイント、まとめへ!",
+      "speaker": "sensei"
+    },
+    "narration/s13_b04.wav": {
+      "tts_text": "それでも、にほんは、まえへ、すすみ、つづけました。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b05.wav": {
+      "tts_text": "まとめ、お願いなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s14_b00.wav": {
+      "tts_text": "侍たちの不満は、ついに戦いになったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s14_b01.wav": {
+      "tts_text": "1877ねん、さいごうたかもりを、ちゅうしんに、しぞくが、おこした、せいなんせんそうです。しんせいふぐんが、かち、ぶしの、じだいは、ここで、かんぜんに、おわりました。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b02.wav": {
+      "tts_text": "最後の武士、かっこよすぎるのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s15_b00.wav": {
+      "tts_text": "ここから受験ポイントのまとめ!まずは、新政府の改革。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b01.wav": {
+      "tts_text": "ぼしんせんそう、1868ねんから、1869ねん。ごかじょうの、ごせいもんと、だじょうかんせい。はんせきほうかん、1869ねん、はいはんちけん、1871ねん、しみんびょうどう。ちゅうおうしゅうけんの、かんせいです!",
+      "speaker": "sensei"
+    },
+    "narration/s15_b02.wav": {
+      "tts_text": "「1868・1869・1871」の、ながれで、おぼえましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b00.wav": {
+      "tts_text": "後半は、国民づくりと産業・文化です。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b01.wav": {
+      "tts_text": "がくせい、1872ねん。ちょうへいれい、1873ねん、ちそくかいせい、1873ねんで、こくみんの、さんぼんばしら。しょくさんこうぎょう=とみおかせいしじょう、ぶんめいかいか=ろくめいかん、そして1874ねん、いたがき、たいすけの、けんぱくしょ!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b02.wav": {
+      "tts_text": "「さんぼんばしら+さんぎょう+ぶんか」で、めいじの、くにづくり、かんぺきです!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b03.wav": {
+      "tts_text": "正解!はいはんちけんです。はんせきほうかん1869年と、流れで覚えましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b00.wav": {
+      "tts_text": "それではクイズタイム!第一問!",
+      "speaker": "sensei"
+    },
+    "narration/s17_b01.wav": {
+      "tts_text": "1871ねん、はんを、やめて、けんを、おいた、かいかくは、なんでしょう?ア、はいはんちけん。イ、はんせきほうかん。ウ、たいこうけんち。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b02.wav": {
+      "tts_text": "藩がなくなる…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s17_b03.wav": {
+      "tts_text": "正解!はいはんちけんです。はんせきほうかん1869年と、流れで覚えましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b00.wav": {
+      "tts_text": "第二問!",
+      "speaker": "sensei"
+    },
+    "narration/s18_b01.wav": {
+      "tts_text": "1872ねん、みぶんに、かんけいなく、こどもが、がっこうへ、かようことに、なった、せいどは、なんでしょう?ア、がくせい。イ、ちょうへいれい。ウ、ちそくかいせい。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b02.wav": {
+      "tts_text": "みんなで学校へ…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s18_b03.wav": {
+      "tts_text": "正解!がくせいです。義務教育の始まり、1872年とセットでどうぞ。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b00.wav": {
+      "tts_text": "ラスト問題!",
+      "speaker": "sensei"
+    },
+    "narration/s19_b01.wav": {
+      "tts_text": "1874ねん、いたがき、たいすけらが、ていしゅつした、けんぱくしょは、なんでしょう?ア、みんせんぎいんせつりつけんぱくしょ。イ、たいせいほうかんの、けんぱくしょ。ウ、かいこくの、けんぱくしょ。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b02.wav": {
+      "tts_text": "民の議会…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s19_b03.wav": {
+      "tts_text": "正解!みんせんぎいんせつりつけんぱくしょです。じゆうみんけんうんどうの、出発点になります。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b03.wav": {
+      "tts_text": "また、せいふは1879ねん、りゅうきゅうを、おきなわけんとする、りゅうきゅうしょぶんを、おこないました。りゅうきゅうの、ひとびとの、あゆみも、まなびます。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b04.wav": {
+      "tts_text": "それぞれの歴史を、学び続けるのだ。",
+      "speaker": "manabu"
+    },
+    "narration/s20_b00.wav": {
+      "tts_text": "今日は明治の国づくり、大改革の数々を一気に見ました。",
+      "speaker": "sensei"
+    },
+    "narration/s20_b01.wav": {
+      "tts_text": "はいはんちけん、がくせい、ちょうへいれい、ちそくかいせい、とみおかせいしじょう、ろくめいかん…明治パワー、すごいのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s20_b02.wav": {
+      "tts_text": "次回ついに最終回の第10話!二つの大戦と現代日本、明治の力が世界へ広がります!",
+      "speaker": "sensei"
+    },
+    "narration/s20_b03.wav": {
+      "tts_text": "ついにラストなのだ!チャンネル登録も、よろしくなのだ!",
+      "speaker": "manabu"
+    }
+  },
+  "dict_sha256": "068183c8b3f1",
+  "generated_at": "2026-11-15T04:35:04",
+  "voice_sha256": "4a55213461bf"
+}
