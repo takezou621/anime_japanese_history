@@ -1,0 +1,56 @@
+# シリーズ Season 1「日本史はじめて物語」
+channel:
+  name: アニメ日本史ラボ
+  tagline: アニメで学ぶ、受験で効く日本史
+  description: >
+    中学生・高校生の受験対策のための日本史アニメチャンネル。
+    楽しいストーリーで覚えて、受験ポイントで確実に得点アップ!
+    脚本・作画・音声・編集すべてAIが制作しています。
+
+episodes:
+  - id: ep01
+    title: 日本の歴史、ここから始まる!〜縄文・弥生・古墳〜
+    era: 旧石器〜古墳時代
+    status: planned
+    keywords: [打製石器, 縄文土器, 竪穴住居, 水稲農業, 弥生土器, 銅鐸, 卑弥呼, 前方後円墳, 埴輪]
+    exam_points:
+      - 縄文 vs 弥生の違い (土器・住居・暮らし) は最頻出
+      - 弥生時代=水稲農業の開始、戦争の始まり
+      - 卑弥呼の遣使 (239年・魏志倭人伝) と邪馬台国
+      - 古墳=前方後円墳、大和政権、埴輪
+  - id: ep02
+    title: 大化の改新はなぜ起きた?〜飛鳥・奈良〜
+    era: 飛鳥・奈良時代
+    status: planned
+  - id: ep03
+    title: 平安貴族はすごい!〜摂関政治と国風文化〜
+    era: 平安時代
+    status: planned
+  - id: ep04
+    title: 武士誕生!源平合戦と鎌倉幕府
+    era: 鎌倉時代
+    status: planned
+  - id: ep05
+    title: 足利尊氏と戦国の始まり
+    era: 室町時代
+    status: planned
+  - id: ep06
+    title: 信長・秀吉の天下統一
+    era: 織豊時代
+    status: planned
+  - id: ep07
+    title: 家康の江戸幕府と鎖国
+    era: 江戸時代前半
+    status: planned
+  - id: ep08
+    title: ペリー来航!幕末の動乱
+    era: 幕末
+    status: planned
+  - id: ep09
+    title: 明治維新と文明開化
+    era: 明治時代
+    status: planned
+  - id: ep10
+    title: 二つの大戦と現代日本
+    era: 近現代
+    status: planned
