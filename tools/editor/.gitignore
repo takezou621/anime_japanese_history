@@ -1,0 +1,3 @@
+__pycache__/
+fixtures/assets_test/
+fixtures/*.wav

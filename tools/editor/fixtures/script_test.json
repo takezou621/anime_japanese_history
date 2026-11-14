@@ -1,0 +1,176 @@
+{
+  "episode": "ep00",
+  "series": "日本史はじめて物語",
+  "title": "【テスト】10秒パイプライン検証用 仮10シーン脚本",
+  "youtube": {
+    "description": "editor pipeline test (fixtures, not for upload).",
+    "tags": ["日本史", "中学受験", "テスト"],
+    "thumbnail": { "headline": "テスト", "sub": "pipeline QC" }
+  },
+  "characters": [
+    { "id": "sensei", "name": "ヒスト先生", "voice_style": "四国めたん/ノーマル",
+      "speed_scale": 1.05, "pitch": 0.0, "subtitle_color": "#7ec8e3" },
+    { "id": "manabu", "name": "マナブ", "voice_style": "ずんだもん/ノーマル",
+      "speed_scale": 1.08, "pitch": 0.0, "subtitle_color": "#8be27e" }
+  ],
+  "scenes": [
+    {
+      "id": "s01", "section": "opening", "duration_hint_sec": 1.2,
+      "visual": {
+        "background": "test_opening_a",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 700], "scale": 1.0,
+            "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "sensei", "text": "こんにちは!ヒスト先生です。",
+          "overlay_text": [ { "text": "アニメ日本史ラボ", "style": "title_main",
+                              "motion": "fade_up" } ] },
+        { "speaker": "manabu", "text": "今日は日本のはじまりを学ぶのだ!",
+          "overlay_text": [ { "text": "第1話 縄文・弥生・古墳", "style": "era_badge",
+                              "motion": "slide_in_left" } ] }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s02", "section": "opening", "duration_hint_sec": 1.2,
+      "visual": {
+        "background": "test_opening_b",
+        "assets": [],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "sensei", "text": "まずは縄文時代からだ。",
+          "overlay_text": [ { "text": "紀元前1万年", "style": "year_number",
+                              "motion": "zoom_in" } ] }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s03", "section": "story", "duration_hint_sec": 1.2,
+      "visual": {
+        "background": "test_story_a",
+        "assets": [
+          { "name": "char_manabu", "pos": [430, 700], "scale": 1.0,
+            "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_r", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "manabu", "text": "縄文時代は土器と竪穴住居だね!",
+          "overlay_text": [ { "text": "土器", "style": "keyword_card",
+                              "motion": "pop_in" } ] },
+        { "speaker": "sensei", "text": "1万年以上続いた長い時代だ。" }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s04", "section": "story", "duration_hint_sec": 1.2,
+      "visual": {
+        "background": "test_story_b",
+        "assets": [],
+        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+      },
+      "beats": [
+        { "speaker": "sensei",
+          "text": "弥生時代には水田稲作がはじまり、集落や高床倉庫がつくられた。銅鐸は祭祀に使われた。" },
+        { "speaker": "manabu", "text": "水田ってたいへんそうだね!" }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s05", "section": "points", "duration_hint_sec": 1.2,
+      "visual": {
+        "background": "test_points_a",
+        "assets": [],
+        "camera": { "motion": "pan_l", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "sensei", "text": "ここが受験ポイント!",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner",
+                              "motion": "slide_up" } ] },
+        { "speaker": "sensei", "text": "弥生は水田稲作と高床倉庫と銅鐸。" }
+      ],
+      "exam_points": ["水田稲作の開始", "高床倉庫", "銅鐸"]
+    },
+    {
+      "id": "s06", "section": "points", "duration_hint_sec": 1.2,
+      "visual": {
+        "background": "test_points_b",
+        "assets": [],
+        "camera": { "motion": "kenburns_in", "intensity": 0.8 }
+      },
+      "beats": [
+        { "speaker": "manabu", "text": "古墳は3世紀ごろからだよ!",
+          "overlay_text": [ { "text": "前方後円墳", "style": "keyword_card",
+                              "motion": "pop_in" } ] }
+      ],
+      "exam_points": ["前方後円墳の登場"]
+    },
+    {
+      "id": "s07", "section": "quiz", "duration_hint_sec": 1.2,
+      "visual": {
+        "background": "test_quiz_a",
+        "assets": [],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "sensei", "text": "クイズだ!古墳がつくられた時代はいつかな?",
+          "overlay_text": [ { "text": "3世紀", "style": "year_number",
+                              "motion": "zoom_in" } ] },
+        { "speaker": "manabu", "text": "答えは3世紀ごろなのだ!" }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s08", "section": "quiz", "duration_hint_sec": 1.2,
+      "visual": {
+        "background": "test_quiz_b",
+        "assets": [],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "manabu", "text": "正解できたかな?" }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s09", "section": "ending", "duration_hint_sec": 1.2,
+      "visual": {
+        "background": "test_ending_a",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 700], "scale": 1.0,
+            "motion": "fade" },
+          { "name": "char_manabu", "pos": [430, 700], "scale": 1.0,
+            "motion": "fade" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "sensei", "text": "今回はここまで。" },
+        { "speaker": "manabu", "text": "次回もよろしくだ!" }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s10", "section": "ending", "duration_hint_sec": 1.2,
+      "visual": {
+        "background": "test_ending_b",
+        "assets": [],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "manabu", "text": "つぎの冒険もおたのしみに!",
+          "overlay_text": [ { "text": "また見てね!", "style": "title_main",
+                              "motion": "fade_up" } ] }
+      ],
+      "exam_points": []
+    }
+  ],
+  "quiz": [
+    { "q": "古墳がつくられはじめた時代は?", "choices": ["縄文時代", "弥生時代", "古墳時代"],
+      "answer": 2, "explain": "3世紀ごろから前方後円墳がつくられました。" }
+  ]
+}
