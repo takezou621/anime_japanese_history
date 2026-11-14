@@ -24,7 +24,8 @@
     "thumbnail": {
       "headline": "天下統一!",
       "sub": "信長・秀吉 受験必須"
-    }
+    },
+    "title": "【第6話】農民あがりが天下を取れる？織田信長と豊臣秀吉を5分で解説【中学受験日本史】"
   },
   "characters": [
     {
@@ -33,7 +34,8 @@
       "voice_style": "四国めたん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#7ec8e3"
+      "subtitle_color": "#7ec8e3",
+      "intonation_scale": 1.05
     },
     {
       "id": "manabu",
@@ -41,14 +43,15 @@
       "voice_style": "ずんだもん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#8be27e"
+      "subtitle_color": "#8be27e",
+      "intonation_scale": 1.35
     }
   ],
   "scenes": [
     {
       "id": "s01",
       "section": "opening",
-      "duration_hint_sec": 15,
+      "duration_hint_sec": 12,
       "visual": {
         "background": "bg_school_lab",
         "assets": [
@@ -78,8 +81,12 @@
       },
       "beats": [
         {
+          "speaker": "manabu",
+          "text": "ねえ先生、農民あがりでも天下を取れるの？"
+        },
+        {
           "speaker": "sensei",
-          "text": "こんにちは!ヒスト先生です。",
+          "text": "実は、取れたんです!信長の革命と秀吉の大改革を、順番に見ていきましょう。",
           "overlay_text": [
             {
               "text": "アニメ日本史ラボ 第6話",
@@ -89,20 +96,15 @@
           ]
         },
         {
-          "speaker": "sensei",
-          "text": "第6話は、織田信長と豊臣秀吉。乱世を終わらせる二人の、大どんでん返しの物語です!"
-        },
-        {
           "speaker": "manabu",
-          "text": "マナブなのだ!革命児、信長はどんな人なのだ!?"
-        },
-        {
-          "speaker": "sensei",
-          "text": "ええ、常識をどんどん破る、破天荒な大将です。"
-        },
-        {
-          "speaker": "manabu",
-          "text": "いっしょに見るのだ、レッツゴーなのだ!"
+          "text": "よし、桶狭間からスタートなのだ!",
+          "overlay_text": [
+            {
+              "text": "第6話 天下統一のなぞ",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -351,6 +353,11 @@
           "reading": "しかも、じょうかまちでは、らくいちらくざ。せきしょを、はいし、ざの、とっけんを、なくして、しょうにんが、じゆうに、しょうばいできる、まちを、つくりました。"
         },
         {
+          "speaker": "sensei",
+          "text": "このころ、1549年にザビエルがキリスト教を伝え、南蛮文化も広がります。鉄砲とともに、新しい物が次々に入ってきた時代です。",
+          "reading": "このころ、1549ねんに、ザビエルが、キリストきょうを、つたえ、なんばんぶんかも、ひろがります。てっぽうと、ともに、あたらしい、ものが、つぎつぎに、はいってきた、じだいです。"
+        },
+        {
           "speaker": "manabu",
           "text": "商売チャンスなのだ!経済の信長なのだ!"
         }
@@ -580,7 +587,14 @@
         },
         {
           "speaker": "manabu",
-          "text": "中国大返し、すごいスピードなのだ!"
+          "text": "中国大返し、すごいスピードなのだ!",
+          "overlay_text": [
+            {
+              "text": "中国大返し",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -748,7 +762,14 @@
         },
         {
           "speaker": "manabu",
-          "text": "国のシステムも、ぜんぶ新しくなるのだ!"
+          "text": "国のシステムも、ぜんぶ新しくなるのだ!",
+          "overlay_text": [
+            {
+              "text": "兵農分離",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -1116,23 +1137,28 @@
       "exam_points": [
         {
           "keyword": "桶狭間の戦い 1560年",
-          "detail": "信長が今川義元を討ち取り、名を売る。"
+          "detail": "信長が今川義元を討ち取り、名を売る。",
+          "importance": "high"
         },
         {
           "keyword": "天下布武 1567年〜",
-          "detail": "稲葉山城を岐阜と改め、天下を武力で治める宣言。"
+          "detail": "稲葉山城を岐阜と改め、天下を武力で治める宣言。",
+          "importance": "high"
         },
         {
           "keyword": "安土城 1576年",
-          "detail": "琵琶湖畔の天主。石垣と白壁の当時最新の城。"
+          "detail": "琵琶湖畔の天主。石垣と白壁の当時最新の城。",
+          "importance": "high"
         },
         {
           "keyword": "楽市楽座",
-          "detail": "関所廃止・座の特権廃止で商人に自由な商売。"
+          "detail": "関所廃止・座の特権廃止で商人に自由な商売。",
+          "importance": "high"
         },
         {
           "keyword": "長篠の戦い 1575年",
-          "detail": "鉄砲隊を活用して武田の騎馬隊を破る(三段撃ちは諸説あり)。"
+          "detail": "鉄砲隊を活用して武田の騎馬隊を破る(三段撃ちは諸説あり)。",
+          "importance": "high"
         }
       ]
     },
@@ -1189,23 +1215,28 @@
       "exam_points": [
         {
           "keyword": "本能寺の変・山崎の戦い 1582年",
-          "detail": "明智光秀の謀反→秀吉が光秀を討つ(13日天下)。"
+          "detail": "明智光秀の謀反→秀吉が光秀を討つ(13日天下)。",
+          "importance": "high"
         },
         {
           "keyword": "大坂城 1583年",
-          "detail": "秀吉の拠点。天下統一1590年(小田原降伏)で完了。"
+          "detail": "秀吉の拠点。天下統一1590年(小田原降伏)で完了。",
+          "importance": "high"
         },
         {
           "keyword": "太閤検地・刀狩",
-          "detail": "石高制の確立と兵農分離。"
+          "detail": "石高制の確立と兵農分離。",
+          "importance": "high"
         },
         {
           "keyword": "惣無事令・朝鮮出兵",
-          "detail": "私戦禁止。文禄(1592)・慶長(1597)の役で国が疲弊。"
+          "detail": "私戦禁止。文禄(1592)・慶長(1597)の役で国が疲弊。",
+          "importance": "high"
         },
         {
           "keyword": "桃山文化",
-          "detail": "豪華絢爛(城・金屏風)/千利休のわび茶。"
+          "detail": "豪華絢爛(城・金屏風)/千利休のわび茶。",
+          "importance": "high"
         }
       ]
     },

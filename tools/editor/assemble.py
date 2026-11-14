@@ -55,7 +55,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from motion import FPS, MAIN_W, MAIN_H, kenburns_exprs, layer_motion, DEFAULT_MOTION_DUR
+from motion import (FPS, MAIN_W, MAIN_H, kenburns_exprs, layer_motion,
+                    DEFAULT_MOTION_DUR, speaker_pulse_expr,
+                    listener_gate_expr)
 from text_overlays import render_overlay, render_quiz_board, render_subtitle_band, STYLES
 import make_subtitles
 import qc as qcmod
@@ -255,6 +257,7 @@ def _beat_times(scene: dict, ts: dict, scene_end: float,
             g_end = scene_end
         out.append({
             "speaker": (tb.get("speaker") or sb.get("speaker") or "").lower(),
+            "sentiment": str(sb.get("sentiment", "") or "").strip(),
             "start": g - seg_start,
             "end": g_end - seg_start,
         })
@@ -351,22 +354,77 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
             px = px + tw / 2.0 - content_cx * scale   # content center at px
             py = CHAR_FEET_Y + th / 2.0 - bb * scale  # content bottom on line
         t0 = appear_for(name)
+        cid = next((c for c in char_ids if c and c in name.lower()), "")
+        my_wins = [(b["start"], b["end"]) for b in beats
+                   if cid and b.get("speaker") == cid]
+        other_wins = [(b["start"], b["end"]) for b in beats
+                      if not (cid and b.get("speaker") == cid)]
+        dynamics = None
+        if cid and (my_wins or other_wins):
+            pulse = speaker_pulse_expr(beats, cid)
+            gate = listener_gate_expr(other_wins)
+            dynamics = (f"(1+{pulse})", f"-4*sin(2*PI*(t)/1.8)*({gate})")
         m = layer_motion(a.get("motion"), t0, DEFAULT_MOTION_DUR,
-                         px, py, tw, th)
-        span.layers.append(Layer(
+                         px, py, tw, th, dynamics=dynamics)
+        base_layer = Layer(
             image=str(path),
             filters=[f"scale={tw}:{th}:flags=lanczos"] + m["filters"],
             x=m["x"], y=m["y"], enable=m["enable"],
-            desc=f"asset:{name}@{t0:.2f}s"))
+            desc=f"asset:{name}@{t0:.2f}s")
+        # T2 sentiment variants: beat-level expression swaps (file fallback)
+        if cid:
+            for b in beats:
+                sent = b.get("sentiment", "")
+                if not sent or b.get("speaker") != cid:
+                    continue
+                vpath = assets_dir / "overlay" / f"{name}_{sent}.png"
+                if not vpath.is_file():
+                    continue  # fallback: keep the normal sprite
+                ws, we = max(b["start"], 0.0), min(b["end"], span.dur)
+                if we - ws < 0.15:
+                    continue
+                base_layer.filters.append(
+                    f"fade=t=out:st={max(ws - 0.15, 0):.3f}:d=0.15:alpha=1")
+                base_layer.filters.append(
+                    f"fade=t=in:st={max(we - 0.15, 0):.3f}:d=0.15:alpha=1")
+        span.layers.append(base_layer)
+        for b in beats:
+            sent = b.get("sentiment", "")
+            if not sent or b.get("speaker") != cid:
+                continue
+            vpath = assets_dir / "overlay" / f"{name}_{sent}.png"
+            if not vpath.is_file():
+                continue
+            ws, we = max(b["start"], 0.0), min(b["end"], span.dur)
+            if we - ws < 0.15:
+                continue
+            vm = layer_motion("fade", ws, 0.15, px, py, tw, th)
+            span.layers.append(Layer(
+                image=str(vpath), filters=list(vm["filters"]),
+                x=vm["x"], y=vm["y"],
+                enable=f"between(t,{ws:.3f},{we:.3f})",
+                desc=f"variant:{sent}@{ws:.2f}s"))
 
     # overlay_text entries live on beats and appear at the beat time;
     # they persist for max(beat, 3s) capped at scene end, then fade out 0.4s
     scene_end_local = span.end - span.seg_start
+    # T9: exam_points[].importance drives keyword_card colour (high=朱/赤)
+    exam_imps = [str(ep.get("importance", "")).strip().lower()
+                 for ep in scene.get("exam_points", [])
+                 if isinstance(ep, dict)]
+    kc_index = 0
     for i, b in enumerate(scene.get("beats", [])):
         t0b = beats[i]["start"] if i < len(beats) else 0.0
         beat_end_local = beats[i]["end"] if i < len(beats) else t0b + 1.0
         for k, ot in enumerate(b.get("overlay_text") or []):
             style = ot.get("style", "title_main")
+            if style == "keyword_card":
+                imp = str(ot.get("importance", "")).strip().lower() or (
+                    exam_imps[kc_index] if kc_index < len(exam_imps) else "")
+                if imp == "high":
+                    style = "keyword_card_red"
+            if style == "keyword_card" or style == "keyword_card_red":
+                kc_index += 1
             cfg = STYLES.get(style)
             if cfg is None:
                 raise SystemExit(f"unknown overlay_text style {style!r} "

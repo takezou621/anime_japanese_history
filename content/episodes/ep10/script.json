@@ -24,7 +24,8 @@
     "thumbnail": {
       "headline": "ついに完結!",
       "sub": "現代日本まで 必須整理"
-    }
+    },
+    "title": "【第10話】二つの大戦から日本はどう変わった？現代日本まで10分で解説【中学受験日本史】"
   },
   "characters": [
     {
@@ -33,7 +34,8 @@
       "voice_style": "四国めたん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#7ec8e3"
+      "subtitle_color": "#7ec8e3",
+      "intonation_scale": 1.05
     },
     {
       "id": "manabu",
@@ -41,14 +43,15 @@
       "voice_style": "ずんだもん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#8be27e"
+      "subtitle_color": "#8be27e",
+      "intonation_scale": 1.35
     }
   ],
   "scenes": [
     {
       "id": "s01",
       "section": "opening",
-      "duration_hint_sec": 16,
+      "duration_hint_sec": 12,
       "visual": {
         "background": "bg_school_lab",
         "assets": [
@@ -78,8 +81,12 @@
       },
       "beats": [
         {
+          "speaker": "manabu",
+          "text": "ねえ先生、どうして日本は戦争に負けて、こんなに豊かになったの？"
+        },
+        {
           "speaker": "sensei",
-          "text": "こんにちは!ヒスト先生です。",
+          "text": "実は、負けたあとに日本最大の転機があったんです!二つの大戦から現代まで、見ていきましょう。",
           "overlay_text": [
             {
               "text": "アニメ日本史ラボ 最終話",
@@ -89,20 +96,15 @@
           ]
         },
         {
-          "speaker": "sensei",
-          "text": "ついに最終回、第10話!二つの大戦をへて、現代日本ができるまでの、長い長い物語のゴールです!"
-        },
-        {
           "speaker": "manabu",
-          "text": "マナブなのだ!ラストまで、いっしょに走るのだ!"
-        },
-        {
-          "speaker": "sensei",
-          "text": "ええ、栄光と悲劇、両方ある重い話です。真剣に、いきましょう。"
-        },
-        {
-          "speaker": "manabu",
-          "text": "うん、お願いなのだ!レッツゴー!"
+          "text": "よし、ラストまで、走るのだ!",
+          "overlay_text": [
+            {
+              "text": "最終話 現代までのなぞ",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -412,7 +414,14 @@
         },
         {
           "speaker": "manabu",
-          "text": "大国ロシアに、勝ったのだ!?"
+          "text": "大国ロシアに、勝ったのだ!?",
+          "overlay_text": [
+            {
+              "text": "ポーツマス条約",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -569,7 +578,14 @@
         },
         {
           "speaker": "manabu",
-          "text": "みんなで政治を考える時代なのだ!"
+          "text": "みんなで政治を考える時代なのだ!",
+          "overlay_text": [
+            {
+              "text": "政党内閣",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -909,8 +925,8 @@
         },
         {
           "speaker": "sensei",
-          "text": "そう、沖縄や東京の空襲など、多くの命が失われました。国の力も、たくさんの痛みも、使い果たしました。",
-          "reading": "そう、おきなわや、とうきょうの、くうしゅうなど、おおくの、いのちが、うしなわれました。くにの、ちからも、たくさんの、いたみも、つかいはたしました。"
+          "text": "そう、沖縄では地上戦、東京など大都市では空襲があり、多くの命が失われました。国の力も、たくさんの痛みも、使い果たしました。",
+          "reading": "そう、おきなわでは、ちじょうせん、とうきょうなど、だいとしでは、くうしゅうが、あり、おおくの、いのちが、うしなわれました。くにの、ちからも、たくさんの、いたみも、つかいはたしました。"
         },
         {
           "speaker": "manabu",
@@ -961,6 +977,11 @@
               "motion": "slide_in_left"
             }
           ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "広島と長崎には原爆が投下され、たくさんの命が失われました。これは決して忘れてはいけない歴史です。",
+          "reading": "ひろしまと、ながさきには、げんばくが、とうかされ、おおくの、いのちが、うしなわれました。これは、けっして、わすれては、いけない、れきしです。"
         },
         {
           "speaker": "sensei",
@@ -1146,23 +1167,28 @@
       "exam_points": [
         {
           "keyword": "自由民権運動",
-          "detail": "1874年の建白書から始まり、国会開設を勝ち取る。"
+          "detail": "1874年の建白書から始まり、国会開設を勝ち取る。",
+          "importance": "high"
         },
         {
           "keyword": "大日本帝国憲法 1889年",
-          "detail": "欽定憲法。1890年第1回帝国議会(選挙権は納税制限)。"
+          "detail": "欽定憲法。1890年第1回帝国議会(選挙権は納税制限)。",
+          "importance": "high"
         },
         {
           "keyword": "日清戦争 1894年",
-          "detail": "勝利で下関条約。三国干渉で遼東半島返還。"
+          "detail": "勝利で下関条約。三国干渉で遼東半島返還。",
+          "importance": "high"
         },
         {
           "keyword": "日露戦争 1904年",
-          "detail": "ポーツマス条約。樺太南部・満洲鉄道権益、賠償金なし。"
+          "detail": "ポーツマス条約。樺太南部・満洲鉄道権益、賠償金なし。",
+          "importance": "high"
         },
         {
           "keyword": "韓国併合 1910年",
-          "detail": "朝鮮の土地と自由を奪った事実を学び続ける。"
+          "detail": "朝鮮の土地と自由を奪った事実を学び続ける。",
+          "importance": "high"
         }
       ]
     },
@@ -1219,23 +1245,28 @@
       "exam_points": [
         {
           "keyword": "大正デモクラシー",
-          "detail": "原敬内閣など政党内閣、大衆社会の成長。"
+          "detail": "原敬内閣など政党内閣、大衆社会の成長。",
+          "importance": "high"
         },
         {
           "keyword": "普通選挙法 1925年",
-          "detail": "25歳以上の男子全員。治安維持法と同時成立。"
+          "detail": "25歳以上の男子全員。治安維持法と同時成立。",
+          "importance": "high"
         },
         {
           "keyword": "世界恐慌 1929年",
-          "detail": "失業増加、軍と右派の力が強まる。"
+          "detail": "失業増加、軍と右派の力が強まる。",
+          "importance": "high"
         },
         {
           "keyword": "満洲事変 1931年→太平洋戦争 1941年",
-          "detail": "関東軍の独走、日中戦争(1937)へ拡大、真珠湾攻撃。"
+          "detail": "関東軍の独走、日中戦争(1937)へ拡大、真珠湾攻撃。",
+          "importance": "high"
         },
         {
           "keyword": "ポツダム宣言受諾 1945年",
-          "detail": "8月15日終戦。日本国憲法(1947)→高度経済成長。"
+          "detail": "8月15日終戦。日本国憲法(1947)→高度経済成長。",
+          "importance": "high"
         }
       ]
     },

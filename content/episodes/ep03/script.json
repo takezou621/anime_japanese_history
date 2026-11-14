@@ -24,7 +24,8 @@
     "thumbnail": {
       "headline": "平安貴族 すごい!",
       "sub": "摂関政治・国風文化 必須"
-    }
+    },
+    "title": "【第3話】平安貴族はなぜ政治の主役に？摂関政治と源氏物語を5分で解説【中学受験日本史】"
   },
   "characters": [
     {
@@ -33,7 +34,8 @@
       "voice_style": "四国めたん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#7ec8e3"
+      "subtitle_color": "#7ec8e3",
+      "intonation_scale": 1.05
     },
     {
       "id": "manabu",
@@ -41,14 +43,15 @@
       "voice_style": "ずんだもん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#8be27e"
+      "subtitle_color": "#8be27e",
+      "intonation_scale": 1.35
     }
   ],
   "scenes": [
     {
       "id": "s01",
       "section": "opening",
-      "duration_hint_sec": 18,
+      "duration_hint_sec": 12,
       "visual": {
         "background": "bg_school_lab",
         "assets": [
@@ -78,8 +81,12 @@
       },
       "beats": [
         {
+          "speaker": "manabu",
+          "text": "ねえ先生、どうして天皇なのに政治ができない時期があったの？"
+        },
+        {
           "speaker": "sensei",
-          "text": "こんにちは!ヒスト先生です。第3話は、平安。着物も文字も文化も、日本色豊かな華やかの時代ですよ。",
+          "text": "実は、藤原氏の工夫と、貴族の文化がかぎなんです!平安のしくみを、順番に見ていきましょう。",
           "overlay_text": [
             {
               "text": "アニメ日本史ラボ 第3話",
@@ -90,19 +97,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "マナブなのだ!平安の貴族って、ほんとにキラキラだったのだ?"
-        },
-        {
-          "speaker": "sensei",
-          "text": "ええ、華やかさの裏に、政治の秘密も隠れています。"
-        },
-        {
-          "speaker": "manabu",
-          "text": "秘密、気になるなのだ!"
-        },
-        {
-          "speaker": "sensei",
-          "text": "都の引っ越しから始めて、じっくり見ていきましょう。",
+          "text": "よし、平安からスタートなのだ!",
           "overlay_text": [
             {
               "text": "第3話 平安のなぞ",
@@ -494,7 +489,14 @@
         {
           "speaker": "sensei",
           "text": "藤原道長のときです。三人の娘を三人の天皇に入内させ、政治を自由に動かしました。",
-          "reading": "ふじわらの、みちながの、ときです。さんにんの、むすめを、さんにんの、てんのうに、にゅうないさせ、政治を、じゆうに、うごかしました。"
+          "reading": "ふじわらの、みちながの、ときです。さんにんの、むすめを、さんにんの、てんのうに、にゅうないさせ、政治を、じゆうに、うごかしました。",
+          "overlay_text": [
+            {
+              "text": "藤原道長",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -568,7 +570,14 @@
         {
           "speaker": "sensei",
           "text": "894年、菅原道真の建言で遣唐使が停止されます。唐の乱れと、あらゆる物を学び尽くしたことが理由です。",
-          "reading": "894年、すがわらの、みちざねの、けんげんで、けんとうしが、ていしされます。とうの、みだれと、あらゆる、ものを、まなびつくした、ことが、りゆうです。"
+          "reading": "894年、すがわらの、みちざねの、けんげんで、けんとうしが、ていしされます。とうの、みだれと、あらゆる、ものを、まなびつくした、ことが、りゆうです。",
+          "overlay_text": [
+            {
+              "text": "遣唐使の停止 894年",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -1135,23 +1144,28 @@
       "exam_points": [
         {
           "keyword": "平安京遷都 794年",
-          "detail": "桓武天皇。長岡京→平安京(京都)。"
+          "detail": "桓武天皇。長岡京→平安京(京都)。",
+          "importance": "high"
         },
         {
           "keyword": "征夷大将軍",
-          "detail": "797年、坂上田村麻呂が就任。東北の蝦夷を平定。"
+          "detail": "797年、坂上田村麻呂が就任。東北の蝦夷を平定。",
+          "importance": "high"
         },
         {
           "keyword": "薬子の変 810年",
-          "detail": "嵯峨天皇が退け、蔵人所を新設。"
+          "detail": "嵯峨天皇が退け、蔵人所を新設。",
+          "importance": "high"
         },
         {
           "keyword": "摂政・関白",
-          "detail": "幼い天皇の代わり/成人天皇の補佐。藤原氏が独占。"
+          "detail": "幼い天皇の代わり/成人天皇の補佐。藤原氏が独占。",
+          "importance": "high"
         },
         {
           "keyword": "荘園のはじまり",
-          "detail": "743年墾田永年私財法→税を納めない私有地が広がる。"
+          "detail": "743年墾田永年私財法→税を納めない私有地が広がる。",
+          "importance": "high"
         }
       ]
     },
@@ -1208,23 +1222,28 @@
       "exam_points": [
         {
           "keyword": "寝殿造・女房",
-          "detail": "対屋・回廊・池の貴族の家。宮中に仕える女房が活躍。"
+          "detail": "対屋・回廊・池の貴族の家。宮中に仕える女房が活躍。",
+          "importance": "high"
         },
         {
           "keyword": "遣唐使の停止 894年",
-          "detail": "菅原道真の建言。これを機に国風文化が開花。"
+          "detail": "菅原道真の建言。これを機に国風文化が開花。",
+          "importance": "high"
         },
         {
           "keyword": "土佐日記・古今和歌集",
-          "detail": "紀貫之。かな日記のはじまり。"
+          "detail": "紀貫之。かな日記のはじまり。",
+          "importance": "high"
         },
         {
           "keyword": "枕草子・源氏物語",
-          "detail": "清少納言の随筆/紫式部の物語(世界最古級の長編小説)。"
+          "detail": "清少納言の随筆/紫式部の物語(世界最古級の長編小説)。",
+          "importance": "high"
         },
         {
           "keyword": "浄土思想",
-          "detail": "阿弥陀如来を信じ来世の極楽浄土を願う。源信『往生要集』・空也。"
+          "detail": "阿弥陀如来を信じ来世の極楽浄土を願う。源信『往生要集』・空也。",
+          "importance": "high"
         }
       ]
     },

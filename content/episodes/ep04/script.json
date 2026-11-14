@@ -9,6 +9,7 @@
       "中学受験",
       "中学歴史",
       "高校受験",
+      "武士",
       "鎌倉時代",
       "源頼朝",
       "源平合戦",
@@ -24,7 +25,8 @@
     "thumbnail": {
       "headline": "武士 誕生!",
       "sub": "源平合戦・鎌倉幕府 必須"
-    }
+    },
+    "title": "【第4話】武士はなぜ天下を取れた？源平合戦と鎌倉幕府を5分で解説【中学受験日本史】"
   },
   "characters": [
     {
@@ -33,7 +35,8 @@
       "voice_style": "四国めたん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#7ec8e3"
+      "subtitle_color": "#7ec8e3",
+      "intonation_scale": 1.05
     },
     {
       "id": "manabu",
@@ -41,14 +44,15 @@
       "voice_style": "ずんだもん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#8be27e"
+      "subtitle_color": "#8be27e",
+      "intonation_scale": 1.35
     }
   ],
   "scenes": [
     {
       "id": "s01",
       "section": "opening",
-      "duration_hint_sec": 14,
+      "duration_hint_sec": 12,
       "visual": {
         "background": "bg_school_lab",
         "assets": [
@@ -78,8 +82,12 @@
       },
       "beats": [
         {
+          "speaker": "manabu",
+          "text": "ねえ先生、武士は最初から強かったの？"
+        },
+        {
           "speaker": "sensei",
-          "text": "こんにちは!ヒスト先生です。",
+          "text": "実は、長い下積みから天下を取ったんです!源平の合戦から、順番に見ていきましょう。",
           "overlay_text": [
             {
               "text": "アニメ日本史ラボ 第4話",
@@ -89,20 +97,15 @@
           ]
         },
         {
-          "speaker": "sensei",
-          "text": "第4話は、ついに武士の時代の幕開け。源氏と平氏の大合戦から鎌倉幕府まで一気に走ります!"
-        },
-        {
           "speaker": "manabu",
-          "text": "マナブなのだ!武士が天下を取る、かっこいい話なのだ!?"
-        },
-        {
-          "speaker": "sensei",
-          "text": "ええ、でも勝ち残るのは、思ったより長い下積みの武家です。"
-        },
-        {
-          "speaker": "manabu",
-          "text": "では、レッツゴーなのだ!"
+          "text": "よし、源平からスタートなのだ!",
+          "overlay_text": [
+            {
+              "text": "第4話 武士のなぞ",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -325,7 +328,14 @@
         {
           "speaker": "sensei",
           "text": "ええ。そして弟の義経が、武将として大活躍します。",
-          "reading": "ええ。そして、おとうとの、ぎけいが、ぶしょうとして、だいかつやくします。"
+          "reading": "ええ。そして、おとうとの、ぎけいが、ぶしょうとして、だいかつやくします。",
+          "overlay_text": [
+            {
+              "text": "源義経",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -631,6 +641,11 @@
               "text": "ここが受験ポイント!",
               "style": "exam_banner",
               "motion": "slide_up"
+            },
+            {
+              "text": "朝廷 vs 幕府",
+              "style": "keyword_card",
+              "motion": "pop_in"
             }
           ]
         },
@@ -1077,23 +1092,28 @@
       "exam_points": [
         {
           "keyword": "保元・平治の乱",
-          "detail": "1156年/1159年。武士が武力で政治に介入。"
+          "detail": "1156年/1159年。武士が武力で政治に介入。",
+          "importance": "high"
         },
         {
           "keyword": "平氏政権",
-          "detail": "平清盛。1167年武士初の太政大臣、宋貿易で繁栄。"
+          "detail": "平清盛。1167年武士初の太政大臣、宋貿易で繁栄。",
+          "importance": "high"
         },
         {
           "keyword": "頼朝の挙兵 1180年",
-          "detail": "以仁王の令旨を頼りに、鎌倉を拠点に。"
+          "detail": "以仁王の令旨を頼りに、鎌倉を拠点に。",
+          "importance": "high"
         },
         {
           "keyword": "壇ノ浦 1185年",
-          "detail": "義経が平氏を滅ぼす海戦。"
+          "detail": "義経が平氏を滅ぼす海戦。",
+          "importance": "high"
         },
         {
           "keyword": "鎌倉幕府成立 1192年",
-          "detail": "頼朝が征夷大将軍に。1185年説(守護・地頭設置)も。"
+          "detail": "頼朝が征夷大将軍に。1185年説(守護・地頭設置)も。",
+          "importance": "high"
         }
       ]
     },
@@ -1150,27 +1170,33 @@
       "exam_points": [
         {
           "keyword": "守護・地頭",
-          "detail": "1185年設置。守護=治安、地頭=領地管理と年貢徴収。"
+          "detail": "1185年設置。守護=治安、地頭=領地管理と年貢徴収。",
+          "importance": "high"
         },
         {
           "keyword": "御恩と奉公",
-          "detail": "将軍=御恩(領地)、御家人=奉公(軍役)の主従関係。"
+          "detail": "将軍=御恩(領地)、御家人=奉公(軍役)の主従関係。",
+          "importance": "high"
         },
         {
           "keyword": "承久の乱 1221年",
-          "detail": "後鳥羽上皇が敗北、朝廷の力が低下。"
+          "detail": "後鳥羽上皇が敗北、朝廷の力が低下。",
+          "importance": "high"
         },
         {
           "keyword": "御成敗式目 1232年",
-          "detail": "北条泰時。日本初の武家法。"
+          "detail": "北条泰時。日本初の武家法。",
+          "importance": "high"
         },
         {
           "keyword": "元寇",
-          "detail": "文永の役1274年・弘安の役1281年。御家人の疲弊が幕府弱体化へ。"
+          "detail": "文永の役1274年・弘安の役1281年。御家人の疲弊が幕府弱体化へ。",
+          "importance": "high"
         },
         {
           "keyword": "鎌倉仏教",
-          "detail": "法然(浄土宗)/親鸞(浄土真宗)/日蓮(法華宗)/禅(栄西・道元)。"
+          "detail": "法然(浄土宗)/親鸞(浄土真宗)/日蓮(法華宗)/禅(栄西・道元)。",
+          "importance": "high"
         }
       ]
     },

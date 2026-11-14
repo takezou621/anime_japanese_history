@@ -24,7 +24,8 @@
     "thumbnail": {
       "headline": "明治維新!",
       "sub": "文明開化 受験必須"
-    }
+    },
+    "title": "【第9話】侍が消えて日本はどうなった？明治維新を5分で解説【中学受験日本史】"
   },
   "characters": [
     {
@@ -33,7 +34,8 @@
       "voice_style": "四国めたん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#7ec8e3"
+      "subtitle_color": "#7ec8e3",
+      "intonation_scale": 1.05
     },
     {
       "id": "manabu",
@@ -41,14 +43,15 @@
       "voice_style": "ずんだもん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#8be27e"
+      "subtitle_color": "#8be27e",
+      "intonation_scale": 1.35
     }
   ],
   "scenes": [
     {
       "id": "s01",
       "section": "opening",
-      "duration_hint_sec": 17,
+      "duration_hint_sec": 12,
       "visual": {
         "background": "bg_school_lab",
         "assets": [
@@ -78,8 +81,12 @@
       },
       "beats": [
         {
+          "speaker": "manabu",
+          "text": "ねえ先生、侍がいなくなったら、日本はどうなるの？"
+        },
+        {
           "speaker": "sensei",
-          "text": "こんにちは!ヒスト先生です。",
+          "text": "実は、ここから新しい日本が始まるんです!明治の大改革を、順番に見ていきましょう。",
           "overlay_text": [
             {
               "text": "アニメ日本史ラボ 第9話",
@@ -89,20 +96,15 @@
           ]
         },
         {
-          "speaker": "sensei",
-          "text": "第9話は、明治維新!武士の時代が終わり、新しい日本が動き出す、大改革の物語です!"
-        },
-        {
           "speaker": "manabu",
-          "text": "マナブなのだ!文明開化って、なんだかキラキラな言葉なのだ!?"
-        },
-        {
-          "speaker": "sensei",
-          "text": "ええ、新しい日本の始まりは、改革と混乱の連続でした。"
-        },
-        {
-          "speaker": "manabu",
-          "text": "明治の日本、見どころ満載なのだ!レッツゴー!"
+          "text": "よし、明治、スタートなのだ!",
+          "overlay_text": [
+            {
+              "text": "第9話 明治のなぞ",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -424,7 +426,14 @@
         },
         {
           "speaker": "manabu",
-          "text": "生まれで決めない、新しいルールなのだ!"
+          "text": "生まれで決めない、新しいルールなのだ!",
+          "overlay_text": [
+            {
+              "text": "身分制度の廃止",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -510,7 +519,14 @@
         },
         {
           "speaker": "manabu",
-          "text": "みんな、お勉強する義務なのだ!?"
+          "text": "みんな、お勉強する義務なのだ!?",
+          "overlay_text": [
+            {
+              "text": "義務教育",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -1139,6 +1155,94 @@
     },
     {
       "id": "s14",
+      "section": "story",
+      "duration_hint_sec": 19,
+      "visual": {
+        "background": "bg_meiji_seinan",
+        "assets": [
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
+        ],
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "侍たちの不満は、ついに戦いになったのだ?",
+          "overlay_text": [
+            {
+              "text": "1877年 西南戦争・琉球処分",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1877年、西郷隆盛を中心に士族が起こした西南戦争です。新政府軍が勝ち、武士の時代はここで完全に終わりました。",
+          "reading": "1877ねん、さいごうたかもりを、ちゅうしんに、しぞくが、おこした、せいなんせんそうです。しんせいふぐんが、かち、ぶしの、じだいは、ここで、かんぜんに、おわりました。",
+          "overlay_text": [
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1877年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "西南戦争",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "最後の武士、かっこよすぎるのだ…"
+        },
+        {
+          "speaker": "sensei",
+          "text": "また政府は1879年、琉球を沖縄県とする琉球処分を行いました。琉球の人々の歩みも学びます。",
+          "reading": "また、せいふは1879ねん、りゅうきゅうを、おきなわけんとする、りゅうきゅうしょぶんを、おこないました。りゅうきゅうの、ひとびとの、あゆみも、まなびます。",
+          "overlay_text": [
+            {
+              "text": "琉球処分 1879年",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "それぞれの歴史を、学び続けるのだ。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s15",
       "section": "points",
       "duration_hint_sec": 15,
       "visual": {
@@ -1190,28 +1294,33 @@
       "exam_points": [
         {
           "keyword": "戊辰戦争 1868-69年",
-          "detail": "鳥羽伏見→江戸開城(西郷・勝海舟)→箱館で終結。"
+          "detail": "鳥羽伏見→江戸開城(西郷・勝海舟)→箱館で終結。",
+          "importance": "high"
         },
         {
           "keyword": "五箇条の御誓文 1868年",
-          "detail": "「広く会議を興し」国の方針を宣言。"
+          "detail": "「広く会議を興し」国の方針を宣言。",
+          "importance": "high"
         },
         {
           "keyword": "太政官制",
-          "detail": "太政大臣を頂点とする新政府の中央官制。"
+          "detail": "太政大臣を頂点とする新政府の中央官制。",
+          "importance": "high"
         },
         {
           "keyword": "廃藩置県 1871年",
-          "detail": "版籍奉還(1869)の後、藩を廃止して県を設置。"
+          "detail": "版籍奉還(1869)の後、藩を廃止して県を設置。",
+          "importance": "high"
         },
         {
           "keyword": "四民平等",
-          "detail": "華族・士族・平民に整理。士族の不満は後の反乱へ。"
+          "detail": "華族・士族・平民に整理。士族の不満は後の反乱へ。",
+          "importance": "high"
         }
       ]
     },
     {
-      "id": "s15",
+      "id": "s16",
       "section": "points",
       "duration_hint_sec": 15,
       "visual": {
@@ -1263,28 +1372,33 @@
       "exam_points": [
         {
           "keyword": "学制 1872年",
-          "detail": "義務教育の始まり。身分に関係なく小学校へ。"
+          "detail": "義務教育の始まり。身分に関係なく小学校へ。",
+          "importance": "high"
         },
         {
           "keyword": "徴兵令 1873年",
-          "detail": "国民皆兵。満20歳の男子が兵役に。"
+          "detail": "国民皆兵。満20歳の男子が兵役に。",
+          "importance": "high"
         },
         {
           "keyword": "地租改正 1873年",
-          "detail": "地価の3%を現金で納める。農民一揆も発生。"
+          "detail": "地価の3%を現金で納める。農民一揆も発生。",
+          "importance": "high"
         },
         {
           "keyword": "殖産興業",
-          "detail": "官営工場で近代産業の手本。富岡製糸場(1872)。"
+          "detail": "官営工場で近代産業の手本。富岡製糸場(1872)。",
+          "importance": "high"
         },
         {
           "keyword": "文明開化と民権の芽",
-          "detail": "鹿鳴館(1883)/板垣退助の民選議院設立建白書(1874)。"
+          "detail": "鹿鳴館(1883)/板垣退助の民選議院設立建白書(1874)。",
+          "importance": "high"
         }
       ]
     },
     {
-      "id": "s16",
+      "id": "s17",
       "section": "quiz",
       "duration_hint_sec": 13,
       "visual": {
@@ -1348,7 +1462,7 @@
       "exam_points": []
     },
     {
-      "id": "s17",
+      "id": "s18",
       "section": "quiz",
       "duration_hint_sec": 12,
       "visual": {
@@ -1412,7 +1526,7 @@
       "exam_points": []
     },
     {
-      "id": "s18",
+      "id": "s19",
       "section": "quiz",
       "duration_hint_sec": 13,
       "visual": {
@@ -1476,7 +1590,7 @@
       "exam_points": []
     },
     {
-      "id": "s19",
+      "id": "s20",
       "section": "ending",
       "duration_hint_sec": 15,
       "visual": {

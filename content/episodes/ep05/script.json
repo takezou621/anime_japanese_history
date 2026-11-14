@@ -24,7 +24,8 @@
     "thumbnail": {
       "headline": "戦国の始まり!",
       "sub": "足利尊氏・応仁の乱 必須"
-    }
+    },
+    "title": "【第5話】下剋上はなぜ起きた？足利尊氏と応仁の乱を5分で解説【中学受験日本史】"
   },
   "characters": [
     {
@@ -33,7 +34,8 @@
       "voice_style": "四国めたん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#7ec8e3"
+      "subtitle_color": "#7ec8e3",
+      "intonation_scale": 1.05
     },
     {
       "id": "manabu",
@@ -41,14 +43,15 @@
       "voice_style": "ずんだもん/ノーマル",
       "speed_scale": 1.22,
       "pitch": 0.0,
-      "subtitle_color": "#8be27e"
+      "subtitle_color": "#8be27e",
+      "intonation_scale": 1.35
     }
   ],
   "scenes": [
     {
       "id": "s01",
       "section": "opening",
-      "duration_hint_sec": 15,
+      "duration_hint_sec": 12,
       "visual": {
         "background": "bg_school_lab",
         "assets": [
@@ -78,8 +81,12 @@
       },
       "beats": [
         {
+          "speaker": "manabu",
+          "text": "ねえ先生、家来が主を倒す「下剋上」って、本当にあるの？"
+        },
+        {
           "speaker": "sensei",
-          "text": "こんにちは!ヒスト先生です。",
+          "text": "実は、あるんです!足利尊氏の室町幕府から応仁の大乱まで、栄華と大乱を順番に見ていきましょう。",
           "overlay_text": [
             {
               "text": "アニメ日本史ラボ 第5話",
@@ -89,20 +96,15 @@
           ]
         },
         {
-          "speaker": "sensei",
-          "text": "第5話は、足利尊氏が開く室町。栄華と大乱、そして「戦国の始まり」まで見ます!"
-        },
-        {
           "speaker": "manabu",
-          "text": "マナブなのだ!下剋上って、どんでん返しの話なのだ!?"
-        },
-        {
-          "speaker": "sensei",
-          "text": "ええ、家来が主を超える、大逆転ドラマの連続です。"
-        },
-        {
-          "speaker": "manabu",
-          "text": "では、乱世の入口へ、レッツゴーなのだ!"
+          "text": "その理由、早く知りたいのだ!金閣も銀閣も応仁の乱も、ぜんぶ見るのだ!",
+          "overlay_text": [
+            {
+              "text": "第5話 下剋上のなぞ",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -416,7 +418,14 @@
         {
           "speaker": "sensei",
           "text": "ええ、争いは長く続きましたが、1392年、義満の手でついに南北朝が合一します。",
-          "reading": "ええ、あらそいは、ながく、つづきましたが、1392ねん、よしみつの、てで、ついに、なんぼくちょうが、ごういつします。"
+          "reading": "ええ、あらそいは、ながく、つづきましたが、1392ねん、よしみつの、てで、ついに、なんぼくちょうが、ごういつします。",
+          "overlay_text": [
+            {
+              "text": "1392年 南北朝合一",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -743,7 +752,14 @@
         },
         {
           "speaker": "manabu",
-          "text": "金色が、灰色になるのだ…"
+          "text": "金色が、灰色になるのだ…",
+          "overlay_text": [
+            {
+              "text": "戦国の幕開け",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -1103,23 +1119,28 @@
       "exam_points": [
         {
           "keyword": "鎌倉幕府滅亡 1333年",
-          "detail": "後醍醐天皇の討幕。楠木正成・新田義貞が活躍。"
+          "detail": "後醍醐天皇の討幕。楠木正成・新田義貞が活躍。",
+          "importance": "normal"
         },
         {
           "keyword": "建武の新政 1333年",
-          "detail": "公家中心の親政。武士が離反し3年で挫折。"
+          "detail": "公家中心の親政。武士が離反し3年で挫折。",
+          "importance": "high"
         },
         {
           "keyword": "室町幕府 1338年",
-          "detail": "足利尊氏が征夷大将軍に。1336年湊川で楠木正成戦死。"
+          "detail": "足利尊氏が征夷大将軍に。1336年湊川で楠木正成戦死。",
+          "importance": "high"
         },
         {
           "keyword": "南北朝時代 約56年",
-          "detail": "北朝(京都)vs南朝(吉野)。1392年に合一。"
+          "detail": "北朝(京都)vs南朝(吉野)。1392年に合一。",
+          "importance": "high"
         },
         {
           "keyword": "足利義満",
-          "detail": "将軍の権力を頂点まで高めた3代将軍。"
+          "detail": "将軍の権力を頂点まで高めた3代将軍。",
+          "importance": "high"
         }
       ]
     },
@@ -1176,23 +1197,28 @@
       "exam_points": [
         {
           "keyword": "日明貿易",
-          "detail": "義満が開始。勘合符を使い、倭寇取り締まりと引き換え。"
+          "detail": "義満が開始。勘合符を使い、倭寇取り締まりと引き換え。",
+          "importance": "high"
         },
         {
           "keyword": "北山文化 1397年〜",
-          "detail": "金閣に代表される華麗な文化(公家×武家)。"
+          "detail": "金閣に代表される華麗な文化(公家×武家)。",
+          "importance": "high"
         },
         {
           "keyword": "応仁の乱 1467年",
-          "detail": "細川勝元(東軍)vs山名宗全(西軍)。11年続き、戦国の始まり。"
+          "detail": "細川勝元(東軍)vs山名宗全(西軍)。11年続き、戦国の始まり。",
+          "importance": "high"
         },
         {
           "keyword": "分国支配・下剋上",
-          "detail": "守護が領国を私物化、守護代・国人が主を超える芽。"
+          "detail": "守護が領国を私物化、守護代・国人が主を超える芽。",
+          "importance": "high"
         },
         {
           "keyword": "東山文化",
-          "detail": "銀閣(義政)。茶の湯・生け花・枯山水などひなびた美。"
+          "detail": "銀閣(義政)。茶の湯・生け花・枯山水などひなびた美。",
+          "importance": "high"
         }
       ]
     },

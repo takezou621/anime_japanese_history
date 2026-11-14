@@ -4,7 +4,9 @@
 """
 from __future__ import annotations
 
-from .canvas import Canvas, load_font, shade, tint, with_alpha
+from .canvas import (Canvas, dots_pattern, load_font, shade, tint,
+                     with_alpha)
+from .nature import sky
 from . import palette as P
 
 
@@ -132,3 +134,68 @@ def quiz_frame(w=760, h=340, q_no=None):
                     outline=P.INDIGO_DD, owidth=4)
             g.text((26 + bw / 2, 12), q_no, 40, P.INDIGO_DD, "black", "mm")
     return _render(w, h + 40, draw)
+
+
+def keyword_card_red(keyword, sub=None, size=64, target_w=560):
+    """重要度=high 用の朱色系キーワードカード."""
+    ksz = _fit_text(keyword, size, "black", target_w - 96)
+    probe = Canvas(2400, 300, ss=2)
+    gw = probe.g()
+    kw, _ = gw.text_size(keyword, ksz, "black")
+    w = max(target_w, int(kw + 96))
+    if sub:
+        sub_w, _ = gw.text_size(sub, 30, "bold")
+        w = max(w, int(sub_w + 96))
+    h = 148 if sub else 128
+
+    def draw(g, ss):
+        w_, h_ = g.size
+        fill = tint(P.SHU, 0.86)
+        g.rrect((3, 3, w_ - 3, h_ - 3), 26, fill=with_alpha(fill, 244),
+                outline=P.SHU, owidth=6)
+        g.text((w_ / 2, h_ * (0.42 if sub else 0.5)), keyword, ksz, P.SHU_D,
+               "black", "mm")
+        if sub:
+            g.text((w_ / 2, h_ * 0.76), sub, 30, P.SHU, "bold", "mm")
+    return _render(w, h, draw)
+
+
+def keyword_card_blue(keyword, sub=None, size=64, target_w=560):
+    """通常 (importance=normal) の藍色系キーワードカード."""
+    return keyword_card(keyword, sub=sub, size=size, target_w=target_w)
+
+
+def next_episode_card(w=1920, h=1080):
+    """次回予告カード用の汎用背景 (タイトル空欄の枠付き)."""
+    cv = Canvas(w, h, ss=2)
+    g = cv.g()
+    sky(cv, [(0.00, (22, 30, 64)), (0.55, (38, 54, 100)), (1.00, (70, 92, 150))])
+    g = cv.g()
+    dots_pattern(g, (0, 760, 460, 1080), 46, 5, P.UI_WHITE, alpha=40, seed=1)
+    dots_pattern(g, (1460, 0, w, 320), 46, 5, P.UI_WHITE, alpha=40, seed=2)
+    g.circle(1700, 190, 230, outline=with_alpha(P.UI_WHITE, 38), owidth=34)
+    g.circle(1700, 190, 148, outline=with_alpha(P.YAMABUKI, 70), owidth=10)
+    # 中央のタイトル枠 (二重枠: 白+朱のアクセント)
+    fx0, fy0, fx1, fy1 = 330, 250, 1590, 830
+    g.rrect((fx0 - 22, fy0 - 22, fx1 + 22, fy1 + 22), 36,
+            fill=with_alpha((16, 26, 56), 210), outline=with_alpha(P.UI_WHITE, 130),
+            owidth=5)
+    g.rrect((fx0, fy0, fx1, fy1), 26, fill=with_alpha(P.UI_WHITE, 238),
+            outline=P.INDIGO, owidth=8)
+    # 枠上のNEXTシェブロン (テキストなしの記号)
+    for k in range(3):
+        cx_ = w / 2 - 70 + k * 70
+        g.poly([(cx_ - 26, fy0 - 64), (cx_ + 8, fy0 - 40), (cx_ - 26, fy0 - 16)],
+               fill=P.SHU if k == 2 else P.YAMABUKI, outline=P.INDIGO_DD, owidth=3)
+    # 枠内のガイド線 (タイトル1行+サブ1行のplaceholder)
+    g.line([(fx0 + 90, fy0 + 210), (fx1 - 90, fy0 + 210)], with_alpha((90, 110, 150), 110), 5)
+    g.line([(fx0 + 140, fy0 + 300), (fx1 - 140, fy0 + 300)], with_alpha((90, 110, 150), 80), 4)
+    # コーナーの朱アクセント
+    for (cx0, cy0, dx, dy) in [(fx0, fy0, 1, 1), (fx1, fy0, -1, 1),
+                               (fx0, fy1, 1, -1), (fx1, fy1, -1, -1)]:
+        g.poly([(cx0, cy0 + dy * 44), (cx0, cy0), (cx0 + dx * 44, cy0)],
+               fill=None, outline=P.SHU, owidth=6)
+    # 下部のテープ (字幕帯と重ならない位置の装飾)
+    g.rrect((fx0 + 120, fy1 + 20, fx1 - 120, fy1 + 90), 16,
+            fill=with_alpha(P.YAMABUKI, 200), outline=shade(P.YAMABUKI, 0.7), owidth=3)
+    return cv.render()
