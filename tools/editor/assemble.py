@@ -423,6 +423,7 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
                     exam_imps[kc_index] if kc_index < len(exam_imps) else "")
                 if imp == "high":
                     style = "keyword_card_red"
+            ot = dict(ot, style=style)  # swap propagates to render_overlay
             if style == "keyword_card" or style == "keyword_card_red":
                 kc_index += 1
             cfg = STYLES.get(style)
