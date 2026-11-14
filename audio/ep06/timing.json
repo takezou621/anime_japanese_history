@@ -1,0 +1,777 @@
+{
+  "episode": "ep06",
+  "title": "織田信長と豊臣秀吉の天下統一",
+  "gaps": {
+    "beat": 0.45,
+    "scene": 0.7,
+    "section": 0.9,
+    "tail": 0.7
+  },
+  "total_duration": 518.609,
+  "scenes": [
+    {
+      "id": "s01",
+      "section": "opening",
+      "start": 0.0,
+      "beats": [
+        {
+          "speaker": "sensei",
+          "wav": "narration/s01_b00.wav",
+          "start": 0.0,
+          "duration": 1.888,
+          "text": "こんにちは!ヒスト先生です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s01_b01.wav",
+          "start": 2.338,
+          "duration": 6.219,
+          "text": "第6話は、織田信長と豊臣秀吉。乱世を終わらせる二人の、大どんでん返しの物語です!"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s01_b02.wav",
+          "start": 9.007,
+          "duration": 3.851,
+          "text": "マナブなのだ!革命児、信長はどんな人なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s01_b03.wav",
+          "start": 13.307,
+          "duration": 3.563,
+          "text": "ええ、常識をどんどん破る、破天荒な大将です。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s01_b04.wav",
+          "start": 17.32,
+          "duration": 2.389,
+          "text": "いっしょに見るのだ、レッツゴーなのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "section": "story",
+      "start": 20.609,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s02_b00.wav",
+          "start": 20.609,
+          "duration": 2.699,
+          "text": "信長は、最初から強かったのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b01.wav",
+          "start": 23.758,
+          "duration": 10.325,
+          "text": "いいえ、尾張の名ではない若武者でした。でも1560年、大国・今川義元が上洛の途にあり、尾張へ攻め込んできます。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s02_b02.wav",
+          "start": 34.533,
+          "duration": 2.635,
+          "text": "雨の日の、思いきった奇襲なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b03.wav",
+          "start": 37.618,
+          "duration": 10.944,
+          "text": "ええ、桶狭間の戦いで信長は義元を討ち取り、一躍、天下にその名を売りました。弱小と思われた尾張が、動き始めます。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s02_b04.wav",
+          "start": 49.012,
+          "duration": 3.381,
+          "text": "どうどうめぐり?いやいや、大出世なのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "section": "story",
+      "start": 53.093,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s03_b00.wav",
+          "start": 53.093,
+          "duration": 2.229,
+          "text": "つぎの目標は、なんなのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b01.wav",
+          "start": 55.773,
+          "duration": 12.576,
+          "text": "美濃の稲葉山城を奪い、地名を「岐阜」へ改めます。ここで「天下布武」の朱印を使い始め、天下を武力で治める宣言です。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s03_b02.wav",
+          "start": 68.799,
+          "duration": 3.36,
+          "text": "「天下布武」、かっこよくて覚えやすい言葉なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b03.wav",
+          "start": 72.609,
+          "duration": 9.547,
+          "text": "ええ、そして1568年、足利義昭を擁立して京都へ上洛します。信長の目標は、もう明らかでした。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s03_b04.wav",
+          "start": 82.605,
+          "duration": 2.635,
+          "text": "義昭様と、上洛スムーズなのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "section": "story",
+      "start": 85.94,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s04_b00.wav",
+          "start": 85.94,
+          "duration": 2.528,
+          "text": "信長の城は、どんな城なのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b01.wav",
+          "start": 88.918,
+          "duration": 11.211,
+          "text": "1576年、琵琶湖ほとりの安土城を築きます。高くそびえる天主は、石垣と白壁の、当時最強・最新の城でした。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s04_b02.wav",
+          "start": 100.579,
+          "duration": 2.965,
+          "text": "お城のスーパースター、最強天主なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b03.wav",
+          "start": 103.994,
+          "duration": 9.995,
+          "text": "しかも城下町では楽市楽座。関所を廃し、座の特権をなくして、商人が自由に商売できる街を作りました。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s04_b04.wav",
+          "start": 114.439,
+          "duration": 3.104,
+          "text": "商売チャンスなのだ!経済の信長なのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "section": "story",
+      "start": 118.243,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s05_b00.wav",
+          "start": 118.243,
+          "duration": 2.24,
+          "text": "敵も、ただでは済まないのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b01.wav",
+          "start": 120.933,
+          "duration": 10.528,
+          "text": "武田の騎馬隊が、長篠の戦いで挑んできます。信長は鉄砲を大量にそろえ、鉄砲隊を活用して、これを打ち破りました。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s05_b02.wav",
+          "start": 131.911,
+          "duration": 3.051,
+          "text": "鉄砲の数と仕組みで勝つ、合理的なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b03.wav",
+          "start": 135.411,
+          "duration": 12.352,
+          "text": "ええ、「鉄砲三段撃ち」の話は有名ですが、現代の研究では諸説あるんです。だから「鉄砲隊を活用した」と覚えれば十分ですよ。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s05_b04.wav",
+          "start": 148.213,
+          "duration": 2.709,
+          "text": "真実はいつも、研究の中なのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "section": "story",
+      "start": 151.623,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s06_b00.wav",
+          "start": 151.623,
+          "duration": 3.061,
+          "text": "天下統一まで、あと少し…なのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b01.wav",
+          "start": 155.134,
+          "duration": 12.853,
+          "text": "1582年、中国攻めの信長に、家臣の明智光秀が謀反を起こします。「敵は本能寺にあり」と襲われ、信長は本能寺で果てました。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s06_b02.wav",
+          "start": 168.437,
+          "duration": 2.293,
+          "text": "まさかの、ここで退場なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b03.wav",
+          "start": 171.181,
+          "duration": 5.707,
+          "text": "ええ、天下統一まで、あと一歩の場面でした。歴史は、そのどこで変わるかわかりません。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s06_b04.wav",
+          "start": 177.337,
+          "duration": 2.645,
+          "text": "どんでん返し、歴史の魅力なのだ…"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "section": "story",
+      "start": 180.683,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s07_b00.wav",
+          "start": 180.683,
+          "duration": 2.304,
+          "text": "光秀は、天下を取れたのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b01.wav",
+          "start": 183.437,
+          "duration": 11.541,
+          "text": "いいえ、中国地方から秀吉が猛スピードで引き返し、山崎の戦いで光秀を討ちました。わずか13日間の天下と伝わります。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s07_b02.wav",
+          "start": 195.428,
+          "duration": 2.848,
+          "text": "中国大返し、すごいスピードなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b03.wav",
+          "start": 198.726,
+          "duration": 8.864,
+          "text": "ええ、この勝利で秀吉は、信長の後継者の座をつかみます。農民あがりの英雄の、大出世です。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s07_b04.wav",
+          "start": 208.04,
+          "duration": 3.019,
+          "text": "秀吉、一気に物語の主役なのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "section": "story",
+      "start": 211.759,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s08_b00.wav",
+          "start": 211.759,
+          "duration": 2.229,
+          "text": "秀吉の城も、すごいのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b01.wav",
+          "start": 214.438,
+          "duration": 9.013,
+          "text": "1583年、大坂城を築きます。石垣が高くそびえる、日本一の巨城で、天下統一の拠点でした。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s08_b02.wav",
+          "start": 223.901,
+          "duration": 2.816,
+          "text": "安土と対になる、新しいお城なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b03.wav",
+          "start": 227.167,
+          "duration": 9.76,
+          "text": "ええ、そして1590年、小田原の北条を降ろして、秀吉は天下統一を果たします。戦国乱世、ついに終結です。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s08_b04.wav",
+          "start": 237.377,
+          "duration": 3.136,
+          "text": "乱世、おわりなのだ!ついに平和なのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "section": "story",
+      "start": 241.213,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s09_b00.wav",
+          "start": 241.213,
+          "duration": 2.443,
+          "text": "平和になったら、なにをするのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b01.wav",
+          "start": 244.106,
+          "duration": 9.312,
+          "text": "太閤検地です。全国の田畑の広さと収穫量を測り、石高で国の力を測るルールを作りました。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s09_b02.wav",
+          "start": 253.868,
+          "duration": 2.528,
+          "text": "太閤って、秀吉のことなのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b03.wav",
+          "start": 256.846,
+          "duration": 10.752,
+          "text": "そう、太閤は秀吉の称号です。さらに刀狩で農民から武器を取り上げ、兵と農民を分ける、兵農分離を進めました。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s09_b04.wav",
+          "start": 268.048,
+          "duration": 2.891,
+          "text": "国のシステムも、ぜんぶ新しくなるのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "section": "story",
+      "start": 271.639,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s10_b00.wav",
+          "start": 271.639,
+          "duration": 2.219,
+          "text": "外には、どんな手を打つのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b01.wav",
+          "start": 274.307,
+          "duration": 6.699,
+          "text": "惣無事令です。大名同士の私戦を禁じて、秀吉のルールで国をまとめました。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s10_b02.wav",
+          "start": 281.456,
+          "duration": 2.165,
+          "text": "天下のボスの、お触れなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b03.wav",
+          "start": 284.071,
+          "duration": 11.872,
+          "text": "ええ、しかし秀吉は、二度の朝鮮出兵を行います。1592年の文禄の役と、1597年の慶長の役で、国は疲弊しました。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s10_b04.wav",
+          "start": 296.393,
+          "duration": 2.485,
+          "text": "栄華の裏には、ひずみもあったのだ…"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "section": "story",
+      "start": 299.579,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s11_b00.wav",
+          "start": 299.579,
+          "duration": 2.795,
+          "text": "この時代の文化は、どんな感じなのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b01.wav",
+          "start": 302.823,
+          "duration": 7.723,
+          "text": "豪華絢爛の桃山文化です。城や金屏風に、ど派手な金色、天下取りのパワーそのものです。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s11_b02.wav",
+          "start": 310.996,
+          "duration": 2.304,
+          "text": "金色ドカン、パワフルなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b03.wav",
+          "start": 313.75,
+          "duration": 7.072,
+          "text": "ええ、茶の湯も大流行します。わびという、しずかで質素な美を楽しむ文化です。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s11_b04.wav",
+          "start": 321.272,
+          "duration": 2.037,
+          "text": "派手と地味、両方なのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "section": "story",
+      "start": 324.009,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s12_b00.wav",
+          "start": 324.009,
+          "duration": 2.368,
+          "text": "茶の湯の先生は、だれなのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b01.wav",
+          "start": 326.827,
+          "duration": 6.411,
+          "text": "千利休です。信長・秀吉に仕えた茶頭で、わび茶をきわめた人物です。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s12_b02.wav",
+          "start": 333.688,
+          "duration": 2.496,
+          "text": "お茶で、心を鍛える修行なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b03.wav",
+          "start": 336.634,
+          "duration": 8.917,
+          "text": "ええ、小さな茶室で、美しさと心を磨く教えです。後の日本文化に、大きな影響を与えます。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s12_b04.wav",
+          "start": 346.001,
+          "duration": 2.656,
+          "text": "ちいさな茶室に、大きな世界なのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "section": "story",
+      "start": 349.357,
+      "beats": [
+        {
+          "speaker": "manabu",
+          "wav": "narration/s13_b00.wav",
+          "start": 349.357,
+          "duration": 2.272,
+          "text": "その後の天下は、どうなるのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b01.wav",
+          "start": 352.079,
+          "duration": 10.443,
+          "text": "1598年、秀吉が亡くなり、天下は再びゆらぎます。実力者・徳川家康の台頭が、次の時代の中心です。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s13_b02.wav",
+          "start": 362.972,
+          "duration": 2.059,
+          "text": "また、どんでん返しなのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b03.wav",
+          "start": 365.481,
+          "duration": 5.803,
+          "text": "ええ、その答えは、第7話の江戸幕府で詳しくやります!まずは、今日のポイントまとめへ!"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s13_b04.wav",
+          "start": 371.733,
+          "duration": 1.771,
+          "text": "まとめ、お願いなのだ!"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "section": "points",
+      "start": 374.404,
+      "beats": [
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b00.wav",
+          "start": 374.404,
+          "duration": 3.808,
+          "text": "ここから受験ポイントのまとめ!まずは、信長の改革の流れ。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b01.wav",
+          "start": 378.662,
+          "duration": 15.2,
+          "text": "桶狭間1560年、岐阜と天下布武1567年、安土城1576年と楽市楽座、長篠1575年は鉄砲隊、そして1582年本能寺の変。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b02.wav",
+          "start": 394.312,
+          "duration": 4.373,
+          "text": "「鉄砲三段撃ち」は諸説あり、と覚えておきましょう。"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "section": "points",
+      "start": 399.385,
+      "beats": [
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b00.wav",
+          "start": 399.385,
+          "duration": 2.389,
+          "text": "後半は、秀吉の政治と文化です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b01.wav",
+          "start": 402.225,
+          "duration": 16.213,
+          "text": "山崎の戦い1582年、大坂城1583年、天下統一1590年。太閤検地・刀狩・惣無事令で国の仕組みを一新、でも朝鮮出兵で国は疲弊します。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b02.wav",
+          "start": 418.888,
+          "duration": 5.451,
+          "text": "文化は豪華絢爛の桃山文化と、千利休のわび茶の対比です!"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "section": "quiz",
+      "start": 425.239,
+      "beats": [
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b00.wav",
+          "start": 425.239,
+          "duration": 2.091,
+          "text": "それではクイズタイム!第一問!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b01.wav",
+          "start": 427.779,
+          "duration": 14.037,
+          "text": "1560年、織田信長が今川義元を討ち取った戦いは何でしょう?ア、桶狭間の戦い。イ、川中島の戦い。ウ、山崎の戦い。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s16_b02.wav",
+          "start": 442.267,
+          "duration": 1.803,
+          "text": "雨の奇襲…アなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b03.wav",
+          "start": 444.519,
+          "duration": 4.8,
+          "text": "正解!桶狭間の戦いです。1560年とセットで丸暗記しましょう。"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "section": "quiz",
+      "start": 450.019,
+      "beats": [
+        {
+          "speaker": "sensei",
+          "wav": "narration/s17_b00.wav",
+          "start": 450.019,
+          "duration": 0.661,
+          "text": "第二問!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s17_b01.wav",
+          "start": 451.131,
+          "duration": 11.381,
+          "text": "商人の商売を自由にした、信長の経済政策は何でしょう?ア、楽市楽座。イ、太閤検地。ウ、刀狩。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s17_b02.wav",
+          "start": 462.962,
+          "duration": 1.909,
+          "text": "商売チャンス…アなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s17_b03.wav",
+          "start": 465.321,
+          "duration": 5.323,
+          "text": "正解!楽市楽座です。関所を廃して商人を集めた、経済政策ですよ。"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "section": "quiz",
+      "start": 471.344,
+      "beats": [
+        {
+          "speaker": "sensei",
+          "wav": "narration/s18_b00.wav",
+          "start": 471.344,
+          "duration": 0.843,
+          "text": "ラスト問題!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s18_b01.wav",
+          "start": 472.637,
+          "duration": 11.84,
+          "text": "秀吉が全国の田畑を測り、石高で国を測るようにした政策は?ア、刀狩。イ、太閤検地。ウ、惣無事令。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s18_b02.wav",
+          "start": 484.927,
+          "duration": 2.315,
+          "text": "国のパワー測定…イなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s18_b03.wav",
+          "start": 487.691,
+          "duration": 5.344,
+          "text": "正解!太閤検地です。刀狩は武器を取り上げる政策、セットで覚えましょう。"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "section": "ending",
+      "start": 493.935,
+      "beats": [
+        {
+          "speaker": "sensei",
+          "wav": "narration/s19_b00.wav",
+          "start": 493.935,
+          "duration": 4.107,
+          "text": "今日は信長と秀吉、二人の英雄の力で乱世が終わりました。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s19_b01.wav",
+          "start": 498.492,
+          "duration": 8.672,
+          "text": "桶狭間、天下布武、安土城、本能寺の変、太閤検地、桃山文化…歴史がドカドカ動いた時代なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s19_b02.wav",
+          "start": 507.614,
+          "duration": 5.365,
+          "text": "次回第7話は、徳川家康の江戸幕府と鎖国。260年の平和の始まりです!"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s19_b03.wav",
+          "start": 513.429,
+          "duration": 4.48,
+          "text": "つぎは長い長い平和なのだ!チャンネル登録も、よろしくなのだ!"
+        }
+      ]
+    }
+  ],
+  "sections": {
+    "opening": {
+      "start": 0.0,
+      "end": 20.609
+    },
+    "story": {
+      "start": 20.609,
+      "end": 374.404
+    },
+    "points": {
+      "start": 374.404,
+      "end": 425.239
+    },
+    "quiz": {
+      "start": 425.239,
+      "end": 493.935
+    },
+    "ending": {
+      "start": 493.935,
+      "end": 518.609
+    }
+  }
+}
