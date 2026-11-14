@@ -2389,3 +2389,193 @@ def shishi(g, x, y, s, col=(64, 54, 62), sword=True, seed=0):
         g.line([(x + 10 * s, y - 96 * s), (x + 74 * s, y - 160 * s)], (150, 148, 156), 5 * s)
         g.line([(x + 74 * s, y - 160 * s), (x + 84 * s, y - 170 * s)], (96, 66, 52), 6 * s)
         g.rrect((x + 4 * s, y - 102 * s, x + 16 * s, y - 92 * s), 3 * s, fill=(70, 52, 44))
+
+
+# ================================================================ ep09/ep10 (明治〜現代)
+
+
+def brick_building(g, x, y, s, w=200, floors=2, col=P.BRICK_RED, seed=0):
+    """赤煉瓦の洋館. s=1 で幅約 w*2px. y=地面."""
+    bw = w * s
+    bh = (floors * 90 + 20) * s
+    rect(g, x - bw, y - bh, x + bw, y, fill=col, outline=shade(col, 0.72), owidth=2.6 * s)
+    for k in range(int(bh / (14 * s))):
+        yy = y - bh + 8 * s + k * 14 * s
+        g.line([(x - bw + 6 * s, yy), (x + bw - 6 * s, yy)], shade(col, 0.82), 2.4 * s)
+    # 白い帯と窓
+    for f in range(floors):
+        fy = y - bh + f * 90 * s + 26 * s
+        for wx in range(int(-w * 0.62), int(w * 0.63), 60):
+            g.rrect((x + wx * s, fy, x + wx * s + 34 * s, fy + 44 * s), 3 * s,
+                    fill=(200, 216, 214), outline=shade(col, 0.6), owidth=2 * s)
+            g.line([(x + wx * s + 17 * s, fy + 2 * s), (x + wx * s + 17 * s, fy + 42 * s)],
+                   shade(col, 0.6), 2.4 * s)
+    curved_roof(g, x, y - bh, bw + 24 * s, bw * 0.42, 34 * s, (86, 88, 84),
+                shade((86, 88, 84), 0.8), lift=8 * s, s=s)
+
+
+def steam_train(g, x, y, s, smoke=True, seed=0):
+    """蒸気機関車+客車. s=1 で機関車幅約 260px. y=線路の地面."""
+    # 線路
+    rect(g, x - 700 * s, y, x + 900 * s, y + 14 * s, fill=(120, 104, 88))
+    rect(g, x - 700 * s, y - 4 * s, x + 900 * s, y + 2 * s, fill=(84, 74, 64))
+    for k in range(int(1600 / 60)):
+        px = x - 700 * s + k * 60 * s
+        rect(g, px, y, px + 16 * s, y + 14 * s, fill=(96, 84, 70))
+    # 機関車
+    bx = x
+    g.rrect((bx - 130 * s, y - 130 * s, bx + 110 * s, y - 20 * s), 10 * s,
+            fill=(52, 54, 62), outline=(36, 38, 44), owidth=2.8 * s)
+    g.rrect((bx - 118 * s, y - 96 * s, bx - 30 * s, y - 34 * s), 8 * s,
+            fill=(78, 80, 88), outline=(52, 54, 60), owidth=2.2 * s)
+    for wx in (-90 * s, -46 * s):
+        g.circle(bx + wx, y - 24 * s, 24 * s, fill=(38, 40, 46), outline=(24, 26, 30),
+                 owidth=3 * s)
+    g.circle(bx + 80 * s, y - 24 * s, 15 * s, fill=(38, 40, 46), outline=(24, 26, 30),
+             owidth=2.6 * s)
+    g.rrect((bx - 96 * s, y - 168 * s, bx - 60 * s, y - 128 * s), 4 * s,
+            fill=(160, 74, 58), outline=shade((160, 74, 58), 0.7), owidth=2.2 * s)
+    g.rrect((bx - 44 * s, y - 158 * s, bx + 96 * s, y - 120 * s), 6 * s,
+            fill=(64, 66, 74), outline=(44, 46, 52), owidth=2.4 * s)
+    if smoke:
+        smoke_wisp(g, bx - 78 * s, y - 180 * s, 1.3 * s, color=(150, 150, 154),
+                   alpha=170, seed=seed)
+        smoke_wisp(g, bx - 60 * s, y - 216 * s, 1.1 * s, color=(150, 150, 154),
+                   alpha=150, seed=seed + 1)
+    # 客車
+    for k in range(2):
+        cx = bx + 150 * s + k * 190 * s
+        g.rrect((cx - 84 * s, y - 120 * s, cx + 84 * s, y - 24 * s), 8 * s,
+                fill=(150, 84, 66), outline=shade((150, 84, 66), 0.7), owidth=2.4 * s)
+        for wx in range(-64, 65, 32):
+            g.rrect((cx + wx * s, y - 104 * s, cx + wx * s + 22 * s, y - 56 * s), 3 * s,
+                    fill=(206, 216, 214), outline=(140, 120, 100), owidth=2 * s)
+        for wx in (-48 * s, 48 * s):
+            g.circle(cx + wx, y - 22 * s, 16 * s, fill=(38, 40, 46), outline=(24, 26, 30),
+                     owidth=2.6 * s)
+
+
+def shinkansen(g, x, y, s, seed=0):
+    """新幹線 (白い弾丸列車). s=1 で全長約 700px. y=軌道."""
+    g.rrect((x - 360 * s, y - 66 * s, x + 340 * s, y - 12 * s), 26 * s,
+            fill=(240, 242, 244), outline=(190, 194, 200), owidth=2.6 * s)
+    g.poly(qbez((x + 340 * s, y - 60 * s), (x + 396 * s, y - 40 * s), (x + 396 * s, y - 16 * s), 10)
+           + [(x + 340 * s, y - 12 * s)], fill=(240, 242, 244),
+           outline=(190, 194, 200), owidth=2.6 * s)
+    g.line([(x - 330 * s, y - 30 * s), (x + 390 * s, y - 30 * s)], (70, 78, 88), 8 * s)
+    for k in range(7):
+        wx = x - 300 * s + k * 96 * s
+        g.rrect((wx, y - 46 * s, wx + 40 * s, y - 20 * s), 4 * s,
+                fill=(96, 120, 140), outline=(70, 92, 112), owidth=2 * s)
+    g.rrect((x - 350 * s, y - 8 * s, x + 350 * s, y + 6 * s), 3 * s, fill=(120, 124, 130))
+
+
+def factory(g, x, y, s, seed=0, col=(196, 128, 108)):
+    """洋風の工場 (ノコギリ屋根+煙突). s=1 で幅約 480px. y=地面."""
+    rect(g, x - 240 * s, y - 120 * s, x + 240 * s, y, fill=col,
+         outline=shade(col, 0.72), owidth=2.6 * s)
+    for k in range(4):
+        px = x - 220 * s + k * 120 * s
+        g.poly([(px, y - 120 * s), (px + 60 * s, y - 164 * s), (px + 120 * s, y - 120 * s)],
+               fill=shade(col, 0.8), outline=shade(col, 0.6), owidth=2.2 * s)
+    g.rrect((x + 120 * s, y - 210 * s, x + 148 * s, y - 118 * s), 4 * s,
+            fill=(108, 110, 114), outline=(84, 86, 90), owidth=2.4 * s)
+    smoke_wisp(g, x + 134 * s, y - 218 * s, 1.1 * s, color=(150, 150, 154), alpha=170,
+               seed=seed)
+    for wx in range(-200, 201, 66):
+        g.rrect((x + wx * s, y - 84 * s, x + wx * s + 40 * s, y - 30 * s), 3 * s,
+                fill=(198, 214, 210), outline=shade(col, 0.62), owidth=2 * s)
+
+
+def rickshaw(g, x, y, s, puller=(96, 82, 70)):
+    """人力車. y=地面."""
+    g.rrect((x - 6 * s, y - 92 * s, x + 10 * s, y - 62 * s), 5 * s, fill=shade(puller, 0.85),
+            outline=P.OUTLINE, owidth=2.2 * s)
+    g.circle(x + 2 * s, y - 100 * s, 12 * s, fill=P.SKIN, outline=P.OUTLINE, owidth=2.2 * s)
+    g.rrect((x - 2 * s, y - 114 * s, x + 6 * s, y - 96 * s), 4 * s, fill=(52, 46, 50))
+    g.line([(x + 8 * s, y - 70 * s), (x + 60 * s, y - 88 * s)], P.WOOD_D, 5 * s)
+    g.rrect((x + 44 * s, y - 128 * s, x + 128 * s, y - 64 * s), 8 * s,
+            fill=(164, 96, 76), outline=shade((164, 96, 76), 0.7), owidth=2.4 * s)
+    g.poly([(x + 40 * s, y - 128 * s), (x + 132 * s, y - 128 * s), (x + 118 * s, y - 158 * s),
+            (x + 54 * s, y - 158 * s)], fill=(212, 196, 158), outline=shade((180, 160, 124),
+            0.8), owidth=2.4 * s)
+    g.circle(x + 66 * s, y - 30 * s, 26 * s, fill=(38, 40, 46), outline=(24, 26, 30),
+             owidth=3 * s)
+    for k in range(6):
+        a = math.tau * k / 6
+        g.line([(x + 66 * s, y - 30 * s), (x + 66 * s + math.cos(a) * 24 * s,
+                y - 30 * s + math.sin(a) * 24 * s)], (70, 72, 78), 2.6 * s)
+    g.line([(x + 92 * s, y - 64 * s), (x + 66 * s, y - 4 * s)], P.WOOD_D, 6 * s)
+
+
+def gaslamp(g, x, y, s):
+    """ガス灯. y=地面."""
+    g.line([(x, y), (x, y - 190 * s)], (58, 60, 66), 7 * s)
+    g.rrect((x - 14 * s, y - 236 * s, x + 14 * s, y - 190 * s), 8 * s,
+            fill=(226, 208, 160), outline=(172, 156, 118), owidth=2.6 * s)
+    g.poly([(x - 18 * s, y - 236 * s), (x + 18 * s, y - 236 * s), (x + 10 * s, y - 252 * s),
+            (x - 10 * s, y - 252 * s)], fill=(58, 60, 66))
+    gl = radial((int(160 * s * g.ss), int(160 * s * g.ss)), (255, 216, 150),
+                alpha_in=120, power=2.2)
+    g.img.alpha_composite(gl, (int((x - 80 * s) * g.ss), int((y - 316 * s) * g.ss)))
+
+
+def schoolhouse(g, x, y, s, seed=0):
+    """洋風小学校. s=1 で幅約 420px. y=地面."""
+    rect(g, x - 210 * s, y - 150 * s, x + 210 * s, y, fill=(214, 210, 200),
+         outline=shade((214, 210, 200), 0.76), owidth=2.6 * s)
+    curved_roof(g, x, y - 150 * s, 240 * s, 120 * s, 36 * s, (88, 90, 84),
+                shade((88, 90, 84), 0.8), lift=8 * s, s=s)
+    rect(g, x - 14 * s, y - 90 * s, x + 14 * s, y, fill=(88, 74, 64))
+    for wx in (-150, -80, 80, 150):
+        g.rrect((x + wx * s - 26 * s, y - 110 * s, x + wx * s + 26 * s, y - 60 * s), 3 * s,
+                fill=(196, 212, 210), outline=shade((214, 210, 200), 0.68), owidth=2.2 * s)
+    g.line([(x - 210 * s, y - 108 * s), (x + 210 * s, y - 108 * s)], shade((214, 210, 200),
+           0.72), 4 * s)
+    # 国旗
+    g.line([(x + 250 * s, y), (x + 250 * s, y - 240 * s)], P.WOOD_D, 6 * s)
+    rect(g, x + 250 * s, y - 240 * s, x + 322 * s, y - 196 * s, fill=(238, 238, 236))
+    g.circle(x + 286 * s, y - 218 * s, 15 * s, fill=P.SHU, outline=shade(P.SHU, 0.7),
+             owidth=2)
+
+
+def castle_ruins(g, x, y, s, seed=0):
+    """廃藩で取り壊された城跡 (石垣と崩れた柵)."""
+    g.ellipse((x - 300 * s, y - 8 * s, x + 300 * s, y + 14 * s),
+              fill=with_alpha((60, 60, 52), 50))
+    rect(g, x - 260 * s, y - 90 * s, x + 260 * s, y, fill=shade(P.ISHIGAKI, 0.88),
+         outline=shade(P.ISHIGAKI, 0.68), owidth=3 * s)
+    for k in range(4):
+        yy = y - 90 * s + k * 22 * s
+        g.line([(x - 260 * s, yy), (x + 260 * s, yy)], shade(P.ISHIGAKI, 0.7), 3.4 * s)
+    # 崩れた石 (散在)
+    rnd = random.Random(seed)
+    for _ in range(10):
+        px = x + rnd.uniform(-240, 240) * s
+        py = y - rnd.uniform(90, 130) * s
+        g.rrect((px, py, px + rnd.uniform(14, 26) * s, py + rnd.uniform(8, 14) * s),
+                2 * s, fill=shade(P.ISHIGAKI, rnd.uniform(0.75, 1.1)),
+                outline=shade(P.ISHIGAKI, 0.66), owidth=1.8 * s)
+
+
+def war_ruins(g, x, y, s, seed=0):
+    """焼け野原の廃墟 (鉄骨と瓦礫). s=1 で幅約 900px. y=地面."""
+    rnd = random.Random(seed)
+    ground_y = y
+    for k in range(6):
+        px = x - 380 * s + k * 150 * s
+        ph = rnd.uniform(70, 150) * s
+        rect(g, px, ground_y - ph, px + 110 * s, ground_y, fill=(96, 94, 92),
+             outline=(72, 70, 68), owidth=2.6 * s)
+        # 焼けた鉄骨
+        for b in range(3):
+            bx = px + 20 * s + b * 34 * s
+            g.line([(bx, ground_y - ph), (bx, ground_y - ph - 30 * s)], (58, 56, 54),
+                   4.4 * s)
+        for w_ in range(3):
+            wx = px + rnd.uniform(10, 80) * s
+            wy = ground_y - rnd.uniform(20 * s, ph - 16 * s)
+            g.rrect((wx, wy, wx + 26 * s, wy + 18 * s), 2 * s, fill=(52, 50, 48))
+    # 瓦礫
+    speckle(g, (x - 430 * s, ground_y - 20 * s, x + 430 * s, ground_y + 10 * s), 130,
+            [(110, 106, 100), (130, 126, 120), (88, 86, 84)], r=(3 * s, 8 * s), seed=seed)
