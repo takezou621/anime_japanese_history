@@ -37,7 +37,7 @@
       "speaker": "sensei"
     },
     "narration/s02_b04.wav": {
-      "tts_text": "話し合いで江戸を救ったのだ!えらいのだ!",
+      "tts_text": "話し合いで江戸を救ったのだ!",
       "speaker": "manabu"
     },
     "narration/s03_b00.wav": {
@@ -293,7 +293,7 @@
       "speaker": "manabu"
     },
     "narration/s14_b00.wav": {
-      "tts_text": "侍たちの不満は、ついに戦いになったのだ?",
+      "tts_text": "侍の不満は、戦いになったのだ?",
       "speaker": "manabu"
     },
     "narration/s14_b01.wav": {
@@ -301,7 +301,7 @@
       "speaker": "sensei"
     },
     "narration/s14_b02.wav": {
-      "tts_text": "最後の武士、かっこよすぎるのだ…",
+      "tts_text": "最後の武士なのだ…",
       "speaker": "manabu"
     },
     "narration/s15_b00.wav": {
@@ -381,7 +381,7 @@
       "speaker": "sensei"
     },
     "narration/s14_b03.wav": {
-      "tts_text": "また、せいふは1879ねん、りゅうきゅうを、おきなわけんとする、りゅうきゅうしょぶんを、おこないました。りゅうきゅうの、ひとびとの、あゆみも、まなびます。",
+      "tts_text": "また1879ねん、りゅうきゅうを、おきなわけんとする、りゅうきゅうしょぶんを、おこないました。りゅうきゅうの、ひとびとの、あゆみも、まなびます。",
       "speaker": "sensei"
     },
     "narration/s14_b04.wav": {
@@ -406,6 +406,6 @@
     }
   },
   "dict_sha256": "068183c8b3f1",
-  "generated_at": "2026-11-15T04:35:04",
+  "generated_at": "2026-11-15T05:02:52",
   "voice_sha256": "4a55213461bf"
 }
