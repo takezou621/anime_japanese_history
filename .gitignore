@@ -1,8 +1,11 @@
-video/
+video/*.mp4
+video/*_parts/
+video/_smoke/
 audio/ep*/narration/
 audio/ep*/bgm.wav
 audio/ep*/mix.wav
-assets/**/_tmp/
+audio/ep_test/
 __pycache__/
 *.pyc
 .DS_Store
+na.wav
