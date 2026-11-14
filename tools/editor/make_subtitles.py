@@ -92,12 +92,14 @@ def _get_tokenizer():
 
 
 def bunsetsu_starts(text: str) -> list[tuple[int, bool, bool]]:
-    """(offset, strong, proper_junction) where a bunsetsu starts.
+    """(offset, strong, proper_junction) where a CONTENT word starts.
 
-    strong=False marks junctions that are morpheme boundaries but risky cut
-    points (noun compounds 縄文|時代, before suffixes 645|年).
-    proper_junction=True marks noun junctions touching a 固有名詞 (平城|上皇)
-    — the worst cut points, only used as a last resort."""
+    Marking rule (qa-visual P2 fix): only content classes (名詞/動詞/形容詞/
+    副詞/連体詞/感動詞/接頭辞) start a bunsetsu — 助詞/助動詞/接尾/記号 attach
+    backward and NEVER mark a boundary, so conjugation pieces (でし|ょう,
+    退けられ|ます) and compounds with suffixes (数十|軒) stay whole.
+    proper_junction=True flags noun junctions touching a 固有名詞 (worst cut
+    points, last resort)."""
     tk = _get_tokenizer()
     if not tk:
         return []
@@ -109,13 +111,12 @@ def bunsetsu_starts(text: str) -> list[tuple[int, bool, bool]]:
             pi = m.part_of_speech()
             pos1, pos2 = (pi[0], pi[1]) if isinstance(pi, (list, tuple)) \
                 else (str(pi), "")
-            if pos1 not in ("助詞", "助動詞") and not pos1.startswith("補助記号"):
-                strong = not (pos1 in ("接尾", "数詞", "助動詞") or
-                              prev_pos[0] in ("接頭辞", "数詞") or
-                              (prev_pos[0] == "名詞" and pos1 == "名詞"))
+            content = pos1 in ("名詞", "動詞", "形容詞", "副詞", "連体詞",
+                               "感動詞", "接頭辞") or pos1 == "名詞"
+            if content:
                 proper = ("固有" in pos2 or "固有" in prev_pos[1]) \
-                    and pos1 == "名詞" and prev_pos[0] == "名詞"
-                marks.append((pos, strong, proper))
+                    and prev_pos[0] == "名詞" and pos1 == "名詞"
+                marks.append((pos, True, proper))
                 prev_pos = (pos1, pos2)
             pos += len(m.surface())
         return marks
@@ -411,6 +412,7 @@ def build_events(script: dict, timing: dict) -> list[dict]:
                 "label": (ch.get("name") if ch else "") or "",
                 "color": (ch.get("subtitle_color") if ch else "") or "",
                 "text": sb.get("text", ""),
+                "margin_v": 250 if sc.get("section") == "points" else MARGIN_V,
             })
             prev_end = events[-1]["end"]
     return events
@@ -461,8 +463,9 @@ def render_ass(events: list[dict]) -> str:
                             marginv=MARGIN_V)]
     for ev in events:
         for st, en, txt in event_to_dialogues(ev):
+            mv = ev.get("margin_v", MARGIN_V)
             lines.append(f"Dialogue: 0,{ass_time(st)},{ass_time(en)},"
-                         f"Sub,,0,0,0,,{txt}\n")
+                         f"Sub,,0,0,{mv},,{txt}\n")
     return "".join(lines)
 
 
