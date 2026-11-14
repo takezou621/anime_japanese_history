@@ -102,13 +102,38 @@ class Normalizer:
 
 
 # ---------------------------------------------------------------- 入力読込
-def load_beats(root: Path, episode: str) -> list[dict]:
+def load_pronunciation(root: Path, dict_path: str | None, no_dict: bool) -> tuple[dict, str | None, object]:
+    """make_narration.py の発音辞書ローダと置換関数を取得する (ロジック再利用)。
+
+    戻り値 (pdict, dict_sha, apply_fn)。辞書が無い/読めない場合は空辞書で縮退し、
+    ASR突合は継続する (audio pipeline が実際に使った辞書と不一致になる可能性は
+    results.dict_sha で判別できる)。
+    """
+    if no_dict:
+        return {}, None, None
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "audio"))
+        from make_narration import DEFAULT_DICT_PATH, apply_pronunciation, load_pronunciation_dict
+
+        path = dict_path or str(root / DEFAULT_DICT_PATH)
+        if not Path(path).exists():
+            print(f"[asr] 警告: 発音辞書がありません: {path} (置換なしで継続)")
+            return {}, None, None
+        pdict, sha = load_pronunciation_dict(path)
+        return pdict, sha, apply_pronunciation
+    except ImportError as e:
+        print(f"[asr] 警告: make_narration を import できず辞書置換をスキップ: {e}")
+        return {}, None, None
+
+
+def load_beats(root: Path, episode: str, pdict: dict, apply_fn) -> list[dict]:
     """script.json と timing.json を突合してビート列を作る。
 
-    比較元テキストは TTS 入力 (beat.reading があればそれ, 無ければ text)。
-    表示用に元の text も保持する。音声は reading 指定の読みで発話されるため、
-    漢字表記からの pykakasi 既定読みと乖離する固有名詞 (中大兄皇子=なかのおおえ
-    等) では text 直接比較だと正規化文字列が不一致になる。
+    比較元テキストは実際の TTS 入力: beat.reading (あれば) + 発音辞書置換
+    (make_narration.apply_pronunciation と同一ロジック) を適用したもの。
+    音声は reading 指定・辞書指定の読みで発話されるため、漢字表記からの
+    pykakasi 既定読みと乖離する固有名詞 (中大兄皇子=なかのおおえ 等) では
+    text 直接比較だと正規化文字列が不一致になる。
     """
     script = json.loads((root / f"content/episodes/{episode}/script.json").read_text())
     timing = json.loads((root / f"audio/{episode}/timing.json").read_text())
@@ -118,9 +143,12 @@ def load_beats(root: Path, episode: str) -> list[dict]:
     if len(sb) != len(tb):
         raise SystemExit(f"{episode}: script beats={len(sb)} と timing beats={len(tb)} が不一致です")
     beats = []
-    for (sid_s, bi_s, tts_text, display), (sid_t, bi_t, t) in zip(sb, tb):
+    for (sid_s, bi_s, raw_tts, display), (sid_t, bi_t, t) in zip(sb, tb):
         if (sid_s, bi_s) != (sid_t, bi_t):
             raise SystemExit(f"{episode}: ビートID不整合 script={sid_s}_b{bi_s:02d} timing={sid_t}_b{bi_t:02d}")
+        tts_text = raw_tts
+        if pdict:
+            tts_text, _repls = apply_fn(raw_tts, pdict)
         beats.append({"beat_id": f"{sid_s}_b{bi_t:02d}", "start": float(t["start"]),
                       "duration": float(t["duration"]), "tts_text": tts_text, "text": display})
     return beats
@@ -203,7 +231,8 @@ def transcribe(mix: Path, model_size: str, device: str, compute_type: str) -> tu
 
 
 # ---------------------------------------------------------------- 本体
-def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normalizer) -> dict:
+def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normalizer,
+                pdict: dict, apply_fn, dict_sha: str | None) -> dict:
     """1 エピソード分を処理し results dict を返す (main で overall_pass を参照)。"""
     mix = root / f"audio/{episode}/mix.wav"
     if not mix.exists():
@@ -220,7 +249,8 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
             overall_pass = False
         return {"overall_pass": overall_pass, "skipped": True, "out_path": str(out_path)}
 
-    beats = load_beats(root, episode)
+    beats = load_beats(root, episode, pdict, apply_fn)
+
     t0 = time.monotonic()
     segments, audio_dur = transcribe(mix, args.model, args.device, args.compute_type)
     elapsed = time.monotonic() - t0
@@ -261,6 +291,7 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
         "beats": len(beat_rows),
         "threshold": args.threshold,
         "review_threshold": args.review_threshold,
+        "dict_sha": dict_sha,
         "overall_similarity": None if overall is None else round(overall, 4),
         "overall_pass": overall_pass,
         "beat_pass": n_pass, "beat_fail": n_fail, "beat_na": n_na,
@@ -288,6 +319,9 @@ def main() -> int:
                     help="全体一致率のゲート (既定 0.70。回帰検知用途 — 2026-11-15 lead 承認)")
     ap.add_argument("--review-threshold", type=float, default=0.6,
                     help="ビート別要確認リストの閾値 (既定 0.6)")
+    ap.add_argument("--dict", default=None,
+                    help="発音辞書 JSON (既定: tools/audio/pronunciation_dict.json — make_narration と同一)")
+    ap.add_argument("--no-dict", action="store_true", help="発音辞書置換を無効化")
     ap.add_argument("--out-dir", default="reports", help="出力ディレクトリ (既定 reports)")
     ap.add_argument("--root", default=".", help="リポジトリルート (既定 カレント)")
     ap.add_argument("--force", action="store_true", help="出力済みでも再実行する")
@@ -297,6 +331,9 @@ def main() -> int:
     if bool(args.all) == bool(args.episode):
         ap.error("--episode epNN か --all のどちらか一方を指定してください")
     root = Path(args.root).resolve()
+    pdict, dict_sha, apply_fn = load_pronunciation(root, args.dict, args.no_dict)
+    if pdict:
+        print(f"[asr] 発音辞書: {len(pdict)} 語 (sha256[:12]={dict_sha})")
     norm = Normalizer()
     if norm.mode == "fallback":
         print("[asr] 警告: pykakasi が無いため kanji→kana 正規化なし (fallback) — 一致率が低く出ます")
@@ -305,7 +342,7 @@ def main() -> int:
     exit_code = 0
     for ep in episodes:
         try:
-            result = run_episode(root, ep, args, norm)
+            result = run_episode(root, ep, args, norm, pdict, apply_fn, dict_sha)
             if not result.get("overall_pass", False) and not result.get("skipped"):
                 exit_code = 1
         except SystemExit as e:
