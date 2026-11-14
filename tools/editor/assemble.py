@@ -65,15 +65,14 @@ XFADE_DUR = 0.5          # section crossfade (STYLE_GUIDE / DESIGN)
 SUPER_W, SUPER_H = 5760, 3240   # 3x supersampled zoompan input
 CONTIG_TOL = 0.02
 
-# character sprite placement (artist recommendation + lead验收 2026-11-14):
-# feet/ground line at CHAR_FEET_Y (above the subtitle band, top ≈ 924-948px).
-# Open Peeps bust-up sprites (2026-11-14 swap) draw the bust in the TOP of the
-# 900x1400 canvas (~500px transparent tail), so anchoring is CONTENT-aware:
-# scale caps at CHAR_SCALE_MAX and targets CHAR_CONTENT_W for the visible
-# bust width, and the alpha bbox bottom — not the canvas bottom — sits on
-# CHAR_FEET_Y. Works for any sprite layout.
+# character sprite placement (content-aware box-fit, lead spec 2026-11-15):
+# scale = min(CHAR_CONTENT_W / content_w, CHAR_CONTENT_H / content_h) so ANY
+# sprite layout fits the placement box; the content alpha-bbox bottom lands
+# on CHAR_FEET_Y. (full-body Open Peeps: 202x696 content -> scale 1.121,
+# character spans y150-930, feet on the ground line)
 CHAR_CONTENT_W = 500.0     # visible content width target (px on canvas)
-CHAR_SCALE_MAX = 0.68      # hard cap for char_* layers
+CHAR_CONTENT_H = 780.0     # visible content height target (feet 930, top ~150)
+CHAR_SCALE_MAX = 1.5       # absolute safety ceiling (avoid upsampling tiny art)
 CHAR_FEET_Y = 930.0
 
 _bbox_cache: dict[str, tuple] = {}
@@ -332,17 +331,18 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
         pos = a.get("pos") or [MAIN_W / 2, MAIN_H / 2]
         px, py = float(pos[0]), float(pos[1])
         if _is_char(name):
-            # content-aware placement: the visible bust width targets
-            # CHAR_CONTENT_W (capped), and the content bbox bottom sits on
-            # CHAR_FEET_Y regardless of how the composer lays out the canvas.
+            # content-aware box-fit placement: scale fits the content inside
+            # the CHAR_CONTENT_W x CHAR_CONTENT_H box (width OR height bound,
+            # whichever is smaller), and the content bbox bottom sits on
+            # CHAR_FEET_Y regardless of canvas layout.
             # layer_motion treats px/py as the SPRITE center, so convert:
             #   content center x = (sprite left) + content_cx*scale
             #   content bottom y = (sprite top)  + bb*scale
             raw = float(a.get("scale", 1.0) or 1.0)
             bl, bt, br, bb = _alpha_bbox(str(path))
-            cw = max(br - bl, 1)
-            scale = (CHAR_CONTENT_W / cw if raw == 1.0
-                     else min(raw, CHAR_SCALE_MAX))
+            cw, chh = max(br - bl, 1), max(bb - bt, 1)
+            scale = (min(CHAR_CONTENT_W / cw, CHAR_CONTENT_H / chh)
+                     if raw == 1.0 else min(raw, CHAR_SCALE_MAX))
             scale = min(scale, CHAR_SCALE_MAX)
             content_cx = (bl + br) / 2.0
         tw, th = max(2, int(round(iw * scale)) // 2 * 2), \
