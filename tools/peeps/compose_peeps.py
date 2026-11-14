@@ -105,6 +105,60 @@ def render_png(svg_str: str, out_png: Path, width: int) -> Image.Image:
     return Image.open(png_path).convert("RGBA")
 
 
+# 表情オーバーレイ (faceパーツの座標系に直接描くパッチ).
+# face_Calm の目 (x60-122/186-226, y108-147) と 口 (x122-190, y160-240) を基準にする。
+EXPRESSIONS = {
+    "surprised": [
+        {"op": "patch", "cx": 156, "cy": 205, "rx": 56, "ry": 42},
+        {"op": "omouth", "cx": 156, "cy": 200, "rx": 24, "ry": 32},
+        {"op": "patch", "cx": 91, "cy": 128, "rx": 36, "ry": 26},
+        {"op": "patch", "cx": 206, "cy": 128, "rx": 36, "ry": 26},
+        {"op": "eye", "cx": 91, "cy": 124},
+        {"op": "eye", "cx": 206, "cy": 124},
+    ],
+    "smile": [
+        {"op": "patch", "cx": 156, "cy": 205, "rx": 58, "ry": 44},
+        {"op": "grin", "cx": 156, "cy": 198, "rx": 58, "ry": 44},
+    ],
+    "serious": [
+        {"op": "patch", "cx": 156, "cy": 205, "rx": 56, "ry": 42},
+        {"op": "flatmouth", "cx": 156, "cy": 212, "w": 62},
+    ],
+}
+
+
+def expression_svg(name: str | None, skin_fill) -> str:
+    """表情パッチの SVG 断片を返す (faceグループ内に挿入)."""
+    if not name or name not in EXPRESSIONS:
+        return ""
+    skin = f"#{skin_fill[0]:02x}{skin_fill[1]:02x}{skin_fill[2]:02x}" \
+        if isinstance(skin_fill, (tuple, list)) else str(skin_fill)
+    out = []
+    for op in EXPRESSIONS[name]:
+        kind = op["op"]
+        if kind == "patch":
+            out.append(f'<ellipse cx="{op["cx"]}" cy="{op["cy"]}" '
+                       f'rx="{op["rx"]}" ry="{op["ry"]}" fill="{skin}"/>')
+        elif kind == "omouth":
+            out.append(f'<ellipse cx="{op["cx"]}" cy="{op["cy"]}" '
+                       f'rx="{op["rx"]}" ry="{op["ry"]}" fill="{INK}"/>')
+        elif kind == "eye":
+            out.append(f'<circle cx="{op["cx"]}" cy="{op["cy"]}" r="21" fill="{INK}"/>')
+            out.append(f'<circle cx="{op["cx"] - 7}" cy="{op["cy"] - 8}" r="7" '
+                       f'fill="#fffdf7"/>')
+        elif kind == "grin":
+            cx, cy, rx, ry = op["cx"], op["cy"], op["rx"], op["ry"]
+            out.append(f'<path d="M{cx - rx} {cy} A {rx} {ry} 0 0 0 {cx + rx} {cy} Z" '
+                       f'fill="{INK}"/>')
+            out.append(f'<rect x="{cx - rx + 6}" y="{cy}" width="{2 * rx - 12}" '
+                       f'height="{ry * 0.34:.0f}" fill="#fffdf7"/>')
+        elif kind == "flatmouth":
+            out.append(f'<line x1="{op["cx"] - op["w"] / 2}" y1="{op["cy"]}" '
+                       f'x2="{op["cx"] + op["w"] / 2}" y2="{op["cy"]}" '
+                       f'stroke="{INK}" stroke-width="9" stroke-linecap="round"/>')
+    return "".join(out)
+
+
 def compose_fullbody(char: dict) -> Image.Image:
     """全身立ち絵を 900x1400 キャンバスに生成 (2パス計測アラインメント)。"""
     ink = INK
@@ -120,7 +174,8 @@ def compose_fullbody(char: dict) -> Image.Image:
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -900 1400 4800">'
         f'<g transform="translate(225 0) translate(359 366) scale({char["head_scale"]}) '
         f'translate(-359 -366)">{CP_load(char["hair"], ink, char["head"])}'
-        '<g transform="translate(159 186)">' + CP_load(char["face"], ink, char["head"]) + "</g>"
+        '<g transform="translate(159 186)">' + CP_load(char["face"], ink, char["head"])
+        + expression_svg(char.get("face_expr"), char["head"]) + "</g>"
         '<g transform="translate(47 241)">' + (CP_load(char["acc"], ink, char["head"]) if char["acc"] else "") + "</g>"
         "</g></svg>",
         work_png(f"{char.get('_tag', 'c')}_head.png"), 1400)
@@ -136,7 +191,8 @@ def compose_fullbody(char: dict) -> Image.Image:
         f'<g transform="translate({225 + ddx:.0f} {ddy:.0f}) translate(359 366) '
         f'scale({char["head_scale"]}) translate(-359 -366)">'
         + CP_load(char["hair"], ink, char["head"])
-        + '<g transform="translate(159 186)">' + CP_load(char["face"], ink, char["head"]) + "</g>"
+        + '<g transform="translate(159 186)">' + CP_load(char["face"], ink, char["head"])
+        + expression_svg(char.get("face_expr"), char["head"]) + "</g>"
         + '<g transform="translate(47 241)">' + (CP_load(char["acc"], ink, char["head"]) if char["acc"] else "") + "</g>"
         + "</g></svg>")
     full = render_png(full_svg, work_png(f"{char.get('_tag', 'c')}_full.png"), 1400)
@@ -243,6 +299,10 @@ def main(argv=None):
     p.add_argument("--out", default="assets/ep01/overlay")
     p.add_argument("--only", choices=list(CHARACTERS), default=None)
     p.add_argument("--mode", choices=["fullbody", "bust"], default="fullbody")
+    p.add_argument("--face", choices=list(EXPRESSIONS), default=None,
+                   help="表情オーバーレイ (surprised/smile/serious)")
+    p.add_argument("--suffix", default="",
+                   help="出力ファイル名の末尾に付ける差分サフィックス")
     a = p.parse_args(argv)
     out_dir = Path(a.out)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -250,19 +310,21 @@ def main(argv=None):
     for cid in targets:
         char = dict(CHARACTERS[cid])
         char["_tag"] = cid
+        if a.face:
+            char["face_expr"] = a.face
         if a.mode == "fullbody":
             full = compose_fullbody(char)
             canvas = place_on_canvas(full)
             if char.get("flip"):
                 canvas = ImageOps.mirror(canvas)
-            out = out_dir / f"{cid}.png"
+            out = out_dir / f"{cid}{a.suffix}.png"
             canvas.save(out, "PNG")
             print(f"saved: {out}")
         else:
             bust = compose_bust(char)
             if char.get("flip"):
                 bust = ImageOps.mirror(bust)
-            out = out_dir / f"{cid}_bust.png"
+            out = out_dir / f"{cid}{a.suffix}_bust.png"
             bust.save(out, "PNG")
             print(f"saved: {out}")
     return 0

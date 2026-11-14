@@ -280,6 +280,15 @@ def gen_props():
     return outs
 
 
+def gen_next_episode_card():
+    """汎用の次回予告カード背景 (assets/common/ui/) を生成."""
+    out_dir = ASSETS_ROOT / "common" / "ui"
+    img = ui.next_episode_card()
+    p = save(img, out_dir / "bg_next_episode.png")
+    print(f"  ui shared {p.name}")
+    return p
+
+
 def gen_ui_badges():
     """era_badge / keyword_card 等のサンプルセット (script.json の文言準拠)."""
     eras = [
@@ -317,6 +326,7 @@ def gen_ui_badges():
         sub = kw[2] if len(kw) > 2 else None
         img = ui.keyword_card(text, sub=sub)
         outs.append(save(img, UI_DIR / f"{name}.png"))
+        outs.append(save(ui.keyword_card_red(text, sub=sub), UI_DIR / f"{name}_red.png"))
     img = ui.year_number("239年")
     outs.append(save(img, UI_DIR / "year_239.png"))
     img = ui.title_main("アニメ日本史ラボ")
@@ -418,6 +428,8 @@ def gen_ui_badges_ep02():
     for kw in keywords:
         img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
         outs.append(save(img, udir / f"{kw[0]}.png"))
+        outs.append(save(ui.keyword_card_red(kw[1], sub=kw[2] if len(kw) > 2 else None),
+                         udir / f"{kw[0]}_red.png"))
     for yr, name in (("645年", "year_645"), ("701年", "year_701"), ("710年", "year_710")):
         outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
     outs.append(save(ui.title_main("アニメ日本史ラボ 第2話"), udir / "title_main.png"))
@@ -473,6 +485,8 @@ def gen_ui_badges_ep10():
     for kw in keywords:
         img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
         outs.append(save(img, udir / f"{kw[0]}.png"))
+        outs.append(save(ui.keyword_card_red(kw[1], sub=kw[2] if len(kw) > 2 else None),
+                         udir / f"{kw[0]}_red.png"))
     for yr, name in (("1894年", "year_1894"), ("1904年", "year_1904"),
                      ("1925年", "year_1925"), ("1945年", "year_1945")):
         outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
@@ -512,6 +526,8 @@ def gen_ui_badges_ep09():
     for kw in keywords:
         img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
         outs.append(save(img, udir / f"{kw[0]}.png"))
+        outs.append(save(ui.keyword_card_red(kw[1], sub=kw[2] if len(kw) > 2 else None),
+                         udir / f"{kw[0]}_red.png"))
     for yr, name in (("1868年", "year_1868"), ("1871年", "year_1871"),
                      ("1872年", "year_1872"), ("1877年", "year_1877")):
         outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
@@ -551,6 +567,8 @@ def gen_ui_badges_ep08():
     for kw in keywords:
         img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
         outs.append(save(img, udir / f"{kw[0]}.png"))
+        outs.append(save(ui.keyword_card_red(kw[1], sub=kw[2] if len(kw) > 2 else None),
+                         udir / f"{kw[0]}_red.png"))
     for yr, name in (("1853年", "year_1853"), ("1860年", "year_1860"),
                      ("1867年", "year_1867")):
         outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
@@ -590,6 +608,8 @@ def gen_ui_badges_ep07():
     for kw in keywords:
         img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
         outs.append(save(img, udir / f"{kw[0]}.png"))
+        outs.append(save(ui.keyword_card_red(kw[1], sub=kw[2] if len(kw) > 2 else None),
+                         udir / f"{kw[0]}_red.png"))
     for yr, name in (("1600年", "year_1600"), ("1603年", "year_1603"),
                      ("1637年", "year_1637"), ("1639年", "year_1639")):
         outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
@@ -631,6 +651,8 @@ def gen_ui_badges_ep06():
     for kw in keywords:
         img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
         outs.append(save(img, udir / f"{kw[0]}.png"))
+        outs.append(save(ui.keyword_card_red(kw[1], sub=kw[2] if len(kw) > 2 else None),
+                         udir / f"{kw[0]}_red.png"))
     for yr, name in (("1560年", "year_1560"), ("1582年", "year_1582"),
                      ("1590年", "year_1590")):
         outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
@@ -672,6 +694,8 @@ def gen_ui_badges_ep05():
     for kw in keywords:
         img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
         outs.append(save(img, udir / f"{kw[0]}.png"))
+        outs.append(save(ui.keyword_card_red(kw[1], sub=kw[2] if len(kw) > 2 else None),
+                         udir / f"{kw[0]}_red.png"))
     for yr, name in (("1336年", "year_1336"), ("1392年", "year_1392"),
                      ("1467年", "year_1467")):
         outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
@@ -713,6 +737,8 @@ def gen_ui_badges_ep04():
     for kw in keywords:
         img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
         outs.append(save(img, udir / f"{kw[0]}.png"))
+        outs.append(save(ui.keyword_card_red(kw[1], sub=kw[2] if len(kw) > 2 else None),
+                         udir / f"{kw[0]}_red.png"))
     for yr, name in (("1185年", "year_1185"), ("1192年", "year_1192"),
                      ("1221年", "year_1221"), ("1232年", "year_1232")):
         outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
@@ -772,6 +798,8 @@ def gen_ui_badges_ep03():
     for kw in keywords:
         img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
         outs.append(save(img, udir / f"{kw[0]}.png"))
+        outs.append(save(ui.keyword_card_red(kw[1], sub=kw[2] if len(kw) > 2 else None),
+                         udir / f"{kw[0]}_red.png"))
     outs.append(save(ui.year_number("794年"), udir / "year_794.png"))
     outs.append(save(ui.title_main("アニメ日本史ラボ 第3話"), udir / "title_main.png"))
     manifest = {"ep03_ui_assets": [p.name for p in outs]}
@@ -857,6 +885,7 @@ def main():
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
             gen_ui_badges_ep10()
+            gen_next_episode_card()
             gen_preview_generic("ep10", bg="bg_modern_growth")
         return
 
@@ -886,6 +915,7 @@ def main():
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
             gen_ui_badges_ep09()
+            gen_next_episode_card()
             gen_preview_generic("ep09", bg="bg_meiji_civilization")
         return
 
@@ -915,6 +945,7 @@ def main():
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
             gen_ui_badges_ep08()
+            gen_next_episode_card()
             gen_preview_generic("ep08", bg="bg_bakumatsu_blackship")
         return
 
@@ -944,6 +975,7 @@ def main():
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
             gen_ui_badges_ep07()
+            gen_next_episode_card()
             gen_preview_generic("ep07", bg="bg_edo_shogunate")
         return
 
@@ -973,6 +1005,7 @@ def main():
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
             gen_ui_badges_ep06()
+            gen_next_episode_card()
             gen_preview_generic("ep06", bg="bg_azuchi_castle")
         return
 
@@ -1002,6 +1035,7 @@ def main():
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
             gen_ui_badges_ep05()
+            gen_next_episode_card()
             gen_preview_generic("ep05", bg="bg_muromachi_kinkaku")
         return
 
@@ -1031,6 +1065,7 @@ def main():
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
             gen_ui_badges_ep04()
+            gen_next_episode_card()
             gen_preview_generic("ep04", bg="bg_kamakura_shogunate")
         return
 
@@ -1060,6 +1095,7 @@ def main():
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
             gen_ui_badges_ep03()
+            gen_next_episode_card()
             gen_preview_ep03(bg="bg_heian_mansion")
         return
 
@@ -1089,6 +1125,7 @@ def main():
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
             gen_ui_badges_ep02()
+            gen_next_episode_card()
             gen_preview_ep02(bg="bg_nara_capital")
         return
 
@@ -1129,6 +1166,7 @@ def main():
         gen_characters()
         gen_props()
         gen_ui_badges()
+        gen_next_episode_card()
         gen_preview()
 
 
