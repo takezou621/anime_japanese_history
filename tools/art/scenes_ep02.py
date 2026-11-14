@@ -456,3 +456,48 @@ def bg_nara_field(cv):
     # どんよりとした光
     vig = radial((int(W * cv.ss), int(H * cv.ss)), (70, 74, 90), alpha_in=60, power=2.6)
     cv.img.alpha_composite(vig)
+
+def bg_timeline(cv):
+    """ep02 用ポイント背景 — 飛鳥〜奈良のタイムライン (ノード直上に時代アイコン)."""
+    sky(cv, P.SKY_STUDIO)
+    g = cv.g()
+    # スタジオ意匠 (ep01 と共通の幾何学)
+    g.circle(1700, 200, 260, outline=with_alpha(P.UI_WHITE, 40), owidth=40)
+    g.circle(1700, 200, 170, outline=with_alpha(P.YAMABUKI, 70), owidth=10)
+    g.circle(170, 900, 210, outline=with_alpha(P.UI_WHITE, 34), owidth=30)
+    g.circle(170, 900, 130, fill=with_alpha(P.INDIGO_L, 90))
+    for i in range(7):
+        g.line([(i * 300 - 200, 0), (i * 300 + 160, 1080)],
+               with_alpha(P.UI_WHITE, 14), 60)
+    dots_pattern(g, (0, 0, 500, 400), 44, 5, P.UI_WHITE, alpha=46, seed=1)
+    dots_pattern(g, (1420, 680, W, H), 44, 5, P.UI_WHITE, alpha=46, seed=2)
+    # タイムライン帯
+    band_y = 830
+    g.rrect((120, band_y, 1800, band_y + 140), 70, fill=with_alpha((20, 34, 68), 210),
+            outline=with_alpha(P.UI_WHITE, 110), owidth=4)
+    nodes = [320, 750, 1180, 1610]
+    labels = ["飛鳥", "大化の改新", "律令国家", "奈良"]
+    icon_y = band_y - 26
+    for i, nx in enumerate(nodes):
+        # アイコンの背後の光
+        g.ellipse((nx - 120, icon_y - 220, nx + 120, icon_y + 6),
+                  fill=with_alpha((255, 255, 255), 22))
+        if i < 3:
+            g.line([(nx + 64, band_y + 70), (nodes[i + 1] - 64, band_y + 70)],
+                   with_alpha(P.UI_WHITE, 150), 6)
+            g.poly([(nodes[i + 1] - 60, band_y + 70), (nodes[i + 1] - 84, band_y + 58),
+                    (nodes[i + 1] - 84, band_y + 82)], fill=with_alpha(P.UI_WHITE, 150))
+        g.circle(nx, band_y + 70, 46, fill=P.INDIGO, outline=P.YAMABUKI, owidth=6)
+        g.circle(nx, band_y + 70, 9, fill=P.YAMABUKI)
+        # 時代ラベル (ノードの下・帯の中)
+        g.text((nx, band_y + 118), labels[i], 27, (214, 224, 248), "bold", "mm")
+    # ノード直上に時代アイコン (左→右: 塔 / 使船 / 大極殿 / 朱雀門)
+    pagoda(g, nodes[0], icon_y, 0.27, seed=1)
+    envoy_ship(g, nodes[1], icon_y - 64, 0.36, sails=1, flag=False, figures=False, seed=2)
+    daigokuden(g, nodes[2], icon_y, 0.25, lit=False, seed=3)
+    suzakumon(g, nodes[3], icon_y, 0.32, lit=False, seed=4)
+    # 光
+    gl = radial((int(1400 * cv.ss), int(900 * cv.ss)), (90, 120, 200),
+                alpha_in=50, power=2.4)
+    cv.img.alpha_composite(gl, (int(260 * cv.ss), int(160 * cv.ss)))
+

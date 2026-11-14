@@ -48,9 +48,10 @@ EP_SCENES = {
             "bg_nara_capital": S2.bg_nara_capital,
             "bg_nara_temple": S2.bg_nara_temple,
             "bg_nara_field": S2.bg_nara_field,
+            "bg_timeline": S2.bg_timeline,
         },
         "priority": ["bg_asuka_palace", "bg_nara_capital"],
-        "reused": ["bg_school_lab", "bg_school_lab_evening", "bg_timeline", "bg_quiz_board"],
+        "reused": ["bg_school_lab", "bg_school_lab_evening", "bg_quiz_board"],
     },
 }
 
