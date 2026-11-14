@@ -2280,3 +2280,112 @@ def japan_map_trade(g, x, y, s, seed=0):
             y - h / 2 + 34 * s)], (176, 90, 70), 5 * s)
     g.line([(x + w / 2 - 82 * s, y - h / 2 + 60 * s), (x + w / 2 - 58 * s,
             y - h / 2 + 60 * s)], (110, 110, 120), 4 * s)
+
+
+# ================================================================ ep08 (幕末)
+
+
+def black_ship(g, x, y, s, seed=0, smoke=True):
+    """黒船 (ペリーの蒸気軍艦). s=1 で全長約 520px. y=喫水線."""
+    hull = P.BLACKSHIP
+    L = 260 * s
+    g.ellipse((x - L * 1.05, y + 8 * s, x + L * 1.05, y + 22 * s),
+              fill=with_alpha((26, 34, 48), 90))
+    top = ([(x - L, y - 64 * s)]
+           + qbez((x - L, y - 64 * s), (x - L * 0.3, y - 38 * s), (x, y - 32 * s), 12)
+           + qbez((x, y - 32 * s), (x + L * 0.3, y - 38 * s), (x + L, y - 68 * s), 12))
+    bot = ([(x + L * 0.97, y + 2 * s)]
+           + qbez((x + L * 0.97, y + 2 * s), (x + L * 0.2, y + 18 * s), (x, y + 19 * s), 12)
+           + qbez((x, y + 19 * s), (x - L * 0.2, y + 18 * s), (x - L * 0.97, y + 2 * s), 12))
+    g.poly(top + bot, fill=hull, outline=shade(hull, 0.7), owidth=3 * s)
+    # 砲門の並び
+    for k in range(7):
+        g.rrect((x - L * 0.75 + k * L * 0.22, y - 44 * s, x - L * 0.75 + k * L * 0.22 + 14 * s,
+                 y - 34 * s), 2 * s, fill=(28, 30, 36))
+    # 外輪 (パドルホイールの箱)
+    for sx in (-1, 1):
+        wx = x + sx * L * 0.42
+        g.rrect((wx - 22 * s, y - 96 * s, wx + 22 * s, y - 24 * s), 6 * s,
+                fill=shade(hull, 0.85), outline=shade(hull, 0.6), owidth=2.6 * s)
+        for k in range(6):
+            a = math.tau * k / 6
+            g.rrect((wx + math.cos(a) * 12 * s - 4 * s, y - 62 * s + math.sin(a) * 22 * s - 4 * s,
+                     wx + math.cos(a) * 12 * s + 4 * s, y - 62 * s + math.sin(a) * 22 * s + 4 * s),
+                    2 * s, fill=shade(hull, 1.2))
+    # マスト (帆を収めた状態) と索
+    for mx in (-150 * s, -60 * s, 150 * s):
+        mx = x + mx
+        g.line([(mx, y - 62 * s), (mx, y - 190 * s)], shade(hull, 0.8), 6 * s)
+        g.poly([(mx, y - 186 * s), (mx + 56 * s, y - 178 * s), (mx, y - 168 * s)],
+               fill=(210, 208, 202), outline=shade(hull, 0.7), owidth=2.2 * s)
+        g.line([(mx + 40 * s, y - 62 * s), (mx + 40 * s, y - 180 * s)],
+               with_alpha((210, 208, 202), 150), 1.8 * s)
+    # 煙突と煙
+    for (sx_, h_) in [(-90 * s, 90 * s), (-40 * s, 104 * s)]:
+        px = x + sx_
+        g.rrect((px - 10 * s, y - 62 * s - h_, px + 10 * s, y - 58 * s), 4 * s,
+                fill=(64, 66, 72), outline=shade(hull, 0.6), owidth=2.4 * s)
+        g.rrect((px - 12 * s, y - 62 * s - h_, px + 12 * s, y - 58 * s - h_ + 6 * s), 3 * s,
+                fill=shade(hull, 1.2))
+    if smoke:
+        smoke_wisp(g, x - 40 * s, y - 178 * s, 1.6 * s, color=(84, 84, 88), alpha=190,
+                   seed=seed)
+        smoke_wisp(g, x - 92 * s, y - 164 * s, 1.3 * s, color=(84, 84, 88), alpha=170,
+                   seed=seed + 1)
+    # 星条旗
+    fx = x + L * 0.78
+    g.line([(fx, y - 60 * s), (fx, y - 132 * s)], shade(hull, 0.9), 4.4 * s)
+    for k, c in enumerate([(180, 62, 56), (240, 240, 240), (46, 74, 138)]):
+        g.rrect((fx, y - 132 * s + k * 20 * s, fx + 48 * s, y - 132 * s + (k + 1) * 20 * s),
+                2 * s, fill=c)
+    rect(g, fx, y - 132 * s, fx + 20 * s, y - 112 * s, fill=(58, 74, 140))
+
+
+def snow_gate(g, x, y, s, seed=0):
+    """桜田門 (雪の積もる御門). y=地面."""
+    # 石垣の門
+    g.rrect((x - 240 * s, y - 120 * s, x + 240 * s, y), 10 * s,
+            fill=shade(P.ISHIGAKI, 0.95), outline=shade(P.ISHIGAKI, 0.7), owidth=3 * s)
+    # 櫓 (門の上の建物)
+    rect(g, x - 130 * s, y - 210 * s, x + 130 * s, y - 120 * s, fill=(104, 92, 84),
+           outline=shade((104, 92, 84), 0.8), owidth=2.6 * s)
+    curved_roof(g, x, y - 210 * s, 168 * s, 104 * s, 40 * s, P.TILE, shade(P.TILE, 0.85),
+                s=s)
+    rect(g, x - 36 * s, y - 92 * s, x + 36 * s, y - 6 * s, fill=(60, 52, 50))
+    # 雪の積もり (屋根と石垣の上端)
+    g.line(qbez((x - 168 * s, y - 216 * s), (x, y - 252 * s), (x + 168 * s, y - 216 * s), 14),
+           (240, 244, 248), 14 * s)
+    g.line([(x - 240 * s, y - 118 * s), (x + 240 * s, y - 118 * s)], (240, 244, 248), 9 * s)
+    rnd = random.Random(seed)
+    for _ in range(10):
+        px = x + rnd.uniform(-230, 230) * s
+        py = y - rnd.uniform(20, 110) * s
+        g.ellipse((px - 16 * s, py - 5 * s, px + 16 * s, py + 5 * s),
+                  fill=with_alpha((240, 244, 248), 200))
+
+
+def shishi(g, x, y, s, col=(64, 54, 62), sword=True, seed=0):
+    """志士 (着流し+日本刀の立姿). y=地面."""
+    # 脚 (袴)
+    g.poly([(x - 20 * s, y - 66 * s), (x - 8 * s, y - 66 * s), (x - 12 * s, y),
+            (x - 22 * s, y)], fill=col, outline=shade(col, 0.7), owidth=2 * s)
+    g.poly([(x + 8 * s, y - 66 * s), (x + 20 * s, y - 66 * s), (x + 22 * s, y),
+            (x + 12 * s, y)], fill=col, outline=shade(col, 0.7), owidth=2 * s)
+    # 胴
+    g.rrect((x - 22 * s, y - 132 * s, x + 22 * s, y - 60 * s), 8 * s, fill=col,
+            outline=shade(col, 0.7), owidth=2.2 * s)
+    # 肩に羽織の陰
+    g.rrect((x - 26 * s, y - 134 * s, x + 26 * s, y - 96 * s), 8 * s,
+            fill=shade(col, 0.85), outline=shade(col, 0.7), owidth=2 * s)
+    # 頭 (髷)
+    g.circle(x, y - 152 * s, 20 * s, fill=P.SKIN, outline=P.OUTLINE, owidth=2.4 * s)
+    g.rrect((x - 20 * s, y - 174 * s, x + 20 * s, y - 156 * s), 6 * s,
+            fill=(44, 38, 42), outline=shade((44, 38, 42), 0.7), owidth=2 * s)
+    g.circle(x, y - 178 * s, 8 * s, fill=(44, 38, 42))
+    g.line([(x - 8 * s, y - 152 * s), (x - 3 * s, y - 152 * s)], P.OUTLINE, 2.4 * s)
+    g.line([(x + 3 * s, y - 152 * s), (x + 8 * s, y - 152 * s)], P.OUTLINE, 2.4 * s)
+    # 刀 (腰に差す or 抜く)
+    if sword:
+        g.line([(x + 10 * s, y - 96 * s), (x + 74 * s, y - 160 * s)], (150, 148, 156), 5 * s)
+        g.line([(x + 74 * s, y - 160 * s), (x + 84 * s, y - 170 * s)], (96, 66, 52), 6 * s)
+        g.rrect((x + 4 * s, y - 102 * s, x + 16 * s, y - 92 * s), 3 * s, fill=(70, 52, 44))
