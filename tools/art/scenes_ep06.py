@@ -11,11 +11,13 @@ from artlib import palette as P
 from artlib.canvas import (Canvas, blob_pts, dots_pattern, gradient, qbez,
                            radial, shade, speckle, tint, with_alpha)
 from artlib.nature import (birds, cloud, clouds_row, forest_band, grass_tufts,
-                           ground, mountain_ridge, ridge, sky, stars, sun, tree)
+                           ground, moon, mountain_ridge, reeds_fg, ridge, sky,
+                           stars, sun, tree)
 from artlib.props import (arquebusier, atakebune, azuchi_castle, bakeblock_fence,
                           banner_pole, boat, campfire, gold_screen, kabuto,
                           kango_ship, mongol_ship, nobori, osaka_castle,
-                          ox_cart, samurai_rider, smoke_wisp, tenshu, torii)
+                          ox_cart, samurai_rider, smoke_wisp, tenshu, tile_roof_house,
+                          torii, torch, warehouse)
 from artlib.props import kenchi_stakes, rect, seedling
 from scenes_ep01 import bow_and_arrows
 
@@ -159,7 +161,7 @@ def bg_azuchi_honnoji(cv):
            speckles=130, speckle_colors=[(48, 38, 48), (64, 50, 60)],
            speckle_r=(2, 5))
     # 寺の建物 (シルエット)
-    g.rect(g, 300, 560, 900, 700, fill=(64, 50, 56))
+    rect(g, 300, 560, 900, 700, fill=(64, 50, 56))
     g.poly([(288, 560), (912, 560), (860, 496), (340, 496)], fill=(52, 42, 50))
     for px in range(330, 901, 90):
         rect(g, px, 580, px + 22, 700, fill=(46, 36, 44))
