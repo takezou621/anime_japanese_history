@@ -47,7 +47,7 @@ content/episodes/epNN/script.json   (writer: 脚本)
 ## 技術スタック
 
 - **音声**: VOICEVOX engine (四国めたん=ヒスト先生 / ずんだもん=マナブ, キャラ設定はオリジナル)
-- **作画**: Python + Pillow (アニメ調フラットアート, スーパーサンプリング, 完全コード描画)
+- **作画**: Python + Pillow (アニメ調フラットアート背景, 完全コード描画) + キャラクターは Open Peeps (CC0) 素材をコンポーザで合成
   + 任意で AI 生成 (tools/aigen: 画像 draft→選定→final / Veo は採用画像の i2v のみ。
   script.json に visual.ai を追記するだけで有効, 月$10クレジット予算ガード付き)
 - **編集**: ffmpeg (zoompan Ken Burns / AIクリップ正規化 / xfade / ASS字幕焼き込み / loudnorm 2パス)
