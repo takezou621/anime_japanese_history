@@ -1,0 +1,861 @@
+{
+  "episode": "ep07",
+  "series": "日本史はじめて物語",
+  "title": "徳川家康の江戸幕府と鎖国",
+  "youtube": {
+    "description": "中学受験・高校受験対策アニメ『アニメ日本史ラボ』第7話!\n徳川家康が開いた江戸幕府。戦の世を閉じて、260年の平和と鎖国の仕組みを作った大プロジェクトを、ヒスト先生とマナブの対話で楽しく学びます。\n江戸幕府成立(1603年)・征夷大将軍・幕府の体制(老中・三奉行)・大名の3分類(親藩/譜代/外様)・参勤交代(1635年)・キリスト教禁止(1612年)・島原の乱(1637年)・鎖国(1639年)・出島と長崎・四つの窓口(対馬/薩摩/松前)・町人文化の芽(元禄文化への布石)まで、テスト頻出をぎゅっと整理。クイズ3問つき!\n\n▼タイムスタンプ(目安)\n0:00 オープニング\n0:15 関ヶ原と江戸幕府の成立(1603年)\n0:40 幕府の体制(老中・三奉行)\n1:00 大名の3分類(親藩/譜代/外様)\n1:25 参勤交代(1635年)\n1:50 キリスト教の禁止(1612年)\n2:10 島原の乱(1637年)\n2:35 鎖国の完成(1639年)\n3:00 出島とオランダ\n3:15 四つの窓口\n3:35 江戸のくらしと町人\n3:55 元禄文化への布石\n4:15 260年の平和と課題\n4:30 受験ポイントまとめ\n5:00 クイズ3問\n5:30 エンディング・次回予告\n\n※時間は目安です。シリーズ: 日本史はじめて物語(全10話)\n次回 第8話「ペリー来航!幕末の動乱」もお楽しみに!\n\n音声: VOICEVOX(四国めたん・ずんだもん)/キャラクターデザインはオリジナル\n#日本史 #中学受験",
+    "tags": [
+      "日本史",
+      "中学受験",
+      "中学歴史",
+      "高校受験",
+      "江戸時代",
+      "徳川家康",
+      "江戸幕府",
+      "参勤交代",
+      "島原の乱",
+      "鎖国",
+      "出島",
+      "長崎",
+      "歴史アニメ",
+      "アニメ日本史ラボ",
+      "勉強動画"
+    ],
+    "thumbnail": { "headline": "江戸幕府 鎖国!", "sub": "家康の仕組み 受験必須" }
+  },
+  "characters": [
+    {
+      "id": "sensei",
+      "name": "ヒスト先生",
+      "voice_style": "四国めたん/ノーマル",
+      "speed_scale": 1.22,
+      "pitch": 0.0,
+      "subtitle_color": "#7ec8e3"
+    },
+    {
+      "id": "manabu",
+      "name": "マナブ",
+      "voice_style": "ずんだもん/ノーマル",
+      "speed_scale": 1.22,
+      "pitch": 0.0,
+      "subtitle_color": "#8be27e"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "section": "opening",
+      "duration_hint_sec": 15,
+      "visual": {
+        "background": "bg_school_lab",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "こんにちは!ヒスト先生です。",
+          "overlay_text": [ { "text": "アニメ日本史ラボ 第7話", "style": "title_main", "motion": "fade_up" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "第7話は、徳川家康の江戸幕府。戦の世を閉じて、260年の平和を作りあげる、大物の物語です!"
+        },
+        {
+          "speaker": "manabu",
+          "text": "マナブなのだ!鎖国って、国に鍵をかける話なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、でも鍵をかけた理由と仕組みは、受験のいちばん大事な部分なんです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "わくわくの予感なのだ!レッツゴー!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s02",
+      "section": "story",
+      "duration_hint_sec": 21,
+      "visual": {
+        "background": "bg_edo_shogunate",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "家康って、どんな人なのだ?",
+          "overlay_text": [ { "text": "1603年 江戸幕府", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "織田・豊臣のもとで力を貯め続けた、忍耐家です。1600年の関ヶ原の戦いで最大の敵対勢力を破り、天下の実権を握ります。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "関ヶ原の戦い 1600年", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "おだ・とよとみの、もとで、ちからを、ためつづけた、にんたいかです。1600ねんの、せきがはらの、たたかいで、さいだいの、てきたいせいりょくを、やぶり、てんかの、じっけんを、にぎります。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "忍耐の男、家康なのだ!じっくり型なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そして1603年、家康は征夷大将軍に就任して、江戸に幕府を開きます。江戸とは、今の東京のことです。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1603年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "江戸幕府", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "そして1603ねん、いえやすは、せいいたいしょうぐんに、しゅうにんして、えどに、ばくふを、ひらきます。えどとは、いまの、とうきょうの、ことです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "260年史の、スタートなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "まずは、幕府の力の秘密から、見ていきましょう!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s03",
+      "section": "story",
+      "duration_hint_sec": 19,
+      "visual": {
+        "background": "bg_edo_government",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "幕府の中身は、どうなってるのだ?",
+          "overlay_text": [ { "text": "幕府の体制", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "将軍を支えるのは老中で、いざというときの大老も置かれます。政治の実務は、三奉行が担当しました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "老中・三奉行", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "しょうぐんを、ささえるのは、ろうじゅうで、いざというときの、たいろうも、おかれます。せいじの、じつむは、さんぶぎょうが、たんとうしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "三奉行って、なにをする人たちなのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "寺社奉行・町奉行・勘定奉行の三人です。寺や神社の相談、江戸の治安、幕府のお財布を、それぞれ管理しました。",
+          "reading": "じしゃぶぎょう、まちぶぎょう、かんじょうぶぎょうの、さんにんです。てらや、じんじゃの、そうだん、えどの、ちあん、ばくふの、おさいふを、それぞれ、かんりしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "好きな奉行は、町奉行なのだ!江戸のヒーローなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s04",
+      "section": "story",
+      "duration_hint_sec": 20,
+      "visual": {
+        "background": "bg_edo_daimyo",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "大名って、みんな仲良しなのだ?",
+          "overlay_text": [ { "text": "大名の3分類", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "いいえ、幕府は大名を三つに分けて、力のバランスを管理しました。家康の一族の親藩、古くからの家臣の譜代、後から従った外様です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "親藩・譜代・外様", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "いいえ、ばくふは、だいみょうを、みっつに、わけて、ちからの、バランスを、かんりしました。いえやすの、いちぞくの、しんぱん、ふるくからの、かけしんの、ふだい、あとから、したがった、とざまです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "「いつからの仲間か」で分ける、合理主義なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そのとおり。幕府の重要な役職は譜代が占め、外様は国境や遠方に配置して、力を分散しました。",
+          "reading": "そのとおり。ばくふの、じゅうような、やくしょくは、ふだいが、しめ、とざまは、こっかいや、えんぽうに、はいちして、ちからを、ぶんさんしました。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "親藩の御三家は、将軍の家系が絶えたときの後継ぎ役も兼ねる、特別な一族です。",
+          "overlay_text": [ { "text": "御三家", "style": "keyword_card", "motion": "pop_in" } ],
+          "reading": "しんぱんの、ごさんけは、しょうぐんの、かけいが、たえたときの、あとつぎやくも、かねる、とくべつな、いちぞくです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "分けて、管理なのだ!頭が上がらないのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s05",
+      "section": "story",
+      "duration_hint_sec": 19,
+      "visual": {
+        "background": "bg_edo_sankinkotai",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_l", "intensity": 1.2 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "大名は、ずっと国にいるのだ?",
+          "overlay_text": [ { "text": "参勤交代", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "いいえ、大名は1年おきに江戸と領国を往復するルール、参勤交代が設けられます。1635年に制度化しました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1635年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "参勤交代", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "いいえ、だいみょうは、ひととしおきに、えどと、りょうごくを、おうふくする、ルール、さんきんこうたいが、もうけられます。1635ねんに、せいどかしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "1年ごとに、引っ越すなんて大変なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "しかも妻子は江戸に住まわせて、人質のような形です。費用もかさみ、大名はどんどん経済的に弱ります。",
+          "reading": "しかも、つまこは、えどに、すまわせて、ひとじちの、ような、かたちです。ひようも、かさみ、だいみょうは、どんどん、けいざいてきに、よわります。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "江戸と領国を行き来する、大名行列の風景が日本中に広がります。",
+          "reading": "えどと、りょうごくを、いききする、だいみょうぎょうれつの、ふうけいが、にほんじゅうに、ひろがります。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "戦わずして、大名を弱らせるのだ!?"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s06",
+      "section": "story",
+      "duration_hint_sec": 17,
+      "visual": {
+        "background": "bg_edo_kirishitan",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "外国人は、まだ来てるのだ?",
+          "overlay_text": [ { "text": "1612年 キリスト教禁止", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、スペインやポルトガルが南蛮貿易をしていて、キリスト教も日本じゅうに広がっていました。",
+          "reading": "ええ、スペインや、ポルトガルが、なんばんぼうえきを、していて、キリストきょうも、にほんじゅうに、ひろがって、いました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "信じる自由も、だめになっちゃうのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "1612年、幕府はキリスト教を禁止します。外国と組んだ大名が強くなるのを、幕府はとても恐れたんです。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1612年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "キリスト教禁止", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "1612ねん、ばくふは、キリストきょうを、きんしします。がいこくと、くんだ、だいみょうが、つよくなるのを、ばくふは、とても、おそれたん、です。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "ルールは、幕府だけのものなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s07",
+      "section": "story",
+      "duration_hint_sec": 19,
+      "visual": {
+        "background": "bg_edo_shimabara",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "禁止されて、どうなったのだ?",
+          "overlay_text": [ { "text": "1637年 島原の乱", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1637年、九州の島原で、キリシタンの農民たちが一揆を起こします。指導者は、17歳の天草四郎時貞でした。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1637年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "島原の乱", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "1637ねん、きゅうしゅうの、しまばらで、キリシタンの、のうみんたちが、いっきを、おこします。しどうしゃは、じゅうななさいの、あまくさ、しろうときさだでした。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "一揆って、反乱のことなのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そう、重い年貢と宗教の弾圧が重なった大反乱です。幕府は大軍を送り、ようやく鎮圧しました。",
+          "reading": "そう、おもい、ねんぐと、しゅうきょうの、だんあつが、かさなった、だいはんらんです。ばくふは、たいぐんを、おくり、ようやく、ちんあつしました。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "この乱で幕府は、民の不満を恐れるようになります。鎖国の理由にもつながる大事な事件です。",
+          "reading": "この、らんで、ばくふは、たみの、ふまんを、おそれるように、なります。さこくの、りゆうにも、つながる、だいじな、じけんです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "世の中の仕組みに、不満がカチカチなのだ…"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s08",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_edo_sakoku",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "これが、鎖国への道なのだ?",
+          "overlay_text": [ { "text": "1639年 鎖国", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、キリスト教や外国との結びつきを、少しずつ切ります。1639年、ポルトガル船の来航を禁止して、鎖国が完成しました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1639年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "鎖国", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ええ、キリストきょうや、がいこくとの、むすびつきを、すこしずつ、きります。1639ねん、ポルトガルせんの、らいこうを、きんしして、さこくが、かんせいしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "国に、大きな鍵をかけたのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、これで大名の勝手な貿易も、外国人の布教もできなくなりました。窓口を持つのは、幕府だけです。",
+          "reading": "ええ、これで、だいみょうの、かってな、ぼうえきも、がいこくじんの、ふきょうも、できなくなりました。まどぐちを、もつのは、ばくふだけです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "「鍵」は幕府が持つのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s09",
+      "section": "story",
+      "duration_hint_sec": 16,
+      "visual": {
+        "background": "bg_edo_dejima",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "完全に、閉じたのだ?",
+          "overlay_text": [ { "text": "出島とオランダ", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "いいえ、長崎の出島だけは、オランダとの貿易を続けました。扇形の人工島が、外国の唯一の拠点です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "出島", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "いいえ、ながさきの、でじまだけは、オランダとの、ぼうえきを、つづけました。おうぎがたの、じんこうとうが、がいこくの、ゆいいつの、きょてんです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "窓口は、そこだけなのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、オランダは布教をしないので、幕府も貿易を許しました。新しい知識も、この窓口から入ってきます。",
+          "reading": "ええ、オランダは、ふきょうを、しないので、ばくふも、ぼうえきを、ゆるしました。あたらしい、ちしきも、この、まどぐちから、はいってきます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "知識の窓口、だいじなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s10",
+      "section": "story",
+      "duration_hint_sec": 16,
+      "visual": {
+        "background": "bg_edo_trade",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_r", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "窓口は、出島だけなのだ?",
+          "overlay_text": [ { "text": "四つの窓口", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、ほかにも窓口があります。対馬藩は朝鮮、薩摩藩は琉球、松前藩はアイヌと、交易を続けました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "対馬・薩摩・松前", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ええ、ほかにも、まどぐちが、あります。つしまはんは、ちょうせん、さつまはんは、りゅうきゅう、まつまえばんは、アイヌと、こうえきを、つづけました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "鎖国なのに、四つの窓口なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そう、完全な閉じ方ではなく、幕府が管理する窓口だけが開いています。物も、情報も、ここから入りました。",
+          "reading": "そう、かんぜんな、とじかたではなく、ばくふが、かんりする、まどぐちだけが、ひらいて、います。ものも、じょうほうも、ここから、はいりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "四つの窓口、ちゃんとメモしたのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s11",
+      "section": "story",
+      "duration_hint_sec": 17,
+      "visual": {
+        "background": "bg_edo_town",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "260年の平和って、どんな平和なのだ?",
+          "overlay_text": [ { "text": "江戸のくらし", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "戦のない世の中で、人や物が動き、町が大きくなります。江戸は今の東京のように、大都市へ成長しました。",
+          "reading": "たたかいのない、よのなかで、ひとや、ものが、うごき、まちが、おおきく、なります。えどは、いまの、とうきょうの、ように、だいとしへ、せいちょうしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "人口ドカドカなのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、武家と町人で江戸はあふれ、商人たちが、どんどん経済の力を持ち始めます。",
+          "reading": "ええ、ぶっけと、ちょうにんで、えどは、あふれ、しょうにんたちが、どんどん、けいざいの、ちからを、もち、はじめます。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "武家の町・商人の町が混ざり、江戸独自の文化も育ち始めます。",
+          "reading": "ぶっけの、まち・しょうにんの、まちが、まざり、えどどくじの、ぶんかも、そだち、はじめます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "町人パワー、台頭なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s12",
+      "section": "story",
+      "duration_hint_sec": 17,
+      "visual": {
+        "background": "bg_edo_culture",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "平和な世の中で、文化は生まれるのだ?",
+          "overlay_text": [ { "text": "町人文化の芽", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、大坂や京都を中心に、お金持になった町人が文化を作ります。のちに「元禄文化」と呼ばれる花の芽です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "元禄文化", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ええ、おおさかや、きょうとを、ちゅうしんに、おかねもちに、なった、ちょうにんが、ぶんかを、つくります。のちに、「げんろくぶんか」と、よばれる、はなの、めです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "町人が、文化の主役なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、芝居や小説、俳句の楽しみが広がっていきます。平和こそが、文化の栄養なんですよ。",
+          "reading": "ええ、しばいや、しょうせつ、はいくの、たのしみが、ひろがって、いきます。へいわこそが、ぶんかの、えいようなん、ですよ。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "平和は、文化の肥料になるのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s13",
+      "section": "story",
+      "duration_hint_sec": 16,
+      "visual": {
+        "background": "bg_edo_dusk",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_l", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "この平和は、ずっと続くのだ?",
+          "overlay_text": [ { "text": "260年の平和", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "江戸幕府は260年以上続き、日本の土台をしっかり固めます。でも、鎖国と身分の固定化が、後の大きな課題になります。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" }
+          ],
+          "reading": "えどばくふは、260ねんいじょう、つづき、にほんの、どだいを、しっかり、かためます。でも、さこくと、みぶんの、こていかが、あとの、おおきな、かだいに、なります。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "固定化って、身動きできないことなのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そのとおり、歪みが開くのはずっと後の幕末です。詳しくは第8話で!",
+          "reading": "そのとおり、ひずみが、ひらくのは、ずっとあとの、ばくまつです。くわしくは、だいはちわで!"
+        },
+        {
+          "speaker": "manabu",
+          "text": "江戸の260年、まずはポイントまとめなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s14",
+      "section": "points",
+      "duration_hint_sec": 14,
+      "visual": {
+        "background": "bg_timeline",
+        "assets": [
+          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "ここから受験ポイントのまとめ!まずは、幕府の土台。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "幕府の土台", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1603年家康が征夷大将軍で江戸幕府、体制は老中と三奉行、大名は親藩・譜代・外様、そして参勤交代は1635年に制度化。",
+          "reading": "1603ねん、いえやすが、せいいたいしょうぐんで、えどばくふ。たいせいは、ろうじゅうと、さんぶぎょう。だいみょうは、しんぱん・ふだい・とざま、そして、さんきんこうたいは、1635ねんに、せいどか。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "「鎖国への道」の流れは、後半でやりますね。",
+          "reading": "「さこくへのみち」の、ながれは、こうはんで、やりますね。"
+        }
+      ],
+      "exam_points": [
+        { "keyword": "江戸幕府 1603年", "detail": "徳川家康が征夷大将軍に就任(江戸=東京)。" },
+        { "keyword": "老中・大老・三奉行", "detail": "老中が常時、大老は非常時。寺社・町・勘定の三奉行。" },
+        { "keyword": "大名の3分類", "detail": "親藩(一族)/譜代(古家臣)/外様(後から従属)。御三家は後継ぎ役。" },
+        { "keyword": "参勤交代 1635年", "detail": "1年おき江戸と領国を往復。妻子は江戸に、大名を経済的に弱める。" },
+        { "keyword": "関ヶ原の戦い 1600年", "detail": "家康が敵対勢力を破り、天下の実権を握る。" }
+      ]
+    },
+    {
+      "id": "s15",
+      "section": "points",
+      "duration_hint_sec": 14,
+      "visual": {
+        "background": "bg_timeline",
+        "assets": [
+          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "後半は、鎖国への道のりです。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "鎖国への道", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "キリスト教禁止1612年、島原の乱1637年、そして1639年鎖国。窓口は出島(オランダ)のほか、対馬=朝鮮、薩摩=琉球、松前=アイヌ。",
+          "reading": "キリストきょうきんし、1612ねん。しまばらのらん、1637ねん、そして、1639ねん、さこく。まどぐちは、でじま(オランダ)の、ほか、つしま=ちょうせん、さつま=りゅうきゅう、まつまえ=アイヌ。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "平和が町人を育て、元禄文化の芽になる。これで完璧です!",
+          "reading": "へいわが、ちょうにんを、そだて、げんろくぶんかの、めに、なる。これで、かんぺきです!"
+        }
+      ],
+      "exam_points": [
+        { "keyword": "キリスト教禁止 1612年", "detail": "外国と結ぶ大名を恐れて、布教を禁止。" },
+        { "keyword": "島原の乱 1637年", "detail": "九州のキリシタン農民一揆。天草四郎時貞、幕府が大軍で鎮圧。" },
+        { "keyword": "鎖国 1639年", "detail": "ポルトガル船の来航禁止で完成。" },
+        { "keyword": "出島・長崎", "detail": "扇形の人工島。オランダとの貿易が続く唯一の外国拠点。" },
+        { "keyword": "四つの窓口", "detail": "長崎=オランダ・中国、対馬=朝鮮、薩摩=琉球、松前=アイヌ。" }
+      ]
+    },
+    {
+      "id": "s16",
+      "section": "quiz",
+      "duration_hint_sec": 13,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "それではクイズタイム!第一問!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "1603年、徳川家康が就任して、江戸幕府を開いた役職は何でしょう?ア、征夷大将軍。イ、太政大臣。ウ、摂政。",
+          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "1603ねん、とくがわ、いえやすが、しゅうにんして、えどばくふを、ひらいた、やくしょくは、なんでしょう?ア、せいいたいしょうぐん。イ、だじょうだいじん。ウ、せっしょう。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "幕府のボス…アなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!征夷大将軍です。坂上田村麻呂のあの役名を、家康が受け継いだ形ですね。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s17",
+      "section": "quiz",
+      "duration_hint_sec": 12,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "第二問!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "関ヶ原の戦いの後、徳川氏に従った大名は何というでしょう?ア、親藩。イ、譜代。ウ、外様。",
+          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "せきがはらの、たたかいの、あと、とくがわしに、したがった、だいみょうは、なんというでしょう?ア、しんぱん。イ、ふだい。ウ、とざま。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "あとから仲間…ウなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!外様です。古い家臣が譜代、一族が親藩、三つで大名の分類です。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s18",
+      "section": "quiz",
+      "duration_hint_sec": 13,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "ラスト問題!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "1637年、キリシタンの農民たちが九州で起こした一揆は何でしょう?ア、島原の乱。イ、応仁の乱。ウ、承久の乱。",
+          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "1637ねん、キリシタンの、のうみんたちが、きゅうしゅうで、おこした、いっきは、なんでしょう?ア、しまばらのらん。イ、おうにんのらん。ウ、じょうきゅうのらん。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "キリシタンの一揆…アなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!島原の乱です。1637年、幕府が大軍を送って鎮圧した、大反乱でした。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s19",
+      "section": "ending",
+      "duration_hint_sec": 15,
+      "visual": {
+        "background": "bg_school_lab_evening",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "今日は江戸幕府の始まりと、鎖国の仕組みを、たっぷり見ました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "関ヶ原、参勤交代、島原の乱、鎖国、出島…家康、計算づくの天才なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "次回第8話は、ペリー来航の幕末編。鎖国の鍵が、いよいよ開く話、お楽しみに!",
+          "overlay_text": [ { "text": "次回 第8話 幕末", "style": "keyword_card", "motion": "pop_in" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "鍵が開くのだ!?チャンネル登録も、よろしくなのだ!"
+        }
+      ],
+      "exam_points": []
+    }
+  ],
+  "quiz": [
+    {
+      "q": "1603年、徳川家康が就任して、江戸幕府を開いた役職は何でしょう?",
+      "choices": ["征夷大将軍", "太政大臣", "摂政"],
+      "answer": 0,
+      "explain": "家康は1603年に征夷大将軍に就任し、江戸(東京)に幕府を開きました。"
+    },
+    {
+      "q": "関ヶ原の戦いの後、徳川氏に従った大名は何というでしょう?",
+      "choices": ["親藩", "譜代", "外様"],
+      "answer": 2,
+      "explain": "外様は関ヶ原後に従った大名。一族が親藩、古い家臣が譜代です。"
+    },
+    {
+      "q": "1637年、キリシタンの農民たちが九州で起こした一揆は何でしょう?",
+      "choices": ["島原の乱", "応仁の乱", "承久の乱"],
+      "answer": 0,
+      "explain": "島原の乱は天草四郎時貞を指導者とする一揆で、幕府が大軍で鎮圧しました。"
+    }
+  ]
+}
