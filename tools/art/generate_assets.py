@@ -25,6 +25,7 @@ from artlib import character, ui  # noqa: E402
 import scenes_ep01 as S  # noqa: E402
 import scenes_ep02 as S2  # noqa: E402
 import scenes_ep03 as S3  # noqa: E402
+import scenes_ep04 as S4  # noqa: E402
 from artlib.props import jomon_pot, keyhole_tomb, dotaku as dotaku_prop  # noqa: E402
 from artlib.props import haniwa as haniwa_prop  # noqa: E402
 
@@ -35,6 +36,26 @@ OVERLAY_DIR = ASSETS / "overlay"
 UI_DIR = ASSETS / "ui"
 
 EP_SCENES = {
+    "ep04": {
+        "dir": ASSETS_ROOT / "ep04",
+        "scenes": {
+            "bg_kamakura_rebellion": S4.bg_kamakura_rebellion,
+            "bg_kamakura_harbor": S4.bg_kamakura_harbor,
+            "bg_kamakura_uprising": S4.bg_kamakura_uprising,
+            "bg_kamakura_seabattle": S4.bg_kamakura_seabattle,
+            "bg_kamakura_shogunate": S4.bg_kamakura_shogunate,
+            "bg_kamakura_oath": S4.bg_kamakura_oath,
+            "bg_kamakura_shokyu": S4.bg_kamakura_shokyu,
+            "bg_kamakura_lawbook": S4.bg_kamakura_lawbook,
+            "bg_kamakura_mongol": S4.bg_kamakura_mongol,
+            "bg_kamakura_tokuso": S4.bg_kamakura_tokuso,
+            "bg_kamakura_jodo": S4.bg_kamakura_jodo,
+            "bg_kamakura_zen": S4.bg_kamakura_zen,
+            "bg_timeline": S4.bg_timeline,
+        },
+        "priority": ["bg_kamakura_seabattle", "bg_kamakura_shogunate"],
+        "reused": ["bg_school_lab", "bg_school_lab_evening", "bg_quiz_board"],
+    },
     "ep03": {
         "dir": ASSETS_ROOT / "ep03",
         "scenes": {
@@ -298,6 +319,67 @@ def copy_reused_assets(ep="ep02"):
     print("  reused char_sensei / char_manabu")
 
 
+def gen_ui_badges_ep04():
+    """ep04 のバッジセット."""
+    outs = []
+    udir = ASSETS_ROOT / "ep04" / "ui"
+    eras = [
+        ("era_heishi", "平氏政権", "平清盛の栄華"),
+        ("era_kamakura", "鎌倉幕府", "1192年 頼朝の開幕"),
+        ("era_shokyu", "承久の乱", "1221年 幕府の勝利"),
+        ("era_mongol", "元寇", "1274・1281年"),
+    ]
+    for name, main, sub in eras:
+        outs.append(save(ui.era_badge(main, sub=sub), udir / f"{name}.png"))
+    outs.append(save(ui.exam_banner("ここが受験ポイント!"), udir / "exam_banner.png"))
+    for i in (1, 2, 3):
+        outs.append(save(ui.exam_banner(f"クイズ 第{i}問"), udir / f"quiz_banner_{i}.png"))
+    keywords = [
+        ("keyword_heishi", "平氏政権", "平清盛 太政大臣"),
+        ("keyword_genpei", "源平合戦", "壇ノ浦 1185年"),
+        ("keyword_kamakura", "鎌倉幕府", "1192年 源頼朝"),
+        ("keyword_shugo", "守護・地頭"),
+        ("keyword_shokyu", "承久の乱", "1221年 後鳥羽上皇"),
+        ("keyword_seisei", "御成敗式目", "1232年 北条泰時"),
+        ("keyword_mongol", "元寇", "文永・弘安の役"),
+        ("keyword_tokuso", "得宗専制", "北条氏の独裁"),
+        ("keyword_jodo", "浄土教", "法然・親鸞"),
+        ("keyword_zen", "禅宗", "栄西・道元"),
+    ]
+    for kw in keywords:
+        img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
+        outs.append(save(img, udir / f"{kw[0]}.png"))
+    for yr, name in (("1185年", "year_1185"), ("1192年", "year_1192"),
+                     ("1221年", "year_1221"), ("1232年", "year_1232")):
+        outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
+    outs.append(save(ui.title_main("アニメ日本史ラボ 第4話"), udir / "title_main.png"))
+    manifest = {"ep04_ui_assets": [p.name for p in outs]}
+    (udir / "manifest.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  ui ep04 x{len(outs)}")
+    return outs
+
+
+def gen_preview_generic(ep="ep04", bg=None, ch_name="char_manabu",
+                        foot=(1360, 1012), scale=0.62):
+    from PIL import Image
+    bg = bg or {"ep02": "bg_asuka_palace", "ep03": "bg_heian_mansion",
+                "ep04": "bg_kamakura_shogunate"}[ep]
+    bg_img = Image.open(ASSETS_ROOT / ep / "scenes" / f"{bg}.png").convert("RGBA")
+    ch = Image.open(ASSETS_ROOT / ep / "overlay" / f"{ch_name}.png").convert("RGBA")
+    ch = ch.resize((int(ch.width * scale), int(ch.height * scale)), Image.LANCZOS)
+    base = Image.new("RGBA", bg_img.size, (0, 0, 0, 0))
+    base.alpha_composite(bg_img)
+    sh = Canvas(560, 120, ss=2)
+    sh.g().ellipse((40, 30, 520, 96), fill=(52, 40, 34, 96))
+    shadow = sh.render().resize((280, 60), Image.LANCZOS)
+    base.alpha_composite(shadow, (foot[0] - shadow.width // 2, foot[1] - 34))
+    base.alpha_composite(ch, (foot[0] - ch.width // 2, foot[1] - ch.height + 4))
+    p = save(base, ASSETS_ROOT / ep / "preview_composite.png")
+    print(f"  preview {p}")
+    return p
+
+
 def gen_ui_badges_ep03():
     """ep03 のバッジセット."""
     outs = []
@@ -373,7 +455,7 @@ def gen_preview_ep02(bg="bg_asuka_palace", ch_name="char_manabu",
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--ep", default="ep01", choices=["ep01", "ep02", "ep03"])
+    ap.add_argument("--ep", default="ep01", choices=["ep01", "ep02", "ep03", "ep04"])
     ap.add_argument("--only", nargs="*", help="生成するシーン名")
     ap.add_argument("--chars", action="store_true", help="立ち絵のみ")
     ap.add_argument("--props", action="store_true", help="小物オーバーレイのみ")
@@ -382,6 +464,35 @@ def main():
     ap.add_argument("--sheet", action="store_true", help="コンタクトシートのみ")
     ap.add_argument("--priority", action="store_true", help="優先シーンのみ")
     args = ap.parse_args()
+
+    if args.ep == "ep04":
+        spec = EP_SCENES["ep04"]
+        out_dir = spec["dir"] / "scenes"
+        if args.sheet:
+            gen_contact_sheet("/tmp/ajh_art/sheet_ep04.png", ep="ep04")
+            return
+        if args.preview:
+            gen_preview_generic("ep04")
+            return
+        if args.ui:
+            gen_ui_badges_ep04()
+            return
+        copy_reused_assets("ep04")
+        todo = args.only or (spec["priority"] if args.priority else list(spec["scenes"].keys()))
+        for name in todo:
+            fn = spec["scenes"].get(name)
+            if fn is None:
+                print(f"  !! unknown scene: {name}")
+                continue
+            cv = S4.new_canvas()
+            fn(cv)
+            img = cv.render()
+            p = save(img, out_dir / f"{name}.png")
+            print(f"  scene {p.name} {img.size}")
+        if not args.only and not args.priority:
+            gen_ui_badges_ep04()
+            gen_preview_generic("ep04", bg="bg_kamakura_shogunate")
+        return
 
     if args.ep == "ep03":
         spec = EP_SCENES["ep03"]

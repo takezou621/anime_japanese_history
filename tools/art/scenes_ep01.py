@@ -735,9 +735,12 @@ def bg_kofun_ships(cv):
 
 
 def bg_timeline(cv):
+    """ep01 用ポイント背景 — 旧石器〜古墳のタイムライン (ep02/03 と同デザイン).
+
+    ノード直上に時代アイコン、直下に時代ラベル。kenburns クロップ安全域つき。
+    """
     sky(cv, P.SKY_STUDIO)
     g = cv.g()
-    # 幾何学装飾 (大きい円・斜め帯・ドット)
     g.circle(1700, 200, 260, outline=with_alpha(P.UI_WHITE, 40), owidth=40)
     g.circle(1700, 200, 170, outline=with_alpha(P.YAMABUKI, 70), owidth=10)
     g.circle(170, 900, 210, outline=with_alpha(P.UI_WHITE, 34), owidth=30)
@@ -747,26 +750,29 @@ def bg_timeline(cv):
                with_alpha(P.UI_WHITE, 14), 60)
     dots_pattern(g, (0, 0, 500, 400), 44, 5, P.UI_WHITE, alpha=46, seed=1)
     dots_pattern(g, (1420, 680, W, H), 44, 5, P.UI_WHITE, alpha=46, seed=2)
-    # タイムライン帯
-    band_y = 820
-    g.rrect((120, band_y, 1800, band_y + 150), 75, fill=with_alpha((20, 34, 68), 210),
+    band_y = 830
+    g.rrect((120, band_y, 1800, band_y + 140), 70, fill=with_alpha((20, 34, 68), 210),
             outline=with_alpha(P.UI_WHITE, 110), owidth=4)
-    # ノード (旧石器→縄文→弥生→古墳)
     nodes = [320, 750, 1180, 1610]
+    labels = ["旧石器", "縄文", "弥生", "古墳時代"]
+    icon_y = band_y - 26
     for i, nx in enumerate(nodes):
-        g.circle(nx, band_y + 75, 52, fill=P.INDIGO, outline=P.YAMABUKI, owidth=6)
-        g.circle(nx, band_y + 75, 10, fill=P.YAMABUKI)
+        g.ellipse((nx - 120, icon_y - 220, nx + 120, icon_y + 6),
+                  fill=with_alpha((255, 255, 255), 22))
         if i < 3:
-            g.line([(nx + 60, band_y + 75), (nodes[i + 1] - 60, band_y + 75)],
+            g.line([(nx + 64, band_y + 70), (nodes[i + 1] - 64, band_y + 70)],
                    with_alpha(P.UI_WHITE, 150), 6)
-            g.poly([(nodes[i + 1] - 56, band_y + 75), (nodes[i + 1] - 80, band_y + 63),
-                    (nodes[i + 1] - 80, band_y + 87)], fill=with_alpha(P.UI_WHITE, 150))
-    # ノード上のミニアイコン
-    stone_tools(g, nodes[0], band_y - 36, 0.42)
-    jomon_pot(g, nodes[1], band_y - 40, 0.42, seed=2)
-    warehouse(g, nodes[2], band_y - 30, 0.34, ladder=False, seed=3)
-    keyhole_tomb(g, nodes[3], band_y - 120, 0.42, seed=4)
-    # 手前の光
+            g.poly([(nodes[i + 1] - 60, band_y + 70), (nodes[i + 1] - 84, band_y + 58),
+                    (nodes[i + 1] - 84, band_y + 82)], fill=with_alpha(P.UI_WHITE, 150))
+        g.circle(nx, band_y + 70, 46, fill=P.INDIGO, outline=P.YAMABUKI, owidth=6)
+        g.circle(nx, band_y + 70, 9, fill=P.YAMABUKI)
+        g.text((nx, band_y + 118), labels[i], 27, (214, 224, 248), "bold", "mm")
+    # ノード直上に時代アイコン (打製石器 / 土器+竪穴住居 / 銅鐸 / 前方後円墳)
+    stone_tools(g, nodes[0], icon_y, 1.15)
+    jomon_pot(g, nodes[1] - 52, icon_y, 0.52, seed=1)
+    pit_house(g, nodes[1] + 66, icon_y, 0.44, seed=2)
+    dotaku(g, nodes[2], icon_y + 2, 0.8, seed=3)
+    keyhole_tomb(g, nodes[3], icon_y - 62, 0.42, seed=4)
     gl = radial((int(1400 * cv.ss), int(900 * cv.ss)), (90, 120, 200),
                 alpha_in=50, power=2.4)
     cv.img.alpha_composite(gl, (int(260 * cv.ss), int(160 * cv.ss)))
