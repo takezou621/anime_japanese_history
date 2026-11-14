@@ -367,21 +367,28 @@ def final_filtergraph(spans: list[Span], ass_path: str | None,
     group_labels: list[str] = []
     for gi, idxs in enumerate(groups):
         if len(idxs) == 1:
-            group_labels.append(f"[{idxs[0]}:v]")
+            # raw file input: normalize timebase to match concat outputs
+            # (mp4 demuxer tb 1/15360 vs concat AVTB 1/1000000 breaks xfade)
+            lines.append(f"[{idxs[0]}:v]settb=AVTB[G{gi}];")
+            group_labels.append(f"[G{gi}]")
             continue
         ins = "".join(f"[{i}:v]" for i in idxs)
-        lines.append(f"{ins}concat=n={len(idxs)}:v=1:a=0[G{gi}];")
+        lines.append(f"{ins}concat=n={len(idxs)}:v=1:a=0,settb=AVTB[G{gi}];")
         group_labels.append(f"[G{gi}]")
 
     cur = group_labels[0]
     if len(groups) > 1:
+        # xfade offsets live on the LOCAL timeline of the rendered subset
+        # (--only-scenes subsets are not contiguous in global time)
+        content_before = 0.0
         for k in range(1, len(groups)):
-            boundary_idx = groups[k][0]          # first scene of next group
-            offset = spans[boundary_idx].start - XFADE_DUR
+            content_before += sum(spans[i].end - spans[i].start
+                                  for i in groups[k - 1])
+            offset = content_before - XFADE_DUR
             if offset <= 0:
                 raise SystemExit(
                     f"xfade offset <= 0 at boundary before "
-                    f"{spans[boundary_idx].sid} ({offset:.3f}s); scene too short")
+                    f"{spans[groups[k][0]].sid} ({offset:.3f}s); scene too short")
             lab = f"X{k}"
             lines.append(
                 f"{cur}{group_labels[k]}xfade=transition=fade:"
@@ -399,6 +406,27 @@ def final_filtergraph(spans: list[Span], ass_path: str | None,
                 f"fontsdir='/Library/Fonts',format=yuv420p[v]")
     lines.append(f"{burn_label}{tail}")
     return "\n".join(lines)
+
+
+def estimate_final_duration(spans: list[Span]) -> float:
+    """Expected final duration (matches final_filtergraph's construction).
+
+    Final length = last xfade offset + last group's segment durations, where
+    offsets are on the subset-local timeline. For a single group (no xfades)
+    this is just the sum of segment durations.
+    """
+    groups: list[list[int]] = []
+    for i, sp in enumerate(spans):
+        if i == 0 or spans[i - 1].section != sp.section:
+            groups.append([i])
+        else:
+            groups[-1].append(i)
+    if len(groups) == 1:
+        return sum(spans[i].dur for i in groups[0])
+    content_before = sum(spans[i].end - spans[i].start
+                         for gi in groups[:-1] for i in gi)
+    offset_last = content_before - XFADE_DUR
+    return offset_last + sum(spans[i].dur for i in groups[-1])
 
 
 def assemble_final(spans: list[Span], parts_dir: Path, ffmpeg: str,
@@ -548,10 +576,10 @@ def main() -> int:
                           str(band_png)):
         raise SystemExit(1)
 
-    # QC (partial renders check against the rendered plan total)
-    plan_total = spans[-1].end - spans[0].start
+    # QC (partials check against the rendered subset's expected duration)
+    qc_expected = estimate_final_duration(spans) if only else None
     qc = qcmod.run_checks(out, timing, a.profile, ffmpeg, ffprobe,
-                          expected=plan_total if only else None)
+                          expected=qc_expected)
     with open(qc_out, "w", encoding="utf-8") as f:
         json.dump(qc, f, ensure_ascii=False, indent=2)
     qcmod.print_summary(qc)

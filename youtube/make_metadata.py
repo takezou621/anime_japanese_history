@@ -37,13 +37,18 @@ def main(argv=None):
             if sec in sections and float(sections[sec]["start"]) > 0.5:
                 t = int(float(sections[sec]["start"]))
                 chapters.append(f"{t // 60:02d}:{t % 60:02d} {label.get(sec, sec)}")
-        if total > 0 and chapters:
-            t = max(0, int(total) - 1)
-            chapters.append(f"{t // 60:02d}:{t % 60:02d} エンディング・次回予告")
     except FileNotFoundError:
         pass
 
-    points = [s for scene in sc.get("scenes", []) for s in scene.get("exam_points", [])]
+    points_raw = [ep for scene in sc.get("scenes", []) for ep in scene.get("exam_points", [])]
+    points = []
+    for ep in points_raw:
+        if isinstance(ep, dict):
+            kw = ep.get("keyword", "")
+            dt = ep.get("detail", "")
+            points.append(f"{kw} — {dt}" if dt else str(kw))
+        else:
+            points.append(str(ep))
     quiz = sc.get("quiz", [])
 
     desc = yt.get("description", "")
