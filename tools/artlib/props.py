@@ -638,3 +638,434 @@ def banner_pole(g, x, y, s, flag=P.SHU, seed=0):
     pts += [(x + 8 * s, top), ]
     g.poly(pts, fill=flag, outline=shade(flag, 0.75), owidth=2.4 * s)
     g.circle(x + 74 * s, top + 46 * s, 16 * s, outline=P.UI_WHITE, owidth=3.5 * s)
+
+
+# ================================================================ ep02 (飛鳥・奈良)
+
+
+def curved_roof(g, cx, ye, rw, tw, rh, roof=None, roof_d=None, lift=12.0,
+                sag=10.0, outline_d=True, s=1.0):
+    """反りを持つ東屋根 (軒が両端で持ち上がる). ye=軒の基準Y."""
+    roof = roof or P.TILE
+    roof_d = roof_d or P.TILE_D
+    pts = ([(cx - tw, ye - rh), (cx + tw, ye - rh)]
+           + qbez((cx + tw, ye - rh), (cx + rw * 0.82, ye - rh * 0.25),
+                  (cx + rw, ye - lift), 10)
+           + qbez((cx + rw, ye - lift), (cx, ye + sag), (cx - rw, ye - lift), 12)
+           + qbez((cx - rw, ye - lift), (cx - rw * 0.82, ye - rh * 0.25),
+                  (cx - tw, ye - rh), 10))
+    g.poly(pts, fill=roof, outline=roof_d if outline_d else None, owidth=2.6 * s)
+    # 棟と軒の陰
+    g.line([(cx - tw, ye - rh + 2 * s), (cx + tw, ye - rh + 2 * s)], shade(roof_d, 0.8), 4 * s)
+    g.arc((cx - rw * 0.96, ye - 8 * s, cx + rw * 0.96, ye + 12 * s),
+          200, 340, shade(roof_d, 0.75), 3 * s)
+    return pts
+
+
+def pagoda(g, x, y, s, roof=None, roof_d=None, wall=None, frame=None,
+           base=(176, 168, 152), seed=0):
+    """法隆寺風五重塔. s=1 で高さ約 660px・y=地面."""
+    roof = roof or P.TILE
+    roof_d = roof_d or P.TILE_D
+    wall = wall or P.PLASTER
+    frame = frame or P.VERMILION_WOOD
+    # 地面影 + 基壇
+    g.ellipse((x - 190 * s, y - 10 * s, x + 190 * s, y + 14 * s),
+              fill=with_alpha((70, 60, 50), 70))
+    g.rrect((x - 155 * s, y - 26 * s, x + 155 * s, y), 8 * s, fill=base,
+            outline=shade(base, 0.78), owidth=3 * s)
+    g.line([(x - 155 * s, y - 22 * s), (x + 155 * s, y - 22 * s)], shade(base, 0.9), 3 * s)
+    ye = y - 26 * s  # 基壇上端
+    bw = 118 * s     # 初層の身舎半幅
+    body_h = 62 * s
+    roof_h = 34 * s
+    for i in range(5):
+        # 身舎 (白壁 + 朱の柱)
+        rect(g, x - bw, ye - body_h, x + bw, ye, fill=wall,
+               outline=shade(wall, 0.8), owidth=2.2 * s)
+        for px in (-bw + 8 * s, bw - 18 * s):
+            rect(g, x + px, ye - body_h, x + px + 10 * s, ye, fill=frame)
+        if i == 0:
+            g.rrect((x - 24 * s, ye - body_h + 10 * s, x + 24 * s, ye - 4 * s), 8 * s,
+                    fill=shade(frame, 0.82))
+            g.line([(x, ye - body_h + 10 * s), (x, ye - 4 * s)], shade(frame, 0.7), 3 * s)
+        elif i == 2:
+            rect(g, x - 30 * s, ye - body_h + 16 * s, x + 30 * s, ye - 12 * s,
+                   fill=shade(frame, 0.85))
+        ye -= body_h
+        # 屋根 (次層の身舎より広く)
+        rw = bw + 62 * s - i * 8 * s
+        tw = (bw - 14 * s) if i < 4 else 16 * s
+        curved_roof(g, x, ye, rw, tw, roof_h, roof, roof_d, s=s)
+        ye -= roof_h + 8 * s
+        bw -= 13 * s
+    # 相輪
+    px = x
+    g.line([(px, ye + 6 * s), (px, ye - 78 * s)], P.GOLD, 5 * s)
+    for k in range(9):
+        g.circle(px, ye - 8 * s - k * 7.6 * s, 6.5 * s, outline=P.GOLD, owidth=2.6 * s)
+    g.poly(qbez((px - 8 * s, ye - 76 * s), (px, ye - 96 * s), (px + 8 * s, ye - 76 * s), 8),
+           fill=P.GOLD)
+
+
+def kondo(g, x, y, s, roof=None, roof_d=None, wall=None, frame=None,
+          base=(176, 168, 152), seed=0):
+    """金堂風の仏堂 (2階屋根+裳階). s=1 で幅約 560px・y=地面."""
+    roof = roof or P.TILE
+    roof_d = roof_d or P.TILE_D
+    wall = wall or P.PLASTER
+    frame = frame or P.VERMILION_WOOD
+    g.ellipse((x - 280 * s, y - 10 * s, x + 280 * s, y + 14 * s),
+              fill=with_alpha((70, 60, 50), 70))
+    # 基壇
+    g.rrect((x - 255 * s, y - 30 * s, x + 255 * s, y), 8 * s, fill=base,
+            outline=shade(base, 0.78), owidth=3 * s)
+    # 裳階 (下屋)
+    sk_h = 46 * s
+    rect(g, x - 230 * s, y - 30 * s - sk_h, x + 230 * s, y - 30 * s, fill=shade(wall, 0.92))
+    for px in range(-218, 219, 48):
+        rect(g, x + px * s, y - 30 * s - sk_h, x + px * s + 11 * s, y - 30 * s, fill=frame)
+    curved_roof(g, x, y - 30 * s - sk_h, 258 * s, 208 * s, 30 * s, roof, roof_d, s=s)
+    y2 = y - 30 * s - sk_h - 34 * s
+    # 身舎 (1階)
+    bh = 118 * s
+    rect(g, x - 205 * s, y2 - bh, x + 205 * s, y2, fill=wall,
+           outline=shade(wall, 0.8), owidth=2.4 * s)
+    for px in (-193, -145, 145, 193):
+        rect(g, x + px * s, y2 - bh, x + px * s + 12 * s, y2, fill=frame)
+    for px in (-96, 0, 96):
+        g.rrect((x + px * s - 22 * s, y2 - bh + 14 * s, x + px * s + 22 * s, y2 - 10 * s),
+                8 * s, fill=shade(frame, 0.8))
+    y2 -= bh
+    # 上部の小屋根
+    curved_roof(g, x, y2, 238 * s, 60 * s, 36 * s, roof, roof_d, s=s)
+
+
+def daibutsu(g, x, y, s, bronze=None, bronze_d=None, seed=0):
+    """東大寺大仏 (坐像・光背・蓮華座). s=1 で高さ約 430px. y=地面."""
+    bronze = bronze or P.BRONZE
+    bronze_d = bronze_d or P.BRONZE_D
+    hr = 52 * s
+    hy = y - 322 * s
+    # 光背
+    g.circle(x, hy, 168 * s, fill=with_alpha(P.GOLD, 60))
+    g.circle(x, hy, 168 * s, outline=P.GOLD, owidth=7 * s)
+    g.circle(x, hy, 138 * s, outline=with_alpha(P.GOLD, 200), owidth=3.4 * s)
+    rnd = random.Random(seed)
+    for k in range(14):
+        a = math.pi * (0.12 + 0.76 * k / 13)
+        px = x + math.cos(a) * 152 * s
+        py = hy + math.sin(a) * 152 * s
+        g.circle(px, py, 5 * s, fill=with_alpha(P.GOLD, 220))
+    # 蓮華座
+    g.ellipse((x - 130 * s, y - 58 * s, x + 130 * s, y), fill=shade(bronze_d, 0.8))
+    g.ellipse((x - 122 * s, y - 74 * s, x + 122 * s, y - 16 * s), fill=bronze_d,
+              outline=shade(bronze_d, 0.7), owidth=2.6 * s)
+    for k in range(9):
+        px = x - 108 * s + k * 27 * s
+        g.ellipse((px - 12 * s, y - 70 * s, px + 12 * s, y - 26 * s),
+                  fill=bronze, outline=shade(bronze_d, 0.75), owidth=2 * s)
+    # 像身 (袈裟をまとった坐像)
+    body = (qbez((x - 96 * s, y - 250 * s), (x - 118 * s, y - 170 * s), (x - 104 * s, y - 96 * s), 12)
+            + [(x + 104 * s, y - 96 * s)]
+            + qbez((x + 104 * s, y - 96 * s), (x + 118 * s, y - 170 * s), (x + 96 * s, y - 250 * s), 12))
+    g.poly(body + [(x + 70 * s, y - 282 * s), (x - 70 * s, y - 282 * s)],
+           fill=bronze, outline=shade(bronze_d, 0.72), owidth=2.6 * s)
+    # 膝と衣の襞
+    g.ellipse((x - 96 * s, y - 130 * s, x - 34 * s, y - 74 * s), fill=bronze,
+              outline=shade(bronze_d, 0.7), owidth=2.2 * s)
+    g.ellipse((x + 34 * s, y - 130 * s, x + 96 * s, y - 74 * s), fill=bronze,
+              outline=shade(bronze_d, 0.7), owidth=2.2 * s)
+    for dx in (-52, -22, 12, 44):
+        g.line(qbez((x + dx * s, y - 244 * s), (x + dx * s * 1.3, y - 170 * s),
+                    (x + dx * s * 1.15, y - 100 * s), 10),
+               shade(bronze_d, 0.78), 3.2 * s)
+    # 結跏趺坐の手
+    g.ellipse((x - 34 * s, y - 116 * s, x + 34 * s, y - 88 * s), fill=tint(bronze, 0.12),
+              outline=shade(bronze_d, 0.72), owidth=2.2 * s)
+    g.ellipse((x - 16 * s, y - 108 * s, x + 16 * s, y - 94 * s), fill=bronze)
+    # 頭部 (螺髪 + 白髻)
+    g.circle(x, hy, hr, fill=bronze, outline=shade(bronze_d, 0.72), owidth=2.6 * s)
+    g.circle(x, hy - hr + 6 * s, 12 * s, fill=bronze, outline=shade(bronze_d, 0.72), owidth=2 * s)
+    for k in range(7):
+        px = x - hr * 0.62 + k * hr * 0.2
+        g.circle(px, hy - hr * 0.52, 6.5 * s, fill=shade(bronze_d, 0.86))
+    # 静寂の顔 (閉じた目・長い耳たぶ)
+    for sx in (-1, 1):
+        g.arc((x + sx * 8 * s - 12 * s, hy - 8 * s, x + sx * 8 * s + 12 * s, hy + 8 * s),
+              20, 160, shade(bronze_d, 0.6), 3.2 * s)
+        g.ellipse((x + sx * hr * 0.92 - 7 * s, hy - 6 * s, x + sx * hr * 0.92 + 7 * s,
+                   hy + 30 * s), fill=bronze, outline=shade(bronze_d, 0.72), owidth=2 * s)
+    g.arc((x - 10 * s, hy + 22 * s, x + 10 * s, hy + 32 * s), 15, 165,
+          shade(bronze_d, 0.6), 3 * s)
+
+
+def envoy_ship(g, x, y, s, sails=2, flag=True, figures=False, seed=0):
+    """遣唐使船. s=1 で全長約 440px. y=喫水線."""
+    hull = P.WOOD
+    hull_d = P.WOOD_D
+    L = 220 * s
+    g.ellipse((x - L * 1.06, y + 6 * s, x + L * 1.06, y + 20 * s),
+              fill=with_alpha((30, 48, 70), 80))
+    top = ([(x - L, y - 52 * s)]
+           + qbez((x - L, y - 52 * s), (x - L * 0.3, y - 30 * s), (x, y - 26 * s), 12)
+           + qbez((x, y - 26 * s), (x + L * 0.3, y - 30 * s), (x + L, y - 56 * s), 12))
+    bot = ([(x + L * 0.98, y + 2 * s)]
+           + qbez((x + L * 0.98, y + 2 * s), (x + L * 0.2, y + 16 * s), (x, y + 17 * s), 12)
+           + qbez((x, y + 17 * s), (x - L * 0.2, y + 16 * s), (x - L * 0.98, y + 2 * s), 12))
+    g.poly(top + bot, fill=hull, outline=shade(hull_d, 0.8), owidth=2.6 * s)
+    g.line(top, shade(hull_d, 0.75), 4 * s)
+    for i in range(3):
+        g.line([(x - L * 0.72, y - 30 * s + i * 10 * s), (x + L * 0.72, y - 30 * s + i * 10 * s)],
+               shade(hull, 0.82), 2.2 * s)
+    # 帆 (むしろ製の四角帆)
+    mast_h = 190 * s
+    mast_xs = [x - 90 * s, x + 80 * s] if sails >= 2 else [x]
+    for mi, mx in enumerate(mast_xs[:sails]):
+        g.line([(mx, y - 30 * s), (mx, y - 30 * s - mast_h)], P.WOOD_D, 7 * s)
+        sw = 86 * s
+        sh = 128 * s
+        sy = y - 40 * s - mast_h + 34 * s
+        sail_pts = (qbez((mx - sw / 2, sy), (mx, sy + 10 * s), (mx + sw / 2, sy + 4 * s), 10)
+                    + qbez((mx + sw / 2, sy + 4 * s), (mx + sw / 2 + 6 * s, sy + sh / 2),
+                           (mx + sw / 2 - 2 * s, sy + sh), 10)
+                    + qbez((mx + sw / 2 - 2 * s, sy + sh), (mx, sy + sh + 8 * s),
+                           (mx - sw / 2, sy + sh - 4 * s), 10)
+                    + qbez((mx - sw / 2, sy + sh - 4 * s), (mx - sw / 2 - 6 * s, sy + sh / 2),
+                           (mx - sw / 2, sy), 10))
+        g.poly(sail_pts, fill=(222, 206, 162), outline=shade((180, 164, 120), 0.9), owidth=2.4 * s)
+        for k in range(1, 5):
+            yy = sy + sh * k / 5
+            g.line([(mx - sw * 0.44, yy), (mx + sw * 0.44, yy - 2 * s)],
+                   shade((180, 164, 120), 0.85), 2 * s)
+    # 櫂
+    rnd = random.Random(seed)
+    for i in range(3):
+        px = x - L * 0.5 + i * L * 0.42
+        ex = px + math.sin(0.55 + rnd.uniform(-0.1, 0.1)) * 52 * s
+        g.line([(px, y - 28 * s), (ex, y + 30 * s)], shade(hull_d, 0.9), 5 * s)
+        g.ellipse((ex - 9 * s, y + 28 * s, ex + 9 * s, y + 46 * s), fill=shade(hull_d, 0.85))
+    if figures:
+        for fx in (-L * 0.55, L * 0.45):
+            fx = x + fx
+            g.circle(fx, y - 66 * s, 9 * s, fill=P.INK)
+            g.poly([(fx - 10 * s, y - 57 * s), (fx + 10 * s, y - 57 * s),
+                    (fx + 7 * s, y - 20 * s), (fx - 7 * s, y - 20 * s)], fill=P.INK)
+    if flag:
+        fx = x + L * 0.86
+        g.line([(fx, y - 54 * s), (fx, y - 110 * s)], P.WOOD_D, 5 * s)
+        g.poly([(fx, y - 110 * s), (fx + 44 * s, y - 102 * s), (fx, y - 92 * s)],
+               fill=P.SHU, outline=shade(P.SHU, 0.75), owidth=2 * s)
+
+
+def daigokuden(g, x, y, s, roof=None, roof_d=None, wall=None, frame=None,
+               base=(190, 180, 162), lit=False, seed=0):
+    """大極殿風の正殿. s=1 で幅約 900px・高さ約 400px. y=地面."""
+    roof = roof or P.TILE
+    roof_d = roof_d or P.TILE_D
+    wall = wall or P.PLASTER
+    frame = frame or P.VERMILION_WOOD
+    g.ellipse((x - 470 * s, y - 12 * s, x + 470 * s, y + 18 * s),
+              fill=with_alpha((70, 60, 50), 70))
+    # 石基壇 + 石段
+    g.rrect((x - 440 * s, y - 44 * s, x + 440 * s, y), 10 * s, fill=base,
+            outline=shade(base, 0.78), owidth=3 * s)
+    g.line([(x - 440 * s, y - 38 * s), (x + 440 * s, y - 38 * s)], shade(base, 0.9), 3 * s)
+    for k in range(5):
+        sw = (150 - k * 24) * s
+        yy = y - 9 * s - k * 8.5 * s
+        g.rrect((x - sw / 2, yy, x + sw / 2, yy + 9 * s), 3 * s,
+                fill=tint(base, 0.18), outline=shade(base, 0.8), owidth=1.6 * s)
+    # 身舎 (朱柱+白壁)
+    by = y - 44 * s
+    bh = 128 * s
+    rect(g, x - 380 * s, by - bh, x + 380 * s, by, fill=wall,
+           outline=shade(wall, 0.8), owidth=2.6 * s)
+    for px in range(-360, 361, 72):
+        rect(g, x + px * s, by - bh, x + px * s + 14 * s, by, fill=frame)
+    for px in (-288, -180, 180, 288):
+        win = with_alpha((255, 216, 130), 220) if lit else shade(frame, 0.62)
+        g.rrect((x + px * s - 20 * s, by - bh + 18 * s, x + px * s + 20 * s, by - 14 * s),
+                4 * s, fill=win)
+        g.line([(x + px * s - 8 * s, by - bh + 18 * s), (x + px * s - 8 * s, by - 14 * s)],
+               shade(frame, 0.6), 2.4 * s)
+        g.line([(x + px * s + 8 * s, by - bh + 18 * s), (x + px * s + 8 * s, by - 14 * s)],
+               shade(frame, 0.6), 2.4 * s)
+    y2 = by - bh
+    # 大屋根 (2段)
+    curved_roof(g, x, y2, 460 * s, 96 * s, 74 * s, roof, roof_d, lift=18 * s, sag=16 * s, s=s)
+    y3 = y2 - 80 * s
+    curved_roof(g, x, y3, 320 * s, 60 * s, 58 * s, roof, roof_d, lift=16 * s, sag=12 * s, s=s)
+    # 棟飾り (上屋根の棟に載せる)
+    g.rrect((x - 70 * s, y3 - 74 * s, x + 70 * s, y3 - 58 * s), 6 * s, fill=P.GOLD,
+            outline=shade(P.GOLD, 0.72), owidth=2.2 * s)
+    for px in (-52, 0, 52):
+        g.circle(x + px * s, y3 - 80 * s, 7 * s, fill=P.GOLD)
+
+
+def mansion(g, x, y, s, roof=None, roof_d=None, wall=None, seed=0, flag=P.SHU):
+    """飛鳥の豪族邸宅 (高床母屋+脇屋+板塀+門). s=1 で幅約 760px. y=地面."""
+    roof = roof or P.STRAW
+    roof_d = roof_d or P.STRAW_D
+    wall = wall or (208, 172, 118)
+    g.ellipse((x - 390 * s, y - 10 * s, x + 390 * s, y + 16 * s),
+              fill=with_alpha((70, 60, 50), 60))
+    # 板塀
+    wall_top = y - 96 * s
+    for px in range(int(-370 * s), int(370 * s), 26):
+        if -90 * s <= px <= 90 * s:
+            continue
+        ph = 84 * s + (abs(px) // 26 % 4) * 6 * s
+        rect(g, x + px, wall_top + (96 * s - ph), x + px + 24 * s, y,
+               fill=shade(P.WOOD, 0.95), outline=shade(P.WOOD_D, 0.9), owidth=1.6 * s)
+    g.line([(x - 370 * s, wall_top + 10 * s), (x + 370 * s, wall_top + 10 * s)],
+           shade(P.WOOD_D, 0.85), 4 * s)
+    # 門 (屋根つき)
+    gx = x - 150 * s
+    rect(g, gx - 44 * s, y - 96 * s, gx + 44 * s, y, fill=shade(P.WOOD_D, 0.95))
+    rect(g, gx - 34 * s, y - 84 * s, gx + 34 * s, y, fill=shade(wall, 0.72))
+    curved_roof(g, gx, y - 96 * s, 64 * s, 40 * s, 26 * s, roof, roof_d, s=s)
+    # 母屋 (高床)
+    warehouse(g, x + 170 * s, y - 10 * s, 0.85, wall=wall, roof=roof, roof_d=roof_d,
+              ladder=True, seed=seed)
+    # 脇屋 (小)
+    warehouse(g, x + 20 * s, y - 6 * s, 0.52, wall=shade(wall, 0.9), ladder=False, seed=seed + 1)
+    # 旗
+    banner_pole(g, x - 300 * s, y + 2 * s, 0.8, flag=flag)
+
+
+def tile_roof_house(g, x, y, s, wall=(226, 214, 190), roof=None, roof_d=None, seed=0):
+    """奈良の木造瓦屋住宅. s=1 で幅約 240px. y=地面."""
+    roof = roof or P.TILE
+    roof_d = roof_d or P.TILE_D
+    g.ellipse((x - 130 * s, y - 8 * s, x + 130 * s, y + 12 * s),
+              fill=with_alpha((70, 60, 50), 60))
+    bh = 92 * s
+    bw = 92 * s
+    rect(g, x - bw, y - bh, x + bw, y, fill=wall, outline=shade(wall, 0.8), owidth=2.4 * s)
+    # 柱
+    for px in (-bw + 6 * s, bw - 16 * s):
+        rect(g, x + px, y - bh, x + px + 9 * s, y, fill=shade(wall, 0.78))
+    # 扉・窓
+    g.rrect((x - 22 * s, y - 62 * s, x + 22 * s, y - 4 * s), 6 * s, fill=P.WOOD_D)
+    g.rrect((x + 36 * s, y - 66 * s, x + 74 * s, y - 30 * s), 4 * s, fill=shade(wall, 0.62))
+    g.rrect((x - 74 * s, y - 66 * s, x - 36 * s, y - 30 * s), 4 * s, fill=shade(wall, 0.62))
+    # 入母屋風の瓦屋根
+    curved_roof(g, x, y - bh, 138 * s, 46 * s, 44 * s, roof, roof_d, s=s)
+
+
+def suzakumon(g, x, y, s, roof=None, roof_d=None, wall=None, frame=None,
+              base=(186, 178, 160), lit=True, seed=0):
+    """朱雀門風の都の正門 (朱の2階建て). s=1 で幅約 460px. y=地面."""
+    roof = roof or P.TILE
+    roof_d = roof_d or P.TILE_D
+    wall = wall or (210, 120, 92)
+    frame = frame or P.VERMILION_WOOD
+    g.ellipse((x - 260 * s, y - 10 * s, x + 260 * s, y + 16 * s),
+              fill=with_alpha((70, 60, 50), 70))
+    # 城壁部
+    g.rrect((x - 225 * s, y - 64 * s, x + 225 * s, y), 8 * s, fill=base,
+            outline=shade(base, 0.76), owidth=3 * s)
+    g.line([(x - 225 * s, y - 58 * s), (x + 225 * s, y - 58 * s)], shade(base, 0.9), 3 * s)
+    # 門洞
+    g.pieslice((x - 42 * s, y - 108 * s, x + 42 * s, y + 40 * s), 180, 360,
+               fill=(52, 38, 36))
+    rect(g, x - 42 * s, y - 62 * s, x + 42 * s, y, fill=(52, 38, 36))
+    # 楼閣 1階
+    by = y - 64 * s
+    bh = 96 * s
+    rect(g, x - 195 * s, by - bh, x + 195 * s, by, fill=wall,
+           outline=shade(wall, 0.75), owidth=2.6 * s)
+    for px in range(-180, 181, 72):
+        rect(g, x + px * s, by - bh, x + px * s + 13 * s, by, fill=frame)
+    for px in (-110, 0, 110):
+        g.rrect((x + px * s - 24 * s, by - bh + 16 * s, x + px * s + 24 * s, by - 12 * s),
+                6 * s, fill=(52, 38, 36) if not lit else with_alpha((255, 216, 130), 210))
+    y2 = by - bh
+    curved_roof(g, x, y2, 250 * s, 90 * s, 52 * s, roof, roof_d, lift=14 * s, s=s)
+    # 2階
+    b2y = y2 - 46 * s
+    b2h = 72 * s
+    rect(g, x - 140 * s, b2y - b2h, x + 140 * s, b2y, fill=shade(wall, 0.92),
+           outline=shade(wall, 0.75), owidth=2.6 * s)
+    for px in (-128, 128):
+        rect(g, x + px * s, b2y - b2h, x + px * s + 13 * s, b2y, fill=frame)
+    for px in (-52, 52):
+        g.rrect((x + px * s - 20 * s, b2y - b2h + 14 * s, x + px * s + 20 * s, b2y - 10 * s),
+                6 * s, fill=(52, 38, 36) if not lit else with_alpha((255, 216, 130), 210))
+    curved_roof(g, x, b2y - b2h + 4 * s, 186 * s, 52 * s, 46 * s, roof, roof_d,
+                lift=12 * s, s=s)
+    # 隅飾り
+    for px in (-160, 160):
+        g.line([(x + px * s, y - 64 * s), (x + px * s, by - bh)], frame, 10 * s)
+
+
+def kanmuri(g, cx, cy, s, style="kanmuri", color=(40, 38, 44)):
+    """貴族の冠. style: kanmuri(黒)|mikkan(冕冠・金板+赤ひも). (cx,cy)=頭頂."""
+    if style == "mikkan":
+        # 冕板 (上の金板) + 垂り紐
+        g.rrect((cx - 40 * s, cy - 46 * s, cx + 40 * s, cy - 18 * s), 8 * s,
+                fill=P.GOLD, outline=shade(P.GOLD, 0.7), owidth=2.4 * s)
+        for px in (-28, 0, 28):
+            g.circle(cx + px * s, cy - 32 * s, 5 * s, fill=shade(P.GOLD, 0.8))
+        for px in (-32, 32):
+            g.line(qbez((cx + px * s, cy - 18 * s), (cx + px * s * 1.4, cy + 4 * s),
+                        (cx + px * s * 1.2, cy + 26 * s), 10), P.SHU_D, 5 * s)
+            g.circle(cx + px * s * 1.2, cy + 28 * s, 4 * s, fill=P.SHU)
+        g.rrect((cx - 26 * s, cy - 20 * s, cx + 26 * s, cy + 2 * s), 10 * s, fill=color)
+    else:
+        # 立烏帽子/幞頭風: 前の抑付 + 鼻先
+        g.rrect((cx - 30 * s, cy - 44 * s, cx + 30 * s, cy + 2 * s), 12 * s,
+                fill=color, outline=shade(color, 0.6), owidth=2.2 * s)
+        g.rrect((cx - 7 * s, cy - 60 * s, cx + 7 * s, cy - 40 * s), 5 * s,
+                fill=color, outline=shade(color, 0.6), owidth=2 * s)
+        g.line([(cx - 30 * s, cy - 40 * s), (cx + 30 * s, cy - 40 * s)], shade(color, 1.35), 3 * s)
+        # 後ろのひも
+        g.line(qbez((cx - 24 * s, cy - 6 * s), (cx - 52 * s, cy + 8 * s),
+                    (cx - 46 * s, cy + 34 * s), 10), color, 4 * s)
+        g.line(qbez((cx + 24 * s, cy - 6 * s), (cx + 52 * s, cy + 8 * s),
+                    (cx + 46 * s, cy + 34 * s), 10), color, 4 * s)
+
+
+def shaku(g, x, y, s, col=(216, 184, 132), deg=-32):
+    """笏 (細長の木の板). (x,y)=手で持つ下端."""
+    pts = []
+    for i in range(9):
+        t = i / 8
+        pts.append((x + math.cos(math.radians(deg)) * 150 * s * t,
+                    y - math.sin(math.radians(deg)) * 150 * s * t))
+    g.line(pts, shade(col, 0.6), 15 * s)
+    g.line(pts, col, 10 * s)
+
+
+def grid_blocks(cv, y0, y1, cols=8, seed=0, block=(214, 202, 172),
+                road=(232, 226, 208), house_roof=None, density=0.6):
+    """平城京の碁盤目 (俯瞰): 区画と屋根の点列."""
+    g = cv.g()
+    rnd = random.Random(seed)
+    house_roof = house_roof or P.TILE
+    col_w = cv.w / cols
+    rows = max(1, int((y1 - y0) / (col_w * 0.9)))
+    row_h = (y1 - y0) / rows
+    for r_i in range(rows):
+        for c_i in range(cols):
+            x0, x1 = c_i * col_w, (c_i + 1) * col_w
+            yy0, yy1 = y0 + r_i * row_h, y0 + (r_i + 1) * row_h
+            g.poly([(x0 + 3, yy0 + 3), (x1 - 3, yy0 + 3), (x1 - 3, yy1 - 3), (x0 + 3, yy1 - 3)],
+                   fill=block)
+            # 檜皮葺/瓦の屋根を数軒
+            n = int(rnd.uniform(1, 4) * density) + 1
+            for _ in range(n):
+                hw = rnd.uniform(26, 52)
+                hh = rnd.uniform(18, 34)
+                hx = rnd.uniform(x0 + 14, x1 - hw - 14)
+                hy = rnd.uniform(yy0 + 14, yy1 - hh - 14)
+                g.poly([(hx, hy + hh / 2), (hx + hw * 0.12, hy), (hx + hw * 0.88, hy),
+                        (hx + hw, hy + hh / 2), (hx + hw * 0.88, hy + hh),
+                        (hx + hw * 0.12, hy + hh)], fill=house_roof,
+                       outline=shade(house_roof, 0.75), owidth=1.6)
+    # 道路グリッド
+    for c_i in range(1, cols):
+        rect(g, c_i * col_w - 3, y0, c_i * col_w + 3, y1, fill=road)
+    for r_i in range(1, rows):
+        rect(g, 0, y0 + r_i * row_h - 3, cv.w, y0 + r_i * row_h + 3, fill=road)
