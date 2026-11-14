@@ -21,14 +21,17 @@
       "アニメ日本史ラボ",
       "勉強動画"
     ],
-    "thumbnail": { "headline": "縄文×弥生×古墳", "sub": "受験必須!" }
+    "thumbnail": {
+      "headline": "縄文×弥生×古墳",
+      "sub": "受験必須!"
+    }
   },
   "characters": [
     {
       "id": "sensei",
       "name": "ヒスト先生",
       "voice_style": "四国めたん/ノーマル",
-      "speed_scale": 1.05,
+      "speed_scale": 1.18,
       "pitch": 0.0,
       "subtitle_color": "#7ec8e3"
     },
@@ -36,7 +39,7 @@
       "id": "manabu",
       "name": "マナブ",
       "voice_style": "ずんだもん/ノーマル",
-      "speed_scale": 1.08,
+      "speed_scale": 1.22,
       "pitch": 0.0,
       "subtitle_color": "#8be27e"
     }
@@ -49,16 +52,41 @@
       "visual": {
         "background": "bg_school_lab",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "こんにちは!ヒスト先生です。今日は日本の歴史のはじまりを、マナブと一緒にたどっていきますよ。",
-          "overlay_text": [ { "text": "アニメ日本史ラボ", "style": "title_main", "motion": "fade_up" } ]
+          "overlay_text": [
+            {
+              "text": "アニメ日本史ラボ",
+              "style": "title_main",
+              "motion": "fade_up"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -75,7 +103,13 @@
         {
           "speaker": "sensei",
           "text": "そうなんです。旧石器、縄文、弥生、古墳。四つの時代を、楽しく見ていきましょう!",
-          "overlay_text": [ { "text": "第1話 日本史のはじまり", "style": "keyword_card", "motion": "pop_in" } ]
+          "overlay_text": [
+            {
+              "text": "第1話 日本史のはじまり",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -87,16 +121,41 @@
       "visual": {
         "background": "bg_paleolithic",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "先生!最初の時代って、どんな時代なのだ?",
-          "overlay_text": [ { "text": "旧石器時代 土器のない時代", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "旧石器時代 土器のない時代",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -114,8 +173,16 @@
           "speaker": "sensei",
           "text": "まだ煮込みはできないので、焼いたり生で食べたりしていたようです。道具は、石を打ち欠けて作る打製石器。ナイフのように使って動物を狩っていました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "打製石器", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "打製石器",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -132,16 +199,41 @@
       "visual": {
         "background": "bg_jomon_coast",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "やがて氷河が解けて気候がぐんと暖かくなり、大きく見て約1万年前から、縄文時代が始まります。",
-          "overlay_text": [ { "text": "約1万年前〜 縄文時代", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "約1万年前〜 縄文時代",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -155,8 +247,16 @@
           "speaker": "sensei",
           "text": "道具も進化します。石を磨いて作る磨製石器の登場です。矢じりを磨いた弓矢で、イノシシなどを狩りました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "磨製石器", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "磨製石器",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -177,23 +277,56 @@
       "visual": {
         "background": "bg_jomon_pottery",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_l", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_l",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "縄文時代のイメージといえば、もようのついた壺なのだ!",
-          "overlay_text": [ { "text": "縄文時代 世界最古級の土器", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "縄文時代 世界最古級の土器",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "鋭いですね!それが縄文土器。紐を巻いた棒で転がして、縄のもようを付けたことが名前の由来なんです。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "縄文土器", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "縄文土器",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -222,21 +355,52 @@
       "visual": {
         "background": "bg_jomon_village",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "縄文の人は、どんな家に住んでいたのだ?",
-          "overlay_text": [ { "text": "縄文時代 竪穴住居と集落", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "縄文時代 竪穴住居と集落",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "地面に穴を掘って、周りに柱を立てる竪穴住居です。半分地下のような、暖かくて丈夫な家なんです。",
-          "overlay_text": [ { "text": "竪穴住居", "style": "keyword_card", "motion": "pop_in" } ],
+          "overlay_text": [
+            {
+              "text": "竪穴住居",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "地面に穴をほって、まわりにはしらを立てる、たてあなじゅうきょです。はんぶんちかのような、あたたかくてじょうぶな家なんです。"
         },
         {
@@ -247,8 +411,16 @@
           "speaker": "sensei",
           "text": "ええ。しかも数十軒の家が円形に並ぶ環状集落が、各地で見つかっているんですよ。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "環状集落", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "環状集落",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ええ。しかも数十軒の家が円形に並ぶ、かんじょうしゅうらくが、各地で見つかっているんですよ。"
         },
@@ -270,16 +442,41 @@
       "visual": {
         "background": "bg_jomon_daily_life",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_r", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_r",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "縄文の人は、毎日なにをしてたのだ?",
-          "overlay_text": [ { "text": "縄文時代 森と海のくらし", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "縄文時代 森と海のくらし",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -290,8 +487,16 @@
           "speaker": "sensei",
           "text": "食べた貝がらが積もってできた貝塚は、当時のくらしを知る大事な遺跡です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "貝塚", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "貝塚",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -301,7 +506,13 @@
         {
           "speaker": "sensei",
           "text": "土で作った土偶は、呪術やまじないに使われたと考えられています。青森の三内丸山遺跡のような大きな集落もありました。",
-          "overlay_text": [ { "text": "土偶", "style": "keyword_card", "motion": "pop_in" } ],
+          "overlay_text": [
+            {
+              "text": "土偶",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "土で作ったどぐうは、呪術やまじないに使われたと考えられています。青森のさんのうまるやまいせきのような大きな集落もありました。"
         },
         {
@@ -318,10 +529,29 @@
       "visual": {
         "background": "bg_yayoi_rice_field",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -331,7 +561,13 @@
         {
           "speaker": "sensei",
           "text": "紀元前3世紀ごろ、大陸から稲作と金属器が伝わってきて、弥生時代が始まります。",
-          "overlay_text": [ { "text": "弥生時代 紀元前3世紀ごろ〜", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "弥生時代 紀元前3世紀ごろ〜",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -341,8 +577,16 @@
           "speaker": "sensei",
           "text": "水稲農業は、暖かくて湿った平原や低地で始まりました。水路を作り、村人みんなで田んぼを耕します。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "水稲農業 平原・低地", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "水稲農業 平原・低地",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "すいとうのうぎょうは、暖かくて湿った平原や低地で始まりました。水路を作り、村人みんなで田んぼを耕します。"
         },
@@ -368,23 +612,56 @@
       "visual": {
         "background": "bg_yayoi_village",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "弥生の村には、高ーい建物があるのだ!?",
-          "overlay_text": [ { "text": "弥生時代 高床倉庫と弥生土器", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "弥生時代 高床倉庫と弥生土器",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "それ、高床倉庫です。床を高く上げて、大切なお米を雨やネズミから守る倉庫なんです。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "高床倉庫", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "高床倉庫",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "それ、たかだかそうこです。床を高く上げて、大切なお米を雨やネズミから守る倉庫なんです。"
         },
@@ -395,7 +672,13 @@
         {
           "speaker": "sensei",
           "text": "鍋や壺などの弥生土器は、縄文のものより薄くて硬く、煮炊きに向いていました。道具も石から鉄へ進んでいきます。",
-          "overlay_text": [ { "text": "弥生土器", "style": "keyword_card", "motion": "pop_in" } ]
+          "overlay_text": [
+            {
+              "text": "弥生土器",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -415,23 +698,56 @@
       "visual": {
         "background": "bg_yayoi_moat",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "でも先生、お米が増えると、けんかも増えちゃうのだ?",
-          "overlay_text": [ { "text": "弥生時代 争いと大国", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "弥生時代 争いと大国",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "そのとおり。お米や土地をめぐる争いが始まり、村は身を守るため、周りに深い濠を掘った環濠集落になりました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "環濠集落 戦争のはじまり", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "環濠集落 戦争のはじまり",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "そのとおり。お米や土地をめぐる争いが始まり、村は身を守るため、まわりに深いほりをほった、かんごうしゅうらくになりました。"
         },
@@ -446,7 +762,13 @@
         {
           "speaker": "sensei",
           "text": "そうなんです。お祭りに使う銅鐸、武器の銅剣もこのころのもの。村を率いる力の強い豪族も現れました。",
-          "overlay_text": [ { "text": "銅鐸=祭り・銅剣=武器", "style": "keyword_card", "motion": "pop_in" } ],
+          "overlay_text": [
+            {
+              "text": "銅鐸=祭り・銅剣=武器",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "そうなんです。お祭りに使うどうたく、武器のどうけんもこのころのもの。村を率いる力の強い豪族も現れました。"
         },
         {
@@ -462,8 +784,16 @@
           "speaker": "sensei",
           "text": "邪馬台国の女王、卑弥呼は239年、中国の魏に使者を送りました。この記録が中国の歴史書、魏志倭人伝なんです。",
           "overlay_text": [
-            { "text": "239年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "卑弥呼と邪馬台国", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "239年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "卑弥呼と邪馬台国",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "やまたいこくの女王、ひみこは239年、中国の魏に使者を送りました。この記録が中国の歴史書、ぎしわじんでんなんです。"
         },
@@ -486,16 +816,41 @@
       "visual": {
         "background": "bg_kofun",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "ついに古墳時代なのだ!古墳って、大きなお墓なのだ?",
-          "overlay_text": [ { "text": "古墳時代 3世紀中ごろ〜", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "古墳時代 3世紀中ごろ〜",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -509,8 +864,16 @@
           "speaker": "sensei",
           "text": "特徴的なのが、丸と四角をつなげた、鍵穴型のお墓。前方後円墳です。船の形に似ている、という説明も有名なんですよ。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "前方後円墳", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "前方後円墳",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "特徴的なのが、丸と四角をつなげた、鍵穴型のお墓。ぜんぽうこうえんぷんです。船の形に似ている、という説明も有名なんですよ。"
         },
@@ -521,7 +884,13 @@
         {
           "speaker": "sensei",
           "text": "これだけの土を盛れるのは、多くの人を動かせる力があるから。大和地方を中心に力を広げた豪族たち、つまり大和政権なんです。",
-          "overlay_text": [ { "text": "大和政権", "style": "keyword_card", "motion": "pop_in" } ],
+          "overlay_text": [
+            {
+              "text": "大和政権",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "これだけの土を盛れるのは、多くの人を動かせる力があるから。やまとちほうを中心に力を広げた豪族たち、つまりやまとせいけんなんです。"
         }
       ],
@@ -534,23 +903,56 @@
       "visual": {
         "background": "bg_kofun_haniwa",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_l", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_l",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "古墳のまわりに立ってる、土の人形はなんなのだ?",
-          "overlay_text": [ { "text": "古墳時代 埴輪", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "古墳時代 埴輪",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "それは埴輪。古墳の周りに並べた、素焼きの土製品なんです。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "埴輪(はにわ)", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "埴輪(はにわ)",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "それは、はにわ。古墳のまわりに並べた、すやきの土製品なんです。"
         },
@@ -580,16 +982,41 @@
       "visual": {
         "background": "bg_yamato_court",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "大和政権は、どこまで大きくなったのだ?",
-          "overlay_text": [ { "text": "古墳時代 大和政権のひろがり", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "古墳時代 大和政権のひろがり",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -603,8 +1030,16 @@
           "speaker": "sensei",
           "text": "大阪の大山古墳は、全長約480メートル。日本最大の前方後円墳なんですよ。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "大山古墳 日本最大", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "大山古墳 日本最大",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "大阪のおおやまこふんは、全長約480メートル。日本最大の、ぜんぽうこうえんぷんなんですよ。"
         },
@@ -626,23 +1061,56 @@
       "visual": {
         "background": "bg_kofun_ships",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_r", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_r",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "古墳時代の終わりごろは、どうなってたのだ?",
-          "overlay_text": [ { "text": "古墳時代後期 5世紀", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "古墳時代後期 5世紀",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "5世紀になると、大和政権の王たちは、中国の王朝に使者を送ります。史書に名が残る五人の王を、倭の五王と呼ぶんです。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "倭の五王", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "倭の五王",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "5世紀になると、やまとせいけんの王たちは、中国の王朝に使者を送ります。史書に名が残る五人の王を、わのごおうと呼ぶんです。"
         },
@@ -672,17 +1140,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "ここからは、受験ポイントのまとめです!まずは旧石器と縄文。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "旧石器〜縄文", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "旧石器〜縄文",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -695,11 +1182,26 @@
         }
       ],
       "exam_points": [
-        { "keyword": "打製石器", "detail": "石を打ち欠けて作る。旧石器時代の道具。" },
-        { "keyword": "磨製石器", "detail": "石を磨いて作る。縄文時代以降に登場。" },
-        { "keyword": "縄文土器", "detail": "世界最古級。名前の由来は縄のもよう。" },
-        { "keyword": "竪穴住居・環状集落", "detail": "半分地下の家と、円形に並ぶ集落。" },
-        { "keyword": "貝塚", "detail": "貝がらの層が当時のくらしの手がかり。" }
+        {
+          "keyword": "打製石器",
+          "detail": "石を打ち欠けて作る。旧石器時代の道具。"
+        },
+        {
+          "keyword": "磨製石器",
+          "detail": "石を磨いて作る。縄文時代以降に登場。"
+        },
+        {
+          "keyword": "縄文土器",
+          "detail": "世界最古級。名前の由来は縄のもよう。"
+        },
+        {
+          "keyword": "竪穴住居・環状集落",
+          "detail": "半分地下の家と、円形に並ぶ集落。"
+        },
+        {
+          "keyword": "貝塚",
+          "detail": "貝がらの層が当時のくらしの手がかり。"
+        }
       ]
     },
     {
@@ -709,17 +1211,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "続いて弥生と古墳。今日のいちばんの狙いどころです!",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "弥生〜古墳", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "弥生〜古墳",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -730,18 +1251,45 @@
         {
           "speaker": "sensei",
           "text": "そして239年、邪馬台国の女王・卑弥呼が魏に遣使。古墳時代は前方後円墳、埴輪、大和政権。時代とワードの対応を完璧に仕上げましょう!",
-          "overlay_text": [ { "text": "239年", "style": "year_number", "motion": "zoom_in" } ],
+          "overlay_text": [
+            {
+              "text": "239年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            }
+          ],
           "reading": "そして239年、やまたいこくの女王・ひみこが魏に遣使。こふんじだいは、ぜんぽうこうえんぷん、はにわ、やまとせいけん。時代とワードの対応を完璧に仕上げましょう!"
         }
       ],
       "exam_points": [
-        { "keyword": "水稲農業", "detail": "暖かく湿った平原・低地で開始。" },
-        { "keyword": "高床倉庫", "detail": "お米を雨やネズミから守る倉庫。" },
-        { "keyword": "環濠集落", "detail": "戦争のはじまりとセットで覚える。" },
-        { "keyword": "銅鐸・銅剣", "detail": "銅鐸は祭り、銅剣は武器。" },
-        { "keyword": "卑弥呼・239年", "detail": "邪馬台国の女王が魏に遣使。記録は魏志倭人伝。" },
-        { "keyword": "前方後円墳・埴輪", "detail": "鍵穴型は船の形/素焼きの土製品。" },
-        { "keyword": "大和政権", "detail": "大和地方を中心に巨大古墳を築く豪族連合。" }
+        {
+          "keyword": "水稲農業",
+          "detail": "暖かく湿った平原・低地で開始。"
+        },
+        {
+          "keyword": "高床倉庫",
+          "detail": "お米を雨やネズミから守る倉庫。"
+        },
+        {
+          "keyword": "環濠集落",
+          "detail": "戦争のはじまりとセットで覚える。"
+        },
+        {
+          "keyword": "銅鐸・銅剣",
+          "detail": "銅鐸は祭り、銅剣は武器。"
+        },
+        {
+          "keyword": "卑弥呼・239年",
+          "detail": "邪馬台国の女王が魏に遣使。記録は魏志倭人伝。"
+        },
+        {
+          "keyword": "前方後円墳・埴輪",
+          "detail": "鍵穴型は船の形/素焼きの土製品。"
+        },
+        {
+          "keyword": "大和政権",
+          "detail": "大和地方を中心に巨大古墳を築く豪族連合。"
+        }
       ]
     },
     {
@@ -751,10 +1299,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -764,7 +1331,13 @@
         {
           "speaker": "sensei",
           "text": "縄文時代に使われ始めた、石を磨いて作る石器は何でしょう?ア、打製石器。イ、磨製石器。ウ、銅鐸。",
-          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第1問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            }
+          ],
           "reading": "縄文時代に使われ始めた、石を磨いて作る石器は何でしょう?ア、打製石器。イ、磨製石器。ウ、どうたく。"
         },
         {
@@ -785,10 +1358,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -798,7 +1390,13 @@
         {
           "speaker": "sensei",
           "text": "239年、魏に使者を送った邪馬台国の女王はだれでしょう?ア、卑弥呼。イ、神功皇后。ウ、推古天皇。",
-          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第2問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            }
+          ],
           "reading": "239年、魏に使者を送ったやまたいこくの女王はだれでしょう?ア、ひみこ。イ、神功皇后。ウ、推古天皇。"
         },
         {
@@ -820,10 +1418,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -833,7 +1450,13 @@
         {
           "speaker": "sensei",
           "text": "弥生時代、大切なお米を雨やネズミから守るために建てた建物は?ア、竪穴住居。イ、高床倉庫。ウ、五重塔。",
-          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第3問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            }
+          ],
           "reading": "やよいじだい、大切なお米を雨やネズミから守るために建てた建物は?ア、たてあなじゅうきょ。イ、たかだかそうこ。ウ、五重塔。"
         },
         {
@@ -855,10 +1478,29 @@
       "visual": {
         "background": "bg_school_lab_evening",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -873,7 +1515,13 @@
         {
           "speaker": "sensei",
           "text": "その調子です。次回第2話は、大化の改新はなぜ起きた?〜飛鳥・奈良〜。聖徳太子と蘇我氏の話まで、ぜひ楽しみにしていてください。",
-          "overlay_text": [ { "text": "次回 第2話 飛鳥・奈良", "style": "keyword_card", "motion": "pop_in" } ]
+          "overlay_text": [
+            {
+              "text": "次回 第2話 飛鳥・奈良",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -886,19 +1534,31 @@
   "quiz": [
     {
       "q": "縄文時代に使われるようになった、石を磨いて作る石器は何でしょう?",
-      "choices": ["打製石器", "磨製石器", "銅鐸"],
+      "choices": [
+        "打製石器",
+        "磨製石器",
+        "銅鐸"
+      ],
       "answer": 1,
       "explain": "旧石器時代は打製石器、縄文時代以降は磨製石器が使われるようになります。"
     },
     {
       "q": "239年、魏に使者を送った邪馬台国の女王はだれでしょう?",
-      "choices": ["卑弥呼", "神功皇后", "推古天皇"],
+      "choices": [
+        "卑弥呼",
+        "神功皇后",
+        "推古天皇"
+      ],
       "answer": 0,
       "explain": "卑弥呼は邪馬台国の女王で、239年に魏へ遣使した記録が魏志倭人伝に残っています。"
     },
     {
       "q": "弥生時代、大切なお米を雨やネズミから守るために建てた建物は何でしょう?",
-      "choices": ["竪穴住居", "高床倉庫", "五重塔"],
+      "choices": [
+        "竪穴住居",
+        "高床倉庫",
+        "五重塔"
+      ],
       "answer": 1,
       "explain": "弥生時代には、床を高く上げて稲を守る高床倉庫が建てられました。"
     }
