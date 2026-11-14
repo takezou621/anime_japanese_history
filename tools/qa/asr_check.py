@@ -17,8 +17,10 @@
   → pykakasi で漢字/カタカナをひらがなへ → 記号・空白・残留数字を除去
 - 一致率: difflib.SequenceMatcher の ratio (0.0-1.0) を正規化文字列で算出
   - 全体一致率: 台本全ビート連結 vs ASR 全セグメント連結 (時間順)
-  - ビート別: ASR セグメントを timing.json のビート区間 (中点で割当) に振り分けて算出
-- 閾値: 既定 0.95 (目安運用)。ASR は音声の実読みを転写するため、かな漢字変換差
+  - ビート別: ASR セグメントを timing.json のビート区間に重なり時間比例で分割割当
+- 閾値: 既定 0.95 だが、BGM 付きミックス + small モデルの実測ではこれを大きく
+  下回る (キャラ語尾や固有名詞の ASR 誤変換のため)。閾値はベースライン実測値を
+  踏まえて運用調整すること。ASR は音声の実読みを転写するため、かな漢字変換差
   (例: よきの/よしのぶ は同音として正規化され区別できない) や固有名詞の表記ゆれは
   正規化比較では検出されない。固有名詞の実読み検証は pronunciation_log 突合・
   VOICEVOX audio_query 解析 (reports/qa_audio_epNN.md) でカバーすること
@@ -112,17 +114,33 @@ def load_beats(root: Path, episode: str) -> list[dict]:
 def assign_segments(beats: list[dict], segments: list[dict], total: float) -> list[str]:
     """ASR セグメントをビート区間へ割当てる。区間 = ビート開始〜次ビート開始 (最終は total)。
 
-    セグメントの中点がどの区間に属するかで 1 対 1 割当する (重複計上を避ける)。
+    セグメントが複数ビートにまたがる場合は、重なり時間の比率に従ってテキストを
+    比例分割する (セグメント中点割当だと境界ビートが空/混入するため)。
     """
     bounds = [b["start"] for b in beats] + [max(total, beats[-1]["start"] + beats[-1]["duration"])]
     assigned: list[str] = [[] for _ in beats]
     for seg in segments:
-        mid = (seg["start"] + seg["end"]) / 2.0
+        s, e, raw = seg["start"], seg["end"], seg["text"]
+        text = re.sub(r"\s+", "", raw)
+        if not text:
+            continue
+        overlaps = []
         for i in range(len(beats)):
-            if bounds[i] <= mid < bounds[i + 1]:
-                assigned[i].append(seg["text"])
-                break
-    return ["".join(texts) for texts in assigned]
+            ov = min(e, bounds[i + 1]) - max(s, bounds[i])
+            if ov > 0.05:  # 50ms 未満の接触はノイズとして無視
+                overlaps.append((i, ov))
+        if not overlaps:
+            continue
+        total_ov = sum(ov for _, ov in overlaps)
+        consumed = 0
+        for k, (i, ov) in enumerate(overlaps):
+            if k == len(overlaps) - 1:
+                take = len(text) - consumed  # 最後のビートに残りを全て割当
+            else:
+                take = int(round(len(text) * (ov / total_ov)))
+            assigned[i].append(text[consumed:consumed + take])
+            consumed += take
+    return ["".join(t) for t in assigned]
 
 
 def ratio(a: str, b: str) -> float | None:
