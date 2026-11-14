@@ -7,48 +7,39 @@
 3. 作業は GitHub Issues で管理。着手時に自分を assignee にし、完了条件を満たしたら close。
 4. 各ツールは「小さく作って通しテスト」: 音声は10秒・アセットは1枚・編集は10秒動画を
    まず作り、lead に見せてから量産する。
-5. ブランチ: いじらない (直コミット可, 小さく細かく)。lead が最終 diff とテストを確認する。
+5. **コード変更 (tools/**, youtube/**, scripts/**) は必ず PR 経由**:
+   featureブランチ → commit → push → `gh pr create` → **Cubic自動レビュー SUCCESS確定** →
+   `gh pr merge --squash --delete-branch`。NEUTRAL/未確定のままマージしない (2026-11-15 運用強化)。
+   docs/ の更新と生成物 (assets/audio/video) のコミットは直接可。
+6. 外部API・有料サービスへの依存追加は禁止。提案は tools/proposals/ に置き lead 承認を得る。
 
 ## 開発チェックリスト
 
 ### writer
 - [ ] script.json が docs/02_DESIGN.md スキーマに準拠 (JSON as-is, コメント禁止)
-- [ ] ナレーション総文字数 ≈ 目標秒数 × 7.5 文字/秒 (VOICEVOX 実測で調整)
+- [ ] ナレーション総文字数 = 生文字 2400〜2800 (TTS reading展開込み ≈1.2倍)
+- [ ] characters: sensei 1.22 / manabu 1.22, 1ビート2文まで, シーン4〜6ビート
 - [ ] 受験ポイント ≥3, クイズ 3問, 年号・人名は教科書準拠
-- [ ] 読みにくい漢字は `reading` フィールドで読み指定
+- [ ] 読みにくい漢字は `reading` フィールドで読み指定 (pronunciation_dict と突合)
 
 ### artist
 - [ ] artlib が import できサンプル1枚が 1920×1080 で出る
-- [ ] ep01 の全 scene.background が生成済み
-- [ ] キャラ立ち絵 2種 (透過PNG)
+- [ ] epNN の全 scene.background が生成済み (欠けゼロ)
+- [ ] キャラ立ち絵: tools/peeps/compose_peeps.py 出力を使用 (artlib character.py は非推奨)
 - [ ] カラーパレット・フォントは STYLE_GUIDE 準拠
+- [ ] 各話専用 bg_timeline (時代アイコン+ラベル付き)
 
 ### audio
 - [ ] make_narration.py が script.json → wav + timing.json を出す
+- [ ] 発音: pronunciation_dict.json 自動置換 + pronunciation_log.json を出力し未カバー固有名詞ゼロ
 - [ ] VOICEVOX 未起動時は自動起動 (vv-engine/run) する fallback
-- [ ] mix.wav が -14 LUFS (ffmpeg loudnorm で検証)
+- [ ] 総尺 ≤590s (QC上限600s), mix.wav が -14±1.5 LUFS (loudnorm で検証)
 
 ### editor
-- [ ] assemble.py が script.json + timing.json + assets → 10秒テスト動画
-- [ ] 字幕焼き込み・モーション・クロスフェード確認
-- [ ] QC json 出力 (長さ/ラウドネス/黒フレーム)
-- [ ] AI クリップ統合 (visual.ai 指定シーンがある場合):
-  `python3 tools/editor/ai_segments.py` PASS → assemble 実行 →
-  QC `ai_segments` で used/fallback を確認 (fallback は許容, 静画で成立)
-
-### lead (AI生成 tools/aigen — docs/06_AI_GENERATION.md)
-- [ ] `models --remote` で実在モデルID確認 → config.json 修正
-- [ ] `episode --ep epNN --plan` で費用確定 → `--images` / `--clips` を `--yes` 付き実行
-- [ ] draft 選定は ai_drafts/storyboard.html の目視で行う (動画ガチャ防止の本体)
-- [ ] final は当たり1枚だけ `--tier final --prompt-file` (同一プロンプト)
-- [ ] Veo は採用画像の image-to-video のみ。`$2` 超は `--yes` 必須
-- [ ] `e2e_test.py` + `selftest` を PASS させてから本番 assemble
-- [ ] 月末に `budget` で台帳と実請求を突き合わせ → pricing_usd を補正
-
-## 最終受け入れ (lead)
-1. video/ep01_FINAL.mp4 を再生確認 (長さ・音ズレ・文字かぶり・見切れ)
-2. QC json 合格 + サムネ生成 + youtube/ep01.yaml メタデータ
-3. GitHub Issues close + 次話の制作指示
+- [ ] assemble.py が script.json + timing.json + assets → フル動画
+- [ ] 字幕 (行頭禁則+ぶら下げ) ・モーション・クロスフェード確認
+- [ ] キャラはコンテンツbbox基準配置 (CHAR_CONTENT_W=500, 下端930)
+- [ ] QC json 出力 (長さ300-600s / ラウドネス / 黒フレーム<1% / 解像度)
 
 ## 多角的検証ゲート (2026-11-15 ユーザー指示により必須化)
 
@@ -69,6 +60,10 @@
 3. 不自然な読みの報告があった場合は辞書を修正して音声を再生成する
 
 ### 運用ルール
-- **コード変更は必ず PR → Cubic自動レビュー (SUCCESS確定) → マージ**。
-  NEUTRAL/未確定のままマージしない (2026-11-15 運用強化)。
 - 検証で指摘された項目は Issue に起票し、修正 → 再検証のループで閉じる。
+- 3角度すべての検証レポートが揃って lead が最終検収 → 完了。
+
+## 最終受け入れ (lead)
+1. video/epNN_FINAL.mp4 を再生確認 (長さ・音ズレ・文字かぶり・見切れ)
+2. 3角度検証レポートの確認 + QC json 合格
+3. サムネ生成 + youtube/epNN.yaml メタデータ + GitHub Issues close
