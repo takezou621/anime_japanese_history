@@ -23,13 +23,36 @@ from artlib import palette as P  # noqa: E402
 from artlib.canvas import Canvas, save  # noqa: E402
 from artlib import character, ui  # noqa: E402
 import scenes_ep01 as S  # noqa: E402
+import scenes_ep02 as S2  # noqa: E402
 from artlib.props import jomon_pot, keyhole_tomb, dotaku as dotaku_prop  # noqa: E402
 from artlib.props import haniwa as haniwa_prop  # noqa: E402
 
-ASSETS = ROOT / "assets" / "ep01"
+ASSETS_ROOT = ROOT / "assets"
+ASSETS = ASSETS_ROOT / "ep01"
 SCENE_DIR = ASSETS / "scenes"
 OVERLAY_DIR = ASSETS / "overlay"
 UI_DIR = ASSETS / "ui"
+
+EP_SCENES = {
+    "ep02": {
+        "dir": ASSETS_ROOT / "ep02",
+        "scenes": {
+            "bg_asuka_palace": S2.bg_asuka_palace,
+            "bg_asuka_court": S2.bg_asuka_court,
+            "bg_asuka_ship": S2.bg_asuka_ship,
+            "bg_asuka_gate": S2.bg_asuka_gate,
+            "bg_asuka_field": S2.bg_asuka_field,
+            "bg_asuka_battle": S2.bg_asuka_battle,
+            "bg_nara_map": S2.bg_nara_map,
+            "bg_nara_ship": S2.bg_nara_ship,
+            "bg_nara_capital": S2.bg_nara_capital,
+            "bg_nara_temple": S2.bg_nara_temple,
+            "bg_nara_field": S2.bg_nara_field,
+        },
+        "priority": ["bg_asuka_palace", "bg_nara_capital"],
+        "reused": ["bg_school_lab", "bg_school_lab_evening", "bg_timeline", "bg_quiz_board"],
+    },
+}
 
 W, H = 1920, 1080
 
@@ -161,21 +184,26 @@ def gen_preview():
     return p
 
 
-def gen_contact_sheet(out_dir="/tmp/ajh_art"):
+def gen_contact_sheet(out_file="/tmp/ajh_art/sheet_ep01.png", ep="ep01"):
     """QA 用コンタクトシート (/tmp に保存, リポジ外)."""
     from PIL import Image, ImageDraw
-    names = sorted(SCENES.keys())
+    if ep == "ep02":
+        names = sorted(EP_SCENES["ep02"]["scenes"].keys())
+        scene_dir = EP_SCENES["ep02"]["dir"] / "scenes"
+    else:
+        names = sorted(SCENES.keys())
+        scene_dir = SCENE_DIR
     cols, cw, chh = 3, 480, 270
     rows = (len(names) + cols - 1) // cols
     sheet = Image.new("RGB", (cols * cw, rows * chh), (24, 26, 32))
     d = ImageDraw.Draw(sheet)
     for i, n in enumerate(names):
-        img = Image.open(SCENE_DIR / f"{n}.png").resize((cw, chh), Image.LANCZOS)
+        img = Image.open(scene_dir / f"{n}.png").resize((cw, chh), Image.LANCZOS)
         x, y = (i % cols) * cw, (i // cols) * chh
         sheet.paste(img, (x, y))
         d.rectangle([x + 4, y + 4, x + 300, y + 26], fill=(24, 26, 32))
         d.text((x + 10, y + 8), n, fill=(240, 240, 240))
-    out = Path(out_dir) / "sheet_ep01.png"
+    out = Path(out_file)
     out.parent.mkdir(parents=True, exist_ok=True)
     sheet.save(out)
     print(f"  sheet {out}")
@@ -185,16 +213,127 @@ def gen_contact_sheet(out_dir="/tmp/ajh_art"):
 # ---------------------------------------------------------------- main
 
 
+def gen_ui_badges_ep02():
+    """ep02 のバッジセット (script.json の文言準拠)."""
+    import shutil
+    outs = []
+    eras = [
+        ("era_asuka", "飛鳥時代", "592年〜 大化の改新まで"),
+        ("era_taika", "大化の改新", "645年 乙巳の変ののち"),
+        ("era_ritsuryo", "律令国家", "大宝律令 701年〜"),
+        ("era_nara", "奈良時代", "710年 平城京遷都"),
+    ]
+    for name, main, sub in eras:
+        img = ui.era_badge(main, sub=sub)
+        outs.append(save(img, ASSETS_ROOT / "ep02" / "ui" / f"{name}.png"))
+    outs.append(save(ui.exam_banner("ここが受験ポイント!"),
+                     ASSETS_ROOT / "ep02" / "ui" / "exam_banner.png"))
+    for i in (1, 2, 3):
+        outs.append(save(ui.exam_banner(f"クイズ 第{i}問"),
+                         ASSETS_ROOT / "ep02" / "ui" / f"quiz_banner_{i}.png"))
+    keywords = [
+        ("keyword_kanii", "冠位十二階"),
+        ("keyword_kenpo", "十七条憲法"),
+        ("keyword_kenzuishi", "遣隋使", "607年 小野妹子"),
+        ("keyword_horyuji", "法隆寺", "世界最古の木造建築"),
+        ("keyword_issshi", "乙巳の変", "645年 中大兄皇子"),
+        ("keyword_taika", "公地公民・班田収授・租庸調"),
+        ("keyword_chuoken", "中央集権", "壬申の乱ののち確立"),
+        ("keyword_taihoritsu", "大宝律令", "701年 律令国家へ"),
+        ("keyword_nikan", "二官八省一台"),
+        ("keyword_kenntoshi", "遣唐使", "630年〜"),
+        ("keyword_heijokyo", "平城京", "710年 遷都"),
+        ("keyword_kiyo", "古事記・日本書紀・万葉集"),
+    ]
+    udir = ASSETS_ROOT / "ep02" / "ui"
+    for kw in keywords:
+        img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
+        outs.append(save(img, udir / f"{kw[0]}.png"))
+    for yr, name in (("645年", "year_645"), ("701年", "year_701"), ("710年", "year_710")):
+        outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
+    outs.append(save(ui.title_main("アニメ日本史ラボ 第2話"), udir / "title_main.png"))
+    for f in ("era_asuka", "era_nara"):
+        pass
+    manifest = {"ep02_ui_assets": [p.name for p in outs]}
+    (udir / "manifest.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  ui ep02 x{len(outs)}")
+    return outs
+
+
+def copy_reused_assets(ep="ep02"):
+    """ep01 生成物の再利用分をコピー."""
+    import shutil
+    spec = EP_SCENES[ep]
+    src_dir = ASSETS_ROOT / "ep01" / "scenes"
+    dst_dir = spec["dir"] / "scenes"
+    for name in spec["reused"]:
+        shutil.copyfile(src_dir / f"{name}.png", dst_dir / f"{name}.png")
+        print(f"  reused {name}.png")
+    for f in ("char_sensei.png", "char_manabu.png"):
+        shutil.copyfile(ASSETS_ROOT / "ep01" / "overlay" / f,
+                        spec["dir"] / "overlay" / f)
+    print("  reused char_sensei / char_manabu")
+
+
+def gen_preview_ep02(bg="bg_asuka_palace", ch_name="char_manabu",
+                     foot=(1360, 1012), scale=0.62):
+    from PIL import Image
+    bg_img = Image.open(ASSETS_ROOT / "ep02" / "scenes" / f"{bg}.png").convert("RGBA")
+    ch = Image.open(ASSETS_ROOT / "ep02" / "overlay" / f"{ch_name}.png").convert("RGBA")
+    ch = ch.resize((int(ch.width * scale), int(ch.height * scale)), Image.LANCZOS)
+    base = Image.new("RGBA", bg_img.size, (0, 0, 0, 0))
+    base.alpha_composite(bg_img)
+    sh = Canvas(560, 120, ss=2)
+    sh.g().ellipse((40, 30, 520, 96), fill=(52, 40, 34, 96))
+    shadow = sh.render().resize((280, 60), Image.LANCZOS)
+    base.alpha_composite(shadow, (foot[0] - shadow.width // 2, foot[1] - 34))
+    base.alpha_composite(ch, (foot[0] - ch.width // 2, foot[1] - ch.height + 4))
+    p = save(base, ASSETS_ROOT / "ep02" / "preview_composite.png")
+    print(f"  preview {p}")
+    return p
+
+
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--ep", default="ep01", choices=["ep01", "ep02"])
     ap.add_argument("--only", nargs="*", help="生成するシーン名")
     ap.add_argument("--chars", action="store_true", help="立ち絵のみ")
     ap.add_argument("--props", action="store_true", help="小物オーバーレイのみ")
     ap.add_argument("--ui", action="store_true", help="バッジのみ")
     ap.add_argument("--preview", action="store_true", help="合成プレビューのみ")
     ap.add_argument("--sheet", action="store_true", help="コンタクトシートのみ")
-    ap.add_argument("--priority", action="store_true", help="優先3枚のみ")
+    ap.add_argument("--priority", action="store_true", help="優先シーンのみ")
     args = ap.parse_args()
+
+    if args.ep == "ep02":
+        spec = EP_SCENES["ep02"]
+        out_dir = spec["dir"] / "scenes"
+        if args.sheet:
+            gen_contact_sheet("/tmp/ajh_art/sheet_ep02.png", ep="ep02")
+            return
+        if args.preview:
+            gen_preview_ep02()
+            return
+        if args.ui:
+            gen_ui_badges_ep02()
+            return
+        copy_reused_assets("ep02")
+        todo = args.only or (spec["priority"] if args.priority else list(spec["scenes"].keys()))
+        for name in todo:
+            fn = spec["scenes"].get(name)
+            if fn is None:
+                print(f"  !! unknown scene: {name}")
+                continue
+            cv = S2.new_canvas()
+            fn(cv)
+            img = cv.render()
+            p = save(img, out_dir / f"{name}.png")
+            print(f"  scene {p.name} {img.size}")
+        if not args.only and not args.priority:
+            gen_ui_badges_ep02()
+            gen_preview_ep02(bg="bg_nara_capital")
+        return
 
     if args.sheet:
         gen_contact_sheet()
