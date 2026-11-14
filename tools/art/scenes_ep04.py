@@ -133,9 +133,10 @@ def bg_kamakura_seabattle(cv):
     sky(cv, P.SKY_SUNSET)
     g = cv.g()
     clouds_row(cv, 180, 3, 46, seed=16, base=(190, 100, 96), under=(88, 52, 74), alpha=235)
+    sun(g, 1380, 435, 62, color=(250, 170, 110), core=(252, 214, 160), halo=0.5)
     horizon = 430
     sea_grad = gradient((int(W * cv.ss), int((H - horizon) * cv.ss)),
-                        [(0, (150, 110, 140)), (0.35, (120, 84, 124)),
+                        [(0, (170, 118, 142)), (0.35, (126, 88, 126)),
                          (0.7, (96, 76, 118)), (1, (130, 84, 104))], "v")
     cv.img.alpha_composite(sea_grad, (0, int(horizon * cv.ss)))
     rnd = random.Random(17)
@@ -146,12 +147,12 @@ def bg_kamakura_seabattle(cv):
         g.rrect((xx, yy, xx + ln, yy + rnd.uniform(2.5, 5)), 3,
                 fill=with_alpha((250, 214, 190), rnd.randint(50, 130)))
     # 太陽の反射帯
-    for i in range(7):
-        yy = horizon + 26 + i * 84
-        ln = 240 - i * 20
+    for i in range(9):
+        yy = horizon + 26 + i * 68
+        ln = 250 - i * 18
         g.rrect((1380 - ln / 2 + math.sin(i * 2.2) * 54, yy,
                  1380 + ln / 2 + math.sin(i * 2.2) * 54, yy + 10), 5,
-                fill=with_alpha((255, 206, 150), 110 - i * 10))
+                fill=with_alpha((255, 206, 150), 120 - i * 10))
     # 戦船団 (炎上)
     war_boat(g, 420, 700, 1.0, onfire=False, seed=1)
     war_boat(g, 960, 860, 1.25, onfire=True, seed=2)
