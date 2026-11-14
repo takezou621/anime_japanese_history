@@ -77,7 +77,8 @@ def _get_stream(probe: dict, codec_type: str) -> dict | None:
 
 
 def run_checks(video: str, timing: dict, profile: str,
-               ffmpeg: str, ffprobe: str) -> dict:
+               ffmpeg: str, ffprobe: str,
+               expected: float | None = None) -> dict:
     probe = probe_media(ffprobe, video)
     fmt = probe.get("format", {})
     duration = float(fmt.get("duration", 0.0))
@@ -86,8 +87,9 @@ def run_checks(video: str, timing: dict, profile: str,
 
     checks: dict = {}
 
-    expected = float(timing.get("total_duration",
-                                timing.get("total", 0.0)) or 0.0)
+    if expected is None:
+        expected = float(timing.get("total_duration",
+                                    timing.get("total", 0.0)) or 0.0)
     ok_dur = abs(duration - expected) <= DUR_TOL if expected else True
     in_range = FULL_RANGE[0] <= duration <= FULL_RANGE[1]
     checks["duration"] = {

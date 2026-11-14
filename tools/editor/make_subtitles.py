@@ -125,33 +125,30 @@ _BREAK_AFTER = "、。！？…!?）」』,:;・"
 
 
 def _wrap_2lines(text: str, first_budget: int) -> str:
-    """Wrap to <=2 lines with \\N; line 1 budget smaller when label present.
+    """Wrap a chunk to <=2 lines with \\N (lead: 22 chars/line manual wrap).
 
-    Prefers breaking after sentence punctuation near the budget edge over a
-    hard mid-word cut (up to 4 chars back, +2 chars overflow on the line).
+    Line 1 budget is smaller when a speaker label is prefixed. Prefer breaking
+    after sentence punctuation: first try near the budget edge, then fall back
+    to the nearest earlier punctuation as long as line 2 stays <= WRAP+4.
     """
-    limit = first_budget
-    lines: list[str] = []
-    buf = ""
-    for ch in text:
-        if len(buf) >= limit:
-            cut = 0
-            for j in range(len(buf) - 1, max(len(buf) - 5, -1), -1):
-                if buf[j] in _BREAK_AFTER:
-                    cut = j + 1
-                    break
-            if cut:
-                lines.append(buf[:cut])
-                buf = buf[cut:] + ch
-            else:
-                lines.append(buf)
-                buf = ch
-            limit = WRAP + 2  # allow mild overflow after a punctuation pull-up
-        else:
-            buf += ch
-    if buf:
-        lines.append(buf)
+    if len(text) <= first_budget:
+        return text
+    buf, rest = text[:first_budget], text[first_budget:]
+
+    def line2_len(cut: int) -> int:
+        return (len(buf) - cut) + len(rest)
+
+    cut = 0  # 0 == hard cut at the budget edge
+    for j in range(len(buf) - 1, -1, -1):
+        if buf[j] in _BREAK_AFTER:
+            if line2_len(j + 1) <= WRAP + 4:
+                cut = j + 1
+            break  # nearest punctuation wins; if it overflows, hard cut
+    line1 = buf[:cut] if cut else buf
+    line2 = (buf[cut:] + rest) if cut else rest
+    lines = [ln for ln in (line1, line2) if ln]
     lines = _fix_line_starts(lines)
+    lines = [ln for ln in lines if ln]
     return "\\N".join(lines)
 
 

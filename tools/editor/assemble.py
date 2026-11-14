@@ -266,9 +266,12 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
             x=m["x"], y=m["y"], enable=m["enable"],
             desc=f"asset:{name}@{t0:.2f}s"))
 
-    # overlay_text entries live on beats and appear at the beat time
+    # overlay_text entries live on beats and appear at the beat time;
+    # they persist for max(beat, 3s) capped at scene end, then fade out 0.4s
+    scene_end_local = span.end - span.seg_start
     for i, b in enumerate(scene.get("beats", [])):
         t0b = beats[i]["start"] if i < len(beats) else 0.0
+        beat_end_local = beats[i]["end"] if i < len(beats) else t0b + 1.0
         for k, ot in enumerate(b.get("overlay_text") or []):
             style = ot.get("style", "title_main")
             cfg = STYLES.get(style)
@@ -283,11 +286,15 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
             m = layer_motion(ot.get("motion") or cfg["default_motion"],
                              t0, float(ot.get("dur", DEFAULT_MOTION_DUR)),
                              px, py, img.width, img.height)
+            t_end = min(max(beat_end_local, t0 + 3.0), scene_end_local)
+            if t_end < scene_end_local - 1e-3:
+                m["filters"].append(
+                    f"fade=t=out:st={t_end - 0.4:.3f}:d=0.4:alpha=1")
             span.layers.append(Layer(
                 image=str(png),
                 filters=m["filters"],
                 x=m["x"], y=m["y"], enable=m["enable"],
-                desc=f"text:{style}@{t0:.2f}s"))
+                desc=f"text:{style}@{t0:.2f}s-out@{t_end:.2f}s"))
     # drop None filters
     for L in span.layers:
         L.filters = [f for f in L.filters if f]
@@ -541,8 +548,10 @@ def main() -> int:
                           str(band_png)):
         raise SystemExit(1)
 
-    # QC
-    qc = qcmod.run_checks(out, timing, a.profile, ffmpeg, ffprobe)
+    # QC (partial renders check against the rendered plan total)
+    plan_total = spans[-1].end - spans[0].start
+    qc = qcmod.run_checks(out, timing, a.profile, ffmpeg, ffprobe,
+                          expected=plan_total if only else None)
     with open(qc_out, "w", encoding="utf-8") as f:
         json.dump(qc, f, ensure_ascii=False, indent=2)
     qcmod.print_summary(qc)
