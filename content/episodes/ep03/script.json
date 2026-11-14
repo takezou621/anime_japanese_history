@@ -1155,7 +1155,7 @@
         {
           "keyword": "薬子の変 810年",
           "detail": "嵯峨天皇が退け、蔵人所を新設。",
-          "importance": "high"
+          "importance": "normal"
         },
         {
           "keyword": "摂政・関白",
@@ -1223,7 +1223,7 @@
         {
           "keyword": "寝殿造・女房",
           "detail": "対屋・回廊・池の貴族の家。宮中に仕える女房が活躍。",
-          "importance": "high"
+          "importance": "normal"
         },
         {
           "keyword": "遣唐使の停止 894年",

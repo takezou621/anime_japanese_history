@@ -1150,7 +1150,7 @@
         {
           "keyword": "大名の3分類",
           "detail": "親藩(一族)/譜代(古家臣)/外様(後から従属)。御三家は後継ぎ役。",
-          "importance": "normal"
+          "importance": "high"
         },
         {
           "keyword": "参勤交代 1635年",
@@ -1160,7 +1160,7 @@
         {
           "keyword": "関ヶ原の戦い 1600年",
           "detail": "家康が敵対勢力を破り、天下の実権を握る。",
-          "importance": "normal"
+          "importance": "high"
         }
       ]
     },

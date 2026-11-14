@@ -1394,6 +1394,16 @@
           "keyword": "文明開化と民権の芽",
           "detail": "鹿鳴館(1883)/板垣退助の民選議院設立建白書(1874)。",
           "importance": "high"
+        },
+        {
+          "keyword": "西南戦争 1877年",
+          "detail": "西郷隆盛ら士族の最後の反乱。武士の時代の終わり。",
+          "importance": "high"
+        },
+        {
+          "keyword": "琉球処分 1879年",
+          "detail": "琉球を沖縄県とする。",
+          "importance": "normal"
         }
       ]
     },
