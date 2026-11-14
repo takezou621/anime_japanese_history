@@ -24,7 +24,8 @@
     "thumbnail": {
       "headline": "大化の改新はなぜ?",
       "sub": "飛鳥・奈良 受験必須"
-    }
+    },
+    "title": "【第2話】なぜ大化の改新は起きた？蘇我氏と聖徳太子を5分で解説【中学受験日本史】"
   },
   "characters": [
     {
@@ -48,7 +49,7 @@
     {
       "id": "s01",
       "section": "opening",
-      "duration_hint_sec": 20,
+      "duration_hint_sec": 12,
       "visual": {
         "background": "bg_school_lab",
         "assets": [
@@ -78,8 +79,12 @@
       },
       "beats": [
         {
+          "speaker": "manabu",
+          "text": "ねえ先生、どうして蘇我氏は倒されなきゃいけなかったの？"
+        },
+        {
           "speaker": "sensei",
-          "text": "こんにちは!ヒスト先生です。第2話の今日は、飛鳥と奈良。日本が「国家」になっていく大ドラマを見ていきますよ。",
+          "text": "実は、お米と権力がかぎだったんです!乙巳の変から、順番にたどりましょう。",
           "overlay_text": [
             {
               "text": "アニメ日本史ラボ 第2話",
@@ -90,19 +95,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "マナブなのだ!大化の改新って、なんで起きたのだ?"
-        },
-        {
-          "speaker": "sensei",
-          "text": "いいところに目をつけましたね。その答えこそ、今日いちばん大事なテーマです。"
-        },
-        {
-          "speaker": "manabu",
-          "text": "はやく知りたいなのだ!"
-        },
-        {
-          "speaker": "sensei",
-          "text": "聖徳太子の政治から、じっくりたどっていきましょう。",
+          "text": "よし、飛鳥からスタートなのだ!",
           "overlay_text": [
             {
               "text": "第2話 大化の改新のなぞ",
@@ -644,7 +637,14 @@
         },
         {
           "speaker": "sensei",
-          "text": "律は刑罰のきまり、令は政治のしくみ。この二つで国を動かす、中国式の国家のことです。"
+          "text": "律は刑罰のきまり、令は政治のしくみ。この二つで国を動かす、中国式の国家のことです。",
+          "overlay_text": [
+            {
+              "text": "律と令",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -753,7 +753,14 @@
         },
         {
           "speaker": "manabu",
-          "text": "日本中が、一列に管理なのだ!?"
+          "text": "日本中が、一列に管理なのだ!?",
+          "overlay_text": [
+            {
+              "text": "戸籍と班田",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -1131,23 +1138,28 @@
       "exam_points": [
         {
           "keyword": "聖徳太子の政治",
-          "detail": "摂政593年/冠位十二階603年/十七条憲法604年。"
+          "detail": "摂政593年/冠位十二階603年/十七条憲法604年。",
+          "importance": "high"
         },
         {
           "keyword": "遣隋使 607年",
-          "detail": "小野妹子。「日出づる処の天子…」の国書。"
+          "detail": "小野妹子。「日出づる処の天子…」の国書。",
+          "importance": "high"
         },
         {
           "keyword": "乙巳の変 645年",
-          "detail": "中大兄皇子・中臣鎌足が蘇我入鹿を討つ。"
+          "detail": "中大兄皇子・中臣鎌足が蘇我入鹿を討つ。",
+          "importance": "high"
         },
         {
           "keyword": "大化の改新",
-          "detail": "645年開始。公地公民へ転換。"
+          "detail": "645年開始。公地公民へ転換。",
+          "importance": "high"
         },
         {
           "keyword": "班田収授・租庸調",
-          "detail": "6年ごとに口分田/租=米・庸=労働・調=布や特産品。"
+          "detail": "6年ごとに口分田/租=米・庸=労働・調=布や特産品。",
+          "importance": "high"
         }
       ]
     },
@@ -1211,23 +1223,28 @@
       "exam_points": [
         {
           "keyword": "壬申の乱 672年",
-          "detail": "天武天皇が勝利し、中央集権を強化。"
+          "detail": "天武天皇が勝利し、中央集権を強化。",
+          "importance": "normal"
         },
         {
           "keyword": "大宝律令 701年",
-          "detail": "律令国家の完成。藤原不比等らが編纂。"
+          "detail": "律令国家の完成。藤原不比等らが編纂。",
+          "importance": "high"
         },
         {
           "keyword": "二官八省一台",
-          "detail": "神祇官・太政官+八省。地方は国司・郡司。"
+          "detail": "神祇官・太政官+八省。地方は国司・郡司。",
+          "importance": "high"
         },
         {
           "keyword": "遣唐使 630年〜",
-          "detail": "唐から制度・技術・文化を導入。"
+          "detail": "唐から制度・技術・文化を導入。",
+          "importance": "high"
         },
         {
           "keyword": "平城京遷都 710年",
-          "detail": "長安をモデルに朱雀大路・碁盤の目の都市。"
+          "detail": "長安をモデルに朱雀大路・碁盤の目の都市。",
+          "importance": "high"
         }
       ]
     },
