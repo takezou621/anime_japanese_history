@@ -8,7 +8,7 @@
 契約: docs/02_DESIGN.md §3 (tools/audio/make_narration.py)
 - VOICEVOX HTTP API (127.0.0.1:50021): audio_query → synthesis の 2 段
 - speaker UUID は /speakers から動的解決 (voice_style "四国めたん/ノーマル" 等で一致)
-- query パラメータ: speedScale/pitch は characters 設定, volumeScale は 1.2 (既定)
+- query パラメータ: speedScale/pitch/intonationScale は characters 設定, volumeScale は 1.2 (既定)
 - beat に reading があれば text の代わりに TTS 入力に使う
 - 発音辞書 (pronunciation_dict.json): 最長一致優先 + 単語境界考慮で TTS 前に置換。
   置換内容は audio/<ep>/pronunciation_log.json に記録。script.json は変更しない。
@@ -165,7 +165,8 @@ def resolve_style_ids(voice_styles: list[str]) -> dict[str, int]:
 
 
 def synth_beat(text: str, style_id: int, speed_scale: float, pitch: float,
-               volume_scale: float, retries: int = 3) -> bytes:
+               volume_scale: float, intonation_scale: float = 1.0,
+               retries: int = 3) -> bytes:
     """audio_query → synthesis の 2 段で 1 ビート分の WAV bytes を得る。"""
     query_enc = urllib.parse.urlencode({"speaker": style_id, "text": text})
     last_err: Exception | None = None
@@ -174,6 +175,7 @@ def synth_beat(text: str, style_id: int, speed_scale: float, pitch: float,
             query = http_json(f"/audio_query?{query_enc}", method="POST")
             query["speedScale"] = speed_scale
             query["pitch"] = pitch
+            query["intonationScale"] = intonation_scale
             query["volumeScale"] = volume_scale
             synth_enc = urllib.parse.urlencode({"speaker": style_id})
             url = f"{ENGINE_URL}/synthesis?{synth_enc}"
@@ -295,6 +297,22 @@ def main() -> int:
     else:
         print("[narration] 発音辞書: 不使用")
 
+    # 声質設定 (speed/pitch/intonation/volume) のハッシュ — 変わったら全WAV再生成
+    voice_params = {
+        cid: {
+            "speed_scale": float(c.get("speed_scale", 1.0)),
+            "pitch": float(c.get("pitch", 0.0)),
+            "intonation_scale": float(c.get("intonation_scale",
+                                            c.get("intonationScale", 1.0))),
+            "volume_scale": args.volume_scale,
+        } for cid, c in characters.items()
+    }
+    voice_sha = hashlib.sha256(
+        json.dumps(voice_params, sort_keys=True, ensure_ascii=False).encode()
+    ).hexdigest()[:12]
+    for cid, vp in voice_params.items():
+        print(f"[narration] 声質設定 {cid}: {vp}")
+
     manifest_path = out_dir / "narration_manifest.json"
     manifest: dict = {}
     if manifest_path.exists():
@@ -321,6 +339,7 @@ def main() -> int:
 
             cached = (not args.force and wav_path.exists()
                       and manifest.get("dict_sha256") == dict_sha
+                      and manifest.get("voice_sha256") == voice_sha
                       and manifest.get("beats", {}).get(wav_rel, {}).get("tts_text") == tts_text)
             if cached:
                 dur = wav_duration(wav_path.read_bytes())
@@ -328,12 +347,13 @@ def main() -> int:
             else:
                 wav_bytes = synth_beat(
                     tts_text, style_ids[char["voice_style"]],
-                    speed_scale=float(char.get("speed_scale", 1.0)),
-                    pitch=float(char.get("pitch", 0.0)),
-                    volume_scale=args.volume_scale)
+                    speed_scale=voice_params[beat["speaker"]]["speed_scale"],
+                    pitch=voice_params[beat["speaker"]]["pitch"],
+                    intonation_scale=voice_params[beat["speaker"]]["intonation_scale"],
+                    volume_scale=voice_params[beat["speaker"]]["volume_scale"])
                 wav_path.write_bytes(wav_bytes)
                 dur = wav_duration(wav_bytes)
-                reason = "regen(dict/text)" if wav_path.exists() and not args.force else "new"
+                reason = "regen(dict/text/voice)" if wav_path.exists() and not args.force else "new"
                 print(f"[narration] {wav_rel}  {dur:.3f}s  {beat['speaker']}: {tts_text[:32]}"
                       f"{'  [' + reason + ']' if not cached else ''}")
             manifest.setdefault("beats", {})[wav_rel] = {
@@ -368,6 +388,8 @@ def main() -> int:
         "dict_path": str(DEFAULT_DICT_PATH if not args.dict else args.dict),
         "dict_entries": len(pdict) if pdict else 0,
         "dict_sha256": dict_sha,
+        "voice_sha256": voice_sha,
+        "voice_params": voice_params,
         "summary": {
             "beats": len(log_beats),
             "beats_with_replacements": sum(1 for b in log_beats if b["replacements"]),
@@ -378,6 +400,7 @@ def main() -> int:
     }
     log_path.write_text(json.dumps(log, ensure_ascii=False, indent=2) + "\n")
     manifest["dict_sha256"] = dict_sha
+    manifest["voice_sha256"] = voice_sha
     manifest["generated_at"] = log["generated_at"]
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
 
