@@ -1,14 +1,14 @@
 {
   "episode": "ep05",
   "profile": "full",
-  "generated_at": "2026-11-14T18:17:03+00:00",
+  "generated_at": "2026-11-14T21:31:59+00:00",
   "video": "video/ep05_FINAL.mp4",
-  "duration_sec": 511.599,
+  "duration_sec": 511.418,
   "checks": {
     "duration": {
       "pass": true,
-      "value": 511.599,
-      "expected": 511.599,
+      "value": 511.418,
+      "expected": 511.418,
       "range": [
         300.0,
         600.0
@@ -37,21 +37,42 @@
         "codec": "aac",
         "sample_rate": "48000",
         "channels": 2,
-        "bit_rate": "193501"
+        "bit_rate": "193298"
       }
     },
     "loudness": {
-      "pass": false,
+      "pass": true,
       "warn": false,
       "value": {
-        "input_i": -14.59,
-        "input_tp": -0.33,
+        "input_i": -14.57,
+        "input_tp": -1.41,
         "input_lra": "3.20",
         "target_i": -14.0,
         "tolerance": 1.5,
         "tp_max": -1.0
       },
-      "detail": "out of loudness/TP target"
+      "detail": "within -14 LUFS ±1.5, TP<=-1.0"
+    },
+    "color": {
+      "pass": true,
+      "value": {
+        "color_space": "bt709",
+        "color_transfer": null,
+        "color_primaries": null,
+        "color_range": "tv"
+      },
+      "detail": "bt709 broadcast tags expected (lead spec 2026-11-15)"
+    },
+    "bit_rate": {
+      "pass": true,
+      "warn": false,
+      "value": {
+        "bit_rate": 35200507,
+        "mbps": 35.2,
+        "target_mbps": 35.0,
+        "maxrate_mbps": 40.0
+      },
+      "detail": "35.2 Mbps measured (target 35M, maxrate 40M)"
     },
     "black_frames": {
       "pass": true,
@@ -81,6 +102,8 @@
       "display_aspect_ratio": "16:9",
       "pix_fmt": "yuv420p",
       "level": 50,
+      "color_range": "tv",
+      "color_space": "bt709",
       "chroma_location": "left",
       "field_order": "progressive",
       "is_avc": "true",
@@ -91,12 +114,12 @@
       "time_base": "1/15360",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 7857664,
-      "duration": "511.566667",
-      "bit_rate": "905542",
+      "duration_ts": 7855104,
+      "duration": "511.400000",
+      "bit_rate": "34999628",
       "bits_per_raw_sample": "8",
-      "nb_frames": "15347",
-      "extradata_size": 48,
+      "nb_frames": "15342",
+      "extradata_size": 62,
       "disposition": {
         "default": 1,
         "dub": 0,
@@ -145,10 +168,10 @@
       "time_base": "1/48000",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 24556752,
-      "duration": "511.599000",
-      "bit_rate": "193501",
-      "nb_frames": "23983",
+      "duration_ts": 24548064,
+      "duration": "511.418000",
+      "bit_rate": "193298",
+      "nb_frames": "23974",
       "extradata_size": 5,
       "disposition": {
         "default": 1,
@@ -178,9 +201,9 @@
     }
   ],
   "format": {
-    "duration": "511.599000",
-    "size": "70843702",
-    "bit_rate": "1107800"
+    "duration": "511.418000",
+    "size": "2250271662",
+    "bit_rate": "35200507"
   },
-  "pass": false
+  "pass": true
 }
