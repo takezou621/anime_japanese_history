@@ -54,7 +54,7 @@ def load_part(name: str, clothes: str, head: str) -> str:
 def build_svg(char: dict) -> str:
     # 頭部スケール: ポーズの胴体が頭に対して大きいため、顔中心 (359,366) をピボットに
     # 拡大して頭肩バランスを自然化 (ユーザー指摘: 顔が胸部位置に見える問題の根本対処)
-    k = 1.2
+    k = 1.1
     pose = load_part(char["pose"], char["clothes"], char["head"])
     hair = load_part(char["hair"], char["clothes"], char["head"])
     face = load_part(char["face"], char["clothes"], char["head"])
@@ -93,15 +93,17 @@ def render(out: Path, char: dict) -> None:
     bbox = raw.getbbox()
     if bbox:
         bx0, by0, bx1, by1 = bbox
-        # 内容の上位75% (頭+肩) を切り出し。上下に40pxマージン
-        keep_h = int((by1 - by0) * 0.75) + 40
-        raw = raw.crop((max(0, bx0 - 40), max(0, by0 - 40), bx1 + 40, by0 + keep_h))
+        # 顎+首+胸元まで完全に含める (下端切断の不気味さを排除)
+        keep_h = int((by1 - by0) * 0.88) + 60
+        raw = raw.crop((max(0, bx0 - 40), max(0, by0 - 60), bx1 + 40, by0 + keep_h))
     # 縦合わせ: ピープ原図 850:1200 → キャンバス 900:1400 は縦長比率差が僅小のため
     # 幅基準で拡大し、下端をキャンバス下端に合わせて中央配置
     scale = ss_w / raw.width
     scaled = raw.resize((ss_w, min(int(raw.height * scale), ss_h)), Image.LANCZOS)
     canvas = Image.new("RGBA", (ss_w, ss_h), (0, 0, 0, 0))
-    y = ss_h - scaled.height  # 下端一致 (バスト下端=キャンバス下端)
+    # 中央寄り配置 (上マージン多め, 下マージン = 総余白の 1/3)
+    total_margin = max(0, ss_h - scaled.height)
+    y = int(total_margin * 0.65)
     canvas.alpha_composite(scaled, ((ss_w - scaled.width) // 2, y))
     canvas = canvas.resize((W, H), Image.LANCZOS)
     canvas.save(out, "PNG")
