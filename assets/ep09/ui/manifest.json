@@ -1,0 +1,25 @@
+{
+  "ep09_ui_assets": [
+    "era_boshin.png",
+    "era_haipan.png",
+    "result.png",
+    "era_minken.png",
+    "exam_banner.png",
+    "quiz_banner_1.png",
+    "quiz_banner_2.png",
+    "quiz_banner_3.png",
+    "keyword_boshin.png",
+    "keyword_haikan.png",
+    "keyword_zeichi.png",
+    "keyword_chohei.png",
+    "keyword_gakusei.png",
+    "keyword_tomioka.png",
+    "keyword_seikan.png",
+    "keyword_itagaki.png",
+    "year_1868.png",
+    "year_1871.png",
+    "year_1872.png",
+    "year_1877.png",
+    "title_main.png"
+  ]
+}
