@@ -27,6 +27,7 @@ import scenes_ep02 as S2  # noqa: E402
 import scenes_ep03 as S3  # noqa: E402
 import scenes_ep04 as S4  # noqa: E402
 import scenes_ep05 as S5  # noqa: E402
+import scenes_ep06 as S6  # noqa: E402
 from artlib.props import jomon_pot, keyhole_tomb, dotaku as dotaku_prop  # noqa: E402
 from artlib.props import haniwa as haniwa_prop  # noqa: E402
 
@@ -37,6 +38,26 @@ OVERLAY_DIR = ASSETS / "overlay"
 UI_DIR = ASSETS / "ui"
 
 EP_SCENES = {
+    "ep06": {
+        "dir": ASSETS_ROOT / "ep06",
+        "scenes": {
+            "bg_azuchi_okahazama": S6.bg_azuchi_okahazama,
+            "bg_azuchi_gifu": S6.bg_azuchi_gifu,
+            "bg_azuchi_castle": S6.bg_azuchi_castle,
+            "bg_azuchi_nagashino": S6.bg_azuchi_nagashino,
+            "bg_azuchi_honnoji": S6.bg_azuchi_honnoji,
+            "bg_azuchi_yamazaki": S6.bg_azuchi_yamazaki,
+            "bg_azuchi_osaka": S6.bg_azuchi_osaka,
+            "bg_azuchi_kenchi": S6.bg_azuchi_kenchi,
+            "bg_azuchi_korea": S6.bg_azuchi_korea,
+            "bg_azuchi_momoyama": S6.bg_azuchi_momoyama,
+            "bg_azuchi_chado": S6.bg_azuchi_chado,
+            "bg_azuchi_sunset": S6.bg_azuchi_sunset,
+            "bg_timeline": S6.bg_timeline,
+        },
+        "priority": ["bg_azuchi_castle", "bg_azuchi_nagashino"],
+        "reused": ["bg_school_lab", "bg_school_lab_evening", "bg_quiz_board"],
+    },
     "ep05": {
         "dir": ASSETS_ROOT / "ep05",
         "scenes": {
@@ -340,6 +361,47 @@ def copy_reused_assets(ep="ep02"):
     print("  reused char_sensei / char_manabu")
 
 
+def gen_ui_badges_ep06():
+    """ep06 のバッジセット."""
+    outs = []
+    udir = ASSETS_ROOT / "ep06" / "ui"
+    eras = [
+        ("era_okahazama", "桶狭間の戦い", "1560年 織田信長"),
+        ("era_tenka", "天下布武", "岐阜城・安土城"),
+        ("era_honnoji", "本能寺の変", "1582年 光秀の謀反"),
+        ("era_toyotomi", "豊臣政権", "太閤検地・刀狩り"),
+    ]
+    for name, main, sub in eras:
+        outs.append(save(ui.era_badge(main, sub=sub), udir / f"{name}.png"))
+    outs.append(save(ui.exam_banner("ここが受験ポイント!"), udir / "exam_banner.png"))
+    for i in (1, 2, 3):
+        outs.append(save(ui.exam_banner(f"クイズ 第{i}問"), udir / f"quiz_banner_{i}.png"))
+    keywords = [
+        ("keyword_okahazama", "桶狭間の戦い", "1560年 今川義元を討つ"),
+        ("keyword_gifu", "岐阜城", "稲葉山城を改称"),
+        ("keyword_azuchi", "安土城", "琵琶湖畔の5重天守"),
+        ("keyword_nagashino", "長篠の戦い", "1575年 三千挺鉄砲"),
+        ("keyword_honnoji", "本能寺の変", "1582年 明智光秀"),
+        ("keyword_yamazaki", "山崎の戦い", "天王山 秀吉の勝利"),
+        ("keyword_shikko", "四民公平の地教"),
+        ("keyword_kenchi", "太閤検地", "土地の丈量"),
+        ("keyword_katana", "刀狩り"),
+        ("keyword_chado", "茶の湯", "千利休の侘び茶"),
+    ]
+    for kw in keywords:
+        img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
+        outs.append(save(img, udir / f"{kw[0]}.png"))
+    for yr, name in (("1560年", "year_1560"), ("1582年", "year_1582"),
+                     ("1590年", "year_1590")):
+        outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
+    outs.append(save(ui.title_main("アニメ日本史ラボ 第6話"), udir / "title_main.png"))
+    manifest = {"ep06_ui_assets": [p.name for p in outs]}
+    (udir / "manifest.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  ui ep06 x{len(outs)}")
+    return outs
+
+
 def gen_ui_badges_ep05():
     """ep05 のバッジセット."""
     outs = []
@@ -518,7 +580,7 @@ def gen_preview_ep02(bg="bg_asuka_palace", ch_name="char_manabu",
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ep", default="ep01",
-                    choices=["ep01", "ep02", "ep03", "ep04", "ep05"])
+                    choices=["ep01", "ep02", "ep03", "ep04", "ep05", "ep06"])
     ap.add_argument("--only", nargs="*", help="生成するシーン名")
     ap.add_argument("--chars", action="store_true", help="立ち絵のみ")
     ap.add_argument("--props", action="store_true", help="小物オーバーレイのみ")
@@ -527,6 +589,35 @@ def main():
     ap.add_argument("--sheet", action="store_true", help="コンタクトシートのみ")
     ap.add_argument("--priority", action="store_true", help="優先シーンのみ")
     args = ap.parse_args()
+
+    if args.ep == "ep06":
+        spec = EP_SCENES["ep06"]
+        out_dir = spec["dir"] / "scenes"
+        if args.sheet:
+            gen_contact_sheet("/tmp/ajh_art/sheet_ep06.png", ep="ep06")
+            return
+        if args.preview:
+            gen_preview_generic("ep06")
+            return
+        if args.ui:
+            gen_ui_badges_ep06()
+            return
+        copy_reused_assets("ep06")
+        todo = args.only or (spec["priority"] if args.priority else list(spec["scenes"].keys()))
+        for name in todo:
+            fn = spec["scenes"].get(name)
+            if fn is None:
+                print(f"  !! unknown scene: {name}")
+                continue
+            cv = S6.new_canvas()
+            fn(cv)
+            img = cv.render()
+            p = save(img, out_dir / f"{name}.png")
+            print(f"  scene {p.name} {img.size}")
+        if not args.only and not args.priority:
+            gen_ui_badges_ep06()
+            gen_preview_generic("ep06", bg="bg_azuchi_castle")
+        return
 
     if args.ep == "ep05":
         spec = EP_SCENES["ep05"]
