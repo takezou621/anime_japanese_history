@@ -1,7 +1,7 @@
 {
   "episode": "ep00",
   "profile": "test",
-  "generated_at": "2026-11-14T11:08:05+00:00",
+  "generated_at": "2026-11-14T11:11:30+00:00",
   "video": "video/ep00_TEST.mp4",
   "duration_sec": 12.0,
   "checks": {
@@ -90,7 +90,7 @@
       "start_time": "0.000000",
       "duration_ts": 184320,
       "duration": "12.000000",
-      "bit_rate": "1032136",
+      "bit_rate": "1039179",
       "bits_per_raw_sample": "8",
       "nb_frames": "360",
       "extradata_size": 48,
@@ -176,8 +176,8 @@
   ],
   "format": {
     "duration": "12.000000",
-    "size": "1852863",
-    "bit_rate": "1235242"
+    "size": "1863419",
+    "bit_rate": "1242279"
   },
   "pass": true
 }
