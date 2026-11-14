@@ -31,6 +31,7 @@ import scenes_ep06 as S6  # noqa: E402
 import scenes_ep07 as S7  # noqa: E402
 import scenes_ep08 as S8  # noqa: E402
 import scenes_ep09 as S9  # noqa: E402
+import scenes_ep10 as S10  # noqa: E402
 from artlib.props import jomon_pot, keyhole_tomb, dotaku as dotaku_prop  # noqa: E402
 from artlib.props import haniwa as haniwa_prop  # noqa: E402
 
@@ -41,6 +42,26 @@ OVERLAY_DIR = ASSETS / "overlay"
 UI_DIR = ASSETS / "ui"
 
 EP_SCENES = {
+    "ep10": {
+        "dir": ASSETS_ROOT / "ep10",
+        "scenes": {
+            "bg_modern_nisshin": S10.bg_modern_nisshin,
+            "bg_modern_nichiro": S10.bg_modern_nichiro,
+            "bg_modern_manshu": S10.bg_modern_manshu,
+            "bg_modern_panic": S10.bg_modern_panic,
+            "bg_modern_taisho": S10.bg_modern_taisho,
+            "bg_modern_futsusen": S10.bg_modern_futsusen,
+            "bg_modern_taiheiyo": S10.bg_modern_taiheiyo,
+            "bg_modern_1945": S10.bg_modern_1945,
+            "bg_modern_kenpo": S10.bg_modern_kenpo,
+            "bg_modern_korea": S10.bg_modern_korea,
+            "bg_modern_growth": S10.bg_modern_growth,
+            "bg_modern_dusk": S10.bg_modern_dusk,
+            "bg_timeline": S10.bg_timeline,
+        },
+        "priority": ["bg_modern_1945", "bg_modern_growth"],
+        "reused": ["bg_school_lab", "bg_school_lab_evening", "bg_quiz_board"],
+    },
     "ep09": {
         "dir": ASSETS_ROOT / "ep09",
         "scenes": {
@@ -424,6 +445,45 @@ def copy_reused_assets(ep="ep02"):
     print("  reused char_sensei / char_manabu")
 
 
+def gen_ui_badges_ep10():
+    """ep10 のバッジセット."""
+    outs = []
+    udir = ASSETS_ROOT / "ep10" / "ui"
+    eras = [
+        ("era_nisshin", "日清・日露戦争", "1894年・1904年"),
+        ("era_taisho2", "大正デモクラシー", "普通選挙法 1925年"),
+        ("era_1945", "1945 焼け野原", "太平洋戦争の終結"),
+        ("era_growth", "高度経済成長", "復興と発展"),
+    ]
+    for name, main, sub in eras:
+        outs.append(save(ui.era_badge(main, sub=sub), udir / f"{name}.png"))
+    outs.append(save(ui.exam_banner("ここが受験ポイント!"), udir / "exam_banner.png"))
+    for i in (1, 2, 3):
+        outs.append(save(ui.exam_banner(f"クイズ 第{i}問"), udir / f"quiz_banner_{i}.png"))
+    keywords = [
+        ("keyword_nisshin2", "日清戦争", "1894年〜95年"),
+        ("keyword_nichiro2", "日露戦争", "1904年〜05年"),
+        ("keyword_manshu2", "満州事変", "1931年"),
+        ("keyword_panic2", "世界恐慌", "1929年〜"),
+        ("keyword_futsusen2", "普通選挙法", "1925年"),
+        ("keyword_taiheiyo2", "太平洋戦争", "1941年〜45年"),
+        ("keyword_kenpo2", "日本国憲法", "1946年11月3日公布"),
+        ("keyword_kodo", "高度経済成長", "1955年〜"),
+    ]
+    for kw in keywords:
+        img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
+        outs.append(save(img, udir / f"{kw[0]}.png"))
+    for yr, name in (("1894年", "year_1894"), ("1904年", "year_1904"),
+                     ("1925年", "year_1925"), ("1945年", "year_1945")):
+        outs.append(save(ui.year_number(yr), udir / f"{name}.png"))
+    outs.append(save(ui.title_main("アニメ日本史ラボ 最終話"), udir / "title_main.png"))
+    manifest = {"ep10_ui_assets": [p.name for p in outs]}
+    (udir / "manifest.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  ui ep10 x{len(outs)}")
+    return outs
+
+
 def gen_ui_badges_ep09():
     """ep09 のバッジセット."""
     outs = []
@@ -761,7 +821,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ep", default="ep01",
                     choices=["ep01", "ep02", "ep03", "ep04", "ep05", "ep06", "ep07",
-                             "ep08", "ep09"])
+                             "ep08", "ep09", "ep10"])
     ap.add_argument("--only", nargs="*", help="生成するシーン名")
     ap.add_argument("--chars", action="store_true", help="立ち絵のみ")
     ap.add_argument("--props", action="store_true", help="小物オーバーレイのみ")
@@ -770,6 +830,35 @@ def main():
     ap.add_argument("--sheet", action="store_true", help="コンタクトシートのみ")
     ap.add_argument("--priority", action="store_true", help="優先シーンのみ")
     args = ap.parse_args()
+
+    if args.ep == "ep10":
+        spec = EP_SCENES["ep10"]
+        out_dir = spec["dir"] / "scenes"
+        if args.sheet:
+            gen_contact_sheet("/tmp/ajh_art/sheet_ep10.png", ep="ep10")
+            return
+        if args.preview:
+            gen_preview_generic("ep10")
+            return
+        if args.ui:
+            gen_ui_badges_ep10()
+            return
+        copy_reused_assets("ep10")
+        todo = args.only or (spec["priority"] if args.priority else list(spec["scenes"].keys()))
+        for name in todo:
+            fn = spec["scenes"].get(name)
+            if fn is None:
+                print(f"  !! unknown scene: {name}")
+                continue
+            cv = S10.new_canvas()
+            fn(cv)
+            img = cv.render()
+            p = save(img, out_dir / f"{name}.png")
+            print(f"  scene {p.name} {img.size}")
+        if not args.only and not args.priority:
+            gen_ui_badges_ep10()
+            gen_preview_generic("ep10", bg="bg_modern_growth")
+        return
 
     if args.ep == "ep09":
         spec = EP_SCENES["ep09"]
