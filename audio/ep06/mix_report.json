@@ -18,16 +18,16 @@
     "target_offset": "0.05"
   },
   "output_loudness": {
-    "input_i": "-14.55",
+    "input_i": "-14.56",
     "input_tp": "-1.56",
-    "input_lra": "3.00",
+    "input_lra": "3.20",
     "input_thresh": "-25.20",
-    "output_i": "-23.78",
+    "output_i": "-23.79",
     "output_tp": "-10.44",
     "output_lra": "3.10",
-    "output_thresh": "-34.44",
+    "output_thresh": "-34.43",
     "normalization_type": "dynamic",
-    "target_offset": "-0.22"
+    "target_offset": "-0.21"
   },
   "mix": "audio/ep06/mix.wav"
 }
