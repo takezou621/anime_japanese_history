@@ -1,0 +1,842 @@
+{
+  "episode": "ep04",
+  "series": "日本史はじめて物語",
+  "title": "武士誕生!源平合戦と鎌倉幕府",
+  "youtube": {
+    "description": "中学受験・高校受験対策アニメ『アニメ日本史ラボ』第4話!\n武士が天下を取る激動の鎌倉時代。源氏と平氏の大合戦から幕府の盛衰までを、ヒスト先生とマナブの対話で楽しく学びます。\n保元・平治の乱・平清盛(宋貿易/武士初の政権)・源頼朝の挙兵1180年・壇ノ浦1185年・鎌倉幕府成立1192年・守護・地頭・御恩と奉公・承久の乱1221年・執権政治(北条泰時/御成敗式目1232年)・元寇(文永1274年/弘安1281年)・得宗専制・鎌倉仏教(法然/親鸞/日蓮/禅)まで、テスト頻出をぎゅっと整理。クイズ3問つき!\n\n▼タイムスタンプ(目安)\n0:00 オープニング\n0:15 保元・平治の乱と武士の台頭\n0:35 平清盛と平氏政権(宋貿易)\n1:00 源頼朝の挙兵(1180年)\n1:20 壇ノ浦(1185年)\n1:40 鎌倉幕府成立と守護・地頭(1192年)\n2:05 御恩と奉公\n2:25 承久の乱(1221年)\n2:45 執権政治と御成敗式目(1232年)\n3:05 元寇(1274年・1281年)\n3:30 得宗専制\n3:45 鎌倉仏教①(法然・親鸞)\n4:05 鎌倉仏教②(日蓮・禅)\n4:25 受験ポイントまとめ\n4:55 クイズ3問\n5:25 エンディング・次回予告\n\n※時間は目安です。シリーズ: 日本史はじめて物語(全10話)\n次回 第5話「足利尊氏と南北朝、そして戦国へ」もお楽しみに!\n\n音声: VOICEVOX(四国めたん・ずんだもん)/キャラクターデザインはオリジナル\n#日本史 #中学受験",
+    "tags": [
+      "日本史",
+      "中学受験",
+      "中学歴史",
+      "高校受験",
+      "鎌倉時代",
+      "源頼朝",
+      "源平合戦",
+      "鎌倉幕府",
+      "御恩と奉公",
+      "御成敗式目",
+      "元寇",
+      "鎌倉仏教",
+      "歴史アニメ",
+      "アニメ日本史ラボ",
+      "勉強動画"
+    ],
+    "thumbnail": { "headline": "武士 誕生!", "sub": "源平合戦・鎌倉幕府 必須" }
+  },
+  "characters": [
+    {
+      "id": "sensei",
+      "name": "ヒスト先生",
+      "voice_style": "四国めたん/ノーマル",
+      "speed_scale": 1.22,
+      "pitch": 0.0,
+      "subtitle_color": "#7ec8e3"
+    },
+    {
+      "id": "manabu",
+      "name": "マナブ",
+      "voice_style": "ずんだもん/ノーマル",
+      "speed_scale": 1.22,
+      "pitch": 0.0,
+      "subtitle_color": "#8be27e"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "section": "opening",
+      "duration_hint_sec": 14,
+      "visual": {
+        "background": "bg_school_lab",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "こんにちは!ヒスト先生です。",
+          "overlay_text": [ { "text": "アニメ日本史ラボ 第4話", "style": "title_main", "motion": "fade_up" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "第4話は、ついに武士の時代の幕開け。源氏と平氏の大合戦から鎌倉幕府まで一気に走ります!"
+        },
+        {
+          "speaker": "manabu",
+          "text": "マナブなのだ!武士が天下を取る、かっこいい話なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、でも勝ち残るのは、思ったより長い下積みの武家です。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "では、レッツゴーなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s02",
+      "section": "story",
+      "duration_hint_sec": 20,
+      "visual": {
+        "background": "bg_kamakura_rebellion",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "武士って、平安でも登場したのだ?",
+          "overlay_text": [ { "text": "12世紀 武士の台頭", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、平安の終わりに武力を持ち始めた武士。ついに、皇室と貴族の争いに召し出されます。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "1156年の保元の乱、翌年の平治の乱。ここで源義朝と平清盛たちが、武力で政治に介入しました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "保元・平治の乱", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "1156ねんの、ほうげんのらん、よくねんの、へいじのらん。ここで、みなもとの、よしともと、たいらの、きよもりたちが、ぶりょくで、せいじに、かいにゅうしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "「戦えば政治が変わる」ってことなのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そのとおり。これからは、刀を持つ者が時代を動かす、武力社会のはじまりです。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s03",
+      "section": "story",
+      "duration_hint_sec": 19,
+      "visual": {
+        "background": "bg_kamakura_harbor",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "平治の乱に勝ったのは、どっちなのだ?",
+          "overlay_text": [ { "text": "平氏政権 武士初の政権", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "平治で源氏が負け、平氏が台頭します。平清盛は上皇の院政、つまり治天の君と結んで力を伸ばし、1167年には武士初の太政大臣に。",
+          "reading": "へいじで、げんしが、まけて、へいしが、とうとうします。たいらの、きよもりは、じょうこうの、いんせい、つまり、ちてんのきみと、むすんで、ちからを、のばし、1167ねんには、ぶしはつの、だじょうだいじんに。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "太政大臣って、貴族のナンバーワンの官なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ。しかも宋との貿易で財力を蓄え、瀬戸内海を独占して武士初の政権を作りました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "宋貿易", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ええ。しかも、そうとの、ぼうえきで、ざいりょくを、たくわえ、せっとないかいを、どくせんして、ぶしはつの、せいけんを、つくりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "武力とお金、最強コンボなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s04",
+      "section": "story",
+      "duration_hint_sec": 16,
+      "visual": {
+        "background": "bg_kamakura_uprising",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "でも、源氏は復活できるのだ?",
+          "overlay_text": [ { "text": "1180年 源頼朝の挙兵", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1180年、以仁王の令旨を頼りに、源頼朝が挙兵します。関東の武士たちが続々と集まり、鎌倉を拠点にしました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1180年", "style": "year_number", "motion": "zoom_in" }
+          ],
+          "reading": "1180ねん、いちにんおうの、りょうじを、たよりに、みなもとの、よりともが、きょへいします。かんとうの、ぶしたちが、つづ々と、あつまり、かまくらを、きょてんにしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "頼朝なのだ!まけず嫌いなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ。そして弟の義経が、武将として大活躍します。",
+          "reading": "ええ。そして、おとうとの、ぎけいが、ぶしょうとして、だいかつやくします。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "兄弟タッグ、最強なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s05",
+      "section": "story",
+      "duration_hint_sec": 16,
+      "visual": {
+        "background": "bg_kamakura_seabattle",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_r", "intensity": 1.2 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "平氏は、どうなったのだ?",
+          "overlay_text": [ { "text": "1185年 壇ノ浦", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1185年、下関の壇ノ浦の海戦で、義経が平氏を滅ぼしました。約20年ぶりに、源氏が天下を取り返します。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1185年", "style": "year_number", "motion": "zoom_in" }
+          ],
+          "reading": "1185ねん、しものせきの、だんのうらの、かいせんで、ぎけいが、へいしを、ほろぼしました。やくにじゅうねんぶりに、げんしが、てんかを、とりもどします。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "海の大決戦なのだ!船で戦うのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、潮の流れまで読んだ名勝負と伝わります。これで武士の天下は、源氏に決まりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "義経、海でも強いのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s06",
+      "section": "story",
+      "duration_hint_sec": 21,
+      "visual": {
+        "background": "bg_kamakura_shogunate",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "じゃ、ついに鎌倉幕府なのだ!?",
+          "overlay_text": [ { "text": "1192年 鎌倉幕府", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1185年、頼朝は全国に守護と地頭を置きます。治安を守る守護、荘園や国の領地を管理して年貢を集める地頭です。",
+          "reading": "1185ねん、よりとは、ぜんこくに、しゅごと、じとうを、おきます。ちあんを、まもる、しゅご。しょうえんや、くにの、りょうちを、かんりして、ねんぐを、あつめる、じとうです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "日本中に、武士のネットワークなのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "その網を元に、1192年、頼朝は征夷大将軍に就任して、鎌倉幕府が成立します。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1192年", "style": "year_number", "motion": "zoom_in" }
+          ],
+          "reading": "その、あみを、もとに、1192ねん、よりとは、せいいたいしょうぐんに、しゅうにんして、かまくらばくふが、せいりつします。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "守護・地頭を置いた1185年が幕府成立という説も、新教科書には載っていますよ。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "「1192年、鎌倉幕府」丸暗記なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s07",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_kamakura_oath",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "幕府の中身って、どうなってるのだ?",
+          "overlay_text": [ { "text": "御恩と奉公", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "将軍と御家人の、御恩と奉公の関係です。将軍は領地を守る御恩を与え、御家人は戦で奉公する約束です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "御恩と奉公", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "しょうぐんと、ごかじんの、ごおんとほうこうの、かんけいです。しょうぐんは、りょうちを、まもる、ごおんを、あたえ、ごかじんは、たたかいで、ほうこうする、やくそくです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "「あなたにお恩、私が働く」契約なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、主従が実利で結ばれる、武士らしい関係です。この仕組みが、幕府の土台になりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "恩をあげて、奉公をもらう、ウィンウィンなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s08",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_kamakura_shokyu",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "天皇は、この間、何をしてたのだ?",
+          "overlay_text": [ { "text": "1221年 承久の乱", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "力を取り戻したい後鳥羽上皇が、幕府討伐の兵を挙げます。1221年の承久の乱です。",
+          "overlay_text": [
+            { "text": "1221年", "style": "year_number", "motion": "zoom_in" }
+          ],
+          "reading": "ちからを、とりもどしたい、ごとばじょうこうが、ばくふとうばつの、へいを、あげます。1221ねんの、じょうきゅうのらんです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "天皇vs幕府、大勝負なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、でも御家人たちは頼朝の恩を覚えていて、幕府側が圧勝しました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "この後、朝廷の力は下がり、幕府が天下をコントロールします。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "天皇でも勝てないのだ…時代が変わったなのだ。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s09",
+      "section": "story",
+      "duration_hint_sec": 17,
+      "visual": {
+        "background": "bg_kamakura_lawbook",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "頼朝の後は、だれがリーダーなのだ?",
+          "overlay_text": [ { "text": "執権政治", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "頼朝の妻の実家、北条氏です。執権という役が政治を動かす、執権政治が始まります。",
+          "reading": "よりとの、つまの、うえのいえ、ほうじょうしです。しっけんという、やくが、政治を、うごかす、しっけんせいじが、はじまります。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "北条さん、じわじわ来たのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "3代執権の北条泰時は、1232年に御成敗式目を作ります。武士のルールを書いた、日本初の武家法です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1232年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "御成敗式目", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "だいさんだい、しっけんの、ほうじょう、やすときは、1232ねんに、ごせいばいしきもくを、つくります。ぶしの、ルールを、かいた、にほんはつの、ぶっけほうです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "ルールブックで政治、堅実なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s10",
+      "section": "story",
+      "duration_hint_sec": 20,
+      "visual": {
+        "background": "bg_kamakura_mongol",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_l", "intensity": 1.2 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "でも、敵は中国だけじゃないのだ?",
+          "overlay_text": [ { "text": "元寇 文永1274・弘安1281", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "モンゴル帝国が日本に来ます。1274年の文永の役、1281年の弘安の役、二度の大襲来です。",
+          "reading": "もんごるていこくが、日本に、きます。1274ねんの、ぶんえいのえき、1281ねんの、こうあんのえき、にどの、だいしゅうらいです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "台風で敵が負けた…って話なのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、神風と呼ばれます。守護・地頭の名の下に、全国の武士が日本を守りました。",
+          "reading": "ええ、かみかぜと、よばれます。しゅご・じとうの、なのもとに、ぜんこくの、ぶしが、日本を、まもりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "蒙古襲来絵詞って、この絵なのだ!?",
+          "reading": "もうこうしゅうらいえましって、このえなのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そうです。でも、戦った御家人には恩賞が届きにくく、幕府への不満がたまっていきます。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "蒙古襲来絵詞", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s11",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_kamakura_tokuso",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "幕府の中で、不満はどうなったのだ?",
+          "overlay_text": [ { "text": "得宗専制", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "争いを収めるため、北条氏の当主、得宗がすべてを握る得宗専制へ進みます。",
+          "reading": "あらそいを、おさめるため、ほうじょうしの、とうしゅ、とくそうが、すべてを、にぎる、とくそうせんせいへ、すすみます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "ますます、かたくなな政治なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、御家人との絆が薄れ、幕府は少しずつ弱体化していきます。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "中央の御家人は恩賞をめぐる争いが絶えず、地方の武士の力も増していきました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "このすきまが、次の話の種なのだ。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s12",
+      "section": "story",
+      "duration_hint_sec": 19,
+      "visual": {
+        "background": "bg_kamakura_jodo",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "戦の世で、心の支えはなんなのだ?",
+          "overlay_text": [ { "text": "鎌倉仏教 法然・親鸞", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、今までの仏教は貴族のもの。ここで、庶民の救いを説く鎌倉仏教が広がります。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "法然は浄土宗で「一向に念佛せよ」。親鸞は浄土真宗で、「悪人正機」つまり誰でも救われると説きました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "浄土宗・浄土真宗", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ほうねんは、じょうどしゅうで、「いっこうにねんぶつせよ」。しんらんは、じょうどしんしゅうで、「あくにんしょうき」、つまり、だれでも、すくわれると、ときました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "一向に念佛…「ただ念じればいい」なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、身分や学問に関係なく救われる、庶民にぴったりの教えです。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s13",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_kamakura_zen",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "ほかの宗派もあるのだ?",
+          "overlay_text": [ { "text": "鎌倉仏教 日蓮と禅", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "日蓮は法華宗で、「南無妙法蓮華経」の題目を唱える教えを広めました。",
+          "reading": "にちれんは、ほっけしゅうで、「なむみょうほうれんげきょう」の、だいもくを、となえる、おしえを、ひろめました。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そして禅。栄西が臨済宗、道元が曹洞宗を開き、座って心を静める修養が武士に大流行します。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "臨済宗・曹洞宗", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "そして、ぜん。えいさいが、りんざいしゅう、どうげんが、そうとうしゅうを、ひらき、すわって、こころを、しずめる、しゅようが、ぶしに、だいりゅうこうします。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "座禅なのだ!武士っぽいのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、心を鍛える教えだからでしょう。宗教が庶民と武士の心の柱になった時代です。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s14",
+      "section": "points",
+      "duration_hint_sec": 14,
+      "visual": {
+        "background": "bg_timeline",
+        "assets": [
+          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "ここから受験ポイントのまとめ!まずは、武士の政権までの流れ。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "源平〜鎌倉", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "保元・平治の乱で武士が台頭、平氏政権と宋貿易、1180年頼朝挙兵、1185年壇ノ浦、1192年鎌倉幕府成立。守護と地頭も忘れずに!",
+          "reading": "ほうげん・へいじのらんで、ぶしが、とうとう、へいしせいけんと、そうぼうえき、1180ねん、よりときょへい、1185ねん、だんのうら、1192ねん、かまくらばくふせいりつ。しゅごと、じとうも、わすれずに!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "「御恩と奉公」の主従関係も、必ず押さえてください。"
+        }
+      ],
+      "exam_points": [
+        { "keyword": "保元・平治の乱", "detail": "1156年/1159年。武士が武力で政治に介入。" },
+        { "keyword": "平氏政権", "detail": "平清盛。1167年武士初の太政大臣、宋貿易で繁栄。" },
+        { "keyword": "頼朝の挙兵 1180年", "detail": "以仁王の令旨を頼りに、鎌倉を拠点に。" },
+        { "keyword": "壇ノ浦 1185年", "detail": "義経が平氏を滅ぼす海戦。" },
+        { "keyword": "鎌倉幕府成立 1192年", "detail": "頼朝が征夷大将軍に。1185年説(守護・地頭設置)も。" }
+      ]
+    },
+    {
+      "id": "s15",
+      "section": "points",
+      "duration_hint_sec": 14,
+      "visual": {
+        "background": "bg_timeline",
+        "assets": [
+          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "後半は、幕府の運営と宗教です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "鎌倉の仕組み", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "承久の乱1221年、北条泰時の御成敗式目1232年、元寇は文永1274・弘安1281。その後は得宗専制で幕府は弱体化。",
+          "reading": "じょうきゅうのらん、1221ねん、ほうじょうやすときの、ごせいばいしきもく、1232ねん、げんこうは、ぶんえい1274、こうあん1281。そのあとは、とくそうせんせいで、ばくふは、じゃくたいか。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "鎌倉仏教は、法然・親鸞・日蓮・禅(栄西・道元)。庶民の宗教、とセットです!",
+          "reading": "かまくらぶっきょうは、ほうねん・しんらん・にちれん・ぜん(えいさい・どうげん)。しょみんの、しゅうきょう、と、セットです!"
+        }
+      ],
+      "exam_points": [
+        { "keyword": "守護・地頭", "detail": "1185年設置。守護=治安、地頭=領地管理と年貢徴収。" },
+        { "keyword": "御恩と奉公", "detail": "将軍=御恩(領地)、御家人=奉公(軍役)の主従関係。" },
+        { "keyword": "承久の乱 1221年", "detail": "後鳥羽上皇が敗北、朝廷の力が低下。" },
+        { "keyword": "御成敗式目 1232年", "detail": "北条泰時。日本初の武家法。" },
+        { "keyword": "元寇", "detail": "文永の役1274年・弘安の役1281年。御家人の疲弊が幕府弱体化へ。" },
+        { "keyword": "鎌倉仏教", "detail": "法然(浄土宗)/親鸞(浄土真宗)/日蓮(法華宗)/禅(栄西・道元)。" }
+      ]
+    },
+    {
+      "id": "s16",
+      "section": "quiz",
+      "duration_hint_sec": 12,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "それではクイズタイム!第一問!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "1185年、源義経が平氏を滅ぼした海戦は何でしょう?ア、壇ノ浦。イ、長篠。ウ、関ケ原。",
+          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "1185ねん、みなもとの、ぎけいが、へいしを、ほろぼした、かいせんは、なんだろう?ア、だんのうら。イ、ながしの。ウ、せきがはら。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "海の決戦…アなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!壇ノ浦です。1185年とセットで丸暗記しましょう。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s17",
+      "section": "quiz",
+      "duration_hint_sec": 13,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "第二問!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "将軍が御恩を与え、御家人が奉公をする、武士の主従関係を何という?ア、御成敗式目。イ、御恩と奉公。ウ、得宗専制。",
+          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "しょうぐんが、ごおんを、あたえ、ごかじんが、ほうこうを、する、ぶしの、しゅじゅうかんけいを、なんという?ア、ごせいばいしきもく。イ、ごおんとほうこう。ウ、とくそうせんせい。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "恩と働きのペア…イなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!御恩と奉公です。幕府の土台になった、大事なキーワードですよ。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s18",
+      "section": "quiz",
+      "duration_hint_sec": 13,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "ラスト問題!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "1232年、北条泰時が定めた武家のルールブックは?ア、大宝律令。イ、十七条憲法。ウ、御成敗式目。",
+          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "1232ねん、ほうじょう、やすときが、さだめた、ぶっけの、ルールブックは?ア、たいほうりつりょう。イ、じゅうしちじょうけんぽう。ウ、ごせいばいしきもく。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "武家のルールブック…ウなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!御成敗式目です。大宝律令701年との年号ペアも、覚えておきましょう。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s19",
+      "section": "ending",
+      "duration_hint_sec": 16,
+      "visual": {
+        "background": "bg_school_lab_evening",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "今日は武士の登場から鎌倉幕府の盛衰まで、激動の時代を見ました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "壇ノ浦、御恩と奉公、承久の乱、元寇、鎌倉仏教…年号と人名、いっぱいなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "次回第5話は、足利尊氏と南北朝、そして戦国へ。鎌倉のゆらぎが大きく咲きますよ!",
+          "overlay_text": [ { "text": "次回 第5話 室町", "style": "keyword_card", "motion": "pop_in" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "つぎは合戦づくし!?チャンネル登録も、よろしくなのだ!"
+        }
+      ],
+      "exam_points": []
+    }
+  ],
+  "quiz": [
+    {
+      "q": "1185年、源義経が平氏を滅ぼした海戦は何でしょう?",
+      "choices": ["壇ノ浦", "長篠", "関ケ原"],
+      "answer": 0,
+      "explain": "壇ノ浦の戦いで平氏が滅亡し、武士の天下が源氏に決まりました。"
+    },
+    {
+      "q": "将軍が御恩を与え、御家人が奉公をする、武士の主従関係を何というでしょう?",
+      "choices": ["御成敗式目", "御恩と奉公", "得宗専制"],
+      "answer": 1,
+      "explain": "御恩と奉公は幕府と御家人をつなぐ、鎌倉幕府の土台となる関係です。"
+    },
+    {
+      "q": "1232年、北条泰時が定めた武家のルールブックは何でしょう?",
+      "choices": ["大宝律令", "十七条憲法", "御成敗式目"],
+      "answer": 2,
+      "explain": "御成敗式目は日本初の武家法。大宝律令701年との年号ペアが定番です。"
+    }
+  ]
+}
