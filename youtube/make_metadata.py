@@ -52,6 +52,10 @@ def main(argv=None):
     quiz = sc.get("quiz", [])
 
     desc = yt.get("description", "")
+    if chapters:
+        # 実測チャプターがある場合は概算タイムスタンプブロックを除去 (矛盾防止)
+        import re as _re
+        desc = _re.sub(r"▼タイムスタンプ.*?(?=\n\n|\Z)", "", desc, flags=_re.S).rstrip()
     extra = []
     if points:
         extra.append("■ この動画の受験ポイント")
