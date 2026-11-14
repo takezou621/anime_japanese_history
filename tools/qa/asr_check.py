@@ -19,9 +19,11 @@
   - 全体一致率: 台本全ビート連結 vs ASR 全セグメント連結 (時間順)
   - ビート別: ASR セグメントを timing.json のビート区間に重なり時間比例で分割割当
 - 閾値運用 (2026-11-15 lead 承認):
-  - 全体一致率ゲート: 既定 0.70 (回帰検知用途 — 音声の入れ替わり/欠落/誤レンダリング検出)
-  - ビート別: similarity が --review-threshold (既定 0.6) 未満のビートを results.review_list
-    に「要確認リスト」として出力する
+  - 全体一致率ゲート: 既定 0.70 (回帰検知用途 — 音声の入れ替わり/欠落/誤レンダリング検出)。
+    未達時は終了コード 1
+  - ビート別判定 (ok / beat_pass / beat_fail / review_list) は --review-threshold
+    (既定 0.6) 基準に統一。0.6 未満のビートを results.review_list に「要確認リスト」
+    として出力する
   - ep01 実測ベースライン: small で 0.768 / medium で 0.803。キャラ語尾 (〜のだ) や
     固有名詞の ASR 誤変換 (氷河→評価 等) が常時発生するため 0.95 は達成不可能
   - 固有名詞の正確性は pronunciation_log 突合 (audio) + 検証済み辞書で担保する
@@ -191,14 +193,15 @@ def transcribe(mix: Path, model_size: str, device: str, compute_type: str) -> tu
 
 
 # ---------------------------------------------------------------- 本体
-def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normalizer) -> Path:
+def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normalizer) -> dict:
+    """1 エピソード分を処理し results dict を返す (main で overall_pass を参照)。"""
     mix = root / f"audio/{episode}/mix.wav"
     if not mix.exists():
         raise SystemExit(f"mix.wav がありません: {mix}")
     out_path = root / args.out_dir / f"asr_check_{episode}.json"
     if out_path.exists() and not args.force:
         print(f"[asr] skip (出力済み): {out_path} (--force で上書き)")
-        return out_path
+        return {"overall_pass": True, "skipped": True, "out_path": str(out_path)}
 
     beats = load_beats(root, episode)
     t0 = time.monotonic()
@@ -211,22 +214,25 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
     asr_all = norm.text("".join(assigned))
     overall = ratio(script_all, asr_all)
 
+    # ビート別 ok / review_list は丸め前の実値 r で判定する (丸め誤差で閾値直下を
+    # 取りこぼさない)。表示用 similarity のみ round する。
     beat_rows = []
+    review_list = []
     for b, asr_text in zip(beats, assigned):
         exp_n, asr_n = norm.text(b["text"]), norm.text(asr_text)
         r = ratio(exp_n, asr_n)
+        if r is not None and r < args.review_threshold:
+            review_list.append(b["beat_id"])
         beat_rows.append({
             "beat_id": b["beat_id"], "start": round(b["start"], 3),
             "expected": b["text"], "asr": asr_text,
             "similarity": None if r is None else round(r, 4),
-            "ok": None if r is None else r >= args.threshold,
+            "ok": None if r is None else r >= args.review_threshold,
         })
     n_pass = sum(1 for r in beat_rows if r["ok"] is True)
     n_fail = sum(1 for r in beat_rows if r["ok"] is False)
     n_na = sum(1 for r in beat_rows if r["ok"] is None)
     overall_pass = overall is not None and overall >= args.threshold
-    review_list = [r["beat_id"] for r in beat_rows if r["similarity"] is not None
-                   and r["similarity"] < args.review_threshold]
 
     result = {
         "episode": episode,
@@ -243,14 +249,15 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
         "beat_pass": n_pass, "beat_fail": n_fail, "beat_na": n_na,
         "review_list": review_list,
         "beats_detail": beat_rows,
-        "note": ("ASR突合は音声と台本の一致率の目安。全体ゲート 0.70 は回帰検知用途。"
+        "note": ("ASR突合は音声と台本の一致率の目安。全体ゲート (threshold=0.70) は回帰検知用途、"
+                 "ビート別 ok / review_list は review_threshold=0.6 を要確認基準とする。"
                  "固有名詞の実読み検証は pronunciation_log 突合 (reports/qa_audio_epNN.md) でカバーすること"),
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
     print(f"[asr] {episode}: 全体一致率={result['overall_similarity']} "
-          f"(閾値 {args.threshold}) ビート OK={n_pass} NG={n_fail} N/A={n_na} → {out_path}")
-    return out_path
+          f"(ゲート {args.threshold}) ビート OK={n_pass} 要確認={len(review_list)} N/A={n_na} → {out_path}")
+    return result
 
 
 def main() -> int:
@@ -277,10 +284,13 @@ def main() -> int:
     if norm.mode == "fallback":
         print("[asr] 警告: pykakasi が無いため kanji→kana 正規化なし (fallback) — 一致率が低く出ます")
 
+    # 終了コード: どれか 1 話でも全体ゲート未達なら 1、入力エラーは 2、全て達成で 0
     exit_code = 0
     for ep in episodes:
         try:
-            run_episode(root, ep, args, norm)
+            result = run_episode(root, ep, args, norm)
+            if not result.get("overall_pass", False) and not result.get("skipped"):
+                exit_code = 1
         except SystemExit as e:
             print(f"[asr] {ep}: {e}", file=sys.stderr)
             exit_code = 2
