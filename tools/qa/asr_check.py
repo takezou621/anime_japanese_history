@@ -215,7 +215,7 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
         print(f"[asr] skip (出力済み): {out_path} (--force で上書き)")
         try:
             prev = json.loads(out_path.read_text())
-            overall_pass = bool(prev.get("overall_pass", False))
+            overall_pass = bool(isinstance(prev, dict) and prev.get("overall_pass", False))
         except (OSError, json.JSONDecodeError):
             overall_pass = False
         return {"overall_pass": overall_pass, "skipped": True, "out_path": str(out_path)}
