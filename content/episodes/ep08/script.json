@@ -24,7 +24,8 @@
     "thumbnail": {
       "headline": "黒船 来航!",
       "sub": "幕末の動乱 受験必須"
-    }
+    },
+    "title": "【第8話】黒船が来たら国はどうなる？ペリーと幕末の動乱を5分で解説【中学受験日本史】"
   },
   "characters": [
     {
@@ -48,7 +49,7 @@
     {
       "id": "s01",
       "section": "opening",
-      "duration_hint_sec": 16,
+      "duration_hint_sec": 12,
       "visual": {
         "background": "bg_school_lab",
         "assets": [
@@ -78,8 +79,12 @@
       },
       "beats": [
         {
+          "speaker": "manabu",
+          "text": "ねえ先生、黒船が来たら、日本はどうなっちゃうの？"
+        },
+        {
           "speaker": "sensei",
-          "text": "こんにちは!ヒスト先生です。",
+          "text": "実は、ここから日本の大変革が始まるんです!ペリーから大政奉還まで、一気に見ていきましょう。",
           "overlay_text": [
             {
               "text": "アニメ日本史ラボ 第8話",
@@ -89,20 +94,15 @@
           ]
         },
         {
-          "speaker": "sensei",
-          "text": "第8話は、幕末!ペリーの黒船が、260年の眠りを破る、大どんでん返しの時代です!"
-        },
-        {
           "speaker": "manabu",
-          "text": "マナブなのだ!黒船って、まっくろな船なのだ!?"
-        },
-        {
-          "speaker": "sensei",
-          "text": "ええ、煙を上げて来た西洋の軍艦です。日本の鍵を、開けに来ました。"
-        },
-        {
-          "speaker": "manabu",
-          "text": "260年の鍵、開くのだ!?レッツゴーなのだ!"
+          "text": "よし、幕末、スタートなのだ!",
+          "overlay_text": [
+            {
+              "text": "第8話 幕末のなぞ",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -265,7 +265,14 @@
         {
           "speaker": "sensei",
           "text": "ええ。まもなくアメリカの領事・ハリスが来日し、条約の話を進めてきます。",
-          "reading": "ええ。まもなく、アメリカの、りょうじ・ハリスが、らいにちし、じょうやくの、はなしを、すすめてきます。"
+          "reading": "ええ。まもなく、アメリカの、りょうじ・ハリスが、らいにちし、じょうやくの、はなしを、すすめてきます。",
+          "overlay_text": [
+            {
+              "text": "領事 ハリス",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -1153,23 +1160,28 @@
       "exam_points": [
         {
           "keyword": "ペリー来航 1853年",
-          "detail": "浦賀に黒船4隻、開国を要求して一時帰国。"
+          "detail": "浦賀に黒船4隻、開国を要求して一時帰国。",
+          "importance": "high"
         },
         {
           "keyword": "日米和親条約 1854年",
-          "detail": "開国。下田・函館を開港。"
+          "detail": "開国。下田・函館を開港。",
+          "importance": "high"
         },
         {
           "keyword": "日米修好通商条約 1858年",
-          "detail": "ハリスと締結。不平等条約(領事裁判権・税率固定)。"
+          "detail": "ハリスと締結。不平等条約(領事裁判権・税率固定)。",
+          "importance": "high"
         },
         {
           "keyword": "安政五カ国条約",
-          "detail": "開港場は五カ所に拡大。"
+          "detail": "開港場は五カ所に拡大。",
+          "importance": "normal"
         },
         {
           "keyword": "領事裁判権・税率固定",
-          "detail": "日本で裁けない/税率を日本で決められない。"
+          "detail": "日本で裁けない/税率を日本で決められない。",
+          "importance": "high"
         }
       ]
     },
@@ -1226,23 +1238,28 @@
       "exam_points": [
         {
           "keyword": "尊王攘夷・開国",
-          "detail": "外国追放派と開国派に意見が分裂。"
+          "detail": "外国追放派と開国派に意見が分裂。",
+          "importance": "high"
         },
         {
           "keyword": "井伊直弼・安政の大獄 1858年〜",
-          "detail": "勅許なしで条約調印、批判者を弾圧(吉田松陰ら死亡)。"
+          "detail": "勅許なしで条約調印、批判者を弾圧(吉田松陰ら死亡)。",
+          "importance": "high"
         },
         {
           "keyword": "桜田門外の変 1860年",
-          "detail": "井伊直弼が水戸浪人に襲撃され死亡、幕府の権威低下。"
+          "detail": "井伊直弼が水戸浪人に襲撃され死亡、幕府の権威低下。",
+          "importance": "high"
         },
         {
           "keyword": "尊攘派の台頭",
-          "detail": "長州(松下村塾・高杉晋作)/薩摩(西郷・大久保)。中心は京都へ。"
+          "detail": "長州(松下村塾・高杉晋作)/薩摩(西郷・大久保)。中心は京都へ。",
+          "importance": "high"
         },
         {
           "keyword": "禁門の変 1864年",
-          "detail": "蛤御門の戦いで長州敗北→敵薩摩に接近(伏線)。"
+          "detail": "蛤御門の戦いで長州敗北→敵薩摩に接近(伏線)。",
+          "importance": "high"
         }
       ]
     },
