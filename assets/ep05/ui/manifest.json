@@ -1,0 +1,26 @@
+{
+  "ep05_ui_assets": [
+    "era_muromachi.png",
+    "era_namboku.png",
+    "era_yoshimitsu.png",
+    "era_onin.png",
+    "exam_banner.png",
+    "quiz_banner_1.png",
+    "quiz_banner_2.png",
+    "quiz_banner_3.png",
+    "keyword_takauji.png",
+    "keyword_kenmu.png",
+    "keyword_namboku.png",
+    "keyword_shugo2.png",
+    "keyword_yoshimitsu.png",
+    "keyword_kinkaku.png",
+    "keyword_kango.png",
+    "keyword_onin.png",
+    "keyword_gekokujo.png",
+    "keyword_ginkaku.png",
+    "year_1336.png",
+    "year_1392.png",
+    "year_1467.png",
+    "title_main.png"
+  ]
+}
