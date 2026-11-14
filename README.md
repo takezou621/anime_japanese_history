@@ -56,4 +56,5 @@ content/episodes/epNN/script.json   (writer: 脚本)
 ## クレジット
 
 - 音声: [VOICEVOX](https://voicevox.hiroshiba.jp/) (四国めたん / ずんだもん)
+- キャラクター素材: [Open Peeps](https://www.openpeeps.com/) by Pablo Stanley (CC0 1.0)
 - イラスト・脚本・編集: 本プロジェクトのAIエージェントチーム
