@@ -1371,7 +1371,8 @@ def warhorse(g, x, y, s, col=(96, 72, 56), dark=(66, 50, 40), saddle=(140, 52, 4
         g.rrect((px + flip * knee * s - 6 * s, y - 8 * s, px + flip * knee * s + 6 * s, y),
                 3 * s, fill=(40, 34, 32))
     # 胴
-    g.rrect((x - flip * (bd + 10) * s, by, x + flip * (bd - 6) * s, by + bh), 22 * s,
+    _a, _b = sorted((x - flip * (bd + 10) * s, x + flip * (bd - 6) * s))
+    g.rrect((_a, by, _b, by + bh), 22 * s,
             fill=col, outline=dark, owidth=2.6 * s)
     # 首と頭
     nx = x + flip * (bd - 18) * s
@@ -1381,12 +1382,12 @@ def warhorse(g, x, y, s, col=(96, 72, 56), dark=(66, 50, 40), saddle=(140, 52, 4
     hx, hy = nx + flip * 32 * s, by - 46 * s
     g.ellipse((hx - 26 * s, hy - 16 * s, hx + 26 * s, hy + 14 * s), fill=col,
               outline=dark, owidth=2.4 * s)
-    g.ellipse((hx - flip * 20 * s, hy - 2 * s, hx - flip * 2 * s, hy + 12 * s),
-              fill=shade(col, 0.85))
+    _a, _b = sorted((hx - flip * 20 * s, hx - flip * 2 * s))
+    g.ellipse((_a, hy - 2 * s, _b, hy + 12 * s), fill=shade(col, 0.85))
     g.circle(hx - flip * 10 * s, hy - 4 * s, 2.6 * s, fill=(28, 24, 22))
     for ex in (-16, -6):
-        g.ellipse((hx + flip * ex * s - 5 * s, hy - 20 * s, hx + flip * ex * s + 5 * s,
-                   hy - 12 * s), fill=col, outline=dark, owidth=1.8 * s)
+        _a, _b = sorted((hx + flip * ex * s - 5 * s, hx + flip * ex * s + 5 * s))
+        g.ellipse((_a, hy - 20 * s, _b, hy - 12 * s), fill=col, outline=dark, owidth=1.8 * s)
     # たてがみ
     for k in range(4):
         g.poly([(nx + flip * (14 + k * 7) * s, by - 46 * s + k * 10 * s),
@@ -1641,3 +1642,174 @@ def kamakura_goten(g, x, y, s, seed=0):
     # 旗 (御所の白旗)
     for fx in (-300, 300):
         banner_pole(g, x + fx * s, y + 2 * s, 0.85, flag=(238, 238, 236))
+
+
+# ================================================================ ep05 (室町)
+
+
+def kinkaku(g, x, y, s, gold=None, gold_d=None, roof=(84, 88, 76), seed=0):
+    """金閣 (舎利殿: 3層の金楼閣). s=1 で高さ約 380px. y=地面."""
+    gold = gold or P.GOLD_LEAF
+    gold_d = gold_d or P.GOLD_LEAF_D
+    rnd = random.Random(seed)
+    # 池に面した石積みの島
+    g.ellipse((x - 130 * s, y - 8 * s, x + 130 * s, y + 14 * s),
+              fill=with_alpha((60, 60, 52), 60))
+    g.rrect((x - 110 * s, y - 44 * s, x + 110 * s, y), 8 * s, fill=(128, 122, 112),
+            outline=(96, 92, 84), owidth=3 * s)
+    speckle(g, (x - 104 * s, y - 40 * s, x + 104 * s, y - 4 * s), 24,
+            [(112, 106, 96), (144, 138, 126)], r=(2, 5), seed=seed)
+    y_ = y - 44 * s
+
+    def tier(cy0, bw, bh, rw, rh):
+        rect(g, x - bw, cy0 - bh, x + bw, cy0, fill=gold,
+             outline=shade(gold_d, 0.85), owidth=2.4 * s)
+        # 白壁の窓帯
+        rect(g, x - bw * 0.72, cy0 - bh * 0.66, x + bw * 0.72, cy0 - bh * 0.2,
+               fill=shade(gold, 1.18))
+        for wx in range(int(-bw * 0.6), int(bw * 0.61), 34):
+            rect(g, x + wx * s, cy0 - bh * 0.6, x + wx * s + 12 * s, cy0 - bh * 0.26,
+                 fill=shade(gold_d, 0.8))
+        curved_roof(g, x, cy0 - bh, rw, bw * 0.55, rh, roof, shade(roof, 0.85),
+                    lift=10 * s, s=s)
+
+    # 1階 / 2階 / 3階
+    tier(y_, 96 * s, 62 * s, 128 * s, 34 * s)
+    tier(y_ - 92 * s, 66 * s, 54 * s, 98 * s, 30 * s)
+    tier(y_ - 170 * s, 50 * s, 52 * s, 76 * s, 30 * s)
+    # 頂の鳳凰
+    px, py = x, y_ - 210 * s
+    g.ellipse((px - 9 * s, py - 8 * s, px + 9 * s, py + 6 * s), fill=P.GOLD,
+              outline=shade(P.GOLD, 0.7), owidth=1.8 * s)
+    g.circle(px - 2 * s, py - 10 * s, 5 * s, fill=P.GOLD)
+    g.line([(px + 6 * s, py - 2 * s), (px + 26 * s, py - 12 * s)], P.GOLD, 3.4 * s)
+    g.line([(px + 6 * s, py), (px + 24 * s, py - 4 * s)], P.GOLD, 3 * s)
+    # 金箔の照り
+    g.line([(x - 40 * s, y_ - 38 * s), (x - 26 * s, y_ - 6 * s)],
+           with_alpha((255, 240, 190), 120), 6 * s)
+
+
+def ginkaku(g, x, y, s, silver=None, silver_d=None, roof=(96, 100, 94), seed=0):
+    """銀閣 (東山文化: ひなびた2層の楼閣). s=1 で高さ約 300px. y=地面."""
+    silver = silver or P.SILVER_LEAF
+    silver_d = silver_d or P.SILVER_LEAF_D
+    g.ellipse((x - 120 * s, y - 8 * s, x + 120 * s, y + 14 * s),
+              fill=with_alpha((60, 60, 52), 60))
+    g.rrect((x - 100 * s, y - 40 * s, x + 100 * s, y), 8 * s, fill=(118, 122, 116),
+            outline=(90, 94, 88), owidth=3 * s)
+    y_ = y - 40 * s
+
+    def tier(cy0, bw, bh, rw, rh):
+        rect(g, x - bw, cy0 - bh, x + bw, cy0, fill=silver,
+             outline=shade(silver_d, 0.9), owidth=2.4 * s)
+        rect(g, x - bw * 0.7, cy0 - bh * 0.62, x + bw * 0.7, cy0 - bh * 0.22,
+               fill=shade(silver, 1.12))
+        for wx in range(int(-bw * 0.55), int(bw * 0.56), 30):
+            rect(g, x + wx * s, cy0 - bh * 0.56, x + wx * s + 11 * s, cy0 - bh * 0.28,
+                 fill=(72, 70, 66))
+        curved_roof(g, x, cy0 - bh, rw, bw * 0.55, rh, roof, shade(roof, 0.85),
+                    lift=10 * s, s=s)
+        # 苔むらい
+        speckle(g, (x - rw * 0.6, cy0 - bh - rh, x + rw * 0.6, cy0 - bh), 8,
+                [(110, 124, 104)], r=(2, 4), seed=seed + int(bw))
+
+    tier(y_, 80 * s, 60 * s, 108 * s, 32 * s)
+    tier(y_ - 88 * s, 56 * s, 52 * s, 84 * s, 30 * s)
+    # 頂の擬宝珠 (銀)
+    g.circle(x, y_ - 176 * s, 7 * s, fill=P.SILVER_LEAF, outline=shade(P.SILVER_LEAF_D, 0.8),
+             owidth=2 * s)
+
+
+def nobori(g, x, y, s, col=P.SHU, mark=(240, 236, 228), seed=0):
+    """旗指物 (縦長の旗). y=地面."""
+    g.line([(x, y), (x, y - 210 * s)], P.WOOD_D, 6 * s)
+    g.rrect((x - 15 * s, y - 206 * s, x + 15 * s, y - 30 * s), 4 * s, fill=col,
+            outline=shade(col, 0.72), owidth=2.2 * s)
+    rect(g, x - 15 * s, y - 176 * s, x + 15 * s, y - 160 * s, fill=mark)
+    g.circle(x, y - 88 * s, 9 * s, outline=mark, owidth=3 * s)
+    g.line([(x - 15 * s, y - 44 * s), (x + 15 * s, y - 44 * s)], mark, 4 * s)
+
+
+def mountain_fort(g, x, y, s, seed=0, flag=P.SHU):
+    """山城 (上赤坂城風: 山頂の柵と櫓). s=1 で幅約 620px. y=麓の地面."""
+    rnd = random.Random(seed)
+    # 山体
+    g.poly(blob_pts(x, y - 120 * s, 320 * s, 130 * s, seed=seed, wobble=0.16),
+           fill=(128, 148, 100), outline=(104, 122, 82), owidth=3 * s)
+    # 2重の柵 (尾根に沿う)
+    palisade(g, x - 240 * s, x + 240 * s, y - 150 * s, 0.72, col=(92, 66, 48),
+             dark=(66, 46, 36), seed=seed)
+    palisade(g, x - 150 * s, x + 150 * s, y - 220 * s, 0.6, col=(92, 66, 48),
+             dark=(66, 46, 36), seed=seed + 1)
+    # 物見櫓
+    wx = x
+    rect(g, wx - 42 * s, y - 320 * s, wx + 42 * s, y - 252 * s, fill=P.WOOD_D)
+    for px in (-34, 0, 34):
+        rect(g, wx + px * s - 5 * s, y - 320 * s, wx + px * s + 5 * s, y - 252 * s,
+             fill=shade(P.WOOD_D, 0.85))
+    g.poly([(wx - 60 * s, y - 326 * s), (wx + 60 * s, y - 326 * s), (wx, y - 372 * s)],
+           fill=shade(P.WOOD, 1.1), outline=P.WOOD_D, owidth=3 * s)
+    nobori(g, wx - 90 * s, y - 258 * s, 0.62, col=flag, seed=seed)
+    nobori(g, wx + 90 * s, y - 258 * s, 0.62, col=(238, 238, 236), seed=seed + 1)
+    # 麓の門
+    rect(g, x - 44 * s, y - 96 * s, x + 44 * s, y - 20 * s, fill=shade(P.WOOD_D, 0.92))
+    g.line([(x - 44 * s, y - 96 * s), (x + 44 * s, y - 96 * s)], shade(P.WOOD_D, 0.7), 5 * s)
+
+
+def two_court_flags(g, x, y, s, col_north=(216, 178, 96), col_south=(150, 108, 178)):
+    """南北朝の二つの朝廷旗 (金=北朝 / 紫=南朝). y=地面."""
+    for (fx, col, h) in [(-120, col_north, 200), (120, col_south, 200)]:
+        fx = x + fx * s
+        g.line([(fx, y), (fx, y - h * s)], P.WOOD_D, 7 * s)
+        g.poly([(fx, y - h * s), (fx + 64 * s, y - h * s + 12 * s),
+                (fx, y - h * s + 64 * s)], fill=col, outline=shade(col, 0.72), owidth=2.4 * s)
+        g.circle(fx + 22 * s, y - h * s + 30 * s, 10 * s, fill=with_alpha((240, 240, 234), 220))
+    # 間に小さな山
+    g.poly(blob_pts(x, y - 20 * s, 90 * s, 42 * s, seed=7, wobble=0.14),
+           fill=(130, 148, 104))
+
+
+def kango_ship(g, x, y, s, seed=0):
+    """勘合船 (日明貿易の大型ジャンク船). s=1 で全長約 480px. y=喫水線."""
+    hull, hull_d = (140, 106, 72), (104, 78, 54)
+    L = 240 * s
+    g.ellipse((x - L * 1.05, y + 6 * s, x + L * 1.05, y + 20 * s),
+              fill=with_alpha((30, 48, 70), 80))
+    top = ([(x - L, y - 48 * s)]
+           + qbez((x - L, y - 48 * s), (x - L * 0.3, y - 28 * s), (x, y - 24 * s), 12)
+           + qbez((x, y - 24 * s), (x + L * 0.3, y - 28 * s), (x + L, y - 52 * s), 12))
+    bot = ([(x + L * 0.97, y + 2 * s)]
+           + qbez((x + L * 0.97, y + 2 * s), (x + L * 0.2, y + 16 * s), (x, y + 17 * s), 12)
+           + qbez((x, y + 17 * s), (x - L * 0.2, y + 16 * s), (x - L * 0.97, y + 2 * s), 12))
+    g.poly(top + bot, fill=hull, outline=shade(hull_d, 0.8), owidth=2.6 * s)
+    g.line(top, shade(hull_d, 0.75), 4 * s)
+    # 高い船尾楼
+    g.rrect((x + L * 0.55, y - 108 * s, x + L * 0.92, y - 40 * s), 8 * s,
+            fill=shade(hull, 1.12), outline=shade(hull_d, 0.8), owidth=2.4 * s)
+    g.rrect((x + L * 0.58, y - 100 * s, x + L * 0.89, y - 56 * s), 6 * s,
+            fill=with_alpha((70, 56, 48), 220))
+    # 3本のマスト+硬帆
+    for (mx, mh, sw) in [(-L * 0.55, 170 * s, 78 * s), (0, 200 * s, 96 * s),
+                         (L * 0.45, 150 * s, 66 * s)]:
+        mx = x + mx
+        g.line([(mx, y - 26 * s), (mx, y - 26 * s - mh)], P.WOOD_D, 7 * s)
+        sail = (qbez((mx - sw, y - 40 * s - mh + 24 * s), (mx, y - 34 * s - mh + 24 * s),
+                     (mx + sw, y - 40 * s - mh + 24 * s), 10)
+                + qbez((mx + sw, y - 40 * s - mh + 24 * s),
+                       (mx + sw * 1.05, y - 40 * s - mh / 2),
+                       (mx + sw * 0.9, y - 30 * s), 10)
+                + qbez((mx + sw * 0.9, y - 30 * s), (mx, y - 22 * s),
+                       (mx - sw * 0.9, y - 30 * s), 10)
+                + qbez((mx - sw * 0.9, y - 30 * s), (mx - sw * 1.05, y - 40 * s - mh / 2),
+                       (mx - sw, y - 40 * s - mh + 24 * s), 10))
+        g.poly(sail, fill=(198, 182, 148), outline=shade((150, 136, 106), 0.9), owidth=2.4 * s)
+        for k in range(1, 5):
+            yy = y - 40 * s - mh + 24 * s + (mh - 36 * s) * k / 5
+            g.line([(mx - sw * 0.82, yy), (mx + sw * 0.82, yy - 2 * s)],
+                   shade((150, 136, 106), 0.85), 2.2 * s)
+    # 勘合旗
+    fx = x + L * 0.86
+    g.line([(fx, y - 108 * s), (fx, y - 190 * s)], P.WOOD_D, 4.4 * s)
+    g.rrect((fx, y - 190 * s, fx + 54 * s, y - 128 * s), 4 * s,
+            fill=P.YAMABUKI, outline=shade(P.YAMABUKI, 0.72), owidth=2.2 * s)
+    g.circle(fx + 27 * s, y - 158 * s, 12 * s, outline=(150, 110, 60), owidth=3.4 * s)
