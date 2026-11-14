@@ -262,7 +262,8 @@ def compose_bust(char: dict) -> Image.Image:
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 1200">'
         '<g transform="translate(225 0)">'
         + CP_load(char["hair"], ink, hf)
-        + '<g transform="translate(159 186)">' + CP_load(char["face"], ink, hf) + "</g>"
+        + '<g transform="translate(159 186)">' + CP_load(char["face"], ink, hf)
+        + expression_svg(char.get("face_expr"), hf) + "</g>"
         + '<g transform="translate(47 241)">'
         + (CP_load(char["acc"], ink, hf) if char["acc"] else "") + "</g>"
         + "</g></svg>",
@@ -304,6 +305,8 @@ def main(argv=None):
     p.add_argument("--suffix", default="",
                    help="出力ファイル名の末尾に付ける差分サフィックス")
     a = p.parse_args(argv)
+    if a.face and not a.suffix:
+        p.error("--face には --suffix が必要です (基本キャラ PNG の上書き防止)")
     out_dir = Path(a.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     targets = [a.only] if a.only else list(CHARACTERS)

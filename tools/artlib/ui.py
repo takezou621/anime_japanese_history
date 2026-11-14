@@ -196,6 +196,6 @@ def next_episode_card(w=1920, h=1080):
         g.poly([(cx0, cy0 + dy * 44), (cx0, cy0), (cx0 + dx * 44, cy0)],
                fill=None, outline=P.SHU, owidth=6)
     # 下部のテープ (字幕帯と重ならない位置の装飾)
-    g.rrect((fx0 + 120, fy1 + 60, fx1 - 120, fy1 + 130), 16,
+    g.rrect((fx0 + 120, fy1 + 20, fx1 - 120, fy1 + 90), 16,
             fill=with_alpha(P.YAMABUKI, 200), outline=shade(P.YAMABUKI, 0.7), owidth=3)
     return cv.render()
