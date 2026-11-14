@@ -1,14 +1,14 @@
 {
   "episode": "ep01",
   "profile": "full",
-  "generated_at": "2026-11-14T14:06:58+00:00",
+  "generated_at": "2026-11-14T17:43:52+00:00",
   "video": "video/ep01_FINAL.mp4",
-  "duration_sec": 575.561,
+  "duration_sec": 571.133,
   "checks": {
     "duration": {
       "pass": true,
-      "value": 575.561,
-      "expected": 575.561,
+      "value": 571.133,
+      "expected": 571.098,
       "range": [
         300.0,
         600.0
@@ -37,15 +37,15 @@
         "codec": "aac",
         "sample_rate": "48000",
         "channels": 2,
-        "bit_rate": "193253"
+        "bit_rate": "193461"
       }
     },
     "loudness": {
       "pass": true,
       "warn": false,
       "value": {
-        "input_i": -14.39,
-        "input_tp": -1.42,
+        "input_i": -14.38,
+        "input_tp": -1.44,
         "input_lra": "3.60",
         "target_i": -14.0,
         "tolerance": 1.5,
@@ -91,11 +91,11 @@
       "time_base": "1/15360",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 8840192,
-      "duration": "575.533333",
-      "bit_rate": "930246",
+      "duration_ts": 8772608,
+      "duration": "571.133333",
+      "bit_rate": "1066351",
       "bits_per_raw_sample": "8",
-      "nb_frames": "17266",
+      "nb_frames": "17134",
       "extradata_size": 48,
       "disposition": {
         "default": 1,
@@ -145,10 +145,10 @@
       "time_base": "1/48000",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 27626928,
-      "duration": "575.561000",
-      "bit_rate": "193253",
-      "nb_frames": "26981",
+      "duration_ts": 27413504,
+      "duration": "571.114667",
+      "bit_rate": "193461",
+      "nb_frames": "26772",
       "extradata_size": 5,
       "disposition": {
         "default": 1,
@@ -178,9 +178,9 @@
     }
   ],
   "format": {
-    "duration": "575.561000",
-    "size": "81461146",
-    "bit_rate": "1132267"
+    "duration": "571.133333",
+    "size": "90568783",
+    "bit_rate": "1268618"
   },
   "pass": true
 }
