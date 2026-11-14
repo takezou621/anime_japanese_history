@@ -1,0 +1,186 @@
+{
+  "episode": "ep08",
+  "profile": "full",
+  "generated_at": "2026-11-14T13:17:58+00:00",
+  "video": "video/ep08_FINAL.mp4",
+  "duration_sec": 549.679,
+  "checks": {
+    "duration": {
+      "pass": true,
+      "value": 549.679,
+      "expected": 549.679,
+      "range": [
+        300.0,
+        600.0
+      ],
+      "detail": "matches timing total"
+    },
+    "resolution": {
+      "pass": true,
+      "value": "1920x1080"
+    },
+    "fps": {
+      "pass": true,
+      "value": 30.0
+    },
+    "video_codec": {
+      "pass": true,
+      "value": "h264"
+    },
+    "pix_fmt": {
+      "pass": true,
+      "value": "yuv420p"
+    },
+    "audio": {
+      "pass": true,
+      "value": {
+        "codec": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "bit_rate": "193399"
+      }
+    },
+    "loudness": {
+      "pass": true,
+      "warn": false,
+      "value": {
+        "input_i": -14.51,
+        "input_tp": -1.46,
+        "input_lra": "3.10",
+        "target_i": -14.0,
+        "tolerance": 1.5,
+        "tp_max": -1.0
+      },
+      "detail": "within -14 LUFS ±1.5, TP<=-1.0"
+    },
+    "black_frames": {
+      "pass": true,
+      "value": {
+        "ratio": 0.0,
+        "runs": []
+      },
+      "threshold": 0.01
+    }
+  },
+  "streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+      "profile": "High",
+      "codec_type": "video",
+      "codec_tag_string": "avc1",
+      "codec_tag": "0x31637661",
+      "mime_codec_string": "avc1.640032",
+      "width": 1920,
+      "height": 1080,
+      "coded_width": 1920,
+      "coded_height": 1080,
+      "has_b_frames": 2,
+      "sample_aspect_ratio": "1:1",
+      "display_aspect_ratio": "16:9",
+      "pix_fmt": "yuv420p",
+      "level": 50,
+      "chroma_location": "left",
+      "field_order": "progressive",
+      "is_avc": "true",
+      "nal_length_size": "4",
+      "id": "0x1",
+      "r_frame_rate": "30/1",
+      "avg_frame_rate": "30/1",
+      "time_base": "1/15360",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 8442880,
+      "duration": "549.666667",
+      "bit_rate": "751944",
+      "bits_per_raw_sample": "8",
+      "nb_frames": "16490",
+      "extradata_size": 48,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "VideoHandler",
+        "encoder": "Lavc63.1.102 libx264"
+      }
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_long_name": "AAC (Advanced Audio Coding)",
+      "profile": "LC",
+      "codec_type": "audio",
+      "codec_tag_string": "mp4a",
+      "codec_tag": "0x6134706d",
+      "mime_codec_string": "mp4a.40.2",
+      "sample_fmt": "fltp",
+      "sample_rate": "48000",
+      "channels": 2,
+      "channel_layout": "stereo",
+      "bits_per_sample": 0,
+      "initial_padding": 1024,
+      "id": "0x2",
+      "r_frame_rate": "0/0",
+      "avg_frame_rate": "0/0",
+      "time_base": "1/48000",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 26384592,
+      "duration": "549.679000",
+      "bit_rate": "193399",
+      "nb_frames": "25768",
+      "extradata_size": 5,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "SoundHandler"
+      }
+    }
+  ],
+  "format": {
+    "duration": "549.679000",
+    "size": "65558843",
+    "bit_rate": "954140"
+  },
+  "pass": true
+}
