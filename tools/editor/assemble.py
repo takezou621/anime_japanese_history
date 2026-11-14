@@ -59,11 +59,13 @@ XFADE_DUR = 0.5          # section crossfade (STYLE_GUIDE / DESIGN)
 SUPER_W, SUPER_H = 5760, 3240   # 3x supersampled zoompan input
 CONTIG_TOL = 0.02
 
-# character sprite placement (artist recommendation via lead, 2026-11-14):
-# 立ち絵 scale 0.55-0.62, feet on the ground line -> scale 0.58, feet ~y1020
-# (clears scene-floor art; the subtitle band is drawn over it in final pass)
-CHAR_SCALE = 0.58
-CHAR_FEET_Y = 1020.0
+# character sprite placement (artist recommendation + lead验收 2026-11-14):
+# scale 0.55-0.62 recommended, feet on the ground line, and the whole body
+# must sit ABOVE the subtitle band (band top ≈ 924-948px) -> feet at y=930,
+# any char scale above 0.68 is capped so the head stays in frame.
+CHAR_SCALE = 0.58          # default when the script leaves scale at 1.0
+CHAR_SCALE_MAX = 0.68      # hard cap for char_* layers
+CHAR_FEET_Y = 930.0
 
 FFMPEG_CANDIDATES = [
     "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg",
@@ -262,9 +264,12 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
         pos = a.get("pos") or [MAIN_W / 2, MAIN_H / 2]
         px, py = float(pos[0]), float(pos[1])
         if name.lower().startswith("char_"):
-            # artist placement rule: fixed scale, feet on the ground line,
-            # horizontal position from the script
-            scale = CHAR_SCALE
+            # artist/lead placement rule: feet on the ground line above the
+            # subtitle band; scale 1.0 (schema default) -> CHAR_SCALE, and
+            # any explicit setting is capped at CHAR_SCALE_MAX
+            raw = float(a.get("scale", 1.0) or 1.0)
+            scale = CHAR_SCALE if raw == 1.0 else raw
+            scale = min(scale, CHAR_SCALE_MAX)
             tw0, th0 = int(round(iw * scale)), int(round(ih * scale))
             py = CHAR_FEET_Y - th0 / 2.0
         tw, th = max(2, int(round(iw * scale)) // 2 * 2), \
