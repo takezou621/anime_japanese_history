@@ -9,8 +9,8 @@ import math
 import random
 
 from artlib import palette as P
-from artlib.canvas import (Canvas, blob_pts, dots_pattern, gradient, radial,
-                           shade, speckle, tint, with_alpha)
+from artlib.canvas import (Canvas, blob_pts, dots_pattern, gradient, qbez,
+                           radial, shade, speckle, tint, with_alpha)
 from artlib.nature import (birds, cloud, clouds_row, forest_band, grass_tufts,
                            ground, light_shafts, moon, mountain_ridge, reeds_fg,
                            ridge, sky, stars, sun, tree)
