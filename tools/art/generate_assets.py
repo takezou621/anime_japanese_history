@@ -72,6 +72,7 @@ EP_SCENES = {
             "bg_meiji_heishi": S9.bg_meiji_heishi,
             "bg_meiji_itagaki": S9.bg_meiji_itagaki,
             "bg_meiji_nochi": S9.bg_meiji_nochi,
+            "bg_meiji_seinan": S9.bg_meiji_seinan,
             "bg_meiji_people": S9.bg_meiji_people,
             "bg_meiji_school": S9.bg_meiji_school,
             "bg_meiji_seikanron": S9.bg_meiji_seikanron,

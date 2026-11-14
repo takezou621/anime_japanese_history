@@ -359,6 +359,50 @@ def bg_meiji_dusk(cv):
     birds(g, [(700, 230), (800, 270), (760, 200)], 12, width=3.2)
 
 
+
+
+def bg_meiji_seinan(cv):
+    """西南戦争 (1877・城山の決戦と燃える鹿児島)."""
+    sky(cv, [(0.00, (46, 36, 66)), (0.5, (120, 70, 92)), (0.75, (206, 100, 80)),
+             (1.00, (240, 150, 104))])
+    g = cv.g()
+    stars(g, (40, 40, 1300, 280), 40, seed=62)
+    mountain_ridge(cv, 450, 110, ((52, 40, 68), (100, 66, 88)), seed=63, freq=1.7)
+    # 燃える鹿児島市街 (中景の屋根と火柱)
+    rnd = random.Random(64)
+    x = 0
+    while x < W:
+        hw = rnd.uniform(110, 180)
+        hh = rnd.uniform(38, 70)
+        rect(g, x, 660 - hh, x + hw, 700, fill=(78, 58, 70))
+        g.poly([(x - 8, 660 - hh), (x + hw + 8, 660 - hh), (x + hw * 0.72, 660 - hh - 26),
+                (x + hw * 0.28, 660 - hh - 26)], fill=(66, 48, 62))
+        x += hw + rnd.uniform(16, 58)
+    rect(g, 0, 700, W, H, fill=(92, 72, 82))
+    speckle(g, (0, 710, W, 1080), 130, [(80, 62, 74), (104, 82, 90)], r=(2, 6), seed=65)
+    for fx in (620, 1000, 1420):
+        campfire(g, fx, 700, 1.2, stones=False, seed=int(fx))
+        smoke_wisp(g, fx + 20, 540, 1.8, color=(64, 50, 68), alpha=200, seed=int(fx))
+    # 城山の丘と指揮官 (西郷風の大きな姿)
+    g.poly(blob_pts(1500, 660, 340, 100, seed=66, wobble=0.14),
+           fill=(88, 96, 74), outline=(72, 80, 60), owidth=3 * 1)
+    shishi(g, 1480, 560, 0.95, col=(52, 44, 56), sword=True, seed=67)
+    for k in range(3):
+        shishi(g, 1360 + k * 70, 600 + (k % 2) * 14, 0.5, col=(58, 48, 58),
+               sword=(k == 0), seed=68 + k)
+    nobori(g, 1620, 600, 0.6, col=(238, 238, 236), seed=69)
+    # 政府軍の陣列 (手前左: 銃を構えた整列)
+    for r in range(2):
+        for k in range(5):
+            arquebusier(g, 200 + k * 170 + r * 80, 890 + r * 110, 0.8 - r * 0.08,
+                        firing=False, seed=70 + r * 5 + k)
+    nobori(g, 120, 880, 0.85, col=(238, 238, 236))
+    nobori(g, 760, 920, 0.7, col=P.SHU)
+    _dust(g, (100, 0, 1700, 1060), 16, seed=71)
+    reeds_fg(cv, 1080, seed=72, color=(42, 34, 48), n=32, s=1.0)
+    birds(g, [(760, 240), (880, 210), (840, 280)], 10, color=(40, 30, 44), width=4)
+
+
 # ---------------------------------------------------------------- ポイント用タイムライン
 
 
