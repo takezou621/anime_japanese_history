@@ -49,3 +49,26 @@
 1. video/ep01_FINAL.mp4 を再生確認 (長さ・音ズレ・文字かぶり・見切れ)
 2. QC json 合格 + サムネ生成 + youtube/ep01.yaml メタデータ
 3. GitHub Issues close + 次話の制作指示
+
+## 多角的検証ゲート (2026-11-15 ユーザー指示により必須化)
+
+動画の完成判定の前に、**3角度の独立検証**をパスすること。各検証は担当の違う
+エージェントが実施し、レポートを GitHub Issue に残す。
+
+| 検証 | 担当 | 観点 | 手法 |
+|---|---|---|---|
+| **音声QA** | audio | 発音の正確さ (固有名詞の読み), ビート同期, ラウドネス | pronunciation_dict 照合 + timing.json 突合 + loudnorm 計測 |
+| **視覚QA** | artist | キャラ構図の自然さ, 背景との調和, 文字かぶり・見切れ | サンプルフレーム目視検証 (各話10枚以上) |
+| **教育内容QA** | writer | 年号・人名・事件の史実正確性, 受験ポイントの妥当性, クイズの正答 | script.json と timing.json/字幕の突合 + 教科書準拠チェック |
+
+### 発音検証 (音声QAの中核)
+1. 全固有名詞は `tools/audio/pronunciation_dict.json` (writer監査済み) か
+   script.json の `reading` フィールドで読みを保証する
+2. make_narration.py が置換ログ (`audio/epNN/pronunciation_log.json`) を出力し、
+   音声QAが「未カバー固有名詞ゼロ」を確認する
+3. 不自然な読みの報告があった場合は辞書を修正して音声を再生成する
+
+### 運用ルール
+- **コード変更は必ず PR → Cubic自動レビュー (SUCCESS確定) → マージ**。
+  NEUTRAL/未確定のままマージしない (2026-11-15 運用強化)。
+- 検証で指摘された項目は Issue に起票し、修正 → 再検証のループで閉じる。
