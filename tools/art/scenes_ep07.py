@@ -13,12 +13,12 @@ from artlib.canvas import (Canvas, blob_pts, dots_pattern, gradient, qbez,
                            radial, shade, speckle, tint, with_alpha)
 from artlib.nature import (birds, cloud, clouds_row, forest_band, grass_tufts,
                            ground, moon, mountain_ridge, reeds_fg, ridge, sky,
-                           stars, sun, tree)
+                           stars, sun, tree, light_shafts)
 from artlib.props import (boat, campfire, cross_flag, daimyo_procession,
                           edo_castle, fan_dejima, hara_castle, japan_map_trade,
                           kabuto, nobori, osaka_castle, palisade, rect,
-                          sakoku_door, samurai_rider, smoke_wisp, suzakumon,
-                          tenshu, torii, war_boat)
+                          rice_paddy, sakoku_door, samurai_rider, smoke_wisp,
+                          suzakumon, tenshu, tile_roof_house, torii, torch, war_boat)
 from scenes_ep01 import bow_and_arrows
 
 W, H = 1920, 1080
@@ -92,7 +92,7 @@ def bg_edo_government(cv):
         for k in range(1, 7):
             g.line([(wx + 14, 134 + k * 78), (wx + 206, 134 + k * 78)],
                    with_alpha((150, 138, 116), 170), 3)
-        g.rect(g, wx + 100, 134, wx + 118, 606, fill=(206, 196, 176))
+        rect(g, wx + 100, 134, wx + 118, 606, fill=(206, 196, 176))
     # 評定所の長机と文書
     for row, yy in ((0, 760), (1, 900)):
         for k in range(3):
@@ -311,7 +311,7 @@ def bg_edo_town(cv):
     clouds_row(cv, 140, 3, 30, seed=34)
     mountain_ridge(cv, 380, 90, ((110, 138, 130), (166, 186, 164)), seed=35, freq=2.0)
     # 遠くに江戸城の天守
-    tenshu(g, 300, 560, 0.36, tiers=4, gold_top=False, seed=2)
+    tenshu(g, 300, 690, 0.4, tiers=4, gold_top=False, seed=2)
     # 街 (両側の店)
     ground(cv, 700, (196, 188, 158), dark=(164, 156, 128), curve=12, seed=36,
            speckles=150, speckle_colors=[(176, 168, 140), (210, 202, 172)],
@@ -322,7 +322,7 @@ def bg_edo_town(cv):
         g.poly([(sx - 10, 640), (sx + 310, 640), (sx + 290, 590), (sx + 20, 590)],
                fill=(96, 84, 72), outline=(74, 64, 56), owidth=2.6)
         # 暖簾
-        g.rect(g, sx + 40, 700, sx + 260, 760, fill=with_alpha((140, 90, 80), 220))
+        rect(g, sx + 40, 700, sx + 260, 760, fill=with_alpha((140, 90, 80), 220))
         for k in range(6):
             g.line([(sx + 52 + k * 38, 700), (sx + 52 + k * 38, 760)],
                    with_alpha((96, 64, 58), 180), 3)

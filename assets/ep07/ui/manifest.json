@@ -1,0 +1,25 @@
+{
+  "ep07_ui_assets": [
+    "era_sekigahara.png",
+    "era_edo_bakufu.png",
+    "era_shimabara.png",
+    "era_sakoku.png",
+    "exam_banner.png",
+    "quiz_banner_1.png",
+    "quiz_banner_2.png",
+    "quiz_banner_3.png",
+    "keyword_ieyasu.png",
+    "keyword_shokuhou.png",
+    "keyword_buke.png",
+    "keyword_kirishitan.png",
+    "keyword_shimabara.png",
+    "keyword_sakoku.png",
+    "keyword_dejima.png",
+    "keyword_genroku.png",
+    "year_1600.png",
+    "year_1603.png",
+    "year_1637.png",
+    "year_1639.png",
+    "title_main.png"
+  ]
+}
