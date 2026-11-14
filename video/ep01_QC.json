@@ -1,13 +1,13 @@
 {
   "episode": "ep01",
   "profile": "full",
-  "generated_at": "2026-11-14T21:04:33+00:00",
+  "generated_at": "2026-11-14T23:13:45+00:00",
   "video": "video/ep01_FINAL.mp4",
-  "duration_sec": 571.098,
+  "duration_sec": 571.133,
   "checks": {
     "duration": {
       "pass": true,
-      "value": 571.098,
+      "value": 571.133,
       "expected": 571.098,
       "range": [
         300.0,
@@ -67,7 +67,7 @@
       "pass": true,
       "warn": false,
       "value": {
-        "bit_rate": 35199908,
+        "bit_rate": 35201816,
         "mbps": 35.2,
         "target_mbps": 35.0,
         "maxrate_mbps": 40.0
@@ -114,11 +114,11 @@
       "time_base": "1/15360",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 8771584,
-      "duration": "571.066667",
+      "duration_ts": 8772608,
+      "duration": "571.133333",
       "bit_rate": "34999709",
       "bits_per_raw_sample": "8",
-      "nb_frames": "17132",
+      "nb_frames": "17134",
       "extradata_size": 62,
       "disposition": {
         "default": 1,
@@ -201,9 +201,9 @@
     }
   ],
   "format": {
-    "duration": "571.097979",
-    "size": "2512824571",
-    "bit_rate": "35199908"
+    "duration": "571.133333",
+    "size": "2513116363",
+    "bit_rate": "35201816"
   },
   "pass": true
 }
