@@ -52,6 +52,9 @@ def load_part(name: str, clothes: str, head: str) -> str:
 
 
 def build_svg(char: dict) -> str:
+    # 頭部スケール: ポーズの胴体が頭に対して大きいため、顔中心 (359,366) をピボットに
+    # 拡大して頭肩バランスを自然化 (ユーザー指摘: 顔が胸部位置に見える問題の根本対処)
+    k = 1.2
     pose = load_part(char["pose"], char["clothes"], char["head"])
     hair = load_part(char["hair"], char["clothes"], char["head"])
     face = load_part(char["face"], char["clothes"], char["head"])
@@ -60,7 +63,7 @@ def build_svg(char: dict) -> str:
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 1200">'
         f"<g>{pose}</g>"
-        '<g transform="translate(225 0)">'
+        f'<g transform="translate(225 0) translate(359 366) scale({k}) translate(-359 -366)">'
         f"{hair}"
         '<g transform="translate(159 186)">' + face + "</g>"
         '<g transform="translate(47 241)">' + acc + "</g>"
@@ -90,13 +93,9 @@ def render(out: Path, char: dict) -> None:
     bbox = raw.getbbox()
     if bbox:
         bx0, by0, bx1, by1 = bbox
-        ch = by1 - by0
-        cw = bx1 - bx0
-        # 上端から内容高の 64% まで (頭+肩), 幅は内容幅の 80% を中央クロップ
-        keep_h = int(ch * 0.64)
-        keep_w = int(cw * 0.80)
-        cx0 = bx0 + (cw - keep_w) // 2
-        raw = raw.crop((cx0, by0, cx0 + keep_w, by0 + keep_h))
+        # 内容の上位75% (頭+肩) を切り出し。上下に40pxマージン
+        keep_h = int((by1 - by0) * 0.75) + 40
+        raw = raw.crop((max(0, bx0 - 40), max(0, by0 - 40), bx1 + 40, by0 + keep_h))
     # 縦合わせ: ピープ原図 850:1200 → キャンバス 900:1400 は縦長比率差が僅小のため
     # 幅基準で拡大し、下端をキャンバス下端に合わせて中央配置
     scale = ss_w / raw.width
