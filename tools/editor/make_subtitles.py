@@ -57,6 +57,54 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
 
 _SENT_END = "。！？…!?"
+_OPENERS = "「（《『"
+_CLOSERS = "」》）』"
+# 行頭禁則セット (lead指摘): chunks/lines must not START with these
+_LINE_HEAD_FORBIDDEN = "」》）』、。！？…,:;・!?"
+
+
+def _unmatched_opener_pos(c: str) -> int:
+    """Index of the last opener with no matching closer in c (-1 if none)."""
+    stack: list[int] = []
+    for j, ch in enumerate(c):
+        if ch in _OPENERS:
+            stack.append(j)
+        elif ch in _CLOSERS and stack:
+            stack.pop()
+    return stack[-1] if stack else -1
+
+
+def _fix_chunk_boundaries(chunks: list[str]) -> list[str]:
+    """禁則処理 across sub-event chunks.
+
+    - a chunk never starts with a closing mark / sentence punctuation
+      (pull it back into the previous chunk)
+    - a chunk never ends with an opening bracket (push it forward)
+    - a chunk never ends INSIDE a 「…」 bracket: the whole unmatched opener
+      tail moves to the next chunk so bracketed terms stay intact
+    May exceed capacity by 1-2 chars for typographic correctness.
+    """
+    for i in range(len(chunks) - 1):
+        c, nxt = chunks[i], chunks[i + 1]
+        for _ in range(4):  # converge the interacting rules
+            changed = False
+            while c and c[-1] in _OPENERS:
+                nxt = c[-1] + nxt
+                c = c[:-1]
+                changed = True
+            while nxt and nxt[0] in _LINE_HEAD_FORBIDDEN:
+                c += nxt[0]
+                nxt = nxt[1:]
+                changed = True
+            j = _unmatched_opener_pos(c)
+            if j != -1:
+                nxt = c[j:] + nxt
+                c = c[:j]
+                changed = True
+            if not changed:
+                break
+        chunks[i], chunks[i + 1] = c, nxt
+    return [c for c in chunks if c]
 
 
 def ass_time(sec: float) -> str:
@@ -103,7 +151,10 @@ def _split_sentences(text: str, capacity: int) -> list[str]:
             out.append(c[:capacity])
             c = c[capacity:]
         if c:
-            out.append(c)
+            if len(c) <= 4 and out:
+                out[-1] += c  # merge tiny remainder (e.g. lone 。)
+            else:
+                out.append(c)
     return out
 
 
@@ -146,6 +197,10 @@ def _wrap_2lines(text: str, first_budget: int) -> str:
             break  # nearest punctuation wins; if it overflows, hard cut
     line1 = buf[:cut] if cut else buf
     line2 = (buf[cut:] + rest) if cut else rest
+    # a line must not END with an opening bracket (push it to the next line)
+    while line1 and line1[-1] in _OPENERS:
+        line2 = line1[-1] + line2
+        line1 = line1[:-1]
     lines = [ln for ln in (line1, line2) if ln]
     lines = _fix_line_starts(lines)
     lines = [ln for ln in lines if ln]
@@ -242,7 +297,7 @@ def event_to_dialogues(ev: dict) -> list[tuple[float, float, str]]:
     prefix = f"{label}: " if label else ""
     first_budget = max(WRAP - len(prefix), 8)
     capacity = first_budget + WRAP  # 2 lines per event
-    chunks = _split_sentences(_sanitize(ev["text"]), capacity) or [""]
+    chunks = _fix_chunk_boundaries(_split_sentences(_sanitize(ev["text"]), capacity)) or [""]
     dur = max(ev["end"] - ev["start"], 0.05)
     weights = [max(len(c), 1) for c in chunks]
     total_w = sum(weights)

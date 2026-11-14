@@ -115,8 +115,11 @@ def layer_motion(motion: str | None, t0: float, dur: float, px: float, py: float
         s = f"max({s},0.05)"
         out["filters"].append(
             f"scale=w='trunc(iw*({s})/2)*2':h='trunc(ih*({s})/2)*2':eval=frame")
-        out["x"] = f"{px:.1f}-(w-{tw})/2"
-        out["y"] = f"{py:.1f}-(h-{th})/2"
+        # overlay anchors at TOP-LEFT: keep the CURRENT layer centered on
+        # (px, py) via its per-frame w/h (the fixed -th/2 offset in py is
+        # what makes the feet land on CHAR_FEET_Y when settled)
+        out["x"] = f"{px:.1f}-w/2"
+        out["y"] = f"{py:.1f}-h/2"
     elif m == "slide_in_left":
         x0 = -tw - 24.0
         out["x"] = f"{x0:.1f}+({left:.1f}-{x0:.1f})*{ease_out_cubic(p)}"
