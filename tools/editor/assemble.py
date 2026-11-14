@@ -613,11 +613,17 @@ def assemble_final(spans: list[Span], parts_dir: Path, ffmpeg: str,
     if band_png:
         cmd += ["-loop", "1", "-framerate", str(FPS), "-t",
                 f"{spans[-1].end + 1.0:.3f}", "-i", band_png]
+    # master encode spec (lead 2026-11-15): 35Mbps + bt709 + TP limiter
+    # (alimiter 0.94 = -0.55dBTP ceiling guards against AAC TP overshoot)
     cmd += ["-/filter_complex", str(fscript),
             "-map", "[v]", "-map", f"{len(spans)}:a",
-            "-c:v", "libx264", "-crf", "18", "-preset", "slow",
+            "-c:v", "libx264", "-preset", "slow",
+            "-b:v", "35M", "-maxrate", "40M", "-bufsize", "70M",
             "-pix_fmt", "yuv420p", "-r", str(FPS), "-fps_mode", "cfr",
+            "-colorspace", "bt709", "-color_primaries", "bt709",
+            "-color_trc", "bt709", "-color_range", "tv",
             "-c:a", "aac", "-b:a", "192k",
+            "-af", "alimiter=limit=0.94:level=false:attack=5:release=50",
             "-movflags", "+faststart", "-shortest",
             out]
     proc = subprocess.run(cmd, capture_output=True, text=True)
