@@ -1,7 +1,7 @@
 {
   "episode": "ep01",
   "profile": "full",
-  "generated_at": "2026-11-14T19:52:13+00:00",
+  "generated_at": "2026-11-14T20:14:17+00:00",
   "video": "video/ep01_FINAL.mp4",
   "duration_sec": 571.098,
   "checks": {
@@ -64,15 +64,15 @@
       "detail": "bt709 broadcast tags expected (lead spec 2026-11-15)"
     },
     "bit_rate": {
-      "pass": false,
-      "warn": true,
+      "pass": true,
+      "warn": false,
       "value": {
-        "bit_rate": 9639379,
-        "mbps": 9.64,
+        "bit_rate": 40188147,
+        "mbps": 40.19,
         "target_mbps": 35.0,
         "maxrate_mbps": 40.0
       },
-      "detail": "9.64 Mbps measured (target 35M, maxrate 40M); below target (guideline)"
+      "detail": "40.19 Mbps measured (target 35M, maxrate 40M)"
     },
     "black_frames": {
       "pass": true,
@@ -116,10 +116,10 @@
       "start_time": "0.000000",
       "duration_ts": 8771584,
       "duration": "571.066667",
-      "bit_rate": "9437779",
+      "bit_rate": "39988222",
       "bits_per_raw_sample": "8",
       "nb_frames": "17132",
-      "extradata_size": 50,
+      "extradata_size": 63,
       "disposition": {
         "default": 1,
         "dub": 0,
@@ -202,8 +202,8 @@
   ],
   "format": {
     "duration": "571.097979",
-    "size": "688128777",
-    "bit_rate": "9639379"
+    "size": "2868921231",
+    "bit_rate": "40188147"
   },
-  "pass": false
+  "pass": true
 }
