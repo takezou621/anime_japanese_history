@@ -1,0 +1,20 @@
+# 再生リスト設計 — アニメ日本史ラボ
+# upload.py --playlist <key> で動画を追加 (要API認証、dry-runはmanifestに記録)
+
+playlists:
+  series:
+    title: 日本史はじめて物語【中学受験日本史 全10話】
+    description: 楽しいアニメで日本史をまるごと学べる全10話シリーズ。縄文から現代まで、受験で差がつくポイントをぎゅっとまとめました。
+    episodes: [ep01, ep02, ep03, ep04, ep05, ep06, ep07, ep08, ep09, ep10]
+  compilation:
+    title: 日本史のすべて【総集編】試験直前に見る67分
+    description: 全10話を再編集した総集編。受験直前のまとめ視聴に。
+    episodes: [compilation]
+  shorts:
+    title: 一問一答クイズ【日本史Shorts】
+    description: すきま時間で日本史クイズ!1問18秒。
+    episodes: [shorts]
+  points:
+    title: 受験ポイントまとめ【日本史ラボ】
+    description: 各時代の受験ポイントだけをまとめて視聴できます。
+    episodes: []
