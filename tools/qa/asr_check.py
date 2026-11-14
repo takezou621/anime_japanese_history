@@ -200,8 +200,15 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
         raise SystemExit(f"mix.wav がありません: {mix}")
     out_path = root / args.out_dir / f"asr_check_{episode}.json"
     if out_path.exists() and not args.force:
+        # スキップ時も既存レポートの overall_pass を引き継ぐ (失敗レポートの
+        # 再実行でゲートを回避させないため)。読めない場合は未達扱い。
         print(f"[asr] skip (出力済み): {out_path} (--force で上書き)")
-        return {"overall_pass": True, "skipped": True, "out_path": str(out_path)}
+        try:
+            prev = json.loads(out_path.read_text())
+            overall_pass = bool(prev.get("overall_pass", False))
+        except (OSError, json.JSONDecodeError):
+            overall_pass = False
+        return {"overall_pass": overall_pass, "skipped": True, "out_path": str(out_path)}
 
     beats = load_beats(root, episode)
     t0 = time.monotonic()
@@ -249,8 +256,8 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
         "beat_pass": n_pass, "beat_fail": n_fail, "beat_na": n_na,
         "review_list": review_list,
         "beats_detail": beat_rows,
-        "note": ("ASR突合は音声と台本の一致率の目安。全体ゲート (threshold=0.70) は回帰検知用途、"
-                 "ビート別 ok / review_list は review_threshold=0.6 を要確認基準とする。"
+        "note": (f"ASR突合は音声と台本の一致率の目安。全体ゲート (threshold={args.threshold:g}) は回帰検知用途、"
+                 f"ビート別 ok / review_list は review_threshold={args.review_threshold:g} を要確認基準とする。"
                  "固有名詞の実読み検証は pronunciation_log 突合 (reports/qa_audio_epNN.md) でカバーすること"),
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)
