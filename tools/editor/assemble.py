@@ -627,7 +627,11 @@ def assemble_final(spans: list[Span], parts_dir: Path, ffmpeg: str,
             "-color_trc", "bt709", "-color_range", "tv",
             "-c:a", "aac", "-b:a", "192k",
             "-af", "alimiter=limit=0.94:level=false:attack=5:release=50",
-            "-movflags", "+faststart", "-shortest",
+            "-movflags", "+faststart",
+            # explicit -t (NOT -shortest): ffmpeg -shortest can stop ~0.7s
+            # before the true shortest-stream end (packet timing quirk),
+            # truncating the video. The plan duration is authoritative.
+            "-t", f"{estimate_final_duration(spans):.3f}",
             out]
     proc = subprocess.run(cmd, capture_output=True, text=True)
     if proc.returncode != 0:
