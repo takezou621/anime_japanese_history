@@ -56,6 +56,12 @@ STYLES: dict[str, dict] = {
                          default_motion="pop_in", pad=(48, 26), wrap=12,
                          shadow=False,
                          default_pos=lambda w, h: (CANVAS_W / 2, 560)),
+    "quiz_choices": dict(font="Bold", size=44, fill=TEXT_DARK, bg=WHITE_UI,
+                         border=(AI, 5), radius=20, min_size=(1000, 300),
+                         split_slash=True, default_motion="pop_in",
+                         pad=(56, 34), wrap=20, shadow=False,
+                         # board area of bg_quiz_board (rows y 300/485/670)
+                         default_pos=lambda w, h: (950, 490)),
     "exam_banner": dict(font="Black", size=56, fill="#ffffff", bg=SHU,
                         border=None, radius=16, default_motion="slide_up",
                         pad=(56, 20), wrap=26, shadow=False,
@@ -112,6 +118,68 @@ def render_subtitle_band(width: int = CANVAS_W, height: int = CANVAS_H,
     return img
 
 
+# quiz board geometry (measured from bg_quiz_board.png renders, 2026-11-15)
+QUIZ_Q_CENTER = (950, 200)      # question text center (board top zone)
+QUIZ_ROW_Y = (300, 485, 670)    # choice text centers (just above the lines)
+QUIZ_TEXT_X = 560               # choice text left edge (clears manabu @x330)
+QUIZ_MARKS = ("ア", "イ", "ウ")
+
+
+def render_quiz_board(question: str, choices: list[str],
+                      highlight: int | None = None,
+                      width: int = CANVAS_W, height: int = CANVAS_H
+                      ) -> Image.Image:
+    """Full-canvas RGBA PNG with the quiz question + choice rows laid onto
+    bg_quiz_board's answer slots (P2-2: ボードが空欄のまま問題).
+
+    highlight = index of the correct choice (drawn with a 山吹 badge + ✓)
+    for the answer phase. The bg art's クイズ第N問 badge overlaps row 3's
+    line, so choice texts sit just ABOVE their lines.
+    """
+    img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    ai = AI  # 藍
+
+    q_font = ImageFont.truetype(str(FONT_DIR / FONT_FILES["Bold"]), 42)
+    c_font = ImageFont.truetype(str(FONT_DIR / FONT_FILES["Bold"]), 40)
+    m_font = ImageFont.truetype(str(FONT_DIR / FONT_FILES["Black"]), 44)
+
+    qx, qy = QUIZ_Q_CENTER
+    lines = wrap_lines(_quiz_sanitize(question), 24)[:2]
+    yy = qy
+    for ln in lines:
+        d.text((qx, yy), ln, font=q_font, anchor="mm",
+               fill=hex_rgba(ai), stroke_width=0)
+        yy += 58
+
+    for i, row_y in enumerate(QUIZ_ROW_Y):
+        hl = (highlight == i)
+        if hl:
+            d.rounded_rectangle([470, row_y - 36, 1520, row_y + 36], radius=14,
+                                fill=hex_rgba(YAMABUKI, 215))
+        mark = QUIZ_MARKS[i] if i < len(QUIZ_MARKS) else "?"
+        d.text((QUIZ_TEXT_X, row_y), mark, font=m_font, anchor="lm",
+               fill=hex_rgba(ai))
+        txt = _quiz_sanitize(choices[i]) if i < len(choices) else ""
+        d.text((QUIZ_TEXT_X + 70, row_y), txt, font=c_font, anchor="lm",
+               fill=hex_rgba(TEXT_DARK))
+        if hl:
+            d.text((QUIZ_TEXT_X - 46, row_y), "✔", font=m_font, anchor="lm",
+                   fill=hex_rgba(SHU))
+    return img
+
+
+def hex_rgba(hexcolor: str, alpha: int = 255) -> tuple:
+    h = hexcolor.lstrip("#")
+    if len(h) != 6:
+        return (0, 0, 0, alpha)
+    return (int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16), alpha)
+
+
+def _quiz_sanitize(text: str) -> str:
+    return str(text).replace("\n", " ").strip()
+
+
 def render_overlay(entry: dict) -> tuple[Image.Image, tuple[int, int]]:
     """Render one overlay_text entry -> (RGBA image, default center pos).
 
@@ -122,8 +190,12 @@ def render_overlay(entry: dict) -> tuple[Image.Image, tuple[int, int]]:
         raise KeyError(f"unknown overlay_text style: {style!r} "
                        f"(known: {sorted(STYLES)})")
     cfg = STYLES[style]
+    raw_text = str(entry.get("text", ""))
+    if cfg.get("split_slash") and "/" in raw_text:
+        lines = [ln.strip() for ln in raw_text.split("/") if ln.strip()]
+    else:
+        lines = wrap_lines(raw_text, cfg["wrap"])
     font = _font(cfg)
-    lines = wrap_lines(str(entry.get("text", "")), cfg["wrap"])
 
     stroke_w = int(cfg.get("stroke_w", 0) or 0) * SS
     pad_w, pad_h = cfg["pad"][0] * SS, cfg["pad"][1] * SS

@@ -27,7 +27,8 @@ uv run --with pillow python tools/editor/assemble.py --episode ep00 --profile te
   --out video/ep00_TEST.mp4 --qc video/ep00_TEST_QC.json
 
 # ep01 本番 (既定パスは規約どおりなら --episode だけでOK)
-uv run --with pillow python tools/editor/assemble.py --episode ep01
+# sudachipy があると字幕の文節分割が向上 (無い場合は文字ベースにフォールバック)
+uv run --with pillow --with sudachipy --with sudachidict-core python tools/editor/assemble.py --episode ep01
 # デバッグ: --dry-plan / --only-scenes s01,s02 / --keep-parts / --jobs 4
 ```
 

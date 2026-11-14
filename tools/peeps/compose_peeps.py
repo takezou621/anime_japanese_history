@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
-"""Open Peeps (CC0) ベースのキャラクター立ち絵コンポーザ — アニメ日本史ラボ
+"""Open Peeps (CC0) ベースのキャラクター全身立ち絵コンポーザ — アニメ日本史ラボ
 
 キャラクター素材: Open Peeps by Pablo Stanley (https://www.openpeeps.com) — CC0 1.0
 パーツ出典: https://github.com/CeamKrier/react-peeps (コードMIT, 絵柄はCC0)
-CC0 のため営利利用・改変・クレジットなし利用が可能だが、本プロジェクトでは
-動画概要欄にクレジットを明記する (docs/01_PLAN.md §5)。
+
+合成方式 (v3 全身モード):
+  1. 胴体 (スタンディングポーズ) と頭部 (髪+顔+アクセサリ) を別々にレンダリング
+  2. αbbox を計測し、頭の顎下端を胴体の襟上端に OVERLAP px 重ねて配置
+     (頭の水平中心 = 胴体の肩中心)
+  3. 2パスレンダリングで確定配置 (計測 → 補正 → 最終)
 
 Usage:
   uv run --with pillow python tools/peeps/compose_peeps.py --out assets/ep01/overlay
-  uv run --with pillow python tools/peeps/compose_peeps.py --out /tmp/preview --preview-composite
-
-Output: char_sensei.png / char_manabu.png (900x1400, 腰上バスト立ち絵, 下端が画面下端に一致)
+  uv run --with pillow python tools/peeps/compose_peeps.py --mode bust --out /tmp/bust_test
 """
 from __future__ import annotations
 
 import argparse
 import subprocess
 import sys
-
+import tempfile
 from pathlib import Path
 
 from PIL import Image
@@ -28,17 +30,24 @@ INK = "#26282e"          # 線画 (STYLE_GUIDE テキスト色)
 HEAD_FILL = "#fffdf7"    # 頭部/肌ベース (STYLE_GUIDE 温かい白)
 W, H = 900, 1400
 SS = 2                   # スーパーサンプリング
+OVERLAP = 40             # 頭の顎を胴体の襟に重ねるpx
+HEAD_SCALE = 1.1         # 頭部拡大 (ポーズの胴体が大きめのため)
 
-# キャラ定義 (docs/03_STYLE_GUIDE.md §1 キャラ立ち絵)
 CHARACTERS = {
     "char_sensei": {
-        "pose": "pose_ButtonShirt", "clothes": "#2b4a8b",   # 藍ブラウス
+        "head_scale": HEAD_SCALE,
+        "standing_pose": "ShirtPantsWB",   # 藍シャツ+パンツ 全身
+        "bust_pose": "pose_ButtonShirt",
+        "clothes": "#2b4a8b",
         "hair": "hair_Bun", "head": HEAD_FILL,
         "face": "face_Calm",
         "acc": "acc_GlassRoundThick",
     },
     "char_manabu": {
-        "pose": "pose_Shirt", "clothes": "#e8543f",          # 朱シャツ
+        "head_scale": HEAD_SCALE,
+        "standing_pose": "ShirtPantsWB",
+        "bust_pose": "pose_Shirt",
+        "clothes": "#e8543f",                # 朱シャツ
         "hair": "hair_ShortMessy", "head": HEAD_FILL,
         "face": "face_CheersNM",
         "acc": None,
@@ -51,104 +60,152 @@ def load_part(name: str, clothes: str, head: str) -> str:
     return frag.replace("{{CLOTHES}}", clothes).replace("{{HEAD}}", head)
 
 
-def build_svg(char: dict) -> str:
-    # 頭部スケール: ポーズの胴体が頭に対して大きいため、顔中心 (359,366) をピボットに
-    # 拡大して頭肩バランスを自然化 (ユーザー指摘: 顔が胸部位置に見える問題の根本対処)
-    k = 1.2
-    pose = load_part(char["pose"], char["clothes"], char["head"])
-    hair = load_part(char["hair"], char["clothes"], char["head"])
-    face = load_part(char["face"], char["clothes"], char["head"])
-    acc = load_part(char["acc"], char["clothes"], char["head"]) if char["acc"] else ""
-    # react-peeps の合成幾何: pose→原点, head→(225,0), face→(+159,+186), accessories→(+47,+241)
+def load_standing(name: str, ink: str, clothes: str) -> str:
+    frag = (PARTS / f"stand_{name}.svg").read_text()
+    return frag.replace("{{CLOTHES}}", clothes).replace("{{INK}}", ink)
+
+
+def build_head_svg(char: dict, ink: str, head_fill: str, dx: float = 0, dy: float = 0) -> str:
+    hair = CP_load(char["hair"], ink, head_fill)
+    face = CP_load(char["face"], ink, head_fill)
+    acc = CP_load(char["acc"], ink, head_fill) if char["acc"] else ""
+    k = char["head_scale"]
+    head_tf = f'translate({225 + dx:.0f} {dy:.0f}) translate(359 366) scale({k}) translate(-359 -366)'
     return (
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 1200">'
-        f"<g>{pose}</g>"
-        f'<g transform="translate(225 0) translate(359 366) scale({k}) translate(-359 -366)">'
-        f"{hair}"
+        f'<g transform="{head_tf}">{hair}'
         '<g transform="translate(159 186)">' + face + "</g>"
         '<g transform="translate(47 241)">' + acc + "</g>"
-        "</g></svg>"
     )
 
 
-def render(out: Path, char: dict) -> None:
-    svg = build_svg(char)
+def CP_load(name: str, ink: str, fill: str) -> str:
+    frag = (PARTS / f"{name}.svg").read_text()
+    frag = frag.replace("{{INK}}", ink)
+    frag = frag.replace("{{CLOTHES}}", fill)
+    frag = frag.replace("{{HEAD}}", fill)
+    return frag
+
+
+def render_png(svg_str: str, out_png: Path, width: int) -> Image.Image:
     work = Path("/tmp/peeps_work")
     work.mkdir(parents=True, exist_ok=True)
-    svg_path = work / "peep.svg"
-    raw_path = work / "peep.png"
-    svg_path.write_text(svg)
-    ss_w = W * SS
-    ss_h = H * SS
-    # ピープ原図 (850x1200) をキャンバス縦幅いっぱいにレンダリング (2x)
+    svg_path = work / "render.svg"
+    svg_path.write_text(svg_str)
+    png_path = work / "render.png"
     result = subprocess.run(
-        ["resvg", str(svg_path), str(raw_path),
-         "--width", str(int(ss_w)), "--background", "transparent"],
+        ["resvg", str(svg_path), str(png_path), "--width", str(width),
+         "--background", "transparent"],
         capture_output=True, text=True,
     )
-    if result.returncode != 0 or not raw_path.exists():
+    if result.returncode != 0 or not png_path.exists():
         sys.exit(f"resvg failed (rc={result.returncode}): {result.stderr}")
-    raw = Image.open(raw_path).convert("RGBA")
-    # ポートレートcrop: 頭+肩まで (タイトな話者枠). 胴体・腕は切る
-    bbox = raw.getbbox()
-    if bbox:
-        bx0, by0, bx1, by1 = bbox
-        # 内容の上位75% (頭+肩) を切り出し。上下に40pxマージン
-        keep_h = int((by1 - by0) * 0.75) + 40
-        raw = raw.crop((max(0, bx0 - 40), max(0, by0 - 40), bx1 + 40, by0 + keep_h))
-    # 縦合わせ: ピープ原図 850:1200 → キャンバス 900:1400 は縦長比率差が僅小のため
-    # 幅基準で拡大し、下端をキャンバス下端に合わせて中央配置
-    scale = ss_w / raw.width
-    scaled = raw.resize((ss_w, min(int(raw.height * scale), ss_h)), Image.LANCZOS)
-    canvas = Image.new("RGBA", (ss_w, ss_h), (0, 0, 0, 0))
-    y = ss_h - scaled.height  # 下端一致 (バスト下端=キャンバス下端)
-    canvas.alpha_composite(scaled, ((ss_w - scaled.width) // 2, y))
-    canvas = canvas.resize((W, H), Image.LANCZOS)
-    canvas.save(out, "PNG")
-    print(f"saved: {out}")
+    return Image.open(png_path).convert("RGBA")
 
 
-def preview_composite(out_dir: Path) -> None:
-    """背景+キャラ+字幕帯のプレビュー合成 (検収用)。"""
-    bg_path = REPO_ROOT / "assets" / "ep01" / "scenes" / "bg_school_lab.png"
-    if not bg_path.exists():
-        print("preview: bg_school_lab.png が無いためスキップ")
-        return
-    bg = Image.open(bg_path).convert("RGBA").resize((1920, 1080), Image.LANCZOS)
-    ch_s = Image.open(out_dir / "char_sensei.png").convert("RGBA")
-    ch_m = Image.open(out_dir / "char_manabu.png").convert("RGBA")
-    # editor と同一の配置ロジック: scale 0.58 / 足元(下端) y=930
-    scale = 0.58
-    for ch, x_center in ((ch_s, 1450), (ch_m, 470)):
-        w = int(ch.width * scale)
-        h = int(ch.height * scale)
-        ch = ch.resize((w, h), Image.LANCZOS)
-        bg.alpha_composite(ch, (x_center - w // 2, 930 - h))
-    # 字幕帯 (editor 相当: 下部 140px, 角丸半透明)
-    from PIL import ImageDraw
-    band = Image.new("RGBA", (1920, 140), (20, 22, 26, 210))
-    bg.alpha_composite(band, (0, 940))
-    d = ImageDraw.Draw(bg)
-    d.rounded_rectangle((410, 970, 1510, 1050), radius=16, fill=(255, 253, 247, 255))
-    out = out_dir / "preview_composite.png"
-    bg.convert("RGB").save(out, "PNG")
-    print(f"saved: {out}")
+def compose_fullbody(char: dict) -> Image.Image:
+    """全身立ち絵を 900x1400 キャンバスに生成 (2パス計測アラインメント)。"""
+    ink = INK
+    # パス1: 胴体と頭を別々にレンダリングして bbox 計測
+    # (ポーズパスは原点より上に描かれるため、ビューボックスは上方向へ拡張)
+    body = render_png(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -900 1400 4800">'
+        f'<g transform="translate(150 750)">'
+        f'<g>{load_standing(char["standing_pose"], ink, char["clothes"])}</g></g></svg>',
+        work_png(f"{char.get('_tag', 'c')}_body.png"), 1400)
+    bm = bbox_of(body)
+    head_alone = render_png(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -900 1400 4800">'
+        f'<g transform="translate(225 0) translate(359 366) scale({char["head_scale"]}) '
+        f'translate(-359 -366)">{CP_load(char["hair"], ink, char["head"])}'
+        '<g transform="translate(159 186)">' + CP_load(char["face"], ink, char["head"]) + "</g>"
+        '<g transform="translate(47 241)">' + (CP_load(char["acc"], ink, char["head"]) if char["acc"] else "") + "</g>"
+        "</g></svg>",
+        work_png(f"{char.get('_tag', 'c')}_head.png"), 1400)
+    hm = bbox_of(head_alone)
+
+    # パス2: 補正を適用した完全合成
+    ddx = bm["cx"] - hm["cx"]
+    ddy = (bm["y0"] + OVERLAP) - hm["y1"]
+    full_svg = (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -900 1400 4800">'
+        f'<g transform="translate(150 750)">'
+        f'<g>{load_standing(char["standing_pose"], ink, char["clothes"])}</g></g>'
+        f'<g transform="translate({225 + ddx:.0f} {ddy:.0f}) translate(359 366) '
+        f'scale({char["head_scale"]}) translate(-359 -366)">'
+        + CP_load(char["hair"], ink, char["head"])
+        + '<g transform="translate(159 186)">' + CP_load(char["face"], ink, char["head"]) + "</g>"
+        + '<g transform="translate(47 241)">' + (CP_load(char["acc"], ink, char["head"]) if char["acc"] else "") + "</g>"
+        + "</g></svg>")
+    full = render_png(full_svg, work_png(f"{char.get('_tag', 'c')}_full.png"), 1400)
+    b = full.getbbox()
+    full = full.crop(b)
+    return full
+
+
+def work_png(name: str) -> Path:
+    work = Path("/tmp/peeps_work")
+    work.mkdir(parents=True, exist_ok=True)
+    return work / name
+
+
+def bbox_of(img: Image.Image):
+    b = img.getbbox()
+    return {"x0": b[0], "y0": b[1], "x1": b[2], "y1": b[3], "cx": (b[0] + b[2]) / 2}
+
+
+def place_on_canvas(img: Image.Image) -> Image.Image:
+    """全身キャラを 900x1400 キャンバスに縦フィット (下端=足) で配置。"""
+    scale = 1380 / img.height
+    scaled = img.resize((int(img.width * scale), 1380), Image.LANCZOS)
+    canvas = Image.new("RGBA", (W * SS, H * SS), (0, 0, 0, 0))
+    canvas.alpha_composite(scaled, ((W * SS - scaled.width) // 2, (H * SS - 1380) // 2))
+    return canvas.resize((W, H), Image.LANCZOS)
 
 
 def main(argv=None):
     p = argparse.ArgumentParser()
     p.add_argument("--out", default="assets/ep01/overlay")
-    p.add_argument("--preview-composite", action="store_true")
     p.add_argument("--only", choices=list(CHARACTERS), default=None)
+    p.add_argument("--mode", choices=["fullbody", "bust"], default="fullbody")
     a = p.parse_args(argv)
     out_dir = Path(a.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     targets = [a.only] if a.only else list(CHARACTERS)
     for cid in targets:
-        render(out_dir / f"{cid}.png", CHARACTERS[cid])
-    if a.preview_composite:
-        preview_composite(out_dir)
+        char = dict(CHARACTERS[cid])
+        char["_tag"] = cid
+        if a.mode == "fullbody":
+            full = compose_fullbody(char)
+            canvas = place_on_canvas(full)
+            out = out_dir / f"{cid}.png"
+            canvas.save(out, "PNG")
+            print(f"saved: {out}")
+        else:
+            svg = build_head_svg_bust(char)
+            img = render_png(
+                svg.replace('viewBox="0 0 850 1200"', 'viewBox="0 0 850 1200"'), 
+                work_png(f"bust_{cid}.png"), 1800)
+            img.save(out_dir / f"{cid}_bust.png", "PNG")
+            print(f"saved: {out_dir / f'{cid}_bust.png'}")
     return 0
+
+
+def build_head_svg_bust(char: dict) -> str:
+    ink = INK
+    head_fill = char["head"]
+    pose = CP_load(char["bust_pose"], ink, char["clothes"])
+    hair = CP_load(char["hair"], ink, head_fill)
+    face = CP_load(char["face"], ink, head_fill)
+    acc = CP_load(char["acc"], ink, head_fill) if char["acc"] else ""
+    k = char["head_scale"]
+    head_tf = f'translate(225 0) translate(359 366) scale({k}) translate(-359 -366)'
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 1200">'
+        f"<g>{pose}</g>"
+        f'<g transform="{head_tf}">{hair}'
+        '<g transform="translate(159 186)">' + face + "</g>"
+        '<g transform="translate(47 241)">' + acc + "</g>"
+        "</g></svg>")
 
 
 if __name__ == "__main__":

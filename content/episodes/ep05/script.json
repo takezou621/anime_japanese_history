@@ -21,7 +21,10 @@
       "アニメ日本史ラボ",
       "勉強動画"
     ],
-    "thumbnail": { "headline": "戦国の始まり!", "sub": "足利尊氏・応仁の乱 必須" }
+    "thumbnail": {
+      "headline": "戦国の始まり!",
+      "sub": "足利尊氏・応仁の乱 必須"
+    }
   },
   "characters": [
     {
@@ -49,16 +52,41 @@
       "visual": {
         "background": "bg_school_lab",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "こんにちは!ヒスト先生です。",
-          "overlay_text": [ { "text": "アニメ日本史ラボ 第5話", "style": "title_main", "motion": "fade_up" } ]
+          "overlay_text": [
+            {
+              "text": "アニメ日本史ラボ 第5話",
+              "style": "title_main",
+              "motion": "fade_up"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -86,16 +114,41 @@
       "visual": {
         "background": "bg_muromachi_kamakura_fall",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "鎌倉幕府、元気だったのだ?",
-          "overlay_text": [ { "text": "1333年 鎌倉幕府滅亡", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1333年 鎌倉幕府滅亡",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -110,9 +163,21 @@
           "speaker": "sensei",
           "text": "河内の武将・楠木正成が少人数で鎌倉軍を悩ませ、新田義貞が鎌倉を攻め落としました。1333年、鎌倉幕府滅亡です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1333年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "楠木正成", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1333年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "楠木正成",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "かわちの、ぶしょう、くすのき、まさしげが、しょうにんずうで、かまくらぐんを、なやませ、にった、よしさだが、かまくらを、せめおとしました。1333ねん、かまくらばくふ、めつぼうです。"
         },
@@ -130,23 +195,56 @@
       "visual": {
         "background": "bg_muromachi_newgov",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "では、天皇の政治が始まるのだ?",
-          "overlay_text": [ { "text": "1333年 建武の新政", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1333年 建武の新政",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "後醍醐天皇の親政、建武の新政です。公家中心の政治で、武士の希望は薄く、恩賞も思うように配れませんでした。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "建武の新政", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "建武の新政",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ごだいごてんのうの、しんせい、けんむのしんせいです。くげちゅうしんの、せいじで、ぶしの、きぼうは、うすく、おんしょうも、おもうように、くばれませんでした。"
         },
@@ -172,16 +270,41 @@
       "visual": {
         "background": "bg_muromachi_takauji",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "そこで立ったのは、だれなのだ?",
-          "overlay_text": [ { "text": "1338年 室町幕府", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1338年 室町幕府",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -201,9 +324,21 @@
           "speaker": "sensei",
           "text": "1338年、尊氏は征夷大将軍に就任して、室町幕府を開きます。政治の拠点は京都で、武家の朝廷みたいなものでした。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1338年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "足利尊氏", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1338年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "足利尊氏",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1338ねん、たかうじは、せいいたいしょうぐんに、しゅうにんして、むろまちばくふを、ひらきます。せいじの、きょてんは、きょうとで、ぶっけの、てんのうの、ような、ものでした。"
         },
@@ -221,23 +356,56 @@
       "visual": {
         "background": "bg_muromachi_namboku",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "でも、天皇側は、おしまいなのだ?",
-          "overlay_text": [ { "text": "南北朝時代 約56年", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "南北朝時代 約56年",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "いいえ、後醍醐は吉野に逃れて朝廷を開きます。京都の北朝と吉野の南朝が、約56年も対立する南北朝時代です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "南北朝時代", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "南北朝時代",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "いいえ、ごだいごは、よしのにに、にげて、ちょうていを、ひらきます。きょうとの、ほくちょうと、よしのにの、なんちょうが、やくごじゅうろくねんも、たいりつする、なんぼくちょうじだいです。"
         },
@@ -264,23 +432,56 @@
       "visual": {
         "background": "bg_muromachi_yoshimitsu",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "義満って、すごい人なのだ?",
-          "overlay_text": [ { "text": "足利義満", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "足利義満",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "足利義満は、若くして家を継ぎ、将軍の力をどこまでも強くしました。朝廷の官まで極める、前例のない武家です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "足利義満", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "足利義満",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "あしかが、よしみつは、わかくして、いえを、つぎ、しょうぐんの、ちからを、どころまでも、つよくしました。ちょうていの、かんまで、きわめる、ぜんれいの、ない、ぶっけです。"
         },
@@ -307,23 +508,56 @@
       "visual": {
         "background": "bg_muromachi_ship",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_r", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_r",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "お金の話もあるのだ?",
-          "overlay_text": [ { "text": "日明貿易", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "日明貿易",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "ええ、義満は明と日明貿易を始めます。海賊の倭寇を取り締まる代わりに、貿易の権利をもらいました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "日明貿易", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "日明貿易",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ええ、よしみつは、みんと、にちみんぼうえきを、はじめます。かいぞくの、わこうを、とりしまる、かわりに、ぼうえきの、けんりを、もらいました。"
         },
@@ -350,23 +584,56 @@
       "visual": {
         "background": "bg_muromachi_kinkaku",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "そのお金で、建てたものがあるのだ!?",
-          "overlay_text": [ { "text": "1397年 金閣と北山文化", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1397年 金閣と北山文化",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "それ、金閣です。1397年に義満が建てた、山吹色に輝く別荘で、死後は寺になりました。",
           "overlay_text": [
-            { "text": "1397年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "金閣", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "1397年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "金閣",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "それ、きんかくです。1397ねんに、よしみつが、たてた、やまぶきいろに、かがやく、べっそうで、しごは、てらに、なりました。"
         },
@@ -378,8 +645,16 @@
           "speaker": "sensei",
           "text": "ここで公家文化と武家文化が混ざり合い、華麗な北山文化が咲きました。金閣はそのシンボルです。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "北山文化", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "北山文化",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ここで、くげぶんかと、ぶっけぶんかが、まざりあい、かれいな、ほくざんぶんかが、さきました。きんかくは、その、しんぼるです。"
         },
@@ -397,22 +672,51 @@
       "visual": {
         "background": "bg_muromachi_onin",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "でも、栄華は続くのだ?",
-          "overlay_text": [ { "text": "1467年 応仁の乱", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1467年 応仁の乱",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "義満の後は、幕府の力がじわじわ下がります。1467年、細川氏と山名氏の争いから、応仁の乱が始まります。",
           "overlay_text": [
-            { "text": "1467年", "style": "year_number", "motion": "zoom_in" }
+            {
+              "text": "1467年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            }
           ],
           "reading": "よしみつの、あとは、ばくふの、ちからが、じわじわ、さがります。1467ねん、ほそかわしと、やまなしの、あらそいから、おうにんのらんが、はじまります。"
         },
@@ -424,8 +728,16 @@
           "speaker": "sensei",
           "text": "東軍と西軍に分れ、戦は11年続きました。京都は焼け野原になり、権威も地盤も大きく揺らぎます。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "応仁の乱", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "応仁の乱",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ひがしぐんと、にしぐんに、わかれ、たたかいは、じゅういちねん、つづきました。きょうとは、やけのはらに、なり、けんいも、じばんも、おおきく、ゆらぎます。"
         },
@@ -443,23 +755,56 @@
       "visual": {
         "background": "bg_muromachi_domain",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_l", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_l",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "乱のあと、日本はどうなったのだ?",
-          "overlay_text": [ { "text": "守護の分国支配", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "守護の分国支配",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "守護たちは、国を自分の国のように支配し始めます。これが分国支配で、国ごとの大きな勢力が育ちます。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "分国支配", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "分国支配",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "しゅごたちは、くにを、じぶんの、くにの、ように、しはいし、はじめます。これが、ぶんこくしはいで、くにごとの、おおきな、せいりょくが、そだちます。"
         },
@@ -486,23 +831,56 @@
       "visual": {
         "background": "bg_muromachi_gekokujo",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "下剋上って、いつからなのだ?",
-          "overlay_text": [ { "text": "下剋上の芽", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "下剋上の芽",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "応仁の乱の前から芽が出ています。守護代や国人が、主君を押さえて力を伸ばし始めたんです。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "下剋上", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "下剋上",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "おうにんのらんの、まえから、めが、でています。しゅごだいや、こくじんが、しゅくんを、おさえて、ちからを、のばし、はじめたん、です。"
         },
@@ -528,23 +906,56 @@
       "visual": {
         "background": "bg_muromachi_ginkaku",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "乱世のとき、文化はどうなるのだ?",
-          "overlay_text": [ { "text": "銀閣と東山文化", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "銀閣と東山文化",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "応仁の乱の後、足利義政が山里に銀閣を建てます。金色でなく銀色、しっとりひなびた美の文化、東山文化です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "東山文化", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "東山文化",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "おうにんのらんの、あと、あしかが、よしまさが、やまざとに、ぎんかくを、たてます。きんいろでなく、ぎんいろ、しっとり、ひなびた、びの、ぶんか、とうざんぶんかです。"
         },
@@ -571,23 +982,56 @@
       "visual": {
         "background": "bg_muromachi_sengoku",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "そして、乱世の主役はだれなのだ?",
-          "overlay_text": [ { "text": "戦国大名の登場", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "戦国大名の登場",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "下剋上をくり返した結果、戦国大名の登場です。家臣団を率いて、自分の国を力で治めます。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "戦国大名", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "戦国大名",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "げこくじょうを、くりかえした、けっか、せんごくだいみょうの、とうじょうです。かじんだんを、ひきいて、じぶんの、くにを、ちからで、おさめます。"
         },
@@ -613,17 +1057,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "ここから受験ポイントのまとめ!まずは、室町の成り立ち。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "室町の成り立ち", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "室町の成り立ち",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -638,11 +1101,26 @@
         }
       ],
       "exam_points": [
-        { "keyword": "鎌倉幕府滅亡 1333年", "detail": "後醍醐天皇の討幕。楠木正成・新田義貞が活躍。" },
-        { "keyword": "建武の新政 1333年", "detail": "公家中心の親政。武士が離反し3年で挫折。" },
-        { "keyword": "室町幕府 1338年", "detail": "足利尊氏が征夷大将軍に。1336年湊川で楠木正成戦死。" },
-        { "keyword": "南北朝時代 約56年", "detail": "北朝(京都)vs南朝(吉野)。1392年に合一。" },
-        { "keyword": "足利義満", "detail": "将軍の権力を頂点まで高めた3代将軍。" }
+        {
+          "keyword": "鎌倉幕府滅亡 1333年",
+          "detail": "後醍醐天皇の討幕。楠木正成・新田義貞が活躍。"
+        },
+        {
+          "keyword": "建武の新政 1333年",
+          "detail": "公家中心の親政。武士が離反し3年で挫折。"
+        },
+        {
+          "keyword": "室町幕府 1338年",
+          "detail": "足利尊氏が征夷大将軍に。1336年湊川で楠木正成戦死。"
+        },
+        {
+          "keyword": "南北朝時代 約56年",
+          "detail": "北朝(京都)vs南朝(吉野)。1392年に合一。"
+        },
+        {
+          "keyword": "足利義満",
+          "detail": "将軍の権力を頂点まで高めた3代将軍。"
+        }
       ]
     },
     {
@@ -652,17 +1130,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "後半は、乱世と文化のまとめです。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "乱世と文化", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "乱世と文化",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -677,11 +1174,26 @@
         }
       ],
       "exam_points": [
-        { "keyword": "日明貿易", "detail": "義満が開始。勘合符を使い、倭寇取り締まりと引き換え。" },
-        { "keyword": "北山文化 1397年〜", "detail": "金閣に代表される華麗な文化(公家×武家)。" },
-        { "keyword": "応仁の乱 1467年", "detail": "細川勝元(東軍)vs山名宗全(西軍)。11年続き、戦国の始まり。" },
-        { "keyword": "分国支配・下剋上", "detail": "守護が領国を私物化、守護代・国人が主を超える芽。" },
-        { "keyword": "東山文化", "detail": "銀閣(義政)。茶の湯・生け花・枯山水などひなびた美。" }
+        {
+          "keyword": "日明貿易",
+          "detail": "義満が開始。勘合符を使い、倭寇取り締まりと引き換え。"
+        },
+        {
+          "keyword": "北山文化 1397年〜",
+          "detail": "金閣に代表される華麗な文化(公家×武家)。"
+        },
+        {
+          "keyword": "応仁の乱 1467年",
+          "detail": "細川勝元(東軍)vs山名宗全(西軍)。11年続き、戦国の始まり。"
+        },
+        {
+          "keyword": "分国支配・下剋上",
+          "detail": "守護が領国を私物化、守護代・国人が主を超える芽。"
+        },
+        {
+          "keyword": "東山文化",
+          "detail": "銀閣(義政)。茶の湯・生け花・枯山水などひなびた美。"
+        }
       ]
     },
     {
@@ -691,10 +1203,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -704,7 +1235,18 @@
         {
           "speaker": "sensei",
           "text": "1333年、鎌倉幕府を倒す力となった、後醍醐天皇に尽くした武将は?ア、楠木正成。イ、足利尊氏。ウ、武田信玄。",
-          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第1問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 楠木正成 / イ 足利尊氏 / ウ 武田信玄",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "1333ねん、かまくらばくふを、たおす、ちからとなった、ごだいごてんのうに、つくした、ぶしょうは?ア、くすのきまさしげ。イ、あしかがたかうじ。ウ、たけだしんげん。"
         },
         {
@@ -725,10 +1267,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -738,7 +1299,18 @@
         {
           "speaker": "sensei",
           "text": "1467年、京都を焼け野原にして、戦国時代の入り口になった乱は?ア、応仁の乱。イ、承久の乱。ウ、川中島の戦い。",
-          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第2問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 応仁の乱 / イ 承久の乱 / ウ 川中島の戦い",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "1467ねん、きょうとを、やけのはらに、して、せんごくじだいの、いりぐちに、なった、らんは?ア、おうにんのらん。イ、じょうきゅうのらん。ウ、かわじまの、たたかい。"
         },
         {
@@ -759,10 +1331,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -772,7 +1363,18 @@
         {
           "speaker": "sensei",
           "text": "足利義満が明と始めた、勘合符を使う貿易は何でしょう?ア、宋貿易。イ、日明貿易。ウ、朱印船貿易。",
-          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第3問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 宋貿易 / イ 日明貿易 / ウ 朱印船貿易",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "あしかが、よしみつが、みんと、はじめた、かんごうふを、つかう、ぼうえきは、なんでしょう?ア、そうぼうえき。イ、にちみんぼうえき。ウ、しゅいんせんぼうえき。"
         },
         {
@@ -793,10 +1395,29 @@
       "visual": {
         "background": "bg_school_lab_evening",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -810,7 +1431,13 @@
         {
           "speaker": "sensei",
           "text": "次回第6話は、織田信長と豊臣秀吉の天下統一。乱世を終わらせる二人の話、お楽しみに!",
-          "overlay_text": [ { "text": "次回 第6話 織豊", "style": "keyword_card", "motion": "pop_in" } ]
+          "overlay_text": [
+            {
+              "text": "次回 第6話 織豊",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -823,19 +1450,31 @@
   "quiz": [
     {
       "q": "1333年、鎌倉幕府を倒す力となった、後醍醐天皇に尽くした武将はだれでしょう?",
-      "choices": ["楠木正成", "足利尊氏", "武田信玄"],
+      "choices": [
+        "楠木正成",
+        "足利尊氏",
+        "武田信玄"
+      ],
       "answer": 0,
       "explain": "楠木正成は少人数で鎌倉軍を悩ませ、後に湊川で天皇側として戦い抜きました。"
     },
     {
       "q": "1467年、京都を焼け野原にして、戦国時代の入り口になった乱は何でしょう?",
-      "choices": ["応仁の乱", "承久の乱", "川中島の戦い"],
+      "choices": [
+        "応仁の乱",
+        "承久の乱",
+        "川中島の戦い"
+      ],
       "answer": 0,
       "explain": "応仁の乱は1467年から11年続き、戦国時代の幕開けとなりました。"
     },
     {
       "q": "足利義満が明と始めた、勘合符を使う貿易は何でしょう?",
-      "choices": ["宋貿易", "日明貿易", "朱印船貿易"],
+      "choices": [
+        "宋貿易",
+        "日明貿易",
+        "朱印船貿易"
+      ],
       "answer": 1,
       "explain": "日明貿易は倭寇の取り締まりと引き換えに認められた勘合貿易です。"
     }
