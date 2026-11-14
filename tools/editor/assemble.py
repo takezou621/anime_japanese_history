@@ -9,6 +9,11 @@ Pipeline
                of DIFFERENT sections becomes a 0.5s xfade; same-section
                boundaries are hard cuts.
 2. segments  : per scene, a 1920x1080@30 CFR segment is rendered:
+               - AI i2v clip, when the scene declares one (visual.ai_clip or
+                 video/epNN_ai/manifest.json), is normalized by ai_segments.py
+                 to exactly the scene length (trim or ping-pong loop) and used
+                 as the background video. Missing/broken clips fall back to
+                 the zoompan path and are reported in QC `ai_segments`.
                - background PNG -> 3x supersample -> zoompan kenburns camera
                  (jitter-free; 静止3秒禁止 rule satisfied on every scene)
                - layer assets (characters/props) and overlay_text PNGs are
@@ -54,6 +59,7 @@ from motion import FPS, MAIN_W, MAIN_H, kenburns_exprs, layer_motion, DEFAULT_MO
 from text_overlays import render_overlay, STYLES
 import make_subtitles
 import qc as qcmod
+import ai_segments
 
 XFADE_DUR = 0.5          # section crossfade (STYLE_GUIDE / DESIGN)
 SUPER_W, SUPER_H = 5760, 3240   # 3x supersampled zoompan input
@@ -136,6 +142,9 @@ class Span:
     cam_motion: str
     cam_intensity: float
     bg: str
+    ai_src: str = ""      # AI i2v clip path (未正規化). 空 = AI無し (kenburns)
+    ai_clip: str = ""     # 正規化済みクリップ (prepare 成功後)
+    ai_note: str = ""     # prepare 結果 / フォールバック理由 (QC 記録用)
     layers: list[Layer] = field(default_factory=list)
 
 
@@ -145,7 +154,9 @@ def load_json(path: str) -> dict:
 
 
 def build_plan(script: dict, timing: dict, assets_dir: Path,
-               tmp_dir: Path, only: list[str] | None) -> tuple[list[Span], list[dict]]:
+               tmp_dir: Path, only: list[str] | None,
+               ep: str = "", ai_manifest: dict | None = None
+               ) -> tuple[list[Span], list[dict]]:
     scenes = script.get("scenes", [])
     if not scenes:
         raise SystemExit("script.json has no scenes")
@@ -184,6 +195,9 @@ def build_plan(script: dict, timing: dict, assets_dir: Path,
             cam_motion=cam.get("motion", "kenburns_in"),
             cam_intensity=cam.get("intensity", 1.0),
             bg=str(assets_dir / "scenes" / f"{bg_name}.png")))
+        clip = ai_segments.resolve_clip(sc, ep, ai_manifest or {})
+        if clip:
+            spans[-1].ai_src = clip
         # contiguity check (timing should be gapless across scenes)
         if prev_sc:
             p_start, p_end = windows[prev_sc["id"]]
@@ -322,12 +336,16 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
 # ---------------------------------------------------------------------------
 
 def segment_filtergraph(span: Span) -> str:
-    z, x, y = kenburns_exprs(span.cam_motion, span.cam_intensity, span.frames)
-    parts = [
-        f"[0:v]scale={SUPER_W}:{SUPER_H}:flags=lanczos,"
-        f"zoompan=z='{z}':x='{x}':y='{y}':d={span.frames}:"
-        f"s={MAIN_W}x{MAIN_H}:fps={FPS},settb=AVTB,format=yuv420p,setsar=1[bg0];"
-    ]
+    if span.ai_clip:
+        # AI i2v クリップは ai_segments.py が 1920x1080@30 CFR に正規化済み
+        parts = ["[0:v]settb=AVTB,format=yuv420p,setsar=1[bg0];"]
+    else:
+        z, x, y = kenburns_exprs(span.cam_motion, span.cam_intensity, span.frames)
+        parts = [
+            f"[0:v]scale={SUPER_W}:{SUPER_H}:flags=lanczos,"
+            f"zoompan=z='{z}':x='{x}':y='{y}':d={span.frames}:"
+            f"s={MAIN_W}x{MAIN_H}:fps={FPS},settb=AVTB,format=yuv420p,setsar=1[bg0];"
+        ]
     cur = "bg0"
     for i, L in enumerate(span.layers, start=1):
         chain = f"[{i}:v]format=rgba"
@@ -343,9 +361,24 @@ def segment_filtergraph(span: Span) -> str:
     return "\n".join(parts)
 
 
-def render_segment(span: Span, ffmpeg: str, filter_path: Path,
+def render_segment(span: Span, ffmpeg: str, ffprobe: str, filter_path: Path,
                    out_path: Path) -> tuple[str, bool, str]:
-    cmd = [ffmpeg, "-y", "-loglevel", "error", "-i", span.bg]
+    if span.ai_src and not span.ai_clip:
+        # AI クリップをシーン長ちょうどに正規化 (失敗時は kenburns にフォールバック)
+        prepared = filter_path.parent / f"{span.sid}_ai.mp4"
+        try:
+            info = ai_segments.prepare_ai_clip(ffmpeg, span.ai_src, span.frames,
+                                               prepared, ffprobe)
+            span.ai_clip = info["path"]
+            span.ai_note = (f"{info['mode']} {info['in_duration']:.1f}s->"
+                            f"{info['out_duration']:.1f}s")
+            print(f"  [ai] {span.sid}: {span.ai_note} ({span.ai_src})")
+        except Exception as err:  # noqa: BLE001 — クリップ1本の失敗で番組を落とさない
+            span.ai_note = f"fallback: {err}"
+            span.ai_src = ""
+            print(f"  [ai][warn] {span.sid}: {span.ai_note}")
+    src = span.ai_clip or span.bg
+    cmd = [ffmpeg, "-y", "-loglevel", "error", "-i", src]
     for L in span.layers:
         cmd += ["-loop", "1", "-framerate", str(FPS),
                 "-t", f"{span.dur + 0.5:.3f}", "-i", L.image]
@@ -510,12 +543,18 @@ def main() -> int:
     script = load_json(script_path)
     timing = load_json(timing_path)
 
+    ai_manifest = ai_segments.load_manifest(ep)
+    if ai_manifest:
+        print(f"[ai] manifest: {len(ai_manifest)} clip(s) "
+              f"({ai_segments.manifest_path(ep)})")
+
     parts_dir = Path(out).parent / f"{ep}_parts"
     text_dir = parts_dir / "text"
     text_dir.mkdir(parents=True, exist_ok=True)
 
     only = [s for s in (a.only_scenes or "").split(",") if s]
-    spans, scenes_used = build_plan(script, timing, assets_dir, text_dir, only or None)
+    spans, scenes_used = build_plan(script, timing, assets_dir, text_dir,
+                                    only or None, ep=ep, ai_manifest=ai_manifest)
 
     for sp in spans:
         scene = next(s for s in scenes_used if s["id"] == sp.sid)
@@ -529,9 +568,10 @@ def main() -> int:
     print("\n[plan]")
     for sp in spans:
         pads = f"head={sp.head:.1f} tail={sp.tail:.1f}" if (sp.head or sp.tail) else "cut"
+        ai_tag = f"ai:{Path(sp.ai_src).name}" if sp.ai_src else ""
         print(f"  {sp.sid} {sp.section:<8} global {sp.start:7.2f}-{sp.end:7.2f} "
               f"seg_start {sp.seg_start:7.2f} frames {sp.frames:4d} {pads} "
-              f"layers {len(sp.layers):2d} cam {sp.cam_motion}")
+              f"layers {len(sp.layers):2d} cam {sp.cam_motion} {ai_tag}")
     print(f"  sections: {spans[0].section}", end="")
     for p, c in zip(spans, spans[1:]):
         if c.section != p.section:
@@ -546,6 +586,9 @@ def main() -> int:
     for sp in spans:
         if not Path(sp.bg).is_file():
             raise SystemExit(f"background missing: {sp.bg}")
+        if sp.ai_src and not Path(sp.ai_src).is_file():
+            print(f"[ai][warn] clip missing -> kenburns fallback: "
+                  f"{sp.sid} {sp.ai_src}")
 
     # segments (parallel)
     t0 = time.time()
@@ -553,7 +596,7 @@ def main() -> int:
     failures = []
     with ThreadPoolExecutor(max_workers=max(1, a.jobs)) as pool:
         futs = {
-            pool.submit(render_segment, sp, ffmpeg,
+            pool.submit(render_segment, sp, ffmpeg, ffprobe,
                         parts_dir / f"{sp.sid}_filter.txt",
                         parts_dir / f"{sp.sid}.mp4"): sp
             for sp in spans
@@ -597,6 +640,14 @@ def main() -> int:
     qc_expected = estimate_final_duration(spans) if only else None
     qc = qcmod.run_checks(out, timing, a.profile, ffmpeg, ffprobe,
                           expected=qc_expected)
+    ai_report = [
+        {"sid": sp.sid, "mode": "ai" if sp.ai_clip else "fallback",
+         "clip": sp.ai_src or "", "detail": sp.ai_note}
+        for sp in spans if (sp.ai_src or sp.ai_clip or sp.ai_note)]
+    if ai_report:
+        qc["ai_segments"] = ai_report
+        used = sum(1 for r in ai_report if r["mode"] == "ai")
+        print(f"[ai] segments: {used} AI / {len(ai_report) - used} fallback")
     with open(qc_out, "w", encoding="utf-8") as f:
         json.dump(qc, f, ensure_ascii=False, indent=2)
     qcmod.print_summary(qc)

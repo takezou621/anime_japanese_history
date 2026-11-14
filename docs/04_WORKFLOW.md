@@ -32,6 +32,18 @@
 - [ ] assemble.py が script.json + timing.json + assets → 10秒テスト動画
 - [ ] 字幕焼き込み・モーション・クロスフェード確認
 - [ ] QC json 出力 (長さ/ラウドネス/黒フレーム)
+- [ ] AI クリップ統合 (visual.ai 指定シーンがある場合):
+  `python3 tools/editor/ai_segments.py` PASS → assemble 実行 →
+  QC `ai_segments` で used/fallback を確認 (fallback は許容, 静画で成立)
+
+### lead (AI生成 tools/aigen — docs/06_AI_GENERATION.md)
+- [ ] `models --remote` で実在モデルID確認 → config.json 修正
+- [ ] `episode --ep epNN --plan` で費用確定 → `--images` / `--clips` を `--yes` 付き実行
+- [ ] draft 選定は ai_drafts/storyboard.html の目視で行う (動画ガチャ防止の本体)
+- [ ] final は当たり1枚だけ `--tier final --prompt-file` (同一プロンプト)
+- [ ] Veo は採用画像の image-to-video のみ。`$2` 超は `--yes` 必須
+- [ ] `e2e_test.py` + `selftest` を PASS させてから本番 assemble
+- [ ] 月末に `budget` で台帳と実請求を突き合わせ → pricing_usd を補正
 
 ## 最終受け入れ (lead)
 1. video/ep01_FINAL.mp4 を再生確認 (長さ・音ズレ・文字かぶり・見切れ)

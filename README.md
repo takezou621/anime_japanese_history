@@ -24,6 +24,7 @@
 - [docs/02_DESIGN.md](docs/02_DESIGN.md) — 技術設計 (script.json契約/ツール仕様/分担)
 - [docs/03_STYLE_GUIDE.md](docs/03_STYLE_GUIDE.md) — アート&サウンド スタイルガイド
 - [docs/04_WORKFLOW.md](docs/04_WORKFLOW.md) — 制作フロー & チェックリスト
+- [docs/06_AI_GENERATION.md](docs/06_AI_GENERATION.md) — AI生成 (月$10予算ガード, 動画パイプライン統合)
 
 ## パイプライン
 
@@ -31,8 +32,13 @@
 content/episodes/epNN/script.json   (writer: 脚本)
   → tools/audio/make_narration.py   (audio: VOICEVOX音声 + timing.json)
   → tools/audio/make_bgm.py + make_mix.py  (BGM合成 + -14LUFSミックス)
-  → tools/art/generate_assets.py    (artist: 背景/キャラ/バッジ生成)
+  → tools/art/generate_assets.py    (artist: 背景/キャラ/バッジ生成 [code-drawn])
+  → tools/aigen/cli.py episode      (lead: script.json の visual.ai を一括供給 [任意])
+      --images: draft(1K)複数 → 選定 → adopt で scenes/ 採用
+      --clips : 採用画像を開始フレームに Veo i2v → video/epNN_ai/ + manifest
   → tools/editor/assemble.py        (editor: モーション/字幕/xfade/QC)
+      AIクリップ指定シーンは ai_segments.py が正規化して使用, 無いシーンは kenburns
+      (欠損時も自動フォールバック, QC ai_segments に記録)
   → video/epNN_FINAL.mp4 + video/epNN_QC.json
   → tools/thumbnail.py + youtube/make_metadata.py (lead: 運営素材)
   → youtube/upload.py               (Data API v3 / 認証情報なしはdry-run)
@@ -42,8 +48,10 @@ content/episodes/epNN/script.json   (writer: 脚本)
 
 - **音声**: VOICEVOX engine (四国めたん=ヒスト先生 / ずんだもん=マナブ, キャラ設定はオリジナル)
 - **作画**: Python + Pillow (アニメ調フラットアート, スーパーサンプリング, 完全コード描画)
-- **編集**: ffmpeg (zoompan Ken Burns / xfade / ASS字幕焼き込み / loudnorm 2パス)
-- **品質管理**: 自動QC (長さ/解像度/ラウドネス/黒フレーム) + lead目視検収
+  + 任意で AI 生成 (tools/aigen: 画像 draft→選定→final / Veo は採用画像の i2v のみ。
+  script.json に visual.ai を追記するだけで有効, 月$10クレジット予算ガード付き)
+- **編集**: ffmpeg (zoompan Ken Burns / AIクリップ正規化 / xfade / ASS字幕焼き込み / loudnorm 2パス)
+- **品質管理**: 自動QC (長さ/解像度/ラウドネス/黒フレーム/AIセグメント) + lead目視検収
 
 ## クレジット
 

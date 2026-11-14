@@ -7,6 +7,7 @@
 | ファイル | 役割 |
 |---|---|
 | `assemble.py` | メイン。プラン→セグメント並列レンダー→xfade連結→字幕帯+字幕焼き込み→mux→QC |
+| `ai_segments.py` | AI i2v クリップの解決+シーン長への正規化 (trim/pingpong)。assemble から呼ばれる。単体テスト: `python3 tools/editor/ai_segments.py` |
 | `motion.py` | zoompan kenburns / レイヤーモーションの ffmpeg 式ビルダー |
 | `text_overlays.py` | overlay_text スタイル (STYLE_GUIDE) の PNG レンダラー + 字幕帯 |
 | `make_subtitles.py` | timing.json + script.json → ASS (libass `subtitles` で焼き込み) |
