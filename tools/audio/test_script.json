@@ -1,0 +1,86 @@
+{
+  "episode": "test",
+  "series": "日本史はじめて物語",
+  "title": "パイプライン通しテスト用スクリプト",
+  "characters": [
+    { "id": "sensei", "name": "ヒスト先生", "voice_style": "四国めたん/ノーマル",
+      "speed_scale": 1.05, "pitch": 0.0, "subtitle_color": "#7ec8e3" },
+    { "id": "manabu", "name": "マナブ", "voice_style": "ずんだもん/ノーマル",
+      "speed_scale": 1.08, "pitch": 0.0, "subtitle_color": "#8be27e" }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "section": "opening",
+      "duration_hint_sec": 20,
+      "visual": {
+        "background": "bg_school_lab",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "sensei",
+          "text": "こんにちは!ヒスト先生です。",
+          "overlay_text": [ { "text": "アニメ日本史ラボ", "style": "title_main", "motion": "fade_up" } ] },
+        { "speaker": "manabu", "text": "今日は日本のはじまりを学ぶのだ!" },
+        { "speaker": "sensei", "text": "うん。まずは縄文・弥生・古墳の三時代を見ていこう。" }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s02",
+      "section": "opening",
+      "duration_hint_sec": 15,
+      "visual": {
+        "background": "bg_jomon",
+        "assets": [
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "manabu", "text": "土器って何だ?", "reading": "どきってなんだ?" },
+        { "speaker": "sensei", "text": "縄文時代は一万年前から続く、狩猟採集の時代だね。" }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s03",
+      "section": "story",
+      "duration_hint_sec": 25,
+      "visual": {
+        "background": "bg_yayoi",
+        "assets": [],
+        "camera": { "motion": "pan_l", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "sensei", "text": "弥生時代になると、大陸から水稲農耕が伝わった。",
+          "overlay_text": [ { "text": "水稲農耕", "style": "keyword_card", "motion": "pop_in" } ] },
+        { "speaker": "manabu", "text": "お米作りが始まるのだ!" },
+        { "speaker": "sensei", "text": "そう。村ができ、銅鐸や高床倉庫が生まれた。" }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s04",
+      "section": "story",
+      "duration_hint_sec": 20,
+      "visual": {
+        "background": "bg_kofun",
+        "assets": [],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        { "speaker": "sensei", "text": "そして三世紀ごろ、大きな古墳が作られ始める。",
+          "overlay_text": [ { "text": "3世紀", "style": "year_number", "motion": "zoom_in" } ] },
+        { "speaker": "manabu", "text": "ここが受験ポイントなのだ!",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ] }
+      ],
+      "exam_points": []
+    }
+  ],
+  "quiz": []
+}
