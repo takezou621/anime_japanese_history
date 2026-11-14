@@ -1,0 +1,8 @@
+video/
+audio/ep*/narration/
+audio/ep*/bgm.wav
+audio/ep*/mix.wav
+assets/**/_tmp/
+__pycache__/
+*.pyc
+.DS_Store
