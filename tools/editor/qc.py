@@ -150,6 +150,24 @@ def run_checks(video: str, timing: dict, profile: str,
     }
 
     black = detect_black(ffmpeg, video, duration)
+    cs = {k: v.get(k) for k in
+          ("color_space", "color_transfer", "color_primaries", "color_range")}
+    checks["color"] = {
+        "pass": cs.get("color_space") == "bt709",
+        "value": cs,
+        "detail": "bt709 broadcast tags expected (lead spec 2026-11-15)",
+    }
+    bit_rate_v = int(fmt.get("bit_rate") or 0)
+    mbps = round(bit_rate_v / 1_000_000, 2)
+    checks["bit_rate"] = {
+        "pass": mbps >= 25.0,
+        "warn": mbps < 35.0,
+        "value": {"bit_rate": bit_rate_v, "mbps": mbps,
+                  "target_mbps": 35.0, "maxrate_mbps": 40.0},
+        "detail": (f"{mbps} Mbps measured (target 35M, maxrate 40M)"
+                   + ("" if mbps >= 35.0 else "; below target (guideline)")),
+    }
+
     checks["black_frames"] = {
         "pass": black["ratio"] < BLACK_MAX,
         "value": {"ratio": round(black["ratio"], 5), "runs": black["runs"]},
