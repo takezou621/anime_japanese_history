@@ -66,6 +66,9 @@ ffmpeg 9 は `-filter_complex_script`/`-vsync` が削除済み → `-/filter_com
 - レイヤー出現時刻: アセット名がキャラidを含む (例 `char_sensei`→`sensei`)
   → その話者のシーン内最初のbeat開始。それ以外はシーン最初のbeat。同時刻は 0.25s ずつズらす
 - `overlay_text` はその beat の開始時刻に登場 (同beat複数は 0.15s ずつズらす)
+- 字幕帯は最終パスで overlay → 字幕 (libass) が常に最前面。exam_banner 等
+  下端寄せスタイルの既定位置は帯 (top≈0.86h) の上 y=0.70h (lead v2 フィードバック)
+- keyword_card は最小 520x140px を保証 (文字が少なくてもカードサイズは維持)
 - motion 未指定時: レイヤー=`fade`, スタイル既定 (`STYLES[style]["default_motion"]`)
 - モーション長 0.5s 固定 (STYLE_GUIDE 0.4–0.6s の中央), `dur` で上書き可
 - 字幕: 52px Bold, ラベル=話者色+太字 / 本文=白, 黒フチ4px+影, 角丸半透明黒帯の上に焼き込み

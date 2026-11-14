@@ -121,16 +121,32 @@ def _fix_line_starts(lines: list[str]) -> list[str]:
     return out
 
 
+_BREAK_AFTER = "、。！？…!?）」』,:;・"
+
+
 def _wrap_2lines(text: str, first_budget: int) -> str:
-    """Wrap to <=2 lines with \\N; line 1 budget smaller when label present."""
+    """Wrap to <=2 lines with \\N; line 1 budget smaller when label present.
+
+    Prefers breaking after sentence punctuation near the budget edge over a
+    hard mid-word cut (up to 4 chars back, +2 chars overflow on the line).
+    """
     limit = first_budget
     lines: list[str] = []
     buf = ""
     for ch in text:
         if len(buf) >= limit:
-            lines.append(buf)
-            buf = ch
-            limit = WRAP  # subsequent lines use the full budget
+            cut = 0
+            for j in range(len(buf) - 1, max(len(buf) - 5, -1), -1):
+                if buf[j] in _BREAK_AFTER:
+                    cut = j + 1
+                    break
+            if cut:
+                lines.append(buf[:cut])
+                buf = buf[cut:] + ch
+            else:
+                lines.append(buf)
+                buf = ch
+            limit = WRAP + 2  # allow mild overflow after a punctuation pull-up
         else:
             buf += ch
     if buf:

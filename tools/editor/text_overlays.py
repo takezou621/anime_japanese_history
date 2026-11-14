@@ -52,14 +52,17 @@ STYLES: dict[str, dict] = {
                       pad=(38, 16), wrap=16, shadow=False,
                       default_pos=lambda w, h: (80 + w / 2, 104)),
     "keyword_card": dict(font="Bold", size=64, fill=AI, bg=WHITE_UI,
-                         border=(AI, 6), radius=28,
+                         border=(AI, 6), radius=28, min_size=(520, 140),
                          default_motion="pop_in", pad=(48, 26), wrap=12,
                          shadow=False,
                          default_pos=lambda w, h: (CANVAS_W / 2, 560)),
     "exam_banner": dict(font="Black", size=56, fill="#ffffff", bg=SHU,
                         border=None, radius=16, default_motion="slide_up",
                         pad=(56, 20), wrap=26, shadow=False,
-                        default_pos=lambda w, h: (CANVAS_W / 2, 850)),
+                        # lead v2: bottom-anchored banners must stay above the
+                        # subtitle band (band top ≈ 0.86h) -> center at 0.70h
+                        default_pos=lambda w, h: (CANVAS_W / 2,
+                                                  int(CANVAS_H * 0.70))),
     "year_number": dict(font="Black", size=96, fill=YAMABUKI, stroke=TEXT_DARK,
                         stroke_w=5, shadow=True, default_motion="zoom_in",
                         pad=(28, 14), wrap=10, radius=0, bg=None,
@@ -130,6 +133,10 @@ def render_overlay(entry: dict) -> tuple[Image.Image, tuple[int, int]]:
     text_w = int(max(widths))
     w = text_w + pad_w * 2 + stroke_w * 2
     h = line_h * len(lines) + pad_h * 2 + stroke_w * 2
+    # lead v2: guarantee a minimum card size (final-pixel units)
+    min_w, min_h = cfg.get("min_size", (0, 0))
+    w = max(w, min_w * SS)
+    h = max(h, min_h * SS)
     w += w % 2
     h += h % 2
 
