@@ -4,26 +4,29 @@
 使い方:
     uv run --with faster-whisper --with pykakasi --with numpy python tools/qa/asr_check.py --episode ep01
     uv run --with faster-whisper --with pykakasi --with numpy python tools/qa/asr_check.py --all
-    # オプション: --model small --threshold 0.95 --device cpu --compute-type int8 --force
+    # オプション: --model small --threshold 0.70 --review-threshold 0.6 --device cpu --compute-type int8 --force
     # 依存: ffmpeg (mix.wav の 16kHz mono float32 デコードに使用。PyAV は使わない —
     #       av>=15 では faster-whisper の decode_audio が非互換のため)
 
 出力:
-    reports/asr_check_epNN.json  (全体一致率 + ビート別の不一致リスト)
+    reports/asr_check_epNN.json  (全体一致率 + ビート別の不一致リスト + 要確認リスト)
 
-仕様 (T4: ASR突合, 2026-11 lead 指示):
+仕様 (T4: ASR突合, 2026-11 lead 指示。閾値運用は 2026-11-15 lead 承認版):
 - モデル既定: small (多言語, 日本語対応。初回実行時に HuggingFace からダウンロードされる)
 - 正規化: NFKC → アラビア数字を漢数字へ変換 (両側に適用し表記差を吸収)
   → pykakasi で漢字/カタカナをひらがなへ → 記号・空白・残留数字を除去
 - 一致率: difflib.SequenceMatcher の ratio (0.0-1.0) を正規化文字列で算出
   - 全体一致率: 台本全ビート連結 vs ASR 全セグメント連結 (時間順)
   - ビート別: ASR セグメントを timing.json のビート区間に重なり時間比例で分割割当
-- 閾値: 既定 0.95 だが、BGM 付きミックス + small モデルの実測ではこれを大きく
-  下回る (キャラ語尾や固有名詞の ASR 誤変換のため)。閾値はベースライン実測値を
-  踏まえて運用調整すること。ASR は音声の実読みを転写するため、かな漢字変換差
-  (例: よきの/よしのぶ は同音として正規化され区別できない) や固有名詞の表記ゆれは
-  正規化比較では検出されない。固有名詞の実読み検証は pronunciation_log 突合・
-  VOICEVOX audio_query 解析 (reports/qa_audio_epNN.md) でカバーすること
+- 閾値運用 (2026-11-15 lead 承認):
+  - 全体一致率ゲート: 既定 0.70 (回帰検知用途 — 音声の入れ替わり/欠落/誤レンダリング検出)
+  - ビート別: similarity が --review-threshold (既定 0.6) 未満のビートを results.review_list
+    に「要確認リスト」として出力する
+  - ep01 実測ベースライン: small で 0.768 / medium で 0.803。キャラ語尾 (〜のだ) や
+    固有名詞の ASR 誤変換 (氷河→評価 等) が常時発生するため 0.95 は達成不可能
+  - 固有名詞の正確性は pronunciation_log 突合 (audio) + 検証済み辞書で担保する
+    (ASR一致率と役割分担)。かな漢字変換差 (よきの/よしのぶ 等の同音異表記) は
+    正規化比較では検出されない
 - 終了コード: 全体一致率が閾値以上なら 0、未満なら 1 (引数エラー等は 2)
 """
 from __future__ import annotations
@@ -222,6 +225,8 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
     n_fail = sum(1 for r in beat_rows if r["ok"] is False)
     n_na = sum(1 for r in beat_rows if r["ok"] is None)
     overall_pass = overall is not None and overall >= args.threshold
+    review_list = [r["beat_id"] for r in beat_rows if r["similarity"] is not None
+                   and r["similarity"] < args.review_threshold]
 
     result = {
         "episode": episode,
@@ -232,12 +237,14 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
         "asr_segments": len(segments),
         "beats": len(beat_rows),
         "threshold": args.threshold,
+        "review_threshold": args.review_threshold,
         "overall_similarity": None if overall is None else round(overall, 4),
         "overall_pass": overall_pass,
         "beat_pass": n_pass, "beat_fail": n_fail, "beat_na": n_na,
+        "review_list": review_list,
         "beats_detail": beat_rows,
-        "note": ("ASR突合は音声と台本の一致率の目安。固有名詞の実読み検証は "
-                 "pronunciation_log 突合 (reports/qa_audio_epNN.md) でカバーすること"),
+        "note": ("ASR突合は音声と台本の一致率の目安。全体ゲート 0.70 は回帰検知用途。"
+                 "固有名詞の実読み検証は pronunciation_log 突合 (reports/qa_audio_epNN.md) でカバーすること"),
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
@@ -253,7 +260,10 @@ def main() -> int:
     ap.add_argument("--model", default="small", help="faster-whisper モデル名 (既定 small)")
     ap.add_argument("--device", default="cpu", help="cpu / auto (既定 cpu)")
     ap.add_argument("--compute-type", default="int8", help="int8 / float16 等 (既定 int8)")
-    ap.add_argument("--threshold", type=float, default=0.95, help="合格閾値 (既定 0.95)")
+    ap.add_argument("--threshold", type=float, default=0.70,
+                    help="全体一致率のゲート (既定 0.70。回帰検知用途 — 2026-11-15 lead 承認)")
+    ap.add_argument("--review-threshold", type=float, default=0.6,
+                    help="ビート別要確認リストの閾値 (既定 0.6)")
     ap.add_argument("--out-dir", default="reports", help="出力ディレクトリ (既定 reports)")
     ap.add_argument("--root", default=".", help="リポジトリルート (既定 カレント)")
     ap.add_argument("--force", action="store_true", help="出力済みでも再実行する")
