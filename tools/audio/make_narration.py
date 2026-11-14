@@ -10,13 +10,20 @@
 - speaker UUID は /speakers から動的解決 (voice_style "四国めたん/ノーマル" 等で一致)
 - query パラメータ: speedScale/pitch は characters 設定, volumeScale は 1.2 (既定)
 - beat に reading があれば text の代わりに TTS 入力に使う
+- 発音辞書 (pronunciation_dict.json): 最長一致優先 + 単語境界考慮で TTS 前に置換。
+  置換内容は audio/<ep>/pronunciation_log.json に記録。script.json は変更しない。
+- キャッシュ: narration_manifest.json に TTS テキスト+辞書ハッシュを記録し,
+  テキスト/辞書が変わった WAV は自動で再生成する (--force で全再生成)
 - ギャップ: ビート間 0.45s / シーン間 0.7s / セクション間 0.9s / テール 0.7s (CLI で変更可)
 - VOICEVOX 未起動時は vv-engine/run を自動起動して /version 応答を最大 90 秒待つ
 """
 from __future__ import annotations
 
 import argparse
+import datetime
+import hashlib
 import json
+import re
 import struct
 import subprocess
 import sys
@@ -35,6 +42,62 @@ BEAT_GAP = 0.45     # ビート間 (lead 調整 2026-11-14: 0.6 → 0.45)
 SCENE_GAP = 0.7     # シーン間 (0.9 → 0.7)
 SECTION_GAP = 0.9   # セクション間 (1.2 → 0.9)
 TAIL_SEC = 0.7      # 最終ビート後の余白 (1.0 → 0.7)
+
+DEFAULT_DICT_PATH = Path(__file__).resolve().parent / "pronunciation_dict.json"
+# 漢字相当文字 (境界判定用。ヶ/ノ等の括り文字は含めない → 「賤ヶ岳」等の複合キーが跨げる)
+_KANJI_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff々〆]")
+# 固有名詞の直後に付いて「名前+接尾」を形成する語 (この場合は部分置換を許可する)
+NAME_SUFFIXES = ("軍勢", "軍団", "一族", "一門", "家臣", "軍", "勢", "方",
+                 "氏", "党", "家", "殿", "公", "衆", "側")
+
+
+def load_pronunciation_dict(path: str | None) -> tuple[dict, str | None]:
+    """発音辞書を読み込む。戻り値 (辞書, sha256先頭12桁)。辞書がなければ ({}, None)。"""
+    p = Path(path) if path else DEFAULT_DICT_PATH
+    if not p.exists():
+        return {}, None
+    raw = p.read_bytes()
+    d = json.loads(raw.decode("utf-8"))
+    kana = re.compile(r"^[ぁ-ゖー]+$")
+    for k, v in d.items():
+        if not kana.match(v):
+            raise SystemExit(f"pronunciation_dict.json の値がひらがなでありません: {k}={v}")
+        if not (_KANJI_RE.search(k) or re.fullmatch(r"[0-9%]+", k)):
+            raise SystemExit(f"pronunciation_dict.json のキーに漢字がありません: {k}")
+    return d, hashlib.sha256(raw).hexdigest()[:12]
+
+
+def apply_pronunciation(text: str, pdict: dict) -> tuple[str, list[dict]]:
+    """辞書による読み置換。最長一致優先 + 単語境界考慮。
+    - 前隣が漢字 → 名前の途中なので置換しない (未知のより長い固有名詞を保護)
+    - 後隣が漢字で、その漢字連続が NAME_SUFFIXES に一致 → 「名前+接尾」として許可
+    - 辞書値はひらがななので、置換結果が後続キーと再マッチすることはない
+    戻り値 (置換後テキスト, 置換リスト [{"from","to"}])"""
+    repls: list[dict] = []
+    keys = sorted(pdict, key=lambda k: (-len(k), k))
+    for key in keys:
+        val = pdict[key]
+        pos = 0
+        while True:
+            i = text.find(key, pos)
+            if i < 0:
+                break
+            j = i + len(key)
+            prev_k = i > 0 and _KANJI_RE.match(text[i - 1])
+            next_k = j < len(text) and _KANJI_RE.match(text[j])
+            if prev_k:
+                pos = i + 1
+                continue
+            if next_k:
+                m = _KANJI_RE.match(text, j)
+                following = text[j: m.end()] if m else ""
+                if following not in NAME_SUFFIXES:
+                    pos = i + 1
+                    continue
+            text = text[:i] + val + text[j:]
+            repls.append({"from": key, "to": val})
+            pos = i + len(val)
+    return text, repls
 
 
 # ---------------------------------------------------------------- HTTP helpers
@@ -202,6 +265,8 @@ def main() -> int:
     ap.add_argument("--beat-gap", type=float, default=BEAT_GAP, help="ビート間ギャップ秒 (既定 0.45)")
     ap.add_argument("--scene-gap", type=float, default=SCENE_GAP, help="シーン間ギャップ秒 (既定 0.7)")
     ap.add_argument("--section-gap", type=float, default=SECTION_GAP, help="セクション間ギャップ秒 (既定 0.9)")
+    ap.add_argument("--dict", default=None, help="発音辞書 JSON (既定: tools/audio/pronunciation_dict.json)")
+    ap.add_argument("--no-dict", action="store_true", help="発音辞書を使わない")
     ap.add_argument("--force", action="store_true", help="既存 WAV があっても再生成")
     ap.add_argument("--keep-going", action="store_true", help="1 ビート失敗でも続行 (失敗ビートは timing から除外)")
     args = ap.parse_args()
@@ -224,19 +289,42 @@ def main() -> int:
     style_ids = resolve_style_ids(sorted({c["voice_style"] for c in characters.values()}))
     print(f"[narration] style ids: {style_ids}")
 
+    pdict, dict_sha = ({}, None) if args.no_dict else load_pronunciation_dict(args.dict)
+    if pdict:
+        print(f"[narration] 発音辞書: {len(pdict)}語 (sha256={dict_sha})")
+    else:
+        print("[narration] 発音辞書: 不使用")
+
+    manifest_path = out_dir / "narration_manifest.json"
+    manifest: dict = {}
+    if manifest_path.exists():
+        try:
+            manifest = json.loads(manifest_path.read_text())
+        except json.JSONDecodeError:
+            manifest = {}
+
     total_chars = 0
     beat_meta: list[dict] = []
+    log_beats: list[dict] = []
+    total_repls = 0
+    term_counts: dict[str, int] = {}
     for scene in script["scenes"]:
         sid = scene["id"]
         for bi, beat in enumerate(scene["beats"]):
             char = characters[beat["speaker"]]
-            tts_text = beat.get("reading") or beat["text"]
+            base_text = beat["text"]
+            raw_tts = beat.get("reading") or base_text
+            tts_text, repls = apply_pronunciation(raw_tts, pdict) if pdict else (raw_tts, [])
             total_chars += len(tts_text)
             wav_rel = f"narration/{sid}_b{bi:02d}.wav"
             wav_path = out_dir / wav_rel
-            if wav_path.exists() and not args.force:
+
+            cached = (not args.force and wav_path.exists()
+                      and manifest.get("dict_sha256") == dict_sha
+                      and manifest.get("beats", {}).get(wav_rel, {}).get("tts_text") == tts_text)
+            if cached:
                 dur = wav_duration(wav_path.read_bytes())
-                print(f"[narration] skip (exists): {wav_rel} {dur:.3f}s")
+                print(f"[narration] skip (cache): {wav_rel} {dur:.3f}s")
             else:
                 wav_bytes = synth_beat(
                     tts_text, style_ids[char["voice_style"]],
@@ -245,10 +333,25 @@ def main() -> int:
                     volume_scale=args.volume_scale)
                 wav_path.write_bytes(wav_bytes)
                 dur = wav_duration(wav_bytes)
-                print(f"[narration] {wav_rel}  {dur:.3f}s  {beat['speaker']}: {tts_text[:32]}")
+                reason = "regen(dict/text)" if wav_path.exists() and not args.force else "new"
+                print(f"[narration] {wav_rel}  {dur:.3f}s  {beat['speaker']}: {tts_text[:32]}"
+                      f"{'  [' + reason + ']' if not cached else ''}")
+            manifest.setdefault("beats", {})[wav_rel] = {
+                "tts_text": tts_text, "speaker": beat["speaker"]}
+
+            log_beats.append({
+                "wav": wav_rel,
+                "text": base_text,
+                "reading": beat.get("reading"),
+                "tts_text": tts_text,
+                "replacements": repls,
+            })
+            for r in repls:
+                term_counts[r["from"]] = term_counts.get(r["from"], 0) + 1
+            total_repls += len(repls)
             beat_meta.append({
                 "scene_id": sid, "section": scene["section"], "speaker": beat["speaker"],
-                "wav": wav_rel, "duration": dur, "text": beat["text"],
+                "wav": wav_rel, "duration": dur, "text": base_text,
             })
 
     timing = build_timing(script, beat_meta, tail_sec=args.tail,
@@ -257,9 +360,32 @@ def main() -> int:
     timing_path = out_dir / "timing.json"
     timing_path.write_text(json.dumps(timing, ensure_ascii=False, indent=2) + "\n")
 
+    # 発音置換ログ
+    log_path = out_dir / "pronunciation_log.json"
+    log = {
+        "episode": episode,
+        "generated_at": datetime.datetime.now().isoformat(timespec="seconds"),
+        "dict_path": str(DEFAULT_DICT_PATH if not args.dict else args.dict),
+        "dict_entries": len(pdict) if pdict else 0,
+        "dict_sha256": dict_sha,
+        "summary": {
+            "beats": len(log_beats),
+            "beats_with_replacements": sum(1 for b in log_beats if b["replacements"]),
+            "total_replacements": total_repls,
+            "terms": dict(sorted(term_counts.items(), key=lambda kv: -kv[1])),
+        },
+        "beats": log_beats,
+    }
+    log_path.write_text(json.dumps(log, ensure_ascii=False, indent=2) + "\n")
+    manifest["dict_sha256"] = dict_sha
+    manifest["generated_at"] = log["generated_at"]
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
+
     est = total_chars / 7.5
     print(f"\n[narration] ビート数={len(beat_meta)}  総文字数={total_chars}  "
           f"推定秒数≈{est:.1f}s (7.5字/s)  実音声総尺={timing['total_duration']:.3f}s")
+    print(f"[narration] 辞書置換: {total_repls}件 "
+          f"({log['summary']['beats_with_replacements']}ビート) → {log_path}")
     print(f"[narration] timing.json → {timing_path}")
     return 0
 
