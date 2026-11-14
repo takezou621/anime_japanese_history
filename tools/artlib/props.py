@@ -1069,3 +1069,244 @@ def grid_blocks(cv, y0, y1, cols=8, seed=0, block=(214, 202, 172),
         rect(g, c_i * col_w - 3, y0, c_i * col_w + 3, y1, fill=road)
     for r_i in range(1, rows):
         rect(g, 0, y0 + r_i * row_h - 3, cv.w, y0 + r_i * row_h + 3, fill=road)
+
+
+# ================================================================ ep03 (平安)
+
+
+def shinden(g, x, y, s, roof=(118, 132, 100), roof_d=(92, 106, 80), wall=P.PLASTER,
+            frame=P.VERMILION_WOOD, seed=0):
+    """寝殿造 (寝殿+対屋+渡殿+池+橋). s=1 で幅約 920px. y=池の手前."""
+    # 池 (手前)
+    g.ellipse((x - 470 * s, y - 66 * s, x + 470 * s, y + 66 * s), fill=(120, 168, 196),
+              outline=(88, 132, 162), owidth=3 * s)
+    rnd = random.Random(seed)
+    for _ in range(10):
+        lx = x + rnd.uniform(-420, 420) * s
+        ly = y + rnd.uniform(-46, 46) * s
+        lr = rnd.uniform(10, 20) * s
+        g.ellipse((lx - lr, ly - lr * 0.55, lx + lr, ly + lr * 0.55), fill=(104, 152, 112))
+        g.poly([(lx - lr * 0.25, ly - lr * 0.1), (lx + lr * 0.25, ly - lr * 0.1),
+                (lx, ly + lr * 0.28)], fill=(96, 144, 104))
+    for _ in range(6):
+        kx = x + rnd.uniform(-380, 380) * s
+        ky = y + rnd.uniform(-40, 40) * s
+        g.ellipse((kx - 8 * s, ky - 5 * s, kx + 8 * s, ky + 5 * s),
+                  fill=P.YAMABUKI, outline=shade(P.YAMABUKI, 0.7), owidth=1.6 * s)
+    # 蓮の花
+    for (fx, fy) in [(-330, 26), (310, -20), (390, 30)]:
+        px, py = x + fx * s, y + fy * s
+        for k in range(5):
+            a = -math.pi / 2 + (k - 2) * 0.5
+            g.ellipse((px + math.cos(a) * 9 * s - 5 * s, py + math.sin(a) * 9 * s - 5 * s,
+                       px + math.cos(a) * 9 * s + 5 * s, py + math.sin(a) * 9 * s + 5 * s),
+                      fill=(238, 176, 188))
+        g.circle(px, py, 4 * s, fill=P.YAMABUKI)
+    # 対屋 (左右の奥)
+    for sx in (-1, 1):
+        px = x + sx * 360 * s
+        by = y - 120 * s
+        rect(g, px - 70 * s, by - 84 * s, px + 70 * s, by, fill=wall,
+             outline=shade(wall, 0.8), owidth=2.2 * s)
+        for wx in (-40, 40):
+            rect(g, px + wx * s - 9 * s, by - 70 * s, px + wx * s + 9 * s, by - 12 * s,
+                 fill=shade(frame, 0.8))
+        curved_roof(g, px, by - 84 * s, 104 * s, 40 * s, 30 * s, roof, roof_d, s=s)
+        # 渡殿 (廊下)
+        cy_ = by - 40 * s
+        step = 1 if sx > 0 else -1
+        x0, x1 = (px - 70 * s, x + 190 * s) if sx > 0 else (px + 70 * s, x - 190 * s)
+        rect(g, min(x0, x1), cy_ - 26 * s, max(x0, x1), cy_ + 6 * s, fill=shade(wall, 0.94))
+        for wx in range(int(min(x0, x1)), int(max(x0, x1)), 60):
+            rect(g, wx, cy_ - 26 * s, wx + 8 * s, cy_ + 6 * s, fill=frame)
+        g.line([(min(x0, x1), cy_ - 28 * s), (max(x0, x1), cy_ - 28 * s)], roof_d, 8 * s)
+        g.line([(min(x0, x1), cy_ - 24 * s), (max(x0, x1), cy_ - 24 * s)], roof, 14 * s)
+    # 寝殿 (中央奥)
+    by = y - 150 * s
+    bh = 110 * s
+    bw = 210 * s
+    rect(g, x - bw, by - bh, x + bw, by, fill=wall, outline=shade(wall, 0.8), owidth=2.6 * s)
+    for px in range(-196, 197, 56):
+        rect(g, x + px * s, by - bh, x + px * s + 13 * s, by, fill=frame)
+    for px in (-130, 0, 130):
+        rect(g, x + px * s - 26 * s, by - bh + 16 * s, x + px * s + 26 * s, by - 12 * s,
+             fill=(120, 108, 96))
+    curved_roof(g, x, by - bh, 300 * s, 96 * s, 52 * s, roof, roof_d, lift=14 * s, s=s)
+    # 池に架かる反り橋
+    g.line(qbez((x - 30 * s, y + 40 * s), (x, y - 60 * s), (x + 30 * s, y + 40 * s), 14),
+           P.WOOD_D, 9 * s)
+    g.line(qbez((x - 30 * s, y + 40 * s), (x, y - 60 * s), (x + 30 * s, y + 40 * s), 14),
+           shade(P.WOOD, 1.1), 5 * s)
+
+
+def amida(g, x, y, s, gold=(226, 190, 118), gold_d=(178, 142, 82), seed=0):
+    """阿弥陀如来 (立像・来迎印・光背). s=1 で高さ約 480px. y=地面."""
+    hr = 46 * s
+    hy = y - 408 * s
+    # 光背 (放射)
+    g.circle(x, hy, 176 * s, fill=with_alpha(P.GOLD, 46))
+    g.circle(x, hy, 176 * s, outline=P.GOLD, owidth=6 * s)
+    g.circle(x, hy, 146 * s, outline=with_alpha(P.GOLD, 210), owidth=3 * s)
+    for k in range(16):
+        a = math.tau * k / 16
+        r0, r1 = 84 * s, 168 * s
+        g.line([(x + math.cos(a) * r0, hy + math.sin(a) * r0),
+                (x + math.cos(a) * r1, hy + math.sin(a) * r1)],
+               with_alpha(P.GOLD, 130), 3 * s)
+    rnd = random.Random(seed)
+    for _ in range(10):
+        a = rnd.uniform(0, math.tau)
+        d = rnd.uniform(120, 172) * s
+        g.circle(x + math.cos(a) * d, hy + math.sin(a) * d, 3.4 * s, fill=P.GOLD)
+    # 足下の蓮座 (二重)
+    g.ellipse((x - 96 * s, y - 30 * s, x + 96 * s, y + 8 * s), fill=shade(gold_d, 0.8))
+    g.ellipse((x - 88 * s, y - 48 * s, x + 88 * s, y - 6 * s), fill=gold_d,
+              outline=shade(gold_d, 0.7), owidth=2.4 * s)
+    for k in range(9):
+        px = x - 78 * s + k * 19.5 * s
+        g.ellipse((px - 9 * s, y - 44 * s, px + 9 * s, y - 12 * s), fill=gold,
+                  outline=shade(gold_d, 0.75), owidth=1.8 * s)
+    # 像身 (立ち姿の袈裟)
+    body = (qbez((x - 66 * s, y - 352 * s), (x - 88 * s, y - 250 * s), (x - 60 * s, y - 60 * s), 14)
+            + [(x + 60 * s, y - 60 * s)]
+            + qbez((x + 60 * s, y - 60 * s), (x + 88 * s, y - 250 * s), (x + 66 * s, y - 352 * s), 14))
+    g.poly(body + [(x + 46 * s, y - 380 * s), (x - 46 * s, y - 380 * s)],
+           fill=gold, outline=shade(gold_d, 0.72), owidth=2.6 * s)
+    # 衣のU字襞
+    for dx in (-44, -16, 16, 44):
+        g.arc((x + dx * s - 20 * s, y - 240 * s, x + dx * s + 20 * s, y - 170 * s),
+              30, 150, shade(gold_d, 0.78), 3 * s)
+    # 腕と来迎印 (右手を挙げ、左手を下げて指先で輪)
+    arm_l = qbez((x - 60 * s, y - 340 * s), (x - 130 * s, y - 290 * s), (x - 118 * s, y - 208 * s), 12)
+    arm_r = qbez((x + 60 * s, y - 340 * s), (x + 128 * s, y - 300 * s), (x + 122 * s, y - 248 * s), 12)
+    g.line(arm_l, shade(gold_d, 0.72), 20 * s)
+    g.line(arm_l, gold, 14 * s)
+    g.line(arm_r, shade(gold_d, 0.72), 20 * s)
+    g.line(arm_r, gold, 14 * s)
+    g.circle(x - 118 * s, y - 202 * s, 11 * s, fill=gold, outline=shade(gold_d, 0.72), owidth=2 * s)
+    g.circle(x + 122 * s, y - 242 * s, 11 * s, fill=gold, outline=shade(gold_d, 0.72), owidth=2 * s)
+    g.circle(x - 114 * s, y - 202 * s, 4.5 * s, fill=(255, 244, 214))
+    g.circle(x + 126 * s, y - 242 * s, 4.5 * s, fill=(255, 244, 214))
+    # 頭部
+    g.circle(x, hy, hr, fill=gold, outline=shade(gold_d, 0.72), owidth=2.6 * s)
+    g.circle(x, hy - hr + 5 * s, 10 * s, fill=gold, outline=shade(gold_d, 0.72), owidth=2 * s)
+    for k in range(7):
+        px = x - hr * 0.6 + k * hr * 0.2
+        g.circle(px, hy - hr * 0.55, 5.5 * s, fill=shade(gold_d, 0.86))
+    for sx in (-1, 1):
+        g.arc((x + sx * 8 * s - 11 * s, hy - 7 * s, x + sx * 8 * s + 11 * s, hy + 7 * s),
+              20, 160, shade(gold_d, 0.6), 3 * s)
+        g.ellipse((x + sx * hr * 0.92 - 6 * s, hy - 5 * s, x + sx * hr * 0.92 + 6 * s,
+                   hy + 26 * s), fill=gold, outline=shade(gold_d, 0.72), owidth=2 * s)
+    g.arc((x - 9 * s, hy + 20 * s, x + 9 * s, hy + 30 * s), 15, 165, shade(gold_d, 0.6), 3 * s)
+
+
+def emaki(g, x, y, s, paper=(240, 230, 206), seed=0):
+    """鳥獣戯画風の絵巻 (開いた巻物+獣の戯れ). (x,y)=中心."""
+    w, h = 430 * s, 220 * s
+    # 巻紙 (上下にゆるい波)
+    top = qbez((x - w / 2, y - h / 2), (x, y - h / 2 - 10 * s), (x + w / 2, y - h / 2), 12)
+    bot = qbez((x - w / 2, y + h / 2), (x, y + h / 2 + 10 * s), (x + w / 2, y + h / 2), 12)
+    g.poly(top + bot[::-1], fill=paper, outline=shade(paper, 0.85), owidth=2.4 * s)
+    # 詞書の罫 (右側)
+    for k in range(4):
+        yy = y - h * 0.28 + k * h * 0.17
+        g.line([(x + w * 0.18, yy), (x + w * 0.44, yy)], with_alpha((150, 140, 120), 160), 2 * s)
+    # 軸 (両端)
+    for sx in (-1, 1):
+        rx = x + sx * (w / 2 + 12 * s)
+        g.rrect((rx - 9 * s, y - h / 2 - 14 * s, rx + 9 * s, y + h / 2 + 14 * s), 8 * s,
+                fill=(90, 66, 52), outline=(64, 46, 36), owidth=2.2 * s)
+        g.circle(rx, y - h / 2 - 14 * s, 13 * s, fill=(120, 92, 70), outline=(70, 52, 40), owidth=2 * s)
+        g.circle(rx, y + h / 2 + 14 * s, 13 * s, fill=(120, 92, 70), outline=(70, 52, 40), owidth=2 * s)
+    ink = (72, 62, 56)
+    # 兎 (後ろ足で立って枝を持つ)
+    rx, ry = x - w * 0.28, y + h * 0.16
+    g.ellipse((rx - 20 * s, ry - 46 * s, rx + 20 * s, ry + 6 * s), fill=paper,
+              outline=ink, owidth=2.6 * s)
+    g.circle(rx, ry - 62 * s, 15 * s, fill=paper, outline=ink, owidth=2.6 * s)
+    for sx_ in (-1, 1):
+        g.ellipse((rx + sx_ * 6 * s - 4 * s, ry - 92 * s, rx + sx_ * 6 * s + 4 * s, ry - 66 * s),
+                  fill=paper, outline=ink, owidth=2.2 * s)
+    g.ellipse((rx + 16 * s, ry - 84 * s, rx + 58 * s, ry - 68 * s), fill=(214, 178, 120),
+              outline=ink, owidth=2.2 * s)
+    g.line([(rx - 12 * s, ry + 4 * s), (rx - 16 * s, ry + 24 * s)], ink, 3.4 * s)
+    g.line([(rx + 12 * s, ry + 4 * s), (rx + 16 * s, ry + 24 * s)], ink, 3.4 * s)
+    g.circle(rx - 5 * s, ry - 64 * s, 2.2 * s, fill=ink)
+    g.line([(rx + 8 * s, ry - 58 * s), (rx + 14 * s, ry - 56 * s)], ink, 2 * s)
+    g.poly([(rx - 22 * s, ry - 40 * s), (rx - 44 * s, ry - 30 * s), (rx - 40 * s, ry - 52 * s)],
+           fill=paper, outline=ink, owidth=2.2 * s)
+    # 蝦蟇 (大口を開けて笑う)
+    fx, fy = x + w * 0.04, y + h * 0.2
+    g.ellipse((fx - 30 * s, fy - 34 * s, fx + 30 * s, fy + 12 * s), fill=paper,
+              outline=ink, owidth=2.6 * s)
+    g.pieslice((fx - 22 * s, fy - 14 * s, fx + 22 * s, fy + 20 * s), 0, 180,
+               fill=(226, 190, 190), outline=ink, owidth=2.2 * s)
+    for sx_ in (-1, 1):
+        g.circle(fx + sx_ * 14 * s, fy - 20 * s, 3 * s, fill=ink)
+    g.ellipse((fx - 8 * s, fy - 30 * s, fx + 8 * s, fy - 24 * s), fill=ink)
+    for sx_ in (-1, 1):
+        g.line([(fx + sx_ * 18 * s, fy + 10 * s), (fx + sx_ * 24 * s, fy + 22 * s)], ink, 3.2 * s)
+    g.poly([(fx - 30 * s, fy - 16 * s), (fx - 52 * s, fy - 4 * s), (fx - 46 * s, fy - 24 * s)],
+           fill=paper, outline=ink, owidth=2.2 * s)
+    g.poly([(fx + 30 * s, fy - 16 * s), (fx + 52 * s, fy - 4 * s), (fx + 46 * s, fy - 24 * s)],
+           fill=paper, outline=ink, owidth=2.2 * s)
+    # 猿 (杖を持って走る)
+    mx, my = x + w * 0.30, y + h * 0.22
+    g.ellipse((mx - 22 * s, my - 34 * s, mx + 22 * s, my + 4 * s), fill=paper,
+              outline=ink, owidth=2.6 * s)
+    g.circle(mx, my - 44 * s, 13 * s, fill=paper, outline=ink, owidth=2.6 * s)
+    g.circle(mx - 6 * s, my - 48 * s, 2.2 * s, fill=ink)
+    g.arc((mx - 2 * s, my - 44 * s, mx + 10 * s, my - 38 * s), 200, 340, ink, 2 * s)
+    g.line([(mx - 20 * s, my), (mx - 30 * s, my + 18 * s)], ink, 3.4 * s)
+    g.line([(mx + 20 * s, my), (mx + 28 * s, my + 18 * s)], ink, 3.4 * s)
+    g.line([(mx + 34 * s, my - 60 * s), (mx + 46 * s, my + 14 * s)], (120, 96, 72), 3.6 * s)
+    g.line([(mx + 20 * s, my - 26 * s), (mx + 35 * s, my - 48 * s)], ink, 3 * s)
+    # 草の筆致
+    for (gx0, gy0) in [(-w * 0.38, h * 0.3), (w * 0.16, h * 0.34), (-w * 0.05, -h * 0.32),
+                       (w * 0.38, -h * 0.3)]:
+        bx, by = x + gx0, y + gy0
+        g.line([(bx, by), (bx - 6 * s, by - 14 * s)], (150, 140, 118), 2.4 * s)
+        g.line([(bx, by), (bx + 6 * s, by - 12 * s)], (150, 140, 118), 2.4 * s)
+
+
+def ox_cart(g, x, y, s, roof=(126, 136, 104), body=(198, 158, 110), curtain=(226, 208, 168),
+            ox=(122, 92, 62), seed=0):
+    """牛車 (ぎっしゃ). s=1 で全長約 460px. y=地面. 進行方向は左."""
+    # 車体
+    bx, by = x + 60 * s, y - 96 * s
+    g.rrect((bx - 96 * s, by - 96 * s, bx + 96 * s, by), 10 * s, fill=body,
+            outline=shade(body, 0.74), owidth=2.6 * s)
+    # 御簾 (簾の襞)
+    for k in range(7):
+        px = bx - 88 * s + k * 26 * s
+        rect(g, px, by - 88 * s, px + 13 * s, by - 10 * s, fill=curtain,
+               outline=shade(curtain, 0.8), owidth=1.4 * s)
+    # 屋根 (檜皮葺の低いドーム)
+    pts = (qbez((bx - 112 * s, by - 96 * s), (bx - 70 * s, by - 168 * s), (bx, by - 176 * s), 12)
+           + qbez((bx, by - 176 * s), (bx + 70 * s, by - 168 * s), (bx + 112 * s, by - 96 * s), 12))
+    g.poly(pts, fill=roof, outline=shade(roof, 0.8), owidth=2.4 * s)
+    # 車輪 (大きな放射輻)
+    for wx in (bx - 52 * s, bx + 52 * s):
+        g.circle(wx, y - 42 * s, 42 * s, fill=(150, 118, 82), outline=(96, 72, 50), owidth=4 * s)
+        g.circle(wx, y - 42 * s, 12 * s, fill=(110, 84, 58))
+        for k in range(10):
+            a = math.tau * k / 10
+            g.line([(wx + math.cos(a) * 12 * s, y - 42 * s + math.sin(a) * 12 * s),
+                    (wx + math.cos(a) * 38 * s, y - 42 * s + math.sin(a) * 38 * s)],
+                   (96, 72, 50), 3.2 * s)
+    # 牛 2頭 (手前)
+    for i, ox_x in enumerate((x - 110 * s, x - 10 * s)):
+        o_y = y + (4 if i else 0) * s
+        g.ellipse((ox_x - 44 * s, o_y - 74 * s, ox_x + 44 * s, o_y - 18 * s), fill=ox,
+                  outline=shade(ox, 0.72), owidth=2.4 * s)
+        g.circle(ox_x - 46 * s, o_y - 84 * s, 17 * s, fill=ox, outline=shade(ox, 0.72), owidth=2.4 * s)
+        for hx in (-1, 1):
+            g.line([(ox_x - 46 * s + hx * 8 * s, o_y - 96 * s),
+                    (ox_x - 46 * s + hx * 16 * s, o_y - 112 * s)], (228, 224, 212), 4 * s)
+        g.circle(ox_x - 52 * s, o_y - 88 * s, 2.4 * s, fill=(40, 30, 26))
+        for lx in (-30, -12, 16, 34):
+            g.line([(ox_x + lx * s, o_y - 20 * s), (ox_x + lx * s, o_y)], shade(ox, 0.6), 6 * s)
+        g.ellipse((ox_x - 4 * s, o_y - 78 * s, ox_x + 6 * s, o_y - 60 * s), fill=(228, 222, 208))
+    # 樅 (つなぎ棒)
+    g.line([(bx - 96 * s, by - 40 * s), (x - 116 * s, y - 66 * s)], P.WOOD_D, 6 * s)

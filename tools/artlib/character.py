@@ -5,6 +5,7 @@
 from __future__ import annotations
 
 import math
+import random
 
 from PIL import Image, ImageDraw
 
@@ -522,5 +523,140 @@ def build_manabu(ss=2):
     sg = cv.g()
     lock(sg, (286, 344), (270, 416), (282, 466), (298, 416), (308, 350), HAIR, INK, 2.4)
     lock(sg, (614, 344), (630, 416), (618, 466), (602, 416), (592, 350), HAIR, INK, 2.4)
+
+    return cv
+
+
+def build_nyobo(ss=2):
+    """十二単の女房 — 多重襲の袿と裳、桧扇を持つ平安貴族の侍女."""
+    cv = Canvas(CW, CH, ss=ss)
+    g = cv.g()
+    HAIR = (32, 30, 38)
+    HD = shade(HAIR, 0.78)
+    OW = 3.0
+    LAYERS = [(176, 132, 196), (216, 118, 132), (240, 170, 180), (196, 220, 180),
+              (244, 240, 232)]  # 表→内
+
+    # ---------- 背後の黒髪 (腰まで) ----------
+    lay = sublayer(cv)
+    lg = lay.g()
+    pts = (qbez((262, 430), (238, 250), (300, 160), 14)
+           + qbez((300, 160), (370, 120), (450, 120), 10)
+           + qbez((450, 120), (530, 120), (600, 160), 10)
+           + qbez((600, 160), (662, 250), (638, 430), 14)
+           + qbez((638, 430), (660, 640), (614, 860), 14)
+           + qbez((614, 860), (596, 916), (566, 920), 8))
+    bottom = []
+    for k in range(4):
+        x0 = 566 - k * 84
+        bottom += qbez((x0, 920), (x0 - 28, 958), (x0 - 48, 930), 6)
+        bottom += qbez((x0 - 48, 930), (x0 - 62, 908), (x0 - 84, 930), 6)
+    pts += bottom + qbez((248, 930), (232, 640), (262, 430), 14)
+    lg.poly(pts, fill=HAIR, outline=INK, owidth=3)
+    hair_shine(lay, with_alpha((94, 88, 108), 120), (300, 110, 620, 330), 20)
+    lay.flush()
+    cv.img.alpha_composite(lay.img)
+
+    # ---------- 裳 (裾が広がる袴) ----------
+    skirt = (qbez((356, 866), (322, 1000), (300, 1160), 12)
+             + qbez((300, 1160), (292, 1230), (306, 1272), 8)
+             + qbez((306, 1272), (450, 1296), (594, 1272), 8)
+             + qbez((594, 1272), (608, 1230), (600, 1160), 8)
+             + qbez((600, 1160), (578, 1000), (544, 866), 12))
+    g.poly(skirt, fill=(88, 72, 122), outline=INK, owidth=3)
+    # 裳の褶 (縦の fold)
+    for dx in (-110, -56, 0, 56, 110):
+        g.line(qbez((450 + dx * 0.42, 880), (450 + dx * 0.9, 1060),
+                    (450 + dx, 1258), 12), shade((88, 72, 122), 0.78), 8)
+    # 裾の段と雲文
+    g.line(qbez((306, 1210), (450, 1240), (594, 1210), 12), (214, 196, 150), 16)
+    rnd = random.Random(5)
+    for _ in range(9):
+        px = rnd.uniform(320, 580)
+        py = rnd.uniform(1200, 1252)
+        g.arc((px - 16, py - 8, px + 16, py + 8), 180, 360, (164, 148, 118), 4)
+
+    # ---------- 表着 (胴体+広袖) ----------
+    robe = (qbez((352, 568), (338, 700), (352, 868), 14)
+            + qbez((352, 868), (450, 896), (548, 868), 8)
+            + qbez((548, 868), (562, 700), (548, 568), 14)
+            + qbez((548, 568), (500, 524), (450, 524), 10)
+            + qbez((450, 524), (400, 524), (352, 568), 10))
+    g.poly(robe, fill=(186, 74, 94), outline=INK, owidth=3)
+    # 左右の広袖 (袂)
+    for sx in (-1, 1):
+        mx = 450 + sx * 160
+        sleeve = (qbez((mx - 52 * sx, 616), (mx - 96 * sx, 640), (mx - 100 * sx, 760), 10)
+                  + qbez((mx - 100 * sx, 760), (mx - 96 * sx, 850), (mx - 40 * sx, 862), 10)
+                  + qbez((mx - 40 * sx, 862), (mx - 8 * sx, 850), (mx - 10 * sx, 760), 8)
+                  + qbez((mx - 10 * sx, 760), (mx - 8 * sx, 650), (mx - 52 * sx, 616), 8))
+        g.poly(sleeve, fill=shade((186, 74, 94), 0.94), outline=INK, owidth=2.6)
+        # 袂口の重ね襲
+        for li, c in enumerate(LAYERS):
+            g.line([(mx - 84 * sx + 8 * sx, 800 + li * 13),
+                    (mx - 24 * sx, 806 + li * 13)], c, 9)
+    # 胴の陰
+    g.poly(qbez((516, 570), (534, 700), (514, 862), 12)
+           + qbez((514, 862), (500, 858), (500, 574), 8),
+           fill=with_alpha((140, 52, 70), 110))
+
+    # ---------- 重ね襲の襟 (胸の多重V) ----------
+    for li, c in enumerate(LAYERS):
+        yv = 592 + li * 13
+        g.line([(414 - li * 3, 540), (450, yv), (486 + li * 3, 540)], c, 15)
+    g.line([(414 - 12, 540), (450, 632), (486 + 12, 540)], INK, 2.6)
+
+    # ---------- 顔 ----------
+    cv.flush()
+    face_and_neck(cv, 450, 330, 146)
+    anime_eye(cv, 388, 350, 78, 50, iris=(96, 66, 50), flip=1, lash_w=5.5, calm=True)
+    anime_eye(cv, 512, 350, 78, 50, iris=(96, 66, 50), flip=-1, lash_w=5.5, calm=True)
+    bg_ = cv.g()
+    brow(bg_, 388, 300, 62, angle=-2, color=(60, 48, 54), flip=1, width=5)
+    brow(bg_, 512, 300, 62, angle=-2, color=(60, 48, 54), flip=-1, width=5)
+    nose(bg_, 452, 396)
+    mouth(bg_, 452, 434, 34, "smile")
+    blush(bg_, 356, 402, 24, alpha=60)
+    blush(bg_, 544, 402, 24, alpha=60)
+
+    # ---------- 前髪 (丸眉・姫カット) ----------
+    lay = sublayer(cv)
+    fg = lay.g()
+    A, B = (272, 320), (628, 318)
+    top = (qbez(A, (248, 190), (320, 150), 12)
+           + qbez((320, 150), (390, 118), (450, 118), 8)
+           + qbez((450, 118), (510, 118), (580, 150), 8)
+           + qbez((580, 150), (652, 190), B, 12))
+    seq = [B, (576, 336), (536, 292), (480, 340), (432, 290), (380, 340),
+           (330, 296), (296, 324), A]
+    fg.poly(top + zigzag(seq, dip=12)[1:], fill=HAIR, outline=INK, owidth=3)
+    hair_shine(lay, with_alpha((94, 88, 108), 130), (300, 100, 600, 280), 18)
+    lay.flush()
+    cv.flush()
+    cv.img.alpha_composite(lay.img)
+    sg = cv.g()
+    lock(sg, (276, 330), (258, 500), (272, 700), (292, 560), (306, 336), HAIR, INK, 2.6)
+    lock(sg, (624, 330), (642, 500), (628, 700), (608, 560), (594, 336), HAIR, INK, 2.6)
+    # 髪飾り (小さな金の簪)
+    sg.line([(560, 214), (596, 196)], (216, 178, 110), 6)
+    sg.circle(598, 194, 7, fill=(230, 196, 130), outline=(160, 128, 82), owidth=2)
+
+    # ---------- 桧扇 (右手) ----------
+    fan_cx, fan_cy = 620, 812
+    for k in range(7):
+        t = (k - 3) / 3.0
+        ang = math.radians(-90 + t * 52)
+        ex = fan_cx + math.cos(ang) * 128
+        ey = fan_cy + math.sin(ang) * 128
+        sg.line([(fan_cx, fan_cy), (ex, ey)], shade((216, 186, 140), 0.8), 10)
+        sg.line([(fan_cx, fan_cy), (ex, ey)], (222, 192, 146), 6.5)
+        if k in (2, 4):
+            sg.circle((fan_cx + ex) / 2 + t * 14, (fan_cy + ey) / 2 - 6, 4,
+                      fill=(86, 108, 150))
+            sg.circle((fan_cx + ex) / 2 - t * 12, (fan_cy + ey) / 2 + 4, 3,
+                      fill=(196, 96, 96))
+    sg.arc((fan_cx - 92, fan_cy - 148, fan_cx + 92, fan_cy + 40), 235, 305,
+           shade((216, 186, 140), 0.7), 5)
+    sg.circle(fan_cx, fan_cy, 9, fill=P.SHU, outline=shade(P.SHU, 0.72), owidth=2)
 
     return cv
