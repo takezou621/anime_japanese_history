@@ -49,3 +49,4 @@ content/episodes/epNN/script.json   (writer: 脚本)
 
 - 音声: [VOICEVOX](https://voicevox.hiroshiba.jp/) (四国めたん / ずんだもん)
 - イラスト・脚本・編集: 本プロジェクトのAIエージェントチーム
+- [docs/05_CUBIC_REVIEW.md](docs/05_CUBIC_REVIEW.md) — cubic AI自動レビューの運用ガイド
