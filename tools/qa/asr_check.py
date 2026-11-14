@@ -18,6 +18,9 @@
 - 一致率: difflib.SequenceMatcher の ratio (0.0-1.0) を正規化文字列で算出
   - 全体一致率: 台本全ビート連結 vs ASR 全セグメント連結 (時間順)
   - ビート別: ASR セグメントを timing.json のビート区間に重なり時間比例で分割割当
+- 比較元テキスト: script.json の TTS 入力 (beat.reading があればそれ, 無ければ text)。
+  音声は reading 指定の読みで発話されるため、漢字からの pykakasi 既定読みと
+  乖離する固有名詞 (中大兄皇子=なかのおおえ 等) でも台本側を正しい読みで比較する
 - 閾値運用 (2026-11-15 lead 承認):
   - 全体一致率ゲート: 既定 0.70 (回帰検知用途 — 音声の入れ替わり/欠落/誤レンダリング検出)。
     未達時は終了コード 1
@@ -100,19 +103,26 @@ class Normalizer:
 
 # ---------------------------------------------------------------- 入力読込
 def load_beats(root: Path, episode: str) -> list[dict]:
-    """script.json (正規テキスト) と timing.json (グローバル時刻) を突合してビート列を作る。"""
+    """script.json と timing.json を突合してビート列を作る。
+
+    比較元テキストは TTS 入力 (beat.reading があればそれ, 無ければ text)。
+    表示用に元の text も保持する。音声は reading 指定の読みで発話されるため、
+    漢字表記からの pykakasi 既定読みと乖離する固有名詞 (中大兄皇子=なかのおおえ
+    等) では text 直接比較だと正規化文字列が不一致になる。
+    """
     script = json.loads((root / f"content/episodes/{episode}/script.json").read_text())
     timing = json.loads((root / f"audio/{episode}/timing.json").read_text())
-    sb = [(sc["id"], bi, b["text"]) for sc in script["scenes"] for bi, b in enumerate(sc["beats"])]
+    sb = [(sc["id"], bi, b.get("reading") or b["text"], b["text"])
+          for sc in script["scenes"] for bi, b in enumerate(sc["beats"])]
     tb = [(sc["id"], bi, b) for sc in timing["scenes"] for bi, b in enumerate(sc["beats"])]
     if len(sb) != len(tb):
         raise SystemExit(f"{episode}: script beats={len(sb)} と timing beats={len(tb)} が不一致です")
     beats = []
-    for (sid_s, bi_s, text), (sid_t, bi_t, t) in zip(sb, tb):
+    for (sid_s, bi_s, tts_text, display), (sid_t, bi_t, t) in zip(sb, tb):
         if (sid_s, bi_s) != (sid_t, bi_t):
             raise SystemExit(f"{episode}: ビートID不整合 script={sid_s}_b{bi_s:02d} timing={sid_t}_b{bi_t:02d}")
         beats.append({"beat_id": f"{sid_s}_b{bi_t:02d}", "start": float(t["start"]),
-                      "duration": float(t["duration"]), "text": text})
+                      "duration": float(t["duration"]), "tts_text": tts_text, "text": display})
     return beats
 
 
@@ -217,7 +227,7 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
     print(f"[asr] {episode}: {audio_dur:.1f}s 音声を {elapsed:.1f}s で転写 (segments={len(segments)})")
 
     assigned = assign_segments(beats, segments, audio_dur)
-    script_all = norm.text("".join(b["text"] for b in beats))
+    script_all = norm.text("".join(b["tts_text"] for b in beats))
     asr_all = norm.text("".join(assigned))
     overall = ratio(script_all, asr_all)
 
@@ -226,7 +236,7 @@ def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normal
     beat_rows = []
     review_list = []
     for b, asr_text in zip(beats, assigned):
-        exp_n, asr_n = norm.text(b["text"]), norm.text(asr_text)
+        exp_n, asr_n = norm.text(b["tts_text"]), norm.text(asr_text)
         r = ratio(exp_n, asr_n)
         if r is not None and r < args.review_threshold:
             review_list.append(b["beat_id"])
