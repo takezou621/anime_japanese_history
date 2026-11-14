@@ -67,6 +67,10 @@ ffmpeg 9 は `-filter_complex_script`/`-vsync` が削除済み → `-/filter_com
 - `visual.assets[].pos` / `overlay_text[].pos` は **レイヤー中心** の 1920x1080 座標
 - レイヤー出現時刻: アセット名がキャラidを含む (例 `char_sensei`→`sensei`)
   → その話者のシーン内最初のbeat開始。それ以外はシーン最初のbeat。同時刻は 0.25s ずつズらす
+- キャラ配置はコンテンツbbox基準のbox-fit: scale = min(内容幅/500, 内容高/780)
+  (上限1.5)、コンテンツ下端を CHAR_FEET_Y=930 に固定。スプライトのレイアウト
+  (全身/バスト/ポートレート) に依存せず自然に立ち、字幕帯 (top≈924) との
+  重なりも回避される
 - `overlay_text` はその beat の開始時刻に登場 (同beat複数は 0.15s ずつズらす)
 - 字幕帯は最終パスで overlay → 字幕 (libass) が常に最前面。exam_banner 等
   下端寄せスタイルの既定位置は帯 (top≈0.86h) の上 y=0.70h (lead v2 フィードバック)
