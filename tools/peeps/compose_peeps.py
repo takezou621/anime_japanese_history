@@ -86,13 +86,24 @@ def render(out: Path, char: dict) -> None:
     if result.returncode != 0 or not raw_path.exists():
         sys.exit(f"resvg failed (rc={result.returncode}): {result.stderr}")
     raw = Image.open(raw_path).convert("RGBA")
+    # ポートレートcrop: 頭+肩まで (タイトな話者枠). 胴体・腕は切る
+    bbox = raw.getbbox()
+    if bbox:
+        bx0, by0, bx1, by1 = bbox
+        ch = by1 - by0
+        cw = bx1 - bx0
+        # 上端から内容高の 64% まで (頭+肩), 幅は内容幅の 80% を中央クロップ
+        keep_h = int(ch * 0.64)
+        keep_w = int(cw * 0.80)
+        cx0 = bx0 + (cw - keep_w) // 2
+        raw = raw.crop((cx0, by0, cx0 + keep_w, by0 + keep_h))
     # 縦合わせ: ピープ原図 850:1200 → キャンバス 900:1400 は縦長比率差が僅小のため
     # 幅基準で拡大し、下端をキャンバス下端に合わせて中央配置
     scale = ss_w / raw.width
-    scaled = raw.resize((ss_w, int(raw.height * scale)), Image.LANCZOS)
+    scaled = raw.resize((ss_w, min(int(raw.height * scale), ss_h)), Image.LANCZOS)
     canvas = Image.new("RGBA", (ss_w, ss_h), (0, 0, 0, 0))
     y = ss_h - scaled.height  # 下端一致 (バスト下端=キャンバス下端)
-    canvas.alpha_composite(scaled, (0, y))
+    canvas.alpha_composite(scaled, ((ss_w - scaled.width) // 2, y))
     canvas = canvas.resize((W, H), Image.LANCZOS)
     canvas.save(out, "PNG")
     print(f"saved: {out}")
