@@ -59,6 +59,12 @@ XFADE_DUR = 0.5          # section crossfade (STYLE_GUIDE / DESIGN)
 SUPER_W, SUPER_H = 5760, 3240   # 3x supersampled zoompan input
 CONTIG_TOL = 0.02
 
+# character sprite placement (artist recommendation via lead, 2026-11-14):
+# 立ち絵 scale 0.55-0.62, feet on the ground line -> scale 0.58, feet ~y1020
+# (clears scene-floor art; the subtitle band is drawn over it in final pass)
+CHAR_SCALE = 0.58
+CHAR_FEET_Y = 1020.0
+
 FFMPEG_CANDIDATES = [
     "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg",
     "/usr/local/opt/ffmpeg-full/bin/ffmpeg",
@@ -253,10 +259,16 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
             raise SystemExit(f"overlay asset missing: {path}")
         iw, ih = _image_size(str(path))
         scale = float(a.get("scale", 1.0) or 1.0)
-        tw, th = max(2, int(round(iw * scale)) // 2 * 2), \
-            max(2, int(round(ih * scale)) // 2 * 2)
         pos = a.get("pos") or [MAIN_W / 2, MAIN_H / 2]
         px, py = float(pos[0]), float(pos[1])
+        if name.lower().startswith("char_"):
+            # artist placement rule: fixed scale, feet on the ground line,
+            # horizontal position from the script
+            scale = CHAR_SCALE
+            tw0, th0 = int(round(iw * scale)), int(round(ih * scale))
+            py = CHAR_FEET_Y - th0 / 2.0
+        tw, th = max(2, int(round(iw * scale)) // 2 * 2), \
+            max(2, int(round(ih * scale)) // 2 * 2)
         t0 = appear_for(name)
         m = layer_motion(a.get("motion"), t0, DEFAULT_MOTION_DUR,
                          px, py, tw, th)
