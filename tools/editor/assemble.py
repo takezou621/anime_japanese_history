@@ -66,12 +66,26 @@ SUPER_W, SUPER_H = 5760, 3240   # 3x supersampled zoompan input
 CONTIG_TOL = 0.02
 
 # character sprite placement (artist recommendation + lead验收 2026-11-14):
-# scale 0.55-0.62 recommended, feet on the ground line, and the whole body
-# must sit ABOVE the subtitle band (band top ≈ 924-948px) -> feet at y=930,
-# any char scale above 0.68 is capped so the head stays in frame.
-CHAR_SCALE = 0.58          # default when the script leaves scale at 1.0
+# feet/ground line at CHAR_FEET_Y (above the subtitle band, top ≈ 924-948px).
+# Open Peeps bust-up sprites (2026-11-14 swap) draw the bust in the TOP of the
+# 900x1400 canvas (~500px transparent tail), so anchoring is CONTENT-aware:
+# scale caps at CHAR_SCALE_MAX and targets CHAR_CONTENT_W for the visible
+# bust width, and the alpha bbox bottom — not the canvas bottom — sits on
+# CHAR_FEET_Y. Works for any sprite layout.
+CHAR_CONTENT_W = 500.0     # visible content width target (px on canvas)
 CHAR_SCALE_MAX = 0.68      # hard cap for char_* layers
 CHAR_FEET_Y = 930.0
+
+_bbox_cache: dict[str, tuple] = {}
+
+
+def _alpha_bbox(path: str) -> tuple:
+    """Alpha-channel bounding box (l, t, r, b) of a PNG, cached."""
+    if path not in _bbox_cache:
+        from PIL import Image
+        with Image.open(path) as im:
+            _bbox_cache[path] = im.split()[3].getbbox() or (0, 0, im.width, im.height)
+    return _bbox_cache[path]
 
 FFMPEG_CANDIDATES = [
     "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg",
@@ -249,11 +263,12 @@ def _beat_times(scene: dict, ts: dict, scene_end: float,
 
 
 def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
-                 tmp_dir: Path) -> None:
+                 tmp_dir: Path, char_ids: list[str] | None = None) -> None:
     """Populate span.layers (characters/props first, overlay_text on top)."""
     beats = _beat_times(scene, ts, span.end, span.seg_start)
     vis = scene.get("visual", {}) or {}
     assets = vis.get("assets", []) or []
+    char_ids = [c.lower() for c in (char_ids or [])]
 
     # decide appear time per asset: match character id in asset name,
     # otherwise the first beat; stagger collisions by 0.25s
@@ -268,6 +283,10 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
         used[round(t0, 3)] = k + 1
         return t0 + 0.25 * k
 
+    def _is_char(name: str) -> bool:
+        low = name.lower()
+        return low.startswith("char_") or any(cid in low for cid in char_ids)
+
     for a in assets:
         name = a.get("name", "")
         path = assets_dir / "overlay" / f"{name}.png"
@@ -277,17 +296,25 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
         scale = float(a.get("scale", 1.0) or 1.0)
         pos = a.get("pos") or [MAIN_W / 2, MAIN_H / 2]
         px, py = float(pos[0]), float(pos[1])
-        if name.lower().startswith("char_"):
-            # artist/lead placement rule: feet on the ground line above the
-            # subtitle band; scale 1.0 (schema default) -> CHAR_SCALE, and
-            # any explicit setting is capped at CHAR_SCALE_MAX
+        if _is_char(name):
+            # content-aware placement: the visible bust width targets
+            # CHAR_CONTENT_W (capped), and the content bbox bottom sits on
+            # CHAR_FEET_Y regardless of how the composer lays out the canvas.
+            # layer_motion treats px/py as the SPRITE center, so convert:
+            #   content center x = (sprite left) + content_cx*scale
+            #   content bottom y = (sprite top)  + bb*scale
             raw = float(a.get("scale", 1.0) or 1.0)
-            scale = CHAR_SCALE if raw == 1.0 else raw
+            bl, bt, br, bb = _alpha_bbox(str(path))
+            cw = max(br - bl, 1)
+            scale = (CHAR_CONTENT_W / cw if raw == 1.0
+                     else min(raw, CHAR_SCALE_MAX))
             scale = min(scale, CHAR_SCALE_MAX)
-            tw0, th0 = int(round(iw * scale)), int(round(ih * scale))
-            py = CHAR_FEET_Y - th0 / 2.0
+            content_cx = (bl + br) / 2.0
         tw, th = max(2, int(round(iw * scale)) // 2 * 2), \
             max(2, int(round(ih * scale)) // 2 * 2)
+        if _is_char(name):
+            px = px + tw / 2.0 - content_cx * scale   # content center at px
+            py = CHAR_FEET_Y + th / 2.0 - bb * scale  # content bottom on line
         t0 = appear_for(name)
         m = layer_motion(a.get("motion"), t0, DEFAULT_MOTION_DUR,
                          px, py, tw, th)
@@ -556,13 +583,14 @@ def main() -> int:
     spans, scenes_used = build_plan(script, timing, assets_dir, text_dir,
                                     only or None, ep=ep, ai_manifest=ai_manifest)
 
+    char_ids = [c.get("id", "") for c in script.get("characters", [])]
     for sp in spans:
         scene = next(s for s in scenes_used if s["id"] == sp.sid)
         ts = next(s for s in timing["scenes"] if s["id"] == sp.sid)
         if a.dry_plan:
             sp.layers = []
             continue
-        scene_layers(sp, scene, ts, assets_dir, text_dir)
+        scene_layers(sp, scene, ts, assets_dir, text_dir, char_ids)
 
     total = spans[-1].end - spans[0].start
     print("\n[plan]")
