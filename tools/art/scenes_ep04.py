@@ -216,7 +216,7 @@ def bg_kamakura_oath(cv):
          owidth=3)
     g.poly([(800, 470), (1120, 470), (1080, 400), (840, 400)], fill=(150, 116, 84),
            outline=(118, 92, 66), owidth=3)
-    g.rect(g, 930, 540, 990, 640, fill=(72, 58, 50))
+    rect(g, 930, 540, 990, 640, fill=(72, 58, 50))
     # 灯籠
     for lx in (760, 1160):
         g.rrect((lx - 14, 600, lx + 14, 660), 6, fill=(126, 120, 112),
@@ -272,12 +272,12 @@ def bg_kamakura_lawbook(cv):
     for wx in (1280, 1640):
         rect(g, wx, 120, wx + 220, 600, fill=(206, 196, 176), outline=(150, 138, 116), owidth=6)
         rect(g, wx + 14, 134, wx + 206, 586, fill=(214, 220, 214))
-        g.rect(g, wx + 14, 134, wx + 206, 340, fill=(198, 210, 202))
+        rect(g, wx + 14, 134, wx + 206, 340, fill=(198, 210, 202))
         g.poly(blob_pts(wx + 70, 210, 52, 30, seed=int(wx), wobble=0.16), fill=(156, 190, 156))
         for k in range(1, 6):
             g.line([(wx + 14, 134 + k * 75), (wx + 206, 134 + k * 75)],
                    with_alpha((150, 138, 116), 170), 3)
-        g.rect(g, wx + 100, 134, wx + 118, 586, fill=(206, 196, 176))
+        rect(g, wx + 100, 134, wx + 118, 586, fill=(206, 196, 176))
     # 掛軸の代わりに板札 (法令の板)
     for k, px in enumerate((620, 760)):
         rect(g, px, 150, px + 90, 560, fill=(202, 178, 138), outline=(160, 138, 104),
@@ -418,7 +418,7 @@ def bg_kamakura_zen(cv):
     g.ellipse((-100, 540, W + 100, 660), fill=with_alpha((226, 232, 232), 110))
     # 禅寺
     from artlib.props import zen_temple
-    zen_temple(g, 960, 900, 1.0, seed=2)
+    zen_temple(g, 960, 960, 1.28, seed=2)
     # 樹
     tree(cv, 160, 1020, 1.35, kind="pine", leaf=(52, 100, 82), seed=3)
     tree(cv, 1770, 1010, 1.25, kind="pine", leaf=(52, 100, 82), seed=4)

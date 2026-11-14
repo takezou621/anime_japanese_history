@@ -1,0 +1,27 @@
+{
+  "ep04_ui_assets": [
+    "era_heishi.png",
+    "era_kamakura.png",
+    "era_shokyu.png",
+    "era_mongol.png",
+    "exam_banner.png",
+    "quiz_banner_1.png",
+    "quiz_banner_2.png",
+    "quiz_banner_3.png",
+    "keyword_heishi.png",
+    "keyword_genpei.png",
+    "keyword_kamakura.png",
+    "keyword_shugo.png",
+    "keyword_shokyu.png",
+    "keyword_seisei.png",
+    "keyword_mongol.png",
+    "keyword_tokuso.png",
+    "keyword_jodo.png",
+    "keyword_zen.png",
+    "year_1185.png",
+    "year_1192.png",
+    "year_1221.png",
+    "year_1232.png",
+    "title_main.png"
+  ]
+}
