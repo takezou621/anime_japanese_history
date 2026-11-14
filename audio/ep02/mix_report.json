@@ -1,0 +1,33 @@
+{
+  "episode": "ep02",
+  "target_i": -14.0,
+  "duck_db": -18.0,
+  "quiet_db": -8.0,
+  "narration_beats": 100,
+  "loudnorm_mode": "2-pass linear",
+  "measured": {
+    "input_i": "-23.63",
+    "input_tp": "-5.54",
+    "input_lra": "3.50",
+    "input_thresh": "-34.30",
+    "output_i": "-23.95",
+    "output_tp": "-5.81",
+    "output_lra": "3.30",
+    "output_thresh": "-34.62",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.05"
+  },
+  "output_loudness": {
+    "input_i": "-14.42",
+    "input_tp": "-1.55",
+    "input_lra": "3.10",
+    "input_thresh": "-25.06",
+    "output_i": "-23.97",
+    "output_tp": "-10.77",
+    "output_lra": "3.00",
+    "output_thresh": "-34.61",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.03"
+  },
+  "mix": "audio/ep02/mix.wav"
+}
