@@ -9,3 +9,7 @@ __pycache__/
 *.pyc
 .DS_Store
 na.wav
+# AI 生成 (tools/aigen): 台帳と draft は再生成可能なので対象外
+tools/aigen/state/
+assets/ep*/ai_drafts/
+video/*_ai/

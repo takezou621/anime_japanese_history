@@ -33,6 +33,14 @@
 - [ ] 字幕焼き込み・モーション・クロスフェード確認
 - [ ] QC json 出力 (長さ/ラウドネス/黒フレーム)
 
+### lead (AI生成 tools/aigen, 任意 — docs/06_AI_GENERATION.md)
+- [ ] `models --remote` で実在モデルID確認 → config.json 修正
+- [ ] `storyboard --plan` で費用確定 → `--yes` 付きで実行 (予算ガード内)
+- [ ] draft 選定は ai_drafts/storyboard.html の目視で行う (動画ガチャ防止の本体)
+- [ ] final は当たり1枚だけ `--tier final --prompt-file` (同一プロンプト)
+- [ ] Veo は採用画像の image-to-video のみ。`$2` 超は `--yes` 必須
+- [ ] 月末に `budget` で台帳と実請求を突き合わせ → pricing_usd を補正
+
 ## 最終受け入れ (lead)
 1. video/ep01_FINAL.mp4 を再生確認 (長さ・音ズレ・文字かぶり・見切れ)
 2. QC json 合格 + サムネ生成 + youtube/ep01.yaml メタデータ

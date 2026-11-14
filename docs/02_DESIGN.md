@@ -113,13 +113,17 @@ content/
 tools/
   artlib/        イラストライブラリ (artist)
   art/generate_assets.py   シーンレンダラー (artist)
+  aigen/         AI生成CLI (lead) — draft→final→採用→Veo i2v, 月$10予算ガード
+                 詳細は docs/06_AI_GENERATION.md
   audio/         TTS/BGM/ミックス (audio)
   editor/        アセンブリ/QC (editor)
   thumbnail.py   サムネ生成 (lead)
   youtube/       メタデータ生成・アップロード (lead)
 assets/epNN/     シーンPNG・レイヤー (artist 出力, git対象は軽量な再生成スクリプト優先)
+  epNN/ai_drafts/ AI draft 出力 (git対象外, storyboard.html で選定)
 audio/epNN/      narration/bgm/mix
 video/           最終MP4 (大きいので .gitignore, QC json はコミット)
+  epNN_ai/       Veo i2v ヒーローショット (git対象外)
 scripts/         開発用ユーティリティ
 ```
 
@@ -127,7 +131,7 @@ scripts/         開発用ユーティリティ
 
 | エージェント | スコープ | 担当Issue |
 |---|---|---|
-| lead | docs/, scripts/, youtube/, 全体統合・QC | #1 #7 #8 |
+| lead | docs/, scripts/, youtube/, tools/aigen/, 全体統合・QC | #1 #7 #8 |
 | writer | content/** | #2 |
 | artist | tools/artlib/, tools/art/, assets/** | #3 #5 |
 | audio | tools/audio/, audio/** | #4 |
@@ -135,6 +139,8 @@ scripts/         開発用ユーティリティ
 
 **依存**: #2 脚本 → (#4 音声, #5 アセット) → #6 編集 → #8 最終QC。
 ライブラリ実装 (#3/#4/#6) は script.json なしで先行開発可 (スキーマは本書が契約)。
+AI 生成 (tools/aigen) は script.json を読むだけなので既存パイプラインに干渉しない。
+採用した AI 背景は `assets/epNN/scenes/bg_*.png` に置かれ、editor は無変更で使える。
 
 ## 6. 環境 (実測済み)
 
