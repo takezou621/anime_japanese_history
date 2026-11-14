@@ -1,14 +1,14 @@
 {
   "episode": "ep02",
   "profile": "full",
-  "generated_at": "2026-11-14T14:11:43+00:00",
+  "generated_at": "2026-11-14T17:51:39+00:00",
   "video": "video/ep02_FINAL.mp4",
-  "duration_sec": 592.171,
+  "duration_sec": 582.4,
   "checks": {
     "duration": {
       "pass": true,
-      "value": 592.171,
-      "expected": 592.171,
+      "value": 582.4,
+      "expected": 582.375,
       "range": [
         300.0,
         600.0
@@ -37,7 +37,7 @@
         "codec": "aac",
         "sample_rate": "48000",
         "channels": 2,
-        "bit_rate": "193556"
+        "bit_rate": "193446"
       }
     },
     "loudness": {
@@ -45,7 +45,7 @@
       "warn": false,
       "value": {
         "input_i": -14.44,
-        "input_tp": -1.42,
+        "input_tp": -1.43,
         "input_lra": "3.10",
         "target_i": -14.0,
         "tolerance": 1.5,
@@ -91,11 +91,11 @@
       "time_base": "1/15360",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 9095680,
-      "duration": "592.166667",
-      "bit_rate": "831253",
+      "duration_ts": 8945664,
+      "duration": "582.400000",
+      "bit_rate": "954118",
       "bits_per_raw_sample": "8",
-      "nb_frames": "17765",
+      "nb_frames": "17472",
       "extradata_size": 48,
       "disposition": {
         "default": 1,
@@ -145,10 +145,10 @@
       "time_base": "1/48000",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 28424208,
-      "duration": "592.171000",
-      "bit_rate": "193556",
-      "nb_frames": "27760",
+      "duration_ts": 27955200,
+      "duration": "582.400000",
+      "bit_rate": "193446",
+      "nb_frames": "27301",
       "extradata_size": 5,
       "disposition": {
         "default": 1,
@@ -178,9 +178,9 @@
     }
   ],
   "format": {
-    "duration": "592.171000",
-    "size": "76510235",
-    "bit_rate": "1033623"
+    "duration": "582.400000",
+    "size": "84184153",
+    "bit_rate": "1156375"
   },
   "pass": true
 }
