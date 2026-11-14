@@ -77,3 +77,13 @@
 1. video/epNN_FINAL.mp4 を再生確認 (長さ・音ズレ・文字かぶり・見切れ)
 2. 3角度検証レポートの確認 + QC json 合格
 3. サムネ生成 + youtube/epNN.yaml メタデータ + GitHub Issues close
+
+### 公開前チェックリスト (全項目必須 — 2026-11-15 ユーザー指示)
+- [ ] **考証ゲート**: qa-content が全 beats・exam_points・quiz の史実正確性を検証し P1 ゼロ
+  (年代・人名・用語の誤記 — 例: 墾田永年私財法, 弥生時代開始年代)
+- [ ] **発音ゲート**: qa-audio が VOICEVOX 実読み (audio_query kana) を検証し
+  固有名詞誤読ゼロ (pronunciation_dict + script reading の両方を突合)
+- [ ] **視覚ゲート**: qa-visual がサンプルフレーム10枚以上で構図・文字かぶり・見切れゼロ
+- [ ] サムネイル文字12文字以内 + キャラ視線が見出し側
+- [ ] タイトルに話数番号+検索語 (時代名/日本史/中学受験) 含む
+- [ ] 概要欄タイムスタンプが timing.json 実測と一致
