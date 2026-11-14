@@ -1,0 +1,894 @@
+{
+  "episode": "ep09",
+  "series": "日本史はじめて物語",
+  "title": "明治維新と文明開化",
+  "youtube": {
+    "description": "中学受験・高校受験対策アニメ『アニメ日本史ラボ』第9話!\n武士の時代が終わり、新しい日本が動き出す明治維新。ヒスト先生とマナブの対話で楽しく学びます。\n戊辰戦争(1868-69年)・五箇条の御誓文・太政官制・廃藩置県(1871年)・四民平等・学制(1872年)・徴兵令・地租改正(1873年)・殖産興業(富岡製糸場)・文明開化(鹿鳴館)・板垣退助と民選議院設立建白書(1874年)・士族反乱への布石まで、テスト頻出をぎゅっと整理。クイズ3問つき!\n\n▼タイムスタンプ(目安)\n0:00 オープニング\n0:15 戊辰戦争(1868-69年)\n0:40 五箇条の御誓文と太政官制\n1:00 版籍奉還と廃藩置県(1871年)\n1:25 四民平等\n1:45 学制(1872年)\n2:05 徴兵令(1873年)\n2:25 地租改正(1873年)\n2:45 殖産興業と富岡製糸場\n3:10 文明開化と鹿鳴館\n3:35 板垣退助と民選議院設立建白書(1874年)\n3:55 士族の不満と二本の糸\n4:15 受験ポイントまとめ\n4:45 クイズ3問\n5:15 エンディング・次回予告\n\n※時間は目安です。シリーズ: 日本史はじめて物語(全10話)\n次回 第10話「二つの大戦と現代日本」もお楽しみに!\n\n音声: VOICEVOX(四国めたん・ずんだもん)/キャラクターデザインはオリジナル\n#日本史 #中学受験",
+    "tags": [
+      "日本史",
+      "中学受験",
+      "中学歴史",
+      "高校受験",
+      "明治維新",
+      "廃藩置県",
+      "学制",
+      "地租改正",
+      "殖産興業",
+      "文明開化",
+      "鹿鳴館",
+      "板垣退助",
+      "歴史アニメ",
+      "アニメ日本史ラボ",
+      "勉強動画"
+    ],
+    "thumbnail": { "headline": "明治維新!", "sub": "文明開化 受験必須" }
+  },
+  "characters": [
+    {
+      "id": "sensei",
+      "name": "ヒスト先生",
+      "voice_style": "四国めたん/ノーマル",
+      "speed_scale": 1.22,
+      "pitch": 0.0,
+      "subtitle_color": "#7ec8e3"
+    },
+    {
+      "id": "manabu",
+      "name": "マナブ",
+      "voice_style": "ずんだもん/ノーマル",
+      "speed_scale": 1.22,
+      "pitch": 0.0,
+      "subtitle_color": "#8be27e"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "section": "opening",
+      "duration_hint_sec": 17,
+      "visual": {
+        "background": "bg_school_lab",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "こんにちは!ヒスト先生です。",
+          "overlay_text": [ { "text": "アニメ日本史ラボ 第9話", "style": "title_main", "motion": "fade_up" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "第9話は、明治維新!武士の時代が終わり、新しい日本が動き出す、大改革の物語です!"
+        },
+        {
+          "speaker": "manabu",
+          "text": "マナブなのだ!文明開化って、なんだかキラキラな言葉なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、新しい日本の始まりは、改革と混乱の連続でした。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "明治の日本、見どころ満載なのだ!レッツゴー!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s02",
+      "section": "story",
+      "duration_hint_sec": 21,
+      "visual": {
+        "background": "bg_meiji_boshin",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "大政奉還の後、すぐ平和なのだ?",
+          "overlay_text": [ { "text": "1868年〜 戊辰戦争", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "いいえ、1868年の鳥羽伏見の戦いで、旧幕府軍と新政府軍が衝突します。ここから戊辰戦争が始まりました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1868年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "戊辰戦争", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "いいえ、1868ねんの、とばふしみの、たたかいで、きゅうばくふぐんと、しんせいふぐんが、しょうとつします。ここから、ぼしんせんそうが、はじまりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "戊辰って、辰の年の戦いなのだ…?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、ただ江戸は西郷と勝海舟の交渉で開城し、流血を避けました。1869年、箱館の戦いで終結します。",
+          "reading": "ええ、ただ、えどは、さいごうと、かつかいしゅの、こうしょうで、かいじょうし、りゅうけつを、さけました。1869ねん、はこだての、たたかいで、しゅうけつします。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "話し合いで江戸を救ったのだ!えらいのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s03",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_meiji_government",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "新しい政府は、なにを目指すのだ?",
+          "overlay_text": [ { "text": "1868年 新政府の方針", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1868年、五箇条の御誓文で方針を示します。「広く会議を興し」、みんなで話し合う国づくりの宣言です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "五箇条の御誓文", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "1868ねん、ごかじょうの、ごせいもんで、ほうしんを、しめします。「ひろく、かいぎを、おこし」、みんなで、はなしあう、くにづくりの、せんげんです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "広く会議を興す、話し合い大事なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "中心の体制は太政官制です。太政大臣を頂点に、役所が分かれて日本を動かします。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "太政官制", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ちゅうしんの、たいせいは、だじょうかんせいです。だじょうだいじんを、ちょうてんに、やくしょが、わかれて、にほんを、うごかします。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "新しい国のエンジンが、始動なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s04",
+      "section": "story",
+      "duration_hint_sec": 21,
+      "visual": {
+        "background": "bg_meiji_haipan",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "藩は、どうなったのだ?",
+          "overlay_text": [ { "text": "1871年 廃藩置県", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1869年に版籍奉還で土地と民を朝廷に返させ、1871年、廃藩置県で藩をやめて県を置きます。全国が、中央の一元管理になりました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1871年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "廃藩置県", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "1869ねんに、はんせきほうかんで、とちと、たみを、ちょうていに、かわせ、1871ねん、はいはんちけんで、はんを、やめて、けんを、おきます。ぜんこくが、ちゅうおうの、いちげんかんりに、なりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "藩のボスたちが、いなくなるのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、大名の力をなくして、力の集中した新しい国が生まれます。江戸幕府の仕組みは、ここで完全に終わりです。",
+          "reading": "ええ、だいみょうの、ちからを、なくして、ちからが、しゅうちゅうした、あたらしい、くにが、うまれます。えどばくふの、しくみは、ここで、かんぜんに、おわりです。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "府県の数も整理して、管理しやすい形にしました。",
+          "reading": "ふけんの、かずも、せいりして、かんりしやすい、かたちに、しました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "中央集権、完成なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s05",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_meiji_people",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "江戸の身分制度は、どうなったのだ?",
+          "overlay_text": [ { "text": "四民平等", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "身分の上下をやめて、四民平等です。華族・士族・平民に整理し、職業も自由に選べるようになりました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "四民平等", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "みぶんの、じょうげを、やめて、しみんびょうどうです。かぞく・しぞく・へいみんに、せいりし、しょくぎょうも、じゆうに、えらべるように、なりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "生まれで決めない、新しいルールなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、ただ武士には給与が減り、不満もたまりました。この不満が、後の士族反乱につながります。",
+          "reading": "ええ、ただ、ぶしには、きゅうよが、へり、ふまんも、たまりました。この、ふまんが、あとの、しぞくはんらんに、つながります。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ただ、能力で働ける社会の、第一歩でもありました。",
+          "reading": "ただ、のうりょくで、はたらける、しゃかいの、だいいっぽでも、ありました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "変わると、誰かがつらいのだ…"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s06",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_meiji_school",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "学校は、どうなったのだ?",
+          "overlay_text": [ { "text": "1872年 学制", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1872年の学制で、義務教育が始まります。身分に関係なく、子どもはみんな小学校へ通うルールです。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1872年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "学制", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "1872ねんの、がくせいで、ぎむきょういくが、はじまります。みぶんに、かんけいなく、こどもは、みんな、しょうがっこうへ、かよう、ルールです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "みんな、お勉強する義務なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、知識を持つ国民で国を強くする、大事な一歩でした。費用負担で不満もありましたが、教育は広がります。",
+          "reading": "ええ、ちしきを、もつ、こくみんで、くにを、つよくする、だいじな、いっぽでした。ひようふたんで、ふまんも、ありましたが、きょういくは、ひろがります。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "机とともに、近代がやってきた時代なんですよ。",
+          "reading": "つくえと、ともに、きんだいが、やってきた、じだいなんですよ。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "日本じゅう、学校なのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s07",
+      "section": "story",
+      "duration_hint_sec": 17,
+      "visual": {
+        "background": "bg_meiji_heishi",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "軍は、どうなったのだ?",
+          "overlay_text": [ { "text": "1873年 徴兵令", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1873年、徴兵令が出ます。身分に関係なく、満20歳の男子が兵役につく、国民皆兵の制度です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1873年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "徴兵令", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "1873ねん、ちょうへいれいが、でます。みぶんに、かんけいなく、まんはたちの、だんしが、へいえきに、つく、こくみんかいへいの、せいどです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "武士だけじゃない、みんなの軍なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、侍と刀に頼らない、新しい軍隊です。現代的な国の形が、そろっていきます。",
+          "reading": "ええ、さむらいと、かたなに、たよらない、あたらしい、ぐんたいです。げんだいてきな、くにの、かたちが、そろって、いきます。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "西洋の軍隊のしくみを、まねして作りました。",
+          "reading": "せいようの、ぐんたいの、しくみを、まねして、つくりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "国の形、どんどん新しくなるのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s08",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_meiji_nochi",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_l", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "税の仕組みも、変わるのだ?",
+          "overlay_text": [ { "text": "1873年 地租改正", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1873年の地租改正で、土地の価値の3%を、現金で納めるルールにします。米の値段に左右されない、安定した財源です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1873年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "地租改正", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "1873ねんの、ちそくかいせいで、とちの、かちの、さんぱーせんとを、げんきんで、おさめる、ルールに、します。こめの、ねだんに、さゆうされない、あんていした、ざいげんです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "現金で納税、近代的なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、ただ負担が重く、農民の一揆が各地で起きました。新しい制度は、痛みを伴うものでもありました。",
+          "reading": "ええ、ただ、ふたんが、おもく、のうみんの、いっきが、かくちで、おきました。あたらしい、せいどは、いたみを、ともなう、ものでも、ありました。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "大地主や農家の生活も、大きく変わっていきます。",
+          "reading": "おおじぬしや、のうかの、せいかつも、おおきく、かわって、いきます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "変革の影に、がまんなのだ…"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s09",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_meiji_tomioka",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "お金の仕組みは、どうするのだ?",
+          "overlay_text": [ { "text": "殖産興業", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "殖産興業です。政府が官営の工場を建てて、近代産業の手本を示しました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "殖産興業", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "しょくさんこうぎょうです。せいふが、かんえいの、こうじょうを、たてて、きんだいさんぎょうの、てほんを、しめしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "国が、お手本の工場を作るのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、1872年の富岡製糸場は、洋式の機械で糸を作る、有名なモデル工場です。その後、民間に払い下げられます。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "富岡製糸場 1872年", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ええ、1872ねんの、とみおかせいしじょうは、ようしきの、きかいで、いとを、つくる、ゆうめいな、モデルこうじょうです。そのあと、みんかんに、はらいさげられます。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "近代産業の種が、ここから日本じゅうに広がっていきます。",
+          "reading": "きんだいさんぎょうの、たねが、ここから、にほんじゅうに、ひろがって、いきます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "富岡製糸場、おぼえたのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s10",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_meiji_civilization",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "くらしは、どう変わったのだ?",
+          "overlay_text": [ { "text": "文明開化", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "文明開化です。洋服や洋食、ガス灯や鉄道、新聞や雑誌まで広がり、暮らしがぐっと変わりました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "文明開化", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ぶんめいかいかです。ようふくや、ようしょく、ガスとうや、てつどう、しんぶんや、ざっしまで、ひろがり、くらしが、ぐっと、かわりました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "鉄道と牛鍋、近代の定番なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、1883年に開いた鹿鳴館では、洋装の舞踏会が開かれました。西洋の社会に、日本を合わせようとしたんです。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "鹿鳴館 1883年", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ええ、1883ねんに、ひらいた、ろくめいかんでは、ようそうの、ぶとうかいが、ひらかれました。せいようの、しゃかいに、にほんを、あわせようとしたん、です。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "散切り頭と牛鍋、そして鹿鳴館のダンス…文明開化セットなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s11",
+      "section": "story",
+      "duration_hint_sec": 17,
+      "visual": {
+        "background": "bg_meiji_itagaki",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_r", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "政治は、どうなってたのだ?",
+          "overlay_text": [ { "text": "1874年 民選議院設立建白書", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1874年、板垣退助らが「民選議院設立建白書」を提出します。国民が選ぶ議会をつくって、と求める運動の始まりです。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "1874年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "民選議院設立建白書", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "1874ねん、いたがき、たいすくらが、「みんせんぎいんせつりつけんぱくしょ」を、ていしゅつします。こくみんが、えらぶ、ぎかいを、つくって、と、もとめる、うんどうの、はじまりです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "民の声を、政治にのせるのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、これはのちの自由民権運動につながります。次回のいちばんのテーマです。",
+          "reading": "ええ、これは、のちの、じゆうみんけんうんどうに、つながります。じっかいの、いちばんの、テーマです。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "不満を持つ武士と、議会を求める民。二つの流れに注目です。",
+          "reading": "ふまんを、もつ、ぶしと、ぎかいを、もとめる、たみ。ふたつの、ながれに、ちゅうもくです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "つづきが、楽しみなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s12",
+      "section": "story",
+      "duration_hint_sec": 16,
+      "visual": {
+        "background": "bg_meiji_seikanron",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_r", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "政府の中でも、もめ事があるのだ?",
+          "overlay_text": [ { "text": "1873年 征韓論争", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "1873年、西郷隆盛らが朝鮮を武力で開こうとする征韓論を主張します。帰国した岩倉らは国内を優先と、反対しました。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "征韓論争", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "1873ねん、さいごうたかもりらが、ちょうせんを、ぶりょくで、ひらこうとする、せいかんろんを、しゅちょうします。きこくした、いわくららは、こくないを、ゆうせんと、はんたいしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "政府が、われちゃうのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、西郷や板垣、後藤象二郎らが政府を去ります。この分裂が、士族の反乱と民権運動の、二つの流れを生みます。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "政府の分裂", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ええ、さいごうや、いたがき、ごとうしょうじろうらが、せいふを、さります。この、ぶんれつが、しぞくの、はんらんと、みんけんうんどうの、ふたつの、ながれを、うみます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "わかれ道が、二本に枝分かれなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s13",
+      "section": "story",
+      "duration_hint_sec": 16,
+      "visual": {
+        "background": "bg_meiji_dusk",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_l", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "武士のみなさんは、どうしたのだ?",
+          "overlay_text": [ { "text": "士族の不満", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "徴兵と廃藩で武士の役割がなくなり、給与も減って、不満がたまりました。士族反乱の芽、ここから伸びます。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "士族反乱への布石", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "ちょうへいと、はいはんで、ぶしの、やくわりが、なくなり、きゅうよも、へって、ふまんが、たまりました。しぞくはんらんの、め、ここから、のびます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "侍たち、つらいのだ…"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、そしてこの不満と民権の声が、次の時代の二本柱です。まずは、ポイントまとめへ!",
+          "reading": "ええ、そして、この、ふまんと、みんけんの、こえが、つぎの、じだいの、にほんばしらです。まずは、ポイント、まとめへ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "それでも日本は、前へ進み続けました。",
+          "reading": "それでも、にほんは、まえへ、すすみ、つづけました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "まとめ、お願いなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s14",
+      "section": "points",
+      "duration_hint_sec": 15,
+      "visual": {
+        "background": "bg_timeline",
+        "assets": [
+          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "ここから受験ポイントのまとめ!まずは、新政府の改革。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "新政府の改革", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "戊辰戦争1868年〜69年、五箇条の御誓文と太政官制、版籍奉還1869年、廃藩置県1871年、四民平等。中央集権の完成です!",
+          "reading": "ぼしんせんそう、1868ねんから、1869ねん。ごかじょうの、ごせいもんと、だじょうかんせい。はんせきほうかん、1869ねん、はいはんちけん、1871ねん、しみんびょうどう。ちゅうおうしゅうけんの、かんせいです!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "「1868・1869・1871」の流れで覚えましょう。",
+          "reading": "「1868・1869・1871」の、ながれで、おぼえましょう。"
+        }
+      ],
+      "exam_points": [
+        { "keyword": "戊辰戦争 1868-69年", "detail": "鳥羽伏見→江戸開城(西郷・勝海舟)→箱館で終結。" },
+        { "keyword": "五箇条の御誓文 1868年", "detail": "「広く会議を興し」国の方針を宣言。" },
+        { "keyword": "太政官制", "detail": "太政大臣を頂点とする新政府の中央官制。" },
+        { "keyword": "廃藩置県 1871年", "detail": "版籍奉還(1869)の後、藩を廃止して県を設置。" },
+        { "keyword": "四民平等", "detail": "華族・士族・平民に整理。士族の不満は後の反乱へ。" }
+      ]
+    },
+    {
+      "id": "s15",
+      "section": "points",
+      "duration_hint_sec": 15,
+      "visual": {
+        "background": "bg_timeline",
+        "assets": [
+          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "後半は、国民づくりと産業・文化です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "国民づくり", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "学制1872年、徴兵令1873年、地租改正1873年で国民の三本柱。殖産興業=富岡製糸場、文明開化=鹿鳴館、そして1874年板垣退助の建白書!",
+          "reading": "がくせい、1872ねん。ちょうへいれい、1873ねん、ちそくかいせい、1873ねんで、こくみんの、さんぼんばしら。しょくさんこうぎょう=とみおかせいしじょう、ぶんめいかいか=ろくめいかん、そして1874ねん、いたがき、たいすくの、けんぱくしょ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "「三本柱+産業+文化」で、明治の国づくり完璧です!",
+          "reading": "「さんぼんばしら+さんぎょう+ぶんか」で、めいじの、くにづくり、かんぺきです!"
+        }
+      ],
+      "exam_points": [
+        { "keyword": "学制 1872年", "detail": "義務教育の始まり。身分に関係なく小学校へ。" },
+        { "keyword": "徴兵令 1873年", "detail": "国民皆兵。満20歳の男子が兵役に。" },
+        { "keyword": "地租改正 1873年", "detail": "地価の3%を現金で納める。農民一揆も発生。" },
+        { "keyword": "殖産興業", "detail": "官営工場で近代産業の手本。富岡製糸場(1872)。" },
+        { "keyword": "文明開化と民権の芽", "detail": "鹿鳴館(1883)/板垣退助の民選議院設立建白書(1874)。" }
+      ]
+    },
+    {
+      "id": "s16",
+      "section": "quiz",
+      "duration_hint_sec": 13,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "それではクイズタイム!第一問!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "1871年、藩をやめて県を置いた改革は何でしょう?ア、廃藩置県。イ、版籍奉還。ウ、太閤検地。",
+          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "1871ねん、はんを、やめて、けんを、おいた、かいかくは、なんでしょう?ア、はいはんちけん。イ、はんせきほうかん。ウ、たいこうけんち。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "藩がなくなる…アなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!廃藩置県です。版籍奉還1869年と、流れで覚えましょう。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s17",
+      "section": "quiz",
+      "duration_hint_sec": 12,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "第二問!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "1872年、身分に関係なく子どもが学校へ通うことになった制度は何でしょう?ア、学制。イ、徴兵令。ウ、地租改正。",
+          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "1872ねん、みぶんに、かんけいなく、こどもが、がっこうへ、かようことに、なった、せいどは、なんでしょう?ア、がくせい。イ、ちょうへいれい。ウ、ちそくかいせい。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "みんなで学校へ…アなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!学制です。義務教育の始まり、1872年とセットでどうぞ。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s18",
+      "section": "quiz",
+      "duration_hint_sec": 13,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "ラスト問題!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "1874年、板垣退助らが提出した建白書は何でしょう?ア、民選議院設立建白書。イ、大政奉還の建白書。ウ、開国の建白書。",
+          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "1874ねん、いたがき、たいすくらが、ていしゅつした、けんぱくしょは、なんでしょう?ア、みんせんぎいんせつりつけんぱくしょ。イ、たいせいほうかんの、けんぱくしょ。ウ、かいこくの、けんぱくしょ。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "民の議会…アなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!民選議院設立建白書です。自由民権運動の、出発点になります。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s19",
+      "section": "ending",
+      "duration_hint_sec": 15,
+      "visual": {
+        "background": "bg_school_lab_evening",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "今日は明治の国づくり、大改革の数々を一気に見ました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "廃藩置県、学制、徴兵令、地租改正、富岡製糸場、鹿鳴館…明治パワー、すごいのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "次回ついに最終回の第10話!二つの大戦と現代日本、明治の力が世界へ広がります!",
+          "overlay_text": [ { "text": "次回 第10話 現代まで", "style": "keyword_card", "motion": "pop_in" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "ついにラストなのだ!チャンネル登録も、よろしくなのだ!"
+        }
+      ],
+      "exam_points": []
+    }
+  ],
+  "quiz": [
+    {
+      "q": "1871年、藩をやめて県を置いた改革は何でしょう?",
+      "choices": ["廃藩置県", "版籍奉還", "太閤検地"],
+      "answer": 0,
+      "explain": "廃藩置県(1871年)で藩を廃止し、中央集権が完成しました。"
+    },
+    {
+      "q": "1872年、身分に関係なく子どもが学校へ通うことになった制度は何でしょう?",
+      "choices": ["学制", "徴兵令", "地租改正"],
+      "answer": 0,
+      "explain": "学制(1872年)で義務教育が始まりました。"
+    },
+    {
+      "q": "1874年、板垣退助らが提出した建白書は何でしょう?",
+      "choices": ["民選議院設立建白書", "大政奉還の建白書", "開国の建白書"],
+      "answer": 0,
+      "explain": "民選議院設立建白書は、のちの自由民権運動の出発点です。"
+    }
+  ]
+}
