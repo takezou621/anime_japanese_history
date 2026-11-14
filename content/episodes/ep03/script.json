@@ -1,0 +1,873 @@
+{
+  "episode": "ep03",
+  "series": "日本史はじめて物語",
+  "title": "平安貴族はすごい!〜摂関政治と国風文化〜",
+  "youtube": {
+    "description": "中学受験・高校受験対策アニメ『アニメ日本史ラボ』第3話!\n794年の平安京遷都から、華やかな国風文化まで。日本が「日本らしく」なる時代を、ヒスト先生とマナブの対話で楽しく学びます。\n桓武天皇・坂上田村麻呂(征夷大将軍)・薬子の変・摂関政治(藤原氏/摂政・関白)・藤原道長・荘園のはじまり(743年)・寝殿造・女房・紀貫之(土佐日記)・清少納言(枕草子)・紫式部(源氏物語)・絵巻物・浄土思想(阿弥陀信仰)まで、テスト頻出をぎゅっと整理。クイズ3問つき!\n\n▼タイムスタンプ(目安)\n0:00 オープニング\n0:15 平安京遷都(794年)\n0:35 坂上田村麻呂と征夷大将軍(797年)\n1:00 薬子の変と蔵人所(810年)\n1:25 摂関政治のはじまり(摂政・関白)\n1:50 藤原道長と摂関政治の全盛\n2:10 遣唐使の停止(894年)\n2:25 平安貴族の暮らし(寝殿造・女房)\n2:50 荘園のはじまり(743年)\n3:15 国風文化(土佐日記・枕草子・源氏物語)\n3:45 絵巻物と国風文化\n4:05 浄土思想(阿弥陀信仰)\n4:25 受験ポイントまとめ\n4:55 クイズ3問\n5:25 エンディング・次回予告\n\n※時間は目安です。シリーズ: 日本史はじめて物語(全10話)\n次回 第4話「武士誕生!源平合戦と鎌倉幕府」もお楽しみに!\n\n音声: VOICEVOX(四国めたん・ずんだもん)/キャラクターデザインはオリジナル\n#日本史 #中学受験",
+    "tags": [
+      "日本史",
+      "中学受験",
+      "中学歴史",
+      "高校受験",
+      "平安時代",
+      "平安京",
+      "摂関政治",
+      "藤原道長",
+      "枕草子",
+      "源氏物語",
+      "国風文化",
+      "荘園",
+      "歴史アニメ",
+      "アニメ日本史ラボ",
+      "勉強動画"
+    ],
+    "thumbnail": { "headline": "平安貴族 すごい!", "sub": "摂関政治・国風文化 必須" }
+  },
+  "characters": [
+    {
+      "id": "sensei",
+      "name": "ヒスト先生",
+      "voice_style": "四国めたん/ノーマル",
+      "speed_scale": 1.18,
+      "pitch": 0.0,
+      "subtitle_color": "#7ec8e3"
+    },
+    {
+      "id": "manabu",
+      "name": "マナブ",
+      "voice_style": "ずんだもん/ノーマル",
+      "speed_scale": 1.22,
+      "pitch": 0.0,
+      "subtitle_color": "#8be27e"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "section": "opening",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_school_lab",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "こんにちは!ヒスト先生です。第3話は、平安。着物も文字も文化も、日本色豊かな華やかの時代ですよ。",
+          "overlay_text": [ { "text": "アニメ日本史ラボ 第3話", "style": "title_main", "motion": "fade_up" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "マナブなのだ!平安の貴族って、ほんとにキラキラだったのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、華やかさの裏に、政治の秘密も隠れています。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "秘密、気になるなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "都の引っ越しから始めて、じっくり見ていきましょう。",
+          "overlay_text": [ { "text": "第3話 平安のなぞ", "style": "keyword_card", "motion": "pop_in" } ]
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s02",
+      "section": "story",
+      "duration_hint_sec": 23,
+      "visual": {
+        "background": "bg_heian_capital",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "まずは、なにから始まったのだ?",
+          "overlay_text": [ { "text": "平安時代 794年〜", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "8世紀の終わり、桓武天皇は政治を立て直すため、都を移します。いったん長岡京へ、そして794年に平安京へ遷都しました。",
+          "overlay_text": [
+            { "text": "794年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "平安京遷都", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "8世紀のおわり、かんむてんのうは、政治を立てなおすため、都を移します。いったん、ながおかきょうへ、そして794年に、へいあんきょうへ、せんとしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "平安京…今の京都なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、ここから1000年以上、京都は日本の中心になります。「平安」の名には、穏やかな世の中への願いが込められています。",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "穏やかな世の中…いい名前なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ただ、都の外では、東北で蝦夷との戦いが続いていました。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s03",
+      "section": "story",
+      "duration_hint_sec": 24,
+      "visual": {
+        "background": "bg_heian_frontier",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "東北の戦いって、なんなのだ?",
+          "overlay_text": [ { "text": "797年 征夷大将軍", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "東北には、大和の国の支配を受けない蝦夷のひとたちがいました。朝廷は征夷大将軍を立てて、討伐に向かいます。",
+          "reading": "とうほくには、大和の国の、しはいを、うけない、えみしの、ひとたちがいました。ちょうていは、せいいたいしょうぐんを、たてて、とうばつに、むかいます。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "797年、坂上田村麻呂が征夷大将軍となり、胆沢城を築くなど、東北の平定に成功します。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "坂上田村麻呂", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "797年、さかのうえの、たむらまろが、せいいたいしょうぐんとなり、いざわじょうを、きずくなど、とうほくの、へいていに、せいこうします。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "強い将軍なのだ!かっこいいのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そうなんです。征夷大将軍という名は、後の時代、武士のリーダーの役職として復活しますよ。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "後の武士につながるのだ!?"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s04",
+      "section": "story",
+      "duration_hint_sec": 22,
+      "visual": {
+        "background": "bg_heian_palace",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "平安京は、平和なのだ?",
+          "overlay_text": [ { "text": "810年 薬子の変", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "実は、皇室の中でも権力争いがありました。嵯峨天皇のとき、平城上皇側の藤原薬子が政治を元に戻そうとして、退けられます。",
+          "reading": "じつは、こうしつの、なかでも、けんりょく、あらそいが、ありました。さがてんのうのとき、へいじょうじょうこう、がわの、ふじわらの、やくしが、政治を、もとに、もどそうとして、かけられます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "それが、あの薬子なのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そう、810年の薬子の変です。これをきっかけに、嵯峨天皇は天皇のそば仕えの役所、蔵人所を新設しました。",
+          "overlay_text": [
+            { "text": "810年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "薬子の変・蔵人所", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "そう、810年の、やくしのへんです。これを、きっかけに、さがてんのうは、てんのうの、そばつかえの、やくしょ、くろうどどころを、しんせつしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "蔵人所?かわいい名前なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "天皇のまちかどで機密を扱い、後に大きな力を持つようになりますよ。",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s05",
+      "section": "story",
+      "duration_hint_sec": 25,
+      "visual": {
+        "background": "bg_heian_court",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "つぎに強くなったのは、だれなのだ?",
+          "overlay_text": [ { "text": "藤原氏と摂関政治", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "藤原氏です。やり方は、自分の娘を天皇の后に入れること。生まれた子は藤原氏の孫になる、というわけです。",
+          "reading": "ふじわらしです。やりかたは、じぶんの、むすめを、てんのうの、こうに入れること。うまれた、こは、ふじわらしの、まごになる、というわけです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "おかあさんが藤原さんなら、天皇は藤原さんの孫なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そのとおり。そうして力を固めた藤原良房は、幼い清和天皇の代わりに政治を行う、摂政に就きます。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "摂政・関白", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "そのとおり。そうして、ちからを、かためた、ふじわらの、よしふさは、おさない、せいわてんのうの、かわりに、政治を、おこなう、せっしょうに、つきます。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "さらに甥の基経は、大人の天皇を支える関白に。この二つを藤原氏が独占した政治を、摂関政治と言います。",
+          "reading": "さらに、おいの、もとつねは、おとなの、てんのうを、ささえる、かんぱくに。この、ふたつを、ふじわらしが、どくせんした、政治を、せっかんせいじと、いいます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "「代わりに行く」と「そばで支える」なのだ!覚えたのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s06",
+      "section": "story",
+      "duration_hint_sec": 20,
+      "visual": {
+        "background": "bg_heian_ceremony",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_r", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "摂関政治が、いちばん盛り上がったのは?",
+          "overlay_text": [ { "text": "摂関政治の全盛", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "藤原道長のときです。三人の娘を三人の天皇に入内させ、政治を自由に動かしました。",
+          "reading": "ふじわらの、みちながの、ときです。さんにんの、むすめを、さんにんの、てんのうに、にゅうないさせ、政治を、じゆうに、うごかしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "「望むこと、なしとなし」って言ったのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、天下を取った気分の一言と伝わります。でも、天皇や武士の不満も、少しずつ溜まっていきました。",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "キラキラの裏は、ぐっすりの種なのだ…"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そのとおり。このひずみが、次の時代の扉を開けます。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s07",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_heian_ship",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "中国との交流は、その後どうなったのだ?",
+          "overlay_text": [ { "text": "894年 遣唐使の停止", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "894年、菅原道真の建言で遣唐使が停止されます。唐の乱れと、あらゆる物を学び尽くしたことが理由です。",
+          "reading": "894年、すがわらの、みちざねの、けんげんで、けんとうしが、ていしされます。とうの、みだれと、あらゆる、ものを、まなびつくした、ことが、りゆうです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "学び終わって、おしまいなのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そう、これを機に、日本らしい文化、国風文化が花開きます。文字も絵も物語も、日本色たっぷりにね。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "894年→国風文化", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "そう、これを、きに、日本らしい、ぶんか、こくふうぶんかが、はなひらきます。もじも、えも、ものがたりも、にっぽんしょく、たっぷりにね。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "国風文化、この後楽しみなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s08",
+      "section": "story",
+      "duration_hint_sec": 24,
+      "visual": {
+        "background": "bg_heian_mansion",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "平安貴族の家って、どんな感じなのだ?",
+          "overlay_text": [ { "text": "寝殿造と女房", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "寝殿造です。中央の寝殿を、対屋と回廊で囲み、南に池と庭を配した、風を通す開放的な家です。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "寝殿造", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "しんでんづくりです。ちゅうおうの、しんでんを、たいやと、かいろうで、かこみ、みなみに、いけと、にわを、くばした、かぜを、とおす、かいほうてきな、いえです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "池つきで贅沢なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "宮中に仕える女房たちは、女房装束、いわゆる十二単を着て、筆や和歌で社交しました。",
+          "reading": "きゅうちゅうに、つかえる、にょうぼうたちは、にょうぼうしょうぞく、いわゆる、じゅうにひとえを、きて、ふでや、わかで、しゃこうしました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "十二単!12枚着るのだ?重くないのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "名前のわりに、その枚数は流動的でした。公式は漢字で、日常の手紙はかなで。文字の使い分けも、貴族のたしなみなんですよ。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "漢字とかな、使いこなしなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s09",
+      "section": "story",
+      "duration_hint_sec": 23,
+      "visual": {
+        "background": "bg_heian_field",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_l", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "ぐっすりの種…土地の話なのだ?",
+          "overlay_text": [ { "text": "荘園のはじまり", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "743年、開墾した田んぼは永久に私有できる、という法律が出ます。無限の開墾ブームの始まりです。",
+          "overlay_text": [
+            { "text": "743年", "style": "year_number", "motion": "zoom_in" },
+            { "text": "荘園のはじまり", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "743年、かいこんした、たんぼは、えいきゅうに、しゆうできる、という、ほうりつが、でます。むげんの、かいこんブームの、はじまりです。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "すると力のある貴族や寺社が開墾地を集め、税を納めない私有地、荘園が広がっていきます。",
+          "reading": "すると、ちからの、ある、きぞくや、じしゃが、かいこんちを、あつめ、ぜいを、おさめない、しゆうち、しょうえんが、ひろがって、いきます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "国の税金を、すり抜ける土地なのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そのとおり。班田はどんどんゆがみ、公地公民のルールが崩れていきました。これが後の武士と戦の、長い物語の入り口です。",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "743年、ここから全部が動くのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s10",
+      "section": "story",
+      "duration_hint_sec": 25,
+      "visual": {
+        "background": "bg_heian_writing",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "ついに、国風文化なのだ!文字の話なのだ?",
+          "overlay_text": [ { "text": "国風文化 かなと文学", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ。漢字から生まれた、日本独自のかな文字が広がります。「古今和歌集」も、かなの和歌集として編さんされました。",
+          "reading": "ええ。かんじから、うまれた、日本どくじの、かなもじが、ひろがります。こきんわかしゅうも、かなの、わかしゅうとして、へんさんされました。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "紀貫之は、かなで書いた日記『土佐日記』。女性のふりをして書いた、かな日記のはじまりです。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "土佐日記", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "きの、つらゆきは、かなで、かいた、にっき、とさにっき。じょせいの、ふりを、して、かいた、かなにっきの、はじまりです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "男が女性のふり…ずるいのだ!?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "さらに清少納言の随筆『枕草子』、紫式部の物語『源氏物語』。源氏物語は世界最古の長編小説と呼ばれます。",
+          "overlay_text": [
+            { "text": "枕草子・源氏物語", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "さらに、きよしらの、しょうごんの、ずいひつ、まくらのそうし。むらさきしきぶの、ものがたり、げんじものがたり。げんじものがたりは、せかいさいこの、ちょうへんしょうせつと、よばれます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "枕草子と源氏物語、セットで覚えるのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s11",
+      "section": "story",
+      "duration_hint_sec": 18,
+      "visual": {
+        "background": "bg_heian_emaki",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_r", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "絵も、日本風になるのだ?",
+          "overlay_text": [ { "text": "絵巻物", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "ええ、横長の絵巻物が発達します。物語を絵と文字で進める、日本発の表現です。",
+          "reading": "ええ、よこながの、えまきものが、はったつします。ものがたりを、えと、もじで、すすめる、日本はつの、ひょうげんです。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "源氏物語絵巻や、鳥獣戯画は、今でも人気の名品ですよ。",
+          "reading": "げんじものがたりえまきや、ちょうじゅうぎがは、いまでも、にんきの、めいひんですよ。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "うさぎとカエルが相撲してる絵なのだ!?大好きなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "笑えますよね。文学と絵がそろって、国風文化は華やかの頂点でした。",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "平安、文化のスーパーゴールデンタイムなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s12",
+      "section": "story",
+      "duration_hint_sec": 20,
+      "visual": {
+        "background": "bg_heian_amida",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "でも、華やかだけじゃないのだ?",
+          "overlay_text": [ { "text": "浄土思想と乱世", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "そう、この時代も世の中は荒れ、人々の心は疲れていきます。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "そこで広まったのが浄土思想です。阿弥陀如来を信じて、死んだ後、来世の極楽浄土に生まれ変わりたい、という願いです。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "阿弥陀信仰・浄土思想", "style": "keyword_card", "motion": "pop_in" }
+          ],
+          "reading": "そこで、ひろまったのが、じょうどしそうです。あみだにょらいを、しんじて、しんだあと、らいせの、ごくらくじょうどに、うまれかわりたい、という、ねがいです。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "来世でリベンジなのだ…?"
+        },
+        {
+          "speaker": "sensei",
+          "text": "源信が『往生要集』を書き、空也のような遊行聖が念佛を広めて、人々の心を支えました。",
+          "reading": "げんしんが、おうじょうようしゅうを、かき、くうやのような、ゆぎょうひじりが、ねんぶつを、ひろめて、ひとびとの、こころを、ささえました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "心の支え、大切なのだ。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s13",
+      "section": "story",
+      "duration_hint_sec": 16,
+      "visual": {
+        "background": "bg_heian_dusk",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "pan_l", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "manabu",
+          "text": "世の中が荒れると、どうなるのだ?",
+          "overlay_text": [ { "text": "乱世と武士の芽", "style": "era_badge", "motion": "slide_in_left" } ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "荘園や国の争いを守るため、武力のプロ、武士の登場です。源氏や平氏の名は、ここで育ちます。",
+          "reading": "しょうえんや、くにの、あらそいを、まもるため、ぶりょくの、プロ、ぶしが、とうじょうです。げんじや、へいしの、なは、ここで、そだちます。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "ついに武士が来るのだ!?次の回、これは見逃せないのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "その前に、今日のポイントをきっちりまとめて、次回へ行きましょう!",
+          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "まとめ、お願いなのだ!"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s14",
+      "section": "points",
+      "duration_hint_sec": 15,
+      "visual": {
+        "background": "bg_timeline",
+        "assets": [
+          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "ここから受験ポイントのまとめ!まずは政治の流れ。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "平安 政治の流れ", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "794年平安京遷都、797年坂上田村麻呂が征夷大将軍、810年薬子の変で蔵人所。そして藤原氏の摂関政治、荘園のはじまりは743年。",
+          "reading": "794ねん、へいあんきょうせんと。797ねん、さかのうえの、たむらまろが、せいいたいしょうぐん。810ねん、やくしのへんで、くろうどどころ。そして、ふじわらしの、せっかんせいじ。しょうえんの、はじまりは、743ねん。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "摂政=幼い天皇の代わり、関白=大人の天皇の補佐。この区別も大事です。",
+          "reading": "せっしょう=おさない、てんのうの、かわり。かんぱく=おとなの、てんのうの、ほさい。この、くべつも、だいじです。"
+        }
+      ],
+      "exam_points": [
+        { "keyword": "平安京遷都 794年", "detail": "桓武天皇。長岡京→平安京(京都)。" },
+        { "keyword": "征夷大将軍", "detail": "797年、坂上田村麻呂が就任。東北の蝦夷を平定。" },
+        { "keyword": "薬子の変 810年", "detail": "嵯峨天皇が退け、蔵人所を新設。" },
+        { "keyword": "摂政・関白", "detail": "幼い天皇の代わり/成人天皇の補佐。藤原氏が独占。" },
+        { "keyword": "荘園のはじまり", "detail": "743年墾田永久私領の法→税を納めない私有地が広がる。" }
+      ]
+    },
+    {
+      "id": "s15",
+      "section": "points",
+      "duration_hint_sec": 15,
+      "visual": {
+        "background": "bg_timeline",
+        "assets": [
+          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "後半は、文化と心のまとめです。",
+          "overlay_text": [
+            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
+            { "text": "国風文化", "style": "keyword_card", "motion": "pop_in" }
+          ]
+        },
+        {
+          "speaker": "sensei",
+          "text": "国風文化=かなで土佐日記(紀貫之)・枕草子(清少納言)・源氏物語(紫式部)、絵巻物。浄土思想=阿弥陀如来への信仰と来世の願い。",
+          "reading": "こくふうぶんか=かなで、とさにっき(きのつらゆき)・まくらのそうし(きよしらのしょうごん)・げんじものがたり(むらさきしきぶ)、えまきもの。じょうどしそう=あみだにょらいへの、しんこうと、らいせの、ねがい。"
+        },
+        {
+          "speaker": "sensei",
+          "text": "「894遣唐使停止→国風文化」「乱世→浄土思想」。流れで覚えれば忘れません!",
+          "reading": "894ねん、けんとうしていし、で、こくふうぶんか。らんざ、で、じょうどしそう。ながれで、おぼえれば、わすれません!"
+        }
+      ],
+      "exam_points": [
+        { "keyword": "寝殿造・女房", "detail": "対屋・回廊・池の貴族の家。宮中に仕える女房が活躍。" },
+        { "keyword": "遣唐使の停止 894年", "detail": "菅原道真の建言。これを機に国風文化が開花。" },
+        { "keyword": "土佐日記・古今和歌集", "detail": "紀貫之。かな日記のはじまり。" },
+        { "keyword": "枕草子・源氏物語", "detail": "清少納言の随筆/紫式部の物語(世界最古級の長編小説)。" },
+        { "keyword": "浄土思想", "detail": "阿弥陀如来を信じ来世の極楽浄土を願う。源信『往生要集』・空也。" }
+      ]
+    },
+    {
+      "id": "s16",
+      "section": "quiz",
+      "duration_hint_sec": 14,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "それではクイズタイム!第一問!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "幼い天皇の代わりに政治を行う役を何という?ア、関白。イ、摂政。ウ、征夷大将軍。",
+          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "おさない、てんのうの、かわりに、政治を、おこなう、やくを、なんと、いう?ア、かんぱく。イ、せっしょう。ウ、せいいたいしょうぐん。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "こども天皇の代わり…イなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!摂政です。大人の天皇を支えるのは関白、とセットで整理しましょう。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s17",
+      "section": "quiz",
+      "duration_hint_sec": 13,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "第二問!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "清少納言が書いた、「をかし」の随筆は何でしょう?ア、源氏物語。イ、土佐日記。ウ、枕草子。",
+          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "きよしらの、しょうごんが、かいた、「をかし」の、ずいひつは、なんだろう?ア、げんじものがたり。イ、とさにっき。ウ、まくらのそうし。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "をかし、をかし…ウなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!枕草子です。源氏物語は紫式部、土佐日記は紀貫之、ペアで覚えましょう。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s18",
+      "section": "quiz",
+      "duration_hint_sec": 14,
+      "visual": {
+        "background": "bg_quiz_board",
+        "assets": [
+          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "ラスト問題!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "810年、藤原薬子が政治を元に戻そうとして失敗した事件は?ア、薬子の変。イ、応天門の変。ウ、保元の乱。",
+          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
+          "reading": "810ねん、ふじわらの、やくしが、政治を、もとに、もどそうとして、しっぱいした、じけんは?ア、やくしのへん。イ、おうてんもんのへん。ウ、ほうげんのらん。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "薬子さんはやっぱり…アなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "正解!薬子の変です。この直後に蔵人所が新設された、セットでどうぞ。"
+        }
+      ],
+      "exam_points": []
+    },
+    {
+      "id": "s19",
+      "section": "ending",
+      "duration_hint_sec": 17,
+      "visual": {
+        "background": "bg_school_lab_evening",
+        "assets": [
+          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
+          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+        ],
+        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+      },
+      "beats": [
+        {
+          "speaker": "sensei",
+          "text": "今日は平安京から国風文化まで、華やかで奥深い時代を見ました。"
+        },
+        {
+          "speaker": "manabu",
+          "text": "摂関政治、枕草子、源氏物語、浄土思想…貴族の世界、ぜんぶ覚えたのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "text": "さすがです。次回第4話は、ついに武士の登場。源平合戦と鎌倉幕府の話、お楽しみに!",
+          "overlay_text": [ { "text": "次回 第4話 武士", "style": "keyword_card", "motion": "pop_in" } ]
+        },
+        {
+          "speaker": "manabu",
+          "text": "つぎは刀なのだ!?チャンネル登録も、よろしくなのだ!"
+        }
+      ],
+      "exam_points": []
+    }
+  ],
+  "quiz": [
+    {
+      "q": "幼い天皇の代わりに政治を行う役を何というでしょう?",
+      "choices": ["関白", "摂政", "征夷大将軍"],
+      "answer": 1,
+      "explain": "幼い天皇の代わりに行うのが摂政、成人した天皇を支えるのが関白です。"
+    },
+    {
+      "q": "清少納言が書いた、「をかし」の随筆は何でしょう?",
+      "choices": ["源氏物語", "土佐日記", "枕草子"],
+      "answer": 2,
+      "explain": "枕草子は清少納言の随筆。源氏物語は紫式部、土佐日記は紀貫之の作品です。"
+    },
+    {
+      "q": "810年、藤原薬子が政治を元に戻そうとして失敗した事件は何でしょう?",
+      "choices": ["薬子の変", "応天門の変", "保元の乱"],
+      "answer": 0,
+      "explain": "810年の薬子の変の直後、嵯峨天皇が蔵人所を新設しました。"
+    }
+  ]
+}
