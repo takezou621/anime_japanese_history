@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://cubic.dev/schema/cubic-repository-config.schema.json
+
+version: 1
+
+reviews:
+  enabled: true
+  sensitivity: medium
+  incremental_commits: true # PRに追加pushされたコミットも自動レビュー
+  check_drafts: false # draft PRは自動レビューしない
+  resolve_threads_when_addressed: true # 指摘修正を検知したらスレッドを自動resolve
+  custom_instructions: |
+    このリポジトリは日本語の歴史解説YouTube動画の制作パイプラインです。
+    - レビューコメントは必ず日本語で書いてください。
+    - tools/ と youtube/ 配下のPythonスクリプトでは、秒/ミリ秒など単位の取り違え、
+      タイミング計算のoff-by-one、ゼロ除算、ffmpeg等の外部プロセス呼び出しの
+      エラーハンドリングとパスの取り扱いを重点的に確認してください。
+    - content/episodes/*/script.json、audio/*/timing.json、字幕(.ass)生成の間で
+      キー名・ID・時間の整合性が取れているかを確認してください。
+    - 音量正規化(LUFS)やエンコード設定など、メディア処理の定数変更は意図の説明を求めてください。
+  ignore:
+    files:
+      - "**/*.wav"
+      - "**/*.mp3"
+      - "**/*.m4a"
+      - "**/*.mp4"
+      - "**/*.mov"
+      - "**/*.png"
+      - "**/*.jpg"
+      - "**/*.jpeg"
+    pr_labels:
+      - skip-review
+    max_changed_lines: 5000
+
+pr_descriptions:
+  generate: true # PR作成時にcubicが概要(description)を自動生成
+
+issues:
+  fix_with_cubic_buttons: true # 指摘コメントに "Fix with cubic" ボタンを表示
+  pr_comment_fixes: true # コメントで修正を依頼可能に
+  coding_agent_provider: cubic
+  auto_fix: on_demand
