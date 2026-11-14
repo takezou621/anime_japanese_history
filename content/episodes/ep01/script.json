@@ -24,7 +24,8 @@
     "thumbnail": {
       "headline": "縄文×弥生×古墳",
       "sub": "受験必須!"
-    }
+    },
+    "title": "【第1話】日本人はいつからお米を食べてきた？縄文・弥生・古墳を5分で解説【中学受験日本史】"
   },
   "characters": [
     {
@@ -48,7 +49,7 @@
     {
       "id": "s01",
       "section": "opening",
-      "duration_hint_sec": 24,
+      "duration_hint_sec": 12,
       "visual": {
         "background": "bg_school_lab",
         "assets": [
@@ -78,8 +79,12 @@
       },
       "beats": [
         {
+          "speaker": "manabu",
+          "text": "ねえ先生、昔の人って本当にお米を食べてなかったの？"
+        },
+        {
           "speaker": "sensei",
-          "text": "こんにちは!ヒスト先生です。今日は日本の歴史のはじまりを、マナブと一緒にたどっていきますよ。",
+          "text": "実は、その「お米」こそが、日本の歴史を変えたんです!その理由は、本編で順番に見ていきましょう。",
           "overlay_text": [
             {
               "text": "アニメ日本史ラボ",
@@ -90,19 +95,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "マナブなのだ!日本の歴史って、いったいどこから始まるのだ?"
-        },
-        {
-          "speaker": "sensei",
-          "text": "いい質問です。実は教科書のいちばん最初は、なんと数万年前までさかのぼるんです。"
-        },
-        {
-          "speaker": "manabu",
-          "text": "ふぇ?そんな前から人がいたのだ!?"
-        },
-        {
-          "speaker": "sensei",
-          "text": "そうなんです。旧石器、縄文、弥生、古墳。四つの時代を、楽しく見ていきましょう!",
+          "text": "よし、縄文からスタートなのだ!",
           "overlay_text": [
             {
               "text": "第1話 日本史のはじまり",
@@ -481,7 +474,14 @@
         {
           "speaker": "sensei",
           "text": "弓矢で狩りをし、釣り針や銛で漁をして、森と海のめぐみを上手に食べていました。",
-          "reading": "弓矢で狩りをし、釣り針やもりで漁をして、森と海のめぐみを上手に食べていました。"
+          "reading": "弓矢で狩りをし、釣り針やもりで漁をして、森と海のめぐみを上手に食べていました。",
+          "overlay_text": [
+            {
+              "text": "狩猟と漁労",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -600,7 +600,14 @@
         },
         {
           "speaker": "sensei",
-          "text": "そのとおり。ここから日本は農業社会なんですよ。"
+          "text": "そのとおり。ここから日本は農業社会なんですよ。",
+          "overlay_text": [
+            {
+              "text": "農業社会",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -1184,23 +1191,28 @@
       "exam_points": [
         {
           "keyword": "打製石器",
-          "detail": "石を打ち欠けて作る。旧石器時代の道具。"
+          "detail": "石を打ち欠けて作る。旧石器時代の道具。",
+          "importance": "high"
         },
         {
           "keyword": "磨製石器",
-          "detail": "石を磨いて作る。縄文時代以降に登場。"
+          "detail": "石を磨いて作る。縄文時代以降に登場。",
+          "importance": "high"
         },
         {
           "keyword": "縄文土器",
-          "detail": "世界最古級。名前の由来は縄のもよう。"
+          "detail": "世界最古級。名前の由来は縄のもよう。",
+          "importance": "high"
         },
         {
           "keyword": "竪穴住居・環状集落",
-          "detail": "半分地下の家と、円形に並ぶ集落。"
+          "detail": "半分地下の家と、円形に並ぶ集落。",
+          "importance": "high"
         },
         {
           "keyword": "貝塚",
-          "detail": "貝がらの層が当時のくらしの手がかり。"
+          "detail": "貝がらの層が当時のくらしの手がかり。",
+          "importance": "normal"
         }
       ]
     },
@@ -1264,35 +1276,43 @@
       "exam_points": [
         {
           "keyword": "水稲農業",
-          "detail": "暖かく湿った平原・低地で開始。"
+          "detail": "暖かく湿った平原・低地で開始。",
+          "importance": "high"
         },
         {
           "keyword": "高床倉庫",
-          "detail": "お米を雨やネズミから守る倉庫。"
+          "detail": "お米を雨やネズミから守る倉庫。",
+          "importance": "high"
         },
         {
           "keyword": "環濠集落",
-          "detail": "戦争のはじまりとセットで覚える。"
+          "detail": "戦争のはじまりとセットで覚える。",
+          "importance": "high"
         },
         {
           "keyword": "銅鐸・銅剣",
-          "detail": "銅鐸は祭り、銅剣は武器。"
+          "detail": "銅鐸は祭り、銅剣は武器。",
+          "importance": "high"
         },
         {
           "keyword": "卑弥呼・239年",
-          "detail": "邪馬台国の女王が魏に遣使。記録は魏志倭人伝。"
+          "detail": "邪馬台国の女王が魏に遣使。記録は魏志倭人伝。",
+          "importance": "high"
         },
         {
           "keyword": "前方後円墳・埴輪",
-          "detail": "鍵穴型は船の形/素焼きの土製品。"
+          "detail": "鍵穴型は船の形/素焼きの土製品。",
+          "importance": "high"
         },
         {
           "keyword": "大和政権",
-          "detail": "大和地方を中心に巨大古墳を築く豪族連合。"
+          "detail": "大和地方を中心に巨大古墳を築く豪族連合。",
+          "importance": "high"
         },
         {
           "keyword": "大山古墳",
-          "detail": "仁徳天皇陵古墳とも呼ばれる。全長約480m/日本最大の前方後円墳。"
+          "detail": "仁徳天皇陵古墳とも呼ばれる。全長約480m/日本最大の前方後円墳。",
+          "importance": "high"
         }
       ]
     },
