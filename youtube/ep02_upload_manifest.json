@@ -25,5 +25,5 @@
   "thumbnail_endpoint": "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={VIDEO_ID}",
   "mode": "dry-run",
   "note": "認証情報がないため未アップロード。YOUTUBE_CLIENT_ID/SECRET/REFRESH_TOKEN を設定すると実アップロード可能。",
-  "generated_at": "2026-11-14T21:29:19.691991+09:00"
+  "generated_at": "2026-11-14T23:12:53.456315+09:00"
 }
