@@ -40,7 +40,8 @@ def build_envelope_expr(intervals: list[tuple[float, float]],
                         duck_db: float, quiet_db: float,
                         ramp: float, guard: float) -> str:
     """BGM ゲイン式: quiet + (duck-quiet)*active(t)。active は各ナレ区間の
-    リニアランプ項の和 (0..1 にクランプ)。eval=frame で t を使える。"""
+    リニアランプ項の和 (0..1 にクランプ)。eval=frame で t を使う。
+    volume フィルタの既定単位は「線形倍率」なので pow(10, dB/20) で返す。"""
     depth = duck_db - quiet_db  # 負の値 (-10)
     terms = []
     for s, e in intervals:
@@ -51,7 +52,8 @@ def build_envelope_expr(intervals: list[tuple[float, float]],
             f"-min(1\\,max(0\\,(t-{b:.3f})/{ramp:.3f}))"
         )
     active = "min(1\\,max(0\\," + "+".join(terms) + "))" if terms else "0"
-    return f"{quiet_db:.1f}+({depth:.1f})*{active}"
+    gain_db = f"{quiet_db:.1f}+({depth:.1f})*{active}"
+    return f"pow(10\\,({gain_db})/20)"
 
 
 def main() -> int:
@@ -108,40 +110,77 @@ def main() -> int:
     labels = "".join(f"[n{i}]" for i in range(len(beats)))
     lines.append(f"{labels}amix=inputs={len(beats)}:normalize=0:duration=longest[na]")
     lines.append(f"[0:a]aresample={SR},volume='{env_expr}':eval=frame[bg]")
-    lines.append(
-        f"[na][bg]amix=inputs=2:normalize=0:duration=longest,"
-        f"loudnorm=I={args.target_i}:TP={args.tp}:LRA={args.lra},"
-        f"aresample={SR}[out]")
-    fc = ";\n".join(lines)
+    lines.append("[na][bg]amix=inputs=2:normalize=0:duration=longest[bus]")
+    fc_bus = ";\n".join(lines)
 
-    cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "info",
-           "-i", str(bgm_path)]
-    for w in wavs:
-        cmd += ["-i", str(w)]
-    cmd += ["-filter_complex", fc,
-            "-map", "[out]", "-ar", str(SR), "-c:a", "pcm_s16le",
-            str(out_path)]
+    def input_args() -> list[str]:
+        cmd = ["-hide_banner", "-i", str(bgm_path)]
+        for w in wavs:
+            cmd += ["-i", str(w)]
+        return cmd
 
     print(f"[mix] beats={len(beats)}  intervals={len(intervals)}  "
           f"BGM {args.quiet_db}dB(無音)/{args.duck_db}dB(ナレ, ramp={args.ramp}s)")
-    print(f"[mix] loudnorm 目標: I={args.target_i} TP={args.tp} LRA={args.lra}")
-    proc = subprocess.run(cmd, capture_output=True, text=True)
-    if proc.returncode != 0:
-        print(proc.stderr[-4000:])
-        raise SystemExit(f"ffmpeg 失敗 (exit {proc.returncode})")
+    print(f"[mix] loudnorm 目標: I={args.target_i} TP={args.tp} LRA={args.lra} (2パス linear)")
 
-    # loudnorm の計測値を拾う (動的モードでも input/output が出る)
-    m = re.findall(r"\{[^{}]*\"input_i\"[^{}]*\}", proc.stderr)
+    # ---- pass 1: バスのラウドネス計測
+    analyze = ["ffmpeg", *input_args(),
+               "-filter_complex", fc_bus + ";[bus]loudnorm=print_format=json[out]",
+               "-map", "[out]", "-f", "null", "-"]
+    p1 = subprocess.run(analyze, capture_output=True, text=True)
+    if p1.returncode != 0:
+        print(p1.stderr[-4000:])
+        raise SystemExit(f"ffmpeg 計測パス失敗 (exit {p1.returncode})")
+    m = re.findall(r"\{[^{}]*\"input_i\"[^{}]*\}", p1.stderr)
+    if not m:
+        raise SystemExit("loudnorm の計測 JSON が取得できませんでした")
+    meas = json.loads(m[-1])
+    print(f"[mix] pass1 計測: I={meas['input_i']} TP={meas['input_tp']} "
+          f"LRA={meas['input_lra']} thresh={meas['input_thresh']} "
+          f"offset={meas.get('target_offset', 0)}")
+
+    # ---- pass 2: linear モードで固定ゲイン適用 (TP 制約あり, alimiter は保険)
+    ln = (f"loudnorm=I={args.target_i}:TP={args.tp}:LRA={args.lra}"
+          f":measured_I={meas['input_i']}:measured_TP={meas['input_tp']}"
+          f":measured_LRA={meas['input_lra']}:measured_thresh={meas['input_thresh']}"
+          f":offset={meas.get('target_offset', 0)}:linear=true")
+    fc_out = fc_bus + (
+        f";[bus]{ln},"
+        f"alimiter=limit={10 ** ((args.tp - 0.08) / 20.0):.4f}:attack=5:release=80:level=0,"
+        f"aresample={SR}[out]")
+    cmd = ["ffmpeg", "-y", *input_args(),
+           "-filter_complex", fc_out, "-map", "[out]",
+           "-ar", str(SR), "-c:a", "pcm_s16le", str(out_path)]
+    p2 = subprocess.run(cmd, capture_output=True, text=True)
+    if p2.returncode != 0:
+        print(p2.stderr[-4000:])
+        raise SystemExit(f"ffmpeg 失敗 (exit {p2.returncode})")
+    nan_count = p2.stderr.count("Invalid value NaN")
+    if nan_count > 5:
+        raise SystemExit(f"volume 式が頻繁に NaN を出しました ({nan_count} 回) — エンベロープ式を確認")
+    elif nan_count:
+        # af_volume は初期化時に t=NaN で1回評価するための既知の benign 警告
+        print(f"[mix] 注意: volume 初期評価の NaN 警告 {nan_count} 件 (benign)")
+
+    # ---- 出力のラウドネスを検証してレポートに反映
+    verify = ["ffmpeg", "-hide_banner", "-i", str(out_path),
+              "-af", "loudnorm=print_format=json", "-f", "null", "-"]
+    p3 = subprocess.run(verify, capture_output=True, text=True)
+    m3 = re.findall(r"\{[^{}]*\"input_i\"[^{}]*\}", p3.stderr)
+    if m3:
+        out_stats = json.loads(m3[-1])
+        print(f"[mix] 出力検証: I={out_stats['input_i']} LUFS  "
+              f"TP={out_stats['input_tp']} dBTP  LRA={out_stats['input_lra']}")
+    else:
+        out_stats = None
+
     report: dict = {"episode": args.episode, "target_i": args.target_i,
                     "duck_db": args.duck_db, "quiet_db": args.quiet_db,
-                    "narration_beats": len(beats)}
-    if m:
-        stats = json.loads(m[-1])
-        report["loudnorm"] = stats
-        print(f"[mix] loudnorm: input_i={stats.get('input_i')} → "
-              f"output_i={stats.get('output_i')}  "
-              f"output_tp={stats.get('output_tp')}  LRA={stats.get('output_lra')}")
-    report["mix"] = str(out_path)
+                    "narration_beats": len(beats),
+                    "loudnorm_mode": "2-pass linear",
+                    "measured": meas,
+                    "output_loudness": out_stats,
+                    "mix": str(out_path)}
     (adir / "mix_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
     print(f"[mix] 出力: {out_path}")
     print(f"[mix] レポート: {adir / 'mix_report.json'}")

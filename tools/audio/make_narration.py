@@ -10,7 +10,7 @@
 - speaker UUID は /speakers から動的解決 (voice_style "四国めたん/ノーマル" 等で一致)
 - query パラメータ: speedScale/pitch は characters 設定, volumeScale は 1.2 (既定)
 - beat に reading があれば text の代わりに TTS 入力に使う
-- ギャップ: ビート間 0.6s / シーン間 0.9s / セクション間 1.2s
+- ギャップ: ビート間 0.45s / シーン間 0.7s / セクション間 0.9s / テール 0.7s (CLI で変更可)
 - VOICEVOX 未起動時は vv-engine/run を自動起動して /version 応答を最大 90 秒待つ
 """
 from __future__ import annotations
@@ -31,9 +31,10 @@ ENGINE_URL = "http://127.0.0.1:50021"
 ENGINE_BIN = "/Applications/VOICEVOX.app/Contents/Resources/vv-engine/run"
 ENGINE_WAIT_SEC = 90
 
-BEAT_GAP = 0.6
-SCENE_GAP = 0.9
-SECTION_GAP = 1.2
+BEAT_GAP = 0.45     # ビート間 (lead 調整 2026-11-14: 0.6 → 0.45)
+SCENE_GAP = 0.7     # シーン間 (0.9 → 0.7)
+SECTION_GAP = 0.9   # セクション間 (1.2 → 0.9)
+TAIL_SEC = 0.7      # 最終ビート後の余白 (1.0 → 0.7)
 
 
 # ---------------------------------------------------------------- HTTP helpers
@@ -131,9 +132,11 @@ def wav_duration(wav_bytes: bytes) -> float:
 
 
 # -------------------------------------------------------------------- timeline
-def build_timing(script: dict, beat_meta: list[dict], tail_sec: float) -> dict:
+def build_timing(script: dict, beat_meta: list[dict], tail_sec: float = TAIL_SEC,
+                 beat_gap: float = BEAT_GAP, scene_gap: float = SCENE_GAP,
+                 section_gap: float = SECTION_GAP) -> dict:
     """beat_meta: [{"scene_id","section","speaker","wav","duration","text"}, ...]
-    ギャップ: ビート間 0.6 / シーン間 0.9 / セクション間 1.2 を頭に足して配置。"""
+    ギャップ: ビート間 / シーン間 / セクション間 を頭に足して配置。"""
     scenes: list[dict] = []
     sections: dict[str, dict] = {}
     cur = 0.0
@@ -145,13 +148,13 @@ def build_timing(script: dict, beat_meta: list[dict], tail_sec: float) -> dict:
             if prev_section is None:
                 pass  # 冒頭はギャップなし
             elif m["section"] != prev_section:
-                cur += SECTION_GAP
+                cur += section_gap
             else:
-                cur += SCENE_GAP
+                cur += scene_gap
             scene_start = cur
         else:
             scene_start = scenes[-1]["start"]
-            cur += BEAT_GAP  # 同一シーン内のビート間
+            cur += beat_gap  # 同一シーン内のビート間
 
         beat_start = cur
         cur = beat_start + m["duration"]
@@ -168,7 +171,7 @@ def build_timing(script: dict, beat_meta: list[dict], tail_sec: float) -> dict:
         })
         prev_section, prev_scene_id = m["section"], m["scene_id"]
 
-    total = cur + tail_sec
+    total = round(cur + tail_sec, 3)
     for i, sc in enumerate(scenes):
         sec = sc["section"]
         end = scenes[i + 1]["start"] if i + 1 < len(scenes) else total
@@ -180,7 +183,7 @@ def build_timing(script: dict, beat_meta: list[dict], tail_sec: float) -> dict:
     return {
         "episode": script.get("episode", ""),
         "title": script.get("title", ""),
-        "gaps": {"beat": BEAT_GAP, "scene": SCENE_GAP, "section": SECTION_GAP,
+        "gaps": {"beat": beat_gap, "scene": scene_gap, "section": section_gap,
                  "tail": tail_sec},
         "total_duration": round(total, 3),
         "scenes": scenes,
@@ -195,7 +198,10 @@ def main() -> int:
     ap.add_argument("--script", default=None, help="script.json のパス (既定: content/episodes/<ep>/script.json)")
     ap.add_argument("--out", default=None, help="出力ディレクトリ (既定: audio/<ep>)")
     ap.add_argument("--volume-scale", type=float, default=1.2, help="VOICEVOX volumeScale (既定 1.2)")
-    ap.add_argument("--tail", type=float, default=1.0, help="最終ビート後の余白秒 (既定 1.0)")
+    ap.add_argument("--tail", type=float, default=TAIL_SEC, help="最終ビート後の余白秒 (既定 0.7)")
+    ap.add_argument("--beat-gap", type=float, default=BEAT_GAP, help="ビート間ギャップ秒 (既定 0.45)")
+    ap.add_argument("--scene-gap", type=float, default=SCENE_GAP, help="シーン間ギャップ秒 (既定 0.7)")
+    ap.add_argument("--section-gap", type=float, default=SECTION_GAP, help="セクション間ギャップ秒 (既定 0.9)")
     ap.add_argument("--force", action="store_true", help="既存 WAV があっても再生成")
     ap.add_argument("--keep-going", action="store_true", help="1 ビート失敗でも続行 (失敗ビートは timing から除外)")
     args = ap.parse_args()
@@ -245,7 +251,9 @@ def main() -> int:
                 "wav": wav_rel, "duration": dur, "text": beat["text"],
             })
 
-    timing = build_timing(script, beat_meta, tail_sec=args.tail)
+    timing = build_timing(script, beat_meta, tail_sec=args.tail,
+                          beat_gap=args.beat_gap, scene_gap=args.scene_gap,
+                          section_gap=args.section_gap)
     timing_path = out_dir / "timing.json"
     timing_path.write_text(json.dumps(timing, ensure_ascii=False, indent=2) + "\n")
 
