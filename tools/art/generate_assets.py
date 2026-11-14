@@ -24,6 +24,7 @@ from artlib.canvas import Canvas, save  # noqa: E402
 from artlib import character, ui  # noqa: E402
 import scenes_ep01 as S  # noqa: E402
 import scenes_ep02 as S2  # noqa: E402
+import scenes_ep03 as S3  # noqa: E402
 from artlib.props import jomon_pot, keyhole_tomb, dotaku as dotaku_prop  # noqa: E402
 from artlib.props import haniwa as haniwa_prop  # noqa: E402
 
@@ -34,6 +35,26 @@ OVERLAY_DIR = ASSETS / "overlay"
 UI_DIR = ASSETS / "ui"
 
 EP_SCENES = {
+    "ep03": {
+        "dir": ASSETS_ROOT / "ep03",
+        "scenes": {
+            "bg_heian_capital": S3.bg_heian_capital,
+            "bg_heian_frontier": S3.bg_heian_frontier,
+            "bg_heian_palace": S3.bg_heian_palace,
+            "bg_heian_court": S3.bg_heian_court,
+            "bg_heian_ceremony": S3.bg_heian_ceremony,
+            "bg_heian_ship": S3.bg_heian_ship,
+            "bg_heian_mansion": S3.bg_heian_mansion,
+            "bg_heian_field": S3.bg_heian_field,
+            "bg_heian_writing": S3.bg_heian_writing,
+            "bg_heian_emaki": S3.bg_heian_emaki,
+            "bg_heian_amida": S3.bg_heian_amida,
+            "bg_heian_dusk": S3.bg_heian_dusk,
+            "bg_timeline": S3.bg_timeline,
+        },
+        "priority": ["bg_heian_mansion", "bg_heian_capital"],
+        "reused": ["bg_school_lab", "bg_school_lab_evening", "bg_quiz_board"],
+    },
     "ep02": {
         "dir": ASSETS_ROOT / "ep02",
         "scenes": {
@@ -188,9 +209,9 @@ def gen_preview():
 def gen_contact_sheet(out_file="/tmp/ajh_art/sheet_ep01.png", ep="ep01"):
     """QA 用コンタクトシート (/tmp に保存, リポジ外)."""
     from PIL import Image, ImageDraw
-    if ep == "ep02":
-        names = sorted(EP_SCENES["ep02"]["scenes"].keys())
-        scene_dir = EP_SCENES["ep02"]["dir"] / "scenes"
+    if ep in EP_SCENES:
+        names = sorted(EP_SCENES[ep]["scenes"].keys())
+        scene_dir = EP_SCENES[ep]["dir"] / "scenes"
     else:
         names = sorted(SCENES.keys())
         scene_dir = SCENE_DIR
@@ -277,6 +298,61 @@ def copy_reused_assets(ep="ep02"):
     print("  reused char_sensei / char_manabu")
 
 
+def gen_ui_badges_ep03():
+    """ep03 のバッジセット."""
+    outs = []
+    udir = ASSETS_ROOT / "ep03" / "ui"
+    eras = [
+        ("era_heian", "平安時代", "794年 平安遷都〜"),
+        ("era_kengyou", "摂関政治", "藤原氏の全盛"),
+        ("era_kokufu", "国風文化", "仮名・絵巻・浄土教"),
+    ]
+    for name, main, sub in eras:
+        outs.append(save(ui.era_badge(main, sub=sub), udir / f"{name}.png"))
+    outs.append(save(ui.exam_banner("ここが受験ポイント!"), udir / "exam_banner.png"))
+    for i in (1, 2, 3):
+        outs.append(save(ui.exam_banner(f"クイズ 第{i}問"), udir / f"quiz_banner_{i}.png"))
+    keywords = [
+        ("keyword_heiankyo", "平安京", "794年 桓武天皇"),
+        ("keyword_kozui", "皇位継承と政争"),
+        ("keyword_kanpyo", "寛平・延喜の治"),
+        ("keyword_sessho", "摂関政治", "藤原氏 北家"),
+        ("keyword_shinden", "寝殿造"),
+        ("keyword_kana", "仮名文字", "真・草・仮名"),
+        ("keyword_kokufu", "国風文化", "古風・洒脱の文化"),
+        ("keyword_emaki", "物語絵巻"),
+        ("keyword_jodo", "浄土教", "阿弥陀如来信仰"),
+    ]
+    for kw in keywords:
+        img = ui.keyword_card(kw[1], sub=kw[2] if len(kw) > 2 else None)
+        outs.append(save(img, udir / f"{kw[0]}.png"))
+    outs.append(save(ui.year_number("794年"), udir / "year_794.png"))
+    outs.append(save(ui.title_main("アニメ日本史ラボ 第3話"), udir / "title_main.png"))
+    manifest = {"ep03_ui_assets": [p.name for p in outs]}
+    (udir / "manifest.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  ui ep03 x{len(outs)}")
+    return outs
+
+
+def gen_preview_ep03(bg="bg_heian_mansion", ch_name="char_manabu",
+                     foot=(1360, 1012), scale=0.62):
+    from PIL import Image
+    bg_img = Image.open(ASSETS_ROOT / "ep03" / "scenes" / f"{bg}.png").convert("RGBA")
+    ch = Image.open(ASSETS_ROOT / "ep03" / "overlay" / f"{ch_name}.png").convert("RGBA")
+    ch = ch.resize((int(ch.width * scale), int(ch.height * scale)), Image.LANCZOS)
+    base = Image.new("RGBA", bg_img.size, (0, 0, 0, 0))
+    base.alpha_composite(bg_img)
+    sh = Canvas(560, 120, ss=2)
+    sh.g().ellipse((40, 30, 520, 96), fill=(52, 40, 34, 96))
+    shadow = sh.render().resize((280, 60), Image.LANCZOS)
+    base.alpha_composite(shadow, (foot[0] - shadow.width // 2, foot[1] - 34))
+    base.alpha_composite(ch, (foot[0] - ch.width // 2, foot[1] - ch.height + 4))
+    p = save(base, ASSETS_ROOT / "ep03" / "preview_composite.png")
+    print(f"  preview {p}")
+    return p
+
+
 def gen_preview_ep02(bg="bg_asuka_palace", ch_name="char_manabu",
                      foot=(1360, 1012), scale=0.62):
     from PIL import Image
@@ -297,7 +373,7 @@ def gen_preview_ep02(bg="bg_asuka_palace", ch_name="char_manabu",
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--ep", default="ep01", choices=["ep01", "ep02"])
+    ap.add_argument("--ep", default="ep01", choices=["ep01", "ep02", "ep03"])
     ap.add_argument("--only", nargs="*", help="生成するシーン名")
     ap.add_argument("--chars", action="store_true", help="立ち絵のみ")
     ap.add_argument("--props", action="store_true", help="小物オーバーレイのみ")
@@ -306,6 +382,35 @@ def main():
     ap.add_argument("--sheet", action="store_true", help="コンタクトシートのみ")
     ap.add_argument("--priority", action="store_true", help="優先シーンのみ")
     args = ap.parse_args()
+
+    if args.ep == "ep03":
+        spec = EP_SCENES["ep03"]
+        out_dir = spec["dir"] / "scenes"
+        if args.sheet:
+            gen_contact_sheet("/tmp/ajh_art/sheet_ep03.png", ep="ep03")
+            return
+        if args.preview:
+            gen_preview_ep03()
+            return
+        if args.ui:
+            gen_ui_badges_ep03()
+            return
+        copy_reused_assets("ep03")
+        todo = args.only or (spec["priority"] if args.priority else list(spec["scenes"].keys()))
+        for name in todo:
+            fn = spec["scenes"].get(name)
+            if fn is None:
+                print(f"  !! unknown scene: {name}")
+                continue
+            cv = S3.new_canvas()
+            fn(cv)
+            img = cv.render()
+            p = save(img, out_dir / f"{name}.png")
+            print(f"  scene {p.name} {img.size}")
+        if not args.only and not args.priority:
+            gen_ui_badges_ep03()
+            gen_preview_ep03(bg="bg_heian_mansion")
+        return
 
     if args.ep == "ep02":
         spec = EP_SCENES["ep02"]
