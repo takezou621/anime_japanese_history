@@ -21,7 +21,10 @@
       "歴史アニメ",
       "アニメ日本史ラボ"
     ],
-    "thumbnail": { "headline": "黒船 来航!", "sub": "幕末の動乱 受験必須" }
+    "thumbnail": {
+      "headline": "黒船 来航!",
+      "sub": "幕末の動乱 受験必須"
+    }
   },
   "characters": [
     {
@@ -49,16 +52,41 @@
       "visual": {
         "background": "bg_school_lab",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "こんにちは!ヒスト先生です。",
-          "overlay_text": [ { "text": "アニメ日本史ラボ 第8話", "style": "title_main", "motion": "fade_up" } ]
+          "overlay_text": [
+            {
+              "text": "アニメ日本史ラボ 第8話",
+              "style": "title_main",
+              "motion": "fade_up"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -86,24 +114,61 @@
       "visual": {
         "background": "bg_bakumatsu_blackship",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "江戸の平和は、続いていたのだ?",
-          "overlay_text": [ { "text": "1853年 ペリー来航", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1853年 ペリー来航",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "ええ、しかし1853年、アメリカのペリーが浦賀に現れます。蒸気で煙を吐く黒い軍艦4隻、開国の要求でした。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1853年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "ペリー来航", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1853年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "ペリー来航",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ええ、しかし1853ねん、アメリカの、ペリーが、うらがに、あらわれます。じょうきで、けむりを、はく、くろい、ぐんかんよんせき、かいこくの、ようきゅうでした。"
         },
@@ -135,24 +200,61 @@
       "visual": {
         "background": "bg_bakumatsu_kaikoku",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "翌年、ペリーは来たのだ?",
-          "overlay_text": [ { "text": "1854年 日米和親条約", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1854年 日米和親条約",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1854年、約束どおり来て、日米和親条約を結びます。下田と函館を開港して、ついに日本は開国しました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1854年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "日米和親条約", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1854年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "日米和親条約",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1854ねん、やくそくどおり、きて、にちべいわしんじょうやくを、むすびます。しもだと、はこだてを、かいこうして、ついに、にほんは、かいこくしました。"
         },
@@ -184,24 +286,61 @@
       "visual": {
         "background": "bg_bakumatsu_treaty",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "その条約は、公平なのだ?",
-          "overlay_text": [ { "text": "1858年 不平等条約", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1858年 不平等条約",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1858年、ハリスとの日米修好通商条約は、残念ながら不平等条約でした。領事裁判権と税率の固定が、その二点です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1858年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "不平等条約", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1858年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "不平等条約",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1858ねん、ハリスとの、にちべいしゅうこうつうしょうじょうやくは、ざんねんながら、ふびょうどうじょうやくでした。りょうじさいばんけんと、ぜいりつの、こていが、その、にてんです。"
         },
@@ -212,7 +351,13 @@
         {
           "speaker": "sensei",
           "text": "外国人が日本で罪を犯しても、日本では裁けない仕組みです。税率の決め方も固定され、日本は損をする側になりました。",
-          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            }
+          ],
           "reading": "がいこくじんが、にほんで、つみを、おかしても、にほんでは、だけない、しくみです。ぜいりつの、きめかたも、こていされ、にほんは、そんを、するがわに、なりました。"
         },
         {
@@ -234,23 +379,56 @@
       "visual": {
         "background": "bg_bakumatsu_court",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "国内の意見は、どうなったのだ?",
-          "overlay_text": [ { "text": "尊攘派と開国派", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "尊攘派と開国派",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "「外国を追い払う尊王攘夷派」と「開国して力を増やす開国派」に、意見が二つに分かれます。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "尊王攘夷・開国", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "尊王攘夷・開国",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "「がいこくを、おいはらう、そんのうじょういは」と、「かいこくして、ちからを、ふやす、かいこくは」に、いけんが、ふたつに、わかれます。"
         },
@@ -262,7 +440,11 @@
           "speaker": "sensei",
           "text": "そのとおり。1858年、大老・井伊直弼が、天皇の勅許なしで条約を結んでしまいます。",
           "overlay_text": [
-            { "text": "井伊直弼", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "井伊直弼",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "そのとおり。1858ねん、たいろう・いいなおさわが、てんのうの、ちょっきょなしで、じょうやくを、むすんでしまいます。"
         },
@@ -280,25 +462,58 @@
       "visual": {
         "background": "bg_bakumatsu_ansei",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "直弼は、批判を許したのだ?",
-          "overlay_text": [ { "text": "1858年〜 安政の大獄", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1858年〜 安政の大獄",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "いいえ、批判した公家や武士を次々に弾圧します。これが安政の大獄です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "安政の大獄", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "安政の大獄",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
-          "reading": "いいえ、ひはんした、こうげや、ぶしを、つぎつぎに、だんあつします。これが、あんせいの、たいおくです。"
+          "reading": "いいえ、ひはんした、こうげや、ぶしを、つぎつぎに、だんあつします。これが、あんせいの、たいごくです。"
         },
         {
           "speaker": "manabu",
@@ -323,24 +538,61 @@
       "visual": {
         "background": "bg_bakumatsu_sakurada",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "井伊直弼は、どうなったのだ?",
-          "overlay_text": [ { "text": "1860年 桜田門外の変", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1860年 桜田門外の変",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1860年、江戸城の桜田門外で、水戸浪人たちに襲われ、殺されてしまいます。これが桜田門外の変です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1860年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "桜田門外の変", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1860年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "桜田門外の変",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1860ねん、えどじょうの、さくらだもんがいで、みとろうにんたちに、おそわれ、ころされてしまいます。これが、さくらだもんがいの、へんです。"
         },
@@ -367,23 +619,56 @@
       "visual": {
         "background": "bg_bakumatsu_sonno",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "攘夷派の人は、どんな人なのだ?",
-          "overlay_text": [ { "text": "尊攘派の台頭", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "尊攘派の台頭",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "長州には吉田松陰の松下村塾から高杉晋作ら、薩摩には西郷隆盛や大久保利通が現れます。若い武士の力が集まってきました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "松下村塾", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "松下村塾",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ちょうしゅうには、よしだしょういんの、しょうかそんじゅくから、たかすぎ、しんさくら。さつまには、さいごう、たかもりや、おおくぼ、としみちが、あらわれます。わかい、ぶしの、ちからが、あつまって、きました。"
         },
@@ -415,23 +700,56 @@
       "visual": {
         "background": "bg_bakumatsu_warship",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_r", "intensity": 1.2 }
+        "camera": {
+          "motion": "pan_r",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "攘夷は、うまくいったのだ?",
-          "overlay_text": [ { "text": "攘夷の現実", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "攘夷の現実",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "いいえ、薩英戦争や下関戦争で、西洋の軍艦の強さを身をもって味わいます。攘夷は不可能だと学びました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "薩英・下関戦争", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "薩英・下関戦争",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "いいえ、さいえいせんそうや、しものせきせんそうで、せいようの、ぐんかんの、つよさを、みをもって、あじわいます。じょういは、ふかのうだと、まなびました。"
         },
@@ -443,8 +761,16 @@
           "speaker": "sensei",
           "text": "ええ、尊攘派は目的を「外国追放」から「幕府打倒」へ切り替えます。これが討幕の始まりです。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "討幕への転換", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "討幕への転換",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ええ、そんじょうはは、もくてきを、「がいこくついほう」から、「ばくふだとう」へ、きりかえます。これが、とうばくの、はじまりです。"
         },
@@ -462,24 +788,61 @@
       "visual": {
         "background": "bg_bakumatsu_kyoto",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "京都では、けんかまで起きたのだ?",
-          "overlay_text": [ { "text": "1864年 禁門の変", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1864年 禁門の変",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1864年、京都の蛤御門で、長州軍と薩摩・会津軍が衝突します。これが禁門の変で、長州は敗北しました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1864年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "禁門の変", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1864年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "禁門の変",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1864ねん、きょうとの、はまごえもんで、ちょうしゅうぐんと、さつま・あいづぐんが、しょうとつします。これが、きんもんの、へんで、ちょうしゅうは、はいぼくしました。"
         },
@@ -506,24 +869,61 @@
       "visual": {
         "background": "bg_bakumatsu_alliance",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "その「仲間」は、実現したのだ?",
-          "overlay_text": [ { "text": "1866年 薩長同盟", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1866年 薩長同盟",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1866年、坂本龍馬の仲介で、薩摩の西郷と長州の桂が結んで、薩長同盟が成立します。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1866年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "薩長同盟", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1866年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "薩長同盟",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1866ねん、さかもと、りょうまの、ちゅうかいで、さつまの、さいごうと、ちょうしゅうの、かつらが、むすんで、さっちょうどうめいが、せいりつします。"
         },
@@ -550,24 +950,61 @@
       "visual": {
         "background": "bg_bakumatsu_return",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "つぎに、どう動くのだ?",
-          "overlay_text": [ { "text": "1867年 大政奉還", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1867年 大政奉還",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "龍馬が「政権を朝廷に返す」大政奉還の建白書を出し、1867年、将軍・慶喜が政権を朝廷へ返上します。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1867年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "大政奉還", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1867年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "大政奉還",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "りょうまが、「せいけんを、ちょうていに、かえす」たいせいほうかんの、けんぱくしょを、だし、1867ねん、しょうぐん・よきのが、せいけんを、ちょうていへ、へんじょうします。"
         },
@@ -594,23 +1031,56 @@
       "visual": {
         "background": "bg_bakumatsu_dawn",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "その後の日本は、どうなるのだ?",
-          "overlay_text": [ { "text": "夜明けと明治へ", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "夜明けと明治へ",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "慶喜の新しい政治がうまくいかず、ついに新しい政府が誕生します。それが「明治維新」の始まりです。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "明治維新へ", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "明治維新へ",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "よきのの、あたらしい、せいじが、うまく、いかず、ついに、あたらしい、せいふが、たんじょうします。それが、「めいじいしん」の、はじまりです。"
         },
@@ -637,17 +1107,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "ここから受験ポイントのまとめ!まずは、開国の流れ。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "開国の流れ", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "開国の流れ",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -662,11 +1151,26 @@
         }
       ],
       "exam_points": [
-        { "keyword": "ペリー来航 1853年", "detail": "浦賀に黒船4隻、開国を要求して一時帰国。" },
-        { "keyword": "日米和親条約 1854年", "detail": "開国。下田・函館を開港。" },
-        { "keyword": "日米修好通商条約 1858年", "detail": "ハリスと締結。不平等条約(領事裁判権・税率固定)。" },
-        { "keyword": "安政五カ国条約", "detail": "開港場は五カ所に拡大。" },
-        { "keyword": "領事裁判権・税率固定", "detail": "日本で裁けない/税率を日本で決められない。" }
+        {
+          "keyword": "ペリー来航 1853年",
+          "detail": "浦賀に黒船4隻、開国を要求して一時帰国。"
+        },
+        {
+          "keyword": "日米和親条約 1854年",
+          "detail": "開国。下田・函館を開港。"
+        },
+        {
+          "keyword": "日米修好通商条約 1858年",
+          "detail": "ハリスと締結。不平等条約(領事裁判権・税率固定)。"
+        },
+        {
+          "keyword": "安政五カ国条約",
+          "detail": "開港場は五カ所に拡大。"
+        },
+        {
+          "keyword": "領事裁判権・税率固定",
+          "detail": "日本で裁けない/税率を日本で決められない。"
+        }
       ]
     },
     {
@@ -676,23 +1180,42 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "後半は、政治の動きと薩長です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "幕末の政治", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "幕末の政治",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
           "speaker": "sensei",
           "text": "安政の大獄1858年、桜田門外の変1860年、禁門の変1864年、薩長同盟1866年、大政奉還1867年。薩英・下関で攘夷不可能を知り、討幕へ転換です!",
-          "reading": "あんせいのたいおく、1858ねん。さくらだもんがいのへん、1860ねん。きんもんのへん、1864ねん。さっちょうどうめい、1866ねん、たいせいほうかん、1867ねん。さいえい・しものせきで、じょういふかのうを、しり、とうばくへ、てんかんです!"
+          "reading": "あんせいのたいごく、1858ねん。さくらだもんがいのへん、1860ねん。きんもんのへん、1864ねん。さっちょうどうめい、1866ねん、たいせいほうかん、1867ねん。さいえい・しものせきで、じょういふかのうを、しり、とうばくへ、てんかんです!"
         },
         {
           "speaker": "sensei",
@@ -701,11 +1224,26 @@
         }
       ],
       "exam_points": [
-        { "keyword": "尊王攘夷・開国", "detail": "外国追放派と開国派に意見が分裂。" },
-        { "keyword": "井伊直弼・安政の大獄 1858年〜", "detail": "勅許なしで条約調印、批判者を弾圧(吉田松陰ら死亡)。" },
-        { "keyword": "桜田門外の変 1860年", "detail": "井伊直弼が水戸浪人に襲撃され死亡、幕府の権威低下。" },
-        { "keyword": "尊攘派の台頭", "detail": "長州(松下村塾・高杉晋作)/薩摩(西郷・大久保)。中心は京都へ。" },
-        { "keyword": "禁門の変 1864年", "detail": "蛤御門の戦いで長州敗北→敵薩摩に接近(伏線)。" }
+        {
+          "keyword": "尊王攘夷・開国",
+          "detail": "外国追放派と開国派に意見が分裂。"
+        },
+        {
+          "keyword": "井伊直弼・安政の大獄 1858年〜",
+          "detail": "勅許なしで条約調印、批判者を弾圧(吉田松陰ら死亡)。"
+        },
+        {
+          "keyword": "桜田門外の変 1860年",
+          "detail": "井伊直弼が水戸浪人に襲撃され死亡、幕府の権威低下。"
+        },
+        {
+          "keyword": "尊攘派の台頭",
+          "detail": "長州(松下村塾・高杉晋作)/薩摩(西郷・大久保)。中心は京都へ。"
+        },
+        {
+          "keyword": "禁門の変 1864年",
+          "detail": "蛤御門の戦いで長州敗北→敵薩摩に接近(伏線)。"
+        }
       ]
     },
     {
@@ -715,10 +1253,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -728,7 +1285,18 @@
         {
           "speaker": "sensei",
           "text": "1853年、浦賀に来航して開国を求めた、アメリカの提督はだれでしょう?ア、ペリー。イ、ハリス。ウ、井伊直弼。",
-          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第1問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア ペリー / イ ハリス / ウ 井伊直弼",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "1853ねん、うらがに、らいこうして、かいこくを、もとめた、アメリカの、ていとくは、だれでしょう?ア、ペリー。イ、ハリス。ウ、いいなおさわ。"
         },
         {
@@ -749,10 +1317,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -762,7 +1349,18 @@
         {
           "speaker": "sensei",
           "text": "1858年の日米修好通商条約で、日本が不利になった点は何でしょう?ア、領事裁判権と税率固定。イ、参勤交代。ウ、鎖国。",
-          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第2問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 領事裁判権と税率固定 / イ 参勤交代 / ウ 鎖国",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "1858ねんの、にちべいしゅうこうつうしょうじょうやくで、にほんが、ふりに、なった、てんは、なんでしょう?ア、りょうじさいばんけんと、ぜいりつこてい。イ、さんきんこうたい。ウ、さこく。"
         },
         {
@@ -783,10 +1381,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -796,7 +1413,18 @@
         {
           "speaker": "sensei",
           "text": "1866年、薩摩と長州を結んだ、仲介役の人物はだれでしょう?ア、西郷隆盛。イ、坂本龍馬。ウ、徳川慶喜。",
-          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第3問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 西郷隆盛 / イ 坂本龍馬 / ウ 徳川慶喜",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "1866ねん、さつまと、ちょうしゅうを、むすんだ、ちゅうかいやくの、じんぶつは、だれでしょう?ア、さいごうたかもり。イ、さかもとりょうま。ウ、とくがわよきの。"
         },
         {
@@ -817,10 +1445,29 @@
       "visual": {
         "background": "bg_school_lab_evening",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -834,7 +1481,13 @@
         {
           "speaker": "sensei",
           "text": "その流れが明治維新へつながります。次回第9話は、明治維新と文明開化!",
-          "overlay_text": [ { "text": "次回 第9話 明治", "style": "keyword_card", "motion": "pop_in" } ]
+          "overlay_text": [
+            {
+              "text": "次回 第9話 明治",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -847,19 +1500,31 @@
   "quiz": [
     {
       "q": "1853年、浦賀に来航して開国を求めた、アメリカの提督はだれでしょう?",
-      "choices": ["ペリー", "ハリス", "井伊直弼"],
+      "choices": [
+        "ペリー",
+        "ハリス",
+        "井伊直弼"
+      ],
       "answer": 0,
       "explain": "ペリーは1853年に浦賀へ来航して開国を要求しました。"
     },
     {
       "q": "1858年の日米修好通商条約で、日本が不利になった点は何でしょう?",
-      "choices": ["領事裁判権と税率固定", "参勤交代", "鎖国"],
+      "choices": [
+        "領事裁判権と税率固定",
+        "参勤交代",
+        "鎖国"
+      ],
       "answer": 0,
       "explain": "領事裁判権と税率固定が、不平等条約の大きな特徴です。"
     },
     {
       "q": "1866年、薩摩と長州を結んだ、仲介役の人物はだれでしょう?",
-      "choices": ["西郷隆盛", "坂本龍馬", "徳川慶喜"],
+      "choices": [
+        "西郷隆盛",
+        "坂本龍馬",
+        "徳川慶喜"
+      ],
       "answer": 1,
       "explain": "坂本龍馬の仲介で薩長同盟が結ばれ、討幕の力がそろいました。"
     }

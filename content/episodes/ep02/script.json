@@ -21,7 +21,10 @@
       "アニメ日本史ラボ",
       "勉強動画"
     ],
-    "thumbnail": { "headline": "大化の改新はなぜ?", "sub": "飛鳥・奈良 受験必須" }
+    "thumbnail": {
+      "headline": "大化の改新はなぜ?",
+      "sub": "飛鳥・奈良 受験必須"
+    }
   },
   "characters": [
     {
@@ -49,16 +52,41 @@
       "visual": {
         "background": "bg_school_lab",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "こんにちは!ヒスト先生です。第2話の今日は、飛鳥と奈良。日本が「国家」になっていく大ドラマを見ていきますよ。",
-          "overlay_text": [ { "text": "アニメ日本史ラボ 第2話", "style": "title_main", "motion": "fade_up" } ]
+          "overlay_text": [
+            {
+              "text": "アニメ日本史ラボ 第2話",
+              "style": "title_main",
+              "motion": "fade_up"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -75,7 +103,13 @@
         {
           "speaker": "sensei",
           "text": "聖徳太子の政治から、じっくりたどっていきましょう。",
-          "overlay_text": [ { "text": "第2話 大化の改新のなぞ", "style": "keyword_card", "motion": "pop_in" } ]
+          "overlay_text": [
+            {
+              "text": "第2話 大化の改新のなぞ",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -87,16 +121,41 @@
       "visual": {
         "background": "bg_asuka_palace",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "じゃあ、まずなにから変わったのだ?",
-          "overlay_text": [ { "text": "飛鳥時代 592年〜", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "飛鳥時代 592年〜",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -131,16 +190,41 @@
       "visual": {
         "background": "bg_asuka_court",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "そこで登場なのだ!?",
-          "overlay_text": [ { "text": "飛鳥時代 聖徳太子の政治", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "飛鳥時代 聖徳太子の政治",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -151,8 +235,16 @@
           "speaker": "sensei",
           "text": "603年には能力で決める冠位十二階、604年には政治の心がけを示す十七条憲法を作りました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "冠位十二階・十七条憲法", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "冠位十二階・十七条憲法",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "603年には、のうりょくできめる、かんいじゅうにかい。604年には、政治の心がけをしめす、じゅうしちじょうけんぽうを作りました。"
         },
@@ -182,21 +274,46 @@
       "visual": {
         "background": "bg_asuka_ship",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_r", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_r",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "外国とは、どうしてたのだ?",
-          "overlay_text": [ { "text": "飛鳥時代 遣隋使と法隆寺", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "飛鳥時代 遣隋使と法隆寺",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "607年、小野妹子を使者に、隋へ遣隋使を送ります。",
-          "reading": "607年、おののいめこを、ししゃに、すいへ、けんずいしをおくります。"
+          "reading": "607年、おののいもこを、ししゃに、すいへ、けんずいしをおくります。"
         },
         {
           "speaker": "sensei",
@@ -211,8 +328,16 @@
           "speaker": "sensei",
           "text": "そう、まさに日本の自立を示す一文なんです。また太子は仏教を深く学び、法隆寺を建てました。現存する世界最古の木造建築として知られています。",
           "overlay_text": [
-            { "text": "遣隋使 607年", "style": "keyword_card", "motion": "pop_in" },
-            { "text": "法隆寺", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "遣隋使 607年",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            },
+            {
+              "text": "法隆寺",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -229,16 +354,41 @@
       "visual": {
         "background": "bg_asuka_gate",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "太子が亡くなったあとは?",
-          "overlay_text": [ { "text": "645年 乙巳の変", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "645年 乙巳の変",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -253,8 +403,16 @@
           "speaker": "sensei",
           "text": "そう、645年、宮中で蘇我入鹿を討ちました。これが乙巳の変です。",
           "overlay_text": [
-            { "text": "645年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "乙巳の変", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "645年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "乙巳の変",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "そう、645年、宮中で、そがのいるかをうちました。これが、きのとみのへんです。"
         },
@@ -270,7 +428,13 @@
         {
           "speaker": "sensei",
           "text": "ええ。一族の力勝負だった政治を、天皇を中心に立て直す、大きな転換点になりました。",
-          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+          "overlay_text": [
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            }
+          ]
         }
       ],
       "exam_points": []
@@ -282,16 +446,41 @@
       "visual": {
         "background": "bg_asuka_field",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_l", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_l",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "で、改新ではなにが変わったのだ?",
-          "overlay_text": [ { "text": "大化の改新 645年〜", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "大化の改新 645年〜",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -309,12 +498,20 @@
         },
         {
           "speaker": "sensei",
-          "text": "ずばり頻出です。米や布を納める租、労働の庸、地域の特産品を納める調。公地公民・班田収授・租庸調は、必ずワンセットで!",
+          "text": "ずばり頻出です。米を納める租、労働の庸、布や地域の特産品を納める調。公地公民・班田収授・租庸調は、必ずワンセットで!",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "公地公民・班田収授・租庸調", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "公地公民・班田収授・租庸調",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
-          "reading": "ずばり、ひんしゅつです。米や布をおさめる、そ。ろうどうの、よう。ちほうの、とくさんひんを、おさめる、ちょう。こうちこうみん・はんでんしゅうじゅ・そようちょうは、かならず、ワンセットで!"
+          "reading": "ずばり、ひんしゅつです。こめを、おさめる、そ。ろうどうの、よう。ぬのや、ちほうの、とくさんひんを、おさめる、ちょう。こうちこうみん・はんでんしゅうじゅ・そようちょうは、かならず、ワンセットで!"
         },
         {
           "speaker": "manabu",
@@ -330,16 +527,41 @@
       "visual": {
         "background": "bg_asuka_battle",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "そのあとは、すんなり進んだのだ?",
-          "overlay_text": [ { "text": "672年 壬申の乱", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "672年 壬申の乱",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -358,8 +580,16 @@
           "speaker": "sensei",
           "text": "中心に力を集める政治を、中央集権と言います。受験用語ですよ。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "中央集権", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "中央集権",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -376,16 +606,41 @@
       "visual": {
         "background": "bg_asuka_court",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "律令国家って、なんなのだ?",
-          "overlay_text": [ { "text": "701年 大宝律令", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "701年 大宝律令",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -395,8 +650,16 @@
           "speaker": "sensei",
           "text": "701年、文武天皇のときに大宝律令が整い、日本版のしくみが完成しました。藤原不比等らが編集に深くかかわっています。",
           "overlay_text": [
-            { "text": "701年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "大宝律令", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "701年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "大宝律令",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "701年、ぶんむてんのうのときに、たいほうりつりょうが、ととのい、日本版のしくみが、かんせいしました。ふじわらの、ふひとらが、編集に、ふかく、かかわっています。"
         },
@@ -407,7 +670,13 @@
         {
           "speaker": "sensei",
           "text": "後に養老律令という改訂版もできますが、まずは大宝律令=701年で固めましょう。",
-          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            }
+          ],
           "reading": "あとに、ようろうりつりょうという、かいていばんも、できますが、まずは、たいほうりつりょう=701年で、かためましょう。"
         },
         {
@@ -424,23 +693,56 @@
       "visual": {
         "background": "bg_nara_map",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "国の中は、どう動いてたのだ?",
-          "overlay_text": [ { "text": "律令国家のしくみ", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "律令国家のしくみ",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "中央には二官八省一台。神祇官と太政官の下に、八つの省が実務を担います。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "二官八省一台", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "二官八省一台",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "中央には、にかんはっしょういちだい。じんぎかんと、だいじょうかんの、したに、はっつの、しょうが、じつむを、にないます。"
         },
@@ -472,16 +774,41 @@
       "visual": {
         "background": "bg_nara_ship",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_r", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_r",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "中国とは、その後もお付き合いなのだ?",
-          "overlay_text": [ { "text": "遣唐使 630年〜", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "遣唐使 630年〜",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -500,7 +827,13 @@
         {
           "speaker": "sensei",
           "text": "ええ、船の航海は大変でした。この交流があったから、日本の制度と文化が一気に進んだんです。",
-          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+          "overlay_text": [
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -516,23 +849,56 @@
       "visual": {
         "background": "bg_nara_capital",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "ついに、都のお引っ越しの時代なのだ!?",
-          "overlay_text": [ { "text": "710年 平城京遷都", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "710年 平城京遷都",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "710年、都が平城京に移って、ここから奈良時代です。中国の都・長安をモデルにした大都市でした。",
           "overlay_text": [
-            { "text": "710年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "平城京", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "710年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "平城京",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "710年、都が、へいじょうきょうに、うつって、ここから、ならじだいです。中国の都、ちょうあんを、モデルにした、だいとしでした。"
         },
@@ -547,7 +913,13 @@
         {
           "speaker": "sensei",
           "text": "その整然とした町並みこそ、律令国家の力を見せる顔だったんですよ。",
-          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+          "overlay_text": [
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -563,23 +935,56 @@
       "visual": {
         "background": "bg_nara_temple",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "奈良では、なにが生まれたのだ?",
-          "overlay_text": [ { "text": "奈良の文化", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "奈良の文化",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "歴史の記録では古事記と日本書紀、和歌の集まりは万葉集。国の力を示す仏教では、東大寺の大仏が作られました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "古事記・日本書紀・万葉集", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "古事記・日本書紀・万葉集",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "歴史の記録では、こじきと、にほんしょき。和歌のあつまりは、まんようしゅう。国の力を、しめす、仏教では、とうだいじの、だいぶつが、つくられました。"
         },
@@ -610,16 +1015,41 @@
       "visual": {
         "background": "bg_nara_field",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_l", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_l",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "でも、うまくいき続けた…わけじゃないのだ?",
-          "overlay_text": [ { "text": "奈良時代後期 ゆがみの芽", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "奈良時代後期 ゆがみの芽",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -633,7 +1063,13 @@
         {
           "speaker": "sensei",
           "text": "ええ、その種が平安時代に大きく育ちます。詳しくは第3話!まずはポイントまとめです!",
-          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+          "overlay_text": [
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -649,17 +1085,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "ここから受験ポイントまとめ!まずは飛鳥時代です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "飛鳥時代", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "飛鳥時代",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -674,11 +1129,26 @@
         }
       ],
       "exam_points": [
-        { "keyword": "聖徳太子の政治", "detail": "摂政593年/冠位十二階603年/十七条憲法604年。" },
-        { "keyword": "遣隋使 607年", "detail": "小野妹子。「日出づる処の天子…」の国書。" },
-        { "keyword": "乙巳の変 645年", "detail": "中大兄皇子・中臣鎌足が蘇我入鹿を討つ。" },
-        { "keyword": "大化の改新", "detail": "645年開始。公地公民へ転換。" },
-        { "keyword": "班田収授・租庸調", "detail": "6年ごとに口分田/租=米布・庸=労働・調=特産品。" }
+        {
+          "keyword": "聖徳太子の政治",
+          "detail": "摂政593年/冠位十二階603年/十七条憲法604年。"
+        },
+        {
+          "keyword": "遣隋使 607年",
+          "detail": "小野妹子。「日出づる処の天子…」の国書。"
+        },
+        {
+          "keyword": "乙巳の変 645年",
+          "detail": "中大兄皇子・中臣鎌足が蘇我入鹿を討つ。"
+        },
+        {
+          "keyword": "大化の改新",
+          "detail": "645年開始。公地公民へ転換。"
+        },
+        {
+          "keyword": "班田収授・租庸調",
+          "detail": "6年ごとに口分田/租=米・庸=労働・調=布や特産品。"
+        }
       ]
     },
     {
@@ -688,17 +1158,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "後半は、律令と奈良です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "律令〜奈良", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "律令〜奈良",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -709,16 +1198,37 @@
         {
           "speaker": "sensei",
           "text": "そして710年、平城京遷都で奈良時代スタート。年号は603・604・607・645・672・701・710。これで完璧です!",
-          "overlay_text": [ { "text": "710年", "style": "year_number", "motion": "zoom_in" } ],
+          "overlay_text": [
+            {
+              "text": "710年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            }
+          ],
           "reading": "そして710年、へいじょうきょう、せんとで、ならじだい、スタート。年号は、603・604・607・645・672・701・710。これで、かんぺきです!"
         }
       ],
       "exam_points": [
-        { "keyword": "壬申の乱 672年", "detail": "天武天皇が勝利し、中央集権を強化。" },
-        { "keyword": "大宝律令 701年", "detail": "律令国家の完成。藤原不比等らが編纂。" },
-        { "keyword": "二官八省一台", "detail": "神祇官・太政官+八省。地方は国司・郡司。" },
-        { "keyword": "遣唐使 630年〜", "detail": "唐から制度・技術・文化を導入。" },
-        { "keyword": "平城京遷都 710年", "detail": "長安をモデルに朱雀大路・碁盤の目の都市。" }
+        {
+          "keyword": "壬申の乱 672年",
+          "detail": "天武天皇が勝利し、中央集権を強化。"
+        },
+        {
+          "keyword": "大宝律令 701年",
+          "detail": "律令国家の完成。藤原不比等らが編纂。"
+        },
+        {
+          "keyword": "二官八省一台",
+          "detail": "神祇官・太政官+八省。地方は国司・郡司。"
+        },
+        {
+          "keyword": "遣唐使 630年〜",
+          "detail": "唐から制度・技術・文化を導入。"
+        },
+        {
+          "keyword": "平城京遷都 710年",
+          "detail": "長安をモデルに朱雀大路・碁盤の目の都市。"
+        }
       ]
     },
     {
@@ -728,10 +1238,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -741,7 +1270,18 @@
         {
           "speaker": "sensei",
           "text": "603年、聖徳太子が作った、能力で位を決める制度は?ア、冠位十二階。イ、十七条憲法。ウ、大宝律令。",
-          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第1問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 冠位十二階 / イ 十七条憲法 / ウ 大宝律令",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "603年、しょうとくたいしが、つくった、のうりょくで、くらいを、決める、制度は?ア、かんいじゅうにかい。イ、じゅうしちじょうけんぽう。ウ、たいほうりつりょう。"
         },
         {
@@ -762,10 +1302,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -775,7 +1334,18 @@
         {
           "speaker": "sensei",
           "text": "645年、中大兄皇子と中臣鎌足が蘇我入鹿を討った事件は?ア、壬申の乱。イ、乙巳の変。ウ、応仁の乱。",
-          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第2問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 壬申の乱 / イ 乙巳の変 / ウ 応仁の乱",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "645年、なかのおおえのおうじと、なかとみのかまたりが、そがのいるかを、うった、事件は?ア、じんしんのらん。イ、きのとみのへん。ウ、おうにんのらん。"
         },
         {
@@ -796,10 +1366,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -809,7 +1398,18 @@
         {
           "speaker": "sensei",
           "text": "710年に都が移された、奈良の都は?ア、平安京。イ、長岡京。ウ、平城京。",
-          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第3問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 平安京 / イ 長岡京 / ウ 平城京",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "710年に、都が、うつされた、ならの都は?ア、へいあんきょう。イ、ながおかきょう。ウ、へいじょうきょう。"
         },
         {
@@ -830,10 +1430,29 @@
       "visual": {
         "background": "bg_school_lab_evening",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -848,7 +1467,13 @@
         {
           "speaker": "sensei",
           "text": "その年号こそ、得点の入り口です。次回第3話は、平安貴族の華やかな暮らし〜摂関政治と国風文化〜。お楽しみに!",
-          "overlay_text": [ { "text": "次回 第3話 平安", "style": "keyword_card", "motion": "pop_in" } ]
+          "overlay_text": [
+            {
+              "text": "次回 第3話 平安",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -861,19 +1486,31 @@
   "quiz": [
     {
       "q": "603年、聖徳太子が作った、能力で位を決める制度は何でしょう?",
-      "choices": ["冠位十二階", "十七条憲法", "大宝律令"],
+      "choices": [
+        "冠位十二階",
+        "十七条憲法",
+        "大宝律令"
+      ],
       "answer": 0,
       "explain": "能力で位を決める冠位十二階は603年、十七条憲法は604年に作られました。"
     },
     {
       "q": "645年、中大兄皇子と中臣鎌足が蘇我入鹿を討った事件は何でしょう?",
-      "choices": ["壬申の乱", "乙巳の変", "応仁の乱"],
+      "choices": [
+        "壬申の乱",
+        "乙巳の変",
+        "応仁の乱"
+      ],
       "answer": 1,
       "explain": "645年の乙巳の変で蘇我入鹿が討たれ、大化の改新が始まりました。"
     },
     {
       "q": "710年に都が移された、奈良の都の名前は何でしょう?",
-      "choices": ["平安京", "長岡京", "平城京"],
+      "choices": [
+        "平安京",
+        "長岡京",
+        "平城京"
+      ],
       "answer": 2,
       "explain": "710年に平城京へ遷都して奈良時代が始まり、794年に平安京へ移ります。"
     }

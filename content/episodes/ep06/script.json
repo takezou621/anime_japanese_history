@@ -21,7 +21,10 @@
       "アニメ日本史ラボ",
       "勉強動画"
     ],
-    "thumbnail": { "headline": "天下統一!", "sub": "信長・秀吉 受験必須" }
+    "thumbnail": {
+      "headline": "天下統一!",
+      "sub": "信長・秀吉 受験必須"
+    }
   },
   "characters": [
     {
@@ -49,16 +52,41 @@
       "visual": {
         "background": "bg_school_lab",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "こんにちは!ヒスト先生です。",
-          "overlay_text": [ { "text": "アニメ日本史ラボ 第6話", "style": "title_main", "motion": "fade_up" } ]
+          "overlay_text": [
+            {
+              "text": "アニメ日本史ラボ 第6話",
+              "style": "title_main",
+              "motion": "fade_up"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -86,24 +114,61 @@
       "visual": {
         "background": "bg_azuchi_okahazama",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "信長は、最初から強かったのだ?",
-          "overlay_text": [ { "text": "1560年 桶狭間の戦い", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1560年 桶狭間の戦い",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "いいえ、尾張の名ではない若武者でした。でも1560年、大国・今川義元が上洛の途にあり、尾張へ攻め込んできます。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1560年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "桶狭間の戦い", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1560年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "桶狭間の戦い",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "いいえ、おわりの、なではない、わかむしゃでした。でも1560ねん、たいごく・いまがわよしもとが、じょうらくの、とじゅうにあり、おわりへ、せめこんできます。"
         },
@@ -130,23 +195,56 @@
       "visual": {
         "background": "bg_azuchi_gifu",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "つぎの目標は、なんなのだ?",
-          "overlay_text": [ { "text": "1567年 天下布武", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1567年 天下布武",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "美濃の稲葉山城を奪い、地名を「岐阜」へ改めます。ここで「天下布武」の朱印を使い始め、天下を武力で治める宣言です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "天下布武", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "天下布武",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "みのの、いなばやまじょうを、うばい、ちめいを、「ぎふ」へ、あらためます。ここで、「てんかふぶ」の、しゅいんを、つかいはじめ、てんかを、ぶりょくで、おさめる、せんげんです。"
         },
@@ -173,24 +271,61 @@
       "visual": {
         "background": "bg_azuchi_castle",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "信長の城は、どんな城なのだ?",
-          "overlay_text": [ { "text": "1576年 安土城", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1576年 安土城",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1576年、琵琶湖ほとりの安土城を築きます。高くそびえる天主は、石垣と白壁の、当時最強・最新の城でした。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1576年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "安土城", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1576年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "安土城",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1576ねん、びわこの、ほとりの、あづちじょうを、きずきます。たかく、そびえる、てんしゅは、いしがきと、しらかべの、とうじさいきょう・さいしんの、しろでした。"
         },
@@ -202,8 +337,16 @@
           "speaker": "sensei",
           "text": "しかも城下町では楽市楽座。関所を廃し、座の特権をなくして、商人が自由に商売できる街を作りました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "楽市楽座", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "楽市楽座",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "しかも、じょうかまちでは、らくいちらくざ。せきしょを、はいし、ざの、とっけんを、なくして、しょうにんが、じゆうに、しょうばいできる、まちを、つくりました。"
         },
@@ -221,24 +364,61 @@
       "visual": {
         "background": "bg_azuchi_nagashino",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_l", "intensity": 1.2 }
+        "camera": {
+          "motion": "pan_l",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "敵も、ただでは済まないのだ?",
-          "overlay_text": [ { "text": "1575年 長篠の戦い", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1575年 長篠の戦い",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "武田の騎馬隊が、長篠の戦いで挑んできます。信長は鉄砲を大量にそろえ、鉄砲隊を活用して、これを打ち破りました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1575年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "長篠の戦い", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1575年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "長篠の戦い",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "たけだの、きばたいが、ながしのの、たたかいで、いどんできます。のぶながは、てっぽうを、たいりょうに、そろえ、てっぽうたいを、かつようして、これを、うちやぶりました。"
         },
@@ -265,24 +445,61 @@
       "visual": {
         "background": "bg_azuchi_honnoji",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "天下統一まで、あと少し…なのだ?",
-          "overlay_text": [ { "text": "1582年 本能寺の変", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1582年 本能寺の変",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1582年、中国攻めの信長に、家臣の明智光秀が謀反を起こします。「敵は本能寺にあり」と襲われ、信長は本能寺で果てました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1582年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "本能寺の変", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1582年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "本能寺の変",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1582ねん、ちゅうごくぜめの、のぶながに、かけいの、あけち、みつひでが、むほんを、おこします。「てきは、ほんのうじに、あり」と、おそわれ、のぶながは、ほんのうじで、はてました。"
         },
@@ -308,25 +525,58 @@
       "visual": {
         "background": "bg_azuchi_yamazaki",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "光秀は、天下を取れたのだ?",
-          "overlay_text": [ { "text": "1582年 山崎の戦い", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1582年 山崎の戦い",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "いいえ、中国地方から秀吉が猛スピードで引き返し、山崎の戦いで光秀を討ちました。わずか13日間の天下と伝わります。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "山崎の戦い", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "山崎の戦い",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
-          "reading": "いいえ、ちゅうごくちほうから、ひでとしが、もうスピードで、ひきかえし、やまざきの、たたかいで、みつひでを、うちました。わずか、じゅうさんにちかんの、てんかと、つたわります。"
+          "reading": "いいえ、ちゅうごくちほうから、ひでよしが、もうスピードで、ひきかえし、やまざきの、たたかいで、みつひでを、うちました。わずか、じゅうさんにちかんの、てんかと、つたわります。"
         },
         {
           "speaker": "manabu",
@@ -335,7 +585,7 @@
         {
           "speaker": "sensei",
           "text": "ええ、この勝利で秀吉は、信長の後継者の座をつかみます。農民あがりの英雄の、大出世です。",
-          "reading": "ええ、この、しょうりで、ひでとしは、のぶながの、こうけいしゃの、ざを、つかみます。のうみんあがりの、えいゆうの、だいしゅっせです。"
+          "reading": "ええ、この、しょうりで、ひでよしは、のぶながの、こうけいしゃの、ざを、つかみます。のうみんあがりの、えいゆうの、だいしゅっせです。"
         },
         {
           "speaker": "manabu",
@@ -351,23 +601,56 @@
       "visual": {
         "background": "bg_azuchi_osaka",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "秀吉の城も、すごいのだ?",
-          "overlay_text": [ { "text": "1583年 大坂城", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1583年 大坂城",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1583年、大坂城を築きます。石垣が高くそびえる、日本一の巨城で、天下統一の拠点でした。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "大坂城", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "大坂城",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1583ねん、おおさかじょうを、きずきます。いしがきが、たかく、そびえる、にほんいちの、きょじょうで、てんかとういつの、きょてんでした。"
         },
@@ -379,9 +662,13 @@
           "speaker": "sensei",
           "text": "ええ、そして1590年、小田原の北条を降ろして、秀吉は天下統一を果たします。戦国乱世、ついに終結です。",
           "overlay_text": [
-            { "text": "1590年", "style": "year_number", "motion": "zoom_in" }
+            {
+              "text": "1590年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            }
           ],
-          "reading": "ええ、そして1590ねん、おだわらの、ほうじょうを、おろして、ひでとしは、てんかとういつを、はたします。せんごくらんざ、ついに、しゅうけつです。"
+          "reading": "ええ、そして1590ねん、おだわらの、ほうじょうを、おろして、ひでよしは、てんかとういつを、はたします。せんごくらんざ、ついに、しゅうけつです。"
         },
         {
           "speaker": "manabu",
@@ -397,23 +684,56 @@
       "visual": {
         "background": "bg_azuchi_kenchi",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "平和になったら、なにをするのだ?",
-          "overlay_text": [ { "text": "太閤検地・刀狩", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "太閤検地・刀狩",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "太閤検地です。全国の田畑の広さと収穫量を測り、石高で国の力を測るルールを作りました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "太閤検地・刀狩", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "太閤検地・刀狩",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "たいこうけんちです。ぜんこくの、たはたの、ひろさと、しゅうかくりょうを、はかり、こくだかで、くにの、ちからを、はかる、ルールを、つくりました。"
         },
@@ -424,7 +744,7 @@
         {
           "speaker": "sensei",
           "text": "そう、太閤は秀吉の称号です。さらに刀狩で農民から武器を取り上げ、兵と農民を分ける、兵農分離を進めました。",
-          "reading": "そう、たいこうは、ひでとしの、しょうごうです。さらに、かたながりで、のうみんから、ぶきを、とりあげ、へいと、のうみんを、わける、へいのうぶんりを、すすめました。"
+          "reading": "そう、たいこうは、ひでよしの、しょうごうです。さらに、かたながりで、のうみんから、ぶきを、とりあげ、へいと、のうみんを、わける、へいのうぶんりを、すすめました。"
         },
         {
           "speaker": "manabu",
@@ -440,25 +760,58 @@
       "visual": {
         "background": "bg_azuchi_korea",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_r", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_r",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "外には、どんな手を打つのだ?",
-          "overlay_text": [ { "text": "惣無事令と朝鮮出兵", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "惣無事令と朝鮮出兵",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "惣無事令です。大名同士の私戦を禁じて、秀吉のルールで国をまとめました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "惣無事令", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "惣無事令",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
-          "reading": "そうぶじれいです。だいみょうどうしの、しせんを、きんじて、ひでとしの、ルールで、くにを、まとめました。"
+          "reading": "そうぶじれいです。だいみょうどうしの、しせんを、きんじて、ひでよしの、ルールで、くにを、まとめました。"
         },
         {
           "speaker": "manabu",
@@ -468,10 +821,18 @@
           "speaker": "sensei",
           "text": "ええ、しかし秀吉は、二度の朝鮮出兵を行います。1592年の文禄の役と、1597年の慶長の役で、国は疲弊しました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "文禄・慶長の役", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "文禄・慶長の役",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
-          "reading": "ええ、しかし、ひでとしは、にどの、ちょうせんしゅっぺいを、おこないます。1592ねんの、ぶんろくのえきと、1597ねんの、けいちょうのえきで、くには、ひへいしました。"
+          "reading": "ええ、しかし、ひでよしは、にどの、ちょうせんしゅっぺいを、おこないます。1592ねんの、ぶんろくのえきと、1597ねんの、けいちょうのえきで、くには、ひへいしました。"
         },
         {
           "speaker": "manabu",
@@ -487,23 +848,56 @@
       "visual": {
         "background": "bg_azuchi_momoyama",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "この時代の文化は、どんな感じなのだ?",
-          "overlay_text": [ { "text": "桃山文化", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "桃山文化",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "豪華絢爛の桃山文化です。城や金屏風に、ど派手な金色、天下取りのパワーそのものです。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "桃山文化", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "桃山文化",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ごうがけんらんの、ももやまぶんかです。しろや、きんびょうぶに、どはでな、きんいろ、てんかとりの、パワー、そのものです。"
         },
@@ -530,25 +924,58 @@
       "visual": {
         "background": "bg_azuchi_chado",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "茶の湯の先生は、だれなのだ?",
-          "overlay_text": [ { "text": "茶の湯と千利休", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "茶の湯と千利休",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "千利休です。信長・秀吉に仕えた茶頭で、わび茶をきわめた人物です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "千利休", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "千利休",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
-          "reading": "せんのりきゅうです。のぶなが・ひでとしに、つかえた、ちゃとうで、わびちゃを、きわめた、じんぶつです。"
+          "reading": "せんのりきゅうです。のぶなが・ひでよしに、つかえた、ちゃとうで、わびちゃを、きわめた、じんぶつです。"
         },
         {
           "speaker": "manabu",
@@ -573,21 +1000,46 @@
       "visual": {
         "background": "bg_azuchi_sunset",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "pan_l", "intensity": 1.0 }
+        "camera": {
+          "motion": "pan_l",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "その後の天下は、どうなるのだ?",
-          "overlay_text": [ { "text": "1598年 秀吉死去", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1598年 秀吉死去",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1598年、秀吉が亡くなり、天下は再びゆらぎます。実力者・徳川家康の台頭が、次の時代の中心です。",
-          "reading": "1598ねん、ひでとしが、なくなり、てんかは、ふたたび、ゆらぎます。じつりょくしゃ・とくがわいえやすの、とうとうが、つぎの、じだいの、ちゅうしんです。"
+          "reading": "1598ねん、ひでよしが、なくなり、てんかは、ふたたび、ゆらぎます。じつりょくしゃ・とくがわいえやすの、とうとうが、つぎの、じだいの、ちゅうしんです。"
         },
         {
           "speaker": "manabu",
@@ -596,7 +1048,13 @@
         {
           "speaker": "sensei",
           "text": "ええ、その答えは、第7話の江戸幕府で詳しくやります!まずは、今日のポイントまとめへ!",
-          "overlay_text": [ { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" } ]
+          "overlay_text": [
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -612,17 +1070,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "ここから受験ポイントのまとめ!まずは、信長の改革の流れ。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "信長の改革", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "信長の改革",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -637,11 +1114,26 @@
         }
       ],
       "exam_points": [
-        { "keyword": "桶狭間の戦い 1560年", "detail": "信長が今川義元を討ち取り、名を売る。" },
-        { "keyword": "天下布武 1567年〜", "detail": "稲葉山城を岐阜と改め、天下を武力で治める宣言。" },
-        { "keyword": "安土城 1576年", "detail": "琵琶湖畔の天主。石垣と白壁の当時最新の城。" },
-        { "keyword": "楽市楽座", "detail": "関所廃止・座の特権廃止で商人に自由な商売。" },
-        { "keyword": "長篠の戦い 1575年", "detail": "鉄砲隊を活用して武田の騎馬隊を破る(三段撃ちは諸説あり)。" }
+        {
+          "keyword": "桶狭間の戦い 1560年",
+          "detail": "信長が今川義元を討ち取り、名を売る。"
+        },
+        {
+          "keyword": "天下布武 1567年〜",
+          "detail": "稲葉山城を岐阜と改め、天下を武力で治める宣言。"
+        },
+        {
+          "keyword": "安土城 1576年",
+          "detail": "琵琶湖畔の天主。石垣と白壁の当時最新の城。"
+        },
+        {
+          "keyword": "楽市楽座",
+          "detail": "関所廃止・座の特権廃止で商人に自由な商売。"
+        },
+        {
+          "keyword": "長篠の戦い 1575年",
+          "detail": "鉄砲隊を活用して武田の騎馬隊を破る(三段撃ちは諸説あり)。"
+        }
       ]
     },
     {
@@ -651,17 +1143,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "後半は、秀吉の政治と文化です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "秀吉の政治", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "秀吉の政治",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -676,11 +1187,26 @@
         }
       ],
       "exam_points": [
-        { "keyword": "本能寺の変・山崎の戦い 1582年", "detail": "明智光秀の謀反→秀吉が光秀を討つ(13日天下)。" },
-        { "keyword": "大坂城 1583年", "detail": "秀吉の拠点。天下統一1590年(小田原降伏)で完了。" },
-        { "keyword": "太閤検地・刀狩", "detail": "石高制の確立と兵農分離。" },
-        { "keyword": "惣無事令・朝鮮出兵", "detail": "私戦禁止。文禄(1592)・慶長(1597)の役で国が疲弊。" },
-        { "keyword": "桃山文化", "detail": "豪華絢爛(城・金屏風)/千利休のわび茶。" }
+        {
+          "keyword": "本能寺の変・山崎の戦い 1582年",
+          "detail": "明智光秀の謀反→秀吉が光秀を討つ(13日天下)。"
+        },
+        {
+          "keyword": "大坂城 1583年",
+          "detail": "秀吉の拠点。天下統一1590年(小田原降伏)で完了。"
+        },
+        {
+          "keyword": "太閤検地・刀狩",
+          "detail": "石高制の確立と兵農分離。"
+        },
+        {
+          "keyword": "惣無事令・朝鮮出兵",
+          "detail": "私戦禁止。文禄(1592)・慶長(1597)の役で国が疲弊。"
+        },
+        {
+          "keyword": "桃山文化",
+          "detail": "豪華絢爛(城・金屏風)/千利休のわび茶。"
+        }
       ]
     },
     {
@@ -690,10 +1216,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -703,7 +1248,18 @@
         {
           "speaker": "sensei",
           "text": "1560年、織田信長が今川義元を討ち取った戦いは何でしょう?ア、桶狭間の戦い。イ、川中島の戦い。ウ、山崎の戦い。",
-          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第1問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 桶狭間の戦い / イ 川中島の戦い / ウ 山崎の戦い",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "1560ねん、のぶながが、いまがわよしもとを、うちとった、たたかいは、なんでしょう?ア、おけはざまの、たたかい。イ、かわじまの、たたかい。ウ、やまざきの、たたかい。"
         },
         {
@@ -724,10 +1280,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -737,7 +1312,18 @@
         {
           "speaker": "sensei",
           "text": "商人の商売を自由にした、信長の経済政策は何でしょう?ア、楽市楽座。イ、太閤検地。ウ、刀狩。",
-          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第2問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 楽市楽座 / イ 太閤検地 / ウ 刀狩",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "しょうにんの、しょうばいを、じゆうにした、のぶながの、けいざいせいさくは、なんでしょう?ア、らくいちらくざ。イ、たいこうけんち。ウ、かたながり。"
         },
         {
@@ -758,10 +1344,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -771,8 +1376,19 @@
         {
           "speaker": "sensei",
           "text": "秀吉が全国の田畑を測り、石高で国を測るようにした政策は?ア、刀狩。イ、太閤検地。ウ、惣無事令。",
-          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
-          "reading": "ひでとしが、ぜんこくの、たはたを、はかり、こくだかで、くにを、はかるようにした、せいさくは?ア、かたながり。イ、たいこうけんち。ウ、そうぶじれい。"
+          "overlay_text": [
+            {
+              "text": "クイズ 第3問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 刀狩 / イ 太閤検地 / ウ 惣無事令",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
+          "reading": "ひでよしが、ぜんこくの、たはたを、はかり、こくだかで、くにを、はかるようにした、せいさくは?ア、かたながり。イ、たいこうけんち。ウ、そうぶじれい。"
         },
         {
           "speaker": "manabu",
@@ -792,10 +1408,29 @@
       "visual": {
         "background": "bg_school_lab_evening",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -809,7 +1444,13 @@
         {
           "speaker": "sensei",
           "text": "次回第7話は、徳川家康の江戸幕府と鎖国。260年の平和の始まりです!",
-          "overlay_text": [ { "text": "次回 第7話 江戸", "style": "keyword_card", "motion": "pop_in" } ]
+          "overlay_text": [
+            {
+              "text": "次回 第7話 江戸",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -822,19 +1463,31 @@
   "quiz": [
     {
       "q": "1560年、織田信長が今川義元を討ち取った戦いは何でしょう?",
-      "choices": ["桶狭間の戦い", "川中島の戦い", "山崎の戦い"],
+      "choices": [
+        "桶狭間の戦い",
+        "川中島の戦い",
+        "山崎の戦い"
+      ],
       "answer": 0,
       "explain": "桶狭間の戦いで信長が義元を討ち取り、一躍天下に名を売りました。"
     },
     {
       "q": "商人の商売を自由にした、信長の経済政策は何でしょう?",
-      "choices": ["楽市楽座", "太閤検地", "刀狩"],
+      "choices": [
+        "楽市楽座",
+        "太閤検地",
+        "刀狩"
+      ],
       "answer": 0,
       "explain": "楽市楽座は関所と座の特権を廃し、商人の自由な商売をうたがった政策です。"
     },
     {
       "q": "秀吉が全国の田畑を測り、石高で国の力を測るようにした政策は何でしょう?",
-      "choices": ["刀狩", "太閤検地", "惣無事令"],
+      "choices": [
+        "刀狩",
+        "太閤検地",
+        "惣無事令"
+      ],
       "answer": 1,
       "explain": "太閤検地で田畑の広さと収穫量を測り、石高制が確立しました。"
     }

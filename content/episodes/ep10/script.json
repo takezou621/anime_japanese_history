@@ -21,7 +21,10 @@
       "アニメ日本史ラボ",
       "勉強動画"
     ],
-    "thumbnail": { "headline": "ついに完結!", "sub": "現代日本まで 必須整理" }
+    "thumbnail": {
+      "headline": "ついに完結!",
+      "sub": "現代日本まで 必須整理"
+    }
   },
   "characters": [
     {
@@ -49,16 +52,41 @@
       "visual": {
         "background": "bg_school_lab",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "こんにちは!ヒスト先生です。",
-          "overlay_text": [ { "text": "アニメ日本史ラボ 最終話", "style": "title_main", "motion": "fade_up" } ]
+          "overlay_text": [
+            {
+              "text": "アニメ日本史ラボ 最終話",
+              "style": "title_main",
+              "motion": "fade_up"
+            }
+          ]
         },
         {
           "speaker": "sensei",
@@ -86,25 +114,58 @@
       "visual": {
         "background": "bg_modern_minken",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "民権って、なんなのだ?",
-          "overlay_text": [ { "text": "自由民権運動", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "自由民権運動",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "国民の権利のことです。1874年の建白書から始まった運動で、板垣退助らが各地に社を作って広めました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "自由民権運動", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "自由民権運動",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
-          "reading": "こくみんの、けんりの、ことです。1874ねんの、けんぱくしょから、はじまった、うんどうで、いたがき、たいすくらが、かくちに、しゃを、つくって、ひろめました。"
+          "reading": "こくみんの、けんりの、ことです。1874ねんの、けんぱくしょから、はじまった、うんどうで、いたがき、たいすけらが、かくちに、しゃを、つくって、ひろめました。"
         },
         {
           "speaker": "manabu",
@@ -129,24 +190,61 @@
       "visual": {
         "background": "bg_modern_kenpo",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "その国会で使うルールは?",
-          "overlay_text": [ { "text": "1889年 大日本帝国憲法", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1889年 大日本帝国憲法",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1889年、大日本帝国憲法が発布されます。天皇が与える欽定憲法で、伊藤博文らがヨーロッパを調べて作りました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1889年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "大日本帝国憲法", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1889年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "大日本帝国憲法",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1889ねん、だいにほんていこくけんぽうが、はっぷされます。てんのうが、あたえる、きんていけんぽうで、いとうひろぶらが、ヨーロッパを、しらべて、つくりました。"
         },
@@ -173,24 +271,61 @@
       "visual": {
         "background": "bg_modern_nisshin",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "日本は、世界へ出たのだ?",
-          "overlay_text": [ { "text": "1894年 日清戦争", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1894年 日清戦争",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "ええ、朝鮮をめぐって中国と対立し、1894年に日清戦争が始まります。翌年、日本が勝って下関条約を結びました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1894年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "日清戦争", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1894年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "日清戦争",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ええ、ちょうせんを、めぐって、ちゅうごくと、たいりつし、1894ねんに、にっしんせんそうが、はじまります。よくねん、にほんが、かって、しものせきじょうやくを、むすびました。"
         },
@@ -217,24 +352,61 @@
       "visual": {
         "background": "bg_modern_nichiro",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.2 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.2
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "次は、ロシアなのだ?",
-          "overlay_text": [ { "text": "1904年 日露戦争", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1904年 日露戦争",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1904年、満洲と朝鮮の権益をめぐって、日露戦争が始まります。旅順の攻防など、激しい戦いが続きました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1904年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "日露戦争", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1904年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "日露戦争",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1904ねん、まんしゅうと、ちょうせんの、けんえきを、めぐって、にちろせんそうが、はじまります。りょじゅんの、こうぼうなど、はげしい、たたかいが、つづきました。"
         },
@@ -261,24 +433,61 @@
       "visual": {
         "background": "bg_modern_korea",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "その後の朝鮮は、どうなったのだ?",
-          "overlay_text": [ { "text": "1910年 韓国併合", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1910年 韓国併合",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "日本は影響を強め、1910年、韓国を併合します。韓国の人々の土地や自由が、大きく奪われました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1910年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "韓国併合", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1910年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "韓国併合",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "にほんは、えいきょうを、つよめ、1910ねん、かんこくを、へいごうします。かんこくの、ひとびとの、とちや、じゆうが、おおきく、うばわれました。"
         },
@@ -305,23 +514,56 @@
       "visual": {
         "background": "bg_modern_taisho",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "次は大正なのだ?平和な時代なのだ?",
-          "overlay_text": [ { "text": "大正デモクラシー", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "大正デモクラシー",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "大正にはデモクラシーの波が広がります。原敬内閣など政党内閣が生まれ、大衆社会が育ちました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "大正デモクラシー", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "大正デモクラシー",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "たいしょうには、デモクラシーの、なみが、ひろがります。はらたかし、ないかくなど、せいとうないかくが、うまれ、たいしゅうしゃかいが、そだちました。"
         },
@@ -348,24 +590,61 @@
       "visual": {
         "background": "bg_modern_futsusen",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "選挙は、広がったのだ?",
-          "overlay_text": [ { "text": "1925年 普通選挙法", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1925年 普通選挙法",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1925年、普通選挙法が成立します。納税の条件をなくして、25歳以上の男子全員に選挙権が与えられました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1925年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "普通選挙法", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1925年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "普通選挙法",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1925ねん、ふつうせんきょほうが、せいりつします。のうぜいの、じょうけんを、なくして、はたちごじっさいいじょうの、だんしぜんいんに、せんきょけんが、あたえられました。"
         },
@@ -392,24 +671,61 @@
       "visual": {
         "background": "bg_modern_panic",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "世界の経済は、どうなったのだ?",
-          "overlay_text": [ { "text": "1929年 世界恐慌", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1929年 世界恐慌",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1929年、アメリカから始まった世界恐慌が広がります。日本の輸出も落ち込み、失業者があふれました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1929年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "世界恐慌", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1929年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "世界恐慌",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1929ねん、アメリカから、はじまった、せかいこうきょうが、ひろがります。にほんの、ゆしゅつも、おちこみ、しつぎょうしゃが、あふれました。"
         },
@@ -436,24 +752,61 @@
       "visual": {
         "background": "bg_modern_manshu",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "そして、戦争へ向かったのだ?",
-          "overlay_text": [ { "text": "満洲事変・日中戦争", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "満洲事変・日中戦争",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1931年、関東軍が満洲事変を起こします。政府を無視した軍の行動で、日本は国際的な批判を受けました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1931年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "満洲事変", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1931年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "満洲事変",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1931ねん、かんとうぐんが、まんしゅうじへんを、おこします。せいふを、むしした、ぐんの、こうどうで、にほんは、こくさいてきな、ひはんを、うけました。"
         },
@@ -465,8 +818,16 @@
           "speaker": "sensei",
           "text": "ええ、1937年には日中戦争へ拡大し、戦争は長期化しました。国民のくらしも、どんどん窮迫します。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "日中戦争 1937年", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "日中戦争 1937年",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ええ、1937ねんには、にっちゅうせんそうへ、かくだいし、せんそうは、ちょうきかしました。こくみんの、くらしも、どんどん、きゅうはくします。"
         },
@@ -484,24 +845,61 @@
       "visual": {
         "background": "bg_modern_taiheiyo",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "そして、世界中が戦争なのだ?",
-          "overlay_text": [ { "text": "1941年 太平洋戦争", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1941年 太平洋戦争",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1940年、日本はドイツやイタリアと日独伊三国同盟を結びます。1941年、真珠湾を攻撃して、太平洋戦争が始まりました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1941年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "太平洋戦争", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1941年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "太平洋戦争",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1940ねん、にほんは、ドイツや、イタリアと、にちどくい、さんごくどうめいを、むすびます。1941ねん、しんじゅわんを、こうげきして、たいへいようせんそうが、はじまりました。"
         },
@@ -528,24 +926,61 @@
       "visual": {
         "background": "bg_modern_1945",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "戦争は、どう終わったのだ?",
-          "overlay_text": [ { "text": "1945年 ポツダム宣言受諾", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1945年 ポツダム宣言受諾",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1945年、アメリカなどがポツダム宣言を出し、日本はこれを受諾して降伏します。8月15日、戦争が終わりました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1945年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "ポツダム宣言", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1945年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "ポツダム宣言",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1945ねん、アメリカなどが、ポツダムせんげんを、だし、にほんは、これを、じゅだくして、こうふくします。はちがつ、じゅうごにち、せんそうが、おわりました。"
         },
@@ -572,24 +1007,61 @@
       "visual": {
         "background": "bg_modern_growth",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "manabu",
           "text": "新しい国の、ルールはなんなのだ?",
-          "overlay_text": [ { "text": "1947年 日本国憲法", "style": "era_badge", "motion": "slide_in_left" } ]
+          "overlay_text": [
+            {
+              "text": "1947年 日本国憲法",
+              "style": "era_badge",
+              "motion": "slide_in_left"
+            }
+          ]
         },
         {
           "speaker": "sensei",
           "text": "1947年、日本国憲法が施行されます。国民主権、基本的人権の尊重、戦争放棄の9条が、三大原則です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "1947年", "style": "year_number", "motion": "zoom_in" },
-            { "text": "日本国憲法", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "1947年",
+              "style": "year_number",
+              "motion": "zoom_in"
+            },
+            {
+              "text": "日本国憲法",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "1947ねん、にほんこくけんぽうが、せこうされます。こくみんしゅけん、きほんてきな、じんけんの、そんちょう、せんそうほうきの、きゅうじょうが、さんだいげんそくです。"
         },
@@ -601,8 +1073,16 @@
           "speaker": "sensei",
           "text": "ええ、その後は戦後復興をへて、高度経済成長の時代へ進みます。新幹線など、成長のシンボルが生まれました。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "高度経済成長", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "高度経済成長",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ],
           "reading": "ええ、そのあとは、せんごふっこうを、へて、こうどけいざいせいちょうの、じだいへ、すすみます。しんかんせんなど、せいちょうの、シンボルが、うまれました。"
         },
@@ -620,17 +1100,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "ここから受験ポイントのまとめ!まずは、憲法と戦争への道。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "憲法と戦争", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "憲法と戦争",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -645,11 +1144,26 @@
         }
       ],
       "exam_points": [
-        { "keyword": "自由民権運動", "detail": "1874年の建白書から始まり、国会開設を勝ち取る。" },
-        { "keyword": "大日本帝国憲法 1889年", "detail": "欽定憲法。1890年第1回帝国議会(選挙権は納税制限)。" },
-        { "keyword": "日清戦争 1894年", "detail": "勝利で下関条約。三国干渉で遼東半島返還。" },
-        { "keyword": "日露戦争 1904年", "detail": "ポーツマス条約。樺太南部・満洲鉄道権益、賠償金なし。" },
-        { "keyword": "韓国併合 1910年", "detail": "朝鮮の土地と自由を奪った事実を学び続ける。" }
+        {
+          "keyword": "自由民権運動",
+          "detail": "1874年の建白書から始まり、国会開設を勝ち取る。"
+        },
+        {
+          "keyword": "大日本帝国憲法 1889年",
+          "detail": "欽定憲法。1890年第1回帝国議会(選挙権は納税制限)。"
+        },
+        {
+          "keyword": "日清戦争 1894年",
+          "detail": "勝利で下関条約。三国干渉で遼東半島返還。"
+        },
+        {
+          "keyword": "日露戦争 1904年",
+          "detail": "ポーツマス条約。樺太南部・満洲鉄道権益、賠償金なし。"
+        },
+        {
+          "keyword": "韓国併合 1910年",
+          "detail": "朝鮮の土地と自由を奪った事実を学び続ける。"
+        }
       ]
     },
     {
@@ -659,17 +1173,36 @@
       "visual": {
         "background": "bg_timeline",
         "assets": [
-          { "name": "char_sensei", "pos": [1250, 380], "scale": 1.0, "motion": "slide_in_right" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1250,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
           "speaker": "sensei",
           "text": "後半は、民主化と戦争、そして戦後です。",
           "overlay_text": [
-            { "text": "ここが受験ポイント!", "style": "exam_banner", "motion": "slide_up" },
-            { "text": "民主化と戦争", "style": "keyword_card", "motion": "pop_in" }
+            {
+              "text": "ここが受験ポイント!",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "民主化と戦争",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
           ]
         },
         {
@@ -684,11 +1217,26 @@
         }
       ],
       "exam_points": [
-        { "keyword": "大正デモクラシー", "detail": "原敬内閣など政党内閣、大衆社会の成長。" },
-        { "keyword": "普通選挙法 1925年", "detail": "25歳以上の男子全員。治安維持法と同時成立。" },
-        { "keyword": "世界恐慌 1929年", "detail": "失業増加、軍と右派の力が強まる。" },
-        { "keyword": "満洲事変 1931年→太平洋戦争 1941年", "detail": "関東軍の独走、日中戦争(1937)へ拡大、真珠湾攻撃。" },
-        { "keyword": "ポツダム宣言受諾 1945年", "detail": "8月15日終戦。日本国憲法(1947)→高度経済成長。" }
+        {
+          "keyword": "大正デモクラシー",
+          "detail": "原敬内閣など政党内閣、大衆社会の成長。"
+        },
+        {
+          "keyword": "普通選挙法 1925年",
+          "detail": "25歳以上の男子全員。治安維持法と同時成立。"
+        },
+        {
+          "keyword": "世界恐慌 1929年",
+          "detail": "失業増加、軍と右派の力が強まる。"
+        },
+        {
+          "keyword": "満洲事変 1931年→太平洋戦争 1941年",
+          "detail": "関東軍の独走、日中戦争(1937)へ拡大、真珠湾攻撃。"
+        },
+        {
+          "keyword": "ポツダム宣言受諾 1945年",
+          "detail": "8月15日終戦。日本国憲法(1947)→高度経済成長。"
+        }
       ]
     },
     {
@@ -698,10 +1246,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -711,7 +1278,18 @@
         {
           "speaker": "sensei",
           "text": "1889年に発布された、日本で最初の近代憲法は何でしょう?ア、大日本帝国憲法。イ、日本国憲法。ウ、十七条憲法。",
-          "overlay_text": [ { "text": "クイズ 第1問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第1問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 大日本帝国憲法 / イ 日本国憲法 / ウ 十七条憲法",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "1889ねんに、はっぷされた、にほんで、さいしょの、きんだいけんぽうは、なんでしょう?ア、だいにほんていこくけんぽう。イ、にほんこくけんぽう。ウ、じゅうしちじょうけんぽう。"
         },
         {
@@ -732,10 +1310,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -745,7 +1342,18 @@
         {
           "speaker": "sensei",
           "text": "1941年、真珠湾攻撃から始まった戦争は何でしょう?ア、太平洋戦争。イ、日露戦争。ウ、日清戦争。",
-          "overlay_text": [ { "text": "クイズ 第2問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第2問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 太平洋戦争 / イ 日露戦争 / ウ 日清戦争",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "1941ねん、しんじゅわんこうげきから、はじまった、せんそうは、なんでしょう?ア、たいへいようせんそう。イ、にちろせんそう。ウ、にっしんせんそう。"
         },
         {
@@ -766,10 +1374,29 @@
       "visual": {
         "background": "bg_quiz_board",
         "assets": [
-          { "name": "char_sensei", "pos": [1400, 380], "scale": 1.0, "motion": "fade" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1400,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "fade"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_in", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_in",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -779,7 +1406,18 @@
         {
           "speaker": "sensei",
           "text": "1947年に施行された、国の最高法規は何でしょう?ア、日本国憲法。イ、大日本帝国憲法。ウ、御成敗式目。",
-          "overlay_text": [ { "text": "クイズ 第3問", "style": "exam_banner", "motion": "slide_up" } ],
+          "overlay_text": [
+            {
+              "text": "クイズ 第3問",
+              "style": "exam_banner",
+              "motion": "slide_up"
+            },
+            {
+              "text": "ア 日本国憲法 / イ 大日本帝国憲法 / ウ 御成敗式目",
+              "style": "quiz_choices",
+              "motion": "pop_in"
+            }
+          ],
           "reading": "1947ねんに、せこうされた、くにの、さいこうほうきは、なんでしょう?ア、にほんこくけんぽう。イ、だいにほんていこくけんぽう。ウ、ごせいばいしきもく。"
         },
         {
@@ -800,10 +1438,29 @@
       "visual": {
         "background": "bg_school_lab_evening",
         "assets": [
-          { "name": "char_sensei", "pos": [1450, 380], "scale": 1.0, "motion": "slide_in_right" },
-          { "name": "char_manabu", "pos": [330, 420], "scale": 1.0, "motion": "pop_in" }
+          {
+            "name": "char_sensei",
+            "pos": [
+              1450,
+              380
+            ],
+            "scale": 1.0,
+            "motion": "slide_in_right"
+          },
+          {
+            "name": "char_manabu",
+            "pos": [
+              330,
+              420
+            ],
+            "scale": 1.0,
+            "motion": "pop_in"
+          }
         ],
-        "camera": { "motion": "kenburns_out", "intensity": 1.0 }
+        "camera": {
+          "motion": "kenburns_out",
+          "intensity": 1.0
+        }
       },
       "beats": [
         {
@@ -817,7 +1474,13 @@
         {
           "speaker": "sensei",
           "text": "ええ、歴史は「なぜ」の連続です。この先も、好奇心でたどってみてください!",
-          "overlay_text": [ { "text": "全10話 完 ありがとう!", "style": "keyword_card", "motion": "pop_in" } ]
+          "overlay_text": [
+            {
+              "text": "全10話 完 ありがとう!",
+              "style": "keyword_card",
+              "motion": "pop_in"
+            }
+          ]
         },
         {
           "speaker": "manabu",
@@ -830,19 +1493,31 @@
   "quiz": [
     {
       "q": "1889年に発布された、日本で最初の近代憲法は何でしょう?",
-      "choices": ["大日本帝国憲法", "日本国憲法", "十七条憲法"],
+      "choices": [
+        "大日本帝国憲法",
+        "日本国憲法",
+        "十七条憲法"
+      ],
       "answer": 0,
       "explain": "大日本帝国憲法は1889年発布。日本国憲法は1947年施行です。"
     },
     {
       "q": "1941年、真珠湾攻撃から始まった戦争は何でしょう?",
-      "choices": ["太平洋戦争", "日露戦争", "日清戦争"],
+      "choices": [
+        "太平洋戦争",
+        "日露戦争",
+        "日清戦争"
+      ],
       "answer": 0,
       "explain": "太平洋戦争は1941年の真珠湾攻撃から始まり、1945年に終わりました。"
     },
     {
       "q": "1947年に施行された、国の最高法規は何でしょう?",
-      "choices": ["日本国憲法", "大日本帝国憲法", "御成敗式目"],
+      "choices": [
+        "日本国憲法",
+        "大日本帝国憲法",
+        "御成敗式目"
+      ],
       "answer": 0,
       "explain": "日本国憲法は国民主権・基本的人権・戦争放棄の三大原則です。"
     }
