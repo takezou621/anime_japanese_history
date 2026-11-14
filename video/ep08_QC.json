@@ -1,7 +1,7 @@
 {
   "episode": "ep08",
   "profile": "full",
-  "generated_at": "2026-11-14T13:17:58+00:00",
+  "generated_at": "2026-11-14T14:37:17+00:00",
   "video": "video/ep08_FINAL.mp4",
   "duration_sec": 549.679,
   "checks": {
@@ -93,7 +93,7 @@
       "start_time": "0.000000",
       "duration_ts": 8442880,
       "duration": "549.666667",
-      "bit_rate": "751944",
+      "bit_rate": "676044",
       "bits_per_raw_sample": "8",
       "nb_frames": "16490",
       "extradata_size": 48,
@@ -179,8 +179,8 @@
   ],
   "format": {
     "duration": "549.679000",
-    "size": "65558843",
-    "bit_rate": "954140"
+    "size": "60344191",
+    "bit_rate": "878246"
   },
   "pass": true
 }
