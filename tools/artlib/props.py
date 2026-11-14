@@ -2405,7 +2405,7 @@ def brick_building(g, x, y, s, w=200, floors=2, col=P.BRICK_RED, seed=0):
     # 白い帯と窓
     for f in range(floors):
         fy = y - bh + f * 90 * s + 26 * s
-        for wx in range(int(-bw * 0.62), int(bw * 0.63), 60):
+        for wx in range(int(-w * 0.62), int(w * 0.63), 60):
             g.rrect((x + wx * s, fy, x + wx * s + 34 * s, fy + 44 * s), 3 * s,
                     fill=(200, 216, 214), outline=shade(col, 0.6), owidth=2 * s)
             g.line([(x + wx * s + 17 * s, fy + 2 * s), (x + wx * s + 17 * s, fy + 42 * s)],
@@ -2419,7 +2419,7 @@ def steam_train(g, x, y, s, smoke=True, seed=0):
     # 線路
     rect(g, x - 700 * s, y, x + 900 * s, y + 14 * s, fill=(120, 104, 88))
     rect(g, x - 700 * s, y - 4 * s, x + 900 * s, y + 2 * s, fill=(84, 74, 64))
-    for k in range(int(1600 * s / 60)):
+    for k in range(int(1600 / 60)):
         px = x - 700 * s + k * 60 * s
         rect(g, px, y, px + 16 * s, y + 14 * s, fill=(96, 84, 70))
     # 機関車
@@ -2574,8 +2574,8 @@ def war_ruins(g, x, y, s, seed=0):
                    4.4 * s)
         for w_ in range(3):
             wx = px + rnd.uniform(10, 80) * s
-            wy = ground_y - rnd.uniform(20, ph - 16)
+            wy = ground_y - rnd.uniform(20 * s, ph - 16 * s)
             g.rrect((wx, wy, wx + 26 * s, wy + 18 * s), 2 * s, fill=(52, 50, 48))
     # 瓦礫
     speckle(g, (x - 430 * s, ground_y - 20 * s, x + 430 * s, ground_y + 10 * s), 130,
-            [(110, 106, 100), (130, 126, 120), (88, 86, 84)], r=(3, 8), seed=seed)
+            [(110, 106, 100), (130, 126, 120), (88, 86, 84)], r=(3 * s, 8 * s), seed=seed)
