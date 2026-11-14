@@ -56,7 +56,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from motion import FPS, MAIN_W, MAIN_H, kenburns_exprs, layer_motion, DEFAULT_MOTION_DUR
-from text_overlays import render_overlay, STYLES
+from text_overlays import render_overlay, render_quiz_board, render_subtitle_band, STYLES
 import make_subtitles
 import qc as qcmod
 import ai_segments
@@ -263,12 +263,47 @@ def _beat_times(scene: dict, ts: dict, scene_end: float,
 
 
 def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
-                 tmp_dir: Path, char_ids: list[str] | None = None) -> None:
-    """Populate span.layers (characters/props first, overlay_text on top)."""
+                 tmp_dir: Path, char_ids: list[str] | None = None,
+                 quiz_item: dict | None = None) -> None:
+    """Populate span.layers (quiz board -> characters/props -> overlay_text)."""
     beats = _beat_times(scene, ts, span.end, span.seg_start)
     vis = scene.get("visual", {}) or {}
     assets = vis.get("assets", []) or []
     char_ids = [c.lower() for c in (char_ids or [])]
+
+    # quiz board auto-fill (P2-2: ボード空欄問題) — under characters/overlays.
+    # Skipped when the writer already provides overlay_text (e.g. quiz_choices)
+    has_script_quiz_overlay = any(
+        b.get("overlay_text") for b in scene.get("beats", []))
+    if quiz_item and not has_script_quiz_overlay:
+        from text_overlays import render_quiz_board
+        q = quiz_item.get("q", "")
+        chs = [str(c) for c in quiz_item.get("choices", [])][:3]
+        ans = quiz_item.get("answer")
+        t0b = max(beats[0]["start"] if beats else 0.0, 0.0)
+        m0 = layer_motion("fade", t0b, 0.4, MAIN_W / 2, MAIN_H / 2,
+                          MAIN_W, MAIN_H)
+        f0 = list(m0["filters"])
+        ans_i = next((i for i, b in enumerate(scene.get("beats", []))
+                      if "正解" in b.get("text", "")), None)
+        t_ans = (max(beats[ans_i]["start"], 0.0)
+                 if ans_i is not None and ans_i < len(beats) else None)
+        if t_ans is not None:
+            f0.append(f"fade=t=out:st={max(t_ans - 0.25, 0):.3f}:d=0.25:alpha=1")
+        normal_png = tmp_dir / f"{span.sid}_quiz_board.png"
+        render_quiz_board(q, chs).save(normal_png)
+        span.layers.append(Layer(image=str(normal_png), filters=f0,
+                                 x="0", y="0", enable=m0["enable"],
+                                 desc=f"quiz_board@{t0b:.2f}s"))
+        if t_ans is not None and isinstance(ans, int) and 0 <= ans < len(chs):
+            ans_png = tmp_dir / f"{span.sid}_quiz_answer.png"
+            render_quiz_board(q, chs, highlight=ans).save(ans_png)
+            m1 = layer_motion("fade", t_ans, 0.35, MAIN_W / 2, MAIN_H / 2,
+                              MAIN_W, MAIN_H)
+            span.layers.append(Layer(image=str(ans_png), filters=m1["filters"],
+                                     x="0", y="0",
+                                     enable=f"gte(t,{t_ans - 1e-4:.4f})",
+                                     desc=f"quiz_answer@{t_ans:.2f}s"))
 
     # decide appear time per asset: match character id in asset name,
     # otherwise the first beat; stagger collisions by 0.25s
@@ -552,6 +587,8 @@ def main() -> int:
     ap.add_argument("--only-scenes", default=None,
                     help="comma separated scene ids to render")
     ap.add_argument("--keep-parts", action="store_true")
+    ap.add_argument("--no-quiz-overlay", action="store_true",
+                    help="disable quiz board auto-fill (P2-2)")
     ap.add_argument("--dry-plan", action="store_true")
     ap.add_argument("--ffmpeg", default=None)
     a = ap.parse_args()
@@ -584,13 +621,20 @@ def main() -> int:
                                     only or None, ep=ep, ai_manifest=ai_manifest)
 
     char_ids = [c.get("id", "") for c in script.get("characters", [])]
+    quiz_list = script.get("quiz", []) or []
+    quiz_ord = 0
     for sp in spans:
         scene = next(s for s in scenes_used if s["id"] == sp.sid)
         ts = next(s for s in timing["scenes"] if s["id"] == sp.sid)
         if a.dry_plan:
             sp.layers = []
             continue
-        scene_layers(sp, scene, ts, assets_dir, text_dir, char_ids)
+        quiz_item = None
+        if sp.section == "quiz" and not a.no_quiz_overlay:
+            if quiz_ord < len(quiz_list):
+                quiz_item = quiz_list[quiz_ord]
+            quiz_ord += 1
+        scene_layers(sp, scene, ts, assets_dir, text_dir, char_ids, quiz_item)
 
     total = spans[-1].end - spans[0].start
     print("\n[plan]")
@@ -655,7 +699,6 @@ def main() -> int:
 
     # subtitle readability band (lead feedback) under the burned text
     band_png = text_dir / "subtitle_band.png"
-    from text_overlays import render_subtitle_band
     render_subtitle_band().save(band_png)
 
     # final assembly
