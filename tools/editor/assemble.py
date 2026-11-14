@@ -613,12 +613,14 @@ def assemble_final(spans: list[Span], parts_dir: Path, ffmpeg: str,
     if band_png:
         cmd += ["-loop", "1", "-framerate", str(FPS), "-t",
                 f"{spans[-1].end + 1.0:.3f}", "-i", band_png]
-    # master encode spec (lead 2026-11-15): 35Mbps + bt709 + TP limiter
+    # master encode spec (lead 2026-11-15): 35Mbps floor + bt709 + TP limiter
+    # (minrate=35M keeps measured bitrate >= target on static animation)
     # (alimiter 0.94 = -0.55dBTP ceiling guards against AAC TP overshoot)
     cmd += ["-/filter_complex", str(fscript),
             "-map", "[v]", "-map", f"{len(spans)}:a",
             "-c:v", "libx264", "-preset", "slow",
-            "-b:v", "35M", "-maxrate", "40M", "-bufsize", "70M",
+            "-b:v", "35M", "-minrate", "35M",
+            "-maxrate", "40M", "-bufsize", "70M",
             "-pix_fmt", "yuv420p", "-r", str(FPS), "-fps_mode", "cfr",
             "-colorspace", "bt709", "-color_primaries", "bt709",
             "-color_trc", "bt709", "-color_range", "tv",
