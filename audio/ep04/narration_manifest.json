@@ -205,7 +205,7 @@
       "speaker": "sensei"
     },
     "narration/s10_b04.wav": {
-      "tts_text": "もうこうしゅうらいえましって、このえなのだ!?",
+      "tts_text": "もうこうしゅうらいえことばって、このえなのだ!?",
       "speaker": "manabu"
     },
     "narration/s10_b05.wav": {
@@ -366,6 +366,6 @@
     }
   },
   "dict_sha256": "068183c8b3f1",
-  "generated_at": "2026-11-15T04:14:14",
+  "generated_at": "2026-11-15T07:33:56",
   "voice_sha256": "4a55213461bf"
 }

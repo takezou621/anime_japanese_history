@@ -39,7 +39,7 @@ SIZE = 52          # lead feedback: 42 -> 52
 OUTLINE = 4
 SHADOW = 3
 SHADOW_ALPHA = 0x46  # 70
-MARGIN_V = 58       # keeps 52px text centered inside the bottom band
+MARGIN_V = 79       # +21 (qa-visual): subtitle bottom lands in the 90px safe area
 
 _HEADER = """[Script Info]
 ScriptType: v4.00+
@@ -125,27 +125,43 @@ def bunsetsu_starts(text: str) -> list[tuple[int, bool, bool]]:
 
 
 def _best_cut(text: str, limit: int, starts: list[tuple[int, bool, bool]],
-              min_keep: int = 6, overflow: int = 4) -> int:
-    """Best split offset for text. Priority: strong boundary <= limit >
-    strong <= limit+overflow > weak non-proper <= limit > weak non-proper
-    <= limit+overflow > weak (proper) <= limit > punctuation <= limit >
-    hard cut at limit. Returns [min_keep, len(text)]."""
+              min_keep: int = 6, max_line: int = 16) -> int:
+    """Best split offset for text (qa-visual P2: 文節境界強化).
+
+    Search window is extended to max_line (16) so compound words that sudachi
+    splits (数十|軒, でし|ょう) stay whole: prefer in-budget boundaries, then
+    the NEAREST over-budget boundary <= max_line, never a proper-noun
+    junction unless nothing else exists.
+
+    Priority: strong<=limit > weak-non-proper<=limit > strong<=max_line >
+    weak-non-proper<=max_line > punctuation<=limit > weak-proper<=max_line >
+    hard cut at limit.
+    """
     limit = min(limit, len(text))
-    tiers = (
-        [o for o, s, pj in starts if s and min_keep <= o <= limit],
-        [o for o, s, pj in starts if s and limit < o <= limit + overflow],
-        [o for o, s, pj in starts if not s and not pj
-         and min_keep <= o <= limit],
-        [o for o, s, pj in starts if not s and not pj
-         and limit < o <= limit + overflow],
-        [o for o, s, pj in starts if not s and pj and min_keep <= o <= limit],
-    )
-    for tier in tiers:
+    max_line = min(max_line, len(text))
+    strong_in, weak_in = [], []
+    strong_over, weak_over, proper = [], [], []
+    for o, s, pj in starts:
+        if not (min_keep <= o <= max_line):
+            continue
+        if s:
+            (strong_in if o <= limit else strong_over).append(o)
+        elif pj:
+            proper.append(o)
+        else:
+            (weak_in if o <= limit else weak_over).append(o)
+    for tier in (strong_in, weak_in):
         if tier:
             return max(tier)
+    if strong_over:
+        return min(strong_over)  # nearest over-budget bunsetsu
     for j in range(limit, min_keep - 1, -1):
         if text[j - 1] in _SENT_END + "、」』）":
             return j
+    if weak_over:
+        return min(weak_over)
+    if proper:
+        return max(proper)
     return limit
 
 
@@ -295,33 +311,31 @@ def _matching_closer(text: str, j: int) -> int:
 
 def _wrap_2lines(text: str, first_budget: int,
                  starts: list[tuple[int, bool, bool]] | None = None) -> str:
-    """Wrap a chunk to <=2 lines with \\N (T3: 1行13-16字・最大2行).
+    """Wrap a chunk to <=2 lines (T3: 1行13-16字・最大2行).
 
-    Split preference: bunsetsu boundary (sudachi) > punctuation > budget cut.
-    If the cut lands inside an unmatched 「…」 bracket, the cut moves to just
-    after the closer (quote kept intact when it fits the screen) or just
-    before the opener."""
-    if len(text) <= max(first_budget, WRAP + 6):
-        return text  # single line fits the screen; no split -> no bad cuts
+    Chunks <= WRAP stay on one line. Longer chunks split at the bunsetsu
+    boundary nearest the midpoint (balanced), never mid-compound; a cut that
+    lands inside an unmatched 「…」 relocates past the closer (or just before
+    the opener for long quotes)."""
+    if len(text) <= WRAP:
+        return text
     starts = sorted(starts or [])
-    if starts:
-        cut = _best_cut(text, first_budget, starts, min_keep=8)
-    else:
-        cut = 0
-        for j in range(first_budget, 0, -1):
-            if text[j - 1] in _BREAK_AFTER:
-                cut = j
-                break
-        cut = cut or first_budget
+    # balanced midpoint, nudged down for the speaker label on line 1
+    target = max((len(text) + 1) // 2 - (first_budget - 8), 6)
+    limit = min(max(target, 8), len(text) - 6)
+    cut = _best_cut(text, limit, starts, min_keep=6)
     # bracket integrity: a cut inside an unmatched opener relocates
     j = _unmatched_opener_pos(text[:cut])
     if j != -1:
         closer = _matching_closer(text, j)
         if closer != -1 and closer <= WRAP + 10:
-            cut = closer                      # quote fits: keep it whole
+            cut = closer
         else:
-            cut = j                           # split before the opener
+            cut = j
     line1, line2 = text[:cut], text[cut:]
+    while line1 and line1[-1] in _OPENERS:
+        line2 = line1[-1] + line2
+        line1 = line1[:-1]
     lines = [ln for ln in (line1, line2) if ln]
     lines = _fix_line_starts(lines)
     lines = [ln for ln in lines if ln]
