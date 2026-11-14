@@ -32,7 +32,7 @@ import argparse
 import json
 import re
 
-WRAP = 22          # max chars per line (full-width)
+WRAP = 16          # max chars per line (T3: 1行13-16字・最大2行)
 MAX_LINES = 2      # max lines per subtitle event
 FONT = "Noto Sans JP"
 SIZE = 52          # lead feedback: 42 -> 52
@@ -91,47 +91,58 @@ def _get_tokenizer():
     return _tokenizer
 
 
-def bunsetsu_starts(text: str) -> list[tuple[int, bool]]:
-    """(offset, strong) where a bunsetsu starts. strong=False marks junctions
-    that are morpheme boundaries but bad cut points (noun-noun compounds like
-    縄文|時代, or before suffixes like 645|年)."""
+def bunsetsu_starts(text: str) -> list[tuple[int, bool, bool]]:
+    """(offset, strong, proper_junction) where a bunsetsu starts.
+
+    strong=False marks junctions that are morpheme boundaries but risky cut
+    points (noun compounds 縄文|時代, before suffixes 645|年).
+    proper_junction=True marks noun junctions touching a 固有名詞 (平城|上皇)
+    — the worst cut points, only used as a last resort."""
     tk = _get_tokenizer()
     if not tk:
         return []
     try:
-        marks: list[tuple[int, bool, str, str]] = []
+        marks: list[tuple[int, bool, bool]] = []
         pos = 0
-        prev_pos1 = ""
+        prev_pos = ("", "")
         for m in tk.tokenize(text):
-            pos_info = m.part_of_speech()
-            pos1 = pos_info[0] if isinstance(pos_info, (list, tuple)) \
-                else str(pos_info)
+            pi = m.part_of_speech()
+            pos1, pos2 = (pi[0], pi[1]) if isinstance(pi, (list, tuple)) \
+                else (str(pi), "")
             if pos1 not in ("助詞", "助動詞") and not pos1.startswith("補助記号"):
-                strong = not (pos1 in ("接尾", "数詞") or
-                              prev_pos1 in ("接頭辞", "数詞") or
-                              (prev_pos1 == "名詞" and pos1 == "名詞"))
-                marks.append((pos, strong, pos1, prev_pos1))
-                prev_pos1 = pos1
+                strong = not (pos1 in ("接尾", "数詞", "助動詞") or
+                              prev_pos[0] in ("接頭辞", "数詞") or
+                              (prev_pos[0] == "名詞" and pos1 == "名詞"))
+                proper = ("固有" in pos2 or "固有" in prev_pos[1]) \
+                    and pos1 == "名詞" and prev_pos[0] == "名詞"
+                marks.append((pos, strong, proper))
+                prev_pos = (pos1, pos2)
             pos += len(m.surface())
-        # (offset, strong) only — keep the API small
-        return [(o, s) for o, s, _p1, _pp in marks]
+        return marks
     except Exception as exc:  # pragma: no cover
         print(f"[subtitles] bunsetsu analysis failed ({exc}); char fallback")
         return []
 
 
-def _best_cut(text: str, limit: int, starts: list[tuple[int, bool]],
-              min_keep: int = 6) -> int:
-    """Best split offset <= limit for text. Preference: strong bunsetsu
-    boundary > weak boundary > punctuation > hard cut. Returns an offset in
-    [min_keep, len(text)]."""
+def _best_cut(text: str, limit: int, starts: list[tuple[int, bool, bool]],
+              min_keep: int = 6, overflow: int = 4) -> int:
+    """Best split offset for text. Priority: strong boundary <= limit >
+    strong <= limit+overflow > weak non-proper <= limit > weak non-proper
+    <= limit+overflow > weak (proper) <= limit > punctuation <= limit >
+    hard cut at limit. Returns [min_keep, len(text)]."""
     limit = min(limit, len(text))
-    strong = [o for o, s in starts if s and min_keep <= o <= limit]
-    if strong:
-        return max(strong)
-    weak = [o for o, s in starts if not s and min_keep <= o <= limit]
-    if weak:
-        return max(weak)
+    tiers = (
+        [o for o, s, pj in starts if s and min_keep <= o <= limit],
+        [o for o, s, pj in starts if s and limit < o <= limit + overflow],
+        [o for o, s, pj in starts if not s and not pj
+         and min_keep <= o <= limit],
+        [o for o, s, pj in starts if not s and not pj
+         and limit < o <= limit + overflow],
+        [o for o, s, pj in starts if not s and pj and min_keep <= o <= limit],
+    )
+    for tier in tiers:
+        if tier:
+            return max(tier)
     for j in range(limit, min_keep - 1, -1):
         if text[j - 1] in _SENT_END + "、」』）":
             return j
@@ -172,7 +183,7 @@ def _fix_chunk_boundaries(chunks: list[str]) -> list[str]:
                 nxt = nxt[1:]
                 changed = True
             j = _unmatched_opener_pos(c)
-            if j != -1:
+            if j != -1 and len(c) - j <= WRAP:
                 nxt = c[j:] + nxt
                 c = c[:j]
                 changed = True
@@ -226,7 +237,7 @@ def _split_sentences(text: str, capacity: int,
                 sent_cut = j + 1
         # piece fills capacity and no sentence end -> bunsetsu cut
         if room >= capacity and sent_cut < int(capacity * 0.4):
-            sub_starts = [(o - pos, s) for o, s in starts
+            sub_starts = [(o - pos, s, pj) for o, s, pj in starts
                           if pos < o <= pos + room]
             sent_cut = _best_cut(piece, capacity, sub_starts)
         if sent_cut <= 0:
@@ -261,16 +272,37 @@ def _fix_line_starts(lines: list[str]) -> list[str]:
 _BREAK_AFTER = "、。！？…!?）」』,:;・"
 
 
-def _wrap_2lines(text: str, first_budget: int,
-                 starts: list[int] | None = None) -> str:
-    """Wrap a chunk to <=2 lines with \\N (lead: 22 chars/line manual wrap).
+_OPENER_TO_CLOSER = {"「": "」", "（": "）", "《": "》", "『": "』"}
 
-    Line 1 budget is smaller when a speaker label is prefixed. Split point
-    preference: bunsetsu boundary (sudachi) > sentence punctuation > hard cut
-    (qa_visual P2-1: 単語途中分割の解消).
-    """
-    if len(text) <= first_budget:
-        return text
+
+def _matching_closer(text: str, j: int) -> int:
+    """Position AFTER the closer matching the opener at text[j] (-1 if none)."""
+    op = text[j]
+    cl = _OPENER_TO_CLOSER.get(op)
+    if not cl:
+        return -1
+    depth = 0
+    for k in range(j, len(text)):
+        ch = text[k]
+        if ch == op:
+            depth += 1
+        elif ch == cl:
+            depth -= 1
+            if depth == 0:
+                return k + 1
+    return -1
+
+
+def _wrap_2lines(text: str, first_budget: int,
+                 starts: list[tuple[int, bool, bool]] | None = None) -> str:
+    """Wrap a chunk to <=2 lines with \\N (T3: 1行13-16字・最大2行).
+
+    Split preference: bunsetsu boundary (sudachi) > punctuation > budget cut.
+    If the cut lands inside an unmatched 「…」 bracket, the cut moves to just
+    after the closer (quote kept intact when it fits the screen) or just
+    before the opener."""
+    if len(text) <= max(first_budget, WRAP + 6):
+        return text  # single line fits the screen; no split -> no bad cuts
     starts = sorted(starts or [])
     if starts:
         cut = _best_cut(text, first_budget, starts, min_keep=8)
@@ -280,12 +312,16 @@ def _wrap_2lines(text: str, first_budget: int,
             if text[j - 1] in _BREAK_AFTER:
                 cut = j
                 break
-    line1 = text[:cut] or text[:first_budget]
-    line2 = text[len(line1):]
-    # a line must not END with an opening bracket (push it to the next line)
-    while line1 and line1[-1] in _OPENERS:
-        line2 = line1[-1] + line2
-        line1 = line1[:-1]
+        cut = cut or first_budget
+    # bracket integrity: a cut inside an unmatched opener relocates
+    j = _unmatched_opener_pos(text[:cut])
+    if j != -1:
+        closer = _matching_closer(text, j)
+        if closer != -1 and closer <= WRAP + 10:
+            cut = closer                      # quote fits: keep it whole
+        else:
+            cut = j                           # split before the opener
+    line1, line2 = text[:cut], text[cut:]
     lines = [ln for ln in (line1, line2) if ln]
     lines = _fix_line_starts(lines)
     lines = [ln for ln in lines if ln]
@@ -380,7 +416,7 @@ def event_to_dialogues(ev: dict) -> list[tuple[float, float, str]]:
     """One event -> list of (start, end, ass_text) sub-events (max 2 lines each)."""
     label = _sanitize(ev.get("label") or "")
     prefix = f"{label}: " if label else ""
-    first_budget = max(WRAP - len(prefix), 8)
+    first_budget = max(WRAP - len(prefix), 6)  # label eats line-1 budget
     capacity = first_budget + WRAP  # 2 lines per event
     chunks = _fix_chunk_boundaries(
         _split_sentences(_sanitize(ev["text"]), capacity)) or [""]
