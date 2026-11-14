@@ -22,7 +22,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageOps
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PARTS = REPO_ROOT / "tools" / "peeps" / "parts"
@@ -30,11 +30,14 @@ INK = "#26282e"          # 線画 (STYLE_GUIDE テキスト色)
 HEAD_FILL = "#fffdf7"    # 頭部/肌ベース (STYLE_GUIDE 温かい白)
 W, H = 900, 1400
 SS = 2                   # スーパーサンプリング
-OVERLAP = 40             # 頭の顎を胴体の襟に重ねるpx
+OVERLAP = 110            # 頭の顎を胴体の襟に重ねるpx (40では首元の柱が露出して顔が浮いた)
 HEAD_SCALE = 1.1         # 頭部拡大 (ポーズの胴体が大きめのため)
 
 CHARACTERS = {
     "char_sensei": {
+        # 配置は全話で右側固定 (script.json 実測: 右190回/左0回)。
+        # 素材の顔は右向きのため、左の相方と向き合うよう左右反転する
+        "flip": True,
         "head_scale": HEAD_SCALE,
         "standing_pose": "ShirtPantsWB",   # 藍シャツ+パンツ 全身
         "bust_pose": "pose_ButtonShirt",
@@ -154,12 +157,85 @@ def bbox_of(img: Image.Image):
 
 
 def place_on_canvas(img: Image.Image) -> Image.Image:
-    """全身キャラを 900x1400 キャンバスに縦フィット (下端=足) で配置。"""
-    scale = 1380 / img.height
-    scaled = img.resize((int(img.width * scale), 1380), Image.LANCZOS)
+    """全身キャラを 900x1400 キャンバスに縦フィット (下端=足) で配置。
+
+    旧実装は SS 適用後のキャンバス (2800px) に対して最終解像度の
+    1380px で拡縮していたため、キャラが縦半分・中央浮きになっていた。
+    """
+    target_h = (H - 20) * SS
+    scale = target_h / img.height
+    scaled = img.resize((int(img.width * scale), target_h), Image.LANCZOS)
     canvas = Image.new("RGBA", (W * SS, H * SS), (0, 0, 0, 0))
-    canvas.alpha_composite(scaled, ((W * SS - scaled.width) // 2, (H * SS - 1380) // 2))
+    canvas.alpha_composite(scaled, ((W * SS - scaled.width) // 2,
+                                    H * SS - target_h - 10 * SS))
     return canvas.resize((W, H), Image.LANCZOS)
+
+
+def topmost_center(img: Image.Image):
+    """最上部の不透明行の中心xとそのyを返す (バストポーズの首アンカー)。"""
+    a = img.getchannel("A")
+    w, h = img.size
+    px = a.load()
+    for y in range(h):
+        xs = [x for x in range(w) if px[x, y] > 10]
+        if len(xs) >= 3:
+            return (xs[0] + xs[-1]) / 2, y
+    return w / 2, 0
+
+
+def compose_bust(char: dict) -> Image.Image:
+    """バストアップを 900x1400 キャンバスに生成 (計測アラインメント)。
+
+    旧実装 (build_head_svg_bust) は全身用の固定オフセット
+    translate(225 0) と HEAD_SCALE=1.1 を流用していたため、肩幅の広い
+    バストポーズでは巨大な顔が胸の上に乗り、位置も左へずれていた。
+    ここではポーズと頭部を別々にレンダリングして実測し、
+      - 頭の幅 = ポーズ肩幅の 44%
+      - 顎の位置 = ポーズ上端 + ポーズ高の 16% (襟に食い込ませる)
+      - 頭の水平中心 = ポーズ首アンカー (最上部行) の中心
+    で合成し、900x1400 キャンバスへ正規化する。
+    """
+    ink = INK
+    hf = char["head"]
+    RW = 1700  # viewBox 850x1200 を 2 倍解像度でレンダリング
+    pose = render_png(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 1200"><g>'
+        + CP_load(char["bust_pose"], ink, char["clothes"]) + "</g></svg>",
+        work_png(f"bust_{char['_tag']}_pose.png"), RW)
+    head = render_png(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 1200">'
+        '<g transform="translate(225 0)">'
+        + CP_load(char["hair"], ink, hf)
+        + '<g transform="translate(159 186)">' + CP_load(char["face"], ink, hf) + "</g>"
+        + '<g transform="translate(47 241)">'
+        + (CP_load(char["acc"], ink, hf) if char["acc"] else "") + "</g>"
+        + "</g></svg>",
+        work_png(f"bust_{char['_tag']}_head.png"), RW)
+    pb = pose.getbbox()
+    hb = head.getbbox()
+    neck_cx, _neck_top = topmost_center(pose)
+    pose_w = pb[2] - pb[0]
+    pose_h = pb[3] - pb[1]
+    head_crop = head.crop(hb)
+    k = (0.44 * pose_w) / head_crop.width
+    head_s = head_crop.resize(
+        (max(1, int(head_crop.width * k)), max(1, int(head_crop.height * k))),
+        Image.LANCZOS)
+    chin_y = pb[1] + 0.16 * pose_h
+    # 頭はポーズの上端より上にはみ出すので、頭の高さ分の余白を持つ
+    # キャンバスにポーズを置いてから合成する (余白なしだと頭頂が切れる)
+    margin_top = head_s.height + 20
+    canvas = Image.new("RGBA", (pose.width, pose.height + margin_top), (0, 0, 0, 0))
+    canvas.alpha_composite(pose, (0, margin_top))
+    canvas.alpha_composite(
+        head_s, (int(neck_cx - head_s.width / 2),
+                 int(margin_top + chin_y - head_s.height)))
+    fig = canvas.crop(canvas.getbbox())
+    s2 = min((W * SS * 0.94) / fig.width, (H * SS * 0.75) / fig.height)
+    fig = fig.resize((int(fig.width * s2), int(fig.height * s2)), Image.LANCZOS)
+    out = Image.new("RGBA", (W * SS, H * SS), (0, 0, 0, 0))
+    out.alpha_composite(fig, ((W * SS - fig.width) // 2, 40 * SS))
+    return out.resize((W, H), Image.LANCZOS)
 
 
 def main(argv=None):
@@ -177,16 +253,18 @@ def main(argv=None):
         if a.mode == "fullbody":
             full = compose_fullbody(char)
             canvas = place_on_canvas(full)
+            if char.get("flip"):
+                canvas = ImageOps.mirror(canvas)
             out = out_dir / f"{cid}.png"
             canvas.save(out, "PNG")
             print(f"saved: {out}")
         else:
-            svg = build_head_svg_bust(char)
-            img = render_png(
-                svg.replace('viewBox="0 0 850 1200"', 'viewBox="0 0 850 1200"'), 
-                work_png(f"bust_{cid}.png"), 1800)
-            img.save(out_dir / f"{cid}_bust.png", "PNG")
-            print(f"saved: {out_dir / f'{cid}_bust.png'}")
+            bust = compose_bust(char)
+            if char.get("flip"):
+                bust = ImageOps.mirror(bust)
+            out = out_dir / f"{cid}_bust.png"
+            bust.save(out, "PNG")
+            print(f"saved: {out}")
     return 0
 
 
