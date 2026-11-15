@@ -283,7 +283,7 @@ def yayoi_pot(g, x, y, s, body=(214, 176, 130), seed=0):
 
 
 def dotaku(g, x, y, s, bronze=(122, 150, 118), pat=None, seed=0):
-    """銅鐸. s=1 で高さ約 250px. y=下端."""
+    """銅鐸 (T10改修: 青銅グラデ+流水紋+立体鈕). s=1 で高さ約 250px. y=下端."""
     pat = pat or shade(bronze, 0.68)
     h = 230 * s
     tw, mw, bw = 30 * s, 56 * s, 44 * s
@@ -293,30 +293,54 @@ def dotaku(g, x, y, s, bronze=(122, 150, 118), pat=None, seed=0):
                    (x - bw, y - h * 0.03), 8))
     right = [(2 * x - px, py) for (px, py) in reversed(left)]
     g.poly(left + right, fill=bronze, outline=shade(bronze, 0.6), owidth=2.6 * s)
-    for bx in (-0.5, 0.0, 0.5):
-        xx = x + bx * mw * s
-        g.line([(xx, y - h * 0.86), (xx, y - h * 0.12)], pat, 5 * s)
+    # T10: 青銅の縦グラデ (上=明・下=暗) を本体形状でクリップ
+    from .canvas import gradient as _gr
+    from .canvas import paste_masked as _pm
+    body_lay = Layer(int(mw * 2.4 * s), int(h * 1.05 * s), g.ss,
+                     ox=x - mw * 1.2 * s, oy=y - h)
+    grad = _gr((body_lay.img.width, body_lay.img.height),
+               [(0, tint(bronze, 0.16)), (0.55, bronze), (1, shade(bronze, 0.72))], "v")
+    mask = Image.new("L", body_lay.img.size, 0)
+    md = ImageDraw.Draw(mask)
+    md.polygon([((px - body_lay.ox) * g.ss, (py - body_lay.oy) * g.ss)
+                for (px, py) in left + right], fill=255)
+    body_lay.img.paste(grad, (0, 0), mask)
+    g.img.alpha_composite(body_lay.img,
+                          (int(body_lay.ox * g.ss), int(body_lay.oy * g.ss)))
+    # 流水紋 (中央帯に渦巻き風の流れる曲線)
+    for row, yy in enumerate((0.66, 0.52, 0.38)):
+        base_y = y - h * yy
+        pts = []
+        for k in range(19):
+            t = k / 18
+            pts.append((x - mw * 0.72 + t * mw * 1.44,
+                        base_y + math.sin(t * math.tau * 1.5 + row) * 6 * s))
+        g.line(pts, pat, 3.4 * s)
+        for k in range(0, 19, 6):
+            t = k / 18
+            px2 = x - mw * 0.72 + t * mw * 1.44
+            py2 = base_y + math.sin(t * math.tau * 1.5 + row) * 6 * s
+            g.circle(px2, py2, 2.6 * s, fill=tint(bronze, 0.22))
+    # 袈裟襷の突起
     for ty in (0.72, 0.48):
         for bx in (-0.5, 0.0, 0.5):
             xx = x + bx * mw * s
             yy = y - h * ty
-            g.circle(xx, yy, 7 * s, outline=pat, owidth=2.4 * s)
+            g.circle(xx, yy, 7 * s, fill=tint(bronze, 0.1),
+                     outline=pat, owidth=2.6 * s)
             g.circle(xx, yy, 2.6 * s, fill=pat)
-    # 釣手 (横棒) と鈕
+    # 釣手 (横棒) と立体鈕 (ふたつの環)
     g.rrect((x - tw - 16 * s, y - h - 9 * s, x + tw + 16 * s, y - h + 5 * s),
             7 * s, fill=shade(bronze, 0.72))
     for px in (-1, 1):
-        g.rrect((x + px * (tw + 20) * s - 10 * s, y - h - 4 * s,
-                 x + px * (tw + 20) * s + 10 * s, y - h + 8 * s), 6 * s,
-                fill=shade(bronze, 0.66))
+        gx = x + px * (tw + 20) * s
+        g.rrect((gx - 10 * s, y - h - 4 * s, gx + 10 * s, y - h + 8 * s), 6 * s,
+                fill=shade(bronze, 0.66), outline=shade(bronze, 0.5), owidth=2 * s)
+        g.ellipse((gx - 7 * s, y - h - 1 * s, gx - 1 * s, y - h + 5 * s),
+                  fill=tint(bronze, 0.25))
+    # ハイライト (縦の照り)
     g.line([(x - mw * 0.55, y - h * 0.7), (x - mw * 0.45, y - h * 0.25)],
            with_alpha((240, 250, 235), 90), 5 * s)
-    # T10: 緑青の質感
-    rnd_p = random.Random(seed)
-    for _ in range(5):
-        px = x + rnd_p.uniform(-mw * 0.7, mw * 0.7) * 0.9
-        py = y - h * rnd_p.uniform(0.15, 0.8)
-        g.circle(px, py, rnd_p.uniform(3, 6) * s, fill=with_alpha((96, 130, 108), 110))
 
 
 def haniwa(g, x, y, s, clay=None, face=True, hat=True, seed=0):
