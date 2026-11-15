@@ -1,7 +1,7 @@
 {
   "episode": "ep06",
   "profile": "full",
-  "generated_at": "2026-11-15T05:00:51+00:00",
+  "generated_at": "2026-11-15T07:04:12+00:00",
   "video": "video/ep06_FINAL.mp4",
   "duration_sec": 524.3,
   "checks": {
@@ -202,7 +202,7 @@
   ],
   "format": {
     "duration": "524.300000",
-    "size": "2307050362",
+    "size": "2307050388",
     "bit_rate": "35201989"
   },
   "pass": true

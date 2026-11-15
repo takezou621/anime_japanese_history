@@ -1,7 +1,7 @@
 {
   "episode": "ep05",
   "profile": "full",
-  "generated_at": "2026-11-15T04:52:14+00:00",
+  "generated_at": "2026-11-15T06:50:11+00:00",
   "video": "video/ep05_FINAL.mp4",
   "duration_sec": 511.433,
   "checks": {
@@ -67,7 +67,7 @@
       "pass": true,
       "warn": false,
       "value": {
-        "bit_rate": 35201730,
+        "bit_rate": 35201726,
         "mbps": 35.2,
         "target_mbps": 35.0,
         "maxrate_mbps": 40.0
@@ -202,8 +202,8 @@
   ],
   "format": {
     "duration": "511.433333",
-    "size": "2250417304",
-    "bit_rate": "35201730"
+    "size": "2250417060",
+    "bit_rate": "35201726"
   },
   "pass": true
 }

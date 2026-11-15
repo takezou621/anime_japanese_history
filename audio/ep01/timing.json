@@ -7,7 +7,7 @@
     "section": 0.9,
     "tail": 0.7
   },
-  "total_duration": 571.098,
+  "total_duration": 603.433,
   "scenes": [
     {
       "id": "s01",
@@ -53,34 +53,76 @@
           "speaker": "sensei",
           "wav": "narration/s02_b01.wav",
           "start": 19.445,
-          "duration": 5.472,
-          "text": "何万年も前の氷河の時代には、もう日本に人が住んでいました。これが旧石器時代です。"
+          "duration": 3.925,
+          "text": "何万年も前の氷河の時代には、もう日本に人が住んでいました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s02_b02.wav",
-          "start": 25.367,
+          "start": 23.82,
+          "duration": 1.504,
+          "text": "これが旧石器時代です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b03.wav",
+          "start": 25.774,
           "duration": 3.392,
           "text": "土器がまだ無いので、先土器時代と呼ぶこともあるんですよ。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s02_b03.wav",
-          "start": 29.209,
+          "wav": "narration/s02_b04.wav",
+          "start": 29.616,
           "duration": 3.52,
           "text": "ふぇ?食器が無いと、ごはんはどうしてたのだ?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s02_b04.wav",
-          "start": 33.179,
-          "duration": 9.003,
-          "text": "まだ煮込みはできないので、焼いたり生で食べたりしていたようです。道具は、石を打ち欠けて作る打製石器。ナイフのように使って動物を狩っていました。"
+          "wav": "narration/s02_b05.wav",
+          "start": 33.586,
+          "duration": 3.68,
+          "text": "まだ煮込みはできないので、焼いたり生で食べたりしていたようです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b06.wav",
+          "start": 37.716,
+          "duration": 2.603,
+          "text": "道具は、石を打ち欠けて作る打製石器。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b07.wav",
+          "start": 40.769,
+          "duration": 2.432,
+          "text": "ナイフのように使って動物を狩っていました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s02_b05.wav",
-          "start": 42.631,
+          "wav": "narration/s02_b08.wav",
+          "start": 43.651,
+          "duration": 3.36,
+          "text": "旧石器って、古い石をあつめて作ったのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b09.wav",
+          "start": 47.461,
+          "duration": 2.848,
+          "text": "いいえ、石を打ち欠けて道具を作るんです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b10.wav",
+          "start": 50.759,
+          "duration": 2.133,
+          "text": "古い石を集めるわけじゃないんですよ。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s02_b11.wav",
+          "start": 53.342,
           "duration": 2.165,
           "text": "石のナイフ、かっこいいのだ!"
         }
@@ -89,194 +131,313 @@
     {
       "id": "s03",
       "section": "story",
-      "start": 45.497,
+      "start": 56.207,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s03_b00.wav",
-          "start": 45.497,
-          "duration": 6.293,
-          "text": "やがて氷河が解けて気候がぐんと暖かくなり、大きく見て約1万年前から、縄文時代が始まります。"
+          "start": 56.207,
+          "duration": 2.613,
+          "text": "やがて氷河が解けて気候がぐんと暖かくなり、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b01.wav",
+          "start": 59.271,
+          "duration": 3.637,
+          "text": "大きく見て約1万年前から、縄文時代が始まります。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s03_b01.wav",
-          "start": 52.24,
+          "wav": "narration/s03_b02.wav",
+          "start": 63.358,
           "duration": 1.685,
           "text": "くらしはどう変わるのだ?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s03_b02.wav",
-          "start": 54.375,
-          "duration": 5.109,
-          "text": "森と海のめぐみが増えて、狩りや釣り、木の実採りで安定して暮らせるようになったんです。"
+          "wav": "narration/s03_b03.wav",
+          "start": 65.493,
+          "duration": 2.443,
+          "text": "森と海のめぐみが増えて、狩りや釣り、"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s03_b03.wav",
-          "start": 59.935,
-          "duration": 7.04,
-          "text": "道具も進化します。石を磨いて作る磨製石器の登場です。矢じりを磨いた弓矢で、イノシシなどを狩りました。"
+          "wav": "narration/s03_b04.wav",
+          "start": 68.386,
+          "duration": 2.592,
+          "text": "木の実採りで安定して暮らせるようになったんです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b05.wav",
+          "start": 71.428,
+          "duration": 3.861,
+          "text": "道具も進化します。石を磨いて作る磨製石器の登場です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b06.wav",
+          "start": 75.739,
+          "duration": 3.019,
+          "text": "矢じりを磨いた弓矢で、イノシシなどを狩りました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s03_b04.wav",
-          "start": 67.425,
+          "wav": "narration/s03_b07.wav",
+          "start": 79.208,
           "duration": 3.104,
           "text": "打製から磨製へ、石の進化なのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s03_b05.wav",
-          "start": 70.979,
-          "duration": 7.851,
-          "text": "そのとおり。打製=旧石器、磨製=縄文以降。このペアは受験の定番なので、セットで覚えてくださいね。"
+          "wav": "narration/s03_b08.wav",
+          "start": 82.762,
+          "duration": 2.891,
+          "text": "そのとおり。時代が変わると、道具も変わる。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b09.wav",
+          "start": 86.103,
+          "duration": 1.653,
+          "text": "わかりやすい証拠なんですよ。"
         }
       ]
     },
     {
       "id": "s04",
       "section": "story",
-      "start": 79.529,
+      "start": 88.456,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s04_b00.wav",
-          "start": 79.529,
+          "start": 88.456,
           "duration": 3.659,
           "text": "縄文時代のイメージといえば、もようのついた壺なのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b01.wav",
-          "start": 83.638,
-          "duration": 6.443,
-          "text": "鋭いですね!それが縄文土器。紐を巻いた棒で転がして、縄のもようを付けたことが名前の由来なんです。"
+          "start": 92.565,
+          "duration": 2.165,
+          "text": "鋭いですね!それが縄文土器。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b02.wav",
-          "start": 90.531,
-          "duration": 8.181,
-          "text": "しかも驚きなのですが、縄文土器は世界でいちばん古い土器のひとつなんですよ。青森では約1万6500年前の土器も見つかっています。"
+          "start": 95.18,
+          "duration": 1.568,
+          "text": "紐を巻いた棒で転がして、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b03.wav",
+          "start": 97.198,
+          "duration": 2.549,
+          "text": "縄のもようを付けたことが名前の由来なんです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b04.wav",
+          "start": 100.197,
+          "duration": 1.397,
+          "text": "しかも驚きなのですが、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b05.wav",
+          "start": 102.045,
+          "duration": 3.061,
+          "text": "縄文土器は世界でいちばん古い土器のひとつなんですよ。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b06.wav",
+          "start": 105.556,
+          "duration": 3.669,
+          "text": "青森では約1万6500年前の土器も見つかっています。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s04_b03.wav",
-          "start": 99.162,
+          "wav": "narration/s04_b07.wav",
+          "start": 109.675,
           "duration": 3.435,
           "text": "日本の土器が世界最古級なのだ!?すごいのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s04_b04.wav",
-          "start": 103.047,
-          "duration": 5.6,
-          "text": "土器で煮込み料理ができるようになって、くらしがぐっと豊かになり、村での定住も進みました。"
+          "wav": "narration/s04_b08.wav",
+          "start": 113.56,
+          "duration": 2.101,
+          "text": "土器で煮込み料理ができるようになって、"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s04_b05.wav",
-          "start": 109.097,
-          "duration": 5.813,
-          "text": "縄文土器=世界最古級、煮込み料理で定住。そのまま受験で使えるフレーズですよ。"
+          "wav": "narration/s04_b09.wav",
+          "start": 116.111,
+          "duration": 3.381,
+          "text": "くらしがぐっと豊かになり、村での定住も進みました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b10.wav",
+          "start": 119.943,
+          "duration": 3.445,
+          "text": "縄文土器=世界最古級、煮込み料理で定住。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b11.wav",
+          "start": 123.838,
+          "duration": 2.293,
+          "text": "このつながり、おぼえておくと便利です。"
         }
       ]
     },
     {
       "id": "s05",
       "section": "story",
-      "start": 115.61,
+      "start": 126.831,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s05_b00.wav",
-          "start": 115.61,
+          "start": 126.831,
           "duration": 2.912,
           "text": "縄文の人は、どんな家に住んでいたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b01.wav",
-          "start": 118.972,
-          "duration": 6.88,
-          "text": "地面に穴を掘って、周りに柱を立てる竪穴住居です。半分地下のような、暖かくて丈夫な家なんです。"
+          "start": 130.193,
+          "duration": 3.861,
+          "text": "地面に穴を掘って、周りに柱を立てる竪穴住居です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b02.wav",
+          "start": 134.505,
+          "duration": 2.955,
+          "text": "半分地下のような、暖かくて丈夫な家なんです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s05_b02.wav",
-          "start": 126.302,
+          "wav": "narration/s05_b03.wav",
+          "start": 137.909,
           "duration": 3.147,
           "text": "冬も暖かそうなのだ!夏も涼しいのだ?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s05_b03.wav",
-          "start": 129.899,
-          "duration": 6.048,
-          "text": "ええ。しかも数十軒の家が円形に並ぶ環状集落が、各地で見つかっているんですよ。"
+          "wav": "narration/s05_b04.wav",
+          "start": 141.506,
+          "duration": 0.491,
+          "text": "ええ。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b05.wav",
+          "start": 142.447,
+          "duration": 0.491,
+          "text": "しかも数十軒の家が円形に並ぶ環状集落が、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b06.wav",
+          "start": 143.387,
+          "duration": 1.696,
+          "text": "各地で見つかっているんですよ。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s05_b04.wav",
-          "start": 136.397,
+          "wav": "narration/s05_b07.wav",
+          "start": 145.533,
           "duration": 3.467,
           "text": "みんなで丸くなって暮らすのだ!キャンプ場みたいなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s05_b05.wav",
-          "start": 140.313,
-          "duration": 4.117,
-          "text": "仲間と集まって暮らすことで、長く同じ場所に住めるようになったんです。"
+          "wav": "narration/s05_b08.wav",
+          "start": 149.45,
+          "duration": 1.685,
+          "text": "仲間と集まって暮らすことで、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b09.wav",
+          "start": 151.585,
+          "duration": 2.293,
+          "text": "長く同じ場所に住めるようになったんです。"
         }
       ]
     },
     {
       "id": "s06",
       "section": "story",
-      "start": 145.131,
+      "start": 154.579,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s06_b00.wav",
-          "start": 145.131,
+          "start": 154.579,
           "duration": 2.848,
           "text": "縄文の人は、毎日なにをしてたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b01.wav",
-          "start": 148.429,
-          "duration": 5.12,
-          "text": "弓矢で狩りをし、釣り針や銛で漁をして、森と海のめぐみを上手に食べていました。"
+          "start": 157.877,
+          "duration": 2.773,
+          "text": "弓矢で狩りをし、釣り針や銛で漁をして、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b02.wav",
-          "start": 153.999,
-          "duration": 4.331,
-          "text": "食べた貝がらが積もってできた貝塚は、当時のくらしを知る大事な遺跡です。"
+          "start": 161.1,
+          "duration": 2.325,
+          "text": "森と海のめぐみを上手に食べていました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b03.wav",
+          "start": 163.875,
+          "duration": 2.197,
+          "text": "食べた貝がらが積もってできた貝塚は、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b04.wav",
+          "start": 166.523,
+          "duration": 2.112,
+          "text": "当時のくらしを知る大事な遺跡です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s06_b03.wav",
-          "start": 158.779,
+          "wav": "narration/s06_b05.wav",
+          "start": 169.085,
           "duration": 2.539,
           "text": "ごみの山が、タイムカプセルなのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s06_b04.wav",
-          "start": 161.768,
-          "duration": 7.755,
-          "text": "土で作った土偶は、呪術やまじないに使われたと考えられています。青森の三内丸山遺跡のような大きな集落もありました。"
+          "wav": "narration/s06_b06.wav",
+          "start": 172.073,
+          "duration": 4.128,
+          "text": "土で作った土偶は、呪術やまじないに使われたと考えられています。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b07.wav",
+          "start": 176.651,
+          "duration": 3.605,
+          "text": "青森の三内丸山遺跡のような大きな集落もありました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s06_b05.wav",
-          "start": 169.973,
+          "wav": "narration/s06_b08.wav",
+          "start": 180.707,
           "duration": 3.563,
           "text": "遺跡を見ると、むかしの人の毎日が見えてくるのだ!"
         }
@@ -285,54 +446,96 @@
     {
       "id": "s07",
       "section": "story",
-      "start": 174.235,
+      "start": 184.969,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s07_b00.wav",
-          "start": 174.235,
+          "start": 184.969,
           "duration": 3.328,
           "text": "先生、次の時代は、大ニュースなのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b01.wav",
-          "start": 178.013,
-          "duration": 7.424,
-          "text": "紀元前10世紀ごろ、いまから約3000年前、大陸から稲作と金属器が伝わってきて、弥生時代が始まります。"
+          "start": 188.747,
+          "duration": 3.029,
+          "text": "紀元前10世紀ごろ、いまから約3000年前、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b02.wav",
+          "start": 192.227,
+          "duration": 4.245,
+          "text": "大陸から稲作と金属器が伝わってきて、弥生時代が始まります。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s07_b02.wav",
-          "start": 185.887,
+          "wav": "narration/s07_b03.wav",
+          "start": 196.922,
           "duration": 2.411,
           "text": "お米!ついに米の時代なのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s07_b03.wav",
-          "start": 188.748,
-          "duration": 7.168,
-          "text": "水稲農業は、暖かくて湿った平原や低地で始まりました。水路を作り、村人みんなで田んぼを耕します。"
+          "wav": "narration/s07_b04.wav",
+          "start": 199.783,
+          "duration": 4.0,
+          "text": "水稲農業は、暖かくて湿った平原や低地で始まりました。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s07_b04.wav",
-          "start": 196.366,
-          "duration": 3.957,
-          "text": "お米が増えると人口が増えて、集落もどんどん大きくなりました。"
+          "wav": "narration/s07_b05.wav",
+          "start": 204.233,
+          "duration": 3.104,
+          "text": "水路を作り、村人みんなで田んぼを耕します。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b06.wav",
+          "start": 207.787,
+          "duration": 3.179,
+          "text": "ところでマナブ、お米が増えると何が増えると思う?"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s07_b05.wav",
-          "start": 200.773,
+          "wav": "narration/s07_b07.wav",
+          "start": 211.415,
+          "duration": 1.184,
+          "text": "人が増えるのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b08.wav",
+          "start": 213.049,
+          "duration": 0.736,
+          "text": "そのとおり!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b09.wav",
+          "start": 214.235,
+          "duration": 4.224,
+          "text": "縄文は動いて食べ物を探したけれど、弥生は米を作って定住。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b10.wav",
+          "start": 218.909,
+          "duration": 2.784,
+          "text": "その結果、人口も集落も増えたんです。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s07_b11.wav",
+          "start": 222.143,
           "duration": 2.507,
           "text": "農業が日本の歴史のエンジンなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s07_b06.wav",
-          "start": 203.73,
+          "wav": "narration/s07_b12.wav",
+          "start": 225.1,
           "duration": 3.093,
           "text": "そのとおり。ここから日本は農業社会なんですよ。"
         }
@@ -341,47 +544,68 @@
     {
       "id": "s08",
       "section": "story",
-      "start": 207.523,
+      "start": 228.893,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s08_b00.wav",
-          "start": 207.523,
+          "start": 228.893,
           "duration": 3.029,
           "text": "弥生の村には、高ーい建物があるのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b01.wav",
-          "start": 211.003,
-          "duration": 5.92,
-          "text": "それ、高床倉庫です。床を高く上げて、大切なお米を雨やネズミから守る倉庫なんです。"
+          "start": 232.373,
+          "duration": 1.675,
+          "text": "それ、高床倉庫です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b02.wav",
+          "start": 234.497,
+          "duration": 4.064,
+          "text": "床を高く上げて、大切なお米を雨やネズミから守る倉庫なんです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s08_b02.wav",
-          "start": 217.373,
+          "wav": "narration/s08_b03.wav",
+          "start": 239.011,
           "duration": 2.912,
           "text": "ネズミ先輩、お米は上げちゃダメなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s08_b03.wav",
-          "start": 220.735,
-          "duration": 6.997,
-          "text": "鍋や壺などの弥生土器は、縄文のものより薄くて硬く、煮炊きに向いていました。道具も石から鉄へ進んでいきます。"
+          "wav": "narration/s08_b04.wav",
+          "start": 242.373,
+          "duration": 3.488,
+          "text": "鍋や壺などの弥生土器は、縄文のものより薄くて硬く、"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s08_b04.wav",
-          "start": 228.182,
+          "wav": "narration/s08_b05.wav",
+          "start": 246.311,
+          "duration": 1.269,
+          "text": "煮炊きに向いていました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b06.wav",
+          "start": 248.031,
+          "duration": 2.144,
+          "text": "道具も石から鉄へ進んでいきます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b07.wav",
+          "start": 250.625,
           "duration": 3.851,
           "text": "お米と鉄と土器。村の力がどんどんついていく時代なんですよ。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s08_b05.wav",
-          "start": 232.483,
+          "wav": "narration/s08_b08.wav",
+          "start": 254.925,
           "duration": 3.243,
           "text": "村がパワーアップなのだ!それからどうなったのだ?"
         }
@@ -390,173 +614,257 @@
     {
       "id": "s09",
       "section": "story",
-      "start": 236.425,
+      "start": 258.868,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s09_b00.wav",
-          "start": 236.425,
+          "start": 258.868,
           "duration": 3.968,
           "text": "でも先生、お米が増えると、けんかも増えちゃうのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b01.wav",
-          "start": 240.843,
-          "duration": 7.851,
-          "text": "そのとおり。お米や土地をめぐる争いが始まり、村は身を守るため、周りに深い濠を掘った環濠集落になりました。"
+          "start": 263.286,
+          "duration": 0.736,
+          "text": "そのとおり。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b02.wav",
-          "start": 249.144,
-          "duration": 4.245,
-          "text": "日本で戦争が始まったのはこのころ、というのが受験の大ポイントです。"
+          "start": 264.472,
+          "duration": 0.736,
+          "text": "お米や土地をめぐる争いが始まり、村は身を守るため、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b03.wav",
+          "start": 265.658,
+          "duration": 2.88,
+          "text": "周りに深い濠を掘った環濠集落になりました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b04.wav",
+          "start": 268.988,
+          "duration": 3.029,
+          "text": "日本で戦争が始まったのはこのころ、なんです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s09_b03.wav",
-          "start": 253.839,
+          "wav": "narration/s09_b05.wav",
+          "start": 272.467,
           "duration": 3.947,
           "text": "ふぇ?戦争が始まったのは、この時代からなのだ…?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s09_b04.wav",
-          "start": 258.236,
-          "duration": 6.987,
-          "text": "そうなんです。お祭りに使う銅鐸、武器の銅剣もこのころのもの。村を率いる力の強い豪族も現れました。"
+          "wav": "narration/s09_b06.wav",
+          "start": 276.864,
+          "duration": 4.117,
+          "text": "そうなんです。お祭りに使う銅鐸、武器の銅剣もこのころのもの。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s09_b05.wav",
-          "start": 265.673,
-          "duration": 5.749,
-          "text": "時は流れて紀元後3世紀、西日本をまとめる大きな国、邪馬台国が登場します。"
+          "wav": "narration/s09_b07.wav",
+          "start": 281.431,
+          "duration": 2.731,
+          "text": "村を率いる力の強い豪族も現れました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b08.wav",
+          "start": 284.612,
+          "duration": 3.915,
+          "text": "時は流れて紀元後3世紀、西日本をまとめる大きな国、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b09.wav",
+          "start": 288.977,
+          "duration": 1.611,
+          "text": "邪馬台国が登場します。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s09_b06.wav",
-          "start": 271.872,
+          "wav": "narration/s09_b10.wav",
+          "start": 291.037,
           "duration": 2.08,
           "text": "ついに本に出てくるやつなのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s09_b07.wav",
-          "start": 274.402,
-          "duration": 8.427,
-          "text": "邪馬台国の女王、卑弥呼は239年、中国の魏に使者を送りました。この記録が中国の歴史書、魏志倭人伝なんです。"
+          "wav": "narration/s09_b11.wav",
+          "start": 293.567,
+          "duration": 5.163,
+          "text": "邪馬台国の女王、卑弥呼は239年、中国の魏に使者を送りました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b12.wav",
+          "start": 299.18,
+          "duration": 3.243,
+          "text": "この記録が中国の歴史書、魏志倭人伝なんです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s09_b08.wav",
-          "start": 283.279,
+          "wav": "narration/s09_b13.wav",
+          "start": 302.873,
           "duration": 2.645,
           "text": "卑弥呼!歴史のスーパースターなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s09_b09.wav",
-          "start": 286.374,
-          "duration": 8.683,
-          "text": "さらに古い記録では、紀元57年に九州の奴国の王が、漢の皇帝から漢委奴国王という金印をもらったことも書かれています。"
+          "wav": "narration/s09_b14.wav",
+          "start": 305.968,
+          "duration": 3.947,
+          "text": "さらに古い記録では、紀元57年に九州の奴国の王が、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b15.wav",
+          "start": 310.365,
+          "duration": 4.149,
+          "text": "漢の皇帝から漢委奴国王という金印をもらったことも書かれています。"
         }
       ]
     },
     {
       "id": "s10",
       "section": "story",
-      "start": 295.757,
+      "start": 315.214,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s10_b00.wav",
-          "start": 295.757,
+          "start": 315.214,
           "duration": 4.011,
           "text": "ついに古墳時代なのだ!古墳って、大きなお墓なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b01.wav",
-          "start": 300.217,
-          "duration": 8.704,
-          "text": "そのとおり。3世紀の中ごろから、力の強い豪族たちが巨大なお墓を作り始めます。これが古墳で、この時代を古墳時代と呼びます。"
+          "start": 319.675,
+          "duration": 0.736,
+          "text": "そのとおり。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b02.wav",
+          "start": 320.861,
+          "duration": 4.789,
+          "text": "3世紀の中ごろから、力の強い豪族たちが巨大なお墓を作り始めます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b03.wav",
+          "start": 326.1,
+          "duration": 2.955,
+          "text": "これが古墳で、この時代を古墳時代と呼びます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s10_b02.wav",
-          "start": 309.371,
+          "wav": "narration/s10_b04.wav",
+          "start": 329.505,
           "duration": 2.731,
           "text": "お墓が、山みたいに大きくなるのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s10_b03.wav",
-          "start": 312.552,
-          "duration": 9.045,
-          "text": "特徴的なのが、丸と四角をつなげた、鍵穴型のお墓。前方後円墳です。船の形に似ている、という説明も有名なんですよ。"
+          "wav": "narration/s10_b05.wav",
+          "start": 332.685,
+          "duration": 5.461,
+          "text": "特徴的なのが、丸と四角をつなげた、鍵穴型のお墓。前方後円墳です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b06.wav",
+          "start": 338.597,
+          "duration": 3.435,
+          "text": "船の形に似ている、という説明も有名なんですよ。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s10_b04.wav",
-          "start": 322.047,
+          "wav": "narration/s10_b07.wav",
+          "start": 342.481,
           "duration": 3.381,
           "text": "上から見ると、船が海を走ってるみたいなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s10_b05.wav",
-          "start": 325.879,
-          "duration": 8.469,
-          "text": "これだけの土を盛れるのは、多くの人を動かせる力があるから。大和地方を中心に力を広げた豪族たち、つまり大和政権なんです。"
+          "wav": "narration/s10_b08.wav",
+          "start": 346.313,
+          "duration": 3.712,
+          "text": "これだけの土を盛れるのは、多くの人を動かせる力があるから。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b09.wav",
+          "start": 350.475,
+          "duration": 4.608,
+          "text": "大和地方を中心に力を広げた豪族たち、つまり大和政権なんです。"
         }
       ]
     },
     {
       "id": "s11",
       "section": "story",
-      "start": 335.048,
+      "start": 355.783,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s11_b00.wav",
-          "start": 335.048,
+          "start": 355.783,
           "duration": 3.595,
           "text": "古墳のまわりに立ってる、土の人形はなんなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b01.wav",
-          "start": 339.093,
+          "start": 359.827,
           "duration": 4.405,
           "text": "それは埴輪。古墳の周りに並べた、素焼きの土製品なんです。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s11_b02.wav",
-          "start": 343.948,
+          "start": 364.683,
           "duration": 2.581,
           "text": "はにわなのだ!お顔がユニークなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b03.wav",
-          "start": 346.979,
-          "duration": 6.72,
-          "text": "家や馬、武人など、色々な形があって、お墓を守ったり、儀式に使ったりしたと考えられています。"
+          "start": 367.714,
+          "duration": 4.267,
+          "text": "家や馬、武人など、色々な形があって、お墓を守ったり、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b04.wav",
-          "start": 354.149,
-          "duration": 4.853,
-          "text": "お墓の中には銅鏡や剣が納められていて、亡くなった人の力を示しています。"
+          "start": 372.431,
+          "duration": 2.347,
+          "text": "儀式に使ったりしたと考えられています。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b05.wav",
+          "start": 375.227,
+          "duration": 2.709,
+          "text": "お墓の中には銅鏡や剣が納められていて、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b06.wav",
+          "start": 378.387,
+          "duration": 2.08,
+          "text": "亡くなった人の力を示しています。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s11_b05.wav",
-          "start": 359.453,
+          "wav": "narration/s11_b07.wav",
+          "start": 380.917,
           "duration": 2.869,
           "text": "馬のはにわ、走ってるみたいで好きなのだ!"
         }
@@ -565,96 +873,138 @@
     {
       "id": "s12",
       "section": "story",
-      "start": 363.022,
+      "start": 384.486,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s12_b00.wav",
-          "start": 363.022,
+          "start": 384.486,
           "duration": 3.051,
           "text": "大和政権は、どこまで大きくなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b01.wav",
-          "start": 366.523,
-          "duration": 5.952,
-          "text": "各地の豪族と手を結び、鉄をもとめて朝鮮半島とも交わる、大きな勢力に成長します。"
+          "start": 387.987,
+          "duration": 4.107,
+          "text": "各地の豪族と手を結び、鉄をもとめて朝鮮半島とも交わる、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b02.wav",
+          "start": 392.543,
+          "duration": 1.813,
+          "text": "大きな勢力に成長します。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s12_b02.wav",
-          "start": 372.925,
+          "wav": "narration/s12_b03.wav",
+          "start": 394.807,
           "duration": 2.731,
           "text": "鉄は、道具にも武器にも必要なのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s12_b03.wav",
-          "start": 376.105,
-          "duration": 9.365,
-          "text": "大阪の大山古墳は、仁徳天皇陵古墳とも呼ばれます。全長約480メートル、日本最大の前方後円墳なんですよ。"
+          "wav": "narration/s12_b04.wav",
+          "start": 397.987,
+          "duration": 4.085,
+          "text": "大阪の大山古墳は、仁徳天皇陵古墳とも呼ばれます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b05.wav",
+          "start": 402.523,
+          "duration": 5.12,
+          "text": "全長約480メートル、日本最大の前方後円墳なんですよ。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s12_b04.wav",
-          "start": 385.921,
+          "wav": "narration/s12_b06.wav",
+          "start": 408.093,
           "duration": 4.896,
           "text": "480メートル?東京タワーより長いのだ!?お墓なのに!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s12_b05.wav",
-          "start": 391.267,
-          "duration": 4.939,
-          "text": "まさに巨大な力のシンボルなんです。大山古墳は、おおやまこふんと読みますよ。"
+          "wav": "narration/s12_b07.wav",
+          "start": 413.439,
+          "duration": 2.123,
+          "text": "まさに巨大な力のシンボルなんです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b08.wav",
+          "start": 416.011,
+          "duration": 2.699,
+          "text": "大山古墳は、おおやまこふんと読みますよ。"
         }
       ]
     },
     {
       "id": "s13",
       "section": "story",
-      "start": 396.905,
+      "start": 419.41,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s13_b00.wav",
-          "start": 396.905,
+          "start": 419.41,
           "duration": 3.008,
           "text": "古墳時代の終わりごろは、どうなってたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b01.wav",
-          "start": 400.363,
-          "duration": 8.096,
-          "text": "5世紀になると、大和政権の王たちは、中国の王朝に使者を送ります。史書に名が残る五人の王を、倭の五王と呼ぶんです。"
+          "start": 422.868,
+          "duration": 4.896,
+          "text": "5世紀になると、大和政権の王たちは、中国の王朝に使者を送ります。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b02.wav",
+          "start": 428.214,
+          "duration": 3.157,
+          "text": "史書に名が残る五人の王を、倭の五王と呼ぶんです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s13_b02.wav",
-          "start": 408.909,
+          "wav": "narration/s13_b03.wav",
+          "start": 431.821,
           "duration": 2.528,
           "text": "海を渡って、世界進出なのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s13_b03.wav",
-          "start": 411.887,
-          "duration": 4.619,
-          "text": "この交流を通じて漢字も伝わり、日本にも文字の文化が芽生えていきます。"
+          "wav": "narration/s13_b04.wav",
+          "start": 434.799,
+          "duration": 2.144,
+          "text": "この交流を通じて漢字も伝わり、"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s13_b04.wav",
-          "start": 416.956,
-          "duration": 5.099,
-          "text": "日本史は次に、文字と仏教と大改革の時代へ。それが第2話のお楽しみです。"
+          "wav": "narration/s13_b05.wav",
+          "start": 437.393,
+          "duration": 2.315,
+          "text": "日本にも文字の文化が芽生えていきます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b06.wav",
+          "start": 440.158,
+          "duration": 3.328,
+          "text": "日本史は次に、文字と仏教と大改革の時代へ。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b07.wav",
+          "start": 443.936,
+          "duration": 1.749,
+          "text": "それが第2話のお楽しみです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s13_b05.wav",
-          "start": 422.505,
+          "wav": "narration/s13_b08.wav",
+          "start": 446.135,
           "duration": 3.157,
           "text": "あと少し!ポイントまとめ、お願いなのだ!"
         }
@@ -663,26 +1013,47 @@
     {
       "id": "s14",
       "section": "points",
-      "start": 426.562,
+      "start": 450.193,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s14_b00.wav",
-          "start": 426.562,
+          "start": 450.193,
           "duration": 3.947,
           "text": "ここからは、受験ポイントのまとめです!まずは旧石器と縄文。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b01.wav",
-          "start": 430.959,
-          "duration": 10.923,
-          "text": "旧石器時代は打製石器で土器なし。縄文時代は磨製石器、縄文土器=世界最古級、竪穴住居、環状集落、そして貝塚。このセットを完璧に!"
+          "start": 454.589,
+          "duration": 2.272,
+          "text": "旧石器時代は打製石器で土器なし。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b02.wav",
-          "start": 442.331,
+          "start": 457.311,
+          "duration": 3.819,
+          "text": "縄文時代は磨製石器、縄文土器=世界最古級、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b03.wav",
+          "start": 461.58,
+          "duration": 3.189,
+          "text": "竪穴住居、環状集落、そして貝塚。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b04.wav",
+          "start": 465.219,
+          "duration": 1.344,
+          "text": "このセットを完璧に!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b05.wav",
+          "start": 467.013,
           "duration": 4.256,
           "text": "打製と磨製、どっちが先?と聞かれても、もう迷いませんね。"
         }
@@ -691,131 +1062,187 @@
     {
       "id": "s15",
       "section": "points",
-      "start": 447.287,
+      "start": 471.969,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s15_b00.wav",
-          "start": 447.287,
+          "start": 471.969,
           "duration": 3.189,
           "text": "続いて弥生と古墳。今日のいちばんの狙いどころです!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b01.wav",
-          "start": 450.927,
-          "duration": 10.677,
-          "text": "弥生時代は水稲農業=暖かく湿った平原・低地、高床倉庫、環濠集落=戦争のはじまり、銅鐸=祭り、銅剣=武器。"
+          "start": 475.609,
+          "duration": 5.163,
+          "text": "弥生時代は水稲農業=暖かく湿った平原・低地、高床倉庫、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b02.wav",
-          "start": 462.054,
-          "duration": 11.413,
-          "text": "そして239年、邪馬台国の女王・卑弥呼が魏に遣使。古墳時代は前方後円墳、埴輪、大和政権。時代とワードの対応を完璧に仕上げましょう!"
+          "start": 481.221,
+          "duration": 5.099,
+          "text": "環濠集落=戦争のはじまり、銅鐸=祭り、銅剣=武器。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b03.wav",
+          "start": 486.77,
+          "duration": 4.512,
+          "text": "そして239年、邪馬台国の女王・卑弥呼が魏に遣使。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b04.wav",
+          "start": 491.732,
+          "duration": 3.989,
+          "text": "古墳時代は前方後円墳、埴輪、大和政権。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b05.wav",
+          "start": 496.171,
+          "duration": 2.592,
+          "text": "時代とワードの対応を完璧に仕上げましょう!"
         }
       ]
     },
     {
       "id": "s16",
       "section": "quiz",
-      "start": 474.367,
+      "start": 499.663,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s16_b00.wav",
-          "start": 474.367,
+          "start": 499.663,
           "duration": 3.157,
           "text": "それでは今日の仕上げ、クイズタイム!第一問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b01.wav",
-          "start": 477.975,
-          "duration": 10.123,
-          "text": "縄文時代に使われ始めた、石を磨いて作る石器は何でしょう?ア、打製石器。イ、磨製石器。ウ、銅鐸。"
+          "start": 503.271,
+          "duration": 6.208,
+          "text": "縄文時代に使われ始めた、石を磨いて作る石器は何でしょう?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b02.wav",
+          "start": 509.929,
+          "duration": 3.541,
+          "text": "ア、打製石器。イ、磨製石器。ウ、銅鐸。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s16_b02.wav",
-          "start": 488.547,
+          "wav": "narration/s16_b03.wav",
+          "start": 513.92,
           "duration": 1.589,
           "text": "えいっ、イなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s16_b03.wav",
-          "start": 490.587,
-          "duration": 7.104,
-          "text": "正解!石を磨くから磨製石器。旧石器=打製、縄文以降=磨製のペアで覚えましょう。"
+          "wav": "narration/s16_b04.wav",
+          "start": 515.959,
+          "duration": 2.475,
+          "text": "正解!石を磨くから磨製石器。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b05.wav",
+          "start": 518.884,
+          "duration": 4.64,
+          "text": "旧石器=打製、縄文以降=磨製、ペアでしっかりね。"
         }
       ]
     },
     {
       "id": "s17",
       "section": "quiz",
-      "start": 498.391,
+      "start": 524.224,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s17_b00.wav",
-          "start": 498.391,
+          "start": 524.224,
           "duration": 0.693,
           "text": "第二問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b01.wav",
-          "start": 499.534,
-          "duration": 10.411,
-          "text": "239年、魏に使者を送った邪馬台国の女王はだれでしょう?ア、卑弥呼。イ、神功皇后。ウ、推古天皇。"
+          "start": 525.367,
+          "duration": 6.037,
+          "text": "239年、魏に使者を送った邪馬台国の女王はだれでしょう?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s17_b02.wav",
+          "start": 531.855,
+          "duration": 4.139,
+          "text": "ア、卑弥呼。イ、神功皇后。ウ、推古天皇。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s17_b02.wav",
-          "start": 510.395,
+          "wav": "narration/s17_b03.wav",
+          "start": 536.443,
           "duration": 2.293,
           "text": "歴史のスーパースター、アなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s17_b03.wav",
-          "start": 513.138,
-          "duration": 6.421,
-          "text": "正解!卑弥呼です。記録したのは魏志倭人伝。239年とセットで丸暗記しましょう。"
+          "wav": "narration/s17_b04.wav",
+          "start": 539.187,
+          "duration": 1.504,
+          "text": "正解!卑弥呼です。記録したのは魏志倭人伝。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s17_b05.wav",
+          "start": 541.141,
+          "duration": 4.832,
+          "text": "239年とセットで丸暗記しましょう。"
         }
       ]
     },
     {
       "id": "s18",
       "section": "quiz",
-      "start": 520.259,
+      "start": 546.673,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s18_b00.wav",
-          "start": 520.259,
+          "start": 546.673,
           "duration": 0.875,
           "text": "ラスト問題!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b01.wav",
-          "start": 521.584,
-          "duration": 10.453,
-          "text": "弥生時代、大切なお米を雨やネズミから守るために建てた建物は?ア、竪穴住居。イ、高床倉庫。ウ、五重塔。"
+          "start": 547.997,
+          "duration": 6.357,
+          "text": "弥生時代、大切なお米を雨やネズミから守るために建てた建物は?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s18_b02.wav",
+          "start": 554.805,
+          "duration": 3.829,
+          "text": "ア、竪穴住居。イ、高床倉庫。ウ、五重塔。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s18_b02.wav",
-          "start": 532.487,
+          "wav": "narration/s18_b03.wav",
+          "start": 559.084,
           "duration": 2.4,
           "text": "ネズミ対策といえば、イなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s18_b03.wav",
-          "start": 535.337,
+          "wav": "narration/s18_b04.wav",
+          "start": 561.934,
           "duration": 4.875,
           "text": "正解!高床倉庫です。高い床の上で、お米をしっかり守りました。"
         }
@@ -824,33 +1251,68 @@
     {
       "id": "s19",
       "section": "ending",
-      "start": 541.112,
+      "start": 567.709,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s19_b00.wav",
-          "start": 541.112,
-          "duration": 4.277,
-          "text": "今日は旧石器から古墳まで、日本史のはじまりを駆け足で見てきました。"
-        },
-        {
-          "speaker": "manabu",
-          "wav": "narration/s19_b01.wav",
-          "start": 545.839,
-          "duration": 10.507,
-          "text": "打製・磨製、縄文土器、水稲農業、卑弥呼239年、前方後円墳、埴輪…頭の中が日本史でいっぱいなのだ!"
+          "start": 567.709,
+          "duration": 1.749,
+          "text": "今日は旧石器から古墳まで、"
         },
         {
           "speaker": "sensei",
+          "wav": "narration/s19_b01.wav",
+          "start": 569.908,
+          "duration": 2.368,
+          "text": "日本史のはじまりを駆け足で見てきました。"
+        },
+        {
+          "speaker": "manabu",
           "wav": "narration/s19_b02.wav",
-          "start": 556.796,
-          "duration": 8.939,
-          "text": "その調子です。次回第2話は、大化の改新はなぜ起きた?〜飛鳥・奈良〜。聖徳太子と蘇我氏の話まで、ぜひ楽しみにしていてください。"
+          "start": 572.726,
+          "duration": 3.797,
+          "text": "打製・磨製、縄文土器、水稲農業、"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b03.wav",
-          "start": 566.185,
+          "start": 576.973,
+          "duration": 8.032,
+          "text": "卑弥呼239年、前方後円墳、埴輪…"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s19_b04.wav",
+          "start": 585.455,
+          "duration": 2.4,
+          "text": "頭の中が日本史でいっぱいなのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s19_b05.wav",
+          "start": 588.305,
+          "duration": 3.968,
+          "text": "その調子です。次回第2話は、大化の改新はなぜ起きた?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s19_b06.wav",
+          "start": 592.723,
+          "duration": 1.099,
+          "text": "〜飛鳥・奈良〜。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s19_b07.wav",
+          "start": 594.272,
+          "duration": 3.797,
+          "text": "聖徳太子と蘇我氏の話まで、ぜひ楽しみにしていてください。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s19_b08.wav",
+          "start": 598.519,
           "duration": 4.213,
           "text": "つぎは聖徳太子なのだ!チャンネル登録も、よろしくなのだ!"
         }
@@ -864,19 +1326,19 @@
     },
     "story": {
       "start": 15.421,
-      "end": 426.562
+      "end": 450.193
     },
     "points": {
-      "start": 426.562,
-      "end": 474.367
+      "start": 450.193,
+      "end": 499.663
     },
     "quiz": {
-      "start": 474.367,
-      "end": 541.112
+      "start": 499.663,
+      "end": 567.709
     },
     "ending": {
-      "start": 541.112,
-      "end": 571.098
+      "start": 567.709,
+      "end": 603.433
     }
   }
 }
