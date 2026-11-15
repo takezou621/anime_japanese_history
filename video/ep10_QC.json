@@ -1,7 +1,7 @@
 {
   "episode": "ep10",
   "profile": "full",
-  "generated_at": "2026-11-15T05:37:22+00:00",
+  "generated_at": "2026-11-15T07:59:07+00:00",
   "video": "video/ep10_FINAL.mp4",
   "duration_sec": 542.433,
   "checks": {
@@ -67,7 +67,7 @@
       "pass": true,
       "warn": false,
       "value": {
-        "bit_rate": 35202111,
+        "bit_rate": 35202110,
         "mbps": 35.2,
         "target_mbps": 35.0,
         "maxrate_mbps": 40.0
@@ -202,8 +202,8 @@
   ],
   "format": {
     "duration": "542.433333",
-    "size": "2386849844",
-    "bit_rate": "35202111"
+    "size": "2386849768",
+    "bit_rate": "35202110"
   },
   "pass": true
 }
