@@ -1,7 +1,7 @@
 {
   "episode": "ep03",
   "profile": "full",
-  "generated_at": "2026-11-15T02:42:43+00:00",
+  "generated_at": "2026-11-15T04:34:28+00:00",
   "video": "video/ep03_FINAL.mp4",
   "duration_sec": 577.433,
   "checks": {
@@ -67,7 +67,7 @@
       "pass": true,
       "warn": false,
       "value": {
-        "bit_rate": 35201929,
+        "bit_rate": 35201931,
         "mbps": 35.2,
         "target_mbps": 35.0,
         "maxrate_mbps": 40.0
@@ -116,7 +116,7 @@
       "start_time": "0.000000",
       "duration_ts": 8869376,
       "duration": "577.433333",
-      "bit_rate": "34999722",
+      "bit_rate": "34999723",
       "bits_per_raw_sample": "8",
       "nb_frames": "17323",
       "extradata_size": 62,
@@ -202,8 +202,8 @@
   ],
   "format": {
     "duration": "577.433333",
-    "size": "2540845920",
-    "bit_rate": "35201929"
+    "size": "2540846051",
+    "bit_rate": "35201931"
   },
   "pass": true
 }

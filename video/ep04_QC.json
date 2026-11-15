@@ -1,7 +1,7 @@
 {
   "episode": "ep04",
   "profile": "full",
-  "generated_at": "2026-11-15T02:47:46+00:00",
+  "generated_at": "2026-11-15T04:43:29+00:00",
   "video": "video/ep04_FINAL.mp4",
   "duration_sec": 517.833,
   "checks": {
@@ -202,7 +202,7 @@
   ],
   "format": {
     "duration": "517.833333",
-    "size": "2278592579",
+    "size": "2278592617",
     "bit_rate": "35201945"
   },
   "pass": true
