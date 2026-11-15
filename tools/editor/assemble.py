@@ -630,7 +630,7 @@ def assemble_final(spans: list[Span], parts_dir: Path, ffmpeg: str,
             "-colorspace", "bt709", "-color_primaries", "bt709",
             "-color_trc", "bt709", "-color_range", "tv",
             "-c:a", "aac", "-b:a", "192k",
-            "-af", "alimiter=limit=0.84:level=false:attack=5:release=50",
+            "-af", "alimiter=limit=0.75:level=false:attack=5:release=50",
             "-movflags", "+faststart",
             # explicit -t (NOT -shortest): ffmpeg -shortest can stop ~0.7s
             # before the true shortest-stream end (packet timing quirk),
