@@ -60,10 +60,10 @@ _SENT_END = "。！？…!?"
 _OPENERS = "「（《『"
 _CLOSERS = "」》）』"
 # 行頭禁則セット (lead指摘): chunks/lines must not START with these
-_LINE_HEAD_FORBIDDEN = "」》）』、。！？…,:;・!?"
+_LINE_HEAD_FORBIDDEN = "ゃゅょっぁぃぅぇぉゎゎ、。！？」》）』,:;・!?"
 
 # 行頭禁則セット (lead指摘): chunks/lines must not START with these
-_LINE_HEAD_FORBIDDEN = "」》）』、。！？…,:;・!?"
+_LINE_HEAD_FORBIDDEN = "ゃゅょっぁぃぅぇぉゎゎ、。！？」》）』,:;・!?"
 
 # ---------------------------------------------------------------------------
 # bunsetsu (文節) boundaries — P2-1 fix (qa_visual ep01-03: 単語途中分割)
@@ -229,43 +229,32 @@ def bunsetsu_starts(text: str) -> list[tuple[int, bool, bool]]:
 
 
 def _best_cut(text: str, limit: int, starts: list[tuple[int, bool, bool]],
-              min_keep: int = 6, max_line: int = 16) -> int:
-    """Best split offset for text (qa-visual P2: 文節境界強化).
+              min_keep: int = 6, max_line: int = 18) -> int:
+    """Best split offset for text (lead 2026-11-15 final spec).
 
-    Search window is extended to max_line (16) so compound words that sudachi
-    splits (数十|軒, でし|ょう) stay whole: prefer in-budget boundaries, then
-    the NEAREST over-budget boundary <= max_line, never a proper-noun
-    junction unless nothing else exists.
-
-    Priority: strong<=limit > weak-non-proper<=limit > strong<=max_line >
-    weak-non-proper<=max_line > punctuation<=limit > weak-proper<=max_line >
-    hard cut at limit.
-    """
+    Priority: strong boundary <=16 > weak-non-proper <=16 > any boundary
+    <=18 (18字延長許容) > punctuation <=16 > hard cut at 16. All cuts land
+    on token starts (morpheme boundaries) — never mid-token."""
     limit = min(limit, len(text))
     max_line = min(max_line, len(text))
-    strong_in, weak_in = [], []
-    strong_over, weak_over, proper = [], [], []
+    strong_in, weak_ok_in, strong_18, weak_ok_18 = [], [], [], []
+    proper_18, any_18 = [], []
     for o, s, pj in starts:
         if not (min_keep <= o <= max_line):
             continue
         if s:
-            (strong_in if o <= limit else strong_over).append(o)
+            (strong_in if o <= limit else strong_18).append(o)
         elif pj:
-            proper.append(o)
+            (proper_18 if o <= limit else proper_18).append(o)
         else:
-            (weak_in if o <= limit else weak_over).append(o)
-    for tier in (strong_in, weak_in):
+            (weak_ok_in if o <= limit else weak_ok_18).append(o)
+    for tier in (strong_in, weak_ok_in, strong_18, weak_ok_18,
+                 proper_18, any_18):
         if tier:
             return max(tier)
-    if strong_over:
-        return min(strong_over)  # nearest over-budget bunsetsu
     for j in range(limit, min_keep - 1, -1):
         if text[j - 1] in _SENT_END + "、」』）":
             return j
-    if weak_over:
-        return min(weak_over)
-    if proper:
-        return max(proper)
     return limit
 
 
