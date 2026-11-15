@@ -91,6 +91,102 @@ def _get_tokenizer():
     return _tokenizer
 
 
+# 形態素マージ辞書 (lead指摘 ~10語 + qa-visual 実例 + シリーズ主要語):
+# 連結面がこれらに一致する隣接トークン列は 1 ブロック扱い (分割禁止)
+_COMPOUNDS = {
+    "少納言", "持ち帰る", "持ち帰った", "数十軒", "縄文時代", "弥生時代",
+    "古墳時代", "奈良時代", "平安時代", "鎌倉時代", "室町時代", "江戸時代",
+    "鎌倉幕府", "室町幕府", "江戸幕府", "十七条憲法", "大宝律令", "御成敗式目",
+    "蒙古襲来絵詞", "平城上皇", "藤原薬子", "日出づる処", "大日本帝国憲法",
+    "日本国憲法", "源頼朝", "足利尊氏", "織田信長", "豊臣秀吉", "徳川家康",
+    "ペリー来航", "黒船来航", "大政奉還", "王政復古", "廃藩置県",
+    "文明開化", "自由民権", "日清戦争", "日露戦争", "満洲事変",
+    "沖縄戦", "太平洋戦争", "第二次世界大戦", "帝国議会",
+}
+_NUM_UNITS = {"年", "月", "日", "代", "世紀", "頃", "万", "千", "百年",
+              "天皇", "期"}
+
+
+def _is_numlike(t: dict) -> bool:
+    return (any(ch.isdigit() for ch in t["s"]) or t["p2"] == "数詞"
+            or t["s"] in _NUM_UNITS or t["s"] in ("紀元前", "西暦"))
+
+
+def _merge_tokens(toks: list[dict]) -> list[dict]:
+    """Apply merge passes so compound/numeric/auxiliary runs behave as one
+    token (分割禁止ブロック化 — lead指摘 ~10語の辞書追記相当):
+
+    1. adjacent 助動詞 runs (でし+ょう -> でしょう)
+    2. numeric runs: digit/数詞 tokens + trailing units (70+1年 -> 701年,
+       約+1万年前 -> 約1万年前)
+    3. compound concatenations in _COMPOUNDS (少+納言 -> 少納言,
+       持ち+帰る -> 持ち帰る)
+    """
+    toks = [dict(t) for t in toks]
+
+    # 1) adjacent 助動詞 runs
+    out: list[dict] = []
+    i = 0
+    while i < len(toks):
+        if toks[i]["p1"] == "助動詞":
+            j = i
+            while j + 1 < len(toks) and toks[j + 1]["p1"] == "助動詞":
+                j += 1
+            out.append({"s": "".join(t["s"] for t in toks[i:j + 1]),
+                        "p1": toks[i]["p1"], "p2": toks[i]["p2"],
+                        "start": toks[i]["start"]})
+            i = j + 1
+        else:
+            out.append(toks[i])
+            i += 1
+    toks = out
+
+    # 2) numeric runs (+ trailing units; absorb an immediate short 名詞
+    #    prefix so 慶応+3年 / 西暦+1868年 stay in one block)
+    out = []
+    i = 0
+    while i < len(toks):
+        if _is_numlike(toks[i]) and out and out[-1]["p1"] == "名詞" \
+                and len(out[-1]["s"]) <= 4 and not _is_numlike(out[-1]):
+            out[-1]["s"] += toks[i]["s"]
+            i += 1
+            continue
+        if _is_numlike(toks[i]):
+            j = i
+            while (j + 1 < len(toks)
+                   and (_is_numlike(toks[j + 1])
+                        or toks[j + 1]["s"] in _NUM_UNITS)):
+                j += 1
+            out.append({"s": "".join(t["s"] for t in toks[i:j + 1]),
+                        "p1": toks[i]["p1"], "p2": toks[i]["p2"],
+                        "start": toks[i]["start"]})
+            i = j + 1
+        else:
+            out.append(toks[i])
+            i += 1
+    toks = out
+
+    # 3) compound concatenations
+    out = []
+    i = 0
+    while i < len(toks):
+        merged = False
+        for ln in (5, 4, 3, 2):
+            if i + ln <= len(toks):
+                cand = "".join(t["s"] for t in toks[i:i + ln])
+                if cand in _COMPOUNDS:
+                    out.append({"s": cand, "p1": toks[i]["p1"],
+                                "p2": toks[i]["p2"],
+                                "start": toks[i]["start"]})
+                    i += ln
+                    merged = True
+                    break
+        if not merged:
+            out.append(toks[i])
+            i += 1
+    return out
+
+
 def bunsetsu_starts(text: str) -> list[tuple[int, bool, bool]]:
     """(offset, strong, proper_junction) where a CONTENT word starts.
 
@@ -98,27 +194,34 @@ def bunsetsu_starts(text: str) -> list[tuple[int, bool, bool]]:
     副詞/連体詞/感動詞/接頭辞) start a bunsetsu — 助詞/助動詞/接尾/記号 attach
     backward and NEVER mark a boundary, so conjugation pieces (でし|ょう,
     退けられ|ます) and compounds with suffixes (数十|軒) stay whole.
+    Tokens are pre-merged via _merge_tokens (lead指摘の辞書追記相当).
     proper_junction=True flags noun junctions touching a 固有名詞 (worst cut
     points, last resort)."""
     tk = _get_tokenizer()
     if not tk:
         return []
     try:
-        marks: list[tuple[int, bool, bool]] = []
+        toks: list[dict] = []
         pos = 0
-        prev_pos = ("", "")
         for m in tk.tokenize(text):
             pi = m.part_of_speech()
             pos1, pos2 = (pi[0], pi[1]) if isinstance(pi, (list, tuple)) \
                 else (str(pi), "")
+            toks.append({"s": m.surface().strip(), "raw": m.surface(),
+                         "p1": pos1, "p2": pos2, "start": pos})
+            pos += len(m.surface())
+        toks = _merge_tokens(toks)
+        marks: list[tuple[int, bool, bool]] = []
+        prev_pos = ("", "")
+        for t in toks:
+            pos1 = t["p1"]
             content = pos1 in ("名詞", "動詞", "形容詞", "副詞", "連体詞",
                                "感動詞", "接頭辞") or pos1 == "名詞"
             if content:
-                proper = ("固有" in pos2 or "固有" in prev_pos[1]) \
+                proper = ("固有" in t["p2"] or "固有" in prev_pos[1]) \
                     and prev_pos[0] == "名詞" and pos1 == "名詞"
-                marks.append((pos, True, proper))
+                marks.append((t["start"], True, proper))
                 prev_pos = (pos1, pos2)
-            pos += len(m.surface())
         return marks
     except Exception as exc:  # pragma: no cover
         print(f"[subtitles] bunsetsu analysis failed ({exc}); char fallback")
@@ -404,9 +507,18 @@ def build_events(script: dict, timing: dict) -> list[dict]:
                 end = start + 0.05
             speaker = tb.get("speaker") or sb.get("speaker") or ""
             ch = chars.get(speaker)
+            # P2: exam_banner 表示中の字幕開始を 0.3s 遅延 (重複対策)
+            delay = 0.0
+            for o in (sb.get("overlay_text") or []):
+                if o.get("style") in ("exam_banner", "subscribe_banner"):
+                    delay = 0.3
+                    break
+            start = max(start, prev_end)  # never overlap
+            if delay and end - (start + delay) > 0.1:
+                start = start + delay
             events.append({
                 "scene": sid,
-                "start": max(start, prev_end),  # never overlap
+                "start": start,
                 "end": end,
                 "speaker": speaker,
                 "label": (ch.get("name") if ch else "") or "",
