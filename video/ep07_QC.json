@@ -1,7 +1,7 @@
 {
   "episode": "ep07",
   "profile": "full",
-  "generated_at": "2026-11-15T05:10:17+00:00",
+  "generated_at": "2026-11-15T07:17:40+00:00",
   "video": "video/ep07_FINAL.mp4",
   "duration_sec": 552.633,
   "checks": {
@@ -116,7 +116,7 @@
       "start_time": "0.000000",
       "duration_ts": 8488448,
       "duration": "552.633333",
-      "bit_rate": "34999690",
+      "bit_rate": "34999692",
       "bits_per_raw_sample": "8",
       "nb_frames": "16579",
       "extradata_size": 62,
@@ -202,7 +202,7 @@
   ],
   "format": {
     "duration": "552.633333",
-    "size": "2431722971",
+    "size": "2431722959",
     "bit_rate": "35201973"
   },
   "pass": true
