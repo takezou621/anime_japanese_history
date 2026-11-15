@@ -3,7 +3,8 @@
 
 Checks (docs/02_DESIGN.md §3 tools/editor + Issue #5):
 - duration   : matches timing.json total_duration (±0.35s); for the full
-               profile additionally 300-600s (YouTube long-form target)
+               profile additionally 300-900s (Season 1 range, revised 2026-11-16:
+               natural Gemini TTS pacing accepted, ep01 = 792s)
 - resolution : 1920x1080
 - fps        : 30
 - codec/pix  : h264 + yuv420p
@@ -25,7 +26,7 @@ LOUDNESS_TARGET = -14.0
 LOUDNESS_TOL = 1.5
 TP_MAX = -1.0
 DUR_TOL = 0.35
-FULL_RANGE = (300.0, 600.0)
+FULL_RANGE = (300.0, 900.0)
 BLACK_MAX = 0.01
 
 

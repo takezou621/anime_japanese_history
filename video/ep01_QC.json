@@ -1,19 +1,19 @@
 {
   "episode": "ep01",
   "profile": "full",
-  "generated_at": "2026-11-15T18:59:00+00:00",
+  "generated_at": "2026-11-15T22:30:24+00:00",
   "video": "video/ep01_FINAL.mp4",
   "duration_sec": 792.0,
   "checks": {
     "duration": {
-      "pass": false,
+      "pass": true,
       "value": 792.0,
       "expected": 791.987,
       "range": [
         300.0,
-        600.0
+        900.0
       ],
-      "detail": "matches timing total; outside 300-600s"
+      "detail": "matches timing total"
     },
     "resolution": {
       "pass": true,
@@ -57,8 +57,8 @@
       "pass": true,
       "value": {
         "color_space": "bt709",
-        "color_transfer": null,
-        "color_primaries": null,
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
         "color_range": "tv"
       },
       "detail": "bt709 broadcast tags expected (lead spec 2026-11-15)"
@@ -67,7 +67,7 @@
       "pass": true,
       "warn": false,
       "value": {
-        "bit_rate": 35198532,
+        "bit_rate": 35198533,
         "mbps": 35.2,
         "target_mbps": 35.0,
         "maxrate_mbps": 40.0
@@ -104,6 +104,8 @@
       "level": 50,
       "color_range": "tv",
       "color_space": "bt709",
+      "color_transfer": "bt709",
+      "color_primaries": "bt709",
       "chroma_location": "left",
       "field_order": "progressive",
       "is_avc": "true",
@@ -202,8 +204,8 @@
   ],
   "format": {
     "duration": "792.000000",
-    "size": "3484654760",
-    "bit_rate": "35198532"
+    "size": "3484654779",
+    "bit_rate": "35198533"
   },
-  "pass": false
+  "pass": true
 }

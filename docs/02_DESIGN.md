@@ -132,7 +132,7 @@ content/episodes/ep01/script.json   ← writer (脚本)
 2. セグメント連結: セクション跨ぎは 0.5s クロスフェード (xfade)
 3. 字幕: timing.json から ASS 生成し焼き込み (縁取り, 話者色)
 4. 音声: audio/ep01/mix.wav を mux → 最終 `video/ep01_FINAL.mp4`
-5. 自動 QC: 長さ 300–600s, 平均ラウドネス, 黒フレーム率 < 1%, 解像度/ビットレート確認 → `video/ep01_QC.json`
+5. 自動 QC: 長さ 300–900s（2026-11-16 改定: Gemini TTS の自然な話速を採用し Season 1 の尺範囲を拡大）, 平均ラウドネス, 黒フレーム率 < 1%, 解像度/ビットレート確認 → `video/ep01_QC.json`
 
 ### tools/editor/ai_segments.py
 - AI クリップの解決 (`visual.ai_clip` > `video/epNN_ai/manifest.json`) と正規化
