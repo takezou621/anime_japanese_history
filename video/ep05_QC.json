@@ -1,13 +1,13 @@
 {
   "episode": "ep05",
   "profile": "full",
-  "generated_at": "2026-11-14T21:31:59+00:00",
+  "generated_at": "2026-11-15T00:52:20+00:00",
   "video": "video/ep05_FINAL.mp4",
-  "duration_sec": 511.418,
+  "duration_sec": 511.433,
   "checks": {
     "duration": {
       "pass": true,
-      "value": 511.418,
+      "value": 511.433,
       "expected": 511.418,
       "range": [
         300.0,
@@ -37,7 +37,7 @@
         "codec": "aac",
         "sample_rate": "48000",
         "channels": 2,
-        "bit_rate": "193298"
+        "bit_rate": "193297"
       }
     },
     "loudness": {
@@ -67,7 +67,7 @@
       "pass": true,
       "warn": false,
       "value": {
-        "bit_rate": 35200507,
+        "bit_rate": 35201728,
         "mbps": 35.2,
         "target_mbps": 35.0,
         "maxrate_mbps": 40.0
@@ -114,11 +114,11 @@
       "time_base": "1/15360",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 7855104,
-      "duration": "511.400000",
+      "duration_ts": 7855616,
+      "duration": "511.433333",
       "bit_rate": "34999628",
       "bits_per_raw_sample": "8",
-      "nb_frames": "15342",
+      "nb_frames": "15343",
       "extradata_size": 62,
       "disposition": {
         "default": 1,
@@ -168,9 +168,9 @@
       "time_base": "1/48000",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 24548064,
-      "duration": "511.418000",
-      "bit_rate": "193298",
+      "duration_ts": 24547344,
+      "duration": "511.403000",
+      "bit_rate": "193297",
       "nb_frames": "23974",
       "extradata_size": 5,
       "disposition": {
@@ -201,9 +201,9 @@
     }
   ],
   "format": {
-    "duration": "511.418000",
-    "size": "2250271662",
-    "bit_rate": "35200507"
+    "duration": "511.433333",
+    "size": "2250417153",
+    "bit_rate": "35201728"
   },
   "pass": true
 }
