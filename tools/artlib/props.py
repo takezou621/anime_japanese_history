@@ -311,6 +311,12 @@ def dotaku(g, x, y, s, bronze=(122, 150, 118), pat=None, seed=0):
                 fill=shade(bronze, 0.66))
     g.line([(x - mw * 0.55, y - h * 0.7), (x - mw * 0.45, y - h * 0.25)],
            with_alpha((240, 250, 235), 90), 5 * s)
+    # T10: 緑青の質感
+    rnd_p = random.Random(seed)
+    for _ in range(5):
+        px = x + rnd_p.uniform(-mw * 0.7, mw * 0.7) * 0.9
+        py = y - h * rnd_p.uniform(0.15, 0.8)
+        g.circle(px, py, rnd_p.uniform(3, 6) * s, fill=with_alpha((96, 130, 108), 110))
 
 
 def haniwa(g, x, y, s, clay=None, face=True, hat=True, seed=0):
@@ -2579,3 +2585,12 @@ def war_ruins(g, x, y, s, seed=0):
     # 瓦礫
     speckle(g, (x - 430 * s, ground_y - 20 * s, x + 430 * s, ground_y + 10 * s), 130,
             [(110, 106, 100), (130, 126, 120), (88, 86, 84)], r=(3 * s, 8 * s), seed=seed)
+
+
+def add_prop_texture(g, cx, cy, w, h, seed=0, tint_col=(110, 150, 120)):
+    """銅器の緑青スポット + 縁の陰影 (dotaku 等の質感用)."""
+    rnd = random.Random(seed)
+    for _ in range(6):
+        px = cx + rnd.uniform(-w * 0.3, w * 0.3)
+        py = cy + rnd.uniform(-h * 0.35, h * 0.35)
+        g.circle(px, py, rnd.uniform(3, 7) * (w / 100), fill=with_alpha(tint_col, 120))

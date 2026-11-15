@@ -912,6 +912,7 @@ def main():
             cv = S9.new_canvas()
             fn(cv)
             img = cv.render()
+            img = ui.harmonize(img)
             p = save(img, out_dir / f"{name}.png")
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
@@ -942,6 +943,7 @@ def main():
             cv = S8.new_canvas()
             fn(cv)
             img = cv.render()
+            img = ui.harmonize(img)
             p = save(img, out_dir / f"{name}.png")
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
@@ -972,6 +974,7 @@ def main():
             cv = S7.new_canvas()
             fn(cv)
             img = cv.render()
+            img = ui.harmonize(img)
             p = save(img, out_dir / f"{name}.png")
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
@@ -1002,6 +1005,7 @@ def main():
             cv = S6.new_canvas()
             fn(cv)
             img = cv.render()
+            img = ui.harmonize(img)
             p = save(img, out_dir / f"{name}.png")
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
@@ -1032,6 +1036,7 @@ def main():
             cv = S5.new_canvas()
             fn(cv)
             img = cv.render()
+            img = ui.harmonize(img)
             p = save(img, out_dir / f"{name}.png")
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
@@ -1062,6 +1067,7 @@ def main():
             cv = S4.new_canvas()
             fn(cv)
             img = cv.render()
+            img = ui.harmonize(img)
             p = save(img, out_dir / f"{name}.png")
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
@@ -1092,6 +1098,7 @@ def main():
             cv = S3.new_canvas()
             fn(cv)
             img = cv.render()
+            img = ui.harmonize(img)
             p = save(img, out_dir / f"{name}.png")
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
@@ -1122,6 +1129,7 @@ def main():
             cv = S2.new_canvas()
             fn(cv)
             img = cv.render()
+            img = ui.harmonize(img)
             p = save(img, out_dir / f"{name}.png")
             print(f"  scene {p.name} {img.size}")
         if not args.only and not args.priority:
@@ -1161,6 +1169,7 @@ def main():
         cv = S.new_canvas()
         fn(cv)
         img = cv.render()
+        img = ui.harmonize(img)  # T10: 新キャラの彩度に合わせた色調統一
         p = save(img, SCENE_DIR / f"{name}.png")
         print(f"  scene {p.name} {img.size}")
     if not args.only and not args.priority:

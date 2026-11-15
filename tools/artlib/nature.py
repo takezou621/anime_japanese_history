@@ -61,9 +61,12 @@ def stars(g, box, n, seed=7, color=(255, 255, 255), sparkle=6):
 
 
 def cloud(g, cx, cy, s, base=(255, 255, 255), under=(210, 226, 238),
-          alpha=255, seed=1):
-    """アニメ風フラット雲 (下部に影色の縁)."""
+          alpha=None, seed=1):
+    """アニメ風フラット雲 (T10: 形状/透明度を seed でランダム化)."""
     rnd = random.Random(seed)
+    if alpha is None:
+        alpha = rnd.randint(244, 255)
+    s = s * rnd.uniform(0.92, 1.12)
 
     def shape(dx, dy, color):
         c = with_alpha(color, alpha)
@@ -78,6 +81,10 @@ def cloud(g, cx, cy, s, base=(255, 255, 255), under=(210, 226, 238),
 
     shape(0, 0.10 * s, under)
     shape(0, 0, base)
+    # T10: 光の当たる上部に不透明な明色ポフ (半透明はバッファ置換で穴になるため不使用)
+    hx = cx + rnd.uniform(-0.4, 0.4) * s
+    g.ellipse((hx - 0.7 * s, cy - 0.62 * s, hx + 0.7 * s, cy - 0.30 * s),
+              fill=tint(base, 0.0))
 
 
 def clouds_row(cv, y, n, s, seed=3, **kw):
@@ -229,17 +236,31 @@ def tree(cv, x, y, s, kind="oak", leaf=None, leaf_d=None, leaf_l=None,
     """y は地面の接点. s=1 で高さ約 210px."""
     g = cv.g()
     leaf = leaf or P.WAKAKUSA
-    leaf_d = leaf_d or shade(leaf, 0.78)
-    leaf_l = leaf_l or tint(leaf, 0.25)
+    # T10: 同一スタンプの反復を避けるため seed で色調とサイズを揺らす
     rnd = random.Random(seed)
+    leaf = mix(leaf, rnd.choice([P.WAKAKUSA_L, (96, 150, 100), (120, 168, 108)]),
+               rnd.uniform(0.0, 0.35))
+    leaf_d = shade(leaf, 0.76)
+    leaf_l = tint(leaf, 0.28)
+    s = s * rnd.uniform(0.9, 1.14)
     if kind == "oak":
+        # T10: 幹の傾きと非対称な樹冠 (seed 決定論)
+        lean = rnd.uniform(-0.16, 0.16)
         tw = 11 * s
         th = 95 * s
+        top_x = x + lean * th
         g.poly([(x - tw, y), (x - tw * 0.45, y - th * 0.75),
-                (x - tw * 0.3, y - th), (x + tw * 0.3, y - th),
+                (x - tw * 0.3 + lean * th * 0.4, y - th),
+                (x + tw * 0.3 + lean * th * 0.4, y - th),
                 (x + tw * 0.45, y - th * 0.75), (x + tw, y),
-                (x + tw * 0.6, y + 2), (x - tw * 0.6, y + 2)], fill=trunk)
-        g.line([(x - tw * 0.3, y - th * 0.2), (x - tw * 1.4, y - th * 0.55)], trunk, 5 * s)
+                (x + tw * 0.6, y + 2), (x - tw * 0.6, y + 2)],
+               fill=trunk, outline=shade(trunk, 0.8), owidth=2.2 * s)
+        g.line([(x - tw * 0.3, y - th * 0.2), (x - tw * 1.4, y - th * 0.55)],
+               trunk, 5 * s)
+        cy = y - th - 30 * s
+        base_offs = [(-52, 12, 52), (0, -14, 62), (52, 10, 50),
+                     (-26, -34, 44), (28, -36, 44)]
+        jitter = rnd.uniform(0.85, 1.15)
         canopy = []
         cy = y - th - 30 * s
         for (dx, dy, r) in [(-52, 12, 52), (0, -14, 62), (52, 10, 50),
@@ -250,6 +271,15 @@ def tree(cv, x, y, s, kind="oak", leaf=None, leaf_d=None, leaf_l=None,
         g.poly(canopy, fill=leaf_d)
         g.poly([(p[0], p[1] - 7 * s) for p in canopy], fill=leaf)
         g.poly([(p[0] - 4 * s, p[1] - 13 * s) for p in canopy[::2]], fill=leaf_l)
+        # T10: 陽の当たる上部のハイライト blob (不透明・樹冠内)
+        for b in range(2):
+            hb = blob_pts(x - 16 * s + b * 34 * s, cy - 30 * s, 17 * s, 11 * s,
+                          seed=seed * 31 + b, wobble=0.16)
+            g.poly(hb, fill=leaf_l)
+        # 落ち影
+                # 落ち影
+        g.ellipse((x - tw * 2.2, y - 6 * s, x + tw * 2.2, y + 10 * s),
+                  fill=with_alpha((60, 50, 44), 52))
     elif kind == "pine":
         tw = 9 * s
         g.poly([(x - tw, y), (x - 4 * s, y - 60 * s), (x + 4 * s, y - 60 * s),
@@ -294,3 +324,33 @@ def light_shafts(cv, pts_list, color=(255, 250, 220), alpha=26):
     g = cv.g()
     for pts in pts_list:
         g.poly(pts, fill=with_alpha(color, alpha))
+
+
+def foreground_parallax(cv, y=1000, seed=7, tone=(52, 58, 44), n_tufts=26,
+                        n_stones=6, fence_x=None):
+    """前景のパララックス層 (濃い草・石・柵を画面下端に重ねる)."""
+    g = cv.g()
+    rnd = random.Random(seed)
+    col = tone
+    # 手前の草 (大きめ・濃い)
+    for _ in range(n_tufts):
+        px = rnd.uniform(0, cv.w)
+        py = rnd.uniform(y, cv.h)
+        h = rnd.uniform(26, 54)
+        lean = rnd.uniform(-14, 14)
+        g.line([(px, py), (px + lean * 0.4, py - h * 0.6), (px + lean, py - h)],
+               col, rnd.uniform(3.4, 5.6))
+        g.line([(px, py), (px - lean * 0.5, py - h * 0.55)], col, 3.4)
+    # 石
+    for _ in range(n_stones):
+        px = rnd.uniform(0, cv.w)
+        py = rnd.uniform(y + 20, cv.h - 10)
+        r_ = rnd.uniform(10, 26)
+        g.ellipse((px - r_, py - r_ * 0.6, px + r_, py + r_ * 0.6),
+                  fill=shade(col, 1.35), outline=shade(col, 0.7), owidth=2.2)
+    # 柵 (指定があればシルエットで)
+    if fence_x:
+        for px in range(int(fence_x[0]), int(fence_x[1]), 46):
+            g.poly([(px, cv.h), (px + 12, cv.h), (px + 10, y - 30),
+                    (px + 2, y - 30)], fill=col)
+        g.line([(fence_x[0], y - 26), (fence_x[1], y - 26)], col, 6)
