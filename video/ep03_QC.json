@@ -1,7 +1,7 @@
 {
   "episode": "ep03",
   "profile": "full",
-  "generated_at": "2026-11-15T01:28:23+00:00",
+  "generated_at": "2026-11-15T02:42:43+00:00",
   "video": "video/ep03_FINAL.mp4",
   "duration_sec": 577.433,
   "checks": {
@@ -202,7 +202,7 @@
   ],
   "format": {
     "duration": "577.433333",
-    "size": "2540845918",
+    "size": "2540845920",
     "bit_rate": "35201929"
   },
   "pass": true
