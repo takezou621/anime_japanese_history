@@ -113,25 +113,46 @@ def _is_numlike(t: dict) -> bool:
 
 
 _subtitle_dict_cache: set[str] | None = None
+_subtitle_patterns_cache: list[re.Pattern] | None = None
 
 
 def _load_subtitle_dict() -> set[str]:
     """content/subtitle_dictionary.txt (writer 管理) の不可分割語を返す。
     ファイルが無い/空の場合は空集合 (writer 追加待ち)。"""
-    global _subtitle_dict_cache
-    if _subtitle_dict_cache is None:
+    return _load_subtitle_dict_all()[0]
+
+
+def _load_subtitle_dict_patterns() -> list[re.Pattern]:
+    """@pattern 行のコンパイル済み正規表現を返す (@pattern <正規表現>)。"""
+    return _load_subtitle_dict_all()[1]
+
+
+def _load_subtitle_dict_all() -> tuple[set[str], list[re.Pattern]]:
+    global _subtitle_dict_cache, _subtitle_patterns_cache
+    if _subtitle_dict_cache is None or _subtitle_patterns_cache is None:
         words: set[str] = set()
+        pats: list[re.Pattern] = []
         for cand in ("content/subtitle_dictionary.txt",):
             try:
                 with open(cand, encoding="utf-8") as f:
                     for line in f:
                         w = line.strip()
-                        if w and not w.startswith("#"):
-                            words.add(w)
+                        if not w or w.startswith("#"):
+                            continue
+                        if w.startswith("@pattern"):
+                            pat = w[len("@pattern"):].strip()
+                            if pat:
+                                try:
+                                    pats.append(re.compile(pat))
+                                except re.error:
+                                    print(f"[subtitles][warn] bad @pattern: {pat!r}")
+                            continue
+                        words.add(w)
             except FileNotFoundError:
                 pass
         _subtitle_dict_cache = words
-    return _subtitle_dict_cache
+        _subtitle_patterns_cache = pats
+    return _subtitle_dict_cache, _subtitle_patterns_cache
 
 
 def _merge_tokens(toks: list[dict]) -> list[dict]:
@@ -163,30 +184,70 @@ def _merge_tokens(toks: list[dict]) -> list[dict]:
             i += 1
     toks = out
 
-    # 2) numeric runs (+ trailing units; absorb an immediate short 名詞
-    #    prefix so 慶応+3年 / 西暦+1868年 stay in one block)
+    # 2) numeric runs: [short 名詞 prefix] + digits + units — one block
+    #    (日清戦争+1894+年 -> 日清戦争1894年, 慶応+3年 -> 慶応3年)
     out = []
     i = 0
     while i < len(toks):
-        if _is_numlike(toks[i]) and out and out[-1]["p1"] == "名詞" \
-                and len(out[-1]["s"]) <= 4 and not _is_numlike(out[-1]):
-            out[-1]["s"] += toks[i]["s"]
-            i += 1
-            continue
+        has_prefix = (out and out[-1]["p1"] == "名詞"
+                      and len(out[-1]["s"]) <= 4 and not _is_numlike(out[-1]))
         if _is_numlike(toks[i]):
             j = i
             while (j + 1 < len(toks)
                    and (_is_numlike(toks[j + 1])
                         or toks[j + 1]["s"] in _NUM_UNITS)):
                 j += 1
-            out.append({"s": "".join(t["s"] for t in toks[i:j + 1]),
-                        "p1": toks[i]["p1"], "p2": toks[i]["p2"],
-                        "start": toks[i]["start"]})
+            run = "".join(t["s"] for t in toks[i:j + 1])
+            if has_prefix:
+                out[-1]["s"] += run  # prefix + numeric run: single block
+            else:
+                out.append({"s": run, "p1": toks[i]["p1"],
+                            "p2": toks[i]["p2"], "start": toks[i]["start"]})
             i = j + 1
-        else:
-            out.append(toks[i])
-            i += 1
+            continue
+        out.append(toks[i])
+        i += 1
     toks = out
+
+    # 2.5) @pattern 正規表現による統合 (辞書の @pattern 行; writer 追加可能)
+    _pats = _load_subtitle_dict_patterns()
+    if _pats:
+        full = "".join(t["s"] for t in toks)
+        bounds = []
+        acc = 0
+        for t in toks:
+            bounds.append((acc, acc + len(t["s"])))
+            acc += len(t["s"])
+        spans = []
+        for pat in _pats:
+            for mm in pat.finditer(full):
+                spans.append((mm.start(), mm.end()))
+        if spans:
+            spans.sort()
+            groups: list[list[int]] = []
+            for gs, ge in spans:
+                if groups and gs <= groups[-1][1]:
+                    groups[-1][1] = max(groups[-1][1], ge)
+                else:
+                    groups.append([gs, ge])
+            covered = set()
+            for gs, ge in groups:
+                covered.update(range(gs, ge))
+            out = []
+            i = 0
+            while i < len(toks):
+                if bounds[i][0] in covered:
+                    j = i
+                    while j + 1 < len(toks) and bounds[j + 1][0] in covered:
+                        j += 1
+                    out.append({"s": "".join(t["s"] for t in toks[i:j + 1]),
+                                "p1": toks[i]["p1"], "p2": toks[i]["p2"],
+                                "start": toks[i]["start"]})
+                    i = j + 1
+                else:
+                    out.append(toks[i])
+                    i += 1
+            toks = out
 
     # 3) compound concatenations
     out = []
