@@ -1,14 +1,14 @@
 {
   "episode": "ep08",
   "profile": "full",
-  "generated_at": "2026-11-15T07:30:31+00:00",
+  "generated_at": "2026-11-15T09:52:51+00:00",
   "video": "video/ep08_FINAL.mp4",
-  "duration_sec": 540.867,
+  "duration_sec": 554.367,
   "checks": {
     "duration": {
       "pass": true,
-      "value": 540.867,
-      "expected": 540.832,
+      "value": 554.367,
+      "expected": 554.351,
       "range": [
         300.0,
         600.0
@@ -37,16 +37,16 @@
         "codec": "aac",
         "sample_rate": "48000",
         "channels": 2,
-        "bit_rate": "193646"
+        "bit_rate": "193429"
       }
     },
     "loudness": {
       "pass": true,
       "warn": false,
       "value": {
-        "input_i": -14.53,
-        "input_tp": -1.32,
-        "input_lra": "3.00",
+        "input_i": -14.66,
+        "input_tp": -2.11,
+        "input_lra": "2.80",
         "target_i": -14.0,
         "tolerance": 1.5,
         "tp_max": -1.0
@@ -67,7 +67,7 @@
       "pass": true,
       "warn": false,
       "value": {
-        "bit_rate": 35202119,
+        "bit_rate": 35201930,
         "mbps": 35.2,
         "target_mbps": 35.0,
         "maxrate_mbps": 40.0
@@ -114,11 +114,11 @@
       "time_base": "1/15360",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 8307712,
-      "duration": "540.866667",
-      "bit_rate": "34999676",
+      "duration_ts": 8515072,
+      "duration": "554.366667",
+      "bit_rate": "34999695",
       "bits_per_raw_sample": "8",
-      "nb_frames": "16226",
+      "nb_frames": "16631",
       "extradata_size": 62,
       "disposition": {
         "default": 1,
@@ -168,10 +168,10 @@
       "time_base": "1/48000",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 25959936,
-      "duration": "540.832000",
-      "bit_rate": "193646",
-      "nb_frames": "25353",
+      "duration_ts": 26608848,
+      "duration": "554.351000",
+      "bit_rate": "193429",
+      "nb_frames": "25987",
       "extradata_size": 5,
       "disposition": {
         "default": 1,
@@ -201,9 +201,9 @@
     }
   ],
   "format": {
-    "duration": "540.866667",
-    "size": "2379956613",
-    "bit_rate": "35202119"
+    "duration": "554.366667",
+    "size": "2439347129",
+    "bit_rate": "35201930"
   },
   "pass": true
 }
