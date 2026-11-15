@@ -3,31 +3,31 @@
   "target_i": -14.0,
   "duck_db": -18.0,
   "quiet_db": -8.0,
-  "narration_beats": 90,
+  "narration_beats": 145,
   "loudnorm_mode": "2-pass linear",
   "measured": {
-    "input_i": "-23.99",
-    "input_tp": "-4.94",
+    "input_i": "-23.71",
+    "input_tp": "-4.78",
     "input_lra": "3.50",
-    "input_thresh": "-34.67",
-    "output_i": "-23.94",
-    "output_tp": "-4.74",
+    "input_thresh": "-34.37",
+    "output_i": "-23.98",
+    "output_tp": "-5.16",
     "output_lra": "3.50",
-    "output_thresh": "-34.63",
+    "output_thresh": "-34.64",
     "normalization_type": "dynamic",
-    "target_offset": "-0.06"
+    "target_offset": "-0.02"
   },
   "output_loudness": {
-    "input_i": "-14.59",
-    "input_tp": "-1.53",
-    "input_lra": "3.20",
-    "input_thresh": "-25.24",
-    "output_i": "-23.88",
-    "output_tp": "-10.31",
-    "output_lra": "3.10",
-    "output_thresh": "-34.53",
+    "input_i": "-14.57",
+    "input_tp": "-1.56",
+    "input_lra": "3.10",
+    "input_thresh": "-25.19",
+    "output_i": "-23.95",
+    "output_tp": "-10.43",
+    "output_lra": "3.00",
+    "output_thresh": "-34.56",
     "normalization_type": "dynamic",
-    "target_offset": "-0.12"
+    "target_offset": "-0.05"
   },
   "mix": "audio/ep07/mix.wav"
 }

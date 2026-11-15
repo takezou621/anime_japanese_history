@@ -2,12 +2,12 @@
   "episode": "ep05",
   "title": "足利尊氏と戦国の始まり",
   "gaps": {
-    "beat": 0.45,
-    "scene": 0.7,
-    "section": 0.9,
-    "tail": 0.7
+    "beat": 0.3,
+    "scene": 0.6,
+    "section": 0.8,
+    "tail": 0.6
   },
-  "total_duration": 511.418,
+  "total_duration": 521.844,
   "scenes": [
     {
       "id": "s01",
@@ -24,14 +24,14 @@
         {
           "speaker": "sensei",
           "wav": "narration/s01_b01.wav",
-          "start": 6.061,
+          "start": 5.911,
           "duration": 6.624,
           "text": "実は、あるんです!足利尊氏の室町幕府から応仁の大乱まで、栄華と大乱を順番に見ていきましょう。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s01_b02.wav",
-          "start": 13.135,
+          "start": 12.835,
           "duration": 5.76,
           "text": "その理由、早く知りたいのだ!金閣も銀閣も応仁の乱も、ぜんぶ見るのだ!"
         }
@@ -40,40 +40,61 @@
     {
       "id": "s02",
       "section": "story",
-      "start": 19.795,
+      "start": 19.395,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s02_b00.wav",
-          "start": 19.795,
+          "start": 19.395,
           "duration": 2.528,
           "text": "鎌倉幕府、元気だったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s02_b01.wav",
-          "start": 22.773,
-          "duration": 8.629,
-          "text": "いいえ、元寇の後は不満だらけ。後醍醐天皇は、政治を取り戻そうと討幕の計画を進めます。"
+          "start": 22.223,
+          "duration": 3.435,
+          "text": "いいえ、元寇の後は不満だらけ。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b02.wav",
+          "start": 25.957,
+          "duration": 5.163,
+          "text": "後醍醐天皇は、政治を取り戻そうと討幕の計画を進めます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s02_b02.wav",
-          "start": 31.852,
+          "wav": "narration/s02_b03.wav",
+          "start": 31.42,
           "duration": 1.76,
           "text": "天皇が立ち上がるのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s02_b03.wav",
-          "start": 34.062,
-          "duration": 12.608,
-          "text": "河内の武将・楠木正成が少人数で鎌倉軍を悩ませ、新田義貞が鎌倉を攻め落としました。1333年、鎌倉幕府滅亡です。"
+          "wav": "narration/s02_b04.wav",
+          "start": 33.48,
+          "duration": 3.925,
+          "text": "河内の武将・楠木正成が少人数で鎌倉軍を悩ませ、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b05.wav",
+          "start": 37.705,
+          "duration": 9.067,
+          "text": "新田義貞が鎌倉を攻め落としました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b06.wav",
+          "start": 47.072,
+          "duration": 3.189,
+          "text": "1333年、鎌倉幕府滅亡です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s02_b04.wav",
-          "start": 47.12,
+          "wav": "narration/s02_b07.wav",
+          "start": 50.561,
           "duration": 3.605,
           "text": "楠木さんは、少人数でも強かった名将なのだ!"
         }
@@ -82,40 +103,82 @@
     {
       "id": "s03",
       "section": "story",
-      "start": 51.425,
+      "start": 54.767,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s03_b00.wav",
-          "start": 51.425,
+          "start": 54.767,
           "duration": 2.709,
           "text": "では、天皇の政治が始まるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s03_b01.wav",
-          "start": 54.585,
-          "duration": 9.685,
-          "text": "後醍醐天皇の親政、建武の新政です。公家中心の政治で、武士の希望は薄く、恩賞も思うように配れませんでした。"
+          "start": 57.776,
+          "duration": 2.816,
+          "text": "後醍醐天皇の親政、建武の新政です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b02.wav",
+          "start": 60.892,
+          "duration": 3.093,
+          "text": "公家中心の政治で、武士の希望は薄く、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b03.wav",
+          "start": 64.285,
+          "duration": 2.027,
+          "text": "恩賞も思うように配れませんでした。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s03_b02.wav",
-          "start": 64.72,
+          "wav": "narration/s03_b04.wav",
+          "start": 66.612,
+          "duration": 3.829,
+          "text": "建武の新政って、新しいお寺を作る政治なのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b05.wav",
+          "start": 70.741,
+          "duration": 2.603,
+          "text": "いいえ、新しい政治のかたちのことです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b06.wav",
+          "start": 73.644,
+          "duration": 3.36,
+          "text": "武士が期待したのに、希望は薄くてがっかりさせちゃったんです。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s03_b07.wav",
+          "start": 77.304,
           "duration": 1.941,
           "text": "武士は、がっかりなのだ?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s03_b03.wav",
-          "start": 67.111,
-          "duration": 4.853,
-          "text": "ええ、たった3年足らずで武士の心は離れ、政治は行き詰まっていきます。"
+          "wav": "narration/s03_b08.wav",
+          "start": 79.545,
+          "duration": 3.061,
+          "text": "ええ、たった3年足らずで武士の心は離れ、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b09.wav",
+          "start": 82.907,
+          "duration": 1.6,
+          "text": "政治は行き詰まっていきます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s03_b04.wav",
-          "start": 72.415,
+          "wav": "narration/s03_b10.wav",
+          "start": 84.807,
           "duration": 2.475,
           "text": "ガッカリ政治、続かないなのだ…"
         }
@@ -124,47 +187,61 @@
     {
       "id": "s04",
       "section": "story",
-      "start": 75.589,
+      "start": 87.881,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s04_b00.wav",
-          "start": 75.589,
+          "start": 87.881,
           "duration": 2.197,
           "text": "そこで立ったのは、だれなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b01.wav",
-          "start": 78.237,
-          "duration": 8.843,
-          "text": "足利尊氏です。武士の心を集め、1336年に京都を抑えて新しい政治を始めます。"
+          "start": 90.379,
+          "duration": 1.461,
+          "text": "足利尊氏です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b02.wav",
-          "start": 87.529,
+          "start": 92.14,
+          "duration": 7.243,
+          "text": "武士の心を集め、1336年に京都を抑えて新しい政治を始めます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b03.wav",
+          "start": 99.683,
           "duration": 6.272,
           "text": "楠木正成は、湊川で最後まで天皇側として戦い、討ち死にしました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s04_b03.wav",
-          "start": 94.251,
+          "wav": "narration/s04_b04.wav",
+          "start": 106.255,
           "duration": 2.357,
           "text": "楠木さん…かっこよすぎるのだ…"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s04_b04.wav",
-          "start": 97.059,
-          "duration": 11.659,
-          "text": "1338年、尊氏は征夷大将軍に就任して、室町幕府を開きます。政治の拠点は京都で、武家の朝廷みたいなものでした。"
+          "wav": "narration/s04_b05.wav",
+          "start": 108.912,
+          "duration": 6.635,
+          "text": "1338年、尊氏は征夷大将軍に就任して、室町幕府を開きます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b06.wav",
+          "start": 115.847,
+          "duration": 4.928,
+          "text": "政治の拠点は京都で、武家の朝廷みたいなものでした。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s04_b05.wav",
-          "start": 109.167,
+          "wav": "narration/s04_b07.wav",
+          "start": 121.075,
           "duration": 1.664,
           "text": "幕府が京都に来たのだ!"
         }
@@ -173,40 +250,54 @@
     {
       "id": "s05",
       "section": "story",
-      "start": 111.531,
+      "start": 123.339,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s05_b00.wav",
-          "start": 111.531,
+          "start": 123.339,
           "duration": 2.955,
           "text": "でも、天皇側は、おしまいなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b01.wav",
-          "start": 114.936,
-          "duration": 11.072,
-          "text": "いいえ、後醍醐は吉野に逃れて朝廷を開きます。京都の北朝と吉野の南朝が、約56年も対立する南北朝時代です。"
+          "start": 126.593,
+          "duration": 4.427,
+          "text": "いいえ、後醍醐は吉野に逃れて朝廷を開きます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b02.wav",
+          "start": 131.32,
+          "duration": 6.592,
+          "text": "京都の北朝と吉野の南朝が、約56年も対立する南北朝時代です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s05_b02.wav",
-          "start": 126.458,
+          "wav": "narration/s05_b03.wav",
+          "start": 138.212,
           "duration": 2.496,
           "text": "天皇が二人!?大もめなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s05_b03.wav",
-          "start": 129.404,
-          "duration": 8.853,
-          "text": "ええ、争いは長く続きましたが、1392年、義満の手でついに南北朝が合一します。"
+          "wav": "narration/s05_b04.wav",
+          "start": 141.008,
+          "duration": 3.947,
+          "text": "ええ、争いは長く続きましたが、1392年、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b05.wav",
+          "start": 145.255,
+          "duration": 2.539,
+          "text": "義満の手でついに南北朝が合一します。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s05_b04.wav",
-          "start": 138.707,
+          "wav": "narration/s05_b06.wav",
+          "start": 148.093,
           "duration": 2.699,
           "text": "56年…も、ながいなのだ…"
         }
@@ -215,40 +306,54 @@
     {
       "id": "s06",
       "section": "story",
-      "start": 142.106,
+      "start": 151.392,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s06_b00.wav",
-          "start": 142.106,
+          "start": 151.392,
           "duration": 2.389,
           "text": "義満って、すごい人なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b01.wav",
-          "start": 144.945,
-          "duration": 11.701,
-          "text": "足利義満は、若くして家を継ぎ、将軍の力をどこまでも強くしました。朝廷の官まで極める、前例のない武家です。"
+          "start": 154.081,
+          "duration": 6.997,
+          "text": "足利義満は、若くして家を継ぎ、将軍の力をどこまでも強くしました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b02.wav",
+          "start": 161.379,
+          "duration": 4.704,
+          "text": "朝廷の官まで極める、前例のない武家です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s06_b02.wav",
-          "start": 157.097,
+          "wav": "narration/s06_b03.wav",
+          "start": 166.383,
           "duration": 1.973,
           "text": "武士が、公家を超えるのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s06_b03.wav",
-          "start": 159.52,
-          "duration": 9.611,
-          "text": "ええ、守護大名たちも義満に従い、幕府の力は頂点に達しました。天皇も、義満には逆らえませんでした。"
+          "wav": "narration/s06_b04.wav",
+          "start": 168.656,
+          "duration": 6.699,
+          "text": "ええ、守護大名たちも義満に従い、幕府の力は頂点に達しました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b05.wav",
+          "start": 175.655,
+          "duration": 2.859,
+          "text": "天皇も、義満には逆らえませんでした。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s06_b04.wav",
-          "start": 169.581,
+          "wav": "narration/s06_b06.wav",
+          "start": 178.813,
           "duration": 2.283,
           "text": "将軍、トップオブトップなのだ!"
         }
@@ -257,40 +362,54 @@
     {
       "id": "s07",
       "section": "story",
-      "start": 172.563,
+      "start": 181.696,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s07_b00.wav",
-          "start": 172.563,
+          "start": 181.696,
           "duration": 1.707,
           "text": "お金の話もあるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b01.wav",
-          "start": 174.72,
-          "duration": 9.771,
-          "text": "ええ、義満は明と日明貿易を始めます。海賊の倭寇を取り締まる代わりに、貿易の権利をもらいました。"
+          "start": 183.703,
+          "duration": 4.288,
+          "text": "ええ、義満は明と日明貿易を始めます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b02.wav",
+          "start": 188.291,
+          "duration": 5.376,
+          "text": "海賊の倭寇を取り締まる代わりに、貿易の権利をもらいました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s07_b02.wav",
-          "start": 184.941,
+          "wav": "narration/s07_b03.wav",
+          "start": 193.967,
           "duration": 2.56,
           "text": "倭寇って、海のならず者なのだ?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s07_b03.wav",
-          "start": 187.951,
-          "duration": 9.397,
-          "text": "そう、勘合符を持つ船だけが許される貿易です。中国の銅銭や絹が入って、幕府は大もうけしました。"
+          "wav": "narration/s07_b04.wav",
+          "start": 196.827,
+          "duration": 4.555,
+          "text": "そう、勘合符を持つ船だけが許される貿易です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b05.wav",
+          "start": 201.681,
+          "duration": 4.725,
+          "text": "中国の銅銭や絹が入って、幕府は大もうけしました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s07_b04.wav",
-          "start": 197.798,
+          "wav": "narration/s07_b06.wav",
+          "start": 206.707,
           "duration": 2.101,
           "text": "海の商売、キャッシュなのだ!"
         }
@@ -299,40 +418,68 @@
     {
       "id": "s08",
       "section": "story",
-      "start": 200.599,
+      "start": 209.408,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s08_b00.wav",
-          "start": 200.599,
+          "start": 209.408,
           "duration": 2.56,
           "text": "そのお金で、建てたものがあるのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b01.wav",
-          "start": 203.609,
-          "duration": 9.387,
-          "text": "それ、金閣です。1397年に義満が建てた、山吹色に輝く別荘で、死後は寺になりました。"
+          "start": 212.268,
+          "duration": 1.344,
+          "text": "それ、金閣です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b02.wav",
+          "start": 213.912,
+          "duration": 1.344,
+          "text": "1397年に義満が建てた、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b03.wav",
+          "start": 215.556,
+          "duration": 3.157,
+          "text": "山吹色に輝く別荘で、死後は寺になりました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s08_b02.wav",
-          "start": 213.446,
+          "wav": "narration/s08_b04.wav",
+          "start": 219.013,
           "duration": 2.848,
           "text": "金ピカの家なのだ!?うらやましいのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s08_b03.wav",
-          "start": 216.744,
-          "duration": 7.936,
-          "text": "ここで公家文化と武家文化が混ざり合い、華麗な北山文化が咲きました。金閣はそのシンボルです。"
+          "wav": "narration/s08_b05.wav",
+          "start": 222.161,
+          "duration": 2.123,
+          "text": "ここで公家文化と武家文化が混ざり合い、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b06.wav",
+          "start": 224.584,
+          "duration": 5.739,
+          "text": "華麗な北山文化が咲きました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b07.wav",
+          "start": 230.623,
+          "duration": 1.504,
+          "text": "金閣はそのシンボルです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s08_b04.wav",
-          "start": 225.13,
+          "wav": "narration/s08_b08.wav",
+          "start": 232.427,
           "duration": 1.547,
           "text": "文化もゴージャスなのだ!"
         }
@@ -341,40 +488,54 @@
     {
       "id": "s09",
       "section": "story",
-      "start": 227.377,
+      "start": 234.573,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s09_b00.wav",
-          "start": 227.377,
+          "start": 234.573,
           "duration": 2.144,
           "text": "でも、栄華は続くのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b01.wav",
-          "start": 229.971,
-          "duration": 10.443,
-          "text": "義満の後は、幕府の力がじわじわ下がります。1467年、細川氏と山名氏の争いから、応仁の乱が始まります。"
+          "start": 237.017,
+          "duration": 4.267,
+          "text": "義満の後は、幕府の力がじわじわ下がります。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b02.wav",
+          "start": 241.584,
+          "duration": 6.091,
+          "text": "1467年、細川氏と山名氏の争いから、応仁の乱が始まります。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s09_b02.wav",
-          "start": 240.863,
+          "wav": "narration/s09_b03.wav",
+          "start": 247.975,
           "duration": 2.347,
           "text": "大名同士の、けんかなのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s09_b03.wav",
-          "start": 243.66,
-          "duration": 10.336,
-          "text": "東軍と西軍に分れ、戦は11年続きました。京都は焼け野原になり、権威も地盤も大きく揺らぎます。"
+          "wav": "narration/s09_b04.wav",
+          "start": 250.621,
+          "duration": 5.152,
+          "text": "東軍と西軍に分れ、戦は11年続きました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b05.wav",
+          "start": 256.073,
+          "duration": 5.173,
+          "text": "京都は焼け野原になり、権威も地盤も大きく揺らぎます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s09_b04.wav",
-          "start": 254.446,
+          "wav": "narration/s09_b06.wav",
+          "start": 261.547,
           "duration": 2.197,
           "text": "金色が、灰色になるのだ…"
         }
@@ -383,40 +544,68 @@
     {
       "id": "s10",
       "section": "story",
-      "start": 257.343,
+      "start": 264.344,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s10_b00.wav",
-          "start": 257.343,
+          "start": 264.344,
           "duration": 2.667,
           "text": "乱のあと、日本はどうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b01.wav",
-          "start": 260.46,
-          "duration": 9.739,
-          "text": "守護たちは、国を自分の国のように支配し始めます。これが分国支配で、国ごとの大きな勢力が育ちます。"
+          "start": 267.311,
+          "duration": 3.221,
+          "text": "守護たちは、国を自分の国のように支配し始めます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b02.wav",
+          "start": 270.832,
+          "duration": 3.403,
+          "text": "これが分国支配で、国ごとの大きな勢力が育ちます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b03.wav",
+          "start": 274.535,
+          "duration": 4.949,
+          "text": "奈良や平安は都から全国を動かしたけれど、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b04.wav",
+          "start": 279.784,
+          "duration": 2.677,
+          "text": "この時代は各地のボスが自分の国を治めます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s10_b02.wav",
-          "start": 270.649,
+          "wav": "narration/s10_b05.wav",
+          "start": 282.761,
           "duration": 2.261,
           "text": "国ごとに、ボスができるのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s10_b03.wav",
-          "start": 273.36,
-          "duration": 9.76,
-          "text": "ええ、守護や国人が土地の武士を従え、領国を治めます。遠い京都の将軍は、もう手が届きません。"
+          "wav": "narration/s10_b06.wav",
+          "start": 285.323,
+          "duration": 5.696,
+          "text": "ええ、守護や国人が土地の武士を従え、領国を治めます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b07.wav",
+          "start": 291.319,
+          "duration": 3.989,
+          "text": "遠い京都の将軍は、もう手が届きません。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s10_b04.wav",
-          "start": 283.57,
+          "wav": "narration/s10_b08.wav",
+          "start": 295.608,
           "duration": 2.581,
           "text": "遠くのボスより、近くのボスなのだ!"
         }
@@ -425,40 +614,54 @@
     {
       "id": "s11",
       "section": "story",
-      "start": 286.851,
+      "start": 298.789,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s11_b00.wav",
-          "start": 286.851,
+          "start": 298.789,
           "duration": 2.379,
           "text": "下剋上って、いつからなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b01.wav",
-          "start": 289.68,
-          "duration": 8.672,
-          "text": "応仁の乱の前から芽が出ています。守護代や国人が、主君を押さえて力を伸ばし始めたんです。"
+          "start": 301.468,
+          "duration": 3.019,
+          "text": "応仁の乱の前から芽が出ています。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b02.wav",
+          "start": 304.787,
+          "duration": 5.589,
+          "text": "守護代や国人が、主君を押さえて力を伸ばし始めたんです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s11_b02.wav",
-          "start": 298.802,
+          "wav": "narration/s11_b03.wav",
+          "start": 310.676,
           "duration": 2.187,
           "text": "家来が、主を超えるのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s11_b03.wav",
-          "start": 301.439,
-          "duration": 4.885,
-          "text": "そのとおり。のちに「下剋上」と呼ばれる、大逆転の世の入口なんです。"
+          "wav": "narration/s11_b04.wav",
+          "start": 313.163,
+          "duration": 0.725,
+          "text": "そのとおり。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b05.wav",
+          "start": 314.188,
+          "duration": 4.096,
+          "text": "のちに「下剋上」と呼ばれる、大逆転の世の入口なんです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s11_b04.wav",
-          "start": 306.774,
+          "wav": "narration/s11_b06.wav",
+          "start": 318.584,
           "duration": 2.997,
           "text": "ドン底からナンバーワン、可能性なのだ!"
         }
@@ -467,40 +670,54 @@
     {
       "id": "s12",
       "section": "story",
-      "start": 310.471,
+      "start": 322.181,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s12_b00.wav",
-          "start": 310.471,
+          "start": 322.181,
           "duration": 2.773,
           "text": "乱世のとき、文化はどうなるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b01.wav",
-          "start": 313.695,
-          "duration": 10.955,
-          "text": "応仁の乱の後、足利義政が山里に銀閣を建てます。金色でなく銀色、しっとりひなびた美の文化、東山文化です。"
+          "start": 325.255,
+          "duration": 5.419,
+          "text": "応仁の乱の後、足利義政が山里に銀閣を建てます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b02.wav",
+          "start": 330.973,
+          "duration": 5.461,
+          "text": "金色でなく銀色、しっとりひなびた美の文化、東山文化です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s12_b02.wav",
-          "start": 325.099,
+          "wav": "narration/s12_b03.wav",
+          "start": 336.735,
           "duration": 3.008,
           "text": "金閣とおとなしい銀閣、親子なのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s12_b03.wav",
-          "start": 328.557,
-          "duration": 8.832,
-          "text": "茶の湯や生け花、枯山水の庭も、このころに育ちます。乱世だからこそ、心静かな美が求められたんですよ。"
+          "wav": "narration/s12_b04.wav",
+          "start": 340.043,
+          "duration": 4.64,
+          "text": "茶の湯や生け花、枯山水の庭も、このころに育ちます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b05.wav",
+          "start": 344.983,
+          "duration": 4.064,
+          "text": "乱世だからこそ、心静かな美が求められたんですよ。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s12_b04.wav",
-          "start": 337.839,
+          "wav": "narration/s12_b06.wav",
+          "start": 349.347,
           "duration": 2.069,
           "text": "しずかな美、たまらないのだ。"
         }
@@ -509,40 +726,54 @@
     {
       "id": "s13",
       "section": "story",
-      "start": 340.609,
+      "start": 352.016,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s13_b00.wav",
-          "start": 340.609,
+          "start": 352.016,
           "duration": 2.688,
           "text": "そして、乱世の主役はだれなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b01.wav",
-          "start": 343.747,
-          "duration": 9.013,
-          "text": "下剋上をくり返した結果、戦国大名の登場です。家臣団を率いて、自分の国を力で治めます。"
+          "start": 355.004,
+          "duration": 4.512,
+          "text": "下剋上をくり返した結果、戦国大名の登場です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b02.wav",
+          "start": 359.816,
+          "duration": 4.395,
+          "text": "家臣団を率いて、自分の国を力で治めます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s13_b02.wav",
-          "start": 353.21,
+          "wav": "narration/s13_b03.wav",
+          "start": 364.511,
           "duration": 1.867,
           "text": "地元のスーパースターなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s13_b03.wav",
-          "start": 355.527,
-          "duration": 5.472,
-          "text": "ええ、この乱世を終わらせる英雄が、まもなく登場します。名前は、織田信長!"
+          "wav": "narration/s13_b04.wav",
+          "start": 366.677,
+          "duration": 3.851,
+          "text": "ええ、この乱世を終わらせる英雄が、まもなく登場します。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b05.wav",
+          "start": 370.828,
+          "duration": 1.504,
+          "text": "名前は、織田信長!"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s13_b04.wav",
-          "start": 361.449,
+          "wav": "narration/s13_b06.wav",
+          "start": 372.632,
           "duration": 2.325,
           "text": "信長!?つづきが気になるのだ!"
         }
@@ -551,54 +782,89 @@
     {
       "id": "s14",
       "section": "points",
-      "start": 364.674,
+      "start": 375.757,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s14_b00.wav",
-          "start": 364.674,
+          "start": 375.757,
           "duration": 3.552,
           "text": "ここから受験ポイントのまとめ!まずは、室町の成り立ち。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b01.wav",
-          "start": 368.676,
-          "duration": 15.936,
-          "text": "1333年鎌倉滅亡と建武の新政、1338年足利尊氏が室町幕府、南北朝は約56年で1392年合一。楠木正成の忠義もセットです!"
+          "start": 379.609,
+          "duration": 8.16,
+          "text": "1333年鎌倉滅亡と建武の新政、1338年足利尊氏が室町幕府、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b02.wav",
-          "start": 385.062,
-          "duration": 6.709,
-          "text": "「義満=日明貿易と金閣」「尊氏=室町幕府1338年」のペアも、忘れずに。"
+          "start": 388.069,
+          "duration": 4.608,
+          "text": "南北朝は約56年で1392年合一。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b03.wav",
+          "start": 392.977,
+          "duration": 3.072,
+          "text": "楠木正成の忠義もセットです!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b04.wav",
+          "start": 396.349,
+          "duration": 6.165,
+          "text": "「義満=日明貿易と金閣」「尊氏=室町幕府1338年」のペアも、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b05.wav",
+          "start": 402.815,
+          "duration": 0.715,
+          "text": "忘れずに。"
         }
       ]
     },
     {
       "id": "s15",
       "section": "points",
-      "start": 392.471,
+      "start": 404.129,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s15_b00.wav",
-          "start": 392.471,
+          "start": 404.129,
           "duration": 2.368,
           "text": "後半は、乱世と文化のまとめです。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b01.wav",
-          "start": 395.289,
-          "duration": 13.536,
-          "text": "応仁の乱1467年で戦国の始まり、守護の分国支配、そして下剋上の芽。文化は義満の北山文化と、義政の東山文化の対比です!"
+          "start": 406.797,
+          "duration": 4.384,
+          "text": "応仁の乱1467年で戦国の始まり、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b02.wav",
-          "start": 409.275,
+          "start": 411.481,
+          "duration": 3.563,
+          "text": "守護の分国支配、そして下剋上の芽。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b03.wav",
+          "start": 415.344,
+          "duration": 5.152,
+          "text": "文化は義満の北山文化と、義政の東山文化の対比です!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b04.wav",
+          "start": 420.796,
           "duration": 4.299,
           "text": "「金=北山、銀=東山」のペアで覚えましょう!"
         }
@@ -607,103 +873,145 @@
     {
       "id": "s16",
       "section": "quiz",
-      "start": 414.474,
+      "start": 425.895,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s16_b00.wav",
-          "start": 414.474,
+          "start": 425.895,
           "duration": 2.091,
           "text": "それではクイズタイム!第一問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b01.wav",
-          "start": 417.015,
-          "duration": 13.195,
-          "text": "1333年、鎌倉幕府を倒す力となった、後醍醐天皇に尽くした武将は?ア、楠木正成。イ、足利尊氏。ウ、武田信玄。"
+          "start": 428.285,
+          "duration": 7.115,
+          "text": "1333年、鎌倉幕府を倒す力となった、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b02.wav",
+          "start": 435.7,
+          "duration": 1.877,
+          "text": "後醍醐天皇に尽くした武将は?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b03.wav",
+          "start": 437.877,
+          "duration": 4.043,
+          "text": "ア、楠木正成。イ、足利尊氏。ウ、武田信玄。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s16_b02.wav",
-          "start": 430.659,
+          "wav": "narration/s16_b04.wav",
+          "start": 442.22,
           "duration": 2.283,
           "text": "少人数の名将…アなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s16_b03.wav",
-          "start": 433.392,
-          "duration": 5.28,
-          "text": "正解!楠木正成です。尊氏はその後の幕府の開祖、流れで覚えましょう。"
+          "wav": "narration/s16_b05.wav",
+          "start": 444.803,
+          "duration": 1.995,
+          "text": "正解!楠木正成です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b06.wav",
+          "start": 447.097,
+          "duration": 3.2,
+          "text": "尊氏はその後の幕府の開祖、流れで覚えましょう。"
         }
       ]
     },
     {
       "id": "s17",
       "section": "quiz",
-      "start": 439.372,
+      "start": 450.897,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s17_b00.wav",
-          "start": 439.372,
+          "start": 450.897,
           "duration": 0.661,
           "text": "第二問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b01.wav",
-          "start": 440.483,
-          "duration": 14.315,
-          "text": "1467年、京都を焼け野原にして、戦国時代の入り口になった乱は?ア、応仁の乱。イ、承久の乱。ウ、川中島の戦い。"
+          "start": 451.859,
+          "duration": 8.928,
+          "text": "1467年、京都を焼け野原にして、戦国時代の入り口になった乱は?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s17_b02.wav",
+          "start": 461.087,
+          "duration": 4.821,
+          "text": "ア、応仁の乱。イ、承久の乱。ウ、川中島の戦い。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s17_b02.wav",
-          "start": 455.248,
+          "wav": "narration/s17_b03.wav",
+          "start": 466.208,
           "duration": 2.005,
           "text": "灰色の京都…アなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s17_b03.wav",
-          "start": 457.703,
-          "duration": 5.76,
-          "text": "正解!応仁の乱です。1467年から11年間、この乱とセットでどうぞ。"
+          "wav": "narration/s17_b04.wav",
+          "start": 468.513,
+          "duration": 1.728,
+          "text": "正解!応仁の乱です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s17_b05.wav",
+          "start": 470.541,
+          "duration": 4.053,
+          "text": "1467年から11年間、この乱とセットで覚えよう。"
         }
       ]
     },
     {
       "id": "s18",
       "section": "quiz",
-      "start": 464.163,
+      "start": 475.195,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s18_b00.wav",
-          "start": 464.163,
+          "start": 475.195,
           "duration": 0.843,
           "text": "ラスト問題!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b01.wav",
-          "start": 465.456,
-          "duration": 12.533,
-          "text": "足利義満が明と始めた、勘合符を使う貿易は何でしょう?ア、宋貿易。イ、日明貿易。ウ、朱印船貿易。"
+          "start": 476.337,
+          "duration": 10.144,
+          "text": "足利義満が明と始めた、勘合符を使う貿易は何でしょう?ア、宋貿易。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s18_b02.wav",
+          "start": 486.781,
+          "duration": 2.123,
+          "text": "イ、日明貿易。ウ、朱印船貿易。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s18_b02.wav",
-          "start": 478.439,
+          "wav": "narration/s18_b03.wav",
+          "start": 489.204,
           "duration": 2.176,
           "text": "義満と中国…イなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s18_b03.wav",
-          "start": 481.065,
+          "wav": "narration/s18_b04.wav",
+          "start": 491.68,
           "duration": 5.771,
           "text": "正解!日明貿易です。宋貿易は平清盛、朱印船はもっと後の時代です。"
         }
@@ -712,33 +1020,47 @@
     {
       "id": "s19",
       "section": "ending",
-      "start": 487.736,
+      "start": 498.251,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s19_b00.wav",
-          "start": 487.736,
+          "start": 498.251,
           "duration": 3.381,
           "text": "今日は室町の栄華と、乱世のはじまりを見てきました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b01.wav",
-          "start": 491.567,
-          "duration": 7.573,
-          "text": "建武の新政、南北朝、金閣、応仁の乱、下剋上…キラキラと灰色が混ざった時代なのだ!"
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s19_b02.wav",
-          "start": 499.591,
-          "duration": 6.539,
-          "text": "次回第6話は、織田信長と豊臣秀吉の天下統一。乱世を終わらせる二人の話、お楽しみに!"
+          "start": 501.932,
+          "duration": 5.013,
+          "text": "建武の新政、南北朝、金閣、応仁の乱、下剋上…"
         },
         {
           "speaker": "manabu",
+          "wav": "narration/s19_b02.wav",
+          "start": 507.245,
+          "duration": 2.496,
+          "text": "キラキラと灰色が混ざった時代なのだ!"
+        },
+        {
+          "speaker": "sensei",
           "wav": "narration/s19_b03.wav",
-          "start": 506.579,
+          "start": 510.041,
+          "duration": 3.691,
+          "text": "次回第6話は、織田信長と豊臣秀吉の天下統一。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s19_b04.wav",
+          "start": 514.032,
+          "duration": 2.773,
+          "text": "乱世を終わらせる二人の話、お楽しみに!"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s19_b05.wav",
+          "start": 517.105,
           "duration": 4.139,
           "text": "つぎは革命児なのだ!?チャンネル登録も、よろしくなのだ!"
         }
@@ -748,23 +1070,23 @@
   "sections": {
     "opening": {
       "start": 0.0,
-      "end": 19.795
+      "end": 19.395
     },
     "story": {
-      "start": 19.795,
-      "end": 364.674
+      "start": 19.395,
+      "end": 375.757
     },
     "points": {
-      "start": 364.674,
-      "end": 414.474
+      "start": 375.757,
+      "end": 425.895
     },
     "quiz": {
-      "start": 414.474,
-      "end": 487.736
+      "start": 425.895,
+      "end": 498.251
     },
     "ending": {
-      "start": 487.736,
-      "end": 511.418
+      "start": 498.251,
+      "end": 521.844
     }
   }
 }

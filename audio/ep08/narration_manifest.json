@@ -25,23 +25,23 @@
       "speaker": "manabu"
     },
     "narration/s02_b01.wav": {
-      "tts_text": "ええ、しかし1853ねん、アメリカの、ペリーが、うらがに、あらわれます。じょうきで、けむりを、はく、くろい、ぐんかんよんせき、かいこくの、ようきゅうでした。",
+      "tts_text": "ええ、しかし1853ねん、アメリカの、ペリーが、うらがに、あらわれます。",
       "speaker": "sensei"
     },
     "narration/s02_b02.wav": {
+      "tts_text": "じょうきで、けむりを、はく、くろい、ぐんかんよんせき、かいこくの、ようきゅうでした。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b03.wav": {
       "tts_text": "それが黒船なのだ!?迫力がすごいのだ!",
       "speaker": "manabu"
     },
-    "narration/s02_b03.wav": {
-      "tts_text": "ばくふは、こたえを、まどい、「らいねん、また、くる」と、いって、ペリーは、いちじきこくします。こたえを、だす、いちねんかんが、あたえられました。",
+    "narration/s02_b04.wav": {
+      "tts_text": "幕府は答えを迷い、「来年また来る」と言って、",
       "speaker": "sensei"
     },
-    "narration/s02_b04.wav": {
-      "tts_text": "迷った末の答えは、開国なのだ!?",
-      "speaker": "manabu"
-    },
     "narration/s02_b05.wav": {
-      "tts_text": "えどの、まちは、おおさわぎ、すもうとりで、おうせんする、あんまで、でたほどです。",
+      "tts_text": "ばくふは、こたえを、まどい、「らいねん、また、くる」と、いって、ペリーは、いちじきこくします。",
       "speaker": "sensei"
     },
     "narration/s03_b00.wav": {
@@ -49,23 +49,23 @@
       "speaker": "manabu"
     },
     "narration/s03_b01.wav": {
-      "tts_text": "1854ねん、やくそくどおり、きて、にちべいわしんじょうやくを、むすびます。しもだと、はこだてを、かいこうして、ついに、にほんは、かいこくしました。",
+      "tts_text": "1854ねん、やくそくどおり、きて、にちべいわしんじょうやくを、むすびます。",
       "speaker": "sensei"
     },
     "narration/s03_b02.wav": {
+      "tts_text": "しもだと、はこだてを、かいこうして、ついに、にほんは、かいこくしました。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b03.wav": {
       "tts_text": "260年の鍵、ついに開いたのだ!",
       "speaker": "manabu"
     },
-    "narration/s03_b03.wav": {
-      "tts_text": "ええ。まもなく、アメリカの、りょうじ・ハリスが、らいにちし、じょうやくの、はなしを、すすめてきます。",
+    "narration/s03_b04.wav": {
+      "tts_text": "ええ。",
       "speaker": "sensei"
     },
-    "narration/s03_b04.wav": {
-      "tts_text": "ペリーで開いて、ハリスでじっくり話なのだ!",
-      "speaker": "manabu"
-    },
     "narration/s03_b05.wav": {
-      "tts_text": "かいこうばでは、がいこくとの、しょうばいが、どんどん、はじまります。",
+      "tts_text": "まもなく、アメリカの、りょうじ・ハリスが、らいにちし、じょうやくの、はなしを、すすめてきます。",
       "speaker": "sensei"
     },
     "narration/s04_b00.wav": {
@@ -73,83 +73,83 @@
       "speaker": "manabu"
     },
     "narration/s04_b01.wav": {
-      "tts_text": "1858ねん、ハリスとの、にちべいしゅうこうつうしょうじょうやくは、ざんねんながら、ふびょうどうじょうやくでした。りょうじさいばんけんと、ぜいりつの、こていが、その、にてんです。",
+      "tts_text": "1858年、ハリスとのにちべいしゅうこうつうしょうじょうやくは、",
       "speaker": "sensei"
     },
     "narration/s04_b02.wav": {
-      "tts_text": "りょうじさいばんけんって、なんの権利なのだ?",
-      "speaker": "manabu"
-    },
-    "narration/s04_b03.wav": {
-      "tts_text": "がいこくじんが、にほんで、つみを、おかしても、にほんでは、だけない、しくみです。ぜいりつの、きめかたも、こていされ、にほんは、そんを、するがわに、なりました。",
+      "tts_text": "1858ねん、ハリスとの、にちべいしゅうこうつうしょうじょうやくは、ざんねんながら、ふびょうどうじょうやくでした。",
       "speaker": "sensei"
     },
+    "narration/s04_b03.wav": {
+      "tts_text": "不平等条約って、条約を破ることなのだ?",
+      "speaker": "manabu"
+    },
     "narration/s04_b04.wav": {
-      "tts_text": "この、じょうやくは、あんせいごかこくじょうやくと、よばれ、かいこうばも、ごかしょに、ひろがりました。",
+      "tts_text": "いいえ、結んだけれど中身が一方だけ不利、という意味です。",
       "speaker": "sensei"
     },
     "narration/s04_b05.wav": {
-      "tts_text": "相手が得れば、自分が損、不公平なのだ!",
-      "speaker": "manabu"
+      "tts_text": "りょうじさいばんけんと税率の固定が、その二点です。",
+      "speaker": "sensei"
     },
     "narration/s05_b00.wav": {
       "tts_text": "国内の意見は、どうなったのだ?",
       "speaker": "manabu"
     },
     "narration/s05_b01.wav": {
-      "tts_text": "「がいこくを、おいはらう、そんのうじょういは」と、「かいこくして、ちからを、ふやす、かいこくは」に、いけんが、ふたつに、わかれます。",
+      "tts_text": "「外国を追い払う尊王攘夷派」と「開国して力を増やす開国派」に、",
       "speaker": "sensei"
     },
     "narration/s05_b02.wav": {
+      "tts_text": "意見が二つに分かれます。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b03.wav": {
       "tts_text": "じょういって、外人を追い出すことなのだ?",
       "speaker": "manabu"
     },
-    "narration/s05_b03.wav": {
-      "tts_text": "そのとおり。1858ねん、たいろう・いいなおすけが、てんのうの、ちょっきょなしで、じょうやくを、むすんでしまいます。",
-      "speaker": "sensei"
-    },
     "narration/s05_b04.wav": {
-      "tts_text": "天皇を無視したのだ!?それは大問題なのだ!",
-      "speaker": "manabu"
+      "tts_text": "そのとおり。",
+      "speaker": "sensei"
     },
     "narration/s06_b00.wav": {
       "tts_text": "なおすけは、批判を許したのだ?",
       "speaker": "manabu"
     },
     "narration/s06_b01.wav": {
-      "tts_text": "いいえ、ひはんした、こうげや、ぶしを、つぎつぎに、だんあつします。これが、あんせいの、たいごくです。",
+      "tts_text": "いいえ、ひはんした、こうげや、ぶしを、つぎつぎに、だんあつします。",
       "speaker": "sensei"
     },
     "narration/s06_b02.wav": {
+      "tts_text": "これが、あんせいの、たいごくです。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b03.wav": {
       "tts_text": "言った人は、みんな弾圧なのだ…怖いのだ",
       "speaker": "manabu"
     },
-    "narration/s06_b03.wav": {
-      "tts_text": "よしだしょういんら、わかい、さいのうも、ぎせいに、なりました。きょうふが、ひろがり、ばくふへの、てきいは、むしろ、つよまって、いきます。",
-      "speaker": "sensei"
-    },
     "narration/s06_b04.wav": {
-      "tts_text": "弾圧は、逆効果なのだ…",
-      "speaker": "manabu"
+      "tts_text": "よしだしょういんら、わかい、さいのうも、ぎせいに、なりました。",
+      "speaker": "sensei"
     },
     "narration/s07_b00.wav": {
       "tts_text": "いいなおすけは、どうなったのだ?",
       "speaker": "manabu"
     },
     "narration/s07_b01.wav": {
-      "tts_text": "1860ねん、えどじょうの、さくらだもんがいで、みとろうにんたちに、おそわれ、ころされてしまいます。これが、さくらだもんがいの、へんです。",
+      "tts_text": "1860年、江戸城の桜田門外で、",
       "speaker": "sensei"
     },
     "narration/s07_b02.wav": {
-      "tts_text": "たいろうが、道で襲われるのだ!?",
-      "speaker": "manabu"
+      "tts_text": "1860ねん、えどじょうの、さくらだもんがいで、みとろうにんたちに、おそわれ、ころされてしまいます。",
+      "speaker": "sensei"
     },
     "narration/s07_b03.wav": {
-      "tts_text": "ええ、ばくふの、ちからが、さがった、おおきな、できごとでした。ここから、せいじは、きょうとを、ちゅうしんに、うごき、はじめます。",
+      "tts_text": "これがさくらだもんがいのへんです。",
       "speaker": "sensei"
     },
     "narration/s07_b04.wav": {
-      "tts_text": "主役が、京都に移るのだ!",
+      "tts_text": "たいろうが、道で襲われるのだ!?",
       "speaker": "manabu"
     },
     "narration/s08_b00.wav": {
@@ -157,43 +157,43 @@
       "speaker": "manabu"
     },
     "narration/s08_b01.wav": {
-      "tts_text": "ちょうしゅうには、よしだしょういんの、しょうかそんじゅくから、たかすぎ、しんさくら。さつまには、さいごう、たかもりや、おおくぼ、としみちが、あらわれます。わかい、ぶしの、ちからが、あつまって、きました。",
+      "tts_text": "ちょうしゅうには、よしだしょういんの、しょうかそんじゅくから、たかすぎ、しんさくら。",
       "speaker": "sensei"
     },
     "narration/s08_b02.wav": {
-      "tts_text": "若手スーパースターの集まりなのだ!",
-      "speaker": "manabu"
+      "tts_text": "さつまには、さいごう、たかもりや、おおくぼ、としみちが、あらわれます。",
+      "speaker": "sensei"
     },
     "narration/s08_b03.wav": {
-      "tts_text": "ええ、かれらは、ちょうていの、けんいを、つかって、ばくふを、うごかそうと、します。せいじの、ちゅうしんが、どんどん、きょうとへ、よって、いきました。",
+      "tts_text": "わかい、ぶしの、ちからが、あつまって、きました。",
       "speaker": "sensei"
     },
     "narration/s08_b04.wav": {
-      "tts_text": "しょうかそんじゅくからは、たくさんの、かいかくしゃが、そだちました。",
-      "speaker": "sensei"
+      "tts_text": "若手スーパースターの集まりなのだ!",
+      "speaker": "manabu"
     },
     "narration/s08_b05.wav": {
-      "tts_text": "幕府、置いてけぼりなのだ…",
-      "speaker": "manabu"
+      "tts_text": "ええ、かれらは、ちょうていの、けんいを、つかって、ばくふを、うごかそうと、します。",
+      "speaker": "sensei"
     },
     "narration/s09_b00.wav": {
       "tts_text": "じょういは、うまくいったのだ?",
       "speaker": "manabu"
     },
     "narration/s09_b01.wav": {
-      "tts_text": "いいえ、さいえいせんそうや、しものせきせんそうで、せいようの、ぐんかんの、つよさを、みをもって、あじわいます。じょういは、ふかのうだと、まなびました。",
+      "tts_text": "いいえ、さつえいせんそうやしものせきせんそうで、",
       "speaker": "sensei"
     },
     "narration/s09_b02.wav": {
-      "tts_text": "戦って、実力差を知ったのだ…",
-      "speaker": "manabu"
+      "tts_text": "いいえ、さいえいせんそうや、しものせきせんそうで、せいようの、ぐんかんの、つよさを、みをもって、あじわいます。",
+      "speaker": "sensei"
     },
     "narration/s09_b03.wav": {
-      "tts_text": "ええ、そんじょうはは、もくてきを、「がいこくついほう」から、「ばくふだとう」へ、きりかえます。これが、とうばくの、はじまりです。",
+      "tts_text": "じょういは不可能だと学びました。",
       "speaker": "sensei"
     },
     "narration/s09_b04.wav": {
-      "tts_text": "じょういから討幕へ、目的変更なのだ!",
+      "tts_text": "戦って、実力差を知ったのだ…",
       "speaker": "manabu"
     },
     "narration/s10_b00.wav": {
@@ -201,91 +201,91 @@
       "speaker": "manabu"
     },
     "narration/s10_b01.wav": {
-      "tts_text": "1864ねん、きょうとの、はまごえもんで、ちょうしゅうぐんと、さつま・あいづぐんが、しょうとつします。これが、きんもんの、へんで、ちょうしゅうは、はいぼくしました。",
+      "tts_text": "1864ねん、きょうとの、はまごえもんで、ちょうしゅうぐんと、さつま・あいづぐんが、しょうとつします。",
       "speaker": "sensei"
     },
     "narration/s10_b02.wav": {
+      "tts_text": "これが、きんもんの、へんで、ちょうしゅうは、はいぼくしました。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b03.wav": {
       "tts_text": "はまごえもん、貝の名前の門なのだ!?",
       "speaker": "manabu"
     },
-    "narration/s10_b03.wav": {
-      "tts_text": "ええ、やぶれた、ちょうしゅうは、さつまを、てきではなく、なかまに、おもうように、なります。ばくまつの、うんめいが、ここで、きまります。",
-      "speaker": "sensei"
-    },
     "narration/s10_b04.wav": {
-      "tts_text": "敵から仲間へ、薩長の伏線なのだ!",
-      "speaker": "manabu"
+      "tts_text": "ええ、やぶれた、ちょうしゅうは、さつまを、てきではなく、なかまに、おもうように、なります。",
+      "speaker": "sensei"
     },
     "narration/s11_b00.wav": {
       "tts_text": "その「仲間」は、実現したのだ?",
       "speaker": "manabu"
     },
     "narration/s11_b01.wav": {
-      "tts_text": "1866ねん、さかもと、りょうまの、ちゅうかいで、さつまの、さいごうと、ちょうしゅうの、かつらが、むすんで、さっちょうどうめいが、せいりつします。",
+      "tts_text": "1866年、さかもとりょうまの仲介で、",
       "speaker": "sensei"
     },
     "narration/s11_b02.wav": {
+      "tts_text": "さつまのさいごうと長州の桂が結んで、さっちょうどうめいが成立します。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b03.wav": {
       "tts_text": "りょうま、仲人なのだ!かっこいいのだ!",
       "speaker": "manabu"
     },
-    "narration/s11_b03.wav": {
-      "tts_text": "ええ、にほんいちの、にだいこくが、てを、むすべば、ばくふより、つよい、せいりょくに、なります。とうばくの、じつりょくが、ここで、そろいました。",
-      "speaker": "sensei"
-    },
     "narration/s11_b04.wav": {
-      "tts_text": "チーム編成、完成なのだ!",
-      "speaker": "manabu"
+      "tts_text": "ええ、にほんいちの、にだいこくが、てを、むすべば、ばくふより、つよい、せいりょくに、なります。",
+      "speaker": "sensei"
     },
     "narration/s12_b00.wav": {
       "tts_text": "つぎに、どう動くのだ?",
       "speaker": "manabu"
     },
     "narration/s12_b01.wav": {
-      "tts_text": "りょうまが、「せいけんを、ちょうていに、かえす」たいせいほうかんの、けんぱくしょを、だし、1867ねん、しょうぐん・よしのぶが、せいけんを、ちょうていへ、へんじょうします。",
+      "tts_text": "りょうまが「政権を朝廷に返す」たいせいほうかんのけんぱくしょを出し、",
       "speaker": "sensei"
     },
     "narration/s12_b02.wav": {
+      "tts_text": "1867年、将軍・よしひとが政権を朝廷へ返上します。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b03.wav": {
       "tts_text": "幕府が、自分から返したのだ!?",
       "speaker": "manabu"
     },
-    "narration/s12_b03.wav": {
-      "tts_text": "ええ、ぶりょくで、たおされるまえに、かたちだけ、かえす、さくせんでした。でも、これで、260ねんの、ばくふは、ほぼ、おしまいです。",
-      "speaker": "sensei"
-    },
     "narration/s12_b04.wav": {
-      "tts_text": "260年の歴史、閉幕なのだ…",
-      "speaker": "manabu"
+      "tts_text": "ええ、武力で倒される前に、形だけ返す作戦でした。",
+      "speaker": "sensei"
     },
     "narration/s13_b00.wav": {
       "tts_text": "その後の日本は、どうなるのだ?",
       "speaker": "manabu"
     },
     "narration/s13_b01.wav": {
-      "tts_text": "よしのぶの、あたらしい、せいじが、うまく、いかず、ついに、あたらしい、せいふが、たんじょうします。それが、「めいじいしん」の、はじまりです。",
+      "tts_text": "よしのぶの、あたらしい、せいじが、うまく、いかず、ついに、あたらしい、せいふが、たんじょうします。",
       "speaker": "sensei"
     },
     "narration/s13_b02.wav": {
+      "tts_text": "それが、「めいじいしん」の、はじまりです。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b03.wav": {
       "tts_text": "江戸が終わって、明治なのだ!",
       "speaker": "manabu"
     },
-    "narration/s13_b03.wav": {
-      "tts_text": "ええ、ぶしの、じだいから、みんなが、さんかする、くにへ。くわしくは、だいきゅうわで、たっぷり、やります!",
-      "speaker": "sensei"
-    },
     "narration/s13_b04.wav": {
-      "tts_text": "ポイントまとめ、お願いなのだ!",
-      "speaker": "manabu"
+      "tts_text": "ええ、ぶしの、じだいから、みんなが、さんかする、くにへ。",
+      "speaker": "sensei"
     },
     "narration/s14_b00.wav": {
       "tts_text": "ここから受験ポイントのまとめ!まずは、開国の流れ。",
       "speaker": "sensei"
     },
     "narration/s14_b01.wav": {
-      "tts_text": "ペリーらいこう、1853ねん。にちべいわしんじょうやく、1854ねん、しもだとはこだて、かいこう。そして1858ねんの、にちべいしゅうこうつうしょうじょうやくは、ふびょうどうじょうやく。りょうじさいばんけんと、ぜいりつこていを、おさえましょう!",
+      "tts_text": "ペリーらいこう、1853ねん。にちべいわしんじょうやく、1854ねん、しもだとはこだて、かいこう。",
       "speaker": "sensei"
     },
     "narration/s14_b02.wav": {
-      "tts_text": "ねんごうは、「ごじゅうさん・ごじゅうよん・ごじゅうはち」の、ならびで、あんきです。",
+      "tts_text": "そして1858ねんの、にちべいしゅうこうつうしょうじょうやくは、ふびょうどうじょうやく。",
       "speaker": "sensei"
     },
     "narration/s15_b00.wav": {
@@ -293,11 +293,11 @@
       "speaker": "sensei"
     },
     "narration/s15_b01.wav": {
-      "tts_text": "あんせいのたいごく、1858ねん。さくらだもんがいのへん、1860ねん。きんもんのへん、1864ねん。さっちょうどうめい、1866ねん、たいせいほうかん、1867ねん。さいえい・しものせきで、じょういふかのうを、しり、とうばくへ、てんかんです!",
+      "tts_text": "あんせいのたいごく、1858ねん。さくらだもんがいのへん、1860ねん。",
       "speaker": "sensei"
     },
     "narration/s15_b02.wav": {
-      "tts_text": "さばくたい、とうばく、りょうまの、ちゅうかい、ぜんぶ、つながって、いますよ!",
+      "tts_text": "きんもんのへん、1864ねん。さっちょうどうめい、1866ねん、たいせいほうかん、1867ねん。",
       "speaker": "sensei"
     },
     "narration/s16_b00.wav": {
@@ -305,15 +305,15 @@
       "speaker": "sensei"
     },
     "narration/s16_b01.wav": {
-      "tts_text": "1853ねん、うらがに、らいこうして、かいこくを、もとめた、アメリカの、ていとくは、だれでしょう?ア、ペリー。イ、ハリス。ウ、いいなおすけ。",
+      "tts_text": "1853ねん、うらがに、らいこうして、かいこくを、もとめた、アメリカの、ていとくは、だれでしょう?",
       "speaker": "sensei"
     },
     "narration/s16_b02.wav": {
-      "tts_text": "黒船の大将…アなのだ!",
-      "speaker": "manabu"
+      "tts_text": "ア、ペリー。",
+      "speaker": "sensei"
     },
     "narration/s16_b03.wav": {
-      "tts_text": "正解!ペリーです。ハリスは翌々年の領事、セットで覚えましょう。",
+      "tts_text": "イ、ハリス。ウ、いいなおすけ。",
       "speaker": "sensei"
     },
     "narration/s17_b00.wav": {
@@ -321,15 +321,15 @@
       "speaker": "sensei"
     },
     "narration/s17_b01.wav": {
-      "tts_text": "1858ねんの、にちべいしゅうこうつうしょうじょうやくで、にほんが、ふりに、なった、てんは、なんでしょう?ア、りょうじさいばんけんと、ぜいりつこてい。イ、さんきんこうたい。ウ、さこく。",
+      "tts_text": "1858ねんの、にちべいしゅうこうつうしょうじょうやくで、にほんが、ふりに、なった、てんは、なんでしょう?",
       "speaker": "sensei"
     },
     "narration/s17_b02.wav": {
-      "tts_text": "不公平な二点…アなのだ!",
-      "speaker": "manabu"
+      "tts_text": "ア、りょうじさいばんけんと、ぜいりつこてい。",
+      "speaker": "sensei"
     },
     "narration/s17_b03.wav": {
-      "tts_text": "正解!この二つが、不平等条約の核心です。セットで丸暗記しましょう。",
+      "tts_text": "イ、さんきんこうたい。ウ、さこく。",
       "speaker": "sensei"
     },
     "narration/s18_b00.wav": {
@@ -337,35 +337,223 @@
       "speaker": "sensei"
     },
     "narration/s18_b01.wav": {
-      "tts_text": "1866ねん、さつまと、ちょうしゅうを、むすんだ、ちゅうかいやくの、じんぶつは、だれでしょう?ア、さいごうたかもり。イ、さかもとりょうま。ウ、とくがわよしのぶ。",
+      "tts_text": "1866ねん、さつまと、ちょうしゅうを、むすんだ、ちゅうかいやくの、じんぶつは、だれでしょう?ア、さいごうたかもり。",
       "speaker": "sensei"
     },
     "narration/s18_b02.wav": {
-      "tts_text": "仲人スター…イなのだ!",
-      "speaker": "manabu"
+      "tts_text": "イ、さかもとりょうま。ウ、とくがわよしのぶ。",
+      "speaker": "sensei"
     },
     "narration/s18_b03.wav": {
-      "tts_text": "正解!さかもとりょうまです。この同盟が討幕への、大きな力になりました。",
-      "speaker": "sensei"
+      "tts_text": "仲人スター…イなのだ!",
+      "speaker": "manabu"
     },
     "narration/s19_b00.wav": {
       "tts_text": "今日は黒船からたいせいほうかんまで、幕末の激動を一気に見ました。",
       "speaker": "sensei"
     },
     "narration/s19_b01.wav": {
-      "tts_text": "ペリー、ハリス、いいなおすけ、たかすぎしんさく、さいごう、りょうま、よしひと…人名がドカドカ出たのだ!",
+      "tts_text": "ペリー、ハリス、いいなおすけ、たかすぎしんさく、さいごう、りょうま、よしひと…",
       "speaker": "manabu"
     },
     "narration/s19_b02.wav": {
-      "tts_text": "その流れがめいじいしんへつながります。次回第9話は、めいじいしんとぶんめいかいか!",
-      "speaker": "sensei"
+      "tts_text": "人名がドカドカ出たのだ!",
+      "speaker": "manabu"
     },
     "narration/s19_b03.wav": {
+      "tts_text": "その流れがめいじいしんへつながります。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b06.wav": {
+      "tts_text": "答えを出す1年間が、与えられました。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b07.wav": {
+      "tts_text": "迷った末の答えは、開国なのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b08.wav": {
+      "tts_text": "えどの、まちは、おおさわぎ、すもうとりで、おうせんする、あんまで、でたほどです。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b06.wav": {
+      "tts_text": "ペリーで開いて、ハリスでじっくり話なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b07.wav": {
+      "tts_text": "かいこうばでは、がいこくとの、しょうばいが、どんどん、はじまります。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b06.wav": {
+      "tts_text": "りょうじさいばんけんって、なんの権利なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s04_b07.wav": {
+      "tts_text": "がいこくじんが、にほんで、つみを、おかしても、にほんでは、だけない、しくみです。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b08.wav": {
+      "tts_text": "ぜいりつの、きめかたも、こていされ、にほんは、そんを、するがわに、なりました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b09.wav": {
+      "tts_text": "この、じょうやくは、あんせいごかこくじょうやくと、よばれ、かいこうばも、ごかしょに、ひろがりました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b10.wav": {
+      "tts_text": "相手が得れば、自分が損、不公平なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s05_b05.wav": {
+      "tts_text": "そのとおり。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b06.wav": {
+      "tts_text": "天皇の勅許なしで条約を結んでしまいます。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b07.wav": {
+      "tts_text": "マナブ、いいなおすけがやったこと、覚えてる?",
+      "speaker": "sensei"
+    },
+    "narration/s05_b08.wav": {
+      "tts_text": "勅許なしで条約を結んで、批判した人を弾圧したのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s05_b09.wav": {
+      "tts_text": "天皇を無視したのだ!?それは大問題なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s06_b05.wav": {
+      "tts_text": "きょうふが、ひろがり、ばくふへの、てきいは、むしろ、つよまって、いきます。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b06.wav": {
+      "tts_text": "弾圧は、逆効果なのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s07_b05.wav": {
+      "tts_text": "ええ、ばくふの、ちからが、さがった、おおきな、できごとでした。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b06.wav": {
+      "tts_text": "ここから、せいじは、きょうとを、ちゅうしんに、うごき、はじめます。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b07.wav": {
+      "tts_text": "主役が、京都に移るのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b06.wav": {
+      "tts_text": "せいじの、ちゅうしんが、どんどん、きょうとへ、よって、いきました。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b07.wav": {
+      "tts_text": "しょうかそんじゅくからは、たくさんの、かいかくしゃが、そだちました。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b08.wav": {
+      "tts_text": "幕府、置いてけぼりなのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s09_b05.wav": {
+      "tts_text": "ええ、そんじょうはは、もくてきを、「がいこくついほう」から、「ばくふだとう」へ、きりかえます。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b06.wav": {
+      "tts_text": "これが、とうばくの、はじまりです。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b07.wav": {
+      "tts_text": "じょういから討幕へ、目的変更なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s10_b05.wav": {
+      "tts_text": "ばくまつの、うんめいが、ここで、きまります。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b06.wav": {
+      "tts_text": "敵から仲間へ、薩長の伏線なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s11_b05.wav": {
+      "tts_text": "とうばくの、じつりょくが、ここで、そろいました。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b06.wav": {
+      "tts_text": "チーム編成、完成なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b05.wav": {
+      "tts_text": "ええ、ぶりょくで、たおされるまえに、かたちだけ、かえす、さくせんでした。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b06.wav": {
+      "tts_text": "さこくで閉じてきた日本が、この先大きく開いていきます。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b07.wav": {
+      "tts_text": "260年の歴史、閉幕なのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s13_b05.wav": {
+      "tts_text": "くわしくは、だいきゅうわで、たっぷり、やります!",
+      "speaker": "sensei"
+    },
+    "narration/s13_b06.wav": {
+      "tts_text": "ポイントまとめ、お願いなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s14_b03.wav": {
+      "tts_text": "りょうじさいばんけんと、ぜいりつこていを、おさえましょう!",
+      "speaker": "sensei"
+    },
+    "narration/s14_b04.wav": {
+      "tts_text": "ねんごうは、「ごじゅうさん・ごじゅうよん・ごじゅうはち」の、ならびで、あんきです。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b03.wav": {
+      "tts_text": "さいえい・しものせきで、じょういふかのうを、しり、とうばくへ、てんかんです!",
+      "speaker": "sensei"
+    },
+    "narration/s15_b04.wav": {
+      "tts_text": "さばくたい、とうばく、りょうまの、ちゅうかい、ぜんぶ、つながって、いますよ!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b04.wav": {
+      "tts_text": "黒船の大将…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s16_b05.wav": {
+      "tts_text": "正解!ペリーです。ハリスは翌々年の領事、しっかりおぼえましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b04.wav": {
+      "tts_text": "不公平な二点…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s17_b05.wav": {
+      "tts_text": "正解!この二つが、不平等条約の核心です。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b06.wav": {
+      "tts_text": "セットでしっかりおぼえましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b04.wav": {
+      "tts_text": "正解!さかもとりょうまです。この同盟が討幕への、大きな力になりました。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b04.wav": {
+      "tts_text": "次回第9話は、めいじいしんとぶんめいかいか!",
+      "speaker": "sensei"
+    },
+    "narration/s19_b05.wav": {
       "tts_text": "ついに新時代なのだ!チャンネル登録も、よろしくなのだ!",
       "speaker": "manabu"
     }
   },
   "dict_sha256": "068183c8b3f1",
-  "generated_at": "2026-11-15T04:30:03",
+  "generated_at": "2026-11-15T17:06:16",
   "voice_sha256": "4a55213461bf"
 }

@@ -25,23 +25,23 @@
       "speaker": "manabu"
     },
     "narration/s02_b01.wav": {
-      "tts_text": "6世紀ごろの大和では、ごうぞくの、そがしが大きな力を持っていました。仏教をめぐって、ものべうじと戦って勝ち、力はますます増します。",
+      "tts_text": "6世紀ごろの大和では、ごうぞくの、そがしが大きな力を持っていました。",
       "speaker": "sensei"
     },
     "narration/s02_b02.wav": {
-      "tts_text": "そして592年、すいこてんのうがそくいして、あすかで政治が始まります。ここからが飛鳥時代です。",
+      "tts_text": "仏教をめぐって、ものべうじと戦って勝ち、力はますます増します。",
       "speaker": "sensei"
     },
     "narration/s02_b03.wav": {
-      "tts_text": "そがしは、天皇より強かったのだ?",
-      "speaker": "manabu"
+      "tts_text": "そして592年、すいこてんのうがそくいして、あすかで政治が始まります。",
+      "speaker": "sensei"
     },
     "narration/s02_b04.wav": {
-      "tts_text": "それくらい強大でした。うまこのこの、えみし、そのこの、いるかは、好き勝手に政治を動かしたと伝わります。",
+      "tts_text": "ここからが飛鳥時代です。",
       "speaker": "sensei"
     },
     "narration/s02_b05.wav": {
-      "tts_text": "「好き勝手」は、だめなのだ!",
+      "tts_text": "そがしは、天皇より強かったのだ?",
       "speaker": "manabu"
     },
     "narration/s03_b00.wav": {
@@ -49,28 +49,28 @@
       "speaker": "manabu"
     },
     "narration/s03_b01.wav": {
-      "tts_text": "ええ。すいこてんのうの、せっしょうとして、政治をリードしたのが、しょうとくたいしです。593年の就任です。",
+      "tts_text": "ええ。すいこてんのうの、せっしょうとして、政治をリードしたのが、しょうとくたいしです。",
       "speaker": "sensei"
     },
     "narration/s03_b02.wav": {
-      "tts_text": "603年には、のうりょくできめる、かんいじゅうにかい。604年には、政治の心がけをしめす、じゅうしちじょうけんぽうを作りました。",
+      "tts_text": "593年の就任です。",
       "speaker": "sensei"
     },
     "narration/s03_b03.wav": {
-      "tts_text": "位は、色でわかるのだ?",
-      "speaker": "manabu"
+      "tts_text": "603年には、のうりょくできめる、かんいじゅうにかい。",
+      "speaker": "sensei"
     },
     "narration/s03_b04.wav": {
-      "tts_text": "ええ、冠の色で位がわかります。かんいじゅうにかい=603年、じゅうしちじょうけんぽう=604年。年号とセットで覚えましょう。",
+      "tts_text": "604年には、政治の心がけをしめす、じゅうしちじょうけんぽうを作りました。",
       "speaker": "sensei"
     },
     "narration/s03_b05.wav": {
-      "tts_text": "有力な一族だけの政治から、才能ある人を登用する方向へ。大きな一歩だったんです。",
-      "speaker": "sensei"
+      "tts_text": "位は、色でわかるのだ?",
+      "speaker": "manabu"
     },
     "narration/s03_b06.wav": {
-      "tts_text": "年号ペアもセットで、覚えたのだ!",
-      "speaker": "manabu"
+      "tts_text": "ええ、冠の色で位がわかります。",
+      "speaker": "sensei"
     },
     "narration/s04_b00.wav": {
       "tts_text": "外国とは、どうしてたのだ?",
@@ -81,71 +81,71 @@
       "speaker": "sensei"
     },
     "narration/s04_b02.wav": {
-      "tts_text": "その国書に、「ひいづるところのてんし、しょを、ひぼつするところのてんしによす」とあり、中国の史書に残っています。",
+      "tts_text": "その国書に「日出づる処の天子、",
       "speaker": "sensei"
     },
     "narration/s04_b03.wav": {
+      "tts_text": "書を日没する処の天子に寄す」とあり、中国の史書に残っています。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b04.wav": {
       "tts_text": "「日出づる処」って、日本のことなのだ!?対等な感じなのだ!",
       "speaker": "manabu"
     },
-    "narration/s04_b04.wav": {
-      "tts_text": "そう、まさに日本の自立を示す一文なんです。また太子は仏教を深く学び、ほうりゅうじを建てました。現存する世界最古の木造建築として知られています。",
-      "speaker": "sensei"
-    },
     "narration/s04_b05.wav": {
-      "tts_text": "木の建物が1300年以上、現役なのだ!?すごいのだ!",
-      "speaker": "manabu"
+      "tts_text": "そう、まさに日本の自立を示す一文なんです。",
+      "speaker": "sensei"
     },
     "narration/s05_b00.wav": {
       "tts_text": "太子が亡くなったあとは?",
       "speaker": "manabu"
     },
     "narration/s05_b01.wav": {
-      "tts_text": "また、そがしが力を持ち、そがのいるかが専横を極めました。そこで、なかのおおえのおうじと、なかとみのかまたりが、討つ計画を進めます。",
+      "tts_text": "また、そがしが力を持ち、そがのいるかが専横を極めました。",
       "speaker": "sensei"
     },
     "narration/s05_b02.wav": {
+      "tts_text": "そこで、なかのおおえのおうじと、なかとみのかまたりが、討つ計画を進めます。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b03.wav": {
       "tts_text": "ここからが、タイトルの話なのだ!?",
       "speaker": "manabu"
     },
-    "narration/s05_b03.wav": {
+    "narration/s05_b04.wav": {
       "tts_text": "そう、645年、宮中で、そがのいるかをうちました。これが、きのとみのへんです。",
       "speaker": "sensei"
     },
-    "narration/s05_b04.wav": {
+    "narration/s05_b05.wav": {
       "tts_text": "ふたりは、けまりで出会って、いこうの、しんらいの仲だったと伝わります。",
       "speaker": "sensei"
     },
-    "narration/s05_b05.wav": {
+    "narration/s05_b06.wav": {
       "tts_text": "ついにそがし、おわってしまったのだ!",
       "speaker": "manabu"
-    },
-    "narration/s05_b06.wav": {
-      "tts_text": "ええ。一族の力勝負だった政治を、天皇を中心に立て直す、大きな転換点になりました。",
-      "speaker": "sensei"
     },
     "narration/s06_b00.wav": {
       "tts_text": "で、改新ではなにが変わったのだ?",
       "speaker": "manabu"
     },
     "narration/s06_b01.wav": {
-      "tts_text": "まず、ごうぞくたちの、私の土地と民を、すべててんのうのものにしました。これが、こうちこうみんのかんがえかたです。",
+      "tts_text": "まず、ごうぞくたちの、私の土地と民を、すべててんのうのものにしました。",
       "speaker": "sensei"
     },
     "narration/s06_b02.wav": {
-      "tts_text": "土地は、戸籍をもとに、六年ごとに、のうみんへかす、はんでんしゅうじゅほう。ぜいは、そ・よう・ちょうのみっつに決まりました。",
+      "tts_text": "これが、こうちこうみんのかんがえかたです。",
       "speaker": "sensei"
     },
     "narration/s06_b03.wav": {
-      "tts_text": "そようちょう?授業で聞いたことある言葉なのだ!",
-      "speaker": "manabu"
+      "tts_text": "土地は、戸籍をもとに、六年ごとに、のうみんへかす、はんでんしゅうじゅほう。",
+      "speaker": "sensei"
     },
     "narration/s06_b04.wav": {
-      "tts_text": "ずばり、ひんしゅつです。こめを、おさめる、そ。ろうどうの、よう。ぬのや、ちほうの、とくさんひんを、おさめる、ちょう。こうちこうみん・はんでんしゅうじゅ・そようちょうは、かならず、ワンセットで!",
+      "tts_text": "ぜいは、そ・よう・ちょうのみっつに決まりました。",
       "speaker": "sensei"
     },
     "narration/s06_b05.wav": {
-      "tts_text": "ワンセット、丸暗記完了なのだ!",
+      "tts_text": "こうちこうみんって、公民館のことなのだ?",
       "speaker": "manabu"
     },
     "narration/s07_b00.wav": {
@@ -153,71 +153,71 @@
       "speaker": "manabu"
     },
     "narration/s07_b01.wav": {
-      "tts_text": "いいえ。672年、てんちてんのうの死後、きょうだいで、あらそう、じんしんのらんが、おきました。勝った、おおあまのおうじが、てんむてんのうになります。",
+      "tts_text": "マナブ、じんしんのらんは、なぜ起きたと思う?",
       "speaker": "sensei"
     },
     "narration/s07_b02.wav": {
-      "tts_text": "兄弟でのけんか、かなしいのだ…",
+      "tts_text": "天皇のあとさきをめぐって…なのだ?",
       "speaker": "manabu"
     },
     "narration/s07_b03.wav": {
-      "tts_text": "ええ。ただ、この乱をへて、てんむてんのうは、力を中心に集める国づくりを、いっそう強力に進めたんです。",
+      "tts_text": "そのとおり!",
       "speaker": "sensei"
     },
     "narration/s07_b04.wav": {
-      "tts_text": "中心に力を集める政治を、中央集権と言います。受験用語ですよ。",
+      "tts_text": "跡継ぎの対立が爆発して、672年にじんしんのらんが起きました。",
       "speaker": "sensei"
     },
     "narration/s07_b05.wav": {
-      "tts_text": "強い国づくり、つづきが気になるのだ!",
-      "speaker": "manabu"
+      "tts_text": "その結果、てんむてんのうが天皇になりました。",
+      "speaker": "sensei"
     },
     "narration/s08_b00.wav": {
       "tts_text": "りつりょうこっかって、なんなのだ?",
       "speaker": "manabu"
     },
     "narration/s08_b01.wav": {
-      "tts_text": "律は刑罰のきまり、令は政治のしくみ。この二つで国を動かす、中国式の国家のことです。",
+      "tts_text": "律は刑罰のきまり、令は政治のしくみ。",
       "speaker": "sensei"
     },
     "narration/s08_b02.wav": {
-      "tts_text": "701年、ぶんむてんのうのときに、たいほうりつりょうが、ととのい、日本版のしくみが、かんせいしました。ふじわらの、ふひとらが、編集に、ふかく、かかわっています。",
+      "tts_text": "この二つで国を動かす、中国式の国家のことです。",
       "speaker": "sensei"
     },
     "narration/s08_b03.wav": {
-      "tts_text": "701年、バリバリ覚えるのだ!",
-      "speaker": "manabu"
+      "tts_text": "701年、文武天皇のときにたいほうりつりょうが整い、",
+      "speaker": "sensei"
     },
     "narration/s08_b04.wav": {
-      "tts_text": "あとに、ようろうりつりょうという、かいていばんも、できますが、まずは、たいほうりつりょう=701年で、かためましょう。",
+      "tts_text": "701年、ぶんむてんのうのときに、たいほうりつりょうが、ととのい、日本版のしくみが、かんせいしました。",
       "speaker": "sensei"
     },
     "narration/s08_b05.wav": {
-      "tts_text": "国のルールブック、完成なのだ!",
-      "speaker": "manabu"
+      "tts_text": "ふじわらのふひとらが編集に深くかかわっています。",
+      "speaker": "sensei"
     },
     "narration/s09_b00.wav": {
       "tts_text": "国の中は、どう動いてたのだ?",
       "speaker": "manabu"
     },
     "narration/s09_b01.wav": {
-      "tts_text": "中央には、にかんはっしょういちだい。じんぎかんと、だいじょうかんの、したに、はっつの、しょうが、じつむを、にないます。",
+      "tts_text": "中央には、にかんはっしょういちだい。",
       "speaker": "sensei"
     },
     "narration/s09_b02.wav": {
-      "tts_text": "地方は、くに・こおり・さとに、わかれ、都から、はけんされる、こくしと、じもとの、ぐんじが、管理しました。",
+      "tts_text": "じんぎかんと、だいじょうかんの、したに、はっつの、しょうが、じつむを、にないます。",
       "speaker": "sensei"
     },
     "narration/s09_b03.wav": {
-      "tts_text": "日本中が、一列に管理なのだ!?",
-      "speaker": "manabu"
+      "tts_text": "地方は国・郡・里に分かれ、都から派遣される国司と、",
+      "speaker": "sensei"
     },
     "narration/s09_b04.wav": {
-      "tts_text": "そんなイメージで、ぴったりです。戸籍で人を、はあくし、六年ごとの、はんでん、そようちょうの、のうぜい。全部、つながった、とうじの、さいせんたんシステムなんです。",
+      "tts_text": "地元の郡司が管理しました。",
       "speaker": "sensei"
     },
     "narration/s09_b05.wav": {
-      "tts_text": "中央と地方が、まるごとつながってるのだ!",
+      "tts_text": "日本中が、一列に管理なのだ!?",
       "speaker": "manabu"
     },
     "narration/s10_b00.wav": {
@@ -225,23 +225,23 @@
       "speaker": "manabu"
     },
     "narration/s10_b01.wav": {
-      "tts_text": "すいが、たおんだ、あとは、とう。630年から、けんとうしを、おくり、せいどや、ぎじゅつ、ぶんかを、つぎつぎに、もちかえりました。",
+      "tts_text": "隋が滅んだあとは唐。",
       "speaker": "sensei"
     },
     "narration/s10_b02.wav": {
-      "tts_text": "きびの、まきびや、あべの、なかまろなど、とうで、まなんだ、ひとが、だいかつやくします。",
+      "tts_text": "すいが、たおんだ、あとは、とう。",
       "speaker": "sensei"
     },
     "narration/s10_b03.wav": {
-      "tts_text": "命がけの海外留学なのだ!えらいのだ!",
-      "speaker": "manabu"
+      "tts_text": "文化を次々に持ち帰りました。",
+      "speaker": "sensei"
     },
     "narration/s10_b04.wav": {
-      "tts_text": "ええ、船の航海は大変でした。この交流があったから、日本の制度と文化が一気に進んだんです。",
+      "tts_text": "きびの、まきびや、あべの、なかまろなど、とうで、まなんだ、ひとが、だいかつやくします。",
       "speaker": "sensei"
     },
     "narration/s10_b05.wav": {
-      "tts_text": "留学生、日本のヒーローなのだ!",
+      "tts_text": "命がけの海外留学なのだ!えらいのだ!",
       "speaker": "manabu"
     },
     "narration/s11_b00.wav": {
@@ -249,23 +249,23 @@
       "speaker": "manabu"
     },
     "narration/s11_b01.wav": {
-      "tts_text": "710年、都が、へいじょうきょうに、うつって、ここから、ならじだいです。中国の都、ちょうあんを、モデルにした、だいとしでした。",
+      "tts_text": "710年、都が、へいじょうきょうに、うつって、ここから、ならじだいです。",
       "speaker": "sensei"
     },
     "narration/s11_b02.wav": {
-      "tts_text": "まっすぐな大通りのしゅじゃくおおじを中心に、碁盤の目のように町が整然と並びます。",
+      "tts_text": "中国の都、ちょうあんを、モデルにした、だいとしでした。",
       "speaker": "sensei"
     },
     "narration/s11_b03.wav": {
-      "tts_text": "碁盤の目の都なのだ!迷子にならなそうなのだ!",
-      "speaker": "manabu"
+      "tts_text": "碁盤の目のように町が整然と並びます。",
+      "speaker": "sensei"
     },
     "narration/s11_b04.wav": {
-      "tts_text": "その整然とした町並みこそ、りつりょうこっかの力を見せる顔だったんですよ。",
+      "tts_text": "やよいの集落とは、規模がまるで違うんです。",
       "speaker": "sensei"
     },
     "narration/s11_b05.wav": {
-      "tts_text": "都まで整然、さすが国家なのだ!",
+      "tts_text": "碁盤の目の都なのだ!迷子にならなそうなのだ!",
       "speaker": "manabu"
     },
     "narration/s12_b00.wav": {
@@ -273,55 +273,55 @@
       "speaker": "manabu"
     },
     "narration/s12_b01.wav": {
-      "tts_text": "歴史の記録では、こじきと、にほんしょき。和歌のあつまりは、まんようしゅう。国の力を、しめす、仏教では、とうだいじの、だいぶつが、つくられました。",
+      "tts_text": "歴史の記録では、こじきと、にほんしょき。和歌のあつまりは、まんようしゅう。",
       "speaker": "sensei"
     },
     "narration/s12_b02.wav": {
-      "tts_text": "だいぶつの、かいげんくようは、752年。国をあげての、だいプロジェクトでした。",
+      "tts_text": "国の力を、しめす、仏教では、とうだいじの、だいぶつが、つくられました。",
       "speaker": "sensei"
     },
     "narration/s12_b03.wav": {
+      "tts_text": "だいぶつの、かいげんくようは、752年。国をあげての、だいプロジェクトでした。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b04.wav": {
       "tts_text": "大仏、でっかいのだ!?作るの、ものすごく大変なのだ!",
       "speaker": "manabu"
     },
-    "narration/s12_b04.wav": {
-      "tts_text": "宝物を集めたしょうそういんも有名です。文化と政治が、奈良で大きく花開いた時代ですね。",
-      "speaker": "sensei"
-    },
     "narration/s12_b05.wav": {
-      "tts_text": "奈良、すごい時代なのだ!",
-      "speaker": "manabu"
+      "tts_text": "宝物を集めたしょうそういんも有名です。",
+      "speaker": "sensei"
     },
     "narration/s13_b00.wav": {
       "tts_text": "でも、うまくいき続けた…わけじゃないのだ?",
       "speaker": "manabu"
     },
     "narration/s13_b01.wav": {
-      "tts_text": "さすが、いい、ちゃくがんです。はんだも、うまく、いかなくなり、きぞくや、じしゃが、私の土地を、ひろげ、はじめます。",
+      "tts_text": "さすが、いい、ちゃくがんです。",
       "speaker": "sensei"
     },
     "narration/s13_b02.wav": {
+      "tts_text": "はんだも、うまく、いかなくなり、きぞくや、じしゃが、私の土地を、ひろげ、はじめます。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b03.wav": {
       "tts_text": "そこから、また大変化が来るのだ!?",
       "speaker": "manabu"
     },
-    "narration/s13_b03.wav": {
-      "tts_text": "ええ、その種が平安時代に大きく育ちます。詳しくは第3話!まずはポイントまとめです!",
-      "speaker": "sensei"
-    },
     "narration/s13_b04.wav": {
-      "tts_text": "まとめ、お願いなのだ!",
-      "speaker": "manabu"
+      "tts_text": "ええ、その種が平安時代に大きく育ちます。詳しくは第3話!",
+      "speaker": "sensei"
     },
     "narration/s14_b00.wav": {
       "tts_text": "ここから受験ポイントまとめ!まずは飛鳥時代です。",
       "speaker": "sensei"
     },
     "narration/s14_b01.wav": {
-      "tts_text": "しょうとくたいし=かんいじゅうにかい、603年。じゅうしちじょうけんぽう、604年。けんずいし、607年、ひいづるところ。そして645年、きのとみのへんから、たいかのかいしん、スタート。",
+      "tts_text": "しょうとくたいし=かんいじゅうにかい、603年。",
       "speaker": "sensei"
     },
     "narration/s14_b02.wav": {
-      "tts_text": "こうちこうみん・はんでんしゅうじゅ・そようちょうの、ワンセット、わすれないでくださいね。",
+      "tts_text": "じゅうしちじょうけんぽう、604年。",
       "speaker": "sensei"
     },
     "narration/s15_b00.wav": {
@@ -329,11 +329,11 @@
       "speaker": "sensei"
     },
     "narration/s15_b01.wav": {
-      "tts_text": "じんしんのらん、672年で、てんむてんのう。たいほうりつりょう、701年で、りつりょうこっかが、かんせい。にかんはっしょういちだい、こくし・ぐんじ、戸籍と、はんでん。けんとうしで、とうの、ぶんかを、どうにゅう。",
+      "tts_text": "じんしんのらん、672年で、てんむてんのう。たいほうりつりょう、701年で、りつりょうこっかが、かんせい。",
       "speaker": "sensei"
     },
     "narration/s15_b02.wav": {
-      "tts_text": "そして710年、へいじょうきょう、せんとで、ならじだい、スタート。年号は、603・604・607・645・672・701・710。これで、かんぺきです!",
+      "tts_text": "にかんはっしょういちだい、こくし・ぐんじ、戸籍と、はんでん。けんとうしで、とうの、ぶんかを、どうにゅう。",
       "speaker": "sensei"
     },
     "narration/s16_b00.wav": {
@@ -341,67 +341,299 @@
       "speaker": "sensei"
     },
     "narration/s16_b01.wav": {
-      "tts_text": "603年、しょうとくたいしが、つくった、のうりょくで、くらいを、決める、制度は?ア、かんいじゅうにかい。イ、じゅうしちじょうけんぽう。ウ、たいほうりつりょう。",
+      "tts_text": "603年、しょうとくたいしが、つくった、のうりょくで、くらいを、決める、制度は?ア、かんいじゅうにかい。",
       "speaker": "sensei"
     },
     "narration/s16_b02.wav": {
-      "tts_text": "能力で決める…アなのだ!",
-      "speaker": "manabu"
+      "tts_text": "イ、じゅうしちじょうけんぽう。ウ、たいほうりつりょう。",
+      "speaker": "sensei"
     },
     "narration/s16_b03.wav": {
-      "tts_text": "正解!かんいじゅうにかいです。憲法は604年、律令は701年と整理しましょう。",
-      "speaker": "sensei"
+      "tts_text": "能力で決める…アなのだ!",
+      "speaker": "manabu"
     },
     "narration/s17_b00.wav": {
       "tts_text": "第二問!",
       "speaker": "sensei"
     },
     "narration/s17_b01.wav": {
-      "tts_text": "645年、なかのおおえのおうじと、なかとみのかまたりが、そがのいるかを、うった、事件は?ア、じんしんのらん。イ、きのとみのへん。ウ、おうにんのらん。",
+      "tts_text": "645年、なかのおおえのおうじと、なかとみのかまたりが、そがのいるかを、うった、事件は?ア、じんしんのらん。",
       "speaker": "sensei"
     },
     "narration/s17_b02.wav": {
-      "tts_text": "645年といえば…イなのだ!",
-      "speaker": "manabu"
+      "tts_text": "イ、きのとみのへん。ウ、おうにんのらん。",
+      "speaker": "sensei"
     },
     "narration/s17_b03.wav": {
-      "tts_text": "正解!きのとみのへんです。このあとたいかのかいしんが始まる、流れで覚えましょう。",
-      "speaker": "sensei"
+      "tts_text": "645年といえば…イなのだ!",
+      "speaker": "manabu"
     },
     "narration/s18_b00.wav": {
       "tts_text": "ラスト問題!",
       "speaker": "sensei"
     },
     "narration/s18_b01.wav": {
-      "tts_text": "710年に、都が、うつされた、ならの都は?ア、へいあんきょう。イ、ながおかきょう。ウ、へいじょうきょう。",
+      "tts_text": "710年に、都が、うつされた、ならの都は?ア、へいあんきょう。イ、ながおかきょう。",
       "speaker": "sensei"
     },
     "narration/s18_b02.wav": {
+      "tts_text": "ウ、へいじょうきょう。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b03.wav": {
       "tts_text": "なら、なら…ウなのだ!",
       "speaker": "manabu"
     },
-    "narration/s18_b03.wav": {
-      "tts_text": "正解!へいじょうきょうです。794年にへいあんきょうへ移るまで、日本の中心でした。",
-      "speaker": "sensei"
-    },
     "narration/s19_b00.wav": {
-      "tts_text": "今日はしょうとくたいしからへいじょうきょうまで、日本が「国家」になっていく道のりを見ました。",
+      "tts_text": "今日はしょうとくたいしからへいじょうきょうまで、",
       "speaker": "sensei"
     },
     "narration/s19_b01.wav": {
-      "tts_text": "かんいじゅうにかい、たいかのかいしん、こうちこうみん、たいほうりつりょう、へいじょうきょう…年号が、いっぱいなのだ!",
-      "speaker": "manabu"
-    },
-    "narration/s19_b02.wav": {
-      "tts_text": "その年号こそ、得点の入り口です。次回第3話は、平安貴族の華やかな暮らし〜せっかんせいじとこくふうぶんか〜。お楽しみに!",
+      "tts_text": "日本が「国家」になっていく道のりを見ました。",
       "speaker": "sensei"
     },
+    "narration/s19_b02.wav": {
+      "tts_text": "かんいじゅうにかい、たいかのかいしん、こうちこうみん、たいほうりつりょう、へいじょうきょう…",
+      "speaker": "manabu"
+    },
     "narration/s19_b03.wav": {
+      "tts_text": "年号が、いっぱいなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s02_b06.wav": {
+      "tts_text": "それくらい強大でした。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b07.wav": {
+      "tts_text": "それくらい強大でした。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b08.wav": {
+      "tts_text": "好き勝手に政治を動かしたと伝わります。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b09.wav": {
+      "tts_text": "「好き勝手」は、だめなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b07.wav": {
+      "tts_text": "かんいじゅうにかい=603年、じゅうしちじょうけんぽう=604年。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b08.wav": {
+      "tts_text": "年号と一緒におぼえましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b09.wav": {
+      "tts_text": "有力な一族だけの政治から、才能ある人を登用する方向へ。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b10.wav": {
+      "tts_text": "大きな一歩だったんです。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b11.wav": {
+      "tts_text": "年号ペアもセットで、覚えたのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b06.wav": {
+      "tts_text": "また太子は仏教を深く学び、ほうりゅうじを建てました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b07.wav": {
+      "tts_text": "現存する世界最古の木造建築として知られています。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b08.wav": {
+      "tts_text": "木の建物が1300年以上、現役なのだ!?すごいのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s05_b07.wav": {
+      "tts_text": "ええ。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b08.wav": {
+      "tts_text": "一族の力勝負だった政治を、天皇を中心に立て直す、",
+      "speaker": "sensei"
+    },
+    "narration/s05_b09.wav": {
+      "tts_text": "大きな転換点になりました。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b06.wav": {
+      "tts_text": "いいえ、土地と人も、ぜんぶ天皇のものという意味です。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b07.wav": {
+      "tts_text": "そようちょう?授業で聞いたことある言葉なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s06_b08.wav": {
+      "tts_text": "ずばり、ひんしゅつです。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b09.wav": {
+      "tts_text": "こめを、おさめる、そ。ろうどうの、よう。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b10.wav": {
+      "tts_text": "ぬのや、ちほうの、とくさんひんを、おさめる、ちょう。こうちこうみん・はんでんしゅうじゅ・そようちょうは、かならず、ワンセットで!",
+      "speaker": "sensei"
+    },
+    "narration/s06_b11.wav": {
+      "tts_text": "ワンセット、バッチリなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b06.wav": {
+      "tts_text": "兄弟でのけんか、かなしいのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s07_b07.wav": {
+      "tts_text": "ええ。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b08.wav": {
+      "tts_text": "ただ、この乱をへて、てんむてんのうは、",
+      "speaker": "sensei"
+    },
+    "narration/s07_b09.wav": {
+      "tts_text": "力を中心に集める国づくりを、いっそう強力に進めたんです。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b10.wav": {
+      "tts_text": "中心に力を集める政治を、中央集権と言います。よく使う言葉ですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b11.wav": {
+      "tts_text": "強い国づくり、つづきが気になるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b06.wav": {
+      "tts_text": "701年、バリバリ覚えるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b07.wav": {
+      "tts_text": "後にようろうりつりょうという改訂版もできますが、",
+      "speaker": "sensei"
+    },
+    "narration/s08_b08.wav": {
+      "tts_text": "まずはたいほうりつりょう=701年で固めましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b09.wav": {
+      "tts_text": "国のルールブック、完成なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s09_b06.wav": {
+      "tts_text": "そんなイメージで、ぴったりです。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b07.wav": {
+      "tts_text": "戸籍で人を、はあくし、六年ごとの、はんでん、そようちょうの、のうぜい。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b08.wav": {
+      "tts_text": "全部、つながった、とうじの、さいせんたんシステムなんです。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b09.wav": {
+      "tts_text": "中央と地方が、まるごとつながってるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s10_b06.wav": {
+      "tts_text": "ええ、船の航海は大変でした。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b07.wav": {
+      "tts_text": "この交流があったから、日本の制度と文化が一気に進んだんです。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b08.wav": {
+      "tts_text": "留学生、日本のヒーローなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s11_b06.wav": {
+      "tts_text": "その整然とした町並みこそ、りつりょうこっかの力を見せる顔だったんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b07.wav": {
+      "tts_text": "都まで整然、さすが国家なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b06.wav": {
+      "tts_text": "文化と政治が、奈良で大きく花開いた時代ですね。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b07.wav": {
+      "tts_text": "奈良、すごい時代なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s13_b05.wav": {
+      "tts_text": "まずはポイントまとめです!",
+      "speaker": "sensei"
+    },
+    "narration/s13_b06.wav": {
+      "tts_text": "まとめ、お願いなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s14_b03.wav": {
+      "tts_text": "けんずいし、607年、ひいづるところ。そして645年、きのとみのへんから、たいかのかいしん、スタート。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b04.wav": {
+      "tts_text": "こうちこうみん・はんでんしゅうじゅ・そようちょうの、ワンセット、わすれないでくださいね。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b03.wav": {
+      "tts_text": "そして710年、へいじょうきょう、せんとで、ならじだい、スタート。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b04.wav": {
+      "tts_text": "年号は、603・604・607・645・672・701・710。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b05.wav": {
+      "tts_text": "これで、かんぺきです!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b04.wav": {
+      "tts_text": "正解!かんいじゅうにかいです。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b05.wav": {
+      "tts_text": "憲法は604年、律令は701年と整理しましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b04.wav": {
+      "tts_text": "正解!きのとみのへんです。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b05.wav": {
+      "tts_text": "このあとたいかのかいしんが始まる、流れで覚えましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b04.wav": {
+      "tts_text": "正解!へいじょうきょうです。794年にへいあんきょうへ移るまで、日本の中心でした。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b04.wav": {
+      "tts_text": "年号がわかると、物語がつながります。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b05.wav": {
+      "tts_text": "次回第3話は、平安貴族の華やかな暮らし〜せっかんせいじとこくふうぶんか〜。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b06.wav": {
+      "tts_text": "お楽しみに!",
+      "speaker": "sensei"
+    },
+    "narration/s19_b07.wav": {
       "tts_text": "つぎは貴族なのだ!チャンネル登録も、よろしくなのだ!",
       "speaker": "manabu"
     }
   },
   "dict_sha256": "068183c8b3f1",
-  "generated_at": "2026-11-15T04:04:57",
+  "generated_at": "2026-11-15T17:00:07",
   "voice_sha256": "666c26addecc"
 }

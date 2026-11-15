@@ -2,12 +2,12 @@
   "episode": "ep10",
   "title": "二つの大戦と現代日本",
   "gaps": {
-    "beat": 0.45,
-    "scene": 0.7,
-    "section": 0.9,
-    "tail": 0.7
+    "beat": 0.3,
+    "scene": 0.6,
+    "section": 0.8,
+    "tail": 0.6
   },
-  "total_duration": 542.415,
+  "total_duration": 569.588,
   "scenes": [
     {
       "id": "s01",
@@ -24,14 +24,14 @@
         {
           "speaker": "sensei",
           "wav": "narration/s01_b01.wav",
-          "start": 5.335,
+          "start": 5.185,
           "duration": 5.963,
           "text": "実は、負けたあとに日本最大の転機があったんです!二つの大戦から現代まで、見ていきましょう。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s01_b02.wav",
-          "start": 11.748,
+          "start": 11.448,
           "duration": 2.507,
           "text": "よし、ラストまで、走るのだ!"
         }
@@ -40,40 +40,68 @@
     {
       "id": "s02",
       "section": "story",
-      "start": 15.155,
+      "start": 14.755,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s02_b00.wav",
-          "start": 15.155,
+          "start": 14.755,
           "duration": 1.984,
           "text": "民権って、なんなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s02_b01.wav",
-          "start": 17.589,
-          "duration": 11.168,
-          "text": "国民の権利のことです。1874年の建白書から始まった運動で、板垣退助らが各地に社を作って広めました。"
+          "start": 17.039,
+          "duration": 1.461,
+          "text": "国民の権利のことです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b02.wav",
+          "start": 18.8,
+          "duration": 2.155,
+          "text": "1874年の建白書から始まった運動で、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b03.wav",
+          "start": 21.255,
+          "duration": 2.677,
+          "text": "板垣退助らが各地に社を作って広めました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s02_b02.wav",
-          "start": 29.207,
+          "wav": "narration/s02_b04.wav",
+          "start": 24.232,
           "duration": 2.368,
           "text": "国会と、自由を求めるのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s02_b03.wav",
-          "start": 32.025,
-          "duration": 10.037,
-          "text": "ええ、「国会開設の建白」など運動は政府に届き、国会開設を約束します。1890年の予定です。"
+          "wav": "narration/s02_b05.wav",
+          "start": 26.9,
+          "duration": 4.0,
+          "text": "ええ、「国会開設の建白」など運動は政府に届き、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b06.wav",
+          "start": 31.2,
+          "duration": 7.573,
+          "text": "国会開設を約束します。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b07.wav",
+          "start": 39.073,
+          "duration": 1.995,
+          "text": "1890年の予定です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s02_b04.wav",
-          "start": 42.512,
+          "wav": "narration/s02_b08.wav",
+          "start": 41.368,
           "duration": 2.496,
           "text": "民の声、国会まで届いたのだ!"
         }
@@ -82,40 +110,82 @@
     {
       "id": "s03",
       "section": "story",
-      "start": 45.708,
+      "start": 44.464,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s03_b00.wav",
-          "start": 45.708,
+          "start": 44.464,
           "duration": 1.92,
           "text": "その国会で使うルールは?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s03_b01.wav",
-          "start": 48.078,
-          "duration": 10.315,
-          "text": "1889年、大日本帝国憲法が発布されます。天皇が与える欽定憲法で、伊藤博文らがヨーロッパを調べて作りました。"
+          "start": 46.684,
+          "duration": 4.043,
+          "text": "1889年、大日本帝国憲法が発布されます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b02.wav",
+          "start": 51.027,
+          "duration": 4.267,
+          "text": "天皇が与える欽定憲法で、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b03.wav",
+          "start": 55.593,
+          "duration": 2.475,
+          "text": "伊藤博文らがヨーロッパを調べて作りました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s03_b02.wav",
-          "start": 58.843,
+          "wav": "narration/s03_b04.wav",
+          "start": 58.368,
+          "duration": 3.584,
+          "text": "大日本帝国憲法って、今の憲法なのだ?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b05.wav",
+          "start": 62.252,
+          "duration": 3.872,
+          "text": "いいえ、今のは1947年の日本国憲法。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b06.wav",
+          "start": 66.424,
+          "duration": 3.253,
+          "text": "1889年の帝国憲法とは別物です。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s03_b07.wav",
+          "start": 69.977,
           "duration": 3.488,
           "text": "1889年、欽定憲法なのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s03_b03.wav",
-          "start": 62.781,
-          "duration": 9.685,
-          "text": "ええ、1890年には第1回帝国議会が開かれます。ただし、選挙権は納税額で制限されていました。"
+          "wav": "narration/s03_b08.wav",
+          "start": 73.765,
+          "duration": 5.312,
+          "text": "ええ、1890年には第1回帝国議会が開かれます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b09.wav",
+          "start": 79.377,
+          "duration": 4.277,
+          "text": "ただし、選挙権は納税額で制限されていました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s03_b04.wav",
-          "start": 72.916,
+          "wav": "narration/s03_b10.wav",
+          "start": 83.955,
           "duration": 2.645,
           "text": "まだ、一部の人だけの選挙なのだ…"
         }
@@ -124,40 +194,61 @@
     {
       "id": "s04",
       "section": "story",
-      "start": 76.261,
+      "start": 87.2,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s04_b00.wav",
-          "start": 76.261,
+          "start": 87.2,
           "duration": 2.165,
           "text": "日本は、世界へ出たのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b01.wav",
-          "start": 78.877,
-          "duration": 12.043,
-          "text": "ええ、朝鮮をめぐって中国と対立し、1894年に日清戦争が始まります。翌年、日本が勝って下関条約を結びました。"
+          "start": 89.665,
+          "duration": 2.827,
+          "text": "ええ、朝鮮をめぐって中国と対立し、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b02.wav",
+          "start": 92.792,
+          "duration": 7.701,
+          "text": "1894年に日清戦争が始まります。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b03.wav",
+          "start": 100.793,
+          "duration": 3.296,
+          "text": "翌年、日本が勝って下関条約を結びました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s04_b02.wav",
-          "start": 91.369,
+          "wav": "narration/s04_b04.wav",
+          "start": 104.389,
           "duration": 3.765,
           "text": "台湾と賠償金が手に入る…って条約なのだ?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s04_b03.wav",
-          "start": 95.585,
-          "duration": 9.323,
-          "text": "ええ、ただロシアなど三国の干渉で、遼東半島は返さされました。弱い日本に、理不尽な圧力です。"
+          "wav": "narration/s04_b05.wav",
+          "start": 108.455,
+          "duration": 6.123,
+          "text": "ええ、ただロシアなど三国の干渉で、遼東半島は返さされました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b06.wav",
+          "start": 114.877,
+          "duration": 3.115,
+          "text": "弱い日本に、理不尽な圧力です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s04_b04.wav",
-          "start": 105.357,
+          "wav": "narration/s04_b07.wav",
+          "start": 118.292,
           "duration": 2.197,
           "text": "三国干渉、くやしいのだ…"
         }
@@ -166,40 +257,75 @@
     {
       "id": "s05",
       "section": "story",
-      "start": 108.255,
+      "start": 121.089,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s05_b00.wav",
-          "start": 108.255,
+          "start": 121.089,
           "duration": 1.792,
           "text": "次は、ロシアなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b01.wav",
-          "start": 110.497,
-          "duration": 10.667,
-          "text": "1904年、満洲と朝鮮の権益をめぐって、日露戦争が始まります。旅順の攻防など、激しい戦いが続きました。"
+          "start": 123.181,
+          "duration": 6.549,
+          "text": "1904年、満洲と朝鮮の権益をめぐって、日露戦争が始まります。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b02.wav",
+          "start": 130.031,
+          "duration": 4.011,
+          "text": "旅順の攻防など、激しい戦いが続きました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s05_b02.wav",
-          "start": 121.613,
+          "wav": "narration/s05_b03.wav",
+          "start": 134.341,
           "duration": 2.315,
           "text": "大国ロシアに、勝ったのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s05_b03.wav",
-          "start": 124.378,
-          "duration": 11.179,
-          "text": "ええ、アメリカの仲介でポーツマス条約を結びます。樺太南部や南満洲鉄道の権益を得ましたが、賠償金はありませんでした。"
+          "wav": "narration/s05_b04.wav",
+          "start": 136.956,
+          "duration": 3.477,
+          "text": "ええ、アメリカの仲介でポーツマス条約を結びます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b05.wav",
+          "start": 140.733,
+          "duration": 4.565,
+          "text": "樺太南部や南満洲鉄道の権益を得ましたが、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b06.wav",
+          "start": 145.599,
+          "duration": 1.685,
+          "text": "賠償金はありませんでした。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b07.wav",
+          "start": 147.584,
+          "duration": 3.072,
+          "text": "マナブ、ポーツマス条約で得たもの、覚えてる?"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s05_b04.wav",
-          "start": 136.007,
+          "wav": "narration/s05_b08.wav",
+          "start": 150.956,
+          "duration": 3.381,
+          "text": "樺太南部と満洲鉄道の権益、なのだ!"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s05_b09.wav",
+          "start": 154.637,
           "duration": 3.744,
           "text": "勝ったのに賠償なし、講和反対事件も起きたのだ…"
         }
@@ -208,40 +334,54 @@
     {
       "id": "s06",
       "section": "story",
-      "start": 140.451,
+      "start": 158.981,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s06_b00.wav",
-          "start": 140.451,
+          "start": 158.981,
           "duration": 2.528,
           "text": "その後の朝鮮は、どうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b01.wav",
-          "start": 143.429,
-          "duration": 10.005,
-          "text": "日本は影響を強め、1910年、韓国を併合します。韓国の人々の土地や自由が、大きく奪われました。"
+          "start": 161.809,
+          "duration": 5.312,
+          "text": "日本は影響を強め、1910年、韓国を併合します。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b02.wav",
+          "start": 167.421,
+          "duration": 4.576,
+          "text": "韓国の人々の土地や自由が、大きく奪われました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s06_b02.wav",
-          "start": 153.884,
+          "wav": "narration/s06_b03.wav",
+          "start": 172.297,
           "duration": 2.027,
           "text": "許さずに、奪ったのだ…"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s06_b03.wav",
-          "start": 156.361,
-          "duration": 7.755,
-          "text": "そう、痛みは長く続きました。歴史から、この事実を学び続けることが大切なんです。"
+          "wav": "narration/s06_b04.wav",
+          "start": 174.624,
+          "duration": 2.773,
+          "text": "そう、痛みは長く続きました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b05.wav",
+          "start": 177.697,
+          "duration": 4.896,
+          "text": "歴史から、この事実を学び続けることが大切なんです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s06_b04.wav",
-          "start": 164.565,
+          "wav": "narration/s06_b06.wav",
+          "start": 182.893,
           "duration": 1.952,
           "text": "うん、忘れないのだ。"
         }
@@ -250,40 +390,68 @@
     {
       "id": "s07",
       "section": "story",
-      "start": 167.217,
+      "start": 185.445,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s07_b00.wav",
-          "start": 167.217,
+          "start": 185.445,
           "duration": 3.221,
           "text": "次は大正なのだ?平和な時代なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b01.wav",
-          "start": 170.889,
-          "duration": 8.64,
-          "text": "大正にはデモクラシーの波が広がります。原敬内閣など政党内閣が生まれ、大衆社会が育ちました。"
+          "start": 188.967,
+          "duration": 3.243,
+          "text": "大正にはデモクラシーの波が広がります。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s07_b02.wav",
-          "start": 179.979,
+          "start": 192.509,
+          "duration": 4.373,
+          "text": "明治は国家が主役だったけれど、大正は民衆が主役なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b03.wav",
+          "start": 197.183,
+          "duration": 1.045,
+          "text": "鋭い比較です!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b04.wav",
+          "start": 198.528,
+          "duration": 5.344,
+          "text": "原敬内閣など政党内閣が生まれ、大衆社会が育ちました。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s07_b05.wav",
+          "start": 204.172,
           "duration": 2.357,
           "text": "みんなで政治を考える時代なのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s07_b03.wav",
-          "start": 182.786,
-          "duration": 6.699,
-          "text": "ええ、米騒動のようなどう乱もあり、社会には大きな揺らぎもありました。"
+          "wav": "narration/s07_b06.wav",
+          "start": 206.829,
+          "duration": 2.496,
+          "text": "ええ、米騒動のようなどう乱もあり、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b07.wav",
+          "start": 209.625,
+          "duration": 2.037,
+          "text": "社会には大きな揺らぎもありました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s07_b04.wav",
-          "start": 189.935,
+          "wav": "narration/s07_b08.wav",
+          "start": 211.963,
           "duration": 2.411,
           "text": "豊かさと、ゆらぎが同居なのだ。"
         }
@@ -292,40 +460,61 @@
     {
       "id": "s08",
       "section": "story",
-      "start": 193.045,
+      "start": 214.973,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s08_b00.wav",
-          "start": 193.045,
+          "start": 214.973,
           "duration": 2.037,
           "text": "選挙は、広がったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b01.wav",
-          "start": 195.533,
-          "duration": 10.56,
-          "text": "1925年、普通選挙法が成立します。納税の条件をなくして、25歳以上の男子全員に選挙権が与えられました。"
+          "start": 217.311,
+          "duration": 3.435,
+          "text": "1925年、普通選挙法が成立します。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b02.wav",
+          "start": 221.045,
+          "duration": 3.701,
+          "text": "納税の条件をなくして、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b03.wav",
+          "start": 225.047,
+          "duration": 3.243,
+          "text": "25歳以上の男子全員に選挙権が与えられました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s08_b02.wav",
-          "start": 206.543,
+          "wav": "narration/s08_b04.wav",
+          "start": 228.589,
           "duration": 3.285,
           "text": "25歳以上の男子だけ…まだ狭いなのだ?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s08_b03.wav",
-          "start": 210.278,
-          "duration": 8.981,
-          "text": "そう、女性は対象外でした。同じ年に治安維持法も作られ、批判の自由は厳しく制限されました。"
+          "wav": "narration/s08_b05.wav",
+          "start": 232.175,
+          "duration": 2.379,
+          "text": "そう、女性は対象外でした。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b06.wav",
+          "start": 234.853,
+          "duration": 6.549,
+          "text": "同じ年に治安維持法も作られ、批判の自由は厳しく制限されました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s08_b04.wav",
-          "start": 219.709,
+          "wav": "narration/s08_b07.wav",
+          "start": 241.703,
           "duration": 2.507,
           "text": "広がりと、しめつけが同時なのだ…"
         }
@@ -334,40 +523,54 @@
     {
       "id": "s09",
       "section": "story",
-      "start": 222.916,
+      "start": 244.809,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s09_b00.wav",
-          "start": 222.916,
+          "start": 244.809,
           "duration": 2.507,
           "text": "世界の経済は、どうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b01.wav",
-          "start": 225.873,
-          "duration": 9.141,
-          "text": "1929年、アメリカから始まった世界恐慌が広がります。日本の輸出も落ち込み、失業者があふれました。"
+          "start": 247.616,
+          "duration": 4.043,
+          "text": "なぜならアメリカで始まった世界恐慌が波及したからです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b02.wav",
+          "start": 251.959,
+          "duration": 4.8,
+          "text": "その結果、日本の輸出も落ち込み、失業者があふれました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s09_b02.wav",
-          "start": 235.464,
+          "wav": "narration/s09_b03.wav",
+          "start": 257.059,
           "duration": 2.197,
           "text": "つらさが、日本にも来たのだ…"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s09_b03.wav",
-          "start": 238.111,
-          "duration": 9.301,
-          "text": "ええ、苦しい中で、軍や右派の力が強くなっていきます。ここから、危険な方向へ動き始めます。"
+          "wav": "narration/s09_b04.wav",
+          "start": 259.556,
+          "duration": 5.781,
+          "text": "ええ、苦しい中で、軍や右派の力が強くなっていきます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b05.wav",
+          "start": 265.637,
+          "duration": 3.499,
+          "text": "ここから、危険な方向へ動き始めます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s09_b04.wav",
-          "start": 247.863,
+          "wav": "narration/s09_b06.wav",
+          "start": 269.436,
           "duration": 2.208,
           "text": "暗い時代の、入り口なのだ…"
         }
@@ -376,40 +579,54 @@
     {
       "id": "s10",
       "section": "story",
-      "start": 250.771,
+      "start": 272.244,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s10_b00.wav",
-          "start": 250.771,
+          "start": 272.244,
           "duration": 2.315,
           "text": "そして、戦争へ向かったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b01.wav",
-          "start": 253.535,
-          "duration": 10.539,
-          "text": "1931年、関東軍が満洲事変を起こします。政府を無視した軍の行動で、日本は国際的な批判を受けました。"
+          "start": 274.859,
+          "duration": 4.523,
+          "text": "1931年、関東軍が満洲事変を起こします。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b02.wav",
+          "start": 279.681,
+          "duration": 5.909,
+          "text": "政府を無視した軍の行動で、日本は国際的な批判を受けました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s10_b02.wav",
-          "start": 264.524,
+          "wav": "narration/s10_b03.wav",
+          "start": 285.891,
           "duration": 2.357,
           "text": "国際連盟も、脱退なのだ…"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s10_b03.wav",
-          "start": 267.331,
-          "duration": 9.803,
-          "text": "ええ、1937年には日中戦争へ拡大し、戦争は長期化しました。国民のくらしも、どんどん窮迫します。"
+          "wav": "narration/s10_b04.wav",
+          "start": 288.548,
+          "duration": 6.603,
+          "text": "ええ、1937年には日中戦争へ拡大し、戦争は長期化しました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b05.wav",
+          "start": 295.451,
+          "duration": 3.189,
+          "text": "国民のくらしも、どんどん窮迫します。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s10_b04.wav",
-          "start": 277.584,
+          "wav": "narration/s10_b06.wav",
+          "start": 298.94,
           "duration": 2.101,
           "text": "止められない、歯車なのだ…"
         }
@@ -418,40 +635,61 @@
     {
       "id": "s11",
       "section": "story",
-      "start": 280.385,
+      "start": 301.641,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s11_b00.wav",
-          "start": 280.385,
+          "start": 301.641,
           "duration": 2.528,
           "text": "そして、世界中が戦争なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b01.wav",
-          "start": 283.363,
-          "duration": 12.459,
-          "text": "1940年、日本はドイツやイタリアと日独伊三国同盟を結びます。1941年、真珠湾を攻撃して、太平洋戦争が始まりました。"
+          "start": 304.469,
+          "duration": 6.624,
+          "text": "1940年、日本はドイツやイタリアと日独伊三国同盟を結びます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b02.wav",
+          "start": 311.393,
+          "duration": 5.739,
+          "text": "1941年、真珠湾を攻撃して、太平洋戦争が始まりました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s11_b02.wav",
-          "start": 296.272,
+          "wav": "narration/s11_b03.wav",
+          "start": 317.432,
           "duration": 2.581,
           "text": "アジアじゅうまで、戦場になったのだ…"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s11_b03.wav",
-          "start": 299.303,
-          "duration": 11.637,
-          "text": "そう、沖縄では地上戦、東京など大都市では空襲があり、多くの命が失われました。国の力も、たくさんの痛みも、使い果たしました。"
+          "wav": "narration/s11_b04.wav",
+          "start": 320.313,
+          "duration": 4.0,
+          "text": "そう、沖縄では地上戦、東京など大都市では空襲があり、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b05.wav",
+          "start": 324.613,
+          "duration": 7.723,
+          "text": "多くの命が失われました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b06.wav",
+          "start": 332.636,
+          "duration": 3.221,
+          "text": "国の力も、たくさんの痛みも、使い果たしました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s11_b04.wav",
-          "start": 311.391,
+          "wav": "narration/s11_b07.wav",
+          "start": 336.157,
           "duration": 2.336,
           "text": "忘れてはいけない、痛みなのだ…"
         }
@@ -460,47 +698,75 @@
     {
       "id": "s12",
       "section": "story",
-      "start": 314.427,
+      "start": 339.093,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s12_b00.wav",
-          "start": 314.427,
+          "start": 339.093,
           "duration": 2.112,
           "text": "戦争は、どう終わったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b01.wav",
-          "start": 316.989,
-          "duration": 9.099,
-          "text": "広島と長崎には原爆が投下され、たくさんの命が失われました。これは決して忘れてはいけない歴史です。"
+          "start": 341.505,
+          "duration": 5.675,
+          "text": "広島と長崎には原爆が投下され、たくさんの命が失われました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b02.wav",
-          "start": 326.537,
-          "duration": 10.592,
-          "text": "1945年、アメリカなどがポツダム宣言を出し、日本はこれを受諾して降伏します。8月15日、戦争が終わりました。"
+          "start": 347.48,
+          "duration": 3.413,
+          "text": "これは決して忘れてはいけない歴史です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b03.wav",
+          "start": 351.193,
+          "duration": 3.616,
+          "text": "1945年、アメリカなどがポツダム宣言を出し、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b04.wav",
+          "start": 355.109,
+          "duration": 7.339,
+          "text": "日本はこれを受諾して降伏します。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b05.wav",
+          "start": 362.748,
+          "duration": 2.592,
+          "text": "8月15日、戦争が終わりました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s12_b03.wav",
-          "start": 337.579,
+          "wav": "narration/s12_b06.wav",
+          "start": 365.64,
           "duration": 3.275,
           "text": "8月15日、忘れてはいけない日なのだ。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s12_b04.wav",
-          "start": 341.304,
-          "duration": 8.757,
-          "text": "ええ、国は焼け野原になりました。しかし、日本はここから、新しい国をもう一度作り始めます。"
+          "wav": "narration/s12_b07.wav",
+          "start": 369.215,
+          "duration": 3.093,
+          "text": "ええ、国は焼け野原になりました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b08.wav",
+          "start": 372.608,
+          "duration": 5.611,
+          "text": "しかし、日本はここから、新しい国をもう一度作り始めます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s12_b05.wav",
-          "start": 350.511,
+          "wav": "narration/s12_b09.wav",
+          "start": 378.519,
           "duration": 1.92,
           "text": "ゼロから、やり直すのだ。"
         }
@@ -509,40 +775,54 @@
     {
       "id": "s13",
       "section": "story",
-      "start": 353.131,
+      "start": 381.039,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s13_b00.wav",
-          "start": 353.131,
+          "start": 381.039,
           "duration": 2.656,
           "text": "新しい国の、ルールはなんなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b01.wav",
-          "start": 356.237,
-          "duration": 10.592,
-          "text": "1947年、日本国憲法が施行されます。国民主権、基本的人権の尊重、戦争放棄の9条が、三大原則です。"
+          "start": 383.995,
+          "duration": 3.936,
+          "text": "1947年、日本国憲法が施行されます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b02.wav",
+          "start": 388.231,
+          "duration": 6.603,
+          "text": "国民主権、基本的人権の尊重、戦争放棄の9条が、三大原則です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s13_b02.wav",
-          "start": 367.279,
+          "wav": "narration/s13_b03.wav",
+          "start": 395.133,
           "duration": 2.933,
           "text": "戦わない国、日本国憲法なのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s13_b03.wav",
-          "start": 370.663,
-          "duration": 9.611,
-          "text": "ええ、その後は戦後復興をへて、高度経済成長の時代へ進みます。新幹線など、成長のシンボルが生まれました。"
+          "wav": "narration/s13_b04.wav",
+          "start": 398.367,
+          "duration": 6.016,
+          "text": "ええ、その後は戦後復興をへて、高度経済成長の時代へ進みます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b05.wav",
+          "start": 404.683,
+          "duration": 3.584,
+          "text": "新幹線など、成長のシンボルが生まれました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s13_b04.wav",
-          "start": 380.723,
+          "wav": "narration/s13_b06.wav",
+          "start": 408.567,
           "duration": 3.285,
           "text": "焼け野原から、大国までなのだ!すごいのだ!"
         }
@@ -551,26 +831,40 @@
     {
       "id": "s14",
       "section": "points",
-      "start": 384.909,
+      "start": 412.652,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s14_b00.wav",
-          "start": 384.909,
+          "start": 412.652,
           "duration": 3.925,
           "text": "ここから受験ポイントのまとめ!まずは、憲法と戦争への道。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b01.wav",
-          "start": 389.284,
-          "duration": 16.992,
-          "text": "自由民権運動→大日本帝国憲法1889年・帝国議会1890年。日清戦争1894年、日露戦争1904年、韓国併合1910年。この流れは完璧に!"
+          "start": 416.877,
+          "duration": 9.963,
+          "text": "自由民権運動→大日本帝国憲法1889年・帝国議会1890年。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b02.wav",
-          "start": 406.726,
+          "start": 427.14,
+          "duration": 4.715,
+          "text": "日清戦争1894年、日露戦争1904年、韓国併合1910年。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b03.wav",
+          "start": 432.155,
+          "duration": 1.984,
+          "text": "この流れは完璧に!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b04.wav",
+          "start": 434.439,
           "duration": 7.136,
           "text": "「89憲法・90議会・94日清・04日露・10併合」の並びです。"
         }
@@ -579,168 +873,252 @@
     {
       "id": "s15",
       "section": "points",
-      "start": 414.562,
+      "start": 442.175,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s15_b00.wav",
-          "start": 414.562,
+          "start": 442.175,
           "duration": 2.912,
           "text": "後半は、民主化と戦争、そして戦後です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b01.wav",
-          "start": 417.924,
-          "duration": 19.797,
-          "text": "大正デモクラシー、普通選挙法1925年、世界恐慌1929年。満洲事変1931年、日中戦争1937年、三国同盟・太平洋戦争1941年、ポツダム宣言受諾1945年。"
+          "start": 445.387,
+          "duration": 6.667,
+          "text": "大正デモクラシー、普通選挙法1925年、世界恐慌1929年。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b02.wav",
-          "start": 438.171,
-          "duration": 8.075,
-          "text": "そして日本国憲法1947年、高度経済成長。これで全10話の流れがつながります!"
+          "start": 452.353,
+          "duration": 5.568,
+          "text": "満洲事変1931年、日中戦争1937年、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b03.wav",
+          "start": 458.221,
+          "duration": 7.104,
+          "text": "三国同盟・太平洋戦争1941年、ポツダム宣言受諾1945年。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b04.wav",
+          "start": 465.625,
+          "duration": 4.832,
+          "text": "そして日本国憲法1947年、高度経済成長。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b05.wav",
+          "start": 470.757,
+          "duration": 3.211,
+          "text": "これで全10話の流れがつながります!"
         }
       ]
     },
     {
       "id": "s16",
       "section": "quiz",
-      "start": 447.146,
+      "start": 474.768,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s16_b00.wav",
-          "start": 447.146,
+          "start": 474.768,
           "duration": 2.283,
           "text": "それでは最終クイズ!第一問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b01.wav",
-          "start": 449.879,
-          "duration": 13.632,
-          "text": "1889年に発布された、日本で最初の近代憲法は何でしょう?ア、大日本帝国憲法。イ、日本国憲法。ウ、十七条憲法。"
+          "start": 477.351,
+          "duration": 8.853,
+          "text": "1889年に発布された、日本で最初の近代憲法は何でしょう?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b02.wav",
+          "start": 486.504,
+          "duration": 4.512,
+          "text": "ア、大日本帝国憲法。イ、日本国憲法。ウ、十七条憲法。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s16_b02.wav",
-          "start": 463.961,
+          "wav": "narration/s16_b03.wav",
+          "start": 491.316,
           "duration": 2.048,
           "text": "明治の憲法…アなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s16_b03.wav",
-          "start": 466.459,
-          "duration": 6.389,
-          "text": "正解!大日本帝国憲法です。日本国憲法は1947年、間違えないように!"
+          "wav": "narration/s16_b04.wav",
+          "start": 493.664,
+          "duration": 2.421,
+          "text": "正解!大日本帝国憲法です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b05.wav",
+          "start": 496.385,
+          "duration": 3.893,
+          "text": "日本国憲法は1947年、間違えないように!"
         }
       ]
     },
     {
       "id": "s17",
       "section": "quiz",
-      "start": 473.548,
+      "start": 500.879,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s17_b00.wav",
-          "start": 473.548,
+          "start": 500.879,
           "duration": 0.661,
           "text": "第二問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b01.wav",
-          "start": 474.659,
-          "duration": 12.043,
-          "text": "1941年、真珠湾攻撃から始まった戦争は何でしょう?ア、太平洋戦争。イ、日露戦争。ウ、日清戦争。"
+          "start": 501.84,
+          "duration": 7.787,
+          "text": "1941年、真珠湾攻撃から始まった戦争は何でしょう?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s17_b02.wav",
+          "start": 509.927,
+          "duration": 4.011,
+          "text": "ア、太平洋戦争。イ、日露戦争。ウ、日清戦争。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s17_b02.wav",
-          "start": 487.152,
+          "wav": "narration/s17_b03.wav",
+          "start": 514.237,
           "duration": 2.763,
           "text": "1941年…アなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s17_b03.wav",
-          "start": 490.365,
-          "duration": 5.269,
-          "text": "正解!太平洋戦争です。多くの命が失われた戦争、忘れないでください。"
+          "wav": "narration/s17_b04.wav",
+          "start": 517.3,
+          "duration": 2.144,
+          "text": "正解!太平洋戦争です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s17_b05.wav",
+          "start": 519.744,
+          "duration": 3.125,
+          "text": "多くの命が失われた戦争、忘れないでください。"
         }
       ]
     },
     {
       "id": "s18",
       "section": "quiz",
-      "start": 496.334,
+      "start": 523.469,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s18_b00.wav",
-          "start": 496.334,
+          "start": 523.469,
           "duration": 0.843,
           "text": "ラスト問題!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b01.wav",
-          "start": 497.627,
-          "duration": 12.448,
-          "text": "1947年に施行された、国の最高法規は何でしょう?ア、日本国憲法。イ、大日本帝国憲法。ウ、御成敗式目。"
+          "start": 524.612,
+          "duration": 7.541,
+          "text": "1947年に施行された、国の最高法規は何でしょう?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s18_b02.wav",
+          "start": 532.453,
+          "duration": 4.651,
+          "text": "ア、日本国憲法。イ、大日本帝国憲法。ウ、御成敗式目。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s18_b02.wav",
-          "start": 510.525,
+          "wav": "narration/s18_b03.wav",
+          "start": 537.404,
           "duration": 2.069,
           "text": "戦後の憲法…アなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s18_b03.wav",
-          "start": 513.044,
-          "duration": 4.16,
-          "text": "正解!日本国憲法です。三大原則とセットで覚えましょう。"
+          "wav": "narration/s18_b04.wav",
+          "start": 539.773,
+          "duration": 4.171,
+          "text": "正解!日本国憲法です。三大原則としっかりおぼえましょう。"
         }
       ]
     },
     {
       "id": "s19",
       "section": "ending",
-      "start": 518.104,
+      "start": 544.744,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s19_b00.wav",
-          "start": 518.104,
-          "duration": 5.547,
-          "text": "全10話、おつきあいありがとうございました。縄文から現代まで、日本史を駆け抜けました!"
-        },
-        {
-          "speaker": "manabu",
-          "wav": "narration/s19_b01.wav",
-          "start": 524.101,
-          "duration": 6.048,
-          "text": "黒船も、明治の改革も、二つの大戦も…なんでも記憶に残るアニメだったのだ!"
+          "start": 544.744,
+          "duration": 2.56,
+          "text": "全10話、おつきあいありがとうございました。"
         },
         {
           "speaker": "sensei",
+          "wav": "narration/s19_b01.wav",
+          "start": 547.604,
+          "duration": 2.965,
+          "text": "縄文から現代まで、日本史を駆け抜けました!"
+        },
+        {
+          "speaker": "manabu",
           "wav": "narration/s19_b02.wav",
-          "start": 530.599,
-          "duration": 5.525,
-          "text": "ええ、歴史は「なぜ」の連続です。この先も、好奇心でたどってみてください!"
+          "start": 550.869,
+          "duration": 3.616,
+          "text": "黒船も、明治の改革も、二つの大戦も…"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b03.wav",
-          "start": 536.574,
-          "duration": 5.141,
-          "text": "ヒスト先生、ありがとうなのだ!チャンネル登録も、ずっとよろしくなのだ!"
+          "start": 554.785,
+          "duration": 2.421,
+          "text": "なんでも記憶に残るアニメだったのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s19_b04.wav",
+          "start": 557.507,
+          "duration": 3.051,
+          "text": "ええ、歴史は「なぜ」の連続です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s19_b05.wav",
+          "start": 560.857,
+          "duration": 2.421,
+          "text": "この先も、好奇心でたどってみてください!"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s19_b06.wav",
+          "start": 563.579,
+          "duration": 2.304,
+          "text": "ヒスト先生、ありがとうなのだ!"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s19_b07.wav",
+          "start": 566.183,
+          "duration": 2.805,
+          "text": "チャンネル登録も、ずっとよろしくなのだ!"
         }
       ]
     }
@@ -748,23 +1126,23 @@
   "sections": {
     "opening": {
       "start": 0.0,
-      "end": 15.155
+      "end": 14.755
     },
     "story": {
-      "start": 15.155,
-      "end": 384.909
+      "start": 14.755,
+      "end": 412.652
     },
     "points": {
-      "start": 384.909,
-      "end": 447.146
+      "start": 412.652,
+      "end": 474.768
     },
     "quiz": {
-      "start": 447.146,
-      "end": 518.104
+      "start": 474.768,
+      "end": 544.744
     },
     "ending": {
-      "start": 518.104,
-      "end": 542.415
+      "start": 544.744,
+      "end": 569.588
     }
   }
 }

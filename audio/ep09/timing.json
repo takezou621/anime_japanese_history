@@ -2,12 +2,12 @@
   "episode": "ep09",
   "title": "明治維新と文明開化",
   "gaps": {
-    "beat": 0.45,
-    "scene": 0.7,
-    "section": 0.9,
-    "tail": 0.7
+    "beat": 0.3,
+    "scene": 0.6,
+    "section": 0.8,
+    "tail": 0.6
   },
-  "total_duration": 598.103,
+  "total_duration": 599.581,
   "scenes": [
     {
       "id": "s01",
@@ -24,14 +24,14 @@
         {
           "speaker": "sensei",
           "wav": "narration/s01_b01.wav",
-          "start": 4.642,
+          "start": 4.492,
           "duration": 5.717,
-          "text": "実は、ここから新しい日本が始まるんです!明治の大改革を、順番に見ていきましょう。"
+          "text": "実は、ここから新しい日本が始まるんです!大改革の理由を、順番に見ていきましょう。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s01_b02.wav",
-          "start": 10.809,
+          "start": 10.509,
           "duration": 2.709,
           "text": "よし、明治、スタートなのだ!"
         }
@@ -40,40 +40,54 @@
     {
       "id": "s02",
       "section": "story",
-      "start": 14.419,
+      "start": 14.019,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s02_b00.wav",
-          "start": 14.419,
+          "start": 14.019,
           "duration": 2.976,
           "text": "大政奉還の後、すぐ平和なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s02_b01.wav",
-          "start": 17.845,
-          "duration": 10.304,
-          "text": "いいえ、1868年の鳥羽伏見の戦いで、旧幕府軍と新政府軍が衝突します。ここから戊辰戦争が始まりました。"
-        },
-        {
-          "speaker": "manabu",
-          "wav": "narration/s02_b02.wav",
-          "start": 28.599,
-          "duration": 2.827,
-          "text": "戊辰って、辰の年の戦いなのだ…?"
+          "start": 17.295,
+          "duration": 3.563,
+          "text": "なぜなら、新旧勢力の対立が深まっていました。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s02_b03.wav",
-          "start": 31.875,
-          "duration": 11.531,
-          "text": "ええ、ただ江戸は西郷と勝海舟の交渉で開城し、流血を避けました。1869年、箱館の戦いで終結します。"
+          "wav": "narration/s02_b02.wav",
+          "start": 21.157,
+          "duration": 4.363,
+          "text": "その結果、鳥羽伏見の戦いと戊辰戦争が起きました。"
         },
         {
           "speaker": "manabu",
+          "wav": "narration/s02_b03.wav",
+          "start": 25.82,
+          "duration": 1.877,
+          "text": "辰の年の戦いなのだ…?"
+        },
+        {
+          "speaker": "sensei",
           "wav": "narration/s02_b04.wav",
-          "start": 43.856,
+          "start": 27.997,
+          "duration": 7.093,
+          "text": "ええ、ただ江戸は西郷と勝海舟の交渉で開城し、流血を避けました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s02_b05.wav",
+          "start": 35.391,
+          "duration": 4.373,
+          "text": "1869年、箱館の戦いで終結します。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s02_b06.wav",
+          "start": 40.064,
           "duration": 1.909,
           "text": "話し合いで江戸を救ったのだ!"
         }
@@ -82,40 +96,54 @@
     {
       "id": "s03",
       "section": "story",
-      "start": 46.465,
+      "start": 42.573,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s03_b00.wav",
-          "start": 46.465,
+          "start": 42.573,
           "duration": 2.677,
           "text": "新しい政府は、なにを目指すのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s03_b01.wav",
-          "start": 49.593,
-          "duration": 10.112,
-          "text": "1868年、五箇条の御誓文で方針を示します。「広く会議を興し」、みんなで話し合う国づくりの宣言です。"
-        },
-        {
-          "speaker": "manabu",
-          "wav": "narration/s03_b02.wav",
-          "start": 60.155,
-          "duration": 2.955,
-          "text": "広く会議を興す、話し合い大事なのだ!"
+          "start": 45.551,
+          "duration": 4.853,
+          "text": "1868年、五箇条の御誓文で方針を示します。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s03_b03.wav",
-          "start": 63.559,
-          "duration": 7.755,
-          "text": "中心の体制は太政官制です。太政大臣を頂点に、役所が分かれて日本を動かします。"
+          "wav": "narration/s03_b02.wav",
+          "start": 50.704,
+          "duration": 5.227,
+          "text": "「広く会議を興し」、みんなで話し合う国づくりの宣言です。"
         },
         {
           "speaker": "manabu",
+          "wav": "narration/s03_b03.wav",
+          "start": 56.231,
+          "duration": 1.952,
+          "text": "話し合い、大事なのだ!"
+        },
+        {
+          "speaker": "sensei",
           "wav": "narration/s03_b04.wav",
-          "start": 71.764,
+          "start": 58.483,
+          "duration": 2.741,
+          "text": "中心の体制は太政官制です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s03_b05.wav",
+          "start": 61.524,
+          "duration": 4.885,
+          "text": "太政大臣を頂点に、役所が分かれて日本を動かします。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s03_b06.wav",
+          "start": 66.709,
           "duration": 2.645,
           "text": "新しい国のエンジンが、始動なのだ!"
         }
@@ -124,47 +152,61 @@
     {
       "id": "s04",
       "section": "story",
-      "start": 75.109,
+      "start": 69.955,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s04_b00.wav",
-          "start": 75.109,
+          "start": 69.955,
           "duration": 1.845,
           "text": "藩は、どうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b01.wav",
-          "start": 77.405,
-          "duration": 15.072,
-          "text": "1869年に版籍奉還で土地と民を朝廷に返させ、1871年、廃藩置県で藩をやめて県を置きます。全国が、中央の一元管理になりました。"
+          "start": 72.1,
+          "duration": 5.611,
+          "text": "1869年に版籍奉還、1871年に廃藩置県。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b02.wav",
+          "start": 78.011,
+          "duration": 6.24,
+          "text": "藩をやめて県を置き、全国を中央の一元管理にしました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s04_b02.wav",
-          "start": 92.927,
+          "wav": "narration/s04_b03.wav",
+          "start": 84.551,
           "duration": 2.432,
           "text": "藩のボスたちが、いなくなるのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s04_b03.wav",
-          "start": 95.809,
-          "duration": 10.379,
-          "text": "ええ、大名の力をなくして、力の集中した新しい国が生まれます。江戸幕府の仕組みは、ここで完全に終わりです。"
+          "wav": "narration/s04_b04.wav",
+          "start": 87.283,
+          "duration": 6.581,
+          "text": "ええ、大名の力をなくして、力の集中した新しい国が生まれます。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s04_b04.wav",
-          "start": 106.637,
+          "wav": "narration/s04_b05.wav",
+          "start": 94.164,
+          "duration": 3.723,
+          "text": "江戸幕府の仕組みは、ここで完全に終わりです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s04_b06.wav",
+          "start": 98.187,
           "duration": 4.576,
           "text": "府県の数も整理して、管理しやすい形にしました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s04_b05.wav",
-          "start": 111.663,
+          "wav": "narration/s04_b07.wav",
+          "start": 103.063,
           "duration": 2.368,
           "text": "中央集権、完成なのだ!"
         }
@@ -173,47 +215,75 @@
     {
       "id": "s05",
       "section": "story",
-      "start": 114.731,
+      "start": 106.031,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s05_b00.wav",
-          "start": 114.731,
+          "start": 106.031,
           "duration": 2.528,
           "text": "江戸の身分制度は、どうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b01.wav",
-          "start": 117.709,
-          "duration": 9.504,
-          "text": "身分の上下をやめて、四民平等です。華族・士族・平民に整理し、職業も自由に選べるようになりました。"
+          "start": 108.859,
+          "duration": 3.157,
+          "text": "身分の上下をやめて、四民平等です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b02.wav",
+          "start": 112.316,
+          "duration": 6.229,
+          "text": "華族・士族・平民に整理し、職業も自由に選べます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s05_b02.wav",
-          "start": 127.663,
+          "wav": "narration/s05_b03.wav",
+          "start": 118.845,
           "duration": 2.635,
           "text": "生まれで決めない、新しいルールなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s05_b03.wav",
-          "start": 130.748,
-          "duration": 8.907,
-          "text": "ええ、ただ武士には給与が減り、不満もたまりました。この不満が、後の士族反乱につながります。"
+          "wav": "narration/s05_b04.wav",
+          "start": 121.78,
+          "duration": 4.992,
+          "text": "ええ、ただ武士には給与が減り、不満もたまりました。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s05_b04.wav",
-          "start": 140.105,
+          "wav": "narration/s05_b05.wav",
+          "start": 127.072,
+          "duration": 3.872,
+          "text": "この不満が、後の士族反乱につながります。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s05_b06.wav",
+          "start": 131.244,
+          "duration": 3.285,
+          "text": "江戸は身分で制限、明治は能力なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b07.wav",
+          "start": 134.829,
+          "duration": 1.771,
+          "text": "ナイス比較、そのとおりです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s05_b08.wav",
+          "start": 136.9,
           "duration": 4.448,
           "text": "ただ、能力で働ける社会の、第一歩でもありました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s05_b05.wav",
-          "start": 145.003,
+          "wav": "narration/s05_b09.wav",
+          "start": 141.648,
           "duration": 2.229,
           "text": "変わると、誰かがつらいのだ…"
         }
@@ -222,47 +292,75 @@
     {
       "id": "s06",
       "section": "story",
-      "start": 147.932,
+      "start": 144.477,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s06_b00.wav",
-          "start": 147.932,
+          "start": 144.477,
           "duration": 2.016,
           "text": "学校は、どうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b01.wav",
-          "start": 150.398,
-          "duration": 9.707,
-          "text": "1872年の学制で、義務教育が始まります。身分に関係なく、子どもはみんな小学校へ通うルールです。"
-        },
-        {
-          "speaker": "manabu",
-          "wav": "narration/s06_b02.wav",
-          "start": 160.555,
-          "duration": 2.539,
-          "text": "みんな、お勉強する義務なのだ!?"
+          "start": 146.793,
+          "duration": 4.309,
+          "text": "1872年の学制で、義務教育が始まります。"
         },
         {
           "speaker": "sensei",
+          "wav": "narration/s06_b02.wav",
+          "start": 151.403,
+          "duration": 5.344,
+          "text": "身分に関係なく、子どもはみんな小学校へ通うルールです。"
+        },
+        {
+          "speaker": "manabu",
           "wav": "narration/s06_b03.wav",
-          "start": 163.543,
-          "duration": 10.229,
-          "text": "ええ、知識を持つ国民で国を強くする、大事な一歩でした。費用負担で不満もありましたが、教育は広がります。"
+          "start": 157.047,
+          "duration": 1.739,
+          "text": "学校は武士だけなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b04.wav",
-          "start": 174.223,
+          "start": 159.085,
+          "duration": 4.448,
+          "text": "いいえ、身分に関係なくみんな通うんです。読み書きは国の投資です。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s06_b05.wav",
+          "start": 163.833,
+          "duration": 1.312,
+          "text": "国の投資なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b06.wav",
+          "start": 165.445,
+          "duration": 5.92,
+          "text": "ええ、知識を持つ国民で国を強くする、大事な一歩でした。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b07.wav",
+          "start": 171.665,
+          "duration": 4.256,
+          "text": "費用負担で不満もありましたが、教育は広がります。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s06_b08.wav",
+          "start": 176.221,
           "duration": 3.883,
           "text": "机とともに、近代がやってきたんです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s06_b05.wav",
-          "start": 178.555,
+          "wav": "narration/s06_b09.wav",
+          "start": 180.404,
           "duration": 2.155,
           "text": "日本じゅう、学校なのだ!"
         }
@@ -271,47 +369,61 @@
     {
       "id": "s07",
       "section": "story",
-      "start": 181.41,
+      "start": 183.159,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s07_b00.wav",
-          "start": 181.41,
+          "start": 183.159,
           "duration": 1.856,
           "text": "軍は、どうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b01.wav",
-          "start": 183.716,
-          "duration": 9.845,
-          "text": "1873年、徴兵令が出ます。身分に関係なく、満20歳の男子が兵役につく、国民皆兵の制度です。"
+          "start": 185.315,
+          "duration": 3.189,
+          "text": "1873年、徴兵令が出ます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b02.wav",
+          "start": 188.804,
+          "duration": 6.592,
+          "text": "身分に関係なく満20歳の男子が兵役につく、国民皆兵です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s07_b02.wav",
-          "start": 194.011,
+          "wav": "narration/s07_b03.wav",
+          "start": 195.696,
           "duration": 2.432,
           "text": "武士だけじゃない、みんなの軍なのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s07_b03.wav",
-          "start": 196.893,
-          "duration": 8.48,
-          "text": "ええ、侍と刀に頼らない、新しい軍隊です。現代的な国の形が、そろっていきます。"
+          "wav": "narration/s07_b04.wav",
+          "start": 198.428,
+          "duration": 4.832,
+          "text": "ええ、侍と刀に頼らない、新しい軍隊です。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s07_b04.wav",
-          "start": 205.823,
+          "wav": "narration/s07_b05.wav",
+          "start": 203.56,
+          "duration": 3.52,
+          "text": "現代的な国の形が、そろっていきます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s07_b06.wav",
+          "start": 207.38,
           "duration": 3.808,
           "text": "西洋の軍隊のしくみを、まねして作りました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s07_b05.wav",
-          "start": 210.081,
+          "wav": "narration/s07_b07.wav",
+          "start": 211.488,
           "duration": 2.72,
           "text": "国の形、どんどん新しくなるのだ!"
         }
@@ -320,47 +432,68 @@
     {
       "id": "s08",
       "section": "story",
-      "start": 213.501,
+      "start": 214.808,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s08_b00.wav",
-          "start": 213.501,
+          "start": 214.808,
           "duration": 2.144,
           "text": "税の仕組みも、変わるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b01.wav",
-          "start": 216.095,
-          "duration": 12.384,
-          "text": "1873年の地租改正で、土地の価値の3%を、現金で納めるルールにします。米の値段に左右されない、安定した財源です。"
+          "start": 217.252,
+          "duration": 4.139,
+          "text": "1873年の地租改正で、土地の価値の3%を、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b02.wav",
+          "start": 221.691,
+          "duration": 8.16,
+          "text": "現金で納めるルールにします。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b03.wav",
+          "start": 230.151,
+          "duration": 2.944,
+          "text": "米の値段に左右されない、安定した財源です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s08_b02.wav",
-          "start": 228.929,
+          "wav": "narration/s08_b04.wav",
+          "start": 233.395,
           "duration": 2.645,
           "text": "現金で納税、近代的なのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s08_b03.wav",
-          "start": 232.025,
-          "duration": 9.685,
-          "text": "ええ、ただ負担が重く、農民の一揆が各地で起きました。新しい制度は、痛みを伴うものでもありました。"
+          "wav": "narration/s08_b05.wav",
+          "start": 236.34,
+          "duration": 5.515,
+          "text": "ええ、ただ負担が重く、農民の一揆が各地で起きました。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s08_b04.wav",
-          "start": 242.16,
+          "wav": "narration/s08_b06.wav",
+          "start": 242.155,
+          "duration": 4.171,
+          "text": "新しい制度は、痛みを伴うものでもありました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s08_b07.wav",
+          "start": 246.625,
           "duration": 4.469,
           "text": "大地主や農家の生活も、大きく変わっていきます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s08_b05.wav",
-          "start": 247.079,
+          "wav": "narration/s08_b08.wav",
+          "start": 251.395,
           "duration": 2.272,
           "text": "変革の影に、がまんなのだ…"
         }
@@ -369,47 +502,68 @@
     {
       "id": "s09",
       "section": "story",
-      "start": 250.051,
+      "start": 254.267,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s09_b00.wav",
-          "start": 250.051,
+          "start": 254.267,
           "duration": 2.293,
           "text": "お金の仕組みは、どうするのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b01.wav",
-          "start": 252.795,
-          "duration": 6.901,
-          "text": "殖産興業です。政府が官営の工場を建てて、近代産業の手本を示しました。"
+          "start": 256.86,
+          "duration": 1.216,
+          "text": "殖産興業です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b02.wav",
+          "start": 258.376,
+          "duration": 5.579,
+          "text": "政府が官営の工場を建てて、近代産業の手本を示しました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s09_b02.wav",
-          "start": 260.146,
+          "wav": "narration/s09_b03.wav",
+          "start": 264.255,
           "duration": 2.773,
           "text": "国が、お手本の工場を作るのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s09_b03.wav",
-          "start": 263.369,
-          "duration": 11.317,
-          "text": "ええ、1872年の富岡製糸場は、洋式の機械で糸を作る、有名なモデル工場です。その後、民間に払い下げられます。"
+          "wav": "narration/s09_b04.wav",
+          "start": 267.328,
+          "duration": 3.456,
+          "text": "ええ、1872年の富岡製糸場は、"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s09_b04.wav",
-          "start": 275.137,
+          "wav": "narration/s09_b05.wav",
+          "start": 271.084,
+          "duration": 8.587,
+          "text": "洋式の機械で糸を作る、有名なモデル工場です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b06.wav",
+          "start": 279.971,
+          "duration": 2.133,
+          "text": "その後、民間に払い下げられます。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s09_b07.wav",
+          "start": 282.404,
           "duration": 4.725,
           "text": "近代産業の種が、ここから日本じゅうに広がっていきます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s09_b05.wav",
-          "start": 280.312,
+          "wav": "narration/s09_b08.wav",
+          "start": 287.429,
           "duration": 2.336,
           "text": "富岡製糸場、おぼえたのだ!"
         }
@@ -418,40 +572,61 @@
     {
       "id": "s10",
       "section": "story",
-      "start": 283.348,
+      "start": 290.365,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s10_b00.wav",
-          "start": 283.348,
+          "start": 290.365,
           "duration": 2.08,
           "text": "くらしは、どう変わったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b01.wav",
-          "start": 285.878,
-          "duration": 8.96,
-          "text": "文明開化です。洋服や洋食、ガス灯や鉄道、新聞や雑誌まで広がり、暮らしがぐっと変わりました。"
+          "start": 292.745,
+          "duration": 1.045,
+          "text": "文明開化です。"
         },
         {
-          "speaker": "manabu",
+          "speaker": "sensei",
           "wav": "narration/s10_b02.wav",
-          "start": 295.288,
-          "duration": 2.976,
-          "text": "鉄道と牛鍋、近代の定番なのだ!"
+          "start": 294.091,
+          "duration": 1.045,
+          "text": "洋服や洋食、ガス灯や鉄道、新聞や雑誌まで広がり、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b03.wav",
-          "start": 298.714,
-          "duration": 10.88,
-          "text": "ええ、1883年に開いた鹿鳴館では、洋装の舞踏会が開かれました。西洋の社会に、日本を合わせようとしたんです。"
+          "start": 295.436,
+          "duration": 1.472,
+          "text": "暮らしがぐっと変わりました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s10_b04.wav",
-          "start": 310.044,
+          "start": 297.208,
+          "duration": 1.653,
+          "text": "鉄道と牛鍋なのだ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b05.wav",
+          "start": 299.161,
+          "duration": 6.944,
+          "text": "ええ、1883年に開いた鹿鳴館では、洋装の舞踏会が開かれました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s10_b06.wav",
+          "start": 306.405,
+          "duration": 3.872,
+          "text": "西洋に日本を合わせようとしたんです。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s10_b07.wav",
+          "start": 310.577,
           "duration": 5.312,
           "text": "散切り頭と牛鍋、そして鹿鳴館のダンス…文明開化セットなのだ!"
         }
@@ -460,47 +635,61 @@
     {
       "id": "s11",
       "section": "story",
-      "start": 316.056,
+      "start": 316.489,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s11_b00.wav",
-          "start": 316.056,
+          "start": 316.489,
           "duration": 2.091,
           "text": "政治は、どうなってたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b01.wav",
-          "start": 318.597,
-          "duration": 12.619,
-          "text": "1874年、板垣退助らが「民選議院設立建白書」を提出します。国民が選ぶ議会をつくって、と求める運動の始まりです。"
+          "start": 318.88,
+          "duration": 6.923,
+          "text": "1874年、板垣退助らが「民選議院設立建白書」を提出します。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b02.wav",
+          "start": 326.103,
+          "duration": 5.653,
+          "text": "国民が選ぶ議会をつくって、と求める運動の始まりです。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s11_b02.wav",
-          "start": 331.665,
+          "wav": "narration/s11_b03.wav",
+          "start": 332.056,
           "duration": 2.357,
           "text": "民の声を、政治にのせるのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s11_b03.wav",
-          "start": 334.473,
-          "duration": 6.624,
-          "text": "ええ、これはのちの自由民権運動につながります。次回のいちばんのテーマです。"
+          "wav": "narration/s11_b04.wav",
+          "start": 334.713,
+          "duration": 4.267,
+          "text": "ええ、これはのちの自由民権運動につながります。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s11_b04.wav",
-          "start": 341.547,
+          "wav": "narration/s11_b05.wav",
+          "start": 339.28,
+          "duration": 2.304,
+          "text": "次回のいちばんのテーマです。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s11_b06.wav",
+          "start": 341.884,
           "duration": 6.219,
           "text": "不満を持つ武士と、議会を求める民。二つの流れに注目です。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s11_b05.wav",
-          "start": 348.215,
+          "wav": "narration/s11_b07.wav",
+          "start": 348.403,
           "duration": 1.899,
           "text": "つづきが、楽しみなのだ!"
         }
@@ -509,40 +698,61 @@
     {
       "id": "s12",
       "section": "story",
-      "start": 350.814,
+      "start": 350.901,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s12_b00.wav",
-          "start": 350.814,
+          "start": 350.901,
           "duration": 2.688,
           "text": "政府の中でも、もめ事があるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b01.wav",
-          "start": 353.952,
-          "duration": 11.733,
-          "text": "1873年、西郷隆盛らが朝鮮を武力で開こうとする征韓論を主張します。帰国した岩倉らは国内を優先と、反対しました。"
+          "start": 353.889,
+          "duration": 1.536,
+          "text": "1873年、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b02.wav",
+          "start": 355.725,
+          "duration": 7.371,
+          "text": "西郷隆盛らが朝鮮を武力で開こうとする征韓論を主張します。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b03.wav",
+          "start": 363.396,
+          "duration": 3.317,
+          "text": "帰国した岩倉らは国内を優先と、反対しました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s12_b02.wav",
-          "start": 366.135,
+          "wav": "narration/s12_b04.wav",
+          "start": 367.013,
           "duration": 1.963,
           "text": "政府が、われちゃうのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s12_b03.wav",
-          "start": 368.548,
-          "duration": 11.221,
-          "text": "ええ、西郷や板垣、後藤象二郎らが政府を去ります。この分裂が、士族の反乱と民権運動の、二つの流れを生みます。"
+          "wav": "narration/s12_b05.wav",
+          "start": 369.276,
+          "duration": 4.992,
+          "text": "ええ、西郷や板垣、後藤象二郎らが政府を去ります。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s12_b06.wav",
+          "start": 374.568,
+          "duration": 6.165,
+          "text": "この分裂が、士族の反乱と民権運動の、二つの流れを生みます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s12_b04.wav",
-          "start": 380.219,
+          "wav": "narration/s12_b07.wav",
+          "start": 381.033,
           "duration": 2.581,
           "text": "わかれ道が、二本に枝分かれなのだ!"
         }
@@ -551,47 +761,68 @@
     {
       "id": "s13",
       "section": "story",
-      "start": 383.501,
+      "start": 384.215,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s13_b00.wav",
-          "start": 383.501,
+          "start": 384.215,
           "duration": 2.283,
           "text": "武士のみなさんは、どうしたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b01.wav",
-          "start": 386.233,
-          "duration": 9.973,
-          "text": "徴兵と廃藩で武士の役割がなくなり、給与も減って、不満がたまりました。士族反乱の芽、ここから伸びます。"
+          "start": 386.797,
+          "duration": 2.421,
+          "text": "徴兵と廃藩で武士の役割がなくなり、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b02.wav",
+          "start": 389.519,
+          "duration": 6.933,
+          "text": "給与も減って、不満がたまりました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b03.wav",
+          "start": 396.752,
+          "duration": 2.112,
+          "text": "士族反乱の芽、ここから伸びます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s13_b02.wav",
-          "start": 396.657,
+          "wav": "narration/s13_b04.wav",
+          "start": 399.164,
           "duration": 1.952,
           "text": "侍たち、つらいのだ…"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s13_b03.wav",
-          "start": 399.059,
-          "duration": 8.629,
-          "text": "ええ、そしてこの不満と民権の声が、次の時代の二本柱です。まずは、ポイントまとめへ!"
+          "wav": "narration/s13_b05.wav",
+          "start": 401.416,
+          "duration": 6.485,
+          "text": "ええ、そしてこの不満と民権の声が、次の時代の二本柱です。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s13_b04.wav",
-          "start": 408.138,
+          "wav": "narration/s13_b06.wav",
+          "start": 408.201,
+          "duration": 2.059,
+          "text": "まずは、ポイントまとめへ!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s13_b07.wav",
+          "start": 410.56,
           "duration": 3.669,
           "text": "それでも日本は、前へ進み続けました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s13_b05.wav",
-          "start": 412.257,
+          "wav": "narration/s13_b08.wav",
+          "start": 414.529,
           "duration": 1.771,
           "text": "まとめ、お願いなのだ!"
         }
@@ -600,40 +831,68 @@
     {
       "id": "s14",
       "section": "story",
-      "start": 414.728,
+      "start": 416.9,
       "beats": [
         {
-          "speaker": "manabu",
+          "speaker": "sensei",
           "wav": "narration/s14_b00.wav",
-          "start": 414.728,
-          "duration": 2.859,
-          "text": "侍の不満は、戦いになったのだ?"
+          "start": 416.9,
+          "duration": 1.547,
+          "text": "西南戦争は何年?"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s14_b01.wav",
+          "start": 418.747,
+          "duration": 2.603,
+          "text": "1877年、なのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s14_b01.wav",
-          "start": 418.037,
-          "duration": 11.627,
-          "text": "1877年、西郷隆盛を中心に士族が起こした西南戦争です。新政府軍が勝ち、武士の時代はここで完全に終わりました。"
+          "wav": "narration/s14_b02.wav",
+          "start": 421.649,
+          "duration": 0.725,
+          "text": "そのとおり!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b03.wav",
+          "start": 422.675,
+          "duration": 6.325,
+          "text": "1877年、西郷隆盛を中心に士族が起こした西南戦争です。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b04.wav",
+          "start": 429.3,
+          "duration": 5.248,
+          "text": "新政府軍が勝ち、武士の時代はここで完全に終わりました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s14_b02.wav",
-          "start": 430.113,
+          "wav": "narration/s14_b05.wav",
+          "start": 434.848,
           "duration": 1.344,
           "text": "最後の武士なのだ…"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s14_b03.wav",
-          "start": 431.907,
-          "duration": 9.429,
-          "text": "また1879年、琉球を沖縄県とする琉球処分を行いました。琉球の人々の歩みも学びます。"
+          "wav": "narration/s14_b06.wav",
+          "start": 436.492,
+          "duration": 6.219,
+          "text": "また1879年、琉球処分が行われました。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s14_b07.wav",
+          "start": 443.011,
+          "duration": 3.083,
+          "text": "琉球の人々の歩みも学びます。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s14_b04.wav",
-          "start": 441.787,
+          "wav": "narration/s14_b08.wav",
+          "start": 446.393,
           "duration": 2.677,
           "text": "それぞれの歴史を、学び続けるのだ。"
         }
@@ -642,26 +901,40 @@
     {
       "id": "s15",
       "section": "points",
-      "start": 445.364,
+      "start": 449.871,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s15_b00.wav",
-          "start": 445.364,
+          "start": 449.871,
           "duration": 3.573,
           "text": "ここから受験ポイントのまとめ!まずは、新政府の改革。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b01.wav",
-          "start": 449.387,
-          "duration": 16.032,
-          "text": "戊辰戦争1868年〜69年、五箇条の御誓文と太政官制、版籍奉還1869年、廃藩置県1871年、四民平等。中央集権の完成です!"
+          "start": 453.744,
+          "duration": 7.211,
+          "text": "戊辰戦争1868年〜69年、五箇条の御誓文と太政官制、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b02.wav",
-          "start": 465.869,
+          "start": 461.255,
+          "duration": 6.528,
+          "text": "版籍奉還1869年、廃藩置県1871年、四民平等。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b03.wav",
+          "start": 468.083,
+          "duration": 2.027,
+          "text": "中央集権の完成です!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s15_b04.wav",
+          "start": 470.409,
           "duration": 5.739,
           "text": "「1868・1869・1871」の流れで覚えましょう。"
         }
@@ -670,26 +943,47 @@
     {
       "id": "s16",
       "section": "points",
-      "start": 472.308,
+      "start": 476.748,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s16_b00.wav",
-          "start": 472.308,
+          "start": 476.748,
           "duration": 2.955,
           "text": "後半は、国民づくりと産業・文化です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b01.wav",
-          "start": 475.713,
-          "duration": 18.379,
-          "text": "学制1872年、徴兵令1873年、地租改正1873年で国民の三本柱。殖産興業=富岡製糸場、文明開化=鹿鳴館、そして1874年板垣退助の建白書!"
+          "start": 480.003,
+          "duration": 4.085,
+          "text": "学制1872年、徴兵令1873年、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b02.wav",
-          "start": 494.541,
+          "start": 484.388,
+          "duration": 2.187,
+          "text": "地租改正1873年で国民の三本柱。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b03.wav",
+          "start": 486.875,
+          "duration": 7.296,
+          "text": "殖産興業=富岡製糸場、文明開化=鹿鳴館、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b04.wav",
+          "start": 494.471,
+          "duration": 3.147,
+          "text": "そして1874年板垣退助の建白書!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s16_b05.wav",
+          "start": 497.917,
           "duration": 5.333,
           "text": "「三本柱+産業+文化」で、明治の国づくり完璧です!"
         }
@@ -698,33 +992,40 @@
     {
       "id": "s17",
       "section": "quiz",
-      "start": 500.775,
+      "start": 504.051,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s17_b00.wav",
-          "start": 500.775,
+          "start": 504.051,
           "duration": 2.091,
           "text": "それではクイズタイム!第一問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b01.wav",
-          "start": 503.315,
-          "duration": 12.331,
-          "text": "1871年、藩をやめて県を置いた改革は何でしょう?ア、廃藩置県。イ、版籍奉還。ウ、太閤検地。"
+          "start": 506.441,
+          "duration": 10.155,
+          "text": "1871年、藩をやめて県を置いた改革は何でしょう?ア、廃藩置県。"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s17_b02.wav",
+          "start": 516.896,
+          "duration": 1.845,
+          "text": "イ、版籍奉還。ウ、太閤検地。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s17_b02.wav",
-          "start": 516.096,
+          "wav": "narration/s17_b03.wav",
+          "start": 519.041,
           "duration": 1.867,
           "text": "藩がなくなる…アなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s17_b03.wav",
-          "start": 518.413,
+          "wav": "narration/s17_b04.wav",
+          "start": 521.208,
           "duration": 5.696,
           "text": "正解!廃藩置県です。版籍奉還1869年と、流れで覚えましょう。"
         }
@@ -733,33 +1034,47 @@
     {
       "id": "s18",
       "section": "quiz",
-      "start": 524.809,
+      "start": 527.504,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s18_b00.wav",
-          "start": 524.809,
+          "start": 527.504,
           "duration": 0.661,
           "text": "第二問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b01.wav",
-          "start": 525.92,
-          "duration": 13.888,
-          "text": "1872年、身分に関係なく子どもが学校へ通うことになった制度は何でしょう?ア、学制。イ、徴兵令。ウ、地租改正。"
+          "start": 528.465,
+          "duration": 7.915,
+          "text": "1872年、"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s18_b02.wav",
+          "start": 536.68,
+          "duration": 3.52,
+          "text": "身分に関係なく子どもが学校へ通うことになった制度は何でしょう?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s18_b03.wav",
+          "start": 540.5,
+          "duration": 1.845,
+          "text": "ア、学制。イ、徴兵令。ウ、地租改正。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s18_b02.wav",
-          "start": 540.258,
+          "wav": "narration/s18_b04.wav",
+          "start": 542.645,
           "duration": 2.069,
           "text": "みんなで学校へ…アなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s18_b03.wav",
-          "start": 542.777,
+          "wav": "narration/s18_b05.wav",
+          "start": 545.015,
           "duration": 5.44,
           "text": "正解!学制です。義務教育の始まり、1872年とセットでどうぞ。"
         }
@@ -768,33 +1083,40 @@
     {
       "id": "s19",
       "section": "quiz",
-      "start": 548.917,
+      "start": 551.055,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s19_b00.wav",
-          "start": 548.917,
+          "start": 551.055,
           "duration": 0.843,
           "text": "ラスト問題!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s19_b01.wav",
-          "start": 550.21,
-          "duration": 14.645,
-          "text": "1874年、板垣退助らが提出した建白書は何でしょう?ア、民選議院設立建白書。イ、大政奉還の建白書。ウ、開国の建白書。"
+          "start": 552.197,
+          "duration": 8.757,
+          "text": "1874年、板垣退助らが提出した建白書は何でしょう?"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s19_b02.wav",
+          "start": 561.255,
+          "duration": 5.653,
+          "text": "ア、民選議院設立建白書。イ、大政奉還の建白書。ウ、開国の建白書。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s19_b02.wav",
-          "start": 565.305,
+          "wav": "narration/s19_b03.wav",
+          "start": 567.208,
           "duration": 1.813,
           "text": "民の議会…アなのだ!"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s19_b03.wav",
-          "start": 567.569,
+          "wav": "narration/s19_b04.wav",
+          "start": 569.321,
           "duration": 5.536,
           "text": "正解!民選議院設立建白書です。自由民権運動の、出発点になります。"
         }
@@ -803,33 +1125,47 @@
     {
       "id": "s20",
       "section": "ending",
-      "start": 574.005,
+      "start": 575.657,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s20_b00.wav",
-          "start": 574.005,
+          "start": 575.657,
           "duration": 3.691,
           "text": "今日は明治の国づくり、大改革の数々を一気に見ました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s20_b01.wav",
-          "start": 578.145,
-          "duration": 8.565,
-          "text": "廃藩置県、学制、徴兵令、地租改正、富岡製糸場、鹿鳴館…明治パワー、すごいのだ!"
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s20_b02.wav",
-          "start": 587.161,
-          "duration": 6.037,
-          "text": "次回ついに最終回の第10話!二つの大戦と現代日本、明治の力が世界へ広がります!"
+          "start": 579.648,
+          "duration": 6.421,
+          "text": "廃藩置県、学制、徴兵令、地租改正、富岡製糸場、鹿鳴館…"
         },
         {
           "speaker": "manabu",
+          "wav": "narration/s20_b02.wav",
+          "start": 586.369,
+          "duration": 2.037,
+          "text": "明治パワー、すごいのだ!"
+        },
+        {
+          "speaker": "sensei",
           "wav": "narration/s20_b03.wav",
-          "start": 593.648,
+          "start": 588.707,
+          "duration": 1.963,
+          "text": "次回ついに最終回の第10話!"
+        },
+        {
+          "speaker": "sensei",
+          "wav": "narration/s20_b04.wav",
+          "start": 590.969,
+          "duration": 3.957,
+          "text": "二つの大戦と現代日本、明治の力が世界へ広がります!"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s20_b05.wav",
+          "start": 595.227,
           "duration": 3.755,
           "text": "ついにラストなのだ!チャンネル登録も、よろしくなのだ!"
         }
@@ -839,23 +1175,23 @@
   "sections": {
     "opening": {
       "start": 0.0,
-      "end": 14.419
+      "end": 14.019
     },
     "story": {
-      "start": 14.419,
-      "end": 445.364
+      "start": 14.019,
+      "end": 449.871
     },
     "points": {
-      "start": 445.364,
-      "end": 500.775
+      "start": 449.871,
+      "end": 504.051
     },
     "quiz": {
-      "start": 500.775,
-      "end": 574.005
+      "start": 504.051,
+      "end": 575.657
     },
     "ending": {
-      "start": 574.005,
-      "end": 598.103
+      "start": 575.657,
+      "end": 599.581
     }
   }
 }

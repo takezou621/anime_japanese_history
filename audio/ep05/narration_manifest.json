@@ -25,39 +25,39 @@
       "speaker": "manabu"
     },
     "narration/s02_b01.wav": {
-      "tts_text": "いいえ、げんこうの、あとは、ふまん、だらけ。ごだいごてんのうは、せいじを、とりもどそうと、とうばくの、けいかくを、すすめます。",
+      "tts_text": "いいえ、げんこうの、あとは、ふまん、だらけ。",
       "speaker": "sensei"
     },
     "narration/s02_b02.wav": {
+      "tts_text": "ごだいごてんのうは、せいじを、とりもどそうと、とうばくの、けいかくを、すすめます。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b03.wav": {
       "tts_text": "天皇が立ち上がるのだ!?",
       "speaker": "manabu"
     },
-    "narration/s02_b03.wav": {
-      "tts_text": "かわちの、ぶしょう、くすのき、まさしげが、しょうにんずうで、かまくらぐんを、なやませ、にった、よしさだが、かまくらを、せめおとしました。1333ねん、かまくらばくふ、めつぼうです。",
-      "speaker": "sensei"
-    },
     "narration/s02_b04.wav": {
-      "tts_text": "くすのきさんは、少人数でも強かった名将なのだ!",
-      "speaker": "manabu"
+      "tts_text": "かわちの武将・くすのきまさしげが少人数で鎌倉軍を悩ませ、",
+      "speaker": "sensei"
     },
     "narration/s03_b00.wav": {
       "tts_text": "では、天皇の政治が始まるのだ?",
       "speaker": "manabu"
     },
     "narration/s03_b01.wav": {
-      "tts_text": "ごだいごてんのうの、しんせい、けんむのしんせいです。くげちゅうしんの、せいじで、ぶしの、きぼうは、うすく、おんしょうも、おもうように、くばれませんでした。",
+      "tts_text": "ごだいごてんのうの親政、けんむのしんせいです。",
       "speaker": "sensei"
     },
     "narration/s03_b02.wav": {
-      "tts_text": "武士は、がっかりなのだ?",
-      "speaker": "manabu"
+      "tts_text": "ごだいごてんのうの、しんせい、けんむのしんせいです。",
+      "speaker": "sensei"
     },
     "narration/s03_b03.wav": {
-      "tts_text": "ええ、たった3年足らずで武士の心は離れ、政治は行き詰まっていきます。",
+      "tts_text": "恩賞も思うように配れませんでした。",
       "speaker": "sensei"
     },
     "narration/s03_b04.wav": {
-      "tts_text": "ガッカリ政治、続かないなのだ…",
+      "tts_text": "けんむのしんせいって、新しいお寺を作る政治なのだ?",
       "speaker": "manabu"
     },
     "narration/s04_b00.wav": {
@@ -65,103 +65,103 @@
       "speaker": "manabu"
     },
     "narration/s04_b01.wav": {
-      "tts_text": "あしかが、たかうじです。ぶしの、こころを、あつめ、1336ねんに、きょうとを、おさえて、あたらしい、せいじを、はじめます。",
+      "tts_text": "あしかが、たかうじです。",
       "speaker": "sensei"
     },
     "narration/s04_b02.wav": {
-      "tts_text": "くすのき、まさしげは、みなとがわで、さいごまで、てんのうがわとして、たたかい、うちじにしました。",
+      "tts_text": "ぶしの、こころを、あつめ、1336ねんに、きょうとを、おさえて、あたらしい、せいじを、はじめます。",
       "speaker": "sensei"
     },
     "narration/s04_b03.wav": {
+      "tts_text": "くすのき、まさしげは、みなとがわで、さいごまで、てんのうがわとして、たたかい、うちじにしました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b04.wav": {
       "tts_text": "くすのきさん…かっこよすぎるのだ…",
       "speaker": "manabu"
     },
-    "narration/s04_b04.wav": {
-      "tts_text": "1338ねん、たかうじは、せいいたいしょうぐんに、しゅうにんして、むろまちばくふを、ひらきます。せいじの、きょてんは、きょうとで、ぶけの、てんのうの、ような、ものでした。",
-      "speaker": "sensei"
-    },
     "narration/s04_b05.wav": {
-      "tts_text": "幕府が京都に来たのだ!",
-      "speaker": "manabu"
+      "tts_text": "1338ねん、たかうじは、せいいたいしょうぐんに、しゅうにんして、むろまちばくふを、ひらきます。",
+      "speaker": "sensei"
     },
     "narration/s05_b00.wav": {
       "tts_text": "でも、天皇側は、おしまいなのだ?",
       "speaker": "manabu"
     },
     "narration/s05_b01.wav": {
-      "tts_text": "いいえ、ごだいごは、よしのにに、にげて、ちょうていを、ひらきます。きょうとの、ほくちょうと、よしのにの、なんちょうが、やくごじゅうろくねんも、たいりつする、なんぼくちょうじだいです。",
+      "tts_text": "いいえ、ごだいごは、よしのにに、にげて、ちょうていを、ひらきます。",
       "speaker": "sensei"
     },
     "narration/s05_b02.wav": {
+      "tts_text": "きょうとの、ほくちょうと、よしのにの、なんちょうが、やくごじゅうろくねんも、たいりつする、なんぼくちょうじだいです。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b03.wav": {
       "tts_text": "天皇が二人!?大もめなのだ!",
       "speaker": "manabu"
     },
-    "narration/s05_b03.wav": {
-      "tts_text": "ええ、あらそいは、ながく、つづきましたが、1392ねん、よしみつの、てで、ついに、なんぼくちょうが、ごういつします。",
-      "speaker": "sensei"
-    },
     "narration/s05_b04.wav": {
-      "tts_text": "56年…も、ながいなのだ…",
-      "speaker": "manabu"
+      "tts_text": "ええ、争いは長く続きましたが、1392年、",
+      "speaker": "sensei"
     },
     "narration/s06_b00.wav": {
       "tts_text": "よしみつって、すごい人なのだ?",
       "speaker": "manabu"
     },
     "narration/s06_b01.wav": {
-      "tts_text": "あしかが、よしみつは、わかくして、いえを、つぎ、しょうぐんの、ちからを、どころまでも、つよくしました。ちょうていの、かんまで、きわめる、ぜんれいの、ない、ぶけです。",
+      "tts_text": "あしかが、よしみつは、わかくして、いえを、つぎ、しょうぐんの、ちからを、どころまでも、つよくしました。",
       "speaker": "sensei"
     },
     "narration/s06_b02.wav": {
+      "tts_text": "ちょうていの、かんまで、きわめる、ぜんれいの、ない、ぶけです。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b03.wav": {
       "tts_text": "武士が、公家を超えるのだ!?",
       "speaker": "manabu"
     },
-    "narration/s06_b03.wav": {
-      "tts_text": "ええ、しゅごだいみょうたちも、よしみつに、したがい、ばくふの、ちからは、ちょうてんに、たっしました。てんのうも、よしみつには、さからえませんでした。",
-      "speaker": "sensei"
-    },
     "narration/s06_b04.wav": {
-      "tts_text": "将軍、トップオブトップなのだ!",
-      "speaker": "manabu"
+      "tts_text": "ええ、しゅごだいみょうたちも、よしみつに、したがい、ばくふの、ちからは、ちょうてんに、たっしました。",
+      "speaker": "sensei"
     },
     "narration/s07_b00.wav": {
       "tts_text": "お金の話もあるのだ?",
       "speaker": "manabu"
     },
     "narration/s07_b01.wav": {
-      "tts_text": "ええ、よしみつは、みんと、にちみんぼうえきを、はじめます。かいぞくの、わこうを、とりしまる、かわりに、ぼうえきの、けんりを、もらいました。",
+      "tts_text": "ええ、よしみつは、みんと、にちみんぼうえきを、はじめます。",
       "speaker": "sensei"
     },
     "narration/s07_b02.wav": {
+      "tts_text": "かいぞくの、わこうを、とりしまる、かわりに、ぼうえきの、けんりを、もらいました。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b03.wav": {
       "tts_text": "わこうって、海のならず者なのだ?",
       "speaker": "manabu"
     },
-    "narration/s07_b03.wav": {
-      "tts_text": "そう、かんごうふを、もつ、ふねだけが、ゆるされる、ぼうえきです。ちゅうごくの、どうせんや、きぬが、はいって、ばくふは、おおもうけしました。",
-      "speaker": "sensei"
-    },
     "narration/s07_b04.wav": {
-      "tts_text": "海の商売、キャッシュなのだ!",
-      "speaker": "manabu"
+      "tts_text": "そう、かんごうふを、もつ、ふねだけが、ゆるされる、ぼうえきです。",
+      "speaker": "sensei"
     },
     "narration/s08_b00.wav": {
       "tts_text": "そのお金で、建てたものがあるのだ!?",
       "speaker": "manabu"
     },
     "narration/s08_b01.wav": {
-      "tts_text": "それ、きんかくです。1397ねんに、よしみつが、たてた、やまぶきいろに、かがやく、べっそうで、しごは、てらに、なりました。",
+      "tts_text": "それ、金閣です。",
       "speaker": "sensei"
     },
     "narration/s08_b02.wav": {
-      "tts_text": "金ピカの家なのだ!?うらやましいのだ!",
-      "speaker": "manabu"
+      "tts_text": "それ、きんかくです。",
+      "speaker": "sensei"
     },
     "narration/s08_b03.wav": {
-      "tts_text": "ここで、くげぶんかと、ぶけぶんかが、まざりあい、かれいな、ほくざんぶんかが、さきました。きんかくは、その、しんぼるです。",
+      "tts_text": "山吹色に輝く別荘で、死後は寺になりました。",
       "speaker": "sensei"
     },
     "narration/s08_b04.wav": {
-      "tts_text": "文化もゴージャスなのだ!",
+      "tts_text": "金ピカの家なのだ!?うらやましいのだ!",
       "speaker": "manabu"
     },
     "narration/s09_b00.wav": {
@@ -169,111 +169,111 @@
       "speaker": "manabu"
     },
     "narration/s09_b01.wav": {
-      "tts_text": "よしみつの、あとは、ばくふの、ちからが、じわじわ、さがります。1467ねん、ほそかわしと、やまなしの、あらそいから、おうにんのらんが、はじまります。",
+      "tts_text": "よしみつの、あとは、ばくふの、ちからが、じわじわ、さがります。",
       "speaker": "sensei"
     },
     "narration/s09_b02.wav": {
+      "tts_text": "1467ねん、ほそかわしと、やまなしの、あらそいから、おうにんのらんが、はじまります。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b03.wav": {
       "tts_text": "大名同士の、けんかなのだ!?",
       "speaker": "manabu"
     },
-    "narration/s09_b03.wav": {
-      "tts_text": "ひがしぐんと、にしぐんに、わかれ、たたかいは、じゅういちねん、つづきました。きょうとは、やけのはらに、なり、けんいも、じばんも、おおきく、ゆらぎます。",
-      "speaker": "sensei"
-    },
     "narration/s09_b04.wav": {
-      "tts_text": "金色が、灰色になるのだ…",
-      "speaker": "manabu"
+      "tts_text": "ひがしぐんと、にしぐんに、わかれ、たたかいは、じゅういちねん、つづきました。",
+      "speaker": "sensei"
     },
     "narration/s10_b00.wav": {
       "tts_text": "乱のあと、日本はどうなったのだ?",
       "speaker": "manabu"
     },
     "narration/s10_b01.wav": {
-      "tts_text": "しゅごたちは、くにを、じぶんの、くにの、ように、しはいし、はじめます。これが、ぶんこくしはいで、くにごとの、おおきな、せいりょくが、そだちます。",
+      "tts_text": "守護たちは、国を自分の国のように支配し始めます。",
       "speaker": "sensei"
     },
     "narration/s10_b02.wav": {
-      "tts_text": "国ごとに、ボスができるのだ!?",
-      "speaker": "manabu"
+      "tts_text": "これがぶんこくしはいで、国ごとの大きな勢力が育ちます。",
+      "speaker": "sensei"
     },
     "narration/s10_b03.wav": {
-      "tts_text": "ええ、しゅごや、こくじんが、とちの、ぶしを、したがえ、りょうこくを、おさめます。とおい、きょうとの、しょうぐんは、もう、てが、とどきません。",
+      "tts_text": "しゅごたちは、くにを、じぶんの、くにの、ように、しはいし、はじめます。",
       "speaker": "sensei"
     },
     "narration/s10_b04.wav": {
-      "tts_text": "遠くのボスより、近くのボスなのだ!",
-      "speaker": "manabu"
+      "tts_text": "この時代は各地のボスが自分の国を治めます。",
+      "speaker": "sensei"
     },
     "narration/s11_b00.wav": {
       "tts_text": "げこくじょうって、いつからなのだ?",
       "speaker": "manabu"
     },
     "narration/s11_b01.wav": {
-      "tts_text": "おうにんのらんの、まえから、めが、でています。しゅごだいや、こくじんが、しゅくんを、おさえて、ちからを、のばし、はじめたん、です。",
+      "tts_text": "おうにんのらんの、まえから、めが、でています。",
       "speaker": "sensei"
     },
     "narration/s11_b02.wav": {
+      "tts_text": "しゅごだいや、こくじんが、しゅくんを、おさえて、ちからを、のばし、はじめたん、です。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b03.wav": {
       "tts_text": "家来が、主を超えるのだ!?",
       "speaker": "manabu"
     },
-    "narration/s11_b03.wav": {
-      "tts_text": "そのとおり。のちに「げこくじょう」と呼ばれる、大逆転の世の入口なんです。",
-      "speaker": "sensei"
-    },
     "narration/s11_b04.wav": {
-      "tts_text": "ドン底からナンバーワン、可能性なのだ!",
-      "speaker": "manabu"
+      "tts_text": "そのとおり。",
+      "speaker": "sensei"
     },
     "narration/s12_b00.wav": {
       "tts_text": "乱世のとき、文化はどうなるのだ?",
       "speaker": "manabu"
     },
     "narration/s12_b01.wav": {
-      "tts_text": "おうにんのらんの、あと、あしかが、よしまさが、やまざとに、ぎんかくを、たてます。きんいろでなく、ぎんいろ、しっとり、ひなびた、びの、ぶんか、とうざんぶんかです。",
+      "tts_text": "おうにんのらんの、あと、あしかが、よしまさが、やまざとに、ぎんかくを、たてます。",
       "speaker": "sensei"
     },
     "narration/s12_b02.wav": {
+      "tts_text": "きんいろでなく、ぎんいろ、しっとり、ひなびた、びの、ぶんか、とうざんぶんかです。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b03.wav": {
       "tts_text": "金閣とおとなしい銀閣、親子なのだ!?",
       "speaker": "manabu"
     },
-    "narration/s12_b03.wav": {
-      "tts_text": "ちゃのゆや、いけばな、かれさんすいの、にわも、このころに、そだちます。らんせだからこそ、こころしずかな、びが、もとめられたん、ですよ。",
-      "speaker": "sensei"
-    },
     "narration/s12_b04.wav": {
-      "tts_text": "しずかな美、たまらないのだ。",
-      "speaker": "manabu"
+      "tts_text": "ちゃのゆや、いけばな、かれさんすいの、にわも、このころに、そだちます。",
+      "speaker": "sensei"
     },
     "narration/s13_b00.wav": {
       "tts_text": "そして、乱世の主役はだれなのだ?",
       "speaker": "manabu"
     },
     "narration/s13_b01.wav": {
-      "tts_text": "げこくじょうを、くりかえした、けっか、せんごくだいみょうの、とうじょうです。かじんだんを、ひきいて、じぶんの、くにを、ちからで、おさめます。",
+      "tts_text": "げこくじょうを、くりかえした、けっか、せんごくだいみょうの、とうじょうです。",
       "speaker": "sensei"
     },
     "narration/s13_b02.wav": {
+      "tts_text": "かじんだんを、ひきいて、じぶんの、くにを、ちからで、おさめます。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b03.wav": {
       "tts_text": "地元のスーパースターなのだ!",
       "speaker": "manabu"
     },
-    "narration/s13_b03.wav": {
-      "tts_text": "ええ、この乱世を終わらせる英雄が、まもなく登場します。名前は、おだのぶなが!",
-      "speaker": "sensei"
-    },
     "narration/s13_b04.wav": {
-      "tts_text": "のぶなが!?つづきが気になるのだ!",
-      "speaker": "manabu"
+      "tts_text": "ええ、この乱世を終わらせる英雄が、まもなく登場します。",
+      "speaker": "sensei"
     },
     "narration/s14_b00.wav": {
       "tts_text": "ここから受験ポイントのまとめ!まずは、室町の成り立ち。",
       "speaker": "sensei"
     },
     "narration/s14_b01.wav": {
-      "tts_text": "1333ねん、かまくらめつぼうと、けんむのしんせい。1338ねん、あしかが、たかうじが、むろまちばくふ。なんぼくちょうは、やくごじゅうろくねんで、1392ねん、ごういつ。くすのき、まさしげの、ちゅうぎも、セットです!",
+      "tts_text": "1333ねん、かまくらめつぼうと、けんむのしんせい。1338ねん、あしかが、たかうじが、むろまちばくふ。",
       "speaker": "sensei"
     },
     "narration/s14_b02.wav": {
-      "tts_text": "よしみつ=にちみんぼうえきときんかく、たかうじ=むろまちばくふ、せんさんはちねん、のペアも、わすれずに。",
+      "tts_text": "なんぼくちょうは、やくごじゅうろくねんで、1392ねん、ごういつ。",
       "speaker": "sensei"
     },
     "narration/s15_b00.wav": {
@@ -281,11 +281,11 @@
       "speaker": "sensei"
     },
     "narration/s15_b01.wav": {
-      "tts_text": "おうにんのらん、1467ねんで、せんごくの、はじまり。しゅごの、ぶんこくしはい、そして、げこくじょうの、め。ぶんかは、よしみつの、ほくざんぶんかと、よしまさの、とうざんぶんかの、たいひです!",
+      "tts_text": "おうにんのらん、1467ねんで、せんごくの、はじまり。",
       "speaker": "sensei"
     },
     "narration/s15_b02.wav": {
-      "tts_text": "きん=ほくざん、ぎん=とうざん、のペアで、おぼえましょう!",
+      "tts_text": "しゅごの、ぶんこくしはい、そして、げこくじょうの、め。",
       "speaker": "sensei"
     },
     "narration/s16_b00.wav": {
@@ -293,15 +293,15 @@
       "speaker": "sensei"
     },
     "narration/s16_b01.wav": {
-      "tts_text": "1333ねん、かまくらばくふを、たおす、ちからとなった、ごだいごてんのうに、つくした、ぶしょうは?ア、くすのきまさしげ。イ、あしかがたかうじ。ウ、たけだしんげん。",
+      "tts_text": "1333ねん、かまくらばくふを、たおす、ちからとなった、ごだいごてんのうに、つくした、ぶしょうは?",
       "speaker": "sensei"
     },
     "narration/s16_b02.wav": {
-      "tts_text": "少人数の名将…アなのだ!",
-      "speaker": "manabu"
+      "tts_text": "ア、くすのきまさしげ。",
+      "speaker": "sensei"
     },
     "narration/s16_b03.wav": {
-      "tts_text": "正解!くすのきまさしげです。たかうじはその後の幕府の開祖、流れで覚えましょう。",
+      "tts_text": "イ、あしかがたかうじ。ウ、たけだしんげん。",
       "speaker": "sensei"
     },
     "narration/s17_b00.wav": {
@@ -309,51 +309,235 @@
       "speaker": "sensei"
     },
     "narration/s17_b01.wav": {
-      "tts_text": "1467ねん、きょうとを、やけのはらに、して、せんごくじだいの、いりぐちに、なった、らんは?ア、おうにんのらん。イ、じょうきゅうのらん。ウ、かわなかじまの、たたかい。",
+      "tts_text": "1467ねん、きょうとを、やけのはらに、して、せんごくじだいの、いりぐちに、なった、らんは?ア、おうにんのらん。",
       "speaker": "sensei"
     },
     "narration/s17_b02.wav": {
-      "tts_text": "灰色の京都…アなのだ!",
-      "speaker": "manabu"
+      "tts_text": "イ、じょうきゅうのらん。ウ、かわなかじまの、たたかい。",
+      "speaker": "sensei"
     },
     "narration/s17_b03.wav": {
-      "tts_text": "正解!おうにんのらんです。1467年から11年間、この乱とセットでどうぞ。",
-      "speaker": "sensei"
+      "tts_text": "灰色の京都…アなのだ!",
+      "speaker": "manabu"
     },
     "narration/s18_b00.wav": {
       "tts_text": "ラスト問題!",
       "speaker": "sensei"
     },
     "narration/s18_b01.wav": {
-      "tts_text": "あしかが、よしみつが、みんと、はじめた、かんごうふを、つかう、ぼうえきは、なんでしょう?ア、そうぼうえき。イ、にちみんぼうえき。ウ、しゅいんせんぼうえき。",
+      "tts_text": "あしかが、よしみつが、みんと、はじめた、かんごうふを、つかう、ぼうえきは、なんでしょう?ア、そうぼうえき。イ、にちみんぼうえき。",
       "speaker": "sensei"
     },
     "narration/s18_b02.wav": {
-      "tts_text": "よしみつと中国…イなのだ!",
-      "speaker": "manabu"
+      "tts_text": "ウ、しゅいんせんぼうえき。",
+      "speaker": "sensei"
     },
     "narration/s18_b03.wav": {
-      "tts_text": "正解!にちみんぼうえきです。宋貿易はたいらのきよもり、しゅいんせんはもっと後の時代です。",
-      "speaker": "sensei"
+      "tts_text": "よしみつと中国…イなのだ!",
+      "speaker": "manabu"
     },
     "narration/s19_b00.wav": {
       "tts_text": "今日は室町の栄華と、乱世のはじまりを見てきました。",
       "speaker": "sensei"
     },
     "narration/s19_b01.wav": {
-      "tts_text": "けんむのしんせい、なんぼくちょう、金閣、おうにんのらん、げこくじょう…キラキラと灰色が混ざった時代なのだ!",
+      "tts_text": "けんむのしんせい、なんぼくちょう、金閣、おうにんのらん、げこくじょう…",
       "speaker": "manabu"
     },
     "narration/s19_b02.wav": {
-      "tts_text": "次回第6話は、おだのぶながととよとみひでよしの天下統一。乱世を終わらせる二人の話、お楽しみに!",
-      "speaker": "sensei"
+      "tts_text": "キラキラと灰色が混ざった時代なのだ!",
+      "speaker": "manabu"
     },
     "narration/s19_b03.wav": {
+      "tts_text": "次回第6話は、おだのぶながととよとみひでよしの天下統一。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b05.wav": {
+      "tts_text": "かわちの、ぶしょう、くすのき、まさしげが、しょうにんずうで、かまくらぐんを、なやませ、にった、よしさだが、かまくらを、せめおとしました。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b06.wav": {
+      "tts_text": "1333年、鎌倉幕府滅亡です。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b07.wav": {
+      "tts_text": "くすのきさんは、少人数でも強かった名将なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b05.wav": {
+      "tts_text": "いいえ、新しい政治のかたちのことです。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b06.wav": {
+      "tts_text": "武士が期待したのに、希望は薄くてがっかりさせちゃったんです。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b07.wav": {
+      "tts_text": "武士は、がっかりなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s03_b08.wav": {
+      "tts_text": "ええ、たった3年足らずで武士の心は離れ、",
+      "speaker": "sensei"
+    },
+    "narration/s03_b09.wav": {
+      "tts_text": "政治は行き詰まっていきます。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b10.wav": {
+      "tts_text": "ガッカリ政治、続かないなのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s04_b06.wav": {
+      "tts_text": "せいじの、きょてんは、きょうとで、ぶけの、てんのうの、ような、ものでした。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b07.wav": {
+      "tts_text": "幕府が京都に来たのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s05_b05.wav": {
+      "tts_text": "よしみつの手でついになんぼくちょうが合一します。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b06.wav": {
+      "tts_text": "56年…も、ながいなのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s06_b05.wav": {
+      "tts_text": "てんのうも、よしみつには、さからえませんでした。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b06.wav": {
+      "tts_text": "将軍、トップオブトップなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b05.wav": {
+      "tts_text": "ちゅうごくの、どうせんや、きぬが、はいって、ばくふは、おおもうけしました。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b06.wav": {
+      "tts_text": "海の商売、キャッシュなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b05.wav": {
+      "tts_text": "ここで公家文化と武家文化が混ざり合い、",
+      "speaker": "sensei"
+    },
+    "narration/s08_b06.wav": {
+      "tts_text": "ここで、くげぶんかと、ぶけぶんかが、まざりあい、かれいな、ほくざんぶんかが、さきました。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b07.wav": {
+      "tts_text": "金閣はそのシンボルです。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b08.wav": {
+      "tts_text": "文化もゴージャスなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s09_b05.wav": {
+      "tts_text": "きょうとは、やけのはらに、なり、けんいも、じばんも、おおきく、ゆらぎます。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b06.wav": {
+      "tts_text": "金色が、灰色になるのだ…",
+      "speaker": "manabu"
+    },
+    "narration/s10_b05.wav": {
+      "tts_text": "国ごとに、ボスができるのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b06.wav": {
+      "tts_text": "ええ、しゅごや、こくじんが、とちの、ぶしを、したがえ、りょうこくを、おさめます。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b07.wav": {
+      "tts_text": "とおい、きょうとの、しょうぐんは、もう、てが、とどきません。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b08.wav": {
+      "tts_text": "遠くのボスより、近くのボスなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s11_b05.wav": {
+      "tts_text": "のちに「げこくじょう」と呼ばれる、大逆転の世の入口なんです。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b06.wav": {
+      "tts_text": "ドン底からナンバーワン、可能性なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b05.wav": {
+      "tts_text": "らんせだからこそ、こころしずかな、びが、もとめられたん、ですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b06.wav": {
+      "tts_text": "しずかな美、たまらないのだ。",
+      "speaker": "manabu"
+    },
+    "narration/s13_b05.wav": {
+      "tts_text": "名前は、おだのぶなが!",
+      "speaker": "sensei"
+    },
+    "narration/s13_b06.wav": {
+      "tts_text": "のぶなが!?つづきが気になるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s14_b03.wav": {
+      "tts_text": "くすのき、まさしげの、ちゅうぎも、セットです!",
+      "speaker": "sensei"
+    },
+    "narration/s14_b04.wav": {
+      "tts_text": "「よしみつ=にちみんぼうえきと金閣」「たかうじ=室町幕府1338年」のペアも、",
+      "speaker": "sensei"
+    },
+    "narration/s14_b05.wav": {
+      "tts_text": "忘れずに。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b03.wav": {
+      "tts_text": "ぶんかは、よしみつの、ほくざんぶんかと、よしまさの、とうざんぶんかの、たいひです!",
+      "speaker": "sensei"
+    },
+    "narration/s15_b04.wav": {
+      "tts_text": "きん=ほくざん、ぎん=とうざん、のペアで、おぼえましょう!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b04.wav": {
+      "tts_text": "少人数の名将…アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s16_b05.wav": {
+      "tts_text": "正解!くすのきまさしげです。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b06.wav": {
+      "tts_text": "たかうじはその後の幕府の開祖、流れで覚えましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b04.wav": {
+      "tts_text": "正解!おうにんのらんです。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b05.wav": {
+      "tts_text": "1467年から11年間、この乱とセットで覚えよう。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b04.wav": {
+      "tts_text": "正解!にちみんぼうえきです。宋貿易はたいらのきよもり、しゅいんせんはもっと後の時代です。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b04.wav": {
+      "tts_text": "乱世を終わらせる二人の話、お楽しみに!",
+      "speaker": "sensei"
+    },
+    "narration/s19_b05.wav": {
       "tts_text": "つぎは革命児なのだ!?チャンネル登録も、よろしくなのだ!",
       "speaker": "manabu"
     }
   },
   "dict_sha256": "068183c8b3f1",
-  "generated_at": "2026-11-15T04:17:54",
+  "generated_at": "2026-11-15T17:03:17",
   "voice_sha256": "4a55213461bf"
 }
