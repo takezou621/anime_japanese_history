@@ -587,18 +587,22 @@ def build_events(script: dict, timing: dict) -> list[dict]:
             ch = chars.get(speaker)
             # P2: exam_banner 表示中の字幕開始を 0.3s 遅延 (重複対策)。
             # banner は ~3.2s 表示が続くため、後続ビートの字幕も遅延する
-            delay = 0.0
             has_banner = any(
                 o.get("style") in ("exam_banner", "subscribe_banner")
                 for o in (sb.get("overlay_text") or []))
             if has_banner:
-                delay = 0.3
                 banner_active_until = end + 3.2
             if start < banner_active_until:
-                delay = max(delay, 0.3)
+                start = start + 0.3
+            # P1 fix: 前イベントがこのビートのウィンドウを食んでいる場合は
+            # 前イベントの end を短縮してビート開始を確保 (タイミング崩壊防止)
+            if events and events[-1]["end"] > start - 0.05:
+                events[-1]["end"] = max(events[-1]["start"] + 0.3, start - 0.05)
+                prev_end = events[-1]["end"]
             start = max(start, prev_end)  # never overlap
-            if delay and end - (start + delay) > 0.1:
-                start = start + delay
+            # P1 fix: 最小表示 0.8s (ゼロ秒字幕の防止)
+            if end - start < 0.8:
+                end = start + 0.8
             events.append({
                 "scene": sid,
                 "start": start,
