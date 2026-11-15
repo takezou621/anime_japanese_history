@@ -112,6 +112,28 @@ def _is_numlike(t: dict) -> bool:
             or t["s"] in _NUM_UNITS or t["s"] in ("紀元前", "西暦"))
 
 
+_subtitle_dict_cache: set[str] | None = None
+
+
+def _load_subtitle_dict() -> set[str]:
+    """content/subtitle_dictionary.txt (writer 管理) の不可分割語を返す。
+    ファイルが無い/空の場合は空集合 (writer 追加待ち)。"""
+    global _subtitle_dict_cache
+    if _subtitle_dict_cache is None:
+        words: set[str] = set()
+        for cand in ("content/subtitle_dictionary.txt",):
+            try:
+                with open(cand, encoding="utf-8") as f:
+                    for line in f:
+                        w = line.strip()
+                        if w and not w.startswith("#"):
+                            words.add(w)
+            except FileNotFoundError:
+                pass
+        _subtitle_dict_cache = words
+    return _subtitle_dict_cache
+
+
 def _merge_tokens(toks: list[dict]) -> list[dict]:
     """Apply merge passes so compound/numeric/auxiliary runs behave as one
     token (分割禁止ブロック化 — lead指摘 ~10語の辞書追記相当):
@@ -174,7 +196,7 @@ def _merge_tokens(toks: list[dict]) -> list[dict]:
         for ln in (5, 4, 3, 2):
             if i + ln <= len(toks):
                 cand = "".join(t["s"] for t in toks[i:i + ln])
-                if cand in _COMPOUNDS:
+                if cand in _COMPOUNDS or cand in _load_subtitle_dict():
                     out.append({"s": cand, "p1": toks[i]["p1"],
                                 "p2": toks[i]["p2"],
                                 "start": toks[i]["start"]})
@@ -475,6 +497,7 @@ def build_events(script: dict, timing: dict) -> list[dict]:
     windows, _total = scene_windows(timing)
     events: list[dict] = []
     prev_end = 0.0
+    banner_active_until = 0.0  # banner 表示ウィンドウの終端 (表示開始+3.2s)
     for sc in script.get("scenes", []):
         sid = sc.get("id")
         if sid not in windows:
@@ -501,12 +524,17 @@ def build_events(script: dict, timing: dict) -> list[dict]:
                 end = start + 0.05
             speaker = tb.get("speaker") or sb.get("speaker") or ""
             ch = chars.get(speaker)
-            # P2: exam_banner 表示中の字幕開始を 0.3s 遅延 (重複対策)
+            # P2: exam_banner 表示中の字幕開始を 0.3s 遅延 (重複対策)。
+            # banner は ~3.2s 表示が続くため、後続ビートの字幕も遅延する
             delay = 0.0
-            for o in (sb.get("overlay_text") or []):
-                if o.get("style") in ("exam_banner", "subscribe_banner"):
-                    delay = 0.3
-                    break
+            has_banner = any(
+                o.get("style") in ("exam_banner", "subscribe_banner")
+                for o in (sb.get("overlay_text") or []))
+            if has_banner:
+                delay = 0.3
+                banner_active_until = end + 3.2
+            if start < banner_active_until:
+                delay = max(delay, 0.3)
             start = max(start, prev_end)  # never overlap
             if delay and end - (start + delay) > 0.1:
                 start = start + delay
