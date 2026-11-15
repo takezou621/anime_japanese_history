@@ -1,0 +1,18 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Noto Sans JP,52,&H00FFFFFF,&H00FFFFFF,&H00000000,&H46000000,1,0,0,0,100,100,0,0,1,4,3,2,60,60,58,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.22,Sub,,0,0,0,,{\1c&H7EE28B&\b1}マナブ:{\b0\1c&HFFFFFF&} ねえ先生、昔の人って本当に\Nお米を食べてなかったの？
+Dialogue: 0,0:00:04.67,0:00:06.62,Sub,,0,0,0,,{\1c&HE3C87E&\b1}ヒスト先生:{\b0\1c&HFFFFFF&} 実は、その「お米」こそが、
+Dialogue: 0,0:00:06.62,0:00:08.57,Sub,,0,0,0,,{\1c&HE3C87E&\b1}ヒスト先生:{\b0\1c&HFFFFFF&} 日本の歴史を変えたんです!
+Dialogue: 0,0:00:08.57,0:00:11.71,Sub,,0,0,0,,{\1c&HE3C87E&\b1}ヒスト先生:{\b0\1c&HFFFFFF&} その理由は、本編で順番に見ていきましょう。
+Dialogue: 0,0:00:12.16,0:00:14.52,Sub,,0,0,0,,{\1c&H7EE28B&\b1}マナブ:{\b0\1c&HFFFFFF&} よし、縄文からスタートなのだ!
