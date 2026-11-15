@@ -1,15 +1,18 @@
 {
-  "episode": "ep01",
-  "profile": "test",
-  "generated_at": "2026-11-14T11:25:05+00:00",
-  "video": "video/ep01_partTEST.mp4",
-  "duration_sec": 88.967,
+  "episode": "ep08",
+  "profile": "full",
+  "generated_at": "2026-11-15T05:19:02+00:00",
+  "video": "video/ep08_FINAL.mp4",
+  "duration_sec": 540.867,
   "checks": {
     "duration": {
       "pass": true,
-      "value": 88.967,
-      "expected": 88.94366666666667,
-      "range": null,
+      "value": 540.867,
+      "expected": 540.832,
+      "range": [
+        300.0,
+        600.0
+      ],
       "detail": "matches timing total"
     },
     "resolution": {
@@ -34,21 +37,42 @@
         "codec": "aac",
         "sample_rate": "48000",
         "channels": 2,
-        "bit_rate": "193388"
+        "bit_rate": "193646"
       }
     },
     "loudness": {
       "pass": true,
       "warn": false,
       "value": {
-        "input_i": -14.38,
-        "input_tp": -1.53,
-        "input_lra": "3.30",
+        "input_i": -14.53,
+        "input_tp": -1.32,
+        "input_lra": "3.00",
         "target_i": -14.0,
         "tolerance": 1.5,
         "tp_max": -1.0
       },
-      "detail": "test profile: loudness is advisory only"
+      "detail": "within -14 LUFS ±1.5, TP<=-1.0"
+    },
+    "color": {
+      "pass": true,
+      "value": {
+        "color_space": "bt709",
+        "color_transfer": null,
+        "color_primaries": null,
+        "color_range": "tv"
+      },
+      "detail": "bt709 broadcast tags expected (lead spec 2026-11-15)"
+    },
+    "bit_rate": {
+      "pass": true,
+      "warn": false,
+      "value": {
+        "bit_rate": 35202121,
+        "mbps": 35.2,
+        "target_mbps": 35.0,
+        "maxrate_mbps": 40.0
+      },
+      "detail": "35.2 Mbps measured (target 35M, maxrate 40M)"
     },
     "black_frames": {
       "pass": true,
@@ -78,6 +102,8 @@
       "display_aspect_ratio": "16:9",
       "pix_fmt": "yuv420p",
       "level": 50,
+      "color_range": "tv",
+      "color_space": "bt709",
       "chroma_location": "left",
       "field_order": "progressive",
       "is_avc": "true",
@@ -88,12 +114,12 @@
       "time_base": "1/15360",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 1366528,
-      "duration": "88.966667",
-      "bit_rate": "1770847",
+      "duration_ts": 8307712,
+      "duration": "540.866667",
+      "bit_rate": "34999676",
       "bits_per_raw_sample": "8",
-      "nb_frames": "2669",
-      "extradata_size": 48,
+      "nb_frames": "16226",
+      "extradata_size": 62,
       "disposition": {
         "default": 1,
         "dub": 0,
@@ -142,10 +168,10 @@
       "time_base": "1/48000",
       "start_pts": 0,
       "start_time": "0.000000",
-      "duration_ts": 4270080,
-      "duration": "88.960000",
-      "bit_rate": "193388",
-      "nb_frames": "4171",
+      "duration_ts": 25959936,
+      "duration": "540.832000",
+      "bit_rate": "193646",
+      "nb_frames": "25353",
       "extradata_size": 5,
       "disposition": {
         "default": 1,
@@ -175,9 +201,9 @@
     }
   ],
   "format": {
-    "duration": "88.966667",
-    "size": "21943326",
-    "bit_rate": "1973172"
+    "duration": "540.866667",
+    "size": "2379956754",
+    "bit_rate": "35202121"
   },
   "pass": true
 }
