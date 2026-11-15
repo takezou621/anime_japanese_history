@@ -78,11 +78,31 @@ def bg_meiji_civilization(cv):
     g = cv.g()
     sun(g, 420, 170, 54, halo=0.45)
     clouds_row(cv, 140, 3, 30, seed=14)
-    # 銀座煉瓦街 (両側の煉瓦建築)
-    brick_building(g, 180, 720, 0.62, w=160, floors=2, seed=1)
-    brick_building(g, 640, 660, 0.5, w=140, floors=2, seed=2)
-    brick_building(g, 1300, 660, 0.5, w=140, floors=2, seed=3)
-    brick_building(g, 1740, 720, 0.62, w=160, floors=2, seed=4)
+    # 銀座煉瓦街 (両側の煉瓦建築 + 接地影)
+    for (bx, by, bs, sd) in [(180, 760, 0.62, 1), (640, 736, 0.5, 2),
+                             (1300, 736, 0.5, 3), (1740, 760, 0.62, 4)]:
+        g.ellipse((bx - 150 * bs, by - 10 * bs, bx + 170 * bs, by + 26 * bs),
+                  fill=with_alpha((70, 60, 50), 90))
+        brick_building(g, bx, by, bs, w=160, floors=2, seed=sd)
+    # 歩道 (建物と大路をつなぐ縁石で接地感を出す)
+    rect(g, 0, 742, W, 790, fill=(178, 170, 146))
+    g.line([(0, 744), (W, 744)], (152, 146, 124), 4)
+    # 中央の中景: 電柱と往来する人・荷車
+    for px in (820, 1000):
+        g.line([(px, 700), (px, 880)], (70, 66, 72), 7)
+        g.line([(px - 44, 724), (px + 44, 724)], (70, 66, 72), 4)
+        g.line([(px - 44, 758), (px + 44, 758)], (70, 66, 72), 4)
+    rickshaw(g, 900, 900, 0.9)
+    # 歩行者 (小さく散らして自然に)
+    rnd_p = random.Random(16)
+    for k in range(6):
+        px = 760 + k * 80 + rnd_p.uniform(-20, 20)
+        py = 950 + (k % 3) * 30
+        sc = rnd_p.uniform(0.55, 0.75)
+        g.circle(px, py - 26 * sc, 9 * sc, fill=(64, 56, 62))
+        g.poly([(px - 9 * sc, py - 18 * sc), (px + 9 * sc, py - 18 * sc),
+                (px + 6 * sc, py + 2 * sc), (px - 6 * sc, py + 2 * sc)],
+               fill=(64, 56, 62))
     # 大通り
     ground(cv, 700, (196, 190, 164), dark=(164, 158, 132), curve=10, seed=15,
            speckles=130, speckle_colors=[(176, 170, 144), (212, 206, 180)],

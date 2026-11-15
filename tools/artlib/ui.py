@@ -34,10 +34,14 @@ def era_badge(main, sub=None, style="indigo", target_w=None, size=44, pad=36):
     probe = Canvas(2000, 200, ss=2)
     gw = probe.g()
     tw, _ = gw.text_size(main, size, "bold")
-    w = int(tw + pad * 2)
+    sub_w = 0
+    if sub:
+        sub_w, _ = gw.text_size(sub, int(size * 0.42), "medium")
+    # T10監査対応: sub が main より広くても左右 24px 以上のパディングを保証
+    w = int(max(tw, sub_w + 24) + pad * 2)
     h = size + 28 if sub is None else int(size * 1.62) + 28
     if target_w:
-        w = target_w
+        w = max(target_w, w)
 
     def draw(g, ss):
         g.rrect((1, 1, w - 1, h - 1), (h - 2) / 2, fill=bg,
