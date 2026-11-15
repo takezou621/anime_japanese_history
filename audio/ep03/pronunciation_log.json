@@ -1,9 +1,9 @@
 {
   "episode": "ep03",
-  "generated_at": "2026-11-15T17:01:15",
+  "generated_at": "2026-11-15T23:39:21",
   "dict_path": "/Users/kawai/dev/anime_japanese_history/tools/audio/pronunciation_dict.json",
   "dict_entries": 587,
-  "dict_sha256": "068183c8b3f1",
+  "dict_sha256": "1af04182d53c",
   "voice_sha256": "4a55213461bf",
   "voice_params": {
     "sensei": {
@@ -20,23 +20,21 @@
     }
   },
   "summary": {
-    "beats": 162,
-    "beats_with_replacements": 37,
-    "total_replacements": 54,
+    "beats": 149,
+    "beats_with_replacements": 35,
+    "total_replacements": 46,
     "terms": {
-      "国風文化": 5,
-      "源氏物語": 5,
       "薬子": 4,
-      "枕草子": 4,
+      "国風文化": 4,
+      "源氏物語": 4,
       "平安京": 3,
       "蔵人所": 3,
-      "紫式部": 3,
+      "枕草子": 3,
       "征夷大将軍": 2,
       "摂政": 2,
       "摂関政治": 2,
       "十二単": 2,
-      "土佐日記": 2,
-      "紀貫之": 2,
+      "紫式部": 2,
       "藤原氏": 1,
       "蝦夷": 1,
       "坂上田村麻呂": 1,
@@ -47,9 +45,9 @@
       "源信": 1,
       "遊行聖": 1,
       "空也": 1,
-      "清少納言": 1,
-      "阿弥陀如来": 1,
       "関白": 1,
+      "土佐日記": 1,
+      "紀貫之": 1,
       "源平合戦": 1,
       "鎌倉幕府": 1
     }
@@ -1045,152 +1043,27 @@
     },
     {
       "wav": "narration/s15_b01.wav",
-      "text": "国風文化=かなで土佐日記(紀貫之)・枕草子(清少納言)・源氏物語(紫式部)、",
-      "reading": null,
-      "tts_text": "こくふうぶんか=かなでとさにっき(きのつらゆき)・まくらのそうし(せいしょうなごん)・げんじものがたり(むらさきしきぶ)、",
-      "replacements": [
-        {
-          "from": "国風文化",
-          "to": "こくふうぶんか"
-        },
-        {
-          "from": "土佐日記",
-          "to": "とさにっき"
-        },
-        {
-          "from": "清少納言",
-          "to": "せいしょうなごん"
-        },
-        {
-          "from": "源氏物語",
-          "to": "げんじものがたり"
-        },
-        {
-          "from": "枕草子",
-          "to": "まくらのそうし"
-        },
-        {
-          "from": "紀貫之",
-          "to": "きのつらゆき"
-        },
-        {
-          "from": "紫式部",
-          "to": "むらさきしきぶ"
-        }
-      ]
+      "text": "国風文化=かなで土佐日記(紀貫之)・",
+      "reading": "こくふうぶんか=かなで、とさにっき(きのつらゆき)・",
+      "tts_text": "こくふうぶんか=かなで、とさにっき(きのつらゆき)・",
+      "replacements": []
     },
     {
       "wav": "narration/s15_b02.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
+      "text": "枕草子(清少納言)・源氏物語(紫式部)、絵巻物。",
+      "reading": "まくらのそうし(せいしょうなごん)・げんじものがたり(むらさきしきぶ)、えまきもの。",
+      "tts_text": "まくらのそうし(せいしょうなごん)・げんじものがたり(むらさきしきぶ)、えまきもの。",
       "replacements": []
     },
     {
       "wav": "narration/s15_b03.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
+      "text": "浄土思想=阿弥陀如来への信仰と来世の願い。",
+      "reading": "じょうどしそう=あみだにょらいへの、しんこうと、らいせの、ねがい。",
+      "tts_text": "じょうどしそう=あみだにょらいへの、しんこうと、らいせの、ねがい。",
       "replacements": []
     },
     {
       "wav": "narration/s15_b04.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b05.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b06.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b07.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b08.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b09.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b10.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b11.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b12.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b13.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b14.wav",
-      "text": "",
-      "reading": null,
-      "tts_text": "",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b15.wav",
-      "text": "絵巻物。",
-      "reading": "こくふうぶんか=かなで、とさにっき(きのつらゆき)・まくらのそうし(せいしょうなごん)・げんじものがたり(むらさきしきぶ)、えまきもの。",
-      "tts_text": "こくふうぶんか=かなで、とさにっき(きのつらゆき)・まくらのそうし(せいしょうなごん)・げんじものがたり(むらさきしきぶ)、えまきもの。",
-      "replacements": []
-    },
-    {
-      "wav": "narration/s15_b16.wav",
-      "text": "浄土思想=阿弥陀如来への信仰と来世の願い。",
-      "reading": null,
-      "tts_text": "浄土思想=あみだにょらいへの信仰と来世の願い。",
-      "replacements": [
-        {
-          "from": "阿弥陀如来",
-          "to": "あみだにょらい"
-        }
-      ]
-    },
-    {
-      "wav": "narration/s15_b17.wav",
       "text": "「894遣唐使停止→国風文化」「乱世→浄土思想」。流れで覚えれば忘れません!",
       "reading": "894ねん、けんとうしていし、で、こくふうぶんか。らんせ、で、じょうどしそう。ながれで、おぼえれば、わすれません!",
       "tts_text": "894ねん、けんとうしていし、で、こくふうぶんか。らんせ、で、じょうどしそう。ながれで、おぼえれば、わすれません!",

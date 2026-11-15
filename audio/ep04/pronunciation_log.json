@@ -1,9 +1,9 @@
 {
   "episode": "ep04",
-  "generated_at": "2026-11-15T17:02:22",
+  "generated_at": "2026-11-15T23:42:54",
   "dict_path": "/Users/kawai/dev/anime_japanese_history/tools/audio/pronunciation_dict.json",
   "dict_entries": 587,
-  "dict_sha256": "068183c8b3f1",
+  "dict_sha256": "1af04182d53c",
   "voice_sha256": "4a55213461bf",
   "voice_params": {
     "sensei": {
@@ -20,7 +20,7 @@
     }
   },
   "summary": {
-    "beats": 137,
+    "beats": 138,
     "beats_with_replacements": 38,
     "total_replacements": 51,
     "terms": {
@@ -175,13 +175,20 @@
     },
     {
       "wav": "narration/s03_b03.wav",
+      "text": "平清盛は治天の君と結び、1167年に武士初の太政大臣になりました。",
+      "reading": "たいらの、きよもりは、ちてんのきみと、むすび、1167ねんに、ぶしはつの、だじょうだいじんに、なりました。",
+      "tts_text": "たいらの、きよもりは、ちてんのきみと、むすび、1167ねんに、ぶしはつの、だじょうだいじんに、なりました。",
+      "replacements": []
+    },
+    {
+      "wav": "narration/s03_b04.wav",
       "text": "負けた側が、次に強くなるなのだ…",
       "reading": null,
       "tts_text": "負けた側が、次に強くなるなのだ…",
       "replacements": []
     },
     {
-      "wav": "narration/s03_b04.wav",
+      "wav": "narration/s03_b05.wav",
       "text": "太政大臣って、貴族のナンバーワンの官なのだ!?",
       "reading": null,
       "tts_text": "だいじょうだいじんって、貴族のナンバーワンの官なのだ!?",
@@ -193,28 +200,28 @@
       ]
     },
     {
-      "wav": "narration/s03_b05.wav",
+      "wav": "narration/s03_b06.wav",
       "text": "ええ。",
       "reading": null,
       "tts_text": "ええ。",
       "replacements": []
     },
     {
-      "wav": "narration/s03_b06.wav",
+      "wav": "narration/s03_b07.wav",
       "text": "しかも宋との貿易で財力を蓄え、",
       "reading": "ええ。",
       "tts_text": "ええ。",
       "replacements": []
     },
     {
-      "wav": "narration/s03_b07.wav",
+      "wav": "narration/s03_b08.wav",
       "text": "瀬戸内海を独占して武士初の政権を作りました。",
       "reading": null,
       "tts_text": "瀬戸内海を独占して武士初の政権を作りました。",
       "replacements": []
     },
     {
-      "wav": "narration/s03_b08.wav",
+      "wav": "narration/s03_b09.wav",
       "text": "武力とお金、最強コンボなのだ!",
       "reading": null,
       "tts_text": "武力とお金、最強コンボなのだ!",

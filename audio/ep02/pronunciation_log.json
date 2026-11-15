@@ -1,9 +1,9 @@
 {
   "episode": "ep02",
-  "generated_at": "2026-11-15T17:00:07",
+  "generated_at": "2026-11-15T23:35:33",
   "dict_path": "/Users/kawai/dev/anime_japanese_history/tools/audio/pronunciation_dict.json",
   "dict_entries": 587,
-  "dict_sha256": "068183c8b3f1",
+  "dict_sha256": "1af04182d53c",
   "voice_sha256": "666c26addecc",
   "voice_params": {
     "sensei": {
@@ -505,16 +505,16 @@
     },
     {
       "wav": "narration/s07_b02.wav",
-      "text": "天皇のあとさきをめぐって…なのだ?",
-      "reading": null,
-      "tts_text": "天皇のあとさきをめぐって…なのだ?",
+      "text": "天智天皇の死後、大海人皇子が兵を挙げたから、なのだ?",
+      "reading": "てんちてんのうの、しご、おおあまのおうじが、へいを、あげたから、なのだ?",
+      "tts_text": "てんちてんのうの、しご、おおあまのおうじが、へいを、あげたから、なのだ?",
       "replacements": []
     },
     {
       "wav": "narration/s07_b03.wav",
-      "text": "そのとおり!",
-      "reading": null,
-      "tts_text": "そのとおり!",
+      "text": "そのとおり!その結果、天武天皇が天皇になりました。",
+      "reading": "そのとおり!そのけっか、てんむてんのうが、てんのうに、なりました。",
+      "tts_text": "そのとおり!そのけっか、てんむてんのうが、てんのうに、なりました。",
       "replacements": []
     },
     {

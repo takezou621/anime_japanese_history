@@ -53,11 +53,11 @@
       "speaker": "sensei"
     },
     "narration/s03_b03.wav": {
-      "tts_text": "負けた側が、次に強くなるなのだ…",
-      "speaker": "manabu"
+      "tts_text": "たいらの、きよもりは、ちてんのきみと、むすび、1167ねんに、ぶしはつの、だじょうだいじんに、なりました。",
+      "speaker": "sensei"
     },
     "narration/s03_b04.wav": {
-      "tts_text": "だいじょうだいじんって、貴族のナンバーワンの官なのだ!?",
+      "tts_text": "負けた側が、次に強くなるなのだ…",
       "speaker": "manabu"
     },
     "narration/s04_b00.wav": {
@@ -377,20 +377,20 @@
       "speaker": "sensei"
     },
     "narration/s03_b05.wav": {
-      "tts_text": "ええ。",
-      "speaker": "sensei"
+      "tts_text": "だいじょうだいじんって、貴族のナンバーワンの官なのだ!?",
+      "speaker": "manabu"
     },
     "narration/s03_b06.wav": {
       "tts_text": "ええ。",
       "speaker": "sensei"
     },
     "narration/s03_b07.wav": {
-      "tts_text": "瀬戸内海を独占して武士初の政権を作りました。",
+      "tts_text": "ええ。",
       "speaker": "sensei"
     },
     "narration/s03_b08.wav": {
-      "tts_text": "武力とお金、最強コンボなのだ!",
-      "speaker": "manabu"
+      "tts_text": "瀬戸内海を独占して武士初の政権を作りました。",
+      "speaker": "sensei"
     },
     "narration/s04_b05.wav": {
       "tts_text": "兄弟タッグ、最強なのだ!",
@@ -555,9 +555,13 @@
     "narration/s19_b05.wav": {
       "tts_text": "つぎは合戦づくし!?チャンネル登録も、よろしくなのだ!",
       "speaker": "manabu"
+    },
+    "narration/s03_b09.wav": {
+      "tts_text": "武力とお金、最強コンボなのだ!",
+      "speaker": "manabu"
     }
   },
-  "dict_sha256": "068183c8b3f1",
-  "generated_at": "2026-11-15T17:02:22",
+  "dict_sha256": "1af04182d53c",
+  "generated_at": "2026-11-15T23:42:54",
   "voice_sha256": "4a55213461bf"
 }

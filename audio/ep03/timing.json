@@ -7,7 +7,7 @@
     "section": 0.8,
     "tail": 0.6
   },
-  "total_duration": 574.481,
+  "total_duration": 561.931,
   "scenes": [
     {
       "id": "s01",
@@ -963,118 +963,27 @@
           "speaker": "sensei",
           "wav": "narration/s15_b01.wav",
           "start": 446.415,
-          "duration": 7.467,
-          "text": "国風文化=かなで土佐日記(紀貫之)・枕草子(清少納言)・源氏物語(紫式部)、"
+          "duration": 3.392,
+          "text": "国風文化=かなで土佐日記(紀貫之)・"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b02.wav",
-          "start": 454.181,
-          "duration": 0.171,
-          "text": ""
+          "start": 450.107,
+          "duration": 5.035,
+          "text": "枕草子(清少納言)・源氏物語(紫式部)、絵巻物。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b03.wav",
-          "start": 454.652,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b04.wav",
-          "start": 455.123,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b05.wav",
-          "start": 455.593,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b06.wav",
-          "start": 456.064,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b07.wav",
-          "start": 456.535,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b08.wav",
-          "start": 457.005,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b09.wav",
-          "start": 457.476,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b10.wav",
-          "start": 457.947,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b11.wav",
-          "start": 458.417,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b12.wav",
-          "start": 458.888,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b13.wav",
-          "start": 459.359,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b14.wav",
-          "start": 459.829,
-          "duration": 0.171,
-          "text": ""
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b15.wav",
-          "start": 460.3,
-          "duration": 8.555,
-          "text": "絵巻物。"
-        },
-        {
-          "speaker": "sensei",
-          "wav": "narration/s15_b16.wav",
-          "start": 469.155,
-          "duration": 2.987,
+          "start": 455.441,
+          "duration": 4.149,
           "text": "浄土思想=阿弥陀如来への信仰と来世の願い。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s15_b17.wav",
-          "start": 472.441,
+          "wav": "narration/s15_b04.wav",
+          "start": 459.891,
           "duration": 9.088,
           "text": "「894遣唐使停止→国風文化」「乱世→浄土思想」。流れで覚えれば忘れません!"
         }
@@ -1083,47 +992,47 @@
     {
       "id": "s16",
       "section": "quiz",
-      "start": 482.329,
+      "start": 469.779,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s16_b00.wav",
-          "start": 482.329,
+          "start": 469.779,
           "duration": 2.091,
           "text": "それではクイズタイム!第一問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b01.wav",
-          "start": 484.72,
+          "start": 472.169,
           "duration": 10.133,
           "text": "幼い天皇の代わりに政治を行う役を何という?ア、関白。イ、摂政。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b02.wav",
-          "start": 495.153,
+          "start": 482.603,
           "duration": 2.08,
           "text": "ウ、征夷大将軍。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s16_b03.wav",
-          "start": 497.533,
+          "start": 484.983,
           "duration": 2.368,
           "text": "こども天皇の代わり…イなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b04.wav",
-          "start": 500.201,
+          "start": 487.651,
           "duration": 1.611,
           "text": "正解!摂政です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b05.wav",
-          "start": 502.112,
+          "start": 489.561,
           "duration": 3.509,
           "text": "大人の天皇を支えるのは関白、とセットでまとめしましょう。"
         }
@@ -1132,47 +1041,47 @@
     {
       "id": "s17",
       "section": "quiz",
-      "start": 506.221,
+      "start": 493.671,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s17_b00.wav",
-          "start": 506.221,
+          "start": 493.671,
           "duration": 0.661,
           "text": "第二問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b01.wav",
-          "start": 507.183,
+          "start": 494.632,
           "duration": 8.587,
           "text": "清少納言が書いた、「をかし」の随筆は何でしょう?ア、源氏物語。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b02.wav",
-          "start": 516.069,
+          "start": 503.519,
           "duration": 1.792,
           "text": "イ、土佐日記。ウ、枕草子。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s17_b03.wav",
-          "start": 518.161,
+          "start": 505.611,
           "duration": 2.261,
           "text": "をかし、をかし…ウなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b04.wav",
-          "start": 520.723,
+          "start": 508.172,
           "duration": 1.856,
           "text": "正解!枕草子です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b05.wav",
-          "start": 522.879,
+          "start": 510.328,
           "duration": 4.512,
           "text": "源氏物語は紫式部、土佐日記は紀貫之、ペアでしっかりね。"
         }
@@ -1181,47 +1090,47 @@
     {
       "id": "s18",
       "section": "quiz",
-      "start": 527.991,
+      "start": 515.44,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s18_b00.wav",
-          "start": 527.991,
+          "start": 515.44,
           "duration": 0.843,
           "text": "ラスト問題!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b01.wav",
-          "start": 529.133,
+          "start": 516.583,
           "duration": 8.533,
           "text": "810年、藤原薬子が政治を元に戻そうとして失敗した事件は?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b02.wav",
-          "start": 537.967,
+          "start": 525.416,
           "duration": 3.659,
           "text": "ア、薬子の変。イ、応天門の変。ウ、保元の乱。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s18_b03.wav",
-          "start": 541.925,
+          "start": 529.375,
           "duration": 2.251,
           "text": "薬子さんはやっぱり…アなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b04.wav",
-          "start": 544.476,
+          "start": 531.925,
           "duration": 1.813,
           "text": "正解!薬子の変です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b05.wav",
-          "start": 546.589,
+          "start": 534.039,
           "duration": 3.456,
           "text": "この直後に蔵人所が新設された、セットでしっかりね。"
         }
@@ -1230,47 +1139,47 @@
     {
       "id": "s19",
       "section": "ending",
-      "start": 550.845,
+      "start": 538.295,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s19_b00.wav",
-          "start": 550.845,
+          "start": 538.295,
           "duration": 4.224,
           "text": "今日は平安京から国風文化まで、華やかで奥深い時代を見ました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b01.wav",
-          "start": 555.369,
+          "start": 542.819,
           "duration": 4.576,
           "text": "摂関政治、枕草子、源氏物語、浄土思想…"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b02.wav",
-          "start": 560.245,
+          "start": 547.695,
           "duration": 2.613,
           "text": "貴族の世界、ぜんぶ覚えたのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s19_b03.wav",
-          "start": 563.159,
+          "start": 550.608,
           "duration": 3.115,
           "text": "さすがです。次回第4話は、ついに武士の登場。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s19_b04.wav",
-          "start": 566.573,
+          "start": 554.023,
           "duration": 3.083,
           "text": "源平合戦と鎌倉幕府の話、お楽しみに!"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b05.wav",
-          "start": 569.956,
+          "start": 557.405,
           "duration": 3.925,
           "text": "つぎは刀なのだ!?チャンネル登録も、よろしくなのだ!"
         }
@@ -1288,15 +1197,15 @@
     },
     "points": {
       "start": 414.948,
-      "end": 482.329
+      "end": 469.779
     },
     "quiz": {
-      "start": 482.329,
-      "end": 550.845
+      "start": 469.779,
+      "end": 538.295
     },
     "ending": {
-      "start": 550.845,
-      "end": 574.481
+      "start": 538.295,
+      "end": 561.931
     }
   }
 }

@@ -7,7 +7,7 @@
     "section": 0.8,
     "tail": 0.6
   },
-  "total_duration": 511.739,
+  "total_duration": 519.857,
   "scenes": [
     {
       "id": "s01",
@@ -127,44 +127,51 @@
           "text": "その結果、平氏が台頭します。"
         },
         {
-          "speaker": "manabu",
+          "speaker": "sensei",
           "wav": "narration/s03_b03.wav",
           "start": 50.685,
+          "duration": 7.819,
+          "text": "平清盛は治天の君と結び、1167年に武士初の太政大臣になりました。"
+        },
+        {
+          "speaker": "manabu",
+          "wav": "narration/s03_b04.wav",
+          "start": 58.804,
           "duration": 2.624,
           "text": "負けた側が、次に強くなるなのだ…"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s03_b04.wav",
-          "start": 53.609,
+          "wav": "narration/s03_b05.wav",
+          "start": 61.728,
           "duration": 3.605,
           "text": "太政大臣って、貴族のナンバーワンの官なのだ!?"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s03_b05.wav",
-          "start": 57.515,
+          "wav": "narration/s03_b06.wav",
+          "start": 65.633,
           "duration": 0.491,
           "text": "ええ。"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s03_b06.wav",
-          "start": 58.305,
+          "wav": "narration/s03_b07.wav",
+          "start": 66.424,
           "duration": 0.491,
           "text": "しかも宋との貿易で財力を蓄え、"
         },
         {
           "speaker": "sensei",
-          "wav": "narration/s03_b07.wav",
-          "start": 59.096,
+          "wav": "narration/s03_b08.wav",
+          "start": 67.215,
           "duration": 3.019,
           "text": "瀬戸内海を独占して武士初の政権を作りました。"
         },
         {
           "speaker": "manabu",
-          "wav": "narration/s03_b08.wav",
-          "start": 62.415,
+          "wav": "narration/s03_b09.wav",
+          "start": 70.533,
           "duration": 2.539,
           "text": "武力とお金、最強コンボなのだ!"
         }
@@ -173,47 +180,47 @@
     {
       "id": "s04",
       "section": "story",
-      "start": 65.553,
+      "start": 73.672,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s04_b00.wav",
-          "start": 65.553,
+          "start": 73.672,
           "duration": 2.507,
           "text": "でも、源氏は復活できるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b01.wav",
-          "start": 68.36,
+          "start": 76.479,
           "duration": 6.347,
           "text": "1180年、以仁王の令旨を頼りに、源頼朝が挙兵します。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b02.wav",
-          "start": 75.007,
+          "start": 83.125,
           "duration": 5.333,
           "text": "関東の武士たちが続々と集まり、鎌倉を拠点にしました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s04_b03.wav",
-          "start": 80.64,
+          "start": 88.759,
           "duration": 2.4,
           "text": "頼朝なのだ!まけず嫌いなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s04_b04.wav",
-          "start": 83.34,
+          "start": 91.459,
           "duration": 4.672,
           "text": "ええ。そして弟の義経が、武将として大活躍します。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s04_b05.wav",
-          "start": 88.312,
+          "start": 96.431,
           "duration": 2.229,
           "text": "兄弟タッグ、最強なのだ!"
         }
@@ -222,54 +229,54 @@
     {
       "id": "s05",
       "section": "story",
-      "start": 91.141,
+      "start": 99.26,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s05_b00.wav",
-          "start": 91.141,
+          "start": 99.26,
           "duration": 1.909,
           "text": "平氏は、どうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b01.wav",
-          "start": 93.351,
+          "start": 101.469,
           "duration": 6.411,
           "text": "1185年、下関の壇ノ浦の海戦で、義経が平氏を滅ぼしました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b02.wav",
-          "start": 100.061,
+          "start": 108.18,
           "duration": 3.488,
           "text": "約20年ぶりに、源氏が天下を取り返します。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s05_b03.wav",
-          "start": 103.849,
+          "start": 111.968,
           "duration": 3.029,
           "text": "海の大決戦なのだ!船で戦うのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b04.wav",
-          "start": 107.179,
+          "start": 115.297,
           "duration": 3.104,
           "text": "ええ、潮の流れまで読んだ名勝負と伝わります。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s05_b05.wav",
-          "start": 110.583,
+          "start": 118.701,
           "duration": 2.453,
           "text": "これで武士の天下は、源氏に決まりました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s05_b06.wav",
-          "start": 113.336,
+          "start": 121.455,
           "duration": 2.197,
           "text": "義経、海でも強いのだ!"
         }
@@ -278,68 +285,68 @@
     {
       "id": "s06",
       "section": "story",
-      "start": 116.133,
+      "start": 124.252,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s06_b00.wav",
-          "start": 116.133,
+          "start": 124.252,
           "duration": 2.507,
           "text": "じゃ、ついに鎌倉幕府なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b01.wav",
-          "start": 118.94,
+          "start": 127.059,
           "duration": 5.056,
           "text": "1185年、頼朝は全国に守護と地頭を置きます。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b02.wav",
-          "start": 124.296,
+          "start": 132.415,
           "duration": 7.104,
           "text": "治安を守る守護、荘園や国の領地を管理して年貢を集める地頭です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s06_b03.wav",
-          "start": 131.7,
+          "start": 139.819,
           "duration": 2.976,
           "text": "日本中に、武士のネットワークなのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b04.wav",
-          "start": 134.976,
+          "start": 143.095,
           "duration": 2.464,
           "text": "その網を元に、1192年、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b05.wav",
-          "start": 137.74,
+          "start": 145.859,
           "duration": 4.011,
           "text": "頼朝は征夷大将軍に就任して、鎌倉幕府が成立します。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b06.wav",
-          "start": 142.051,
+          "start": 150.169,
           "duration": 3.968,
           "text": "守護・地頭を置いた1185年が幕府成立という説も、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s06_b07.wav",
-          "start": 146.319,
+          "start": 154.437,
           "duration": 1.771,
           "text": "新教科書には載っていますよ。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s06_b08.wav",
-          "start": 148.389,
+          "start": 156.508,
           "duration": 4.075,
           "text": "「1192年、鎌倉幕府」丸暗記なのだ!"
         }
@@ -348,75 +355,75 @@
     {
       "id": "s07",
       "section": "story",
-      "start": 153.064,
+      "start": 161.183,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s07_b00.wav",
-          "start": 153.064,
+          "start": 161.183,
           "duration": 2.592,
           "text": "幕府の中身って、どうなってるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b01.wav",
-          "start": 155.956,
+          "start": 164.075,
           "duration": 3.605,
           "text": "将軍と御家人の、御恩と奉公の関係です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b02.wav",
-          "start": 159.861,
+          "start": 167.98,
           "duration": 6.784,
           "text": "将軍は領地を守る御恩を与え、御家人は戦で奉公する約束です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s07_b03.wav",
-          "start": 166.945,
+          "start": 175.064,
           "duration": 2.144,
           "text": "御恩って、お小遣いなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b04.wav",
-          "start": 169.389,
+          "start": 177.508,
           "duration": 3.307,
           "text": "いいえ、領地をもらえるから生活の助けになるんです。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b05.wav",
-          "start": 172.996,
+          "start": 181.115,
           "duration": 2.112,
           "text": "大切なのは主従の約束ですよ。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s07_b06.wav",
-          "start": 175.408,
+          "start": 183.527,
           "duration": 3.552,
           "text": "「あなたにお恩、私が働く」契約なのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b07.wav",
-          "start": 179.26,
+          "start": 187.379,
           "duration": 3.808,
           "text": "ええ、主従が実利で結ばれる、武士らしい関係です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s07_b08.wav",
-          "start": 183.368,
+          "start": 191.487,
           "duration": 2.325,
           "text": "この仕組みが、幕府の土台になりました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s07_b09.wav",
-          "start": 185.993,
+          "start": 194.112,
           "duration": 3.253,
           "text": "恩をあげて、奉公をもらう、ウィンウィンなのだ!"
         }
@@ -425,75 +432,75 @@
     {
       "id": "s08",
       "section": "story",
-      "start": 189.847,
+      "start": 197.965,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s08_b00.wav",
-          "start": 189.847,
+          "start": 197.965,
           "duration": 2.965,
           "text": "天皇は、この間、何をしてたのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b01.wav",
-          "start": 193.112,
+          "start": 201.231,
           "duration": 5.109,
           "text": "力を取り戻したい後鳥羽上皇が、幕府討伐の兵を挙げます。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b02.wav",
-          "start": 198.521,
+          "start": 206.64,
           "duration": 2.72,
           "text": "1221年の承久の乱です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s08_b03.wav",
-          "start": 201.541,
+          "start": 209.66,
           "duration": 2.891,
           "text": "天皇vs幕府、大勝負なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b04.wav",
-          "start": 204.732,
+          "start": 212.851,
           "duration": 3.307,
           "text": "ええ、でも御家人たちは頼朝の恩を覚えていて、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b05.wav",
-          "start": 208.339,
+          "start": 216.457,
           "duration": 1.579,
           "text": "幕府側が圧勝しました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b06.wav",
-          "start": 210.217,
+          "start": 218.336,
           "duration": 2.304,
           "text": "前の時代は朝廷が中心だったけれど、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s08_b07.wav",
-          "start": 212.821,
+          "start": 220.94,
           "duration": 2.891,
           "text": "その結果、この後は幕府が天下を動かします。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s08_b08.wav",
-          "start": 216.012,
+          "start": 224.131,
           "duration": 2.048,
           "text": "時代の主役が入れかわるなのだ…"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s08_b09.wav",
-          "start": 218.36,
+          "start": 226.479,
           "duration": 3.083,
           "text": "天皇でも勝てないのだ…時代が変わったなのだ。"
         }
@@ -502,54 +509,54 @@
     {
       "id": "s09",
       "section": "story",
-      "start": 222.043,
+      "start": 230.161,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s09_b00.wav",
-          "start": 222.043,
+          "start": 230.161,
           "duration": 2.72,
           "text": "頼朝の後は、だれがリーダーなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b01.wav",
-          "start": 225.063,
+          "start": 233.181,
           "duration": 2.923,
           "text": "頼朝の妻の実家、北条氏です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b02.wav",
-          "start": 228.285,
+          "start": 236.404,
           "duration": 4.992,
           "text": "執権という役が政治を動かす、執権政治が始まります。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s09_b03.wav",
-          "start": 233.577,
+          "start": 241.696,
           "duration": 2.251,
           "text": "北条さん、じわじわ来たのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b04.wav",
-          "start": 236.128,
+          "start": 244.247,
           "duration": 6.816,
           "text": "3代執権の北条泰時は、1232年に御成敗式目を作ります。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s09_b05.wav",
-          "start": 243.244,
+          "start": 251.363,
           "duration": 3.84,
           "text": "武士のルールを書いた、日本初の武家法です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s09_b06.wav",
-          "start": 247.384,
+          "start": 255.503,
           "duration": 2.677,
           "text": "ルールブックで政治、堅実なのだ!"
         }
@@ -558,75 +565,75 @@
     {
       "id": "s10",
       "section": "story",
-      "start": 250.661,
+      "start": 258.78,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s10_b00.wav",
-          "start": 250.661,
+          "start": 258.78,
           "duration": 2.613,
           "text": "でも、敵は中国だけじゃないのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b01.wav",
-          "start": 253.575,
+          "start": 261.693,
           "duration": 2.485,
           "text": "モンゴル帝国が日本に来ます。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b02.wav",
-          "start": 256.36,
+          "start": 264.479,
           "duration": 7.36,
           "text": "1274年の文永の役、1281年の弘安の役、二度の大襲来です。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s10_b03.wav",
-          "start": 264.02,
+          "start": 272.139,
           "duration": 2.869,
           "text": "台風で敵が負けた…って話なのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b04.wav",
-          "start": 267.189,
+          "start": 275.308,
           "duration": 2.453,
           "text": "ええ、神風と呼ばれます。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b05.wav",
-          "start": 269.943,
+          "start": 278.061,
           "duration": 5.237,
           "text": "守護・地頭の名の下に、全国の武士が日本を守りました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s10_b06.wav",
-          "start": 275.48,
+          "start": 283.599,
           "duration": 2.955,
           "text": "蒙古襲来絵詞って、この絵なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b07.wav",
-          "start": 278.735,
+          "start": 286.853,
           "duration": 0.64,
           "text": "そうです。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b08.wav",
-          "start": 279.675,
+          "start": 287.793,
           "duration": 2.859,
           "text": "でも、戦った御家人には恩賞が届きにくく、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s10_b09.wav",
-          "start": 282.833,
+          "start": 290.952,
           "duration": 1.856,
           "text": "幕府への不満がたまっていきます。"
         }
@@ -635,61 +642,61 @@
     {
       "id": "s11",
       "section": "story",
-      "start": 285.289,
+      "start": 293.408,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s11_b00.wav",
-          "start": 285.289,
+          "start": 293.408,
           "duration": 2.816,
           "text": "幕府の中で、不満はどうなったのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b01.wav",
-          "start": 288.405,
+          "start": 296.524,
           "duration": 2.389,
           "text": "争いを収めるため、北条氏の当主、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b02.wav",
-          "start": 291.095,
+          "start": 299.213,
           "duration": 2.752,
           "text": "得宗がすべてを握る得宗専制へ進みます。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s11_b03.wav",
-          "start": 294.147,
+          "start": 302.265,
           "duration": 2.528,
           "text": "ますます、かたくなな政治なのだ!?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b04.wav",
-          "start": 296.975,
+          "start": 305.093,
           "duration": 4.565,
           "text": "ええ、御家人との絆が薄れ、幕府は少しずつ弱体化していきます。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b05.wav",
-          "start": 301.84,
+          "start": 309.959,
           "duration": 2.731,
           "text": "中央の御家人は恩賞をめぐる争いが絶えず、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s11_b06.wav",
-          "start": 304.871,
+          "start": 312.989,
           "duration": 2.037,
           "text": "地方の武士の力も増していきました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s11_b07.wav",
-          "start": 307.208,
+          "start": 315.327,
           "duration": 2.656,
           "text": "このすきまが、次の話の種なのだ。"
         }
@@ -698,54 +705,54 @@
     {
       "id": "s12",
       "section": "story",
-      "start": 310.464,
+      "start": 318.583,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s12_b00.wav",
-          "start": 310.464,
+          "start": 318.583,
           "duration": 2.848,
           "text": "戦の世で、心の支えはなんなのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b01.wav",
-          "start": 313.612,
+          "start": 321.731,
           "duration": 2.699,
           "text": "ええ、今までの仏教は貴族のもの。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b02.wav",
-          "start": 316.611,
+          "start": 324.729,
           "duration": 3.179,
           "text": "ここで、庶民の救いを説く鎌倉仏教が広がります。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b03.wav",
-          "start": 320.089,
+          "start": 328.208,
           "duration": 3.104,
           "text": "法然は浄土宗で「一向に念佛せよ」。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b04.wav",
-          "start": 323.493,
+          "start": 331.612,
           "duration": 5.963,
           "text": "親鸞は浄土真宗で、「悪人正機」つまり誰でも救われると説きました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s12_b05.wav",
-          "start": 329.756,
+          "start": 337.875,
           "duration": 3.403,
           "text": "一向に念佛…「ただ念じればいい」なのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s12_b06.wav",
-          "start": 333.459,
+          "start": 341.577,
           "duration": 4.619,
           "text": "ええ、身分や学問に関係なく救われる、庶民にぴったりの教えです。"
         }
@@ -754,68 +761,68 @@
     {
       "id": "s13",
       "section": "story",
-      "start": 338.677,
+      "start": 346.796,
       "beats": [
         {
           "speaker": "manabu",
           "wav": "narration/s13_b00.wav",
-          "start": 338.677,
+          "start": 346.796,
           "duration": 1.675,
           "text": "ほかの宗派もあるのだ?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b01.wav",
-          "start": 340.652,
+          "start": 348.771,
           "duration": 1.291,
           "text": "日蓮は法華宗で、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b02.wav",
-          "start": 342.243,
+          "start": 350.361,
           "duration": 3.552,
           "text": "「南無妙法蓮華経」の題目を唱える教えを広めました。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b03.wav",
-          "start": 346.095,
+          "start": 354.213,
           "duration": 0.661,
           "text": "そして禅。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b04.wav",
-          "start": 347.056,
+          "start": 355.175,
           "duration": 1.184,
           "text": "栄西が臨済宗、道元が曹洞宗を開き、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b05.wav",
-          "start": 348.54,
+          "start": 356.659,
           "duration": 2.997,
           "text": "座って心を静める修養が武士に大流行します。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s13_b06.wav",
-          "start": 351.837,
+          "start": 359.956,
           "duration": 2.176,
           "text": "座禅なのだ!武士っぽいのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b07.wav",
-          "start": 354.313,
+          "start": 362.432,
           "duration": 2.517,
           "text": "ええ、心を鍛える教えだからでしょう。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s13_b08.wav",
-          "start": 357.131,
+          "start": 365.249,
           "duration": 2.88,
           "text": "宗教が庶民と武士の心の柱になった時代です。"
         }
@@ -824,40 +831,40 @@
     {
       "id": "s14",
       "section": "points",
-      "start": 360.811,
+      "start": 368.929,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s14_b00.wav",
-          "start": 360.811,
+          "start": 368.929,
           "duration": 3.861,
           "text": "ここから受験ポイントのまとめ!まずは、武士の政権までの流れ。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b01.wav",
-          "start": 364.972,
+          "start": 373.091,
           "duration": 4.0,
           "text": "保元・平治の乱で武士が台頭、平氏政権と宋貿易、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b02.wav",
-          "start": 369.272,
+          "start": 377.391,
           "duration": 12.853,
           "text": "1180年頼朝挙兵、1185年壇ノ浦、1192年鎌倉幕府成立。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b03.wav",
-          "start": 382.425,
+          "start": 390.544,
           "duration": 1.44,
           "text": "守護と地頭も忘れずに!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s14_b04.wav",
-          "start": 384.165,
+          "start": 392.284,
           "duration": 3.701,
           "text": "「御恩と奉公」の主従関係も、必ず押さえてください。"
         }
@@ -866,47 +873,47 @@
     {
       "id": "s15",
       "section": "points",
-      "start": 388.467,
+      "start": 396.585,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s15_b00.wav",
-          "start": 388.467,
+          "start": 396.585,
           "duration": 2.432,
           "text": "後半は、幕府の運営と宗教です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b01.wav",
-          "start": 391.199,
+          "start": 399.317,
           "duration": 5.195,
           "text": "承久の乱1221年、北条泰時の御成敗式目1232年、"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b02.wav",
-          "start": 396.693,
+          "start": 404.812,
           "duration": 10.944,
           "text": "元寇は文永1274・弘安1281。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b03.wav",
-          "start": 407.937,
+          "start": 416.056,
           "duration": 2.421,
           "text": "その後は得宗専制で幕府は弱体化。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b04.wav",
-          "start": 410.659,
+          "start": 418.777,
           "duration": 5.632,
           "text": "鎌倉仏教は、法然・親鸞・日蓮・禅(栄西・道元)。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s15_b05.wav",
-          "start": 416.591,
+          "start": 424.709,
           "duration": 3.019,
           "text": "庶民の宗教、とセットです!"
         }
@@ -915,40 +922,40 @@
     {
       "id": "s16",
       "section": "quiz",
-      "start": 420.409,
+      "start": 428.528,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s16_b00.wav",
-          "start": 420.409,
+          "start": 428.528,
           "duration": 2.091,
           "text": "それではクイズタイム!第一問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b01.wav",
-          "start": 422.8,
+          "start": 430.919,
           "duration": 9.653,
           "text": "1185年、源義経が平氏を滅ぼした海戦は何でしょう?ア、壇ノ浦。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b02.wav",
-          "start": 432.753,
+          "start": 440.872,
           "duration": 1.685,
           "text": "イ、長篠。ウ、関ケ原。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s16_b03.wav",
-          "start": 434.739,
+          "start": 442.857,
           "duration": 1.931,
           "text": "海の決戦…アなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s16_b04.wav",
-          "start": 436.969,
+          "start": 445.088,
           "duration": 4.555,
           "text": "正解!壇ノ浦です。1185年とセットでしっかりおぼえましょう。"
         }
@@ -957,47 +964,47 @@
     {
       "id": "s17",
       "section": "quiz",
-      "start": 442.124,
+      "start": 450.243,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s17_b00.wav",
-          "start": 442.124,
+          "start": 450.243,
           "duration": 0.661,
           "text": "第二問!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b01.wav",
-          "start": 443.085,
+          "start": 451.204,
           "duration": 9.003,
           "text": "将軍が御恩を与え、御家人が奉公をする、武士の主従関係を何という?"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b02.wav",
-          "start": 452.388,
+          "start": 460.507,
           "duration": 3.84,
           "text": "ア、御成敗式目。イ、御恩と奉公。ウ、得宗専制。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s17_b03.wav",
-          "start": 456.528,
+          "start": 464.647,
           "duration": 2.315,
           "text": "恩と働きのペア…イなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b04.wav",
-          "start": 459.143,
+          "start": 467.261,
           "duration": 1.888,
           "text": "正解!御恩と奉公です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s17_b05.wav",
-          "start": 461.331,
+          "start": 469.449,
           "duration": 2.805,
           "text": "幕府の土台になった、大事なキーワードですよ。"
         }
@@ -1006,47 +1013,47 @@
     {
       "id": "s18",
       "section": "quiz",
-      "start": 464.736,
+      "start": 472.855,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s18_b00.wav",
-          "start": 464.736,
+          "start": 472.855,
           "duration": 0.843,
           "text": "ラスト問題!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b01.wav",
-          "start": 465.879,
+          "start": 473.997,
           "duration": 9.867,
           "text": "1232年、北条泰時が定めた武家のルールブックは?ア、大宝律令。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b02.wav",
-          "start": 476.045,
+          "start": 484.164,
           "duration": 1.984,
           "text": "イ、十七条憲法。ウ、御成敗式目。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s18_b03.wav",
-          "start": 478.329,
+          "start": 486.448,
           "duration": 2.197,
           "text": "武家のルールブック…ウなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b04.wav",
-          "start": 480.827,
+          "start": 488.945,
           "duration": 2.037,
           "text": "正解!御成敗式目です。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s18_b05.wav",
-          "start": 483.164,
+          "start": 491.283,
           "duration": 3.712,
           "text": "大宝律令701年との年号ペアも、覚えておきましょう。"
         }
@@ -1055,47 +1062,47 @@
     {
       "id": "s19",
       "section": "ending",
-      "start": 487.676,
+      "start": 495.795,
       "beats": [
         {
           "speaker": "sensei",
           "wav": "narration/s19_b00.wav",
-          "start": 487.676,
+          "start": 495.795,
           "duration": 4.341,
           "text": "今日は武士の登場から鎌倉幕府の盛衰まで、激動の時代を見ました。"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b01.wav",
-          "start": 492.317,
+          "start": 500.436,
           "duration": 5.173,
           "text": "壇ノ浦、御恩と奉公、承久の乱、元寇、鎌倉仏教…"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b02.wav",
-          "start": 497.791,
+          "start": 505.909,
           "duration": 2.571,
           "text": "年号と人名、いっぱいなのだ!"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s19_b03.wav",
-          "start": 500.661,
+          "start": 508.78,
           "duration": 3.787,
           "text": "次回第5話は、足利尊氏と南北朝、そして戦国へ。"
         },
         {
           "speaker": "sensei",
           "wav": "narration/s19_b04.wav",
-          "start": 504.748,
+          "start": 512.867,
           "duration": 1.995,
           "text": "鎌倉のゆらぎが大きく咲きますよ!"
         },
         {
           "speaker": "manabu",
           "wav": "narration/s19_b05.wav",
-          "start": 507.043,
+          "start": 515.161,
           "duration": 4.096,
           "text": "つぎは合戦づくし!?チャンネル登録も、よろしくなのだ!"
         }
@@ -1109,19 +1116,19 @@
     },
     "story": {
       "start": 12.525,
-      "end": 360.811
+      "end": 368.929
     },
     "points": {
-      "start": 360.811,
-      "end": 420.409
+      "start": 368.929,
+      "end": 428.528
     },
     "quiz": {
-      "start": 420.409,
-      "end": 487.676
+      "start": 428.528,
+      "end": 495.795
     },
     "ending": {
-      "start": 487.676,
-      "end": 511.739
+      "start": 495.795,
+      "end": 519.857
     }
   }
 }

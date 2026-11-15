@@ -321,11 +321,11 @@
       "speaker": "sensei"
     },
     "narration/s15_b01.wav": {
-      "tts_text": "こくふうぶんか=かなでとさにっき(きのつらゆき)・まくらのそうし(せいしょうなごん)・げんじものがたり(むらさきしきぶ)、",
+      "tts_text": "こくふうぶんか=かなで、とさにっき(きのつらゆき)・",
       "speaker": "sensei"
     },
     "narration/s15_b02.wav": {
-      "tts_text": "",
+      "tts_text": "まくらのそうし(せいしょうなごん)・げんじものがたり(むらさきしきぶ)、えまきもの。",
       "speaker": "sensei"
     },
     "narration/s16_b00.wav": {
@@ -565,11 +565,11 @@
       "speaker": "sensei"
     },
     "narration/s15_b03.wav": {
-      "tts_text": "",
+      "tts_text": "じょうどしそう=あみだにょらいへの、しんこうと、らいせの、ねがい。",
       "speaker": "sensei"
     },
     "narration/s15_b04.wav": {
-      "tts_text": "",
+      "tts_text": "894ねん、けんとうしていし、で、こくふうぶんか。らんせ、で、じょうどしそう。ながれで、おぼえれば、わすれません!",
       "speaker": "sensei"
     },
     "narration/s15_b05.wav": {
@@ -657,7 +657,7 @@
       "speaker": "manabu"
     }
   },
-  "dict_sha256": "068183c8b3f1",
-  "generated_at": "2026-11-15T17:01:15",
+  "dict_sha256": "1af04182d53c",
+  "generated_at": "2026-11-15T23:39:21",
   "voice_sha256": "4a55213461bf"
 }

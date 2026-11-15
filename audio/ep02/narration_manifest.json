@@ -157,11 +157,11 @@
       "speaker": "sensei"
     },
     "narration/s07_b02.wav": {
-      "tts_text": "天皇のあとさきをめぐって…なのだ?",
+      "tts_text": "てんちてんのうの、しご、おおあまのおうじが、へいを、あげたから、なのだ?",
       "speaker": "manabu"
     },
     "narration/s07_b03.wav": {
-      "tts_text": "そのとおり!",
+      "tts_text": "そのとおり!そのけっか、てんむてんのうが、てんのうに、なりました。",
       "speaker": "sensei"
     },
     "narration/s07_b04.wav": {
@@ -633,7 +633,7 @@
       "speaker": "manabu"
     }
   },
-  "dict_sha256": "068183c8b3f1",
-  "generated_at": "2026-11-15T17:00:07",
+  "dict_sha256": "1af04182d53c",
+  "generated_at": "2026-11-15T23:35:33",
   "voice_sha256": "666c26addecc"
 }

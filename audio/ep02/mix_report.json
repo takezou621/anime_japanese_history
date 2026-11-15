@@ -9,25 +9,25 @@
     "input_i": "-23.40",
     "input_tp": "-4.59",
     "input_lra": "3.40",
-    "input_thresh": "-34.09",
-    "output_i": "-23.95",
+    "input_thresh": "-34.08",
+    "output_i": "-23.96",
     "output_tp": "-5.05",
     "output_lra": "3.40",
     "output_thresh": "-34.63",
     "normalization_type": "dynamic",
-    "target_offset": "-0.05"
+    "target_offset": "-0.04"
   },
   "output_loudness": {
-    "input_i": "-14.48",
-    "input_tp": "-1.57",
-    "input_lra": "3.10",
-    "input_thresh": "-25.14",
-    "output_i": "-23.90",
-    "output_tp": "-10.16",
+    "input_i": "-14.47",
+    "input_tp": "-1.56",
+    "input_lra": "2.90",
+    "input_thresh": "-25.13",
+    "output_i": "-23.91",
+    "output_tp": "-10.17",
     "output_lra": "3.00",
-    "output_thresh": "-34.55",
+    "output_thresh": "-34.56",
     "normalization_type": "dynamic",
-    "target_offset": "-0.10"
+    "target_offset": "-0.09"
   },
   "mix": "audio/ep02/mix.wav"
 }
