@@ -1,0 +1,8 @@
+# This file records the segment order used by Manim.
+file 'file:/Users/kawai/dev/anime_japanese_history/tools/poc/manim/out/videos/timeline_poc/1080p30/partial_movie_files/TimelinePoc/58758ce54c4b7bf7b63f98a7b5692527dc002660aac1dfead60dfa88d9a433af.mov'
+file 'file:/Users/kawai/dev/anime_japanese_history/tools/poc/manim/out/videos/timeline_poc/1080p30/partial_movie_files/TimelinePoc/bc29ee8d57da5ed8d1631e527bb6c846f13fff62b29d1247d445834ccfba27e8.mov'
+file 'file:/Users/kawai/dev/anime_japanese_history/tools/poc/manim/out/videos/timeline_poc/1080p30/partial_movie_files/TimelinePoc/28ed889a5baebab7642560e28b3c4809d36e6085c8ceb958a47d9ab6996fb2ab.mov'
+file 'file:/Users/kawai/dev/anime_japanese_history/tools/poc/manim/out/videos/timeline_poc/1080p30/partial_movie_files/TimelinePoc/85e5c9c1d515612a1309f069e50049cc7ecd30acefe0dd54bd1cf54bf138f484.mov'
+file 'file:/Users/kawai/dev/anime_japanese_history/tools/poc/manim/out/videos/timeline_poc/1080p30/partial_movie_files/TimelinePoc/31f642bfdf3d7d56b64d0181f6a8043559d4763f4b9535e027899b3f4decf98f.mov'
+file 'file:/Users/kawai/dev/anime_japanese_history/tools/poc/manim/out/videos/timeline_poc/1080p30/partial_movie_files/TimelinePoc/64f3616a3650b931cad1a609a65a8d6973c593fc22f8064105d5ee74be9503d0.mov'
+file 'file:/Users/kawai/dev/anime_japanese_history/tools/poc/manim/out/videos/timeline_poc/1080p30/partial_movie_files/TimelinePoc/93bddca77e25f2674963ce4e4a66657f1e9caeddf27c3d754b6c3ca77c831756.mov'
