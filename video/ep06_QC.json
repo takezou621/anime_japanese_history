@@ -1,7 +1,7 @@
 {
   "episode": "ep06",
   "profile": "full",
-  "generated_at": "2026-11-15T09:25:51+00:00",
+  "generated_at": "2026-11-15T09:36:52+00:00",
   "video": "video/ep06_FINAL.mp4",
   "duration_sec": 533.4,
   "checks": {
@@ -37,21 +37,21 @@
         "codec": "aac",
         "sample_rate": "48000",
         "channels": 2,
-        "bit_rate": "193464"
+        "bit_rate": "193475"
       }
     },
     "loudness": {
-      "pass": false,
+      "pass": true,
       "warn": false,
       "value": {
-        "input_i": -14.54,
-        "input_tp": -0.96,
-        "input_lra": "3.10",
+        "input_i": -14.68,
+        "input_tp": -2.01,
+        "input_lra": "2.90",
         "target_i": -14.0,
         "tolerance": 1.5,
         "tp_max": -1.0
       },
-      "detail": "out of loudness/TP target"
+      "detail": "within -14 LUFS ±1.5, TP<=-1.0"
     },
     "color": {
       "pass": true,
@@ -67,7 +67,7 @@
       "pass": true,
       "warn": false,
       "value": {
-        "bit_rate": 35201936,
+        "bit_rate": 35201947,
         "mbps": 35.2,
         "target_mbps": 35.0,
         "maxrate_mbps": 40.0
@@ -170,7 +170,7 @@
       "start_time": "0.000000",
       "duration_ts": 25602192,
       "duration": "533.379000",
-      "bit_rate": "193464",
+      "bit_rate": "193475",
       "nb_frames": "25004",
       "extradata_size": 5,
       "disposition": {
@@ -202,8 +202,8 @@
   ],
   "format": {
     "duration": "533.400000",
-    "size": "2347089119",
-    "bit_rate": "35201936"
+    "size": "2347089831",
+    "bit_rate": "35201947"
   },
-  "pass": false
+  "pass": true
 }
