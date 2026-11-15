@@ -161,7 +161,7 @@ def render_quiz_board(question: str, choices: list[str],
 
     qx, qy = QUIZ_Q_CENTER
     lines = wrap_lines(_quiz_sanitize(question), 24)[:2]
-    yy = qy
+    yy = qy - 12 if len(lines) == 2 else qy
     for ln in lines:
         d.text((qx, yy), ln, font=q_font, anchor="mm",
                fill=hex_rgba(ai), stroke_width=0)
@@ -170,7 +170,7 @@ def render_quiz_board(question: str, choices: list[str],
     for i, row_y in enumerate(QUIZ_ROW_Y):
         hl = (highlight == i)
         if hl:
-            d.rounded_rectangle([470, row_y - 36, 1520, row_y + 36], radius=14,
+            d.rounded_rectangle([470, row_y - 30, 1520, row_y + 30], radius=14,
                                 fill=hex_rgba(YAMABUKI, 215))
         mark = QUIZ_MARKS[i] if i < len(QUIZ_MARKS) else "?"
         d.text((QUIZ_TEXT_X, row_y), mark, font=m_font, anchor="lm",
@@ -179,8 +179,12 @@ def render_quiz_board(question: str, choices: list[str],
         d.text((QUIZ_TEXT_X + 70, row_y), txt, font=c_font, anchor="lm",
                fill=hex_rgba(TEXT_DARK))
         if hl:
-            d.text((QUIZ_TEXT_X - 46, row_y), "✔", font=m_font, anchor="lm",
-                   fill=hex_rgba(SHU))
+            # drawn check: the Black font has no U+2714 glyph and falls
+            # back to a boxed X, which reads as "wrong" on the answer row
+            cx = QUIZ_TEXT_X - 46
+            d.line([(cx + 2, row_y), (cx + 13, row_y + 11),
+                    (cx + 34, row_y - 13)],
+                   fill=hex_rgba(SHU), width=7, joint="curve")
     return img
 
 

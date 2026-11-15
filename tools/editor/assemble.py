@@ -77,6 +77,19 @@ CHAR_CONTENT_H = 780.0     # visible content height target (feet 930, top ~150)
 CHAR_SCALE_MAX = 1.5       # absolute safety ceiling (avoid upsampling tiny art)
 CHAR_FEET_Y = 930.0
 
+
+def _bg_path(assets_dir: Path, bg_name: str) -> Path:
+    """Prefer Muse's rich backgrounds (scenes_v2) when delivered.
+
+    bg_quiz_board is excluded: the quiz text overlay positions
+    (QUIZ_ROW_Y etc.) are calibrated to the original board art.
+    """
+    if bg_name != "bg_quiz_board":
+        v2 = assets_dir / "scenes_v2" / f"{bg_name}.png"
+        if v2.is_file():
+            return v2
+    return assets_dir / "scenes" / f"{bg_name}.png"
+
 _bbox_cache: dict[str, tuple] = {}
 
 
@@ -209,7 +222,7 @@ def build_plan(script: dict, timing: dict, assets_dir: Path,
             frames=frames, dur=frames / FPS, seg_start=seg_start,
             cam_motion=cam.get("motion", "kenburns_in"),
             cam_intensity=cam.get("intensity", 1.0),
-            bg=str(assets_dir / "scenes" / f"{bg_name}.png")))
+            bg=str(_bg_path(assets_dir, bg_name))))
         clip = ai_segments.resolve_clip(sc, ep, ai_manifest or {})
         if clip:
             spans[-1].ai_src = clip
@@ -276,7 +289,9 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
     # quiz board auto-fill (P2-2: ボード空欄問題) — under characters/overlays.
     # Skipped when the writer already provides overlay_text (e.g. quiz_choices)
     has_script_quiz_overlay = any(
-        b.get("overlay_text") for b in scene.get("beats", []))
+        ot.get("style") == "quiz_choices"
+        for b in scene.get("beats", [])
+        for ot in (b.get("overlay_text") or []))
     if quiz_item and not has_script_quiz_overlay:
         from text_overlays import render_quiz_board
         q = quiz_item.get("q", "")
@@ -352,7 +367,8 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
             max(2, int(round(ih * scale)) // 2 * 2)
         if _is_char(name):
             px = px + tw / 2.0 - content_cx * scale   # content center at px
-            py = CHAR_FEET_Y + th / 2.0 - bb * scale  # content bottom on line
+            feet_y = float(a.get("feet_y", CHAR_FEET_Y) or CHAR_FEET_Y)
+            py = feet_y + th / 2.0 - bb * scale  # content bottom on line
         t0 = appear_for(name)
         cid = next((c for c in char_ids if c and c in name.lower()), "")
         my_wins = [(b["start"], b["end"]) for b in beats

@@ -62,7 +62,8 @@
               380
             ],
             "scale": 1.0,
-            "motion": "slide_in_right"
+            "motion": "slide_in_right",
+            "feet_y": 1000
           },
           {
             "name": "char_manabu",
@@ -71,7 +72,8 @@
               420
             ],
             "scale": 1.0,
-            "motion": "pop_in"
+            "motion": "pop_in",
+            "feet_y": 1000
           }
         ],
         "camera": {
@@ -417,7 +419,7 @@
           {
             "name": "char_sensei",
             "pos": [
-              1450,
+              1600,
               380
             ],
             "scale": 1.0,
@@ -490,7 +492,7 @@
         {
           "speaker": "sensei",
           "text": "しかも数十軒の家が円形に並ぶ環状集落が、",
-          "reading": "ええ。"
+          "reading": "しかもすうじゅっけんのいえがえんけいにならぶかんじょうしゅうらくが、"
         },
         {
           "speaker": "sensei",
@@ -893,7 +895,7 @@
         {
           "speaker": "sensei",
           "text": "お米や土地をめぐる争いが始まり、村は身を守るため、",
-          "reading": "そのとおり。"
+          "reading": "おこめやとちをめぐるあらそいがはじまり、むらはみをまもるため、"
         },
         {
           "speaker": "sensei",
@@ -1363,7 +1365,8 @@
               380
             ],
             "scale": 1.0,
-            "motion": "slide_in_right"
+            "motion": "slide_in_right",
+            "feet_y": 995
           }
         ],
         "camera": {
@@ -1451,7 +1454,8 @@
               380
             ],
             "scale": 1.0,
-            "motion": "slide_in_right"
+            "motion": "slide_in_right",
+            "feet_y": 995
           }
         ],
         "camera": {
@@ -1560,7 +1564,7 @@
           {
             "name": "char_sensei",
             "pos": [
-              1400,
+              1700,
               380
             ],
             "scale": 1.0,
@@ -1569,7 +1573,7 @@
           {
             "name": "char_manabu",
             "pos": [
-              330,
+              260,
               420
             ],
             "scale": 1.0,
@@ -1594,19 +1598,14 @@
               "text": "クイズ 第1問",
               "style": "exam_banner",
               "motion": "slide_up"
-            },
-            {
-              "text": "ア 打製石器 / イ 磨製石器 / ウ 銅鐸",
-              "style": "quiz_choices",
-              "motion": "pop_in"
             }
           ],
-          "reading": "縄文時代に使われ始めた、石を磨いて作る石器は何でしょう?ア、打製石器。"
+          "reading": "縄文時代に使われ始めた、石を磨いて作る石器は何でしょう?"
         },
         {
           "speaker": "sensei",
           "text": "ア、打製石器。イ、磨製石器。ウ、銅鐸。",
-          "reading": "イ、磨製石器。ウ、どうたく。"
+          "reading": "ア、だせいせっき。イ、ませいせっき。ウ、どうたく。"
         },
         {
           "speaker": "manabu",
@@ -1633,7 +1632,7 @@
           {
             "name": "char_sensei",
             "pos": [
-              1400,
+              1700,
               380
             ],
             "scale": 1.0,
@@ -1642,7 +1641,7 @@
           {
             "name": "char_manabu",
             "pos": [
-              330,
+              260,
               420
             ],
             "scale": 1.0,
@@ -1667,19 +1666,14 @@
               "text": "クイズ 第2問",
               "style": "exam_banner",
               "motion": "slide_up"
-            },
-            {
-              "text": "ア 卑弥呼 / イ 神功皇后 / ウ 推古天皇",
-              "style": "quiz_choices",
-              "motion": "pop_in"
             }
           ],
-          "reading": "239年、魏に使者を送ったやまたいこくの女王はだれでしょう?ア、ひみこ。"
+          "reading": "239年、魏に使者を送ったやまたいこくの女王はだれでしょう?"
         },
         {
           "speaker": "sensei",
           "text": "ア、卑弥呼。イ、神功皇后。ウ、推古天皇。",
-          "reading": "イ、神功皇后。ウ、推古天皇。"
+          "reading": "ア、ひみこ。イ、じんぐうこうごう。ウ、すいこてんのう。"
         },
         {
           "speaker": "manabu",
@@ -1688,12 +1682,12 @@
         {
           "speaker": "sensei",
           "text": "正解!卑弥呼です。記録したのは魏志倭人伝。",
-          "reading": "正解!ひみこです。"
+          "reading": "正解!ひみこです。記録したのは、ぎしわじんでん。"
         },
         {
           "speaker": "sensei",
           "text": "239年とセットで丸暗記しましょう。",
-          "reading": "記録したのは、ぎしわじんでん。239年とセットで丸暗記しましょう。"
+          "reading": "239年とセットで丸暗記しましょう。"
         }
       ],
       "exam_points": []
@@ -1708,7 +1702,7 @@
           {
             "name": "char_sensei",
             "pos": [
-              1400,
+              1700,
               380
             ],
             "scale": 1.0,
@@ -1717,7 +1711,7 @@
           {
             "name": "char_manabu",
             "pos": [
-              330,
+              260,
               420
             ],
             "scale": 1.0,
@@ -1742,19 +1736,14 @@
               "text": "クイズ 第3問",
               "style": "exam_banner",
               "motion": "slide_up"
-            },
-            {
-              "text": "ア 竪穴住居 / イ 高床倉庫 / ウ 五重塔",
-              "style": "quiz_choices",
-              "motion": "pop_in"
             }
           ],
-          "reading": "やよいじだい、大切なお米を雨やネズミから守るために建てた建物は?ア、たてあなじゅうきょ。"
+          "reading": "やよいじだい、大切なお米を雨やネズミから守るために建てた建物は?"
         },
         {
           "speaker": "sensei",
           "text": "ア、竪穴住居。イ、高床倉庫。ウ、五重塔。",
-          "reading": "イ、たかゆかそうこ。ウ、五重塔。"
+          "reading": "ア、たてあなじゅうきょ。イ、たかゆかそうこ。ウ、ごじゅうのとう。"
         },
         {
           "speaker": "manabu",
@@ -1782,7 +1771,8 @@
               380
             ],
             "scale": 1.0,
-            "motion": "slide_in_right"
+            "motion": "slide_in_right",
+            "feet_y": 1000
           },
           {
             "name": "char_manabu",
@@ -1791,7 +1781,8 @@
               420
             ],
             "scale": 1.0,
-            "motion": "pop_in"
+            "motion": "pop_in",
+            "feet_y": 1000
           }
         ],
         "camera": {
@@ -1815,7 +1806,7 @@
         {
           "speaker": "manabu",
           "text": "卑弥呼239年、前方後円墳、埴輪…",
-          "reading": "だせい・ませい、じょうもんどき、すいとうのうぎょう、ひみこ239年、ぜんぽうこうえんふん、はにわ…"
+          "reading": "ひみこ239年、ぜんぽうこうえんふん、はにわ…"
         },
         {
           "speaker": "manabu",

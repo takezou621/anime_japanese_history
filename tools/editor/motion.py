@@ -122,7 +122,7 @@ def layer_motion(motion: str | None, t0: float, dur: float, px: float, py: float
             f"scale=w='trunc(iw*{F}/2)*2':h='trunc(ih*{F}/2)*2':eval=frame")
         # center-x anchoring; feet line (py + th/2) stays fixed under F
         out["x"] = f"{px:.1f}-w/2"
-        out["y"] = f"{py + th / 2:.1f}-h*{F}/2{bob}"
+        out["y"] = f"{py + th / 2:.1f}-h{bob}"
     elif m == "slide_in_left":
         x0 = -tw - 24.0
         out["x"] = (f"({x0:.1f}+({left:.1f}-{x0:.1f})*{ease_out_cubic(p)})"
