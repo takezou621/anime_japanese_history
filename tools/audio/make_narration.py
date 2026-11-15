@@ -14,7 +14,7 @@
   置換内容は audio/<ep>/pronunciation_log.json に記録。script.json は変更しない。
 - キャッシュ: narration_manifest.json に TTS テキスト+辞書ハッシュを記録し,
   テキスト/辞書が変わった WAV は自動で再生成する (--force で全再生成)
-- ギャップ: ビート間 0.45s / シーン間 0.7s / セクション間 0.9s / テール 0.7s (CLI で変更可)
+- ギャップ: ビート間 0.30s / シーン間 0.60s / セクション間 0.80s / テール 0.60s (CLI で変更可)
 - VOICEVOX 未起動時は vv-engine/run を自動起動して /version 応答を最大 90 秒待つ
 """
 from __future__ import annotations
@@ -38,10 +38,10 @@ ENGINE_URL = "http://127.0.0.1:50021"
 ENGINE_BIN = "/Applications/VOICEVOX.app/Contents/Resources/vv-engine/run"
 ENGINE_WAIT_SEC = 90
 
-BEAT_GAP = 0.45     # ビート間 (lead 調整 2026-11-14: 0.6 → 0.45)
-SCENE_GAP = 0.7     # シーン間 (0.9 → 0.7)
-SECTION_GAP = 0.9   # セクション間 (1.2 → 0.9)
-TAIL_SEC = 0.7      # 最終ビート後の余白 (1.0 → 0.7)
+BEAT_GAP = 0.30     # ビート間 (台詞分割前提の新標準, lead 裁定 2026-11-15: 0.45 → 0.30)
+SCENE_GAP = 0.60    # シーン間 (0.7 → 0.60)
+SECTION_GAP = 0.80  # セクション間 (0.9 → 0.80)
+TAIL_SEC = 0.60     # 最終ビート後の余白 (0.7 → 0.60)
 
 DEFAULT_DICT_PATH = Path(__file__).resolve().parent / "pronunciation_dict.json"
 # 漢字相当文字 (境界判定用。ヶ/ノ等の括り文字は含めない → 「賤ヶ岳」等の複合キーが跨げる)
