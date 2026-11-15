@@ -232,26 +232,31 @@ def _best_cut(text: str, limit: int, starts: list[tuple[int, bool, bool]],
               min_keep: int = 6, max_line: int = 18) -> int:
     """Best split offset for text (lead 2026-11-15 final spec).
 
-    Priority: strong boundary <=16 > weak-non-proper <=16 > any boundary
-    <=18 (18字延長許容) > punctuation <=16 > hard cut at 16. All cuts land
-    on token starts (morpheme boundaries) — never mid-token."""
+    Boundary search window extends to max_line (18字延長許容) so compound
+    words never split mid-token: prefer in-budget boundaries (strong >
+    weak-non-proper), then the NEAREST over-budget boundary, then
+    punctuation, then the hard cut."""
     limit = min(limit, len(text))
     max_line = min(max_line, len(text))
-    strong_in, weak_ok_in, strong_18, weak_ok_18 = [], [], [], []
-    proper_18, any_18 = [], []
+    strong_in, weak_in = [], []
+    strong_over, weak_over, proper = [], [], []
     for o, s, pj in starts:
         if not (min_keep <= o <= max_line):
             continue
         if s:
-            (strong_in if o <= limit else strong_18).append(o)
+            (strong_in if o <= limit else strong_over).append(o)
         elif pj:
-            (proper_18 if o <= limit else proper_18).append(o)
+            (proper if o > limit else proper).append(o)
         else:
-            (weak_ok_in if o <= limit else weak_ok_18).append(o)
-    for tier in (strong_in, weak_ok_in, strong_18, weak_ok_18,
-                 proper_18, any_18):
+            (weak_in if o <= limit else weak_over).append(o)
+    for tier in (strong_in, weak_in):
         if tier:
             return max(tier)
+    for tier in (strong_over, weak_over):
+        if tier:
+            return min(tier)
+    if proper:
+        return max(proper)
     for j in range(limit, min_keep - 1, -1):
         if text[j - 1] in _SENT_END + "、」』）":
             return j
@@ -535,8 +540,10 @@ def event_to_dialogues(ev: dict) -> list[tuple[float, float, str]]:
     prefix = f"{label}: " if label else ""
     first_budget = max(WRAP - len(prefix), 6)  # label eats line-1 budget
     capacity = first_budget + WRAP  # 2 lines per event
+    text = _sanitize(ev["text"])
+    starts = bunsetsu_starts(text)
     chunks = _fix_chunk_boundaries(
-        _split_sentences(_sanitize(ev["text"]), capacity)) or [""]
+        _split_sentences(text, capacity, starts)) or [""]
     dur = max(ev["end"] - ev["start"], 0.05)
     weights = [max(len(c), 1) for c in chunks]
     total_w = sum(weights)
