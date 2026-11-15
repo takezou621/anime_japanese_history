@@ -245,7 +245,19 @@ def school_lab(cv, evening=False):
     # 床のラグ (中央)
     g.ellipse((560, 900, 1420, 1050), fill=with_alpha((150, 60, 50), 90))
     g.ellipse((610, 912, 1370, 1036), fill=with_alpha((190, 90, 70), 90))
-    # 暗い vignette
+    # 課題ポスター (黒板と窓の間の壁・ミニ山と太陽の図案・テキストなし)
+    rect(g, 1250, 170, 1330, 330, fill=(226, 222, 210), outline=(150, 138, 116), owidth=4)
+    g.poly([(1258, 290), (1294, 216), (1322, 290)], fill=(120, 150, 116))
+    g.circle(1310, 206, 12, fill=(240, 196, 120))
+    g.line([(1262, 306), (1318, 306)], with_alpha((150, 138, 116), 170), 3)
+    # 壁掛け時計 (ポスターの下)
+    g.circle(1290, 420, 40, fill=(240, 240, 236), outline=(96, 84, 74), owidth=6)
+    g.circle(1290, 420, 32, fill=(248, 248, 244))
+    g.line([(1290, 420), (1290, 398)], P.INK, 4)
+    g.line([(1290, 420), (1306, 428)], P.INK, 4)
+    # 窓からの光が床に落ちる (楕円の光斑)
+    g.ellipse((1430, 660, 1830, 700), fill=with_alpha((255, 250, 230), 90))
+        # 暗い vignette
     vig = radial((int(W * cv.ss), int(H * cv.ss)), (10, 14, 30),
                  alpha_in=70, power=2.6)
     cv.img.alpha_composite(vig)

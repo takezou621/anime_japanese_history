@@ -199,3 +199,21 @@ def next_episode_card(w=1920, h=1080):
     g.rrect((fx0 + 120, fy1 + 20, fx1 - 120, fy1 + 90), 16,
             fill=with_alpha(P.YAMABUKI, 200), outline=shade(P.YAMABUKI, 0.7), owidth=3)
     return cv.render()
+
+
+def harmonize(img, sat=0.94, warm_r=5, cool_b=3):
+    """新キャラ (Open Peeps) の彩度に合わせた全背景の色調統一ポスト処理.
+
+    sat: 彩度スケール (1.0 で無効), warm_r/cool_b: R を +/ B を - して
+    ほんのり暖かく寄せる。
+    """
+    import numpy as np
+    from PIL import Image
+    arr = np.asarray(img.convert("RGB")).astype(np.float32)
+    lum = arr.mean(axis=2, keepdims=True)
+    arr = lum + (arr - lum) * sat          # 彩度スケール
+    arr[..., 0] = np.clip(arr[..., 0] + warm_r, 0, 255)
+    arr[..., 2] = np.clip(arr[..., 2] - cool_b, 0, 255)
+    out = Image.fromarray(arr.astype("uint8"), "RGB").convert("RGBA")
+    out.putalpha(img.getchannel("A"))
+    return out
