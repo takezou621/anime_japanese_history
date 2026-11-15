@@ -1,7 +1,7 @@
 {
   "episode": "ep06",
   "profile": "full",
-  "generated_at": "2026-11-15T01:52:18+00:00",
+  "generated_at": "2026-11-15T02:57:54+00:00",
   "video": "video/ep06_FINAL.mp4",
   "duration_sec": 524.3,
   "checks": {
@@ -116,7 +116,7 @@
       "start_time": "0.000000",
       "duration_ts": 8053248,
       "duration": "524.300000",
-      "bit_rate": "34999649",
+      "bit_rate": "34999650",
       "bits_per_raw_sample": "8",
       "nb_frames": "15729",
       "extradata_size": 62,
@@ -202,7 +202,7 @@
   ],
   "format": {
     "duration": "524.300000",
-    "size": "2307050175",
+    "size": "2307050178",
     "bit_rate": "35201986"
   },
   "pass": true

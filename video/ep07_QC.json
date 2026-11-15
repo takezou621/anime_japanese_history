@@ -1,7 +1,7 @@
 {
   "episode": "ep07",
   "profile": "full",
-  "generated_at": "2026-11-15T01:57:38+00:00",
+  "generated_at": "2026-11-15T03:03:35+00:00",
   "video": "video/ep07_FINAL.mp4",
   "duration_sec": 552.633,
   "checks": {
@@ -202,7 +202,7 @@
   ],
   "format": {
     "duration": "552.633333",
-    "size": "2431723068",
+    "size": "2431723069",
     "bit_rate": "35201974"
   },
   "pass": true

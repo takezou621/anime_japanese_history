@@ -1,7 +1,7 @@
 {
   "episode": "ep05",
   "profile": "full",
-  "generated_at": "2026-11-15T01:45:38+00:00",
+  "generated_at": "2026-11-15T02:52:55+00:00",
   "video": "video/ep05_FINAL.mp4",
   "duration_sec": 511.433,
   "checks": {
@@ -202,7 +202,7 @@
   ],
   "format": {
     "duration": "511.433333",
-    "size": "2250417084",
+    "size": "2250417081",
     "bit_rate": "35201727"
   },
   "pass": true
