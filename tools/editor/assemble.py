@@ -271,9 +271,89 @@ def _beat_times(scene: dict, ts: dict, scene_end: float,
         out.append({
             "speaker": (tb.get("speaker") or sb.get("speaker") or "").lower(),
             "sentiment": str(sb.get("sentiment", "") or "").strip(),
+            "reaction": str(sb.get("reaction", "") or "").strip(),
             "start": g - seg_start,
             "end": g_end - seg_start,
         })
+    return out
+
+
+
+# --- T3 (Muse 2026-11-16): lip-sync envelope + talk-mode table ---
+# talk variant semantics per (character, expression): "open" = the variant
+# shows the open mouth during speech; "closed" = the variant shows the
+# closed mouth during intra-speech pauses (base sprite's mouth is open).
+_TALK_MODE = {("manabu", ""): "closed", ("manabu", "shocked"): "closed",
+              ("manabu", "determined"): "open",
+              ("sensei", ""): "open", ("sensei", "determined"): "open"}
+_TALK_CACHE: dict = {}
+
+
+def _speech_windows(wav_path: str) -> list:
+    """Speech-active windows [(start, end)] in seconds from a WAV's RMS
+    envelope (25 ms window / 10 ms hop, threshold 16% of peak, hangover
+    dilation, gaps < 90 ms merged, runs < 60 ms dropped)."""
+    if wav_path in _TALK_CACHE:
+        return _TALK_CACHE[wav_path]
+    import wave as _wave
+    from array import array as _array
+    out: list = []
+    try:
+        with _wave.open(wav_path) as w:
+            sr = w.getframerate()
+            n = w.getnframes()
+            ch = w.getnchannels()
+            raw = w.readframes(n)
+        a = _array("h")
+        a.frombytes(raw)
+        if ch == 2:
+            a = a[::2]
+        hop = max(1, sr // 100)
+        win = max(1, sr // 40)
+        rms = []
+        peak = 0.0
+        for i in range(0, max(len(a) - win, 0), hop):
+            seg = a[i:i + win]
+            s = 0.0
+            for v in seg:
+                s += v * v
+            r = (s / len(seg)) ** 0.5
+            rms.append(r)
+            if r > peak:
+                peak = r
+        if peak > 0:
+            thr = peak * 0.16
+            act = [r > thr for r in rms]
+            # hangover: dilate by 2 hops (20 ms) on both sides
+            dil = list(act)
+            for i, v in enumerate(act):
+                if v:
+                    for k in (i - 2, i - 1, i + 1, i + 2):
+                        if 0 <= k < len(dil):
+                            dil[k] = True
+            runs = []
+            i = 0
+            while i < len(dil):
+                if dil[i]:
+                    j = i
+                    while j < len(dil) and dil[j]:
+                        j += 1
+                    runs.append([i * 0.01, j * 0.01])
+                    i = j
+                else:
+                    i += 1
+            merged: list = []
+            for s, e in runs:
+                if merged and s - merged[-1][1] < 0.09:
+                    merged[-1][1] = e
+                else:
+                    merged.append([s, e])
+            total = n / sr
+            out = [(s, min(e + 0.03, total)) for s, e in merged
+                   if e - s >= 0.06]
+    except Exception:
+        out = []
+    _TALK_CACHE[wav_path] = out
     return out
 
 
@@ -387,42 +467,157 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
             filters=[f"scale={tw}:{th}:flags=lanczos"] + m["filters"],
             x=m["x"], y=m["y"], enable=m["enable"],
             desc=f"asset:{name}@{t0:.2f}s")
-        # T2 sentiment variants: beat-level expression swaps (file fallback)
+        # T2 sentiment variants + T3 talk/blink (Muse 2026-11-16).
+        # Speaker expression from beat.sentiment, listener reaction from
+        # beat.reaction. Variant layers need the same scale filter as the
+        # base layer (the shipped loop omitted it and never ran).
+        clean_filters = list(base_layer.filters)
+        clean_x, clean_y = base_layer.x, base_layer.y
+        events: list = []  # (beat_index, sentiment) for THIS character
+        variant_layers: dict = {}
         if cid:
-            for b in beats:
-                sent = b.get("sentiment", "")
-                if not sent or b.get("speaker") != cid:
-                    continue
+            for bi2, b in enumerate(beats):
+                if b.get("speaker") == cid and b.get("sentiment"):
+                    events.append((bi2, b["sentiment"]))
+                elif (b.get("speaker") and b.get("speaker") != cid
+                      and b.get("reaction")):
+                    events.append((bi2, b["reaction"]))
+
+            # Gesture poses have a different silhouette: hide the base
+            # mid-window so no double body appears (variant crossfades
+            # over the edges).
+            _gw = []
+            for bi2, sent in events:
+                if sent in ("pointing", "raise"):
+                    b = beats[bi2]
+                    ws, we = max(b["start"], 0.0), min(b["end"], span.dur)
+                    if we - ws > 0.3:
+                        _gw.append((ws + 0.06, we - 0.06))
+            if _gw:
+                _not = "+".join(f"between(t,{a2:.3f},{b2:.3f})"
+                                for a2, b2 in _gw)
+                base_layer.enable = f"({base_layer.enable})*not({_not})"
+
+            def _variant_path(sent):
                 # file naming (lead 2026-11-15): char_<name>_expr_<emotion>.png
-                vpath = assets_dir / "overlay" / f"{name}_expr_{sent}.png"
-                if not vpath.is_file():  # back-compat: char_<name>_<sent>.png
-                    vpath = assets_dir / "overlay" / f"{name}_{sent}.png"
-                if not vpath.is_file():
-                    continue  # fallback: keep the normal sprite
+                p = assets_dir / "overlay" / f"{name}_expr_{sent}.png"
+                if not p.is_file():  # back-compat: char_<name>_<sent>.png
+                    p = assets_dir / "overlay" / f"{name}_{sent}.png"
+                return p if p.is_file() else None
+
+        span.layers.append(base_layer)
+        if cid:
+            for bi2, sent in events:
+                vpath = _variant_path(sent)
+                if vpath is None:
+                    continue
+                b = beats[bi2]
                 ws, we = max(b["start"], 0.0), min(b["end"], span.dur)
                 if we - ws < 0.15:
                     continue
-                base_layer.filters.append(
-                    f"fade=t=out:st={max(ws - 0.15, 0):.3f}:d=0.15:alpha=1")
-                base_layer.filters.append(
-                    f"fade=t=in:st={max(we - 0.15, 0):.3f}:d=0.15:alpha=1")
-        span.layers.append(base_layer)
-        for b in beats:
-            sent = b.get("sentiment", "")
-            if not sent or b.get("speaker") != cid:
-                continue
-            vpath = assets_dir / "overlay" / f"{name}_{sent}.png"
-            if not vpath.is_file():
-                continue
-            ws, we = max(b["start"], 0.0), min(b["end"], span.dur)
-            if we - ws < 0.15:
-                continue
-            vm = layer_motion("fade", ws, 0.15, px, py, tw, th)
-            span.layers.append(Layer(
-                image=str(vpath), filters=list(vm["filters"]),
-                x=vm["x"], y=vm["y"],
-                enable=f"between(t,{ws:.3f},{we:.3f})",
-                desc=f"variant:{sent}@{ws:.2f}s"))
+                # Crossfade on the variant layer itself (in over the
+                # identical-geometry base, out at the end). Chained
+                # fade out/in pairs on the BASE permanently kill its
+                # alpha (fade filters multiply), so the base is never
+                # faded. Talk/blink clones use the fade-free filter set.
+                vm = layer_motion("fade", max(ws - 0.12, 0.0), 0.3,
+                                  px, py, tw, th)
+                vclean = [f"scale={tw}:{th}:flags=lanczos"] + [
+                    f for f in vm["filters"] if not f.startswith("fade")]
+                vfilters = ([f"scale={tw}:{th}:flags=lanczos"]
+                            + list(vm["filters"])
+                            + [f"fade=t=out:st={max(we - 0.18, 0):.3f}"
+                               f":d=0.3:alpha=1"])
+                span.layers.append(Layer(
+                    image=str(vpath), filters=vfilters,
+                    x=vm["x"], y=vm["y"],
+                    enable=f"between(t,{max(ws - 0.12, 0):.3f},"
+                           f"{min(we + 0.12, span.dur):.3f})",
+                    desc=f"variant:{sent}@{ws:.2f}s"))
+                variant_layers[(bi2, sent)] = (vclean, vm["x"], vm["y"])
+
+            def _expr_of_beat(bi2):
+                for bj, s2 in events:
+                    if bj == bi2:
+                        return s2
+                return ""
+
+            def _seg_transform(bi2, sent):
+                if sent and (bi2, sent) in variant_layers:
+                    return variant_layers[(bi2, sent)] + (False,)
+                return (clean_filters, clean_x, clean_y, True)
+
+            audio_dir = assets_dir.parent.parent / "audio" / assets_dir.name
+            # --- lip-sync layers (envelope-driven mouth alternation) ---
+            for bi2, b in enumerate(beats):
+                if b.get("speaker") != cid:
+                    continue
+                sent = _expr_of_beat(bi2)
+                mode = _TALK_MODE.get((cid, sent))
+                if not mode:
+                    continue
+                tname = (f"{name}_expr_{sent}_talk.png" if sent
+                         else f"{name}_talk.png")
+                tpath = assets_dir / "overlay" / tname
+                if not tpath.is_file():
+                    continue
+                wav = audio_dir / "narration" / f"{span.sid}_b{bi2:02d}.wav"
+                speech = _speech_windows(str(wav))
+                if not speech:
+                    continue
+                bs, be = max(b["start"], 0.0), min(b["end"], span.dur)
+                wins = []
+                if mode == "open":
+                    for s2, e2 in speech:
+                        wins.append((bs + s2, min(bs + e2, be)))
+                else:  # closed: complement of speech within the beat
+                    cur = bs
+                    for s2, e2 in speech:
+                        a2, b2 = bs + s2, min(bs + e2, be)
+                        if a2 - cur >= 0.07:
+                            wins.append((cur, a2))
+                        cur = max(cur, b2)
+                    if be - cur >= 0.07:
+                        wins.append((cur, be))
+                wins = [(s2, e2) for s2, e2 in wins if e2 - s2 >= 0.05]
+                if not wins:
+                    continue
+                tf, tx, ty, is_base = _seg_transform(bi2, sent)
+                en = "+".join(f"between(t,{s2:.3f},{e2:.3f})"
+                              for s2, e2 in wins[:140])
+                if is_base:
+                    en = f"({base_layer.enable})*({en})"
+                span.layers.append(Layer(
+                    image=str(tpath), filters=list(tf), x=tx, y=ty,
+                    enable=en, desc=f"talk:{sent or 'base'}@{bs:.2f}s"))
+            # --- blink layers (seeded, follows the active expression) ---
+            import random as _random
+            rng = _random.Random(f"{span.sid}:{cid}")
+            blink_groups: dict = {}
+            t = rng.uniform(0.9, 2.0)
+            while t < span.dur - 0.25:
+                mid = t + 0.065
+                bidx = next((bi2 for bi2, b in enumerate(beats)
+                             if b["start"] <= mid < b["end"]), -1)
+                sent = _expr_of_beat(bidx) if bidx >= 0 else ""
+                if sent != "laugh":
+                    blink_groups.setdefault((bidx, sent), []).append(
+                        (t, t + 0.13))
+                t += rng.uniform(2.2, 4.6)
+            for (bidx, sent), wins in blink_groups.items():
+                bname = (f"{name}_expr_{sent}_blink.png" if sent
+                         else f"{name}_blink.png")
+                bpath = assets_dir / "overlay" / bname
+                if not bpath.is_file():
+                    continue
+                tf, tx, ty, is_base = _seg_transform(bidx, sent)
+                en = "+".join(f"between(t,{s2:.3f},{e2:.3f})"
+                              for s2, e2 in wins)
+                if is_base:
+                    en = f"({base_layer.enable})*({en})"
+                span.layers.append(Layer(
+                    image=str(bpath), filters=list(tf), x=tx, y=ty,
+                    enable=en, desc=f"blink:{sent or 'base'}x{len(wins)}"))
 
     # overlay_text entries live on beats and appear at the beat time;
     # they persist for max(beat, 3s) capped at scene end, then fade out 0.4s
