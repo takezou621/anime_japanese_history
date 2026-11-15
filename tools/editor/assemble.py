@@ -377,7 +377,10 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
                 sent = b.get("sentiment", "")
                 if not sent or b.get("speaker") != cid:
                     continue
-                vpath = assets_dir / "overlay" / f"{name}_{sent}.png"
+                # file naming (lead 2026-11-15): char_<name>_expr_<emotion>.png
+                vpath = assets_dir / "overlay" / f"{name}_expr_{sent}.png"
+                if not vpath.is_file():  # back-compat: char_<name>_<sent>.png
+                    vpath = assets_dir / "overlay" / f"{name}_{sent}.png"
                 if not vpath.is_file():
                     continue  # fallback: keep the normal sprite
                 ws, we = max(b["start"], 0.0), min(b["end"], span.dur)
