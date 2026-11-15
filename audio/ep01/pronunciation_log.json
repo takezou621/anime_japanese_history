@@ -1,9 +1,9 @@
 {
   "episode": "ep01",
-  "generated_at": "2026-11-15T16:58:45",
+  "generated_at": "2026-11-15T23:28:01",
   "dict_path": "/Users/kawai/dev/anime_japanese_history/tools/audio/pronunciation_dict.json",
   "dict_entries": 587,
-  "dict_sha256": "068183c8b3f1",
+  "dict_sha256": "1af04182d53c",
   "voice_sha256": "666c26addecc",
   "voice_params": {
     "sensei": {
@@ -806,11 +806,11 @@
       "wav": "narration/s09_b14.wav",
       "text": "さらに古い記録では、紀元57年に九州の奴国の王が、",
       "reading": null,
-      "tts_text": "さらに古い記録では、紀元57年に九州のなこくの王が、",
+      "tts_text": "さらに古い記録では、紀元57年に九州のなのこくの王が、",
       "replacements": [
         {
           "from": "奴国",
-          "to": "なこく"
+          "to": "なのこく"
         }
       ]
     },
@@ -818,11 +818,11 @@
       "wav": "narration/s09_b15.wav",
       "text": "漢の皇帝から漢委奴国王という金印をもらったことも書かれています。",
       "reading": null,
-      "tts_text": "漢の皇帝からかんのなのこくおうという金印をもらったことも書かれています。",
+      "tts_text": "漢の皇帝からかんのいなこくおうという金印をもらったことも書かれています。",
       "replacements": [
         {
           "from": "漢委奴国王",
-          "to": "かんのなのこくおう"
+          "to": "かんのいなこくおう"
         }
       ]
     },

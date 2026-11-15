@@ -561,11 +561,11 @@
       "speaker": "manabu"
     },
     "narration/s09_b14.wav": {
-      "tts_text": "さらに古い記録では、紀元57年に九州のなこくの王が、",
+      "tts_text": "さらに古い記録では、紀元57年に九州のなのこくの王が、",
       "speaker": "sensei"
     },
     "narration/s09_b15.wav": {
-      "tts_text": "漢の皇帝からかんのなのこくおうという金印をもらったことも書かれています。",
+      "tts_text": "漢の皇帝からかんのいなこくおうという金印をもらったことも書かれています。",
       "speaker": "sensei"
     },
     "narration/s10_b06.wav": {
@@ -681,7 +681,7 @@
       "speaker": "manabu"
     }
   },
-  "dict_sha256": "068183c8b3f1",
-  "generated_at": "2026-11-15T16:58:45",
+  "dict_sha256": "1af04182d53c",
+  "generated_at": "2026-11-15T23:28:01",
   "voice_sha256": "666c26addecc"
 }
