@@ -1,7 +1,7 @@
 {
   "episode": "ep10",
   "profile": "full",
-  "generated_at": "2026-11-15T02:14:46+00:00",
+  "generated_at": "2026-11-15T03:20:39+00:00",
   "video": "video/ep10_FINAL.mp4",
   "duration_sec": 542.433,
   "checks": {
@@ -202,7 +202,7 @@
   ],
   "format": {
     "duration": "542.433333",
-    "size": "2386849636",
+    "size": "2386849635",
     "bit_rate": "35202108"
   },
   "pass": true

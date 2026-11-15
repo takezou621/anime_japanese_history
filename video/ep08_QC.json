@@ -1,7 +1,7 @@
 {
   "episode": "ep08",
   "profile": "full",
-  "generated_at": "2026-11-15T02:03:09+00:00",
+  "generated_at": "2026-11-15T03:09:09+00:00",
   "video": "video/ep08_FINAL.mp4",
   "duration_sec": 540.867,
   "checks": {
@@ -202,7 +202,7 @@
   ],
   "format": {
     "duration": "540.866667",
-    "size": "2379956598",
+    "size": "2379956613",
     "bit_rate": "35202119"
   },
   "pass": true
