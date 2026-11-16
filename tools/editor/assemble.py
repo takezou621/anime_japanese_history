@@ -732,7 +732,8 @@ def render_segment(span: Span, ffmpeg: str, ffprobe: str, filter_path: Path,
     cmd += [
         "-/filter_complex", str(filter_path),
         "-map", "[v]",
-        "-c:v", "libx264", "-crf", "14", "-preset", "medium",
+        # セグメントは中間素材 (最終muxでCBR再エンコード) — veryfastで十分
+        "-c:v", "libx264", "-crf", "14", "-preset", "veryfast",
         "-pix_fmt", "yuv420p", "-r", str(FPS), "-fps_mode", "cfr",
         str(out_path),
     ]
