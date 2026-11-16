@@ -55,17 +55,32 @@ def make_title_card(out_png: Path, out_mp4: Path, sec: float) -> None:
     d.rectangle([(W // 2 - 420, H // 2 + 124), (W // 2 + 420, H // 2 + 130)],
                 fill=(212, 175, 55))
 
-    font_paths = [
-        "/System/Library/Fonts/ Hiragino Mincho ProN.ttc",
-        "/System/Library/Fonts/Hiragino Mincho ProN.ttc",
-        "/System/Library/Fonts/Supplemental/Hiragino Mincho ProN.ttc",
-    ]
-    title_font = subtitle_font = None
+    # 日本語フォント探索 (tofu 防止: 見つかったフォントで日本語が
+    # 実際に描けることを画素分散で検証してから採用)
+    import glob
+    from PIL import Image as _Img
+    font_paths = (
+        glob.glob("/System/Library/Fonts/Hiragino*.ttc")
+        + glob.glob("/System/Library/Fonts/Supplemental/Songti*.ttc")
+        + glob.glob("/System/Library/Fonts/NotoSansCJK*.ttc")
+        + glob.glob("/System/Library/Fonts/Supplemental/NotoSansCJK*.ttc")
+        + glob.glob(str(Path.home() / "Library/Fonts/*JP*.ttf"))
+    )
+    small_font = None
     for fp in font_paths:
         try:
-            title_font = ImageFont.truetype(fp, 92)
-            subtitle_font = ImageFont.truetype(fp, 44)
-            small_font = ImageFont.truetype(fp, 34)
+            cand_title = ImageFont.truetype(fp, 92)
+            cand_sub = ImageFont.truetype(fp, 44)
+            cand_small = ImageFont.truetype(fp, 34)
+            # tofu 検証: 日本語を描いて画素が多数立つことを確認
+            probe = _Img.new("L", (300, 100), 0)
+            pd = ImageDraw.Draw(probe)
+            pd.text((10, 10), "日本史はじめて", font=cand_small, fill=255)
+            ink = sum(1 for px in probe.getdata() if px > 40)
+            if ink < 300:
+                continue  # tofu (フォントが日本語非対応)
+            title_font, subtitle_font, small_font = cand_title, cand_sub, cand_small
+            print(f"title card font: {fp} (ink={ink})")
             break
         except OSError:
             continue
@@ -87,13 +102,15 @@ def make_title_card(out_png: Path, out_mp4: Path, sec: float) -> None:
     subprocess.run([
         FFMPEG, "-y", "-loglevel", "error",
         "-loop", "1", "-framerate", "30", "-t", f"{sec:.3f}", "-i", str(out_png),
-        "-f", "lavfi", "-t", f"{sec:.3f}", "-i", "anullsrc=channel_layout=stereo:sample_rate=48000",
+        "-i", str(REPO / "audio/ep01/bgm.wav"),
         "-c:v", "libx264", "-preset", "veryfast", "-b:v", "35M", "-minrate", "35M",
         "-maxrate", "35M", "-bufsize", "4400k",
         "-x264-params", "nal-hrd=cbr:filler=1",
         "-pix_fmt", "yuv420p", "-r", "30", "-fps_mode", "cfr",
         "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
         "-color_range", "tv",
+        "-t", f"{sec:.3f}",
+        "-af", "afade=t=out:st=2.3:d=0.7,volume=0.7",
         "-c:a", "aac", "-b:a", "192k", "-shortest",
         "-movflags", "+faststart", str(out_mp4),
     ], check=True)

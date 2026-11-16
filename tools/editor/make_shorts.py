@@ -76,11 +76,38 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
     events = []
 
+    def _fit(text: str) -> str:
+        """fit-to-width: 1080-128px=952px に収まるよう改行/フォント縮小。
+        JP 1字 ≈ fontsize。fs56 で 15字/行 -> はみ出す場合は fs44 で 20字/行
+        -> さらに fs36 で 26字/行 (最大2行)。句読点・区切りで折る。"""
+        for per_line, fs_tag in ((15, ""), (20, "{\\fs44}"), (26, "{\\fs36}")):
+            lines, buf = [], ""
+            for ch in text:
+                buf += ch
+                if len(buf) >= per_line and ch in "、。？!?・= ":
+                    lines.append(buf)
+                    buf = ""
+            if buf:
+                lines.append(buf)
+            if len(lines) <= 2:
+                return fs_tag + "\\N".join(lines)
+        per_line, fs_tag = 26, "{\\fs36}"
+        lines, buf = [], ""
+        for ch in text:
+            buf += ch
+            if len(buf) >= per_line and ch in "、。？!?・= ":
+                lines.append(buf)
+                buf = ""
+        if buf:
+            lines.append(buf)
+        return fs_tag + "\\N".join(lines[:2])
+
     def add(st: float, en: float, text: str, zone: str, mv: int):
         # zone: "top"=上部空きゾーン (y250-600), "bottom"=下部空きゾーン
         # (y1300-1800) — 16:9 映像帯 (y656-1264) の外側に配置
         an = "8" if zone == "top" else "2"
-        safe = text.replace("{", "（").replace("}", "）").replace("\n", "\\N")
+        safe = text.replace("{", "（").replace("}", "）")
+        safe = _fit(safe)
         events.append(f"Dialogue: 0,{_ass_time(st)},{_ass_time(en)},Telop,,"
                       f"0,0,{mv},,{{\\an{an}}}{safe}")
 
@@ -90,7 +117,10 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     add(0.9, min(4.4, dur), f"問題: {quiz['q']}", "top", 270)
     chs = [str(c) for c in quiz.get("choices", [])][:3]
     marks = "ア イ ウ".split()
-    add(4.4, min(9.4, dur), "\n".join(f"{marks[i]} {c}" for i, c in enumerate(chs)), "top", 250)
+    chs_text = "\n".join(f"{marks[i]} {c}" for i, c in enumerate(chs))
+    an_top = "8"
+    events.append(f"Dialogue: 0,{_ass_time(4.4)},{_ass_time(min(9.4, dur))},Telop,,"
+                  f"0,0,250,,{{\\an{an_top}}}{chs_text.replace(chr(10), chr(92) + 'N')}")
     ans = int(quiz.get("answer", 0))
     ans_mark = marks[ans] if 0 <= ans < len(marks) else "ア"
     add(9.4, min(12.4, dur), f"正解は…{ans_mark}!", "bottom", 430)
