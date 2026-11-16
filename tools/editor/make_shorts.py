@@ -114,7 +114,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     # 16:9 映像帯は y 656-1264 — テロップはその外側 (上部 y250-600 /
     # 下部 y1350-1800) に配置して焼き込み字幕と競合しない
     add(0.0, 0.9, "この問題、解けますか?", "top", 280)     # フック (上部)
-    add(0.9, min(4.4, dur), f"問題: {quiz['q']}", "top", 270)
+    # 質問テロップは本文のみ (ラベルなし — qa-visual 指摘: ラベル付きだと
+    # fs36 下限でも 1080px に収まらないため。ボード上の字幕に話者は既に表示)
+    add(0.9, min(4.4, dur), str(quiz['q']), "top", 270)
     chs = [str(c) for c in quiz.get("choices", [])][:3]
     marks = "ア イ ウ".split()
     chs_text = "\n".join(f"{marks[i]} {c}" for i, c in enumerate(chs))
