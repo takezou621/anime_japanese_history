@@ -80,18 +80,18 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         """fit-to-width: 1080-128px=952px に収まるよう改行/フォント縮小。
         JP 1字 ≈ fontsize。fs56 で 15字/行 -> はみ出す場合は fs44 で 20字/行
         -> さらに fs36 で 26字/行 (最大2行)。句読点・区切りで折る。"""
-        for per_line, fs_tag in ((15, ""), (20, "{\\fs44}"), (26, "{\\fs36}")):
+        for per_line, fs_tag in ((15, ""), (20, "{\\fs44}"), (30, "{\\fs32}")):
             lines, buf = [], ""
             for ch in text:
                 buf += ch
-                if len(buf) >= per_line and ch in "、。？!?・= ":
+                if len(buf) >= per_line and (ch in "、。？!?・= " or len(buf) >= per_line + 3):
                     lines.append(buf)
                     buf = ""
             if buf:
                 lines.append(buf)
             if len(lines) <= 2:
                 return fs_tag + "\\N".join(lines)
-        per_line, fs_tag = 26, "{\\fs36}"
+        per_line, fs_tag = 30, "{\\fs32}"
         lines, buf = [], ""
         for ch in text:
             buf += ch
@@ -114,9 +114,13 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     # 16:9 映像帯は y 656-1264 — テロップはその外側 (上部 y250-600 /
     # 下部 y1350-1800) に配置して焼き込み字幕と競合しない
     add(0.0, 0.9, "この問題、解けますか?", "top", 280)     # フック (上部)
-    # 質問テロップは本文のみ (ラベルなし — qa-visual 指摘: ラベル付きだと
-    # fs36 下限でも 1080px に収まらないため。ボード上の字幕に話者は既に表示)
-    add(0.9, min(4.4, dur), str(quiz['q']), "top", 270)
+    # 質問テロップ: 本文のみ + fs32 単行 (lead指示: 24字×32=768px、
+    # 左右余白 ~156px。ボード上の字幕に話者は既に表示のため重複なし)
+    # ※ fit を経由しない (fs32 タグのサニタイズ回避 + 単行保証)
+    q_text = str(quiz['q']).replace("{", "（").replace("}", "）").strip()
+    fs_tag = "{\\fs32}" if len(q_text) > 17 else ""
+    events.append(f"Dialogue: 0,{_ass_time(0.9)},{_ass_time(min(4.4, dur))},"
+                  f"Telop,,0,0,270,,{{\\an8}}{fs_tag}{q_text}")
     chs = [str(c) for c in quiz.get("choices", [])][:3]
     marks = "ア イ ウ".split()
     chs_text = "\n".join(f"{marks[i]} {c}" for i, c in enumerate(chs))
