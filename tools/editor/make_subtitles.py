@@ -520,6 +520,14 @@ def _wrap_2lines(text: str, first_budget: int,
         line2 = line1[-1] + line2
         line1 = line1[:-1]
     lines = [ln for ln in (line1, line2) if ln]
+    # 行頭助詞回避: 「って」等の接続助詞で始まる行は前に行末尾へ移動
+    # (言っ|て言った -> 言って|言った)
+    if len(lines) == 2:
+        for p in ("って", "とは", "では"):
+            if lines[1].startswith(p) and lines[0]:
+                lines[0] += p
+                lines[1] = lines[1][len(p):]
+                break
     lines = _fix_line_starts(lines)
     lines = [ln for ln in lines if ln]
     return "\\N".join(lines)
