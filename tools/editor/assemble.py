@@ -680,7 +680,13 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
 # segment rendering
 # ---------------------------------------------------------------------------
 
-def segment_filtergraph(span: Span) -> str:
+def segment_filtergraph(span: Span,
+                        layer_inputs: list[int] | None = None) -> str:
+    if layer_inputs is None:
+        layer_inputs = list(range(1, len(span.layers) + 1))
+    from collections import Counter
+    use = Counter(layer_inputs)
+    split_ready: set[int] = set()
     if span.ai_clip:
         # AI i2v クリップは ai_segments.py が 1920x1080@30 CFR に正規化済み
         parts = ["[0:v]settb=AVTB,format=yuv420p,setsar=1[bg0];"]
@@ -692,8 +698,18 @@ def segment_filtergraph(span: Span) -> str:
             f"s={MAIN_W}x{MAIN_H}:fps={FPS},settb=AVTB,format=yuv420p,setsar=1[bg0];"
         ]
     cur = "bg0"
-    for i, L in enumerate(span.layers, start=1):
-        chain = f"[{i}:v]format=rgba"
+    seen: Counter = Counter()
+    for i, (L, k) in enumerate(zip(span.layers, layer_inputs), start=1):
+        if use[k] > 1:
+            if k not in split_ready:
+                outs = "".join(f"[in{k}_{n}]" for n in range(use[k]))
+                parts.append(f"[{k}:v]format=rgba,split={use[k]}{outs};")
+                split_ready.add(k)
+            src_label = f"in{k}_{seen[k]}"
+            seen[k] += 1
+        else:
+            src_label = f"{k}:v"
+        chain = f"[{src_label}]format=rgba"
         for f in L.filters:
             chain += f",{f}"
         chain += f"[L{i}];"
@@ -723,11 +739,20 @@ def render_segment(span: Span, ffmpeg: str, ffprobe: str, filter_path: Path,
             span.ai_src = ""
             print(f"  [ai][warn] {span.sid}: {span.ai_note}")
     src = span.ai_clip or span.bg
-    cmd = [ffmpeg, "-y", "-loglevel", "error", "-i", src]
+    # 同一画像のレイヤーは 1 入力に統合 (ffmpeg の looped-image 入力が
+    # 40+ 並ぶと framesync がデッドロックするため + 高速化)
+    uniq: dict[str, int] = {}
+    layer_inputs: list[int] = []
     for L in span.layers:
+        key = str(L.image)
+        if key not in uniq:
+            uniq[key] = len(uniq) + 1  # [0] は背景
+        layer_inputs.append(uniq[key])
+    cmd = [ffmpeg, "-y", "-loglevel", "error", "-i", src]
+    for key in uniq:
         cmd += ["-loop", "1", "-framerate", str(FPS),
-                "-t", f"{span.dur + 0.5:.3f}", "-i", L.image]
-    script = segment_filtergraph(span)
+                "-t", f"{span.dur + 0.5:.3f}", "-i", key]
+    script = segment_filtergraph(span, layer_inputs)
     filter_path.write_text(script, encoding="utf-8")
     cmd += [
         "-/filter_complex", str(filter_path),
@@ -964,11 +989,21 @@ def main() -> int:
     print(f"\n[segments] rendering {len(spans)} scenes with jobs={a.jobs}")
     failures = []
     with ThreadPoolExecutor(max_workers=max(1, a.jobs)) as pool:
+        # 再開サポート: 1MB超の完成パーツがあるセグメントはスキップ
+        # (作業休止/再開時に完成済みシーンを再利用する)
+        todo = []
+        for sp in spans:
+            part = parts_dir / f"{sp.sid}.mp4"
+            if part.is_file() and part.stat().st_size > 1_000_000:
+                print(f"  [skip] {sp.sid}: part exists "
+                      f"({part.stat().st_size // 1_000_000}MB)")
+                continue
+            todo.append(sp)
         futs = {
             pool.submit(render_segment, sp, ffmpeg, ffprobe,
                         parts_dir / f"{sp.sid}_filter.txt",
                         parts_dir / f"{sp.sid}.mp4"): sp
-            for sp in spans
+            for sp in todo
         }
         done = 0
         for fut in as_completed(futs):
