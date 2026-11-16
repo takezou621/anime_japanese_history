@@ -1,7 +1,7 @@
 {
   "episode": "ep01",
   "profile": "full",
-  "generated_at": "2026-11-16T08:00:02+00:00",
+  "generated_at": "2026-11-16T10:23:42+00:00",
   "video": "video/ep01_FINAL.mp4",
   "duration_sec": 792.0,
   "checks": {
@@ -202,7 +202,7 @@
   ],
   "format": {
     "duration": "792.000000",
-    "size": "3484685510",
+    "size": "3484685512",
     "bit_rate": "35198843"
   },
   "pass": true
