@@ -661,6 +661,8 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
                              t0, float(ot.get("dur", DEFAULT_MOTION_DUR)),
                              px, py, img.width, img.height)
             t_end = min(max(beat_end_local, t0 + 3.0), scene_end_local)
+            if ot.get("hold"):
+                t_end = min(t0 + float(ot["hold"]), scene_end_local)
             if t_end < scene_end_local - 1e-3:
                 m["filters"].append(
                     f"fade=t=out:st={t_end - 0.4:.3f}:d=0.4:alpha=1")

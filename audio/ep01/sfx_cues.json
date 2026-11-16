@@ -1,0 +1,184 @@
+[
+  {
+    "t": 16.17,
+    "file": "se_section.wav",
+    "gain_db": -23.0,
+    "kind": "section",
+    "scene": "s02"
+  },
+  {
+    "t": 38.59,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s02"
+  },
+  {
+    "t": 87.54,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s03"
+  },
+  {
+    "t": 113.54,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s04"
+  },
+  {
+    "t": 177.71,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s05"
+  },
+  {
+    "t": 210.2,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s06"
+  },
+  {
+    "t": 255.21,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s07"
+  },
+  {
+    "t": 296.66,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s08"
+  },
+  {
+    "t": 335.99,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s09"
+  },
+  {
+    "t": 431.36,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s10"
+  },
+  {
+    "t": 464.92,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s11"
+  },
+  {
+    "t": 512.92,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s12"
+  },
+  {
+    "t": 543.85,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s13"
+  },
+  {
+    "t": 580.41,
+    "file": "se_section.wav",
+    "gain_db": -23.0,
+    "kind": "section",
+    "scene": "s14"
+  },
+  {
+    "t": 580.91,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s14"
+  },
+  {
+    "t": 612.04,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s15"
+  },
+  {
+    "t": 651.37,
+    "file": "se_question.wav",
+    "gain_db": -19.0,
+    "kind": "question",
+    "scene": "s16"
+  },
+  {
+    "t": 656.75,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s16"
+  },
+  {
+    "t": 673.5,
+    "file": "se_correct.wav",
+    "gain_db": -15.0,
+    "kind": "correct",
+    "scene": "s16"
+  },
+  {
+    "t": 685.01,
+    "file": "se_question.wav",
+    "gain_db": -19.0,
+    "kind": "question",
+    "scene": "s17"
+  },
+  {
+    "t": 686.99,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s17"
+  },
+  {
+    "t": 706.61,
+    "file": "se_correct.wav",
+    "gain_db": -15.0,
+    "kind": "correct",
+    "scene": "s17"
+  },
+  {
+    "t": 716.91,
+    "file": "se_question.wav",
+    "gain_db": -19.0,
+    "kind": "question",
+    "scene": "s18"
+  },
+  {
+    "t": 718.89,
+    "file": "se_point.wav",
+    "gain_db": -25.0,
+    "kind": "point",
+    "scene": "s18"
+  },
+  {
+    "t": 738.55,
+    "file": "se_correct.wav",
+    "gain_db": -15.0,
+    "kind": "correct",
+    "scene": "s18"
+  },
+  {
+    "t": 746.53,
+    "file": "se_section.wav",
+    "gain_db": -23.0,
+    "kind": "section",
+    "scene": "s19"
+  }
+]

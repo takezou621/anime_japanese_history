@@ -93,6 +93,7 @@
             {
               "text": "アニメ日本史ラボ",
               "style": "title_main",
+              "hold": 2.7,
               "motion": "fade_up"
             }
           ],

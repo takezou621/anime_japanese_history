@@ -113,7 +113,7 @@
       "speaker": "sensei"
     },
     "narration/s05_b05.wav": {
-      "tts_text": "ええ。",
+      "tts_text": "しかもすうじゅっけんのいえがえんけいにならぶかんじょうしゅうらくが、",
       "speaker": "sensei"
     },
     "narration/s06_b00.wav": {
@@ -201,7 +201,7 @@
       "speaker": "sensei"
     },
     "narration/s09_b02.wav": {
-      "tts_text": "そのとおり。",
+      "tts_text": "おこめやとちをめぐるあらそいがはじまり、むらはみをまもるため、",
       "speaker": "sensei"
     },
     "narration/s09_b03.wav": {
@@ -357,11 +357,11 @@
       "speaker": "sensei"
     },
     "narration/s16_b01.wav": {
-      "tts_text": "じょうもんじだいに使われ始めた、石を磨いて作る石器は何でしょう?ア、だせいせっき。",
+      "tts_text": "じょうもんじだいに使われ始めた、石を磨いて作る石器は何でしょう?",
       "speaker": "sensei"
     },
     "narration/s16_b02.wav": {
-      "tts_text": "イ、ませいせっき。ウ、どうたく。",
+      "tts_text": "ア、だせいせっき。イ、ませいせっき。ウ、どうたく。",
       "speaker": "sensei"
     },
     "narration/s16_b03.wav": {
@@ -373,11 +373,11 @@
       "speaker": "sensei"
     },
     "narration/s17_b01.wav": {
-      "tts_text": "239年、魏に使者を送ったやまたいこくの女王はだれでしょう?ア、ひみこ。",
+      "tts_text": "239年、魏に使者を送ったやまたいこくの女王はだれでしょう?",
       "speaker": "sensei"
     },
     "narration/s17_b02.wav": {
-      "tts_text": "イ、じんぐうこうごう。ウ、すいこてんのう。",
+      "tts_text": "ア、ひみこ。イ、じんぐうこうごう。ウ、すいこてんのう。",
       "speaker": "sensei"
     },
     "narration/s17_b03.wav": {
@@ -389,11 +389,11 @@
       "speaker": "sensei"
     },
     "narration/s18_b01.wav": {
-      "tts_text": "やよいじだい、大切なお米を雨やネズミから守るために建てた建物は?ア、たてあなじゅうきょ。",
+      "tts_text": "やよいじだい、大切なお米を雨やネズミから守るために建てた建物は?",
       "speaker": "sensei"
     },
     "narration/s18_b02.wav": {
-      "tts_text": "イ、たかゆかそうこ。ウ、五重塔。",
+      "tts_text": "ア、たてあなじゅうきょ。イ、たかゆかそうこ。ウ、ごじゅうのとう。",
       "speaker": "sensei"
     },
     "narration/s18_b03.wav": {
@@ -413,7 +413,7 @@
       "speaker": "manabu"
     },
     "narration/s19_b03.wav": {
-      "tts_text": "だせい・ませい、じょうもんどき、すいとうのうぎょう、ひみこ239年、ぜんぽうこうえんふん、はにわ…",
+      "tts_text": "ひみこ239年、ぜんぽうこうえんふん、はにわ…",
       "speaker": "manabu"
     },
     "narration/s02_b06.wav": {
@@ -649,11 +649,11 @@
       "speaker": "sensei"
     },
     "narration/s17_b04.wav": {
-      "tts_text": "正解!ひみこです。",
+      "tts_text": "正解!ひみこです。記録したのは、ぎしわじんでん。",
       "speaker": "sensei"
     },
     "narration/s17_b05.wav": {
-      "tts_text": "記録したのは、ぎしわじんでん。239年とセットで丸暗記しましょう。",
+      "tts_text": "239年とセットで丸暗記しましょう。",
       "speaker": "sensei"
     },
     "narration/s18_b04.wav": {
@@ -682,6 +682,6 @@
     }
   },
   "dict_sha256": "1af04182d53c",
-  "generated_at": "2026-11-15T23:28:01",
+  "generated_at": "2026-11-16T00:06:07",
   "voice_sha256": "666c26addecc"
 }

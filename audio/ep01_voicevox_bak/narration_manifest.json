@@ -1,0 +1,687 @@
+{
+  "beats": {
+    "narration/s01_b00.wav": {
+      "tts_text": "ねえ先生、昔の人って本当にお米を食べてなかったの？",
+      "speaker": "manabu"
+    },
+    "narration/s01_b01.wav": {
+      "tts_text": "実は、その「お米」こそが、日本の歴史を変えたんです!その理由は、本編で順番に見ていきましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s01_b02.wav": {
+      "tts_text": "よし、じょうもんからスタートなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s01_b03.wav": {
+      "tts_text": "ふぇ?そんな前から人がいたのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s01_b04.wav": {
+      "tts_text": "そうなんです。旧石器、じょうもん、やよい、古墳。四つの時代を、楽しく見ていきましょう!",
+      "speaker": "sensei"
+    },
+    "narration/s02_b00.wav": {
+      "tts_text": "先生!最初の時代って、どんな時代なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b01.wav": {
+      "tts_text": "何万年も前の氷河の時代には、もう日本に人が住んでいました。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b02.wav": {
+      "tts_text": "これが旧石器時代です。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b03.wav": {
+      "tts_text": "土器がまだ無いので、せんどきじだいと呼ぶこともあるんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b04.wav": {
+      "tts_text": "ふぇ?食器が無いと、ごはんはどうしてたのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b05.wav": {
+      "tts_text": "まだ煮込みはできないので、焼いたり生で食べたりしていたようです。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b00.wav": {
+      "tts_text": "やがて氷河が解けて気候がぐんと暖かくなり、",
+      "speaker": "sensei"
+    },
+    "narration/s03_b01.wav": {
+      "tts_text": "大きく見て約1万年前から、じょうもんじだいが始まります。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b02.wav": {
+      "tts_text": "くらしはどう変わるのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s03_b03.wav": {
+      "tts_text": "森と海のめぐみが増えて、狩りや釣り、",
+      "speaker": "sensei"
+    },
+    "narration/s03_b04.wav": {
+      "tts_text": "木の実採りで安定して暮らせるようになったんです。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b05.wav": {
+      "tts_text": "道具も進化します。石を磨いて作るませいせっきの登場です。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b00.wav": {
+      "tts_text": "じょうもんじだいのイメージといえば、もようのついた壺なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b01.wav": {
+      "tts_text": "鋭いですね!それがじょうもんどき。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b02.wav": {
+      "tts_text": "紐を巻いた棒で転がして、",
+      "speaker": "sensei"
+    },
+    "narration/s04_b03.wav": {
+      "tts_text": "縄のもようを付けたことが名前の由来なんです。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b04.wav": {
+      "tts_text": "しかも驚きなのですが、",
+      "speaker": "sensei"
+    },
+    "narration/s04_b05.wav": {
+      "tts_text": "じょうもんどきは世界でいちばん古い土器のひとつなんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b00.wav": {
+      "tts_text": "じょうもんの人は、どんな家に住んでいたのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b01.wav": {
+      "tts_text": "地面に穴をほって、まわりにはしらを立てる、たてあなじゅうきょです。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b02.wav": {
+      "tts_text": "はんぶんちかのような、あたたかくてじょうぶな家なんです。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b03.wav": {
+      "tts_text": "冬も暖かそうなのだ!夏も涼しいのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s05_b04.wav": {
+      "tts_text": "ええ。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b05.wav": {
+      "tts_text": "しかもすうじゅっけんのいえがえんけいにならぶかんじょうしゅうらくが、",
+      "speaker": "sensei"
+    },
+    "narration/s06_b00.wav": {
+      "tts_text": "じょうもんの人は、毎日なにをしてたのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s06_b01.wav": {
+      "tts_text": "弓矢で狩りをし、釣り針や銛で漁をして、",
+      "speaker": "sensei"
+    },
+    "narration/s06_b02.wav": {
+      "tts_text": "森と海のめぐみを上手に食べていました。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b03.wav": {
+      "tts_text": "食べた貝がらが積もってできたかいづかは、",
+      "speaker": "sensei"
+    },
+    "narration/s06_b04.wav": {
+      "tts_text": "当時のくらしを知る大事な遺跡です。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b05.wav": {
+      "tts_text": "ごみの山が、タイムカプセルなのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s07_b00.wav": {
+      "tts_text": "先生、次の時代は、大ニュースなのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s07_b01.wav": {
+      "tts_text": "紀元前10世紀ごろ、いまから約3000年前、",
+      "speaker": "sensei"
+    },
+    "narration/s07_b02.wav": {
+      "tts_text": "大陸から稲作と金属器が伝わってきて、やよいじだいが始まります。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b03.wav": {
+      "tts_text": "お米!ついに米の時代なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b04.wav": {
+      "tts_text": "すいとうのうぎょうは、暖かくて湿った平原や低地で始まりました。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b05.wav": {
+      "tts_text": "水路を作り、村人みんなで田んぼを耕します。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b06.wav": {
+      "tts_text": "ところでマナブ、お米が増えると何が増えると思う?",
+      "speaker": "sensei"
+    },
+    "narration/s08_b00.wav": {
+      "tts_text": "やよいの村には、高ーい建物があるのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s08_b01.wav": {
+      "tts_text": "それ、たかゆかそうこです。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b02.wav": {
+      "tts_text": "床を高く上げて、大切なお米を雨やネズミから守る倉庫なんです。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b03.wav": {
+      "tts_text": "ネズミ先輩、お米は上げちゃダメなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s08_b04.wav": {
+      "tts_text": "鍋や壺などのやよいどきは、じょうもんのものより薄くて硬く、",
+      "speaker": "sensei"
+    },
+    "narration/s08_b05.wav": {
+      "tts_text": "煮炊きに向いていました。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b00.wav": {
+      "tts_text": "でも先生、お米が増えると、けんかも増えちゃうのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b01.wav": {
+      "tts_text": "そのとおり。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b02.wav": {
+      "tts_text": "おこめやとちをめぐるあらそいがはじまり、むらはみをまもるため、",
+      "speaker": "sensei"
+    },
+    "narration/s09_b03.wav": {
+      "tts_text": "周りに深い濠を掘ったかんごうしゅうらくになりました。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b04.wav": {
+      "tts_text": "日本で戦争が始まったのはこのころ、なんです。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b05.wav": {
+      "tts_text": "ふぇ?戦争が始まったのは、この時代からなのだ…?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b06.wav": {
+      "tts_text": "そうなんです。お祭りに使うどうたく、武器のどうけんもこのころのもの。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b07.wav": {
+      "tts_text": "村を率いる力の強い豪族も現れました。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b08.wav": {
+      "tts_text": "時は流れて紀元後3世紀、西日本をまとめる大きな国、",
+      "speaker": "sensei"
+    },
+    "narration/s09_b09.wav": {
+      "tts_text": "やまたいこくが登場します。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b00.wav": {
+      "tts_text": "ついにこふんじだいなのだ!古墳って、大きなお墓なのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b01.wav": {
+      "tts_text": "そのとおり。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b02.wav": {
+      "tts_text": "3世紀の中ごろから、力の強い豪族たちが巨大なお墓を作り始めます。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b03.wav": {
+      "tts_text": "これが古墳で、この時代をこふんじだいと呼びます。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b04.wav": {
+      "tts_text": "お墓が、山みたいに大きくなるのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s10_b05.wav": {
+      "tts_text": "特徴的なのが、丸と四角をつなげた、鍵穴型のお墓。ぜんぽうこうえんふんです。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b00.wav": {
+      "tts_text": "古墳のまわりに立ってる、土の人形はなんなのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s11_b01.wav": {
+      "tts_text": "それは、はにわ。古墳のまわりに並べた、すやきの土製品なんです。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b02.wav": {
+      "tts_text": "はにわなのだ!お顔がユニークなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s11_b03.wav": {
+      "tts_text": "家や馬、武人など、色々な形があって、お墓を守ったり、",
+      "speaker": "sensei"
+    },
+    "narration/s11_b04.wav": {
+      "tts_text": "儀式に使ったりしたと考えられています。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b05.wav": {
+      "tts_text": "お墓の中には銅鏡や剣が納められていて、",
+      "speaker": "sensei"
+    },
+    "narration/s12_b00.wav": {
+      "tts_text": "やまとせいけんは、どこまで大きくなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b01.wav": {
+      "tts_text": "各地の豪族と手を結び、鉄をもとめて朝鮮半島とも交わる、",
+      "speaker": "sensei"
+    },
+    "narration/s12_b02.wav": {
+      "tts_text": "大きな勢力に成長します。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b03.wav": {
+      "tts_text": "鉄は、道具にも武器にも必要なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b04.wav": {
+      "tts_text": "大阪のおおやまこふんは、にんとくてんのうりょうこふんとも、よばれます。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b05.wav": {
+      "tts_text": "ぜんちょうやく480メートル、にほんさいだいの、ぜんぽうこうえんふんなんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b00.wav": {
+      "tts_text": "こふんじだいの終わりごろは、どうなってたのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s13_b01.wav": {
+      "tts_text": "5世紀になると、やまとせいけんの王たちは、中国の王朝に使者を送ります。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b02.wav": {
+      "tts_text": "史書に名が残る五人の王を、わのごおうと呼ぶんです。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b03.wav": {
+      "tts_text": "海を渡って、世界進出なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s13_b04.wav": {
+      "tts_text": "この交流を通じて漢字も伝わり、",
+      "speaker": "sensei"
+    },
+    "narration/s13_b05.wav": {
+      "tts_text": "日本にも文字の文化が芽生えていきます。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b00.wav": {
+      "tts_text": "ここからは、受験ポイントのまとめです!まずは旧石器とじょうもん。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b01.wav": {
+      "tts_text": "旧石器時代はだせいせっきで土器なし。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b02.wav": {
+      "tts_text": "じょうもんじだいはませいせっき、じょうもんどき=世界最古級、",
+      "speaker": "sensei"
+    },
+    "narration/s15_b00.wav": {
+      "tts_text": "続いてやよいと古墳。今日のいちばんの狙いどころです!",
+      "speaker": "sensei"
+    },
+    "narration/s15_b01.wav": {
+      "tts_text": "やよいじだいはすいとうのうぎょう=暖かく湿った平原・低地、たかゆかそうこ、",
+      "speaker": "sensei"
+    },
+    "narration/s15_b02.wav": {
+      "tts_text": "かんごうしゅうらく=戦争のはじまり、どうたく=祭り、銅剣=武器。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b00.wav": {
+      "tts_text": "それでは今日の仕上げ、クイズタイム!第一問!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b01.wav": {
+      "tts_text": "じょうもんじだいに使われ始めた、石を磨いて作る石器は何でしょう?",
+      "speaker": "sensei"
+    },
+    "narration/s16_b02.wav": {
+      "tts_text": "ア、だせいせっき。イ、ませいせっき。ウ、どうたく。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b03.wav": {
+      "tts_text": "えいっ、イなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s17_b00.wav": {
+      "tts_text": "第二問!",
+      "speaker": "sensei"
+    },
+    "narration/s17_b01.wav": {
+      "tts_text": "239年、魏に使者を送ったやまたいこくの女王はだれでしょう?",
+      "speaker": "sensei"
+    },
+    "narration/s17_b02.wav": {
+      "tts_text": "ア、ひみこ。イ、じんぐうこうごう。ウ、すいこてんのう。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b03.wav": {
+      "tts_text": "歴史のスーパースター、アなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s18_b00.wav": {
+      "tts_text": "ラスト問題!",
+      "speaker": "sensei"
+    },
+    "narration/s18_b01.wav": {
+      "tts_text": "やよいじだい、大切なお米を雨やネズミから守るために建てた建物は?",
+      "speaker": "sensei"
+    },
+    "narration/s18_b02.wav": {
+      "tts_text": "ア、たてあなじゅうきょ。イ、たかゆかそうこ。ウ、ごじゅうのとう。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b03.wav": {
+      "tts_text": "ネズミ対策といえば、イなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s19_b00.wav": {
+      "tts_text": "今日は旧石器から古墳まで、",
+      "speaker": "sensei"
+    },
+    "narration/s19_b01.wav": {
+      "tts_text": "日本史のはじまりを駆け足で見てきました。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b02.wav": {
+      "tts_text": "打製・磨製、じょうもんどき、すいとうのうぎょう、",
+      "speaker": "manabu"
+    },
+    "narration/s19_b03.wav": {
+      "tts_text": "ひみこ239年、ぜんぽうこうえんふん、はにわ…",
+      "speaker": "manabu"
+    },
+    "narration/s02_b06.wav": {
+      "tts_text": "道具は、石を打ち欠けて作るだせいせっき。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b07.wav": {
+      "tts_text": "ナイフのように使って動物を狩っていました。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b08.wav": {
+      "tts_text": "旧石器って、古い石をあつめて作ったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s02_b09.wav": {
+      "tts_text": "いいえ、石を打ち欠けて道具を作るんです。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b10.wav": {
+      "tts_text": "古い石を集めるわけじゃないんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s02_b11.wav": {
+      "tts_text": "石のナイフ、かっこいいのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b06.wav": {
+      "tts_text": "矢じりを磨いた弓矢で、イノシシなどを狩りました。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b07.wav": {
+      "tts_text": "打製から磨製へ、石の進化なのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s03_b08.wav": {
+      "tts_text": "そのとおり。時代が変わると、道具も変わる。",
+      "speaker": "sensei"
+    },
+    "narration/s03_b09.wav": {
+      "tts_text": "わかりやすい証拠なんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b06.wav": {
+      "tts_text": "青森では約1万6500年前の土器も見つかっています。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b07.wav": {
+      "tts_text": "日本の土器が世界最古級なのだ!?すごいのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s04_b08.wav": {
+      "tts_text": "土器で煮込み料理ができるようになって、",
+      "speaker": "sensei"
+    },
+    "narration/s04_b09.wav": {
+      "tts_text": "くらしがぐっと豊かになり、村での定住も進みました。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b10.wav": {
+      "tts_text": "じょうもんどき=世界最古級、煮込み料理で定住。",
+      "speaker": "sensei"
+    },
+    "narration/s04_b11.wav": {
+      "tts_text": "このつながり、おぼえておくと便利です。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b06.wav": {
+      "tts_text": "各地で見つかっているんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s05_b07.wav": {
+      "tts_text": "みんなで丸くなって暮らすのだ!キャンプ場みたいなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s05_b08.wav": {
+      "tts_text": "仲間と集まって暮らすことで、",
+      "speaker": "sensei"
+    },
+    "narration/s05_b09.wav": {
+      "tts_text": "長く同じ場所に住めるようになったんです。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b06.wav": {
+      "tts_text": "土で作ったどぐうは、呪術やまじないに使われたと考えられています。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b07.wav": {
+      "tts_text": "青森のさんのうまるやまいせきのような大きな集落もありました。",
+      "speaker": "sensei"
+    },
+    "narration/s06_b08.wav": {
+      "tts_text": "遺跡を見ると、むかしの人の毎日が見えてくるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b07.wav": {
+      "tts_text": "人が増えるのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b08.wav": {
+      "tts_text": "そのとおり!",
+      "speaker": "sensei"
+    },
+    "narration/s07_b09.wav": {
+      "tts_text": "じょうもんは動いて食べ物を探したけれど、やよいは米を作って定住。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b10.wav": {
+      "tts_text": "その結果、人口も集落も増えたんです。",
+      "speaker": "sensei"
+    },
+    "narration/s07_b11.wav": {
+      "tts_text": "農業が日本の歴史のエンジンなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s07_b12.wav": {
+      "tts_text": "そのとおり。ここから日本は農業社会なんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b06.wav": {
+      "tts_text": "道具も石から鉄へ進んでいきます。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b07.wav": {
+      "tts_text": "お米と鉄と土器。村の力がどんどんついていく時代なんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s08_b08.wav": {
+      "tts_text": "村がパワーアップなのだ!それからどうなったのだ?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b10.wav": {
+      "tts_text": "ついに本に出てくるやつなのだ!?",
+      "speaker": "manabu"
+    },
+    "narration/s09_b11.wav": {
+      "tts_text": "やまたいこくの女王、ひみこは239年、中国の魏に使者を送りました。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b12.wav": {
+      "tts_text": "この記録が中国の歴史書、ぎしわじんでんなんです。",
+      "speaker": "sensei"
+    },
+    "narration/s09_b13.wav": {
+      "tts_text": "ひみこ!歴史のスーパースターなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s09_b14.wav": {
+      "tts_text": "さらに古い記録では、紀元57年に九州のなのこくの王が、",
+      "speaker": "sensei"
+    },
+    "narration/s09_b15.wav": {
+      "tts_text": "漢の皇帝からかんのいなこくおうという金印をもらったことも書かれています。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b06.wav": {
+      "tts_text": "船の形に似ている、という説明も有名なんですよ。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b07.wav": {
+      "tts_text": "上から見ると、船が海を走ってるみたいなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s10_b08.wav": {
+      "tts_text": "これだけの土を盛れるのは、多くの人を動かせる力があるから。",
+      "speaker": "sensei"
+    },
+    "narration/s10_b09.wav": {
+      "tts_text": "やまとちほうを中心に力を広げた豪族たち、つまりやまとせいけんなんです。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b06.wav": {
+      "tts_text": "亡くなった人の力を示しています。",
+      "speaker": "sensei"
+    },
+    "narration/s11_b07.wav": {
+      "tts_text": "馬のはにわ、走ってるみたいで好きなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s12_b06.wav": {
+      "tts_text": "480メートル?東京タワーより長いのだ!?お墓なのに!?",
+      "speaker": "manabu"
+    },
+    "narration/s12_b07.wav": {
+      "tts_text": "まさに巨大な力のシンボルなんです。",
+      "speaker": "sensei"
+    },
+    "narration/s12_b08.wav": {
+      "tts_text": "だいせんこふんは、おおやまこふんと読みますよ。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b06.wav": {
+      "tts_text": "日本史は次に、文字と仏教と大改革の時代へ。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b07.wav": {
+      "tts_text": "それが第2話のお楽しみです。",
+      "speaker": "sensei"
+    },
+    "narration/s13_b08.wav": {
+      "tts_text": "あと少し!ポイントまとめ、お願いなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s14_b03.wav": {
+      "tts_text": "たてあなじゅうきょ、かんじょうしゅうらく、そしてかいづか。",
+      "speaker": "sensei"
+    },
+    "narration/s14_b04.wav": {
+      "tts_text": "このセットを完璧に!",
+      "speaker": "sensei"
+    },
+    "narration/s14_b05.wav": {
+      "tts_text": "打製と磨製、どっちが先?と聞かれても、もう迷いませんね。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b03.wav": {
+      "tts_text": "そして239年、やまたいこくの女王・ひみこが魏に遣使。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b04.wav": {
+      "tts_text": "こふんじだいは、ぜんぽうこうえんふん、はにわ、やまとせいけん。",
+      "speaker": "sensei"
+    },
+    "narration/s15_b05.wav": {
+      "tts_text": "時代とワードの対応を完璧に仕上げましょう!",
+      "speaker": "sensei"
+    },
+    "narration/s16_b04.wav": {
+      "tts_text": "正解!石を磨くからませいせっき。",
+      "speaker": "sensei"
+    },
+    "narration/s16_b05.wav": {
+      "tts_text": "旧石器=打製、縄文以降=磨製、ペアでしっかりね。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b04.wav": {
+      "tts_text": "正解!ひみこです。記録したのは、ぎしわじんでん。",
+      "speaker": "sensei"
+    },
+    "narration/s17_b05.wav": {
+      "tts_text": "239年とセットで丸暗記しましょう。",
+      "speaker": "sensei"
+    },
+    "narration/s18_b04.wav": {
+      "tts_text": "正解!たかゆかそうこです。高い床の上で、お米をしっかり守りました。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b04.wav": {
+      "tts_text": "頭の中が日本史でいっぱいなのだ!",
+      "speaker": "manabu"
+    },
+    "narration/s19_b05.wav": {
+      "tts_text": "その調子です。次回第2話は、たいかのかいしんはなぜ起きた?",
+      "speaker": "sensei"
+    },
+    "narration/s19_b06.wav": {
+      "tts_text": "〜飛鳥・奈良〜。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b07.wav": {
+      "tts_text": "しょうとくたいしとそがしの話まで、ぜひ楽しみにしていてください。",
+      "speaker": "sensei"
+    },
+    "narration/s19_b08.wav": {
+      "tts_text": "つぎはしょうとくたいしなのだ!チャンネル登録も、よろしくなのだ!",
+      "speaker": "manabu"
+    }
+  },
+  "dict_sha256": "1af04182d53c",
+  "generated_at": "2026-11-16T00:06:07",
+  "voice_sha256": "666c26addecc"
+}

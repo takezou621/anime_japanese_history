@@ -110,13 +110,44 @@ def main() -> int:
     labels = "".join(f"[n{i}]" for i in range(len(beats)))
     lines.append(f"{labels}amix=inputs={len(beats)}:normalize=0:duration=longest[na]")
     lines.append(f"[0:a]aresample={SR},volume='{env_expr}':eval=frame[bg]")
-    lines.append("[na][bg]amix=inputs=2:normalize=0:duration=longest[bus]")
+    lines.append("[na][bg]amix=inputs=2:normalize=0:duration=longest[buspre]")
     fc_bus = ";\n".join(lines)
+
+    # ---- SFX キュー (任意): audio/<ep>/sfx_cues.json があれば
+    # loudnorm 前のバスへ重ねる (make_sfx_cues.py が生成)
+    cues_path = adir / "sfx_cues.json"
+    cues = (json.loads(cues_path.read_text())
+            if cues_path.exists() else [])
+    sfx_files: list[Path] = []
+    if cues:
+        sfx_lines: list[str] = []
+        for k, cue in enumerate(cues):
+            f = Path("assets/audio/sfx") / cue["file"]
+            if not f.exists():
+                raise SystemExit(f"SFX がありません: {f}")
+            sfx_files.append(f)
+            idx = 1 + len(wavs) + k
+            gain = 10 ** (float(cue["gain_db"]) / 20.0)
+            delay_ms = int(round(float(cue["t"]) * 1000))
+            sfx_lines.append(
+                f"[{idx}:a]aresample={SR},"
+                f"aformat=sample_fmts=fltp:channel_layouts=stereo,"
+                f"volume={gain:.4f},adelay={delay_ms}:all=1[sfx{k}]")
+        labels = "[buspre]" + "".join(f"[sfx{k}]" for k in range(len(cues)))
+        sfx_lines.append(
+            f"{labels}amix=inputs={1 + len(cues)}:normalize=0:"
+            f"duration=first[bus]")
+        fc_bus += ";\n" + ";\n".join(sfx_lines)
+        print(f"[mix] SFX キュー: {len(cues)} 件 ({cues_path})")
+    else:
+        fc_bus += ";\n[buspre]anull[bus]"
 
     def input_args() -> list[str]:
         cmd = ["-hide_banner", "-i", str(bgm_path)]
         for w in wavs:
             cmd += ["-i", str(w)]
+        for s in sfx_files:
+            cmd += ["-i", str(s)]
         return cmd
 
     print(f"[mix] beats={len(beats)}  intervals={len(intervals)}  "
@@ -177,6 +208,7 @@ def main() -> int:
     report: dict = {"episode": args.episode, "target_i": args.target_i,
                     "duck_db": args.duck_db, "quiet_db": args.quiet_db,
                     "narration_beats": len(beats),
+                    "sfx_cues": len(cues),
                     "loudnorm_mode": "2-pass linear",
                     "measured": meas,
                     "output_loudness": out_stats,
