@@ -1,0 +1,8 @@
+{
+  "duration_got": 5819.621,
+  "duration_expected": 5819.6,
+  "duration_ok": true,
+  "episodes_total": 5816.6,
+  "color_space": "bt709",
+  "overall": "PASS"
+}

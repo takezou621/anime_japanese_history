@@ -1,0 +1,17 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Telop,Hiragino Mincho ProN,56,&H00FFFFFF,&H00FFFFFF,&H00202020,&H80000000,-1,0,0,0,100,100,0,0,1,4,2,7,60,60,60,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.90,Telop,,0,0,280,,{\an8}この問題、解けますか?
+Dialogue: 0,0:00:00.90,0:00:04.40,Telop,,0,0,270,,{\an8}問題: 1185年、源義経が平氏を滅ぼした海戦は何でしょう?
+Dialogue: 0,0:00:04.40,0:00:09.40,Telop,,0,0,250,,{\an8}ア 壇ノ浦\Nイ 長篠\Nウ 関ケ原
+Dialogue: 0,0:00:09.40,0:00:12.40,Telop,,0,0,430,,{\an2}正解は…ア!
+Dialogue: 0,0:00:12.40,0:00:18.52,Telop,,0,0,370,,{\an2}解説: 壇ノ浦の戦いで平氏が滅亡し、武士の天下が源氏に決まりました。
