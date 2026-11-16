@@ -638,6 +638,9 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
     for i, b in enumerate(scene.get("beats", [])):
         t0b = beats[i]["start"] if i < len(beats) else 0.0
         beat_end_local = beats[i]["end"] if i < len(beats) else t0b + 1.0
+        has_banner = any(o.get("style") in ("exam_banner",
+                                            "subscribe_banner")
+                         for o in (b.get("overlay_text") or []))
         for k, ot in enumerate(b.get("overlay_text") or []):
             style = ot.get("style", "title_main")
             if style == "keyword_card":
@@ -656,7 +659,11 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
             png = tmp_dir / f"{span.sid}_b{i:02d}_{k}.png"
             img.save(png)
             px, py = center
-            t0 = max(t0b + 0.15 * k, 0.0)
+            # Muse監督指摘: exam_banner と keyword_card の同時表示回避 —
+            # banner の slide_up 完了 (0.5s) + 0.4s 後に card を pop_in
+            card_delay = 0.9 if (has_banner and style.startswith(
+                "keyword_card")) else 0.0
+            t0 = max(t0b + 0.15 * k + card_delay, 0.0)
             m = layer_motion(ot.get("motion") or cfg["default_motion"],
                              t0, float(ot.get("dur", DEFAULT_MOTION_DUR)),
                              px, py, img.width, img.height)
@@ -989,15 +996,27 @@ def main() -> int:
     print(f"\n[segments] rendering {len(spans)} scenes with jobs={a.jobs}")
     failures = []
     with ThreadPoolExecutor(max_workers=max(1, a.jobs)) as pool:
-        # 再開サポート: 1MB超の完成パーツがあるセグメントはスキップ
-        # (作業休止/再開時に完成済みシーンを再利用する)
+        # 再開サポート: 完成パーツが「timing の期待尺と一致」する場合のみ
+        # スキップ (旧 timing のパーツを誤スキップして欠落させる事故防止)
         todo = []
         for sp in spans:
             part = parts_dir / f"{sp.sid}.mp4"
             if part.is_file() and part.stat().st_size > 1_000_000:
-                print(f"  [skip] {sp.sid}: part exists "
-                      f"({part.stat().st_size // 1_000_000}MB)")
-                continue
+                expected = sp.frames / FPS
+                try:
+                    pr = subprocess.run(
+                        [ffprobe, "-v", "error", "-show_entries",
+                         "format=duration", "-of", "csv=p=0", str(part)],
+                        capture_output=True, text=True, timeout=30)
+                    got = float(pr.stdout.strip() or 0)
+                except Exception:
+                    got = -1.0
+                if abs(got - expected) <= 0.35:
+                    print(f"  [skip] {sp.sid}: part {got:.2f}s ~ expected "
+                          f"{expected:.2f}s")
+                    continue
+                print(f"  [re-render] {sp.sid}: part {got:.2f}s != expected "
+                      f"{expected:.2f}s (timing 更新済み)")
             todo.append(sp)
         futs = {
             pool.submit(render_segment, sp, ffmpeg, ffprobe,
