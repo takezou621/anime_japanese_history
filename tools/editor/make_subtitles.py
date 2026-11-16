@@ -156,14 +156,14 @@ def _load_subtitle_dict_all() -> tuple[set[str], list[re.Pattern]]:
 
 
 def _merge_tokens(toks: list[dict]) -> list[dict]:
-    """Apply merge passes so compound/numeric/auxiliary runs behave as one
-    token (分割禁止ブロック化 — lead指摘 ~10語の辞書追記相当):
+    """不可分割トークン化のマージパイプライン (順序重要):
 
     1. adjacent 助動詞 runs (でし+ょう -> でしょう)
-    2. numeric runs: digit/数詞 tokens + trailing units (70+1年 -> 701年,
-       約+1万年前 -> 約1万年前)
-    3. compound concatenations in _COMPOUNDS (少+納言 -> 少納言,
-       持ち+帰る -> 持ち帰る)
+    2. compound concatenations: 辞書語 (content/subtitle_dictionary.txt) +
+       _COMPOUNDS の最長一致で統合 (冠位十二階/廃藩置県/少納言...)
+    3. numeric runs: [short 名詞 prefix] + digits + units を 1 ブロック
+       (日清戦争+1894+年 -> 日清戦争1894年, 慶応+3年 -> 慶応3年)
+    4. @pattern 正規表現に一致するトークン列の統合
     """
     toks = [dict(t) for t in toks]
 
@@ -184,7 +184,28 @@ def _merge_tokens(toks: list[dict]) -> list[dict]:
             i += 1
     toks = out
 
-    # 2) numeric runs: [short 名詞 prefix] + digits + units — one block
+    # 2) compound concatenations (最長一致)
+    out = []
+    i = 0
+    n = len(toks)
+    while i < n:
+        merged = False
+        for ln in (5, 4, 3, 2):
+            if i + ln <= n:
+                cand = "".join(t["s"] for t in toks[i:i + ln])
+                if cand in _COMPOUNDS or cand in _load_subtitle_dict():
+                    out.append({"s": cand, "p1": toks[i]["p1"],
+                                "p2": toks[i]["p2"],
+                                "start": toks[i]["start"]})
+                    i += ln
+                    merged = True
+                    break
+        if not merged:
+            out.append(toks[i])
+            i += 1
+    toks = out
+
+    # 3) numeric runs: [short 名詞 prefix] + digits + units — one block
     #    (日清戦争+1894+年 -> 日清戦争1894年, 慶応+3年 -> 慶応3年)
     out = []
     i = 0
@@ -209,7 +230,7 @@ def _merge_tokens(toks: list[dict]) -> list[dict]:
         i += 1
     toks = out
 
-    # 2.5) @pattern 正規表現による統合 (辞書の @pattern 行; writer 追加可能)
+    # 4) @pattern 正規表現による統合 (辞書の @pattern 行)
     _pats = _load_subtitle_dict_patterns()
     if _pats:
         full = "".join(t["s"] for t in toks)
@@ -248,25 +269,6 @@ def _merge_tokens(toks: list[dict]) -> list[dict]:
                     out.append(toks[i])
                     i += 1
             toks = out
-
-    # 3) compound concatenations
-    out = []
-    i = 0
-    while i < len(toks):
-        merged = False
-        for ln in (5, 4, 3, 2):
-            if i + ln <= len(toks):
-                cand = "".join(t["s"] for t in toks[i:i + ln])
-                if cand in _COMPOUNDS or cand in _load_subtitle_dict():
-                    out.append({"s": cand, "p1": toks[i]["p1"],
-                                "p2": toks[i]["p2"],
-                                "start": toks[i]["start"]})
-                    i += ln
-                    merged = True
-                    break
-        if not merged:
-            out.append(toks[i])
-            i += 1
     return out
 
 
