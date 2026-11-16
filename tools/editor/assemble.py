@@ -473,6 +473,7 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
         # base layer (the shipped loop omitted it and never ran).
         clean_filters = list(base_layer.filters)
         clean_x, clean_y = base_layer.x, base_layer.y
+        base_enable0 = base_layer.enable  # pre-notch snapshot
         events: list = []  # (beat_index, sentiment) for THIS character
         variant_layers: dict = {}
         if cid:
@@ -519,22 +520,28 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
                 # identical-geometry base, out at the end). Chained
                 # fade out/in pairs on the BASE permanently kill its
                 # alpha (fade filters multiply), so the base is never
-                # faded. Talk/blink clones use the fade-free filter set.
-                vm = layer_motion("fade", max(ws - 0.12, 0.0), 0.3,
-                                  px, py, tw, th)
-                vclean = [f"scale={tw}:{th}:flags=lanczos"] + [
-                    f for f in vm["filters"] if not f.startswith("fade")]
-                vfilters = ([f"scale={tw}:{th}:flags=lanczos"]
-                            + list(vm["filters"])
-                            + [f"fade=t=out:st={max(we - 0.18, 0):.3f}"
+                # faded.
+                # Clone the base transform verbatim (filters/x/y incl.
+                # entrance slide, speaker pulse and idle bob). A static
+                # rest transform here made the variant diverge from the
+                # moving base: a second figure at entrances and a
+                # full-body ghost during expression windows (user
+                # report 2026-11-16, s01 t=5.5s). Only the image, the
+                # enable window and the crossfade fades differ.
+                w0 = max(ws - 0.12, 0.0)
+                w1 = min(we + 0.12, span.dur)
+                venable = (f"({base_enable0})"
+                           f"*between(t,{w0:.3f},{w1:.3f})")
+                vfilters = (list(clean_filters)
+                            + [f"fade=t=in:st={w0:.3f}:d=0.3:alpha=1",
+                               f"fade=t=out:st={max(we - 0.18, 0):.3f}"
                                f":d=0.3:alpha=1"])
                 span.layers.append(Layer(
                     image=str(vpath), filters=vfilters,
-                    x=vm["x"], y=vm["y"],
-                    enable=f"between(t,{max(ws - 0.12, 0):.3f},"
-                           f"{min(we + 0.12, span.dur):.3f})",
+                    x=clean_x, y=clean_y, enable=venable,
                     desc=f"variant:{sent}@{ws:.2f}s"))
-                variant_layers[(bi2, sent)] = (vclean, vm["x"], vm["y"])
+                variant_layers[(bi2, sent)] = (
+                    clean_filters, clean_x, clean_y, venable)
 
             def _expr_of_beat(bi2):
                 for bj, s2 in events:
@@ -543,9 +550,12 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
                 return ""
 
             def _seg_transform(bi2, sent):
+                # (filters, x, y, parent_enable): derived layers clone
+                # their parent's transform AND gate on its enable, so
+                # they can never diverge from or precede the parent.
                 if sent and (bi2, sent) in variant_layers:
-                    return variant_layers[(bi2, sent)] + (False,)
-                return (clean_filters, clean_x, clean_y, True)
+                    return variant_layers[(bi2, sent)]
+                return (clean_filters, clean_x, clean_y, base_enable0)
 
             audio_dir = assets_dir.parent.parent / "audio" / assets_dir.name
             # --- lip-sync layers (envelope-driven mouth alternation) ---
@@ -582,11 +592,10 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
                 wins = [(s2, e2) for s2, e2 in wins if e2 - s2 >= 0.05]
                 if not wins:
                     continue
-                tf, tx, ty, is_base = _seg_transform(bi2, sent)
+                tf, tx, ty, pen = _seg_transform(bi2, sent)
                 en = "+".join(f"between(t,{s2:.3f},{e2:.3f})"
                               for s2, e2 in wins[:140])
-                if is_base:
-                    en = f"({base_layer.enable})*({en})"
+                en = f"({pen})*({en})"
                 span.layers.append(Layer(
                     image=str(tpath), filters=list(tf), x=tx, y=ty,
                     enable=en, desc=f"talk:{sent or 'base'}@{bs:.2f}s"))
@@ -610,11 +619,10 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
                 bpath = assets_dir / "overlay" / bname
                 if not bpath.is_file():
                     continue
-                tf, tx, ty, is_base = _seg_transform(bidx, sent)
+                tf, tx, ty, pen = _seg_transform(bidx, sent)
                 en = "+".join(f"between(t,{s2:.3f},{e2:.3f})"
                               for s2, e2 in wins)
-                if is_base:
-                    en = f"({base_layer.enable})*({en})"
+                en = f"({pen})*({en})"
                 span.layers.append(Layer(
                     image=str(bpath), filters=list(tf), x=tx, y=ty,
                     enable=en, desc=f"blink:{sent or 'base'}x{len(wins)}"))
