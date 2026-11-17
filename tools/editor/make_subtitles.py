@@ -621,7 +621,7 @@ def build_events(script: dict, timing: dict) -> list[dict]:
                 "label": (ch.get("name") if ch else "") or "",
                 "color": (ch.get("subtitle_color") if ch else "") or "",
                 "text": sb.get("text", ""),
-                "margin_v": 250 if sc.get("section") == "points" else MARGIN_V,
+                "margin_v": MARGIN_V,
             })
             prev_end = events[-1]["end"]
     return events

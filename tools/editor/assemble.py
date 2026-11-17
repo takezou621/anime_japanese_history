@@ -674,12 +674,6 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
                 m["filters"].append(
                     f"fade=t=out:st={t_end - 0.4:.3f}:d=0.4:alpha=1")
             filters = list(m["filters"])
-            # qa-visual P2: banner は字幕表示中のため半透明 (alpha 0.4) —
-            # slide-in のフェードイン後に colorchannelmixer で落とす
-            # (字幕は最終muxのASS焼き込みで最上位に描かれるが、banner自体の
-            #  視認性も確保する非表示ではなく半透明)
-            if style in ("exam_banner", "subscribe_banner"):
-                filters.append("colorchannelmixer=aa=0.4")
             span.layers.append(Layer(
                 image=str(png),
                 filters=filters,
