@@ -58,7 +58,7 @@ def tts_call(cfg: dict, text: str, voice: str, retries: int = 8) -> bytes:
         except Exception as e:  # noqa: BLE001
             last = e
             print(f"  retry {attempt + 1}: {e}", flush=True)
-            time.sleep(20 * (attempt + 1))
+            time.sleep(45 * (attempt + 1))
     raise RuntimeError(f"TTS failed after retries: {last}")
 
 
@@ -110,7 +110,7 @@ def main() -> int:
                 tmp.unlink()
                 dur = mn.wav_duration(wav_path.read_bytes())
                 print(f"gen  {name} {dur:.2f}s [{spk}] {beat['text'][:24]}", flush=True)
-                time.sleep(4.0)
+                time.sleep(10.0)
             manifest["beats"][name] = {"speaker": spk, "config_hash": chash,
                                        "model": cfg["model"], "voice": v["voice_name"]}
             total_speech += dur
