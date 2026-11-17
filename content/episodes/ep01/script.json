@@ -101,7 +101,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "よし、縄文からスタートなのだ!",
+          "text": "よし、縄文からスタートだ!",
           "overlay_text": [
             {
               "text": "第1話 日本史のはじまり",
@@ -148,7 +148,7 @@
       "beats": [
         {
           "speaker": "manabu",
-          "text": "先生!最初の時代って、どんな時代なのだ?",
+          "text": "先生!最初の時代って、どんな時代なの?",
           "overlay_text": [
             {
               "text": "旧石器時代 土器のない時代",
@@ -303,7 +303,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "打製から磨製へ、石の進化なのだ!",
+          "text": "打製から磨製へ、石の進化だ!",
           "sentiment": "determined"
         },
         {
@@ -353,7 +353,7 @@
       "beats": [
         {
           "speaker": "manabu",
-          "text": "縄文時代のイメージといえば、もようのついた壺なのだ!",
+          "text": "縄文時代のイメージといえば、もようのついた壺だ!",
           "overlay_text": [
             {
               "text": "縄文時代 世界最古級の土器",
@@ -406,7 +406,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "日本の土器が世界最古級なのだ!?すごいのだ!",
+          "text": "日本の土器が世界最古級だ!?すごい!",
           "sentiment": "shocked",
           "reaction": "laugh"
         },
@@ -493,7 +493,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "冬も暖かそうなのだ!夏も涼しいのだ?"
+          "text": "冬も暖かそうだ!夏も涼しいの?"
         },
         {
           "speaker": "sensei",
@@ -522,7 +522,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "みんなで丸くなって暮らすのだ!キャンプ場みたいなのだ!",
+          "text": "みんなで丸くなって暮らしてる!キャンプ場みたいだ!",
           "reaction": "laugh"
         },
         {
@@ -618,7 +618,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "ごみの山が、タイムカプセルなのだ!?",
+          "text": "ごみの山が、タイムカプセルだ!?",
           "sentiment": "shocked",
           "reaction": "laugh"
         },
@@ -680,7 +680,7 @@
       "beats": [
         {
           "speaker": "manabu",
-          "text": "先生、次の時代は、大ニュースなのだ!?",
+          "text": "先生、次の時代は、大ニュースだ!?",
           "sentiment": "raise"
         },
         {
@@ -701,7 +701,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "お米!ついに米の時代なのだ!",
+          "text": "お米!ついに米の時代だ!",
           "sentiment": "shocked",
           "reaction": "laugh"
         },
@@ -753,7 +753,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "農業が日本の歴史のエンジンなのだ!",
+          "text": "農業が日本の歴史のエンジンだ!",
           "sentiment": "determined",
           "reaction": "laugh"
         },
@@ -840,7 +840,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "ネズミ先輩、お米は上げちゃダメなのだ!",
+          "text": "ネズミ先輩、お米は上げちゃダメだ!",
           "reaction": "laugh"
         },
         {
@@ -869,7 +869,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "村がパワーアップなのだ!それからどうなったのだ?",
+          "text": "村がパワーアップだ!それからどうなったの?",
           "sentiment": "determined"
         }
       ],
@@ -954,7 +954,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "ふぇ?戦争が始まったのは、この時代からなのだ…?",
+          "text": "ふぇ?戦争が始まったのは、この時代からなの…?",
           "sentiment": "shocked"
         },
         {
@@ -985,7 +985,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "ついに本に出てくるやつなのだ!?",
+          "text": "ついに本に出てくるやつだ!?",
           "sentiment": "shocked"
         },
         {
@@ -1014,7 +1014,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "卑弥呼!歴史のスーパースターなのだ!",
+          "text": "卑弥呼!歴史のスーパースターだ!",
           "reaction": "laugh"
         },
         {
@@ -1062,7 +1062,7 @@
       "beats": [
         {
           "speaker": "manabu",
-          "text": "ついに古墳時代なのだ!古墳って、大きなお墓なのだ?",
+          "text": "ついに古墳時代だ!古墳って、大きなお墓なの?",
           "overlay_text": [
             {
               "text": "古墳時代 3世紀中ごろ〜",
@@ -1112,7 +1112,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "上から見ると、船が海を走ってるみたいなのだ!"
+          "text": "上から見ると、船が海を走ってるみたいだ!"
         },
         {
           "speaker": "sensei",
@@ -1170,7 +1170,7 @@
       "beats": [
         {
           "speaker": "manabu",
-          "text": "古墳のまわりに立ってる、土の人形はなんなのだ?",
+          "text": "古墳のまわりに立ってる、土の人形はなんなの?",
           "overlay_text": [
             {
               "text": "古墳時代 埴輪",
@@ -1198,7 +1198,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "はにわなのだ!お顔がユニークなのだ!",
+          "text": "はにわだ!お顔がユニークだ!",
           "reaction": "laugh"
         },
         {
@@ -1219,7 +1219,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "馬のはにわ、走ってるみたいで好きなのだ!"
+          "text": "馬のはにわ、走ってるみたいで好きだ!"
         }
       ],
       "exam_points": []
@@ -1277,7 +1277,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "鉄は、道具にも武器にも必要なのだ!",
+          "text": "鉄は、道具にも武器にも必要だ!",
           "sentiment": "determined"
         },
         {
@@ -1389,7 +1389,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "海を渡って、世界進出なのだ!",
+          "text": "海を渡って、世界進出だ!",
           "sentiment": "determined"
         },
         {
@@ -1412,7 +1412,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "あと少し!ポイントまとめ、お願いなのだ!",
+          "text": "あと少し!ポイントまとめ、お願い!",
           "reaction": "laugh"
         }
       ],
@@ -1684,7 +1684,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "えいっ、イなのだ!",
+          "text": "えいっ、イだ!",
           "sentiment": "raise"
         },
         {
@@ -1756,7 +1756,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "歴史のスーパースター、アなのだ!",
+          "text": "歴史のスーパースター、アだ!",
           "sentiment": "raise"
         },
         {
@@ -1830,7 +1830,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "ネズミ対策といえば、イなのだ!",
+          "text": "ネズミ対策といえば、イだ!",
           "sentiment": "raise"
         },
         {
@@ -1897,7 +1897,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "頭の中が日本史でいっぱいなのだ!",
+          "text": "頭の中が日本史でいっぱいだ!",
           "reaction": "laugh"
         },
         {
@@ -1923,7 +1923,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "つぎは聖徳太子なのだ!チャンネル登録も、よろしくなのだ!",
+          "text": "つぎは聖徳太子だ!チャンネル登録も、よろしくね!",
           "reaction": "laugh"
         }
       ],

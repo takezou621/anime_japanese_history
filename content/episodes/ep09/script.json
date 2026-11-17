@@ -97,7 +97,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "よし、明治、スタートなのだ!",
+          "text": "よし、明治、スタートだ!",
           "overlay_text": [
             {
               "text": "第9話 明治のなぞ",
@@ -143,7 +143,7 @@
       "beats": [
         {
           "speaker": "manabu",
-          "text": "大政奉還の後、すぐ平和なのだ?",
+          "text": "大政奉還の後、すぐ平和なの?",
           "overlay_text": [
             {
               "text": "1868年〜 戊辰戦争",
@@ -181,7 +181,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "辰の年の戦いなのだ…?"
+          "text": "辰の年の戦いなの…?"
         },
         {
           "speaker": "sensei",
@@ -267,7 +267,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "話し合い、大事なのだ!"
+          "text": "話し合い、大事だ!"
         },
         {
           "speaker": "sensei",
@@ -293,7 +293,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "新しい国のエンジンが、始動なのだ!"
+          "text": "新しい国のエンジンが、始動だ!"
         }
       ],
       "exam_points": []
@@ -389,7 +389,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "中央集権、完成なのだ!"
+          "text": "中央集権、完成だ!"
         }
       ],
       "exam_points": []
@@ -461,7 +461,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "生まれで決めない、新しいルールなのだ!",
+          "text": "生まれで決めない、新しいルールだ!",
           "overlay_text": [
             {
               "text": "身分制度の廃止",
@@ -482,7 +482,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "江戸は身分で制限、明治は能力なのだ!"
+          "text": "江戸は身分で制限、明治は能力だ!"
         },
         {
           "speaker": "sensei",
@@ -572,7 +572,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "学校は武士だけなのだ?",
+          "text": "学校は武士だけなの?",
           "overlay_text": [
             {
               "text": "義務教育",
@@ -587,7 +587,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "国の投資なのだ!"
+          "text": "国の投資だ!"
         },
         {
           "speaker": "sensei",
@@ -606,7 +606,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "日本じゅう、学校なのだ!"
+          "text": "日本じゅう、学校だ!"
         }
       ],
       "exam_points": []
@@ -683,7 +683,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "武士だけじゃない、みんなの軍なのだ!"
+          "text": "武士だけじゃない、みんなの軍だ!"
         },
         {
           "speaker": "sensei",
@@ -782,7 +782,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "現金で納税、近代的なのだ!"
+          "text": "現金で納税、近代的だ!"
         },
         {
           "speaker": "sensei",
@@ -801,7 +801,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "変革の影に、がまんなのだ…"
+          "text": "変革の影に、がまんだ…"
         }
       ],
       "exam_points": []
@@ -982,7 +982,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "鉄道と牛鍋なのだ!"
+          "text": "鉄道と牛鍋だ!"
         },
         {
           "speaker": "sensei",
@@ -1008,7 +1008,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "散切り頭と牛鍋、そして鹿鳴館のダンス…文明開化セットなのだ!"
+          "text": "散切り頭と牛鍋、そして鹿鳴館のダンス…文明開化セットだ!"
         }
       ],
       "exam_points": []
@@ -1104,7 +1104,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "つづきが、楽しみなのだ!"
+          "text": "つづきが、楽しみだ!"
         }
       ],
       "exam_points": []
@@ -1205,7 +1205,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "わかれ道が、二本に枝分かれなのだ!"
+          "text": "わかれ道が、二本に枝分かれだ!"
         }
       ],
       "exam_points": []
@@ -1299,7 +1299,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "まとめ、お願いなのだ!"
+          "text": "まとめ、お願い!"
         }
       ],
       "exam_points": []
@@ -1349,7 +1349,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "1877年、なのだ!",
+          "text": "1877年だ!",
           "overlay_text": []
         },
         {
@@ -1385,7 +1385,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "最後の武士なのだ…"
+          "text": "最後の武士だ…"
         },
         {
           "speaker": "sensei",
@@ -1660,7 +1660,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "藩がなくなる…アなのだ!"
+          "text": "藩がなくなる…アだ!"
         },
         {
           "speaker": "sensei",
@@ -1734,7 +1734,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "みんなで学校へ…アなのだ!"
+          "text": "みんなで学校へ…アだ!"
         },
         {
           "speaker": "sensei",
@@ -1803,7 +1803,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "民の議会…アなのだ!"
+          "text": "民の議会…アだ!"
         },
         {
           "speaker": "sensei",
@@ -1873,7 +1873,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "ついにラストなのだ!チャンネル登録も、よろしくなのだ!"
+          "text": "ついにラストだ!チャンネル登録も、よろしくね!"
         }
       ],
       "exam_points": []

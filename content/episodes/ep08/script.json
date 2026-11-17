@@ -97,7 +97,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "よし、幕末、スタートなのだ!",
+          "text": "よし、幕末、スタートだ!",
           "overlay_text": [
             {
               "text": "第8話 幕末のなぞ",
@@ -181,7 +181,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "それが黒船なのだ!?迫力がすごいのだ!"
+          "text": "それが黒船だ!?迫力がすごい!"
         },
         {
           "speaker": "sensei",
@@ -198,7 +198,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "迷った末の答えは、開国なのだ!?"
+          "text": "迷った末の答えは、開国だ!?"
         },
         {
           "speaker": "sensei",
@@ -301,7 +301,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "ペリーで開いて、ハリスでじっくり話なのだ!"
+          "text": "ペリーで開いて、ハリスでじっくり話だ!"
         },
         {
           "speaker": "sensei",
@@ -345,7 +345,7 @@
       "beats": [
         {
           "speaker": "manabu",
-          "text": "その条約は、公平なのだ?",
+          "text": "その条約は、公平なの?",
           "overlay_text": [
             {
               "text": "1858年 不平等条約",
@@ -382,7 +382,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "不平等条約って、条約を破ることなのだ?"
+          "text": "不平等条約って、条約を破ることなの?"
         },
         {
           "speaker": "sensei",
@@ -394,7 +394,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "領事裁判権って、なんの権利なのだ?"
+          "text": "領事裁判権って、なんの権利なの?"
         },
         {
           "speaker": "sensei",
@@ -420,7 +420,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "相手が得れば、自分が損、不公平なのだ!"
+          "text": "相手が得れば、自分が損、不公平だ!"
         }
       ],
       "exam_points": []
@@ -490,7 +490,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "攘夷って、外人を追い出すことなのだ?"
+          "text": "攘夷って、外人を追い出すことなの?"
         },
         {
           "speaker": "sensei",
@@ -522,7 +522,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "天皇を無視したのだ!?それは大問題なのだ!"
+          "text": "天皇を無視したの!?それは大問題だ!"
         }
       ],
       "exam_points": []
@@ -594,7 +594,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "言った人は、みんな弾圧なのだ…怖いのだ"
+          "text": "言った人は、みんな弾圧だ…怖い…"
         },
         {
           "speaker": "sensei",
@@ -608,7 +608,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "弾圧は、逆効果なのだ…"
+          "text": "弾圧は、逆効果だ…"
         }
       ],
       "exam_points": []
@@ -741,7 +741,7 @@
       "beats": [
         {
           "speaker": "manabu",
-          "text": "攘夷派の人は、どんな人なのだ?",
+          "text": "攘夷派の人は、どんな人なの?",
           "overlay_text": [
             {
               "text": "尊攘派の台頭",
@@ -779,7 +779,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "若手スーパースターの集まりなのだ!"
+          "text": "若手スーパースターの集まりだ!"
         },
         {
           "speaker": "sensei",
@@ -798,7 +798,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "幕府、置いてけぼりなのだ…"
+          "text": "幕府、置いてけぼりだ…"
         }
       ],
       "exam_points": []
@@ -899,7 +899,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "攘夷から討幕へ、目的変更なのだ!"
+          "text": "攘夷から討幕へ、目的変更だ!"
         }
       ],
       "exam_points": []
@@ -976,7 +976,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "蛤御門、貝の名前の門なのだ!?"
+          "text": "蛤御門、貝の名前の門だ!?"
         },
         {
           "speaker": "sensei",
@@ -990,7 +990,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "敵から仲間へ、薩長の伏線なのだ!"
+          "text": "敵から仲間へ、薩長の伏線だ!"
         }
       ],
       "exam_points": []
@@ -1065,7 +1065,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "龍馬、仲人なのだ!かっこいいのだ!"
+          "text": "龍馬、仲人だ!かっこいい!"
         },
         {
           "speaker": "sensei",
@@ -1079,7 +1079,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "チーム編成、完成なのだ!"
+          "text": "チーム編成、完成だ!"
         }
       ],
       "exam_points": []
@@ -1171,7 +1171,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "260年の歴史、閉幕なのだ…"
+          "text": "260年の歴史、閉幕だ…"
         }
       ],
       "exam_points": []
@@ -1243,7 +1243,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "江戸が終わって、明治なのだ!"
+          "text": "江戸が終わって、明治だ!"
         },
         {
           "speaker": "sensei",
@@ -1257,7 +1257,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "ポイントまとめ、お願いなのだ!"
+          "text": "ポイントまとめ、お願い!"
         }
       ],
       "exam_points": []
@@ -1503,7 +1503,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "黒船の大将…アなのだ!"
+          "text": "黒船の大将…アだ!"
         },
         {
           "speaker": "sensei",
@@ -1577,7 +1577,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "不公平な二点…アなのだ!"
+          "text": "不公平な二点…アだ!"
         },
         {
           "speaker": "sensei",
@@ -1650,7 +1650,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "仲人スター…イなのだ!"
+          "text": "仲人スター…イだ!"
         },
         {
           "speaker": "sensei",
@@ -1720,7 +1720,7 @@
         },
         {
           "speaker": "manabu",
-          "text": "ついに新時代なのだ!チャンネル登録も、よろしくなのだ!"
+          "text": "ついに新時代だ!チャンネル登録も、よろしくね!"
         }
       ],
       "exam_points": []
