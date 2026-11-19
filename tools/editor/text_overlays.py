@@ -164,7 +164,8 @@ def render_quiz_board(question: str, choices: list[str],
     yy = qy - 12 if len(lines) == 2 else qy
     for ln in lines:
         d.text((qx, yy), ln, font=q_font, anchor="mm",
-               fill=hex_rgba(ai), stroke_width=0)
+               fill=(255, 255, 255, 255), stroke_width=2,
+               stroke_fill=hex_rgba(TEXT_DARK))
         yy += 58
 
     for i, row_y in enumerate(QUIZ_ROW_Y):
@@ -173,11 +174,21 @@ def render_quiz_board(question: str, choices: list[str],
             d.rounded_rectangle([470, row_y - 30, 1520, row_y + 30], radius=14,
                                 fill=hex_rgba(YAMABUKI, 215))
         mark = QUIZ_MARKS[i] if i < len(QUIZ_MARKS) else "?"
-        d.text((QUIZ_TEXT_X, row_y), mark, font=m_font, anchor="lm",
-               fill=hex_rgba(ai))
+        if hl:
+            d.text((QUIZ_TEXT_X, row_y), mark, font=m_font, anchor="lm",
+                   fill=hex_rgba(TEXT_DARK))
+        else:
+            d.text((QUIZ_TEXT_X, row_y), mark, font=m_font, anchor="lm",
+                   fill=(255, 255, 255, 255), stroke_width=2,
+                   stroke_fill=hex_rgba(TEXT_DARK))
         txt = _quiz_sanitize(choices[i]) if i < len(choices) else ""
-        d.text((QUIZ_TEXT_X + 70, row_y), txt, font=c_font, anchor="lm",
-               fill=hex_rgba(TEXT_DARK))
+        if hl:
+            d.text((QUIZ_TEXT_X + 70, row_y), txt, font=c_font, anchor="lm",
+                   fill=hex_rgba(TEXT_DARK))
+        else:
+            d.text((QUIZ_TEXT_X + 70, row_y), txt, font=c_font, anchor="lm",
+                   fill=(255, 255, 255, 255), stroke_width=2,
+                   stroke_fill=hex_rgba(TEXT_DARK))
         if hl:
             # drawn check: the Black font has no U+2714 glyph and falls
             # back to a boxed X, which reads as "wrong" on the answer row
