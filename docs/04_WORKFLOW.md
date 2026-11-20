@@ -22,24 +22,32 @@
 - [ ] 受験ポイント ≥3, クイズ 3問, 年号・人名は教科書準拠
 - [ ] 読みにくい漢字は `reading` フィールドで読み指定 (pronunciation_dict と突合)
 
-### artist
-- [ ] artlib が import できサンプル1枚が 1920×1080 で出る
-- [ ] epNN の全 scene.background が生成済み (欠けゼロ)
-- [ ] キャラ立ち絵: tools/peeps/compose_peeps.py 出力を使用 (artlib character.py は非推奨)
-- [ ] カラーパレット・フォントは STYLE_GUIDE 準拠
-- [ ] 各話専用 bg_timeline (時代アイコン+ラベル付き)
+### artist (2026-11-15 以降: アート生成は Muse へ移行)
+- [ ] ~~artlib での背景・プロップ生成~~ **中止** (Muse が scenes_v2 / characters_v2 を納品)
+- [ ] Muse 納品アセットの統合: `assets/epNN/scenes_v2/` → `assets/epNN/scenes/` (同一名配置)
+- [ ] キャラスプライト: `assets/characters_v2/sprites/` → `assets/epNN/overlay/` (900×1400 透過PNG, 同一名)
+- [ ] **文字主体 UI (keyword_card / era_badge) のみ Pillow コード生成を維持**
+  (日本語テキスト正確性重視。左右パディング最低 24px)
+- [ ] 納品物は**必ずコミットして保全** (未コミットのまま git 操作すると消失する — 実例あり)
 
 ### audio
 - [ ] make_narration.py が script.json → wav + timing.json を出す
 - [ ] 発音: pronunciation_dict.json 自動置換 + pronunciation_log.json を出力し未カバー固有名詞ゼロ
+  (確定辞書 sha `1af04182d53c` — 全ブランチ同一)
 - [ ] VOICEVOX 未起動時は自動起動 (vv-engine/run) する fallback
-- [ ] 総尺 ≤590s (QC上限600s), mix.wav が -14±1.5 LUFS (loudnorm で検証)
+- [ ] 総尺 ≤590s 目標 (QC上限 900s — 2026-11-16 ユーザー決定で 600→900 に拡張)
+- [ ] mix.wav が -14±1.5 LUFS (loudnorm で検証) / alimiter で TP ≤ -1.0 dBTP
+- [ ] 音声一致システム (Gemini TTS) を使う場合: gen_narration_unified.py の
+  ギャップ・リトライ規約に従う (docs/09_API_AND_RATE_LIMITS.md §1)
 
 ### editor
 - [ ] assemble.py が script.json + timing.json + assets → フル動画
-- [ ] 字幕 (行頭禁則+ぶら下げ) ・モーション・クロスフェード確認
+- [ ] 字幕 (行頭禁則+ぶら下げ+内容語境界ルール+辞書383語) ・モーション・クロスフェード確認
 - [ ] キャラはコンテンツbbox基準配置 (CHAR_CONTENT_W=500, 下端930)
-- [ ] QC json 出力 (長さ300-600s / ラウドネス / 黒フレーム<1% / 解像度)
+- [ ] 字幕 MarginV 79 (通常) / 250 (points帯上) — banner は字幕表示中 alpha 0.4
+- [ ] QC json 出力 (長さ300-900s / 35.2Mbps CBR / bt709 / TP≤-1.0dBTP / ラウドネス / 黒フレーム<1%)
+- [ ] **duration = timing 一致を必検証** (±0.35s。FAIL なら次話に進まず停止 — 2026-11-16 P1 教訓)
+- [ ] **レンダー中はブランチを固定** (切替で成果物不整合 — 監督指摘)
 
 ## 多角的検証ゲート (2026-11-15 ユーザー指示により必須化)
 
@@ -83,7 +91,43 @@
   (年代・人名・用語の誤記 — 例: 墾田永年私財法, 弥生時代開始年代)
 - [ ] **発音ゲート**: qa-audio が VOICEVOX 実読み (audio_query kana) を検証し
   固有名詞誤読ゼロ (pronunciation_dict + script reading の両方を突合)
+  + **ASR突合** (tools/qa/asr_check.py): 全体一致率ゲート 0.70 / ビート 0.60 未満は要確認
 - [ ] **視覚ゲート**: qa-visual がサンプルフレーム10枚以上で構図・文字かぶり・見切れゼロ
 - [ ] サムネイル文字12文字以内 + キャラ視線が見出し側
 - [ ] タイトルに話数番号+検索語 (時代名/日本史/中学受験) 含む
 - [ ] 概要欄タイムスタンプが timing.json 実測と一致
+- [ ] VOICEVOX クレジットが概要欄に記載されている
+
+## Season 1 確定フロー (2026-11-16 確定 — 参考手順)
+
+Season 1 (全10話) で実施した確定手順。Season 2 でも同じ流れを使う。
+
+### 1. アート統合 (Muse 納品 → DSH)
+1. Muse が `assets/epNN/scenes_v2/` (1920×1080 PNG, 従来同名) と
+   `assets/characters_v2/sprites/` (900×1400 透過PNG + `char_<name>_expr_<emotion>.png`) を納品
+2. lead が統合: `scenes_v2/` → `scenes/` コピー (同一名で editor は無変更で参照) +
+   スプライトを `assets/epNN/overlay/` へ展開 → **必ずコミット** (未コミット保全の教訓)
+3. レイアウト調整は画像内容でなく配置・尺側で吸収する
+
+### 2. 音声 (音声一致システム)
+1. script 確定 → `gen_narration_unified.py` で全ビート生成 (ギャップ契約:
+   ビート間 0.30 / シーン間 0.60 / セクション間 0.80 / テール 0.60 — 台詞分割前提の標準)
+2. `check_voice_consistency.py` ゲート通過を確認
+3. TTS レート制限時は docs/09 §1 の規約 (間隔10s / バックオフ45s×n) で待機再開
+
+### 3. レンダー
+1. editor が `assemble.py` で全話レンダー (レイヤー入力の重複統合版を使用 —
+   同一画像の重複入力は framesync デッドロックの原因, commit 5657946)
+2. **各話 duration = timing 一致を必検証** (FAIL なら次に進まず停止)
+3. QC json (10項目) 全 PASS を確認
+
+### 4. 検証と確定
+1. qa-visual / qa-audio / qa-content の受け入れ基準で最終抜き打ち
+   (qa-visual 基準: 字幕×banner重なり0 / 空ラベル0 / 用語またがり0 / 退行なし)
+2. green 判定後: **実測値一覧 (尺/bitrate/LUFS/TP/字幕最大字数) を PR 本文に記載して Muse 再提出**
+3. 非ブロッキング所見は reports/known_issues_seasonN.md に記録して繰り込み
+
+### 運用で確立したルール (再発防止)
+- QA の指摘は**実測値+フレーム証拠**で受け止める (記憶ベースの裁定は禁止 — 辞書/実取得で確定)
+- 読みの対立は**辞書実取得 (kotobank 等 9辞典パターン)** で解決。記憶ベースの主張より実取得データを優先
+- 生成物 (video/audio) は QC PASS を確認してから次の工程へ。FAIL を無視した連続進行は禁止

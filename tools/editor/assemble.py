@@ -558,6 +558,10 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
                 return (clean_filters, clean_x, clean_y, base_enable0)
 
             audio_dir = assets_dir.parent.parent / "audio" / assets_dir.name
+            # 音声一致システム (narration_unified) を優先し、無ければ従来 narration を使う
+            unified_dir = audio_dir / "narration_unified"
+            lipsync_dir = unified_dir if unified_dir.is_dir() else audio_dir / "narration"
+            ts_beats = ts.get("beats", [])  # unified timing はビートに wav パスを持つ
             # --- lip-sync layers (envelope-driven mouth alternation) ---
             for bi2, b in enumerate(beats):
                 if b.get("speaker") != cid:
@@ -571,7 +575,15 @@ def scene_layers(span: Span, scene: dict, ts: dict, assets_dir: Path,
                 tpath = assets_dir / "overlay" / tname
                 if not tpath.is_file():
                     continue
-                wav = audio_dir / "narration" / f"{span.sid}_b{bi2:02d}.wav"
+                if lipsync_dir is unified_dir and bi2 < len(ts_beats):
+                    wv = ts_beats[bi2].get("wav") if isinstance(
+                        ts_beats[bi2], dict) else None
+                    wav = (audio_dir / wv) if wv else (
+                        lipsync_dir / f"{span.sid}_b{bi2:02d}.wav")
+                else:
+                    wav = lipsync_dir / f"{span.sid}_b{bi2:02d}.wav"
+                if not Path(wav).is_file():
+                    continue
                 speech = _speech_windows(str(wav))
                 if not speech:
                     continue
@@ -925,9 +937,20 @@ def main() -> int:
 
     ep = a.episode
     script_path = a.script or f"content/episodes/{ep}/script.json"
-    timing_path = a.timing or f"audio/{ep}/timing.json"
+    adir_default = Path(f"audio/{ep}")
+    # 音声一致システム (Gemini TTS) の成果物を優先し、無ければ従来 mix.wav を使う
+    timing_path = (a.timing or next(
+        (str(adir_default / n) for n in ("timing_unified.json", "timing.json")
+         if (adir_default / n).exists()), f"audio/{ep}/timing.json"))
     assets_dir = Path(a.assets or f"assets/{ep}")
-    mix = a.mix or f"audio/{ep}/mix.wav"
+    mix = a.mix or next(
+        (str(adir_default / n) for n in ("mix_unified.wav", "mix.wav")
+         if (adir_default / n).exists()), f"audio/{ep}/mix.wav")
+    if mix.endswith("mix_unified.wav") and (adir_default / "sfx_cues.json").exists():
+        # sfx_cues.json が旧タイムライン (timing.json) 基準だと SFX が次第ずれる
+        print("[mix][warn] sfx_cues.json は旧タイムライン基準の可能性: "
+              "make_sfx_cues.py を unified timing で再実行し mix を再生成してください "
+              "(SFX の時間ずれに注意)")
     out = a.out or f"video/{ep}_FINAL.mp4"
     qc_out = a.qc or f"video/{ep}_QC.json"
 

@@ -136,7 +136,10 @@ def load_beats(root: Path, episode: str, pdict: dict, apply_fn) -> list[dict]:
     text 直接比較だと正規化文字列が不一致になる。
     """
     script = json.loads((root / f"content/episodes/{episode}/script.json").read_text())
-    timing = json.loads((root / f"audio/{episode}/timing.json").read_text())
+    # 音声一致システム (timing_unified.json) を優先し、無ければ従来 timing.json を使う
+    adir = root / f"audio/{episode}"
+    timing_path = resolve_preferred(adir, ("timing_unified.json", "timing.json"))
+    timing = json.loads(timing_path.read_text())
     sb = [(sc["id"], bi, b.get("reading") or b["text"], b["text"])
           for sc in script["scenes"] for bi, b in enumerate(sc["beats"])]
     tb = [(sc["id"], bi, b) for sc in timing["scenes"] for bi, b in enumerate(sc["beats"])]
@@ -231,10 +234,22 @@ def transcribe(mix: Path, model_size: str, device: str, compute_type: str) -> tu
 
 
 # ---------------------------------------------------------------- 本体
+
+def resolve_preferred(adir: Path, names: tuple[str, ...]) -> Path:
+    """names の先頭優先で存在するファイルを返し、無ければ最後の名前を既定とする。
+
+    音声一致システム (timing_unified.json / mix_unified.wav) と従来成果物
+    (timing.json / mix.wav) の世代解決を一箇所に集約する。
+    """
+    return next((adir / n for n in names if (adir / n).exists()), adir / names[-1])
+
+
 def run_episode(root: Path, episode: str, args: argparse.Namespace, norm: Normalizer,
                 pdict: dict, apply_fn, dict_sha: str | None) -> dict:
     """1 エピソード分を処理し results dict を返す (main で overall_pass を参照)。"""
-    mix = root / f"audio/{episode}/mix.wav"
+    # 音声一致システム (mix_unified.wav) を優先し、無ければ従来 mix.wav を使う
+    adir = root / f"audio/{episode}"
+    mix = resolve_preferred(adir, ("mix_unified.wav", "mix.wav"))
     if not mix.exists():
         raise SystemExit(f"mix.wav がありません: {mix}")
     out_path = root / args.out_dir / f"asr_check_{episode}.json"

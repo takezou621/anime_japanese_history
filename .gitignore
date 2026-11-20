@@ -2,8 +2,10 @@ video/*.mp4
 video/*_parts/
 video/_smoke/
 audio/ep*/narration/
+audio/ep*/narration_unified/
 audio/ep*/bgm.wav
 audio/ep*/mix.wav
+audio/ep*/mix_unified.wav
 audio/ep_test/
 __pycache__/
 *.pyc
